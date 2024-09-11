@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Estadística"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: intro.qmd
+        text: Introducción
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
