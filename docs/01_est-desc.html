@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.551">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="CruzJulián">
+
+<title>Estadística - Estadística I</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Estadística</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./intro.html"> 
+<span class="menu-text">Introducción</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./01_est-desc.html" aria-current="page"> 
+<span class="menu-text">Estadística I</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes">Antecedentes</a>
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación">Presentación</a>
+  <ul class="collapse">
+  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso">Descripción del Curso</a></li>
+  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación">Justificación</a></li>
+  </ul></li>
+  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones">Consideraciones</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a>
+  <ul class="collapse">
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
+  <li><a href="#específicos" id="toc-específicos" class="nav-link" data-scroll-target="#específicos">Específicos</a></li>
+  </ul></li>
+  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
+  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
+  <li><a href="#lecturas-del-módulo" id="toc-lecturas-del-módulo" class="nav-link" data-scroll-target="#lecturas-del-módulo">Lecturas del módulo</a></li>
+  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">Evaluación</a></li>
+  <li><a href="#evaluación-1" id="toc-evaluación-1" class="nav-link" data-scroll-target="#evaluación-1">Evaluación</a></li>
+  <li><a href="#contenido" id="toc-contenido" class="nav-link" data-scroll-target="#contenido">Contenido</a></li>
+  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
+  <li><a href="#narrativa" id="toc-narrativa" class="nav-link" data-scroll-target="#narrativa">Narrativa</a></li>
+  </ul></li>
+  <li><a href="#introducción-1" id="toc-introducción-1" class="nav-link" data-scroll-target="#introducción-1">Introducción</a>
+  <ul class="collapse">
+  <li><a href="#preámbulo" id="toc-preámbulo" class="nav-link" data-scroll-target="#preámbulo">Preámbulo</a>
+  <ul class="collapse">
+  <li><a href="#expectativas" id="toc-expectativas" class="nav-link" data-scroll-target="#expectativas">Expectativas</a></li>
+  <li><a href="#información" id="toc-información" class="nav-link" data-scroll-target="#información">Información</a></li>
+  <li><a href="#escenarios-de-datos" id="toc-escenarios-de-datos" class="nav-link" data-scroll-target="#escenarios-de-datos">Escenarios de datos</a></li>
+  <li><a href="#primera-actividad-cómo-son-los-datos" id="toc-primera-actividad-cómo-son-los-datos" class="nav-link" data-scroll-target="#primera-actividad-cómo-son-los-datos">Primera actividad: ¿Cómo son los datos?</a></li>
+  </ul></li>
+  <li><a href="#tipos-de-datos" id="toc-tipos-de-datos" class="nav-link" data-scroll-target="#tipos-de-datos">Tipos de datos</a>
+  <ul class="collapse">
+  <li><a href="#tendencias" id="toc-tendencias" class="nav-link" data-scroll-target="#tendencias">Tendencias</a></li>
+  <li><a href="#individuos" id="toc-individuos" class="nav-link" data-scroll-target="#individuos">Individuos</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#tipos-de-variable" id="toc-tipos-de-variable" class="nav-link" data-scroll-target="#tipos-de-variable">Tipos de variable</a></li>
+  <li><a href="#variables-categóricas" id="toc-variables-categóricas" class="nav-link" data-scroll-target="#variables-categóricas">Variables categóricas</a></li>
+  <li><a href="#variables-numéricas" id="toc-variables-numéricas" class="nav-link" data-scroll-target="#variables-numéricas">Variables numéricas</a></li>
+  <li><a href="#medición" id="toc-medición" class="nav-link" data-scroll-target="#medición">Medición</a></li>
+  <li><a href="#escalas-de-medición" id="toc-escalas-de-medición" class="nav-link" data-scroll-target="#escalas-de-medición">Escalas de medición</a></li>
+  <li><a href="#escalas-categóricas" id="toc-escalas-categóricas" class="nav-link" data-scroll-target="#escalas-categóricas">Escalas categóricas</a></li>
+  <li><a href="#escalas-numéricas" id="toc-escalas-numéricas" class="nav-link" data-scroll-target="#escalas-numéricas">Escalas numéricas</a></li>
+  </ul></li>
+  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización">Visualización</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-visualización" id="toc-por-qué-visualización" class="nav-link" data-scroll-target="#por-qué-visualización">¿Por qué visualización?</a></li>
+  <li><a href="#veamos-ejemplos" id="toc-veamos-ejemplos" class="nav-link" data-scroll-target="#veamos-ejemplos">Veamos ejemplos</a></li>
+  <li><a href="#el-ejemplo-de-napoleón" id="toc-el-ejemplo-de-napoleón" class="nav-link" data-scroll-target="#el-ejemplo-de-napoleón">El ejemplo de Napoleón</a></li>
+  <li><a href="#gráficos-tradicionales" id="toc-gráficos-tradicionales" class="nav-link" data-scroll-target="#gráficos-tradicionales">Gráficos tradicionales</a></li>
+  <li><a href="#escala-de-cleveland-y-mcgill" id="toc-escala-de-cleveland-y-mcgill" class="nav-link" data-scroll-target="#escala-de-cleveland-y-mcgill">Escala de Cleveland y McGill</a></li>
+  <li><a href="#buenas-prácticas-de-visualización" id="toc-buenas-prácticas-de-visualización" class="nav-link" data-scroll-target="#buenas-prácticas-de-visualización">Buenas prácticas de visualización</a></li>
+  <li><a href="#gráficos" id="toc-gráficos" class="nav-link" data-scroll-target="#gráficos">Gráficos</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo">Muestreo</a>
+  <ul class="collapse">
+  <li><a href="#contexto-del-muestreo" id="toc-contexto-del-muestreo" class="nav-link" data-scroll-target="#contexto-del-muestreo">Contexto del muestreo</a>
+  <ul class="collapse">
+  <li><a href="#tendencias-1" id="toc-tendencias-1" class="nav-link" data-scroll-target="#tendencias-1">Tendencias</a></li>
+  <li><a href="#individuos-1" id="toc-individuos-1" class="nav-link" data-scroll-target="#individuos-1">Individuos</a></li>
+  </ul></li>
+  <li><a href="#muestreo-1" id="toc-muestreo-1" class="nav-link" data-scroll-target="#muestreo-1">Muestreo</a>
+  <ul class="collapse">
+  <li><a href="#actividad-investiguemos" id="toc-actividad-investiguemos" class="nav-link" data-scroll-target="#actividad-investiguemos">Actividad: Investiguemos</a></li>
+  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo">Conceptos de muestreo</a></li>
+  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral">Marco muestral</a></li>
+  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral">Diseño muestral</a></li>
+  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral">Error muestral</a></li>
+  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral">Tamaño muestral</a></li>
+  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</a></li>
+  </ul></li>
+  <li><a href="#muestreo-no-probabilístico-1" id="toc-muestreo-no-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-no-probabilístico-1">Muestreo no probabilístico</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-por-cuotas" id="toc-muestreo-por-cuotas" class="nav-link" data-scroll-target="#muestreo-por-cuotas">Muestreo por cuotas</a></li>
+  <li><a href="#bola-de-nieve" id="toc-bola-de-nieve" class="nav-link" data-scroll-target="#bola-de-nieve">Bola de nieve</a></li>
+  <li><a href="#muestreo-discrecional" id="toc-muestreo-discrecional" class="nav-link" data-scroll-target="#muestreo-discrecional">Muestreo discrecional</a></li>
+  <li><a href="#muestreo-por-conveniencia" id="toc-muestreo-por-conveniencia" class="nav-link" data-scroll-target="#muestreo-por-conveniencia">Muestreo por conveniencia</a></li>
+  <li><a href="#muestreo-accidental" id="toc-muestreo-accidental" class="nav-link" data-scroll-target="#muestreo-accidental">Muestreo accidental</a></li>
+  </ul></li>
+  <li><a href="#muestreo-probabilístico-1" id="toc-muestreo-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-probabilístico-1">Muestreo probabilístico</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-aleatorio-simple" id="toc-muestreo-aleatorio-simple" class="nav-link" data-scroll-target="#muestreo-aleatorio-simple">Muestreo aleatorio simple</a></li>
+  <li><a href="#muestreo-por-etapas" id="toc-muestreo-por-etapas" class="nav-link" data-scroll-target="#muestreo-por-etapas">Muestreo por etapas</a></li>
+  <li><a href="#muestreo-por-conglomerados" id="toc-muestreo-por-conglomerados" class="nav-link" data-scroll-target="#muestreo-por-conglomerados">Muestreo por conglomerados</a></li>
+  </ul></li>
+  <li><a href="#muestreo-estratificado" id="toc-muestreo-estratificado" class="nav-link" data-scroll-target="#muestreo-estratificado">Muestreo estratificado</a>
+  <ul class="collapse">
+  <li><a href="#técnicas" id="toc-técnicas" class="nav-link" data-scroll-target="#técnicas">Técnicas</a></li>
+  <li><a href="#tamaño-muestral-población-infinita" id="toc-tamaño-muestral-población-infinita" class="nav-link" data-scroll-target="#tamaño-muestral-población-infinita">Tamaño muestral (población infinita)</a></li>
+  <li><a href="#tamaño-muestral-población-finita" id="toc-tamaño-muestral-población-finita" class="nav-link" data-scroll-target="#tamaño-muestral-población-finita">Tamaño muestral (población finita)</a></li>
+  <li><a href="#factores-de-expansión" id="toc-factores-de-expansión" class="nav-link" data-scroll-target="#factores-de-expansión">Factores de expansión</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#estadística-descriptiva-para-una-variable" id="toc-estadística-descriptiva-para-una-variable" class="nav-link" data-scroll-target="#estadística-descriptiva-para-una-variable">Estadística descriptiva para una variable</a>
+  <ul class="collapse">
+  <li><a href="#repaso" id="toc-repaso" class="nav-link" data-scroll-target="#repaso">Repaso</a>
+  <ul class="collapse">
+  <li><a href="#tipos-de-variables" id="toc-tipos-de-variables" class="nav-link" data-scroll-target="#tipos-de-variables">Tipos de variables:</a></li>
+  <li><a href="#escalas-de-medición-1" id="toc-escalas-de-medición-1" class="nav-link" data-scroll-target="#escalas-de-medición-1">Escalas de medición</a></li>
+  <li><a href="#visualización-1" id="toc-visualización-1" class="nav-link" data-scroll-target="#visualización-1">Visualización</a></li>
+  </ul></li>
+  <li><a href="#estadística-descriptiva" id="toc-estadística-descriptiva" class="nav-link" data-scroll-target="#estadística-descriptiva">Estadística descriptiva</a>
+  <ul class="collapse">
+  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central">Medidas de tendencia central</a></li>
+  <li><a href="#medidas-de-localización" id="toc-medidas-de-localización" class="nav-link" data-scroll-target="#medidas-de-localización">Medidas de localización</a></li>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión">Medidas de dispersión</a></li>
+  <li><a href="#frecuencias" id="toc-frecuencias" class="nav-link" data-scroll-target="#frecuencias">Frecuencias</a></li>
+  <li><a href="#proporciones-frecuencia-relativa" id="toc-proporciones-frecuencia-relativa" class="nav-link" data-scroll-target="#proporciones-frecuencia-relativa">Proporciones (frecuencia relativa)</a></li>
+  <li><a href="#moda" id="toc-moda" class="nav-link" data-scroll-target="#moda">Moda</a></li>
+  <li><a href="#media" id="toc-media" class="nav-link" data-scroll-target="#media">Media</a></li>
+  <li><a href="#mediana" id="toc-mediana" class="nav-link" data-scroll-target="#mediana">Mediana</a></li>
+  <li><a href="#cuantiles" id="toc-cuantiles" class="nav-link" data-scroll-target="#cuantiles">Cuantiles</a></li>
+  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles">Percentiles</a></li>
+  <li><a href="#cuartiles" id="toc-cuartiles" class="nav-link" data-scroll-target="#cuartiles">Cuartiles</a></li>
+  <li><a href="#mínimo" id="toc-mínimo" class="nav-link" data-scroll-target="#mínimo">Mínimo</a></li>
+  <li><a href="#máximo" id="toc-máximo" class="nav-link" data-scroll-target="#máximo">Máximo</a></li>
+  <li><a href="#varianza" id="toc-varianza" class="nav-link" data-scroll-target="#varianza">Varianza</a></li>
+  <li><a href="#desviación-estándar" id="toc-desviación-estándar" class="nav-link" data-scroll-target="#desviación-estándar">Desviación estándar</a></li>
+  <li><a href="#rango-intercuartílico" id="toc-rango-intercuartílico" class="nav-link" data-scroll-target="#rango-intercuartílico">Rango intercuartílico</a></li>
+  <li><a href="#rango" id="toc-rango" class="nav-link" data-scroll-target="#rango">Rango</a></li>
+  <li><a href="#hablemos-bien" id="toc-hablemos-bien" class="nav-link" data-scroll-target="#hablemos-bien">Hablemos bien</a></li>
+  <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase">Actividad en clase</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#estadística-descriptiva-para-dos-o-más-variables" id="toc-estadística-descriptiva-para-dos-o-más-variables" class="nav-link" data-scroll-target="#estadística-descriptiva-para-dos-o-más-variables">Estadística descriptiva para dos o más variables</a>
+  <ul class="collapse">
+  <li><a href="#dos-variables" id="toc-dos-variables" class="nav-link" data-scroll-target="#dos-variables">Dos variables</a>
+  <ul class="collapse">
+  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link" data-scroll-target="#dos-variables-cualitativas">Dos variables cualitativas</a></li>
+  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas">Dos variables cuantitativas</a></li>
+  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza">Covarianza</a></li>
+  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson">Correlación de Pearson</a></li>
+  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman">Correlación de Spearman</a></li>
+  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</a></li>
+  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación">Correlación</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Estadística I</h1>
+<p class="subtitle lead">Introducción al mundo cuantitativo</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>CruzJulián </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="antecedentes" class="level1">
+<h1>Antecedentes</h1>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.</p>
+<p>Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.</p>
+</section>
+<section id="presentación" class="level2">
+<h2 class="anchored" data-anchor-id="presentación">Presentación</h2>
+<section id="descripción-del-curso" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-del-curso">Descripción del Curso</h3>
+<p>Estadística I: Estadística Descriptiva para el seminario de Técnicas Especiales de Investigación I, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea como introducción y con el objetivo de acercar nuevamente a los estudiantes a los temas estadísticos.</p>
+</section>
+<section id="justificación" class="level3">
+<h3 class="anchored" data-anchor-id="justificación">Justificación</h3>
+<p>Técnicas Especiales de Investigación I es la primera de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en primer semestre, y los asistentes al seminario son de tercero y cuarto semestre, se ve la necesidad de acercarlos nuevamente a los temas generales e introductorios para que se genere la intención de soportar sus investigaciones en datos tratados estadísticamente, dado el carácter investigativo de la Facultad.</p>
+</section>
+</section>
+<section id="consideraciones" class="level2">
+<h2 class="anchored" data-anchor-id="consideraciones">Consideraciones</h2>
+<p>Sobre los contenidos teóricos y/o conceptuales básicos del programa.</p>
+<p>Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.</p>
+</section>
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<section id="general" class="level3">
+<h3 class="anchored" data-anchor-id="general">General</h3>
+<p>Ofrecer herramientas de estadística descriptiva a los asistentes al seminario de Técnicas Especiales de Investigación I, como primer acercamiento y repaso de la estadística ofrecida en primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.</p>
+</section>
+<section id="específicos" class="level3">
+<h3 class="anchored" data-anchor-id="específicos">Específicos</h3>
+<ul>
+<li><p>Reafirmar los conceptos y conocimientos sobre estadística descriptiva</p></li>
+<li><p>Adelantar talleres prácticos que hagan evidentes los conceptos presentados</p></li>
+<li><p>Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante</p></li>
+</ul>
+</section>
+</section>
+<section id="metodología" class="level2">
+<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
+<p>Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.</p>
+</section>
+<section id="material" class="level2">
+<h2 class="anchored" data-anchor-id="material">Material</h2>
+<p><a href="https://openintro.org/book/os/">OpenIntro Statistics</a></p>
+<p><a href="http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf">Estadística para todos - Diana Kelmansky</a></p>
+<p><a href="https://ayushthey.medium.com/discourse-of-objectivity-2eb2541f7177">Discourse of Objectivity</a></p>
+</section>
+<section id="lecturas-del-módulo" class="level2">
+<h2 class="anchored" data-anchor-id="lecturas-del-módulo">Lecturas del módulo</h2>
+<p><a href="https://dialnet.unirioja.es/descarga/articulo/4942056.pdf">Escalas de medición - Jorge Coronado Padilla</a></p>
+<p><a href="https://scielo.conicyt.cl/pdf/ijmorphol/v35n1/art37.pdf">Técnicas de Muestreo sobre una Población a Estudio - Tamara Otzen, Carlos Manterola</a></p>
+<p><a href="https://openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics - David Diez</a> Chapter 2: Summarizing data. 2.1, 2.2.</p>
+<p><a href="https://openaccess.uoc.edu/bitstream/10609/148455/1/AnalisisBivariante.pdf">Análisis bivariante - Jordi Mas Elias</a></p>
+</section>
+<section id="evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación">Evaluación</h2>
+<p>La evaluación del curso se realiza mediante controles de lectura y quices de la siguiente manera:</p>
+<ul>
+<li><p>Al iniciar la clase, se realiza el control de lectura. Un examen de máximo 15 preguntas a cerca de la lectura realizada. Este examen tiene una duración de 15 minutos y comienza puntualmente. Las personas que llegan tarde tienen menos tiempo para responder.</p></li>
+<li><p>Al finalizar la clase se realiza el quiz. Un examen de máximo 15 preguntas a cerca de los temas vistos en clase. Este examen tiene una duración de 15 minutos y comienza 15 minutos antes de la hora de finalización de la calse. Las personas que terminan antes pueden salir.</p></li>
+<li><p>Solo las personas que obtienen una nota mayor a 2.5 en el control de lectura, tienen la oportunidad de presentar el quiz.</p></li>
+<li><p>La calificación total del curso se compone de la calificación de controles de lectura (10%) y quices (90%).</p></li>
+<li><p>Adicionalmente, se proponenen algunas actividades en clase que cuentan como 0.1 de la nota final.</p></li>
+</ul>
+</section>
+<section id="evaluación-1" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación-1">Evaluación</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Evaluación</th>
+<th style="text-align: left;">Valor (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Controles de lectura</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Quices</td>
+<td style="text-align: left;">90</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contenido" class="level2">
+<h2 class="anchored" data-anchor-id="contenido">Contenido</h2>
+<p><strong>Introducción</strong></p>
+<p>Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los <strong>tipos de variables</strong>, que incluyen <strong>variables cualitativas</strong> (nominales y ordinales) y <strong>cuantitativas</strong> (discretas y continuas). A continuación, se aborda la <strong>tipología de preguntas</strong> en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los <strong>tipos de encuestas</strong>, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.</p>
+<p><strong>Muestreo</strong></p>
+<p>En este tema se abordan los fundamentos del <strong>muestreo</strong>, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: <strong>probabilístico</strong> y <strong>no probabilístico</strong>. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el <strong>muestreo aleatorio simple</strong>, el <strong>muestreo multietápico</strong>, el <strong>muestreo estratificado</strong> y el <strong>muestreo por conglomerados</strong>. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el <strong>muestreo por conveniencia</strong>, <strong>muestreo por cuotas</strong> o <strong>bola de nieve</strong>. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.</p>
+<p><strong>Estadística descriptiva para una variable</strong></p>
+<p>La <strong>estadística descriptiva para una variable</strong> se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las <strong>medidas de tendencia central</strong> como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las <strong>medidas de dispersión</strong> como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de <strong>gráficos</strong> como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.</p>
+<p><strong>Estadística descriptiva para dos o más variables</strong></p>
+<p>Este tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las <strong>tablas de contingencia</strong> para estudiar la relación entre dos variables cualitativas, así como las <strong>medidas de asociación</strong> como el <strong>coeficiente de correlación de Pearson</strong> y <strong>Spearman</strong> para variables cuantitativas. También se discuten las <strong>gráficas de dispersión</strong> para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una <strong>recta de regresión</strong> para predecir una variable en función de otra. Además, se examinan los <strong>coeficientes de correlación parcial</strong> y <strong>análisis multivariado</strong> para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.</p>
+</section>
+<section id="docente" class="level2">
+<h2 class="anchored" data-anchor-id="docente">Docente</h2>
+<p>Julián Cruz</p>
+<p>Soy científico de datos, profesional en estadística y magíster en ciencias. Cuento con más de 12 años de experiencia demostrada en analítica y ciencia de datos. Mi perfil contempla desde liderazgo de programas de capacitación y gestión del cambio, hasta ejecución proyectos de base tecnológica. Esta experiencia me ha permitido desarrollar diferentes competencias, como la orientación al valor en toma de decisiones, la conformación y desarrollo de equipos de alto desempeño y la negociación integradora.</p>
+</section>
+<section id="narrativa" class="level2">
+<h2 class="anchored" data-anchor-id="narrativa">Narrativa</h2>
+<div class="columns">
+<div class="column">
+<section id="creadores" class="level3">
+<h3 class="anchored" data-anchor-id="creadores">Creadores</h3>
+<p>Los creadores de herramientas, productos, servicios y experiencias deben tener un conocimiento profundo sobre el campo en el que actúan.</p>
+</section>
+</div><div class="column">
+<section id="usuarios" class="level3">
+<h3 class="anchored" data-anchor-id="usuarios">Usuarios</h3>
+<p>Los usuarios de herramientas, productos, servicicios y experiencias deben tener claridad sobre su finalidad y el modo de uso.</p>
+</section>
+</div>
+</div>
+</section>
+</section>
+<section id="introducción-1" class="level1">
+<h1>Introducción</h1>
+<section id="preámbulo" class="level2">
+<h2 class="anchored" data-anchor-id="preámbulo">Preámbulo</h2>
+<section id="expectativas" class="level3">
+<h3 class="anchored" data-anchor-id="expectativas">Expectativas</h3>
+<p>Problemas que vamos a tener cuando seamos grandes.</p>
+<ul>
+<li><p>Excel</p></li>
+<li><p>Datos grandes.</p></li>
+<li><p>Ir a ciegas con un análisis de datos.</p></li>
+<li><p>No saber el idioma de los datos.</p></li>
+<li><p>No entender un modelo</p></li>
+<li><p>La medición de los humanos</p></li>
+</ul>
+</section>
+<section id="información" class="level3">
+<h3 class="anchored" data-anchor-id="información">Información</h3>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>¿Por qué queremos procesar información?</p></li>
+<li><p>¿Existe la verdad?</p></li>
+<li><p>¿Cómo se trata la verdad en la modernidad?</p></li>
+<li><p>¿Cómo se trata la verdad en la postmodernidad?</p></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><p>¿Qué es la información?</p></li>
+<li><p>¿Queremos ciencias políticas o políticas científicas?</p></li>
+<li><p>¿Qué es un modelo científico?</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="escenarios-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="escenarios-de-datos">Escenarios de datos</h3>
+<ul>
+<li><p>¿Qué son los datos?</p></li>
+<li><p>¿Qué son las variables?</p></li>
+<li><p>¿Qué son los individuos?</p></li>
+</ul>
+</section>
+<section id="primera-actividad-cómo-son-los-datos" class="level3">
+<h3 class="anchored" data-anchor-id="primera-actividad-cómo-son-los-datos">Primera actividad: ¿Cómo son los datos?</h3>
+<p>En muchos contextos el tema de los datos implica programación. Esto genera una impresión lejana en el ámbito de las ciencias sociales. La creación de brechas tecnológicas aleja al científico social del análisis de datos.</p>
+<p>Es normal tener una resistencia en el desarrollo de competencias cuantitativas. Las metodologías de análisis de información conducen a lo cuantitativo de manera inevitable. El desarrollo de las habilidades no solo es indispensable para la investigación, sino para la vida profesional.</p>
+<p>El acercamiento del científico social a lo cuantitativo comprende el uso de herramientas muy básicas.</p>
+<p>La reconceptualización del trabajo con datos resulta necesaria.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Podemos ver los datos como puntos en el eje de la edad.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Podemos diseminarlos verticalmente para verlos mejor.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Podemos trazar líneas imaginarias para dividirlos en partes iguales.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Usando más líneas imaginarias podemos dividirlos en cuatro partes iguales.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Conformamos un gráfico de caja y bigotes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Iniciamos de nuevo, desde el principio añadiendo el color del género.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Añadiendo espacio vertical se visualiza una tendencia.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Organizamos los datos verticalemnte por género.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Una caja para cada género es lo apropiado. ¿Podemos ver ahora la tendencia?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_est-desc_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-datos">Tipos de datos</h2>
+<section id="tendencias" class="level3">
+<h3 class="anchored" data-anchor-id="tendencias">Tendencias</h3>
+<p>El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.</p>
+</section>
+<section id="individuos" class="level3">
+<h3 class="anchored" data-anchor-id="individuos">Individuos</h3>
+<p>Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría.</p>
+</section>
+<section id="variables" class="level3">
+<h3 class="anchored" data-anchor-id="variables">Variables</h3>
+<p>Una <em>variable</em> es una característica observable o medible de un individuo, que se describe acorde a una escala de medición bien definida. Cada rasgo, aspecto o característica de una población constituye una variable.</p>
+</section>
+<section id="tipos-de-variable" class="level3">
+<h3 class="anchored" data-anchor-id="tipos-de-variable">Tipos de variable</h3>
+<ul>
+<li><p>Variables categóricas</p></li>
+<li><p>Variables numéricas</p></li>
+<li><p>Variables temporales</p></li>
+</ul>
+</section>
+<section id="variables-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="variables-categóricas">Variables categóricas</h3>
+<p>Las <em>variables cualitativas</em> son aquellas que se expresan en forma verbal como categorías o atributos. El género, la afiliación política, la nacionalidad y la profesión son ejemplos de variables cualitativas.</p>
+</section>
+<section id="variables-numéricas" class="level3">
+<h3 class="anchored" data-anchor-id="variables-numéricas">Variables numéricas</h3>
+<p>Las <em>variables cuantitativas</em> son aquellas que varían en términos de cantidad y se registran o expresan en forma numérica. La edad, el peso, la estatura, la temperatura y el salario son ejemplos de variables cuantitativas. A su vez, estas variables se clasifican como sigue:</p>
+<ul>
+<li><p>Variables discretas: no admiten siempre un valor intermedio entre dos valores cualesquiera de la variable. Por ejemplo, el número de hijos de una persona es una variable cuantitativa discreta.</p></li>
+<li><p>Variables continuas: siempre admiten un valor intermedio entre dos valores cualesquiera de la variable. Por ejemplo, el salario de un empleado medido en millones de pesos es una variable cuantitativa continua.</p></li>
+</ul>
+</section>
+<section id="medición" class="level3">
+<h3 class="anchored" data-anchor-id="medición">Medición</h3>
+<p>La <em>medición</em> es un proceso mediante el cual se asignan valores cuantitativos o cualitativos a los atributos de los elementos objeto de estudio, de acuerdo a unas reglas claramente preestablecidas.</p>
+</section>
+<section id="escalas-de-medición" class="level3">
+<h3 class="anchored" data-anchor-id="escalas-de-medición">Escalas de medición</h3>
+<p>Una <em>escala de medición</em> es un esquema específico para asignar símbolos o números con el objeto de designar los valores de una variable.</p>
+<ul>
+<li>Nominal</li>
+<li>Ordinal</li>
+<li>Intervalo</li>
+<li>Razón</li>
+</ul>
+</section>
+<section id="escalas-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="escalas-categóricas">Escalas categóricas</h3>
+<p><strong>Escala nominal:</strong> La <em>escala nominal</em> es aquella donde se clasifican los individuos en categorías distintas. Consiste en agrupar los individuos de acuerdo a alguna cualidad que los hagan propios de una categoría determinada.</p>
+<p><strong>Escala ordinal:</strong> La <em>escala ordinal</em> es aquella donde se clasifican las unidades de observación en categrías. Estas categorías poseen una posición con relación a la característica que miden. Así, es posible conocer el orden de las categorías pero no la distancia que hay entre las posiciones.</p>
+</section>
+<section id="escalas-numéricas" class="level3">
+<h3 class="anchored" data-anchor-id="escalas-numéricas">Escalas numéricas</h3>
+<p><strong>Escala de intervalo:</strong> La <em>escala de intervalo</em> es aquella donde se ordenan los elementos según la magnitud del atributo que representan y se proveen intervalos iguales entre las unidades de medida. No posee un cero absoluto, dado que es establecido por convención de forma arbitraria por los expertos en el área de estudio; el 0 no implica la ausencia del atributo.</p>
+<p><strong>Escala de razón:</strong> Por último, la <em>escala de razón</em> es aquella donde el punto 0 no es arbitrario y corresponde a una total ausencia de la característica observada.</p>
+</section>
+</section>
+<section id="visualización" class="level2">
+<h2 class="anchored" data-anchor-id="visualización">Visualización</h2>
+<p>Iniciamos el tema de visualización de datos con una lectura refrescante: <a href="https://culturacientifica.com/2019/04/25/graficas-para-la-ciencia-y-ciencia-para-las-graficas/">Gráficas para la ciencia y ciencia para las gráficas</a></p>
+<section id="por-qué-visualización" class="level3">
+<h3 class="anchored" data-anchor-id="por-qué-visualización">¿Por qué visualización?</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">El cuarteto de Anscombe</a></li>
+<li><a href="https://seeing-theory.brown.edu">Seeing theory</a></li>
+</ul>
+</section>
+<section id="veamos-ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="veamos-ejemplos">Veamos ejemplos</h3>
+<ul>
+<li><p><a href="https://informationisbeautiful.net/">Information is beautiful</a></p></li>
+<li><p><a href="https://www.gapminder.org/tools">gapmminder</a></p></li>
+<li><p><a href="https://shiny.rstudio.com/gallery/">shiny:</a></p></li>
+<li><p><a href="https://plot.ly/feed">plotly</a></p></li>
+<li><p><a href="https://www.oecd.org/en/data/dashboards.html">Beter Life Index OECD</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=dwZ6B5kalbQ">Top 10 Countries by Inflation Rate (1980-2018)</a></p></li>
+</ul>
+</section>
+<section id="el-ejemplo-de-napoleón" class="level3">
+<h3 class="anchored" data-anchor-id="el-ejemplo-de-napoleón">El ejemplo de Napoleón</h3>
+<p><img src="https://www.researchgate.net/profile/Dae-Heung-Jang/publication/327579298/figure/fig1/AS:669684911325187@1536676733297/Minards-map-of-Napoleons-disastrous-Russian-campaign-of-1812.ppm" class="img-fluid"></p>
+<p>Fuente: <a href="https://www.researchgate.net/publication/327579298_Data_visualization_education_using_the_storytelling_with_Minard's_figurative_map">Data visualization education using the storytelling with Minard’s figurative map</a></p>
+</section>
+<section id="gráficos-tradicionales" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-tradicionales">Gráficos tradicionales</h3>
+<p><img src="https://www.addintools.com/documents/excel/images/excel-chart-tools-ribbon-683-186.png" class="img-fluid"></p>
+</section>
+<section id="escala-de-cleveland-y-mcgill" class="level3">
+<h3 class="anchored" data-anchor-id="escala-de-cleveland-y-mcgill">Escala de Cleveland y McGill</h3>
+<p><img src="https://culturacientifica.com/app/uploads/2019/04/Figura-2-768x358.png" class="img-fluid"></p>
+</section>
+<section id="buenas-prácticas-de-visualización" class="level3">
+<h3 class="anchored" data-anchor-id="buenas-prácticas-de-visualización">Buenas prácticas de visualización</h3>
+<p><a href="https://youtu.be/TbE8icMHSzs">Buenas prácticas de la visualización - Víctor Pascual</a></p>
+</section>
+<section id="gráficos" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos">Gráficos</h3>
+<p>Los gráficos más comunes utilizados en datos son los siguientes.</p>
+<ol type="1">
+<li><p><strong>Gráfico de barras</strong>: útil para comparar categorías. Variación: <strong>gráfico de lollipop</strong>, donde se usan puntos conectados por líneas en lugar de barras.</p></li>
+<li><p><strong>Gráfico de torta (pastel)</strong>: muestra proporciones. Variación: <strong>gráfico de dona</strong>, que es similar pero con un espacio vacío en el centro.</p></li>
+<li><p><strong>Histograma</strong>: representa la distribución de frecuencias de una variable cuantitativa. Variación: <strong>gráfico de densidad</strong>, que suaviza las frecuencias en una curva continua para mostrar la distribución de los datos.</p></li>
+<li><p><strong>Gráfico de dispersión</strong>: muestra la relación entre dos variables cuantitativas. Variación: <strong>gráfico de jitter</strong>, que separa los puntos amontonados para revelar la densidad de los datos.</p></li>
+<li><p><strong>Boxplot (diagrama de caja y bigotes)</strong>: resume la distribución de una variable. Variación: <strong>gráfico de violín</strong>, que añade una visualización de la densidad en ambos lados del gráfico.</p></li>
+<li><p><strong>Gráfico de líneas</strong>: útil para visualizar tendencias a lo largo del tiempo. Variación: <strong>gráfico de áreas</strong>, donde el área bajo la línea está sombreada, destacando la magnitud.</p></li>
+<li><p><strong>Mapa de calor (heatmap)</strong>: visualiza patrones de datos a través de variaciones de color. Variación: <strong>clustered heatmap</strong>, que agrupa los datos por similitud, facilitando la interpretación de patrones.</p></li>
+<li><p><strong>Gráfico de burbujas</strong>: similar al gráfico de dispersión, pero con el tamaño de las burbujas que representa una tercera variable.</p></li>
+<li><p><strong>Gráfico de radar (o de araña)</strong>: muestra múltiples variables radiales. Variación: <strong>gráfico de radar de área</strong>, que sombrea el área debajo de los valores para enfatizar la comparación entre categorías.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="muestreo" class="level1">
+<h1>Muestreo</h1>
+<section id="contexto-del-muestreo" class="level2">
+<h2 class="anchored" data-anchor-id="contexto-del-muestreo">Contexto del muestreo</h2>
+<section id="tendencias-1" class="level3">
+<h3 class="anchored" data-anchor-id="tendencias-1">Tendencias</h3>
+<p>El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.</p>
+</section>
+<section id="individuos-1" class="level3">
+<h3 class="anchored" data-anchor-id="individuos-1">Individuos</h3>
+<p>Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría.</p>
+</section>
+<div class="columns">
+<div class="column">
+<section id="población" class="level3">
+<h3 class="anchored" data-anchor-id="población">Población</h3>
+<p>Para cualquier pregunta que interese responder, primero es necesario dirigir la atención a un grupo particular de individuos: personas, ciudades, animales, televisores, discos rígidos, tornillos o lamparitas.</p>
+</section>
+</div><div class="column">
+<section id="muestra" class="level3">
+<h3 class="anchored" data-anchor-id="muestra">Muestra</h3>
+<p>Es un subconjunto de la población.</p>
+</section>
+<section id="representatividad" class="level3">
+<h3 class="anchored" data-anchor-id="representatividad">Representatividad</h3>
+<p>Una muestra es representativa de la población cuando todas las características importantes de la población tienen que estar en la muestra en la misma proporción que en la población.</p>
+</section>
+</div>
+</div>
+</section>
+<section id="muestreo-1" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-1">Muestreo</h2>
+<p>¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.</p>
+<p>Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.</p>
+<section id="actividad-investiguemos" class="level3">
+<h3 class="anchored" data-anchor-id="actividad-investiguemos">Actividad: Investiguemos</h3>
+<p>¿Qué es un cisne negro y qué historia esconde?</p>
+</section>
+<section id="conceptos-de-muestreo" class="level3">
+<h3 class="anchored" data-anchor-id="conceptos-de-muestreo">Conceptos de muestreo</h3>
+<ul>
+<li><p>Marco</p></li>
+<li><p>Diseño</p></li>
+<li><p>Error</p></li>
+<li><p>Tamaño</p></li>
+</ul>
+</section>
+<section id="marco-muestral" class="level3">
+<h3 class="anchored" data-anchor-id="marco-muestral">Marco muestral</h3>
+<p>El marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.</p>
+<p>Este marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.</p>
+</section>
+<section id="diseño-muestral" class="level3">
+<h3 class="anchored" data-anchor-id="diseño-muestral">Diseño muestral</h3>
+<p>El diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.</p>
+<p>La elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.</p>
+<p>Es el diseño muestral lo que le da representatividad a la muestra.</p>
+</section>
+<section id="error-muestral" class="level3">
+<h3 class="anchored" data-anchor-id="error-muestral">Error muestral</h3>
+<p>El error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.</p>
+<p>El tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.</p>
+</section>
+<section id="tamaño-muestral" class="level3">
+<h3 class="anchored" data-anchor-id="tamaño-muestral">Tamaño muestral</h3>
+<p>El tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.</p>
+<p>La determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.</p>
+<p>Es el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.</p>
+</section>
+<section id="distintos-abordajes-del-muestreo" class="level3">
+<h3 class="anchored" data-anchor-id="distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</h3>
+<section id="muestreo-no-probabilístico" class="level4">
+<h4 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h4>
+<p>No todos los elementos tienen probabilidad de ser seleccionados</p>
+<ul>
+<li>La muestra no es representativa (rigurosamente)</li>
+<li>No es posible calcular el error muestral</li>
+<li>Requiere menos recursos</li>
+</ul>
+</section>
+<section id="muestreo-probabilístico" class="level4">
+<h4 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h4>
+<p>Todos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.</p>
+</section>
+</section>
+</section>
+<section id="muestreo-no-probabilístico-1" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-no-probabilístico-1">Muestreo no probabilístico</h2>
+<ul>
+<li>Por cuotas</li>
+<li>Bola de nieve</li>
+<li>Discrecional</li>
+<li>Conveniencia</li>
+<li>Accidental</li>
+</ul>
+<section id="muestreo-por-cuotas" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-por-cuotas">Muestreo por cuotas</h3>
+<p>Consiste en dividir la población en segmentos y obtener una cuota de cada segmento.</p>
+<p>Se utiliza cuando se tienen segmentos relevantes pero no se tiene acceso al marco muestral.</p>
+<p>En un estudio sobre preferencias de compra de automóviles, se decide utilizar el muestreo por cuotas para asegurar que la muestra sea representativa en términos de género y edad. El investigador establece cuotas basadas en la distribución de la población:</p>
+<ul>
+<li><strong>Género</strong>: 50% hombres, 50% mujeres.</li>
+<li><strong>Edad</strong>: 25% de 18-29 años, 25% de 30-39 años, 25% de 40-49 años, 25% de 50 años o más.</li>
+</ul>
+<p>El investigador luego selecciona participantes hasta que se cumplan las cuotas establecidas, por ejemplo, 100 hombres y 100 mujeres, distribuidos equitativamente entre los diferentes grupos de edad. Este método asegura que todas las categorías importantes estén adecuadamente representadas en la muestra.</p>
+</section>
+<section id="bola-de-nieve" class="level3">
+<h3 class="anchored" data-anchor-id="bola-de-nieve">Bola de nieve</h3>
+<p>Cada individuo refiere nuevos individuos.</p>
+<p>Se utiliza con poblaciones sensibles.</p>
+<p>En un estudio sobre los hábitos de ahorro entre migrantes de un país específico, se utiliza el muestreo bola de nieve debido a la dificultad de acceder a esta población. El investigador comienza con un pequeño grupo de migrantes conocidos que participan en el estudio. Luego, estos participantes refieren a otros migrantes que también podrían estar interesados en participar.</p>
+<p>A medida que más personas son entrevistadas, se continúa pidiendo referencias, lo que permite que la muestra “crezca como una bola de nieve”. Este método es especialmente útil para poblaciones difíciles de alcanzar o cuando no existe un marco muestral claro.</p>
+</section>
+<section id="muestreo-discrecional" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-discrecional">Muestreo discrecional</h3>
+<p>Consiste en tomar de la población los individuos que resulten representativos bajo el jucio de un experto.</p>
+<p>Se utiliza cuando hay un experto que ha realizado estudios previos.</p>
+<p>En un estudio exploratorio sobre las opiniones de expertos en inteligencia artificial, se decide utilizar el muestreo discrecional. El investigador selecciona intencionadamente a un grupo de 10 expertos reconocidos en el campo, basándose en su conocimiento y reputación en la industria. La selección no es aleatoria, sino que se realiza según el criterio del investigador, quien elige a estos expertos por considerarlos los más apropiados para proporcionar información valiosa y relevante para el estudio.</p>
+</section>
+<section id="muestreo-por-conveniencia" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-por-conveniencia">Muestreo por conveniencia</h3>
+<p>Consiste en estudiar los individuos más cercanos o voluntarios, ya que estos son más accesibles.</p>
+<p>Se utiliza en estudios cuyas poblaciones no son accesibles.</p>
+<p>En un estudio piloto sobre las preferencias de snacks saludables entre estudiantes universitarios, el investigador utiliza el muestreo por conveniencia debido a limitaciones de tiempo y recursos.</p>
+<p>El investigador selecciona a los estudiantes del curso de muestreo para que respondan a una breve encuesta. Este método se elige porque los participantes son fácilmente accesibles, aunque no necesariamente representan a toda la población estudiantil.</p>
+</section>
+<section id="muestreo-accidental" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-accidental">Muestreo accidental</h3>
+<p>Se selecciona un mecanismo de selección o acceso a los individuos encontrándolos por casualidad en un espacio definido sin ningún juicio previo.</p>
+<p>Se utiliza en poblaciones particularmente grandes con fines descriptivos y prácticos.</p>
+<p>En un estudio sobre las tendencias de la moda un investigador utiliza el muestreo accidental. Se aborda a los primeros 30 clientes que ingresan en una tienda de ropa durante una mañana para que respondan a una encuesta de satisfacción.</p>
+<p>Este método es accidental porque se seleccionan a los participantes en el lugar y momento de recolección.</p>
+</section>
+</section>
+<section id="muestreo-probabilístico-1" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-probabilístico-1">Muestreo probabilístico</h2>
+<ul>
+<li><p>Aleatorio simple</p></li>
+<li><p>Por etapas</p></li>
+<li><p>Por conglomerados</p></li>
+<li><p>Por estratos</p></li>
+</ul>
+<section id="muestreo-aleatorio-simple" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-aleatorio-simple">Muestreo aleatorio simple</h3>
+<ul>
+<li>Definir la población</li>
+<li>Obtener el marco muestral</li>
+<li>Definir un tamaño muestral <span class="math inline">\(n\)</span></li>
+<li>Elegir aleatoriamente <span class="math inline">\(n\)</span> individuos de la población</li>
+</ul>
+<p>En un estudio sobre los hábitos de lectura de la población adulta en una ciudad, se decide utilizar el muestreo aleatorio simple. A partir de un listado completo de los 10,000 residentes adultos de la ciudad, el investigador selecciona 500 personas utilizando un generador de números aleatorios.</p>
+<p>Cada individuo tiene la misma probabilidad de ser seleccionado, lo que asegura que la muestra sea representativa de toda la población, minimizando sesgos en la selección.</p>
+</section>
+<section id="muestreo-por-etapas" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-por-etapas">Muestreo por etapas</h3>
+<ul>
+<li>Bietápico (2 etapas)</li>
+<li>Polietápico (3 etapas o más)</li>
+<li>Es necesario calcular tamaño muestral en cada etapa</li>
+</ul>
+<p>En un estudio nacional sobre el nivel educativo en zonas rurales, se utiliza el muestreo por etapas para facilitar la selección de la muestra.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se seleccionan al azar 10 estados de un total de 32 en el país.</li>
+<li><strong>Segunda etapa</strong>: Dentro de cada estado seleccionado, se eligen aleatoriamente 3 municipios rurales.</li>
+<li><strong>Tercera etapa</strong>: En cada municipio, se seleccionan aleatoriamente 5 escuelas primarias.</li>
+<li><strong>Cuarta etapa</strong>: Dentro de cada escuela seleccionada, se eligen al azar 30 estudiantes para participar en el estudio.</li>
+</ol>
+<p>Este método permite una selección eficiente y representativa en poblaciones grandes y dispersas, utilizando un enfoque jerárquico y secuencial.</p>
+</section>
+<section id="muestreo-por-conglomerados" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-por-conglomerados">Muestreo por conglomerados</h3>
+<ul>
+<li>Son heterogéneos en su interior.</li>
+<li>Son homogéneos entre sí</li>
+<li>Se selecciona una muestra primaria</li>
+<li>Se selecciona una muestra secundaria</li>
+<li>Ejemplo: ciudades, salones, centros comerciales</li>
+</ul>
+<p>En un estudio sobre el impacto de programas educativos en escuelas primarias, se utiliza el muestreo por conglomerados para simplificar el proceso de recolección de datos.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se seleccionan al azar 20 escuelas primarias de un listado completo de 200 en una región determinada.</li>
+<li><strong>Segunda etapa</strong>: Dentro de cada escuela seleccionada, se eligen al azar 3 clases para participar en el estudio.</li>
+<li><strong>Tercera etapa</strong>: Se recopilan datos de todos los estudiantes de las clases seleccionadas.</li>
+</ol>
+<p>Este método es útil cuando la población está agrupada en unidades naturales, como escuelas o barrios, y facilita la logística y los costos al reducir el número de unidades primarias que se deben tratar.</p>
+</section>
+</section>
+<section id="muestreo-estratificado" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-estratificado">Muestreo estratificado</h2>
+<ul>
+<li>Son homogéneos en su interior</li>
+<li>Son heterogéneos entre sí</li>
+<li>Se selecciona una censo primario</li>
+<li>Se selecciona una muestra secundaria</li>
+</ul>
+<p>En un estudio sobre la satisfacción laboral en una empresa multinacional, se utiliza el muestreo estratificado para asegurar que todas las divisiones y niveles jerárquicos de la empresa estén representados.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se divide a los empleados en diferentes estratos según su departamento (por ejemplo, Finanzas, Recursos Humanos, Marketing, etc.).</li>
+<li><strong>Segunda etapa</strong>: Se selecciona una muestra aleatoria de empleados de cada estrato para participar en la encuesta de satisfacción.</li>
+</ol>
+<p>Este método garantiza que cada subgrupo relevante dentro de la población esté representado en la muestra, permitiendo comparaciones más precisas entre diferentes departamentos y niveles jerárquicos.</p>
+<section id="técnicas" class="level3">
+<h3 class="anchored" data-anchor-id="técnicas">Técnicas</h3>
+<p><a href="https://youtu.be/gyGQ_qieVKM">Técnicas de muestreo</a></p>
+</section>
+<section id="tamaño-muestral-población-infinita" class="level3">
+<h3 class="anchored" data-anchor-id="tamaño-muestral-población-infinita">Tamaño muestral (población infinita)</h3>
+<p><span class="math display">\[n = \frac{z^2p(1-p)}{\epsilon^2}\]</span></p>
+</section>
+<section id="tamaño-muestral-población-finita" class="level3">
+<h3 class="anchored" data-anchor-id="tamaño-muestral-población-finita">Tamaño muestral (población finita)</h3>
+<p><span class="math display">\[n' = \frac{n}{1 + \frac{z^2p(1-p)}{\epsilon^2n}}\]</span></p>
+</section>
+<section id="factores-de-expansión" class="level3">
+<h3 class="anchored" data-anchor-id="factores-de-expansión">Factores de expansión</h3>
+<p>Cuando tenemos un diseño muestral, es posible saber cuántos individuos de la población son representados por un individuo de la muestra. Esta cantidad se denomina <em>Factores de expansión</em>.</p>
+<p>Los factores de expansión son particularmente útiles para calcular totales.</p>
+</section>
+<section id="actividad" class="level3">
+<h3 class="anchored" data-anchor-id="actividad">Actividad</h3>
+<p>En esta actividad vamos a analizar una encuesta.</p>
+<ol type="1">
+<li><p>Elija una encuesta de la lista-</p></li>
+<li><p>Escudriñe la documentación. Busque el muestreo.</p></li>
+<li><p>Lea el muestreo cuidadosamente.</p></li>
+<li><p>Escriba cómo imagina los detalles de la ejecución: Obtención del marco muestral</p></li>
+</ol>
+<p>Encuestas</p>
+<ul>
+<li><a href="https://profamilia.org.co/investigaciones/ends/">Encuesta Nacional de Demografía y Salud (ENDS)/Ministerio de Salud y Protección Social</a></li>
+<li><a href="https://colombiatic.mintic.gov.co/679/w3-article-198835.html">Encuesta TIC Hogares</a></li>
+<li><a href="https://colombiatic.mintic.gov.co/679/w3-article-333031.html">Índice de brecha Digital</a></li>
+<li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/agropecuario/encuesta-nacional-agropecuaria-ena">Encuesta Nacional Agropecuaria</a></li>
+<li><a href="https://www.sdp.gov.co/gestion-estudios-estrategicos/estudios-macro/encuesta-multiproposito/resultados">Encuesta Multipropósito</a></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="estadística-descriptiva-para-una-variable" class="level1">
+<h1>Estadística descriptiva para una variable</h1>
+<section id="repaso" class="level2">
+<h2 class="anchored" data-anchor-id="repaso">Repaso</h2>
+<section id="tipos-de-variables" class="level3">
+<h3 class="anchored" data-anchor-id="tipos-de-variables">Tipos de variables:</h3>
+<ul>
+<li>Cualitativas</li>
+<li>Cuantitativas
+<ul>
+<li>Discretas</li>
+<li>Continuas</li>
+</ul></li>
+</ul>
+</section>
+<section id="escalas-de-medición-1" class="level3">
+<h3 class="anchored" data-anchor-id="escalas-de-medición-1">Escalas de medición</h3>
+<ul>
+<li>Nominal</li>
+<li>Ordinal</li>
+<li>De intervalo</li>
+<li>De razón</li>
+</ul>
+</section>
+<section id="visualización-1" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-1">Visualización</h3>
+<ul>
+<li>Los gráficos dependen del tipo de variable</li>
+<li>Hay unos gráficos básicos (están en excel)</li>
+<li>Hay gráficos muy complejos, tenemos que desarrollar nuevas habilidades para leerlos!</li>
+</ul>
+</section>
+</section>
+<section id="estadística-descriptiva" class="level2">
+<h2 class="anchored" data-anchor-id="estadística-descriptiva">Estadística descriptiva</h2>
+<section id="medidas-de-tendencia-central" class="level3">
+<h3 class="anchored" data-anchor-id="medidas-de-tendencia-central">Medidas de tendencia central</h3>
+<ul>
+<li>Frecuencia</li>
+<li>Proporción</li>
+<li>Moda</li>
+<li>Media</li>
+<li>Mediana</li>
+</ul>
+</section>
+<section id="medidas-de-localización" class="level3">
+<h3 class="anchored" data-anchor-id="medidas-de-localización">Medidas de localización</h3>
+<ul>
+<li>Cuantiles</li>
+<li>Percentiles</li>
+<li>Cuartiles</li>
+<li>Máximo</li>
+<li>Mínimo</li>
+</ul>
+</section>
+<section id="medidas-de-dispersión" class="level3">
+<h3 class="anchored" data-anchor-id="medidas-de-dispersión">Medidas de dispersión</h3>
+<ul>
+<li>Varianza</li>
+<li>Desviación estándar</li>
+<li>Rango intercuartílico</li>
+<li>Rango</li>
+</ul>
+</section>
+<section id="frecuencias" class="level3">
+<h3 class="anchored" data-anchor-id="frecuencias">Frecuencias</h3>
+<p>Es el número de veces que aparece cada valor.</p>
+<ul>
+<li>En variables continuas usualmente no aparecen repeticiones.</li>
+<li>En variables continuas depende de la muesta.</li>
+<li>Funciona bien en variables cualitativas.</li>
+</ul>
+</section>
+<section id="proporciones-frecuencia-relativa" class="level3">
+<h3 class="anchored" data-anchor-id="proporciones-frecuencia-relativa">Proporciones (frecuencia relativa)</h3>
+<ul>
+<li>En variables continuas usualmente no aparecen repeticiones.</li>
+<li>En variables continuas depende de la muesta.</li>
+<li>Funciona bien en variables cualitativas.</li>
+</ul>
+<p><span class="math display">\[p = \frac{freq}{n}\]</span></p>
+</section>
+<section id="moda" class="level3">
+<h3 class="anchored" data-anchor-id="moda">Moda</h3>
+<p>Es el dato más frecuente. Pero tiene varios problemas.</p>
+<ul>
+<li>En variables continuas usualmente no aparecen repeticiones.</li>
+<li>En variables continuas depende de la muesta.</li>
+<li>Funciona bien en variables cualitativas.</li>
+</ul>
+</section>
+<section id="media" class="level3">
+<h3 class="anchored" data-anchor-id="media">Media</h3>
+<ul>
+<li>Corresponde al escenario más equilibrado.</li>
+<li>No refleja la dispersión.</li>
+<li>No funciona para variables cualitativas.</li>
+</ul>
+<p><span class="math display">\[\overline{x} = \frac{1}{n} \sum\limits_{i = 1}^n x_i\]</span></p>
+</section>
+<section id="mediana" class="level3">
+<h3 class="anchored" data-anchor-id="mediana">Mediana</h3>
+<ul>
+<li>Corresponde al dato de la mitad.</li>
+<li>No refleja la dispersión.</li>
+<li>Es invariable a datos atípicos.</li>
+<li>Funciona para variables cuantitativas y cualitativas de escala ordinal.</li>
+</ul>
+<p><span class="math display">\[\widetilde{x} \sim X_{(n/2)}\]</span></p>
+</section>
+<section id="cuantiles" class="level3">
+<h3 class="anchored" data-anchor-id="cuantiles">Cuantiles</h3>
+<ul>
+<li>Son medidas de localización pero no son centrales.</li>
+<li>Permiten tener información sobre la distribución completa.</li>
+<li>Funciona para variables cuantitativas y cualitativas de escala ordinal.</li>
+<li>Se pueden calcular para cualquier <span class="math inline">\(\alpha\)</span> entre 0 y 1.</li>
+</ul>
+<p><span class="math display">\[Q_\alpha(x)\sim X_{(\alpha)}\]</span></p>
+</section>
+<section id="percentiles" class="level3">
+<h3 class="anchored" data-anchor-id="percentiles">Percentiles</h3>
+<p>Corresponden a los cuantiles cambiando <span class="math inline">\(\alpha\)</span> por un valor de cero a cien.</p>
+</section>
+<section id="cuartiles" class="level3">
+<h3 class="anchored" data-anchor-id="cuartiles">Cuartiles</h3>
+<p>Corresponden a los cuantiles <span class="math inline">\(Q_{0.25}(x)\)</span>, <span class="math inline">\(Q_{0.5}(x)\)</span> y <span class="math inline">\(Q_{0.75}(x)\)</span>.</p>
+<ul>
+<li>La mediana corresponde al segundo cuartil o al percentil 50.</li>
+</ul>
+</section>
+<section id="mínimo" class="level3">
+<h3 class="anchored" data-anchor-id="mínimo">Mínimo</h3>
+<p>El menor de los datos. Corresponde al percentil 0.</p>
+</section>
+<section id="máximo" class="level3">
+<h3 class="anchored" data-anchor-id="máximo">Máximo</h3>
+<p>El mayor de los datos. Corresponde al percentil 100.</p>
+</section>
+<section id="varianza" class="level3">
+<h3 class="anchored" data-anchor-id="varianza">Varianza</h3>
+<p><span class="math display">\[ S_x^2 =\frac{1}{n} \sum\limits_{i=1}^n (x_i-\overline{x})^2\]</span></p>
+<ul>
+<li>Es una medida de la dispersión de los datos.</li>
+<li>No es afectada por la localización.</li>
+<li>Siempre es un valor positivo.</li>
+</ul>
+</section>
+<section id="desviación-estándar" class="level3">
+<h3 class="anchored" data-anchor-id="desviación-estándar">Desviación estándar</h3>
+<p>Es la raíz cuadrada de la varianza. Está dada en las unidades de la variable.</p>
+<p><span class="math display">\[ S_x =\sqrt{S_x^2}\]</span></p>
+</section>
+<section id="rango-intercuartílico" class="level3">
+<h3 class="anchored" data-anchor-id="rango-intercuartílico">Rango intercuartílico</h3>
+<p><span class="math display">\[ran(x) = Q_{0.75}(x) - Q_{0.25}(x)\]</span></p>
+<ul>
+<li>Es una medida de la dispersión de los datos.</li>
+<li>No es afectada por la localización.</li>
+<li>Siempre es un valor positivo.</li>
+</ul>
+</section>
+<section id="rango" class="level3">
+<h3 class="anchored" data-anchor-id="rango">Rango</h3>
+<p><span class="math display">\[Q_{1}(x) - Q_{0}(x)\]</span></p>
+<ul>
+<li>Es una medida de la dispersión de los datos.</li>
+<li>No es afectada por la localización.</li>
+<li>Siempre es un valor positivo.</li>
+</ul>
+</section>
+<section id="hablemos-bien" class="level3">
+<h3 class="anchored" data-anchor-id="hablemos-bien">Hablemos bien</h3>
+<p>No diga: la gente votó en promedio por el candidato X</p>
+<p>Diga: la gente votó en mayor proporción por el candidato X</p>
+</section>
+<section id="actividad-en-clase" class="level3">
+<h3 class="anchored" data-anchor-id="actividad-en-clase">Actividad en clase</h3>
+<p>No diga:</p>
+<ul>
+<li><p>Esta alternativa es muy buena, nos ahorra menos dolores de cabeza</p></li>
+<li><p>La edad promedio de los estudiantes es entre 15 y 20 años.</p></li>
+<li><p>Uno de cada tres estudiantes no sabe estadística.</p></li>
+<li><p>Más de la mitad de los estudiantes que presentaron la prueba saber están por debajo del promedio del puntaje de inglés.</p></li>
+</ul>
+<p>Responda:</p>
+<ul>
+<li><p>¿Cómo funciona la democracia?</p></li>
+<li><p>¿Algunos votos valen más que otros?</p></li>
+<li><p>¿Algunos votos deberían valer más que otros?</p></li>
+<li><p>¿Qué es una mayoría?</p></li>
+<li><p>¿Qué es una minoría?</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="estadística-descriptiva-para-dos-o-más-variables" class="level1">
+<h1>Estadística descriptiva para dos o más variables</h1>
+<section id="dos-variables" class="level2">
+<h2 class="anchored" data-anchor-id="dos-variables">Dos variables</h2>
+<p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
+<ul>
+<li>Dos cualitativas</li>
+<li>Dos cuantitativas</li>
+<li>Una cuantitativa y una cualitativa</li>
+</ul>
+<section id="dos-variables-cualitativas" class="level3">
+<h3 class="anchored" data-anchor-id="dos-variables-cualitativas">Dos variables cualitativas</h3>
+<p>Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.</p>
+</section>
+<section id="dos-variables-cuantitativas" class="level3">
+<h3 class="anchored" data-anchor-id="dos-variables-cuantitativas">Dos variables cuantitativas</h3>
+<p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
+<ul>
+<li>Covarianza</li>
+<li>Correlación de Pearson</li>
+<li>Correlación de Spearman</li>
+</ul>
+</section>
+<section id="covarianza" class="level3">
+<h3 class="anchored" data-anchor-id="covarianza">Covarianza</h3>
+<p>Covarianza entre dos variables</p>
+<p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
+</section>
+<section id="correlación-de-pearson" class="level3">
+<h3 class="anchored" data-anchor-id="correlación-de-pearson">Correlación de Pearson</h3>
+<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
+</section>
+<section id="correlación-de-spearman" class="level3">
+<h3 class="anchored" data-anchor-id="correlación-de-spearman">Correlación de Spearman</h3>
+<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
+<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
+</section>
+<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level3">
+<h3 class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</h3>
+<p>Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.</p>
+</section>
+<section id="correlación" class="level3">
+<h3 class="anchored" data-anchor-id="correlación">Correlación</h3>
+<p>¿Qué es la causalidad?</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

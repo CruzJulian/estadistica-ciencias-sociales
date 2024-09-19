@@ -10,6 +10,8 @@ website:
         text: Inicio
       - href: intro.qmd
         text: Introducción
+      - href: 01_est-desc.qmd
+        text: Estadística I
 
 format:
   html:
