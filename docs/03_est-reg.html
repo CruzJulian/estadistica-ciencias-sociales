@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="CruzJulián">
+
+<title>Estadística III – Estadística</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Estadística</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./intro.html"> 
+<span class="menu-text">Introducción</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./01_est-desc.html"> 
+<span class="menu-text">Estadística I</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./02_est-inf.html"> 
+<span class="menu-text">Estadística II</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./03_est-reg.html" aria-current="page"> 
+<span class="menu-text">Estadística III</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes">Antecedentes</a>
+  <ul class="collapse">
+  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación">Presentación</a></li>
+  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación">Justificación</a></li>
+  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones">Consideraciones</a></li>
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general">Objetivo General</a></li>
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">Objetivos Específicos</a></li>
+  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
+  </ul></li>
+  <li><a href="#modelamiento" id="toc-modelamiento" class="nav-link" data-scroll-target="#modelamiento">Modelamiento</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-un-modelo-estadístico" id="toc-qué-es-un-modelo-estadístico" class="nav-link" data-scroll-target="#qué-es-un-modelo-estadístico">Qué es un modelo estadístico</a>
+  <ul class="collapse">
+  <li><a href="#se-ve-así" id="toc-se-ve-así" class="nav-link" data-scroll-target="#se-ve-así">Se ve así</a></li>
+  </ul></li>
+  <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase">Actividad en clase</a></li>
+  <li><a href="#justificación-1" id="toc-justificación-1" class="nav-link" data-scroll-target="#justificación-1">Justificación</a></li>
+  <li><a href="#modelamiento-1" id="toc-modelamiento-1" class="nav-link" data-scroll-target="#modelamiento-1">Modelamiento</a>
+  <ul class="collapse">
+  <li><a href="#de-la-realidad-a-la-teoría" id="toc-de-la-realidad-a-la-teoría" class="nav-link" data-scroll-target="#de-la-realidad-a-la-teoría">De la realidad a la teoría</a></li>
+  <li><a href="#modelamiento-estadístico" id="toc-modelamiento-estadístico" class="nav-link" data-scroll-target="#modelamiento-estadístico">Modelamiento estadístico</a></li>
+  </ul></li>
+  <li><a href="#tipos-de-modelos" id="toc-tipos-de-modelos" class="nav-link" data-scroll-target="#tipos-de-modelos">Tipos de modelos</a>
+  <ul class="collapse">
+  <li><a href="#descripción" id="toc-descripción" class="nav-link" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#explicación" id="toc-explicación" class="nav-link" data-scroll-target="#explicación">Explicación</a></li>
+  <li><a href="#pronóstico" id="toc-pronóstico" class="nav-link" data-scroll-target="#pronóstico">Pronóstico</a></li>
+  </ul></li>
+  <li><a href="#modelamiento-descriptivo" id="toc-modelamiento-descriptivo" class="nav-link" data-scroll-target="#modelamiento-descriptivo">Modelamiento descriptivo</a></li>
+  <li><a href="#herramientas-del-modelamiento-descriptivo" id="toc-herramientas-del-modelamiento-descriptivo" class="nav-link" data-scroll-target="#herramientas-del-modelamiento-descriptivo">Herramientas del modelamiento descriptivo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-descriptivo" id="toc-ejemplos-del-modelamiento-descriptivo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-descriptivo">Ejemplos del modelamiento descriptivo</a></li>
+  <li><a href="#modelamiento-explicativo" id="toc-modelamiento-explicativo" class="nav-link" data-scroll-target="#modelamiento-explicativo">Modelamiento explicativo</a></li>
+  <li><a href="#herramientas-del-modelamiento-explicativo" id="toc-herramientas-del-modelamiento-explicativo" class="nav-link" data-scroll-target="#herramientas-del-modelamiento-explicativo">Herramientas del modelamiento explicativo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-explicativo" id="toc-ejemplos-del-modelamiento-explicativo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-explicativo">Ejemplos del modelamiento explicativo</a></li>
+  <li><a href="#modelamiento-predictivo" id="toc-modelamiento-predictivo" class="nav-link" data-scroll-target="#modelamiento-predictivo">Modelamiento predictivo</a></li>
+  <li><a href="#herramientas-del-modelamiento-predictivo" id="toc-herramientas-del-modelamiento-predictivo" class="nav-link" data-scroll-target="#herramientas-del-modelamiento-predictivo">Herramientas del modelamiento predictivo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-predictivo" id="toc-ejemplos-del-modelamiento-predictivo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-predictivo">Ejemplos del modelamiento predictivo</a></li>
+  <li><a href="#diferencias-clave-entre-describir-explicar-y-pronosticar" id="toc-diferencias-clave-entre-describir-explicar-y-pronosticar" class="nav-link" data-scroll-target="#diferencias-clave-entre-describir-explicar-y-pronosticar">Diferencias clave entre describir, explicar y pronosticar</a></li>
+  <li><a href="#etapas-del-modelamiento" id="toc-etapas-del-modelamiento" class="nav-link" data-scroll-target="#etapas-del-modelamiento">Etapas del modelamiento</a></li>
+  <li><a href="#etapas-del-modelamiento-1" id="toc-etapas-del-modelamiento-1" class="nav-link" data-scroll-target="#etapas-del-modelamiento-1">Etapas del modelamiento</a></li>
+  <li><a href="#definición-del-problema" id="toc-definición-del-problema" class="nav-link" data-scroll-target="#definición-del-problema">Definición del problema</a></li>
+  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos">Recolección de datos</a></li>
+  <li><a href="#preparación-y-exploración-de-los-datos" id="toc-preparación-y-exploración-de-los-datos" class="nav-link" data-scroll-target="#preparación-y-exploración-de-los-datos">Preparación y exploración de los datos</a></li>
+  <li><a href="#formulación-del-modelo" id="toc-formulación-del-modelo" class="nav-link" data-scroll-target="#formulación-del-modelo">Formulación del modelo</a></li>
+  <li><a href="#estimación-del-modelo" id="toc-estimación-del-modelo" class="nav-link" data-scroll-target="#estimación-del-modelo">Estimación del modelo</a></li>
+  <li><a href="#evaluación-del-modelo" id="toc-evaluación-del-modelo" class="nav-link" data-scroll-target="#evaluación-del-modelo">Evaluación del modelo</a></li>
+  <li><a href="#interpretación-y-presentación-de-resultados" id="toc-interpretación-y-presentación-de-resultados" class="nav-link" data-scroll-target="#interpretación-y-presentación-de-resultados">Interpretación y presentación de resultados</a></li>
+  <li><a href="#aplicación-del-modelo" id="toc-aplicación-del-modelo" class="nav-link" data-scroll-target="#aplicación-del-modelo">Aplicación del modelo</a></li>
+  </ul></li>
+  <li><a href="#preparación-y-exploración-de-los-datos-1" id="toc-preparación-y-exploración-de-los-datos-1" class="nav-link" data-scroll-target="#preparación-y-exploración-de-los-datos-1">Preparación y exploración de los datos</a>
+  <ul class="collapse">
+  <li><a href="#procesamiento-previo" id="toc-procesamiento-previo" class="nav-link" data-scroll-target="#procesamiento-previo">Procesamiento previo</a></li>
+  <li><a href="#limpieza-de-datos" id="toc-limpieza-de-datos" class="nav-link" data-scroll-target="#limpieza-de-datos">Limpieza de datos</a></li>
+  <li><a href="#transformación-de-datos" id="toc-transformación-de-datos" class="nav-link" data-scroll-target="#transformación-de-datos">Transformación de datos</a></li>
+  <li><a href="#selección-de-datos" id="toc-selección-de-datos" class="nav-link" data-scroll-target="#selección-de-datos">Selección de datos</a></li>
+  <li><a href="#análisis-descriptivo" id="toc-análisis-descriptivo" class="nav-link" data-scroll-target="#análisis-descriptivo">Análisis descriptivo</a></li>
+  <li><a href="#análisis-descriptivo-univariado" id="toc-análisis-descriptivo-univariado" class="nav-link" data-scroll-target="#análisis-descriptivo-univariado">Análisis descriptivo univariado</a></li>
+  <li><a href="#generación-de-visualizaciones" id="toc-generación-de-visualizaciones" class="nav-link" data-scroll-target="#generación-de-visualizaciones">Generación de visualizaciones</a></li>
+  <li><a href="#análisis-correlacional" id="toc-análisis-correlacional" class="nav-link" data-scroll-target="#análisis-correlacional">Análisis correlacional</a></li>
+  <li><a href="#análisis-de-desagregación" id="toc-análisis-de-desagregación" class="nav-link" data-scroll-target="#análisis-de-desagregación">Análisis de desagregación</a></li>
+  </ul></li>
+  <li><a href="#correlación-desagregación-y-causalidad" id="toc-correlación-desagregación-y-causalidad" class="nav-link" data-scroll-target="#correlación-desagregación-y-causalidad">Correlación, desagregación y causalidad</a>
+  <ul class="collapse">
+  <li><a href="#correlación-numérica---numérica" id="toc-correlación-numérica---numérica" class="nav-link" data-scroll-target="#correlación-numérica---numérica">Correlación numérica - numérica</a></li>
+  <li><a href="#dependencia-e-independencia-lineal" id="toc-dependencia-e-independencia-lineal" class="nav-link" data-scroll-target="#dependencia-e-independencia-lineal">Dependencia e independencia lineal:</a></li>
+  <li><a href="#correlación-lineal" id="toc-correlación-lineal" class="nav-link" data-scroll-target="#correlación-lineal">Correlación lineal</a>
+  <ul class="collapse">
+  <li><a href="#pearson" id="toc-pearson" class="nav-link" data-scroll-target="#pearson">Pearson</a></li>
+  </ul></li>
+  <li><a href="#correlación-monótona" id="toc-correlación-monótona" class="nav-link" data-scroll-target="#correlación-monótona">Correlación monótona</a>
+  <ul class="collapse">
+  <li><a href="#spearman" id="toc-spearman" class="nav-link" data-scroll-target="#spearman">Spearman</a></li>
+  </ul></li>
+  <li><a href="#correlación-monótona-1" id="toc-correlación-monótona-1" class="nav-link" data-scroll-target="#correlación-monótona-1">Correlación monótona</a>
+  <ul class="collapse">
+  <li><a href="#kendall" id="toc-kendall" class="nav-link" data-scroll-target="#kendall">Kendall</a></li>
+  </ul></li>
+  <li><a href="#asociación-numérica---categórica" id="toc-asociación-numérica---categórica" class="nav-link" data-scroll-target="#asociación-numérica---categórica">Asociación numérica - categórica</a></li>
+  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos">Elementos gráficos</a></li>
+  <li><a href="#asociación-numérica---categórica-1" id="toc-asociación-numérica---categórica-1" class="nav-link" data-scroll-target="#asociación-numérica---categórica-1">Asociación numérica - categórica</a></li>
+  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova">ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#tipos" id="toc-tipos" class="nav-link" data-scroll-target="#tipos">Tipos</a></li>
+  </ul></li>
+  <li><a href="#anova-1" id="toc-anova-1" class="nav-link" data-scroll-target="#anova-1">ANOVA</a></li>
+  <li><a href="#test-kruskal-wallis" id="toc-test-kruskal-wallis" class="nav-link" data-scroll-target="#test-kruskal-wallis">Test Kruskal-Wallis</a>
+  <ul class="collapse">
+  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso">Uso</a></li>
+  </ul></li>
+  <li><a href="#asociación-categórica---categórica" id="toc-asociación-categórica---categórica" class="nav-link" data-scroll-target="#asociación-categórica---categórica">Asociación categórica - categórica</a></li>
+  <li><a href="#tablas-de-contingencia" id="toc-tablas-de-contingencia" class="nav-link" data-scroll-target="#tablas-de-contingencia">Tablas de contingencia</a>
+  <ul class="collapse">
+  <li><a href="#uso-1" id="toc-uso-1" class="nav-link" data-scroll-target="#uso-1">Uso</a></li>
+  </ul></li>
+  <li><a href="#tablas-de-contingencia-1" id="toc-tablas-de-contingencia-1" class="nav-link" data-scroll-target="#tablas-de-contingencia-1">Tablas de contingencia</a></li>
+  <li><a href="#prueba-de-chi-cuadrado" id="toc-prueba-de-chi-cuadrado" class="nav-link" data-scroll-target="#prueba-de-chi-cuadrado">Prueba de chi cuadrado</a>
+  <ul class="collapse">
+  <li><a href="#uso-2" id="toc-uso-2" class="nav-link" data-scroll-target="#uso-2">Uso</a></li>
+  </ul></li>
+  <li><a href="#prueba-exacta-de-fisher" id="toc-prueba-exacta-de-fisher" class="nav-link" data-scroll-target="#prueba-exacta-de-fisher">Prueba exacta de Fisher</a>
+  <ul class="collapse">
+  <li><a href="#uso-3" id="toc-uso-3" class="nav-link" data-scroll-target="#uso-3">Uso</a></li>
+  </ul></li>
+  <li><a href="#regresión" id="toc-regresión" class="nav-link" data-scroll-target="#regresión">Regresión</a>
+  <ul class="collapse">
+  <li><a href="#componentes" id="toc-componentes" class="nav-link" data-scroll-target="#componentes">Componentes:</a></li>
+  </ul></li>
+  <li><a href="#causalidad" id="toc-causalidad" class="nav-link" data-scroll-target="#causalidad">Causalidad</a></li>
+  <li><a href="#causalidad-1" id="toc-causalidad-1" class="nav-link" data-scroll-target="#causalidad-1">Causalidad</a>
+  <ul class="collapse">
+  <li><a href="#actividad-en-clase-1" id="toc-actividad-en-clase-1" class="nav-link" data-scroll-target="#actividad-en-clase-1">Actividad en clase</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#modelamiento-estadístico-1" id="toc-modelamiento-estadístico-1" class="nav-link" data-scroll-target="#modelamiento-estadístico-1">Modelamiento estadístico</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-un-modelo-estadístico-1" id="toc-qué-es-un-modelo-estadístico-1" class="nav-link" data-scroll-target="#qué-es-un-modelo-estadístico-1">Qué es un modelo estadístico</a></li>
+  <li><a href="#proceso-de-modelamieto-estadístico" id="toc-proceso-de-modelamieto-estadístico" class="nav-link" data-scroll-target="#proceso-de-modelamieto-estadístico">Proceso de modelamieto estadístico</a></li>
+  <li><a href="#formulación" id="toc-formulación" class="nav-link" data-scroll-target="#formulación">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#partes-de-un-modelo" id="toc-partes-de-un-modelo" class="nav-link" data-scroll-target="#partes-de-un-modelo">Partes de un modelo</a></li>
+  </ul></li>
+  <li><a href="#formulación-1" id="toc-formulación-1" class="nav-link" data-scroll-target="#formulación-1">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#especificación-matemática" id="toc-especificación-matemática" class="nav-link" data-scroll-target="#especificación-matemática">Especificación matemática</a></li>
+  </ul></li>
+  <li><a href="#formulación-2" id="toc-formulación-2" class="nav-link" data-scroll-target="#formulación-2">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#supuestos-teóricos" id="toc-supuestos-teóricos" class="nav-link" data-scroll-target="#supuestos-teóricos">Supuestos teóricos</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste" id="toc-estimación-y-ajuste" class="nav-link" data-scroll-target="#estimación-y-ajuste">Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#parámetros-y-estimadores" id="toc-parámetros-y-estimadores" class="nav-link" data-scroll-target="#parámetros-y-estimadores">Parámetros y estimadores</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste-1" id="toc-estimación-y-ajuste-1" class="nav-link" data-scroll-target="#estimación-y-ajuste-1">Estimación y ajuste</a></li>
+  <li><a href="#estimación-y-ajuste-2" id="toc-estimación-y-ajuste-2" class="nav-link" data-scroll-target="#estimación-y-ajuste-2">Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual">Estimación puntual</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste-3" id="toc-estimación-y-ajuste-3" class="nav-link" data-scroll-target="#estimación-y-ajuste-3">Estimación y ajuste</a></li>
+  <li><a href="#estimación-y-ajuste-4" id="toc-estimación-y-ajuste-4" class="nav-link" data-scroll-target="#estimación-y-ajuste-4">Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento:</a></li>
+  </ul></li>
+  <li><a href="#validación-y-evaluación" id="toc-validación-y-evaluación" class="nav-link" data-scroll-target="#validación-y-evaluación">Validación y evaluación</a>
+  <ul class="collapse">
+  <li><a href="#métricas-de-evaluación" id="toc-métricas-de-evaluación" class="nav-link" data-scroll-target="#métricas-de-evaluación">Métricas de evaluación</a></li>
+  </ul></li>
+  <li><a href="#modelos" id="toc-modelos" class="nav-link" data-scroll-target="#modelos">Modelos</a>
+  <ul class="collapse">
+  <li><a href="#regresión-aprendizaje-supervisado" id="toc-regresión-aprendizaje-supervisado" class="nav-link" data-scroll-target="#regresión-aprendizaje-supervisado">Regresión (aprendizaje supervisado)</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
+  <li><a href="#métodos-multivariados-aprendizaje-no-supervisado" id="toc-métodos-multivariados-aprendizaje-no-supervisado" class="nav-link" data-scroll-target="#métodos-multivariados-aprendizaje-no-supervisado">Métodos multivariados (aprendizaje no supervisado)</a></li>
+  <li><a href="#ejemplos-1" id="toc-ejemplos-1" class="nav-link" data-scroll-target="#ejemplos-1">Ejemplos</a></li>
+  </ul></li>
+  <li><a href="#modelos-de-regresión-explicativos" id="toc-modelos-de-regresión-explicativos" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos">Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-1" id="toc-modelos-de-regresión-explicativos-1" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-1">Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-2" id="toc-modelos-de-regresión-explicativos-2" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-2">Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-3" id="toc-modelos-de-regresión-explicativos-3" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-3">Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-4" id="toc-modelos-de-regresión-explicativos-4" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-4">Modelos de regresión explicativos</a></li>
+  </ul></li>
+  <li><a href="#modelo-de-regresón-lineal" id="toc-modelo-de-regresón-lineal" class="nav-link" data-scroll-target="#modelo-de-regresón-lineal">Modelo de regresón lineal</a>
+  <ul class="collapse">
+  <li><a href="#modelo-de-regresón-lineal-1" id="toc-modelo-de-regresón-lineal-1" class="nav-link" data-scroll-target="#modelo-de-regresón-lineal-1">Modelo de regresón lineal</a></li>
+  <li><a href="#formulación-3" id="toc-formulación-3" class="nav-link" data-scroll-target="#formulación-3">Formulación</a></li>
+  <li><a href="#formulación-4" id="toc-formulación-4" class="nav-link" data-scroll-target="#formulación-4">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#parámetros" id="toc-parámetros" class="nav-link" data-scroll-target="#parámetros">Parámetros</a></li>
+  <li><a href="#supuestos-teóricos-1" id="toc-supuestos-teóricos-1" class="nav-link" data-scroll-target="#supuestos-teóricos-1">Supuestos teóricos</a></li>
+  </ul></li>
+  <li><a href="#covariables" id="toc-covariables" class="nav-link" data-scroll-target="#covariables">Covariables</a>
+  <ul class="collapse">
+  <li><a href="#covariables-numéricas" id="toc-covariables-numéricas" class="nav-link" data-scroll-target="#covariables-numéricas">Covariables numéricas</a></li>
+  <li><a href="#covariables-categóricas" id="toc-covariables-categóricas" class="nav-link" data-scroll-target="#covariables-categóricas">Covariables categóricas</a></li>
+  </ul></li>
+  <li><a href="#respuesta" id="toc-respuesta" class="nav-link" data-scroll-target="#respuesta">Respuesta</a>
+  <ul class="collapse">
+  <li><a href="#respuesta-numérica" id="toc-respuesta-numérica" class="nav-link" data-scroll-target="#respuesta-numérica">Respuesta numérica</a></li>
+  <li><a href="#respuesta-categórica" id="toc-respuesta-categórica" class="nav-link" data-scroll-target="#respuesta-categórica">Respuesta categórica</a></li>
+  </ul></li>
+  <li><a href="#comprobación-de-hipótesis" id="toc-comprobación-de-hipótesis" class="nav-link" data-scroll-target="#comprobación-de-hipótesis">Comprobación de hipótesis</a>
+  <ul class="collapse">
+  <li><a href="#planteamiento-de-hipótesis" id="toc-planteamiento-de-hipótesis" class="nav-link" data-scroll-target="#planteamiento-de-hipótesis">Planteamiento de hipótesis</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación" id="toc-proceso-de-estimación" class="nav-link" data-scroll-target="#proceso-de-estimación">Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#intervalos-de-confianza-analíticos-1" id="toc-intervalos-de-confianza-analíticos-1" class="nav-link" data-scroll-target="#intervalos-de-confianza-analíticos-1">Intervalos de confianza analíticos</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación-1" id="toc-proceso-de-estimación-1" class="nav-link" data-scroll-target="#proceso-de-estimación-1">Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#bootstrap-1" id="toc-bootstrap-1" class="nav-link" data-scroll-target="#bootstrap-1">Bootstrap</a></li>
+  </ul></li>
+  <li><a href="#inferencia-del-modelo" id="toc-inferencia-del-modelo" class="nav-link" data-scroll-target="#inferencia-del-modelo">Inferencia del modelo</a>
+  <ul class="collapse">
+  <li><a href="#significancia-global" id="toc-significancia-global" class="nav-link" data-scroll-target="#significancia-global">Significancia global</a></li>
+  </ul></li>
+  <li><a href="#inferencia-del-modelo-1" id="toc-inferencia-del-modelo-1" class="nav-link" data-scroll-target="#inferencia-del-modelo-1">Inferencia del modelo</a>
+  <ul class="collapse">
+  <li><a href="#significancia-particular" id="toc-significancia-particular" class="nav-link" data-scroll-target="#significancia-particular">Significancia particular</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación-2" id="toc-proceso-de-estimación-2" class="nav-link" data-scroll-target="#proceso-de-estimación-2">Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#valores-ajustadospredichos" id="toc-valores-ajustadospredichos" class="nav-link" data-scroll-target="#valores-ajustadospredichos">Valores ajustados/predichos</a></li>
+  <li><a href="#residuales" id="toc-residuales" class="nav-link" data-scroll-target="#residuales">Residuales</a></li>
+  </ul></li>
+  <li><a href="#validación-de-supuestos" id="toc-validación-de-supuestos" class="nav-link" data-scroll-target="#validación-de-supuestos">Validación de supuestos</a></li>
+  <li><a href="#validación-de-supuestos-1" id="toc-validación-de-supuestos-1" class="nav-link" data-scroll-target="#validación-de-supuestos-1">Validación de supuestos</a></li>
+  <li><a href="#validación-de-supuestos-2" id="toc-validación-de-supuestos-2" class="nav-link" data-scroll-target="#validación-de-supuestos-2">Validación de supuestos</a></li>
+  <li><a href="#métricas-de-evaluación-1" id="toc-métricas-de-evaluación-1" class="nav-link" data-scroll-target="#métricas-de-evaluación-1">Métricas de evaluación</a></li>
+  <li><a href="#coeficiente-de-determinación" id="toc-coeficiente-de-determinación" class="nav-link" data-scroll-target="#coeficiente-de-determinación">Coeficiente de determinación</a>
+  <ul class="collapse">
+  <li><a href="#coeficiente-de-determinación-1" id="toc-coeficiente-de-determinación-1" class="nav-link" data-scroll-target="#coeficiente-de-determinación-1">Coeficiente de determinación</a></li>
+  <li><a href="#coeficiente-de-determinación-ajustado" id="toc-coeficiente-de-determinación-ajustado" class="nav-link" data-scroll-target="#coeficiente-de-determinación-ajustado">Coeficiente de determinación ajustado</a></li>
+  </ul></li>
+  <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  </ul></li>
+  <li><a href="#modelo-de-regresión-logit" id="toc-modelo-de-regresión-logit" class="nav-link" data-scroll-target="#modelo-de-regresión-logit">Modelo de regresión logit</a>
+  <ul class="collapse">
+  <li><a href="#modelo-de-regresión-logit-1" id="toc-modelo-de-regresión-logit-1" class="nav-link" data-scroll-target="#modelo-de-regresión-logit-1">Modelo de regresión logit</a></li>
+  <li><a href="#formulación-5" id="toc-formulación-5" class="nav-link" data-scroll-target="#formulación-5">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#especificación-matemática-2" id="toc-especificación-matemática-2" class="nav-link" data-scroll-target="#especificación-matemática-2">Especificación matemática</a></li>
+  </ul></li>
+  <li><a href="#formulación-6" id="toc-formulación-6" class="nav-link" data-scroll-target="#formulación-6">Formulación</a>
+  <ul class="collapse">
+  <li><a href="#terminología-1" id="toc-terminología-1" class="nav-link" data-scroll-target="#terminología-1">Terminología</a></li>
+  </ul></li>
+  <li><a href="#parámetros-del-modelo" id="toc-parámetros-del-modelo" class="nav-link" data-scroll-target="#parámetros-del-modelo">Parámetros del modelo</a>
+  <ul class="collapse">
+  <li><a href="#parámetros-1" id="toc-parámetros-1" class="nav-link" data-scroll-target="#parámetros-1">Parámetros</a></li>
+  <li><a href="#supuestos-teóricos-2" id="toc-supuestos-teóricos-2" class="nav-link" data-scroll-target="#supuestos-teóricos-2">Supuestos teóricos</a></li>
+  </ul></li>
+  <li><a href="#covariables-1" id="toc-covariables-1" class="nav-link" data-scroll-target="#covariables-1">Covariables</a>
+  <ul class="collapse">
+  <li><a href="#covariables-numéricas-1" id="toc-covariables-numéricas-1" class="nav-link" data-scroll-target="#covariables-numéricas-1">Covariables numéricas</a></li>
+  <li><a href="#covariables-categóricas-1" id="toc-covariables-categóricas-1" class="nav-link" data-scroll-target="#covariables-categóricas-1">Covariables categóricas</a></li>
+  </ul></li>
+  <li><a href="#respuesta-1" id="toc-respuesta-1" class="nav-link" data-scroll-target="#respuesta-1">Respuesta</a>
+  <ul class="collapse">
+  <li><a href="#respuesta-categórica-1" id="toc-respuesta-categórica-1" class="nav-link" data-scroll-target="#respuesta-categórica-1">Respuesta categórica</a></li>
+  </ul></li>
+  <li><a href="#comprobación-de-hipótesis-1" id="toc-comprobación-de-hipótesis-1" class="nav-link" data-scroll-target="#comprobación-de-hipótesis-1">Comprobación de hipótesis</a>
+  <ul class="collapse">
+  <li><a href="#planteamiento-de-hipótesis-1" id="toc-planteamiento-de-hipótesis-1" class="nav-link" data-scroll-target="#planteamiento-de-hipótesis-1">Planteamiento de hipótesis</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación-3" id="toc-proceso-de-estimación-3" class="nav-link" data-scroll-target="#proceso-de-estimación-3">Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#intervalos-de-confianza-analíticos-para-los-parámetros" id="toc-intervalos-de-confianza-analíticos-para-los-parámetros" class="nav-link" data-scroll-target="#intervalos-de-confianza-analíticos-para-los-parámetros">Intervalos de confianza analíticos para los parámetros</a></li>
+  <li><a href="#bootstrap-2" id="toc-bootstrap-2" class="nav-link" data-scroll-target="#bootstrap-2">Bootstrap</a></li>
+  </ul></li>
+  <li><a href="#inferencia-del-modelo-2" id="toc-inferencia-del-modelo-2" class="nav-link" data-scroll-target="#inferencia-del-modelo-2">Inferencia del modelo</a>
+  <ul class="collapse">
+  <li><a href="#significancia-global-1" id="toc-significancia-global-1" class="nav-link" data-scroll-target="#significancia-global-1">Significancia global</a></li>
+  <li><a href="#significancia-particular-1" id="toc-significancia-particular-1" class="nav-link" data-scroll-target="#significancia-particular-1">Significancia particular</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación-4" id="toc-proceso-de-estimación-4" class="nav-link" data-scroll-target="#proceso-de-estimación-4">Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#probabilidades-predichas" id="toc-probabilidades-predichas" class="nav-link" data-scroll-target="#probabilidades-predichas">Probabilidades predichas</a></li>
+  <li><a href="#valores-predichos" id="toc-valores-predichos" class="nav-link" data-scroll-target="#valores-predichos">Valores predichos</a></li>
+  <li><a href="#residuales-1" id="toc-residuales-1" class="nav-link" data-scroll-target="#residuales-1">Residuales</a></li>
+  </ul></li>
+  <li><a href="#validación-de-supuestos-3" id="toc-validación-de-supuestos-3" class="nav-link" data-scroll-target="#validación-de-supuestos-3">Validación de supuestos</a>
+  <ul class="collapse">
+  <li><a href="#linealidad-en-el-logit" id="toc-linealidad-en-el-logit" class="nav-link" data-scroll-target="#linealidad-en-el-logit">Linealidad en el logit</a></li>
+  <li><a href="#independencia-de-los-errores" id="toc-independencia-de-los-errores" class="nav-link" data-scroll-target="#independencia-de-los-errores">Independencia de los errores</a></li>
+  <li><a href="#ausencia-de-multicolinealidad" id="toc-ausencia-de-multicolinealidad" class="nav-link" data-scroll-target="#ausencia-de-multicolinealidad">Ausencia de multicolinealidad</a></li>
+  </ul></li>
+  <li><a href="#métricas-de-evaluación-2" id="toc-métricas-de-evaluación-2" class="nav-link" data-scroll-target="#métricas-de-evaluación-2">Métricas de evaluación</a>
+  <ul class="collapse">
+  <li><a href="#curva-roc" id="toc-curva-roc" class="nav-link" data-scroll-target="#curva-roc">Curva ROC</a></li>
+  <li><a href="#auc" id="toc-auc" class="nav-link" data-scroll-target="#auc">AUC</a></li>
+  </ul></li>
+  <li><a href="#métricas-de-evaluación-3" id="toc-métricas-de-evaluación-3" class="nav-link" data-scroll-target="#métricas-de-evaluación-3">Métricas de evaluación</a></li>
+  <li><a href="#métricas-de-evaluación-4" id="toc-métricas-de-evaluación-4" class="nav-link" data-scroll-target="#métricas-de-evaluación-4">Métricas de evaluación</a>
+  <ul class="collapse">
+  <li><a href="#exactitud" id="toc-exactitud" class="nav-link" data-scroll-target="#exactitud">Exactitud</a></li>
+  <li><a href="#sensibilidad" id="toc-sensibilidad" class="nav-link" data-scroll-target="#sensibilidad">Sensibilidad</a></li>
+  <li><a href="#especificidad" id="toc-especificidad" class="nav-link" data-scroll-target="#especificidad">Especificidad</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Estadística III</h1>
+<p class="subtitle lead">Introducción a la inferencia estadística</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>CruzJulián </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="antecedentes" class="level1">
+<h1>Antecedentes</h1>
+<section id="presentación" class="level2">
+<h2 class="anchored" data-anchor-id="presentación">Presentación</h2>
+<p>Estadística 3: Proyecciones y Regresiones para el seminario de Técnicas Especiales de Investigación III, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea de una manera muy específica con el objetivo de dar a conocer a los estudiantes temas tan importantes como las proyecciones y regresiones.</p>
+</section>
+<section id="justificación" class="level2">
+<h2 class="anchored" data-anchor-id="justificación">Justificación</h2>
+<p>Técnicas Especiales de Investigación III es la tercera de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en segundo semestre y los asistentes al seminario son de séptimo y octavo semestre, se ve la necesidad de iniciar con nuevos temas, que seguramente no vieron en su estadística descriptiva, sobre proyecciones y regresiones para generar en los estudiantes la necesidad de soportar sus investigaciones con datos tratados estadísticamente dado el carácter investigativo de la Facultad.</p>
+</section>
+<section id="consideraciones" class="level2">
+<h2 class="anchored" data-anchor-id="consideraciones">Consideraciones</h2>
+<p>Sobre los contenidos teóricos y/o conceptuales básicos del programa</p>
+<p>Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.</p>
+</section>
+<section id="objetivo-general" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-general">Objetivo General</h2>
+<p>Ofrecer herramientas de estadística relacionadas con proyecciones y regresiones a los asistentes al seminario de Técnicas Especiales de Investigación III, como introducción a nuevos temas de estadística, no contemplados en el programa de estadística descriptiva de primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.</p>
+</section>
+<section id="objetivos-específicos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-específicos">Objetivos Específicos</h2>
+<ul>
+<li><p>Generar conceptos de regresión y pronostico en el marco de las ciencias sociales</p></li>
+<li><p>Adelantar talleres prácticos que hagan evidentes los conceptos presentados</p></li>
+<li><p>Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante</p></li>
+</ul>
+</section>
+<section id="metodología" class="level2">
+<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
+<p>Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.</p>
+</section>
+</section>
+<section id="modelamiento" class="level1">
+<h1>Modelamiento</h1>
+<section id="qué-es-un-modelo-estadístico" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-un-modelo-estadístico">Qué es un modelo estadístico</h2>
+<p>Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.</p>
+<section id="se-ve-así" class="level3">
+<h3 class="anchored" data-anchor-id="se-ve-así">Se ve así</h3>
+<p><span class="math display">\[
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+\]</span></p>
+<p>Pero…</p>
+<p>Cada número <span class="math inline">\(\beta_i\)</span> tiene unas propiedades. Por eso, el reporte de un modelo se vuelve un poco complejo de interpretar.</p>
+</section>
+</section>
+<section id="actividad-en-clase" class="level2">
+<h2 class="anchored" data-anchor-id="actividad-en-clase">Actividad en clase</h2>
+<p><span class="math display">\[
+[realrinc] = \beta_0 +  [hrs1] \cdot \beta_1 + \varepsilon
+\]</span> <a href="https://www.stathelp.se/en/regoutput_en.html">Revisemos las partes de un modelo</a></p>
+<p>A continuación se presentan los resultados de un análisis realizado a partir de una encuesta estadounidense realizada en 2018. La variable dependiente es cuánto gana el encuestado en un año, en dólares estadounidenses. La variable independiente es cuántas horas trabajó el encuestado la semana pasada. En la encuesta real hay miles de respuestas, pero aquí se seleccionaron 46 de ellas al azar para facilitar la presentación de los resultados.</p>
+</section>
+<section id="justificación-1" class="level2">
+<h2 class="anchored" data-anchor-id="justificación-1">Justificación</h2>
+<p>¿Por qué hacemos modelos?</p>
+<p><a href="https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf">To explain or to predict</a></p>
+</section>
+<section id="modelamiento-1" class="level2">
+<h2 class="anchored" data-anchor-id="modelamiento-1">Modelamiento</h2>
+<p>El modelamiento es una técnica esencial en la investigación científica, que permite representar y analizar fenómenos complejos del mundo real. Los modelos son simplificaciones que ayudan a entender, predecir y, en algunos casos, controlar estos fenómenos.</p>
+<section id="de-la-realidad-a-la-teoría" class="level3">
+<h3 class="anchored" data-anchor-id="de-la-realidad-a-la-teoría">De la realidad a la teoría</h3>
+<p>El proceso de modelamiento inicia con la observación de la realidad. A partir de estas observaciones, se desarrollan teorías que intentan explicar el comportamiento observado. Los modelos son representaciones de estas teorías, diseñadas para ser más manejables y comprensibles.</p>
+</section>
+<section id="modelamiento-estadístico" class="level3">
+<h3 class="anchored" data-anchor-id="modelamiento-estadístico">Modelamiento estadístico</h3>
+<p>El modelamiento estadístico utiliza datos para construir modelos que describen y analizan relaciones entre variables. Estos modelos son fundamentales en diversas disciplinas científicas, como la economía, la psicología, la biología y la ingeniería, entre otras.</p>
+</section>
+</section>
+<section id="tipos-de-modelos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-modelos">Tipos de modelos</h2>
+<p>Existen diferentes tipos de modelos que se utilizan dependiendo de los objetivos de la investigación. Los principales son:</p>
+<section id="descripción" class="level3">
+<h3 class="anchored" data-anchor-id="descripción">Descripción</h3>
+<p>Modelos descriptivos que buscan representar las características básicas de los datos sin hacer suposiciones sobre la estructura subyacente.</p>
+</section>
+<section id="explicación" class="level3">
+<h3 class="anchored" data-anchor-id="explicación">Explicación</h3>
+<p>Modelos explicativos que buscan identificar y entender las relaciones causales entre variables.</p>
+</section>
+<section id="pronóstico" class="level3">
+<h3 class="anchored" data-anchor-id="pronóstico">Pronóstico</h3>
+<p>Modelos predictivos que se utilizan para hacer predicciones sobre futuros eventos o comportamientos basados en datos actuales o pasados.</p>
+</section>
+</section>
+<section id="modelamiento-descriptivo" class="level2">
+<h2 class="anchored" data-anchor-id="modelamiento-descriptivo">Modelamiento descriptivo</h2>
+<p>El modelamiento descriptivo se centra en resumir y visualizar los datos, proporcionando una imagen clara de lo que los datos muestran. Es el primer paso en cualquier análisis de datos, ya que ayuda a entender el contexto y las características básicas del conjunto de datos.</p>
+</section>
+<section id="herramientas-del-modelamiento-descriptivo" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-del-modelamiento-descriptivo">Herramientas del modelamiento descriptivo</h2>
+<p>Las herramientas más comunes para el modelamiento descriptivo incluyen:</p>
+<ul>
+<li><strong>Tablas de frecuencia:</strong> que muestran cómo se distribuyen los valores de una variable.</li>
+<li><strong>Medidas de tendencia central:</strong> como la media, mediana y moda, que resumen el valor típico de los datos.</li>
+<li><strong>Medidas de dispersión:</strong> como la varianza y la desviación estándar, que indican cuánta variación hay en los datos.</li>
+<li><strong>Gráficos:</strong> como histogramas, diagramas de dispersión y gráficos de caja, que ayudan a visualizar la distribución y las relaciones entre variables.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-descriptivo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos-del-modelamiento-descriptivo">Ejemplos del modelamiento descriptivo</h2>
+<ul>
+<li><strong>Análisis de la distribución de la edad en una población:</strong> utilizando histogramas y medidas de tendencia central para resumir los datos.</li>
+<li><strong>Estudio de la dispersión de precios en diferentes mercados:</strong> utilizando gráficos de caja para comparar la variabilidad entre diferentes ubicaciones.</li>
+</ul>
+</section>
+<section id="modelamiento-explicativo" class="level2">
+<h2 class="anchored" data-anchor-id="modelamiento-explicativo">Modelamiento explicativo</h2>
+<p>El modelamiento explicativo busca entender las causas y efectos dentro de un conjunto de datos. Este tipo de modelamiento es fundamental para probar hipótesis y teorías científicas, ya que permite establecer relaciones causales entre variables.</p>
+</section>
+<section id="herramientas-del-modelamiento-explicativo" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-del-modelamiento-explicativo">Herramientas del modelamiento explicativo</h2>
+<p>Las herramientas más comunes para el modelamiento explicativo incluyen:</p>
+<ul>
+<li><strong>Regresión lineal:</strong> que permite examinar la relación entre una variable dependiente y una o más variables independientes.</li>
+<li><strong>Análisis de varianza (ANOVA):</strong> que se utiliza para comparar las medias de diferentes grupos y determinar si las diferencias observadas son estadísticamente significativas.</li>
+<li><strong>Modelos estructurales:</strong> que permiten analizar relaciones complejas entre múltiples variables, incluyendo efectos directos e indirectos.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-explicativo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos-del-modelamiento-explicativo">Ejemplos del modelamiento explicativo</h2>
+<ul>
+<li><strong>Estudio de los factores que afectan el rendimiento académico:</strong> utilizando regresión lineal para examinar el impacto de variables como el tiempo de estudio, el apoyo familiar y las características socioeconómicas.</li>
+<li><strong>Investigación sobre los determinantes de la satisfacción laboral:</strong> utilizando ANOVA para comparar diferentes grupos de empleados y entender cómo factores como el salario, las condiciones de trabajo y el liderazgo influyen en la satisfacción.</li>
+</ul>
+</section>
+<section id="modelamiento-predictivo" class="level2">
+<h2 class="anchored" data-anchor-id="modelamiento-predictivo">Modelamiento predictivo</h2>
+<p>El modelamiento predictivo se utiliza para hacer predicciones sobre eventos futuros basados en datos históricos. Este tipo de modelamiento es clave en áreas como el pronóstico del tiempo, la predicción de ventas, y la identificación de riesgos en finanzas.</p>
+</section>
+<section id="herramientas-del-modelamiento-predictivo" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-del-modelamiento-predictivo">Herramientas del modelamiento predictivo</h2>
+<p>Las herramientas más comunes para el modelamiento predictivo incluyen:</p>
+<ul>
+<li><strong>Regresión logística:</strong> que se utiliza para predecir una variable categórica, como el resultado de una elección o la probabilidad de que ocurra un evento.</li>
+<li><strong>Árboles de decisión:</strong> que dividen los datos en ramas para tomar decisiones basadas en reglas simples.</li>
+<li><strong>Modelos de series temporales:</strong> que analizan datos secuenciales en el tiempo para hacer predicciones sobre futuros puntos en la serie.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-predictivo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos-del-modelamiento-predictivo">Ejemplos del modelamiento predictivo</h2>
+<ul>
+<li><strong>Predicción del comportamiento del cliente en una tienda en línea:</strong> utilizando regresión logística para determinar la probabilidad de que un cliente compre un producto basado en su historial de navegación.</li>
+<li><strong>Pronóstico de la demanda de energía:</strong> utilizando modelos de series temporales para predecir el consumo de energía en diferentes estaciones del año.</li>
+</ul>
+</section>
+<section id="diferencias-clave-entre-describir-explicar-y-pronosticar" class="level2">
+<h2 class="anchored" data-anchor-id="diferencias-clave-entre-describir-explicar-y-pronosticar">Diferencias clave entre describir, explicar y pronosticar</h2>
+<p>Es fundamental distinguir entre los objetivos del modelamiento descriptivo, explicativo y predictivo:</p>
+<ul>
+<li><strong>Describir</strong> se enfoca en resumir y visualizar los datos existentes.</li>
+<li><strong>Explicar</strong> busca entender las relaciones causales y los mecanismos subyacentes en los datos.</li>
+<li><strong>Pronosticar</strong> se orienta hacia la predicción de futuros eventos o comportamientos basados en patrones observados en los datos.</li>
+</ul>
+</section>
+<section id="etapas-del-modelamiento" class="level2">
+<h2 class="anchored" data-anchor-id="etapas-del-modelamiento">Etapas del modelamiento</h2>
+<p>El modelamiento es un proceso complejo que involucra varias etapas clave, desde la definición del problema hasta la aplicación del modelo para realizar predicciones o comprender un fenómeno. Cada etapa es esencial para garantizar que el modelo sea preciso, interpretable y útil.</p>
+</section>
+<section id="etapas-del-modelamiento-1" class="level2">
+<h2 class="anchored" data-anchor-id="etapas-del-modelamiento-1">Etapas del modelamiento</h2>
+<p><strong>Definición del problema:</strong> establecer el objetivo del modelamiento.</p>
+<p><strong>Recolección de datos:</strong> recopilar y preparar los datos que se utilizarán en el modelamiento.</p>
+<p><strong>Exploración y preparación:</strong> entender la naturaleza y características de los datos disponibles.</p>
+<p><strong>Formulación del modelo:</strong> plantear el modelo más adecuado según los objetivos. Debe existir una coincidencia entre los conceptos del contexto y las variables del modelo.</p>
+<p><strong>Estimación del modelo:</strong> ajustar el modelo a los datos para obtener los parámetros que mejor representen las relaciones subyacentes.</p>
+<p><strong>Evaluación del modelo:</strong> verificar la calidad del modelo utilizando medidas de ajuste y validación cruzada.</p>
+<p><strong>Interpretación y presentación de resultados:</strong> analizar los resultados del modelo y presentarlos de manera comprensible para el público objetivo.</p>
+<p><strong>Aplicación del modelo:</strong> utilizar el modelo para hacer predicciones o para comprender mejor el fenómeno en estudio.</p>
+</section>
+<section id="definición-del-problema" class="level2">
+<h2 class="anchored" data-anchor-id="definición-del-problema">Definición del problema</h2>
+<p>La definición del problema es la primera y más crucial etapa en el proceso de modelamiento. Aquí se establece el objetivo del estudio, las preguntas de investigación que se desean responder y las hipótesis que se pretenden probar. Una clara definición del problema orienta todo el proceso de modelamiento, asegurando que los esfuerzos se centren en las preguntas más relevantes y que los resultados sean útiles para la toma de decisiones.</p>
+<p>En esta etapa, es importante:</p>
+<ul>
+<li><strong>Identificar el fenómeno de interés:</strong> ¿Qué es lo que se desea entender, explicar o predecir?</li>
+<li><strong>Delimitar el alcance del estudio:</strong> ¿Cuáles son los límites del problema? ¿Qué variables serán incluidas o excluidas?</li>
+<li><strong>Establecer los objetivos del modelamiento:</strong> ¿Qué se espera lograr con el modelo? ¿Se busca una descripción, una explicación o una predicción?</li>
+</ul>
+</section>
+<section id="recolección-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="recolección-de-datos">Recolección de datos</h2>
+<p>La recolección de datos es el proceso de obtener la información necesaria para desarrollar y ajustar el modelo. Los datos pueden provenir de diversas fuentes, como encuestas, experimentos, registros históricos o bases de datos públicas. La calidad y la relevancia de los datos son fundamentales para el éxito del modelamiento.</p>
+<p>Durante esta etapa se deben considerar los siguientes aspectos:</p>
+<ul>
+<li><strong>Selección de fuentes de datos:</strong> ¿De dónde se obtendrán los datos? ¿Son fiables y relevantes para el problema definido?</li>
+<li><strong>Preparación de los datos:</strong> ¿Cómo se limpiarán, transformarán y organizarán los datos para que sean adecuados para el análisis? Esto puede incluir la eliminación de valores atípicos, el manejo de datos faltantes y la normalización de variables.</li>
+<li><strong>Validación de datos:</strong> ¿Cómo se asegurará la calidad y precisión de los datos recolectados?</li>
+</ul>
+</section>
+<section id="preparación-y-exploración-de-los-datos" class="level2">
+<h2 class="anchored" data-anchor-id="preparación-y-exploración-de-los-datos">Preparación y exploración de los datos</h2>
+<p>La <strong>preparación y exploración de los datos</strong> es una fase crucial en cualquier proceso de modelamiento, ya que los datos en bruto generalmente no están listos para ser utilizados directamente en un modelo. Esta fase implica una serie de actividades destinadas a comprender, limpiar, y transformar los datos para que sean adecuados para el análisis.</p>
+</section>
+<section id="formulación-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-del-modelo">Formulación del modelo</h2>
+<p>La selección del modelo es la etapa en la que se elige el tipo de modelo más adecuado para los datos y los objetivos de la investigación. Dependiendo del tipo de problema, se pueden considerar diferentes enfoques de modelamiento, como modelos descriptivos, explicativos o predictivos.</p>
+<p>Consideraciones clave durante esta etapa incluyen:</p>
+<ul>
+<li><strong>Naturaleza del fenómeno:</strong> ¿Qué tipo de relación existe entre las variables? ¿Es lineal, no lineal, categórica, etc.?</li>
+<li><strong>Complejidad del modelo:</strong> ¿Se necesita un modelo simple y fácil de interpretar, o es preferible un modelo complejo que capture más detalles?</li>
+<li><strong>Disponibilidad de herramientas:</strong> ¿Qué herramientas de software y métodos estadísticos están disponibles para ajustar el modelo?</li>
+<li><strong>Soporte teórico del modelo:</strong> ¿Qué supuestos tiene el modelo? ¿Cuáles son relacionales? ¿Cuáles son distribucionales? ¿Qué hipótesis resuelve?</li>
+</ul>
+</section>
+<section id="estimación-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-del-modelo">Estimación del modelo</h2>
+<p>La estimación del modelo implica ajustar el modelo seleccionado a los datos, es decir, encontrar los parámetros que mejor representan la relación entre las variables. Esta etapa es crucial para garantizar que el modelo sea una representación precisa y válida del fenómeno en estudio.</p>
+<p>Pasos en la estimación del modelo:</p>
+<ul>
+<li><strong>Ajuste del modelo:</strong> Utilización de métodos estadísticos para estimar los parámetros del modelo, como la regresión lineal, máxima verosimilitud, o técnicas de machine learning.</li>
+<li><strong>Pruebas de significancia:</strong> Evaluación de la significancia estadística de los parámetros estimados para determinar si tienen un impacto real en las variables dependientes.</li>
+<li><strong>Verificación de supuestos:</strong> Comprobación de que los supuestos del modelo se cumplen, como la normalidad de los errores, la homocedasticidad y la independencia de las observaciones.</li>
+</ul>
+</section>
+<section id="evaluación-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación-del-modelo">Evaluación del modelo</h2>
+<p>La evaluación del modelo es una etapa crítica donde se examina la precisión y la validez del modelo ajustado. Aquí se utilizan diversas métricas y pruebas para determinar si el modelo es adecuado y si puede generalizarse a otros datos.</p>
+<p>Aspectos a considerar durante la evaluación:</p>
+<ul>
+<li><strong>Medidas de ajuste:</strong> ¿Qué tan bien se ajusta el modelo a los datos observados? Medidas como el R², el error cuadrático medio (RMSE) y la log-verosimilitud se utilizan para evaluar el ajuste.</li>
+<li><strong>Validación cruzada:</strong> ¿Cómo se desempeña el modelo cuando se aplica a nuevos datos no utilizados en la estimación? La validación cruzada y la prueba en conjuntos de datos separados son técnicas comunes.</li>
+<li><strong>Análisis de residuos:</strong> ¿Los residuos del modelo son aleatorios y no muestran patrones sistemáticos? Este análisis ayuda a verificar la adecuación del modelo.</li>
+</ul>
+</section>
+<section id="interpretación-y-presentación-de-resultados" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-y-presentación-de-resultados">Interpretación y presentación de resultados</h2>
+<p>Una vez que el modelo ha sido estimado y evaluado, la siguiente etapa es interpretar los resultados y presentarlos de manera que sean comprensibles y útiles para los tomadores de decisiones. La claridad en la interpretación es crucial para que los resultados del modelamiento tengan un impacto significativo.</p>
+<p>Puntos clave en esta etapa:</p>
+<ul>
+<li><strong>Interpretación de los parámetros:</strong> ¿Qué significan los coeficientes estimados en el contexto del problema? ¿Cómo se relacionan las variables independientes con la variable dependiente?</li>
+<li><strong>Visualización de resultados:</strong> ¿Cómo se pueden presentar los resultados de manera visual, utilizando gráficos y tablas para facilitar su comprensión?</li>
+<li><strong>Conclusiones y recomendaciones:</strong> ¿Qué conclusiones se pueden extraer del análisis? ¿Qué recomendaciones pueden hacerse en base a los resultados del modelo?</li>
+</ul>
+</section>
+<section id="aplicación-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="aplicación-del-modelo">Aplicación del modelo</h2>
+<p>La aplicación del modelo es la fase final, donde los resultados obtenidos del modelamiento se utilizan para tomar decisiones, hacer predicciones, o profundizar el entendimiento del fenómeno en estudio. Esta etapa puede incluir la implementación del modelo en sistemas de apoyo a la decisión, el uso del modelo para la planificación estratégica, o la publicación de los hallazgos en un contexto académico.</p>
+<p>Consideraciones en la aplicación del modelo:</p>
+<ul>
+<li><strong>Implementación:</strong> ¿Cómo se utilizará el modelo en la práctica? ¿Qué sistemas o procesos se verán afectados por la implementación del modelo?</li>
+<li><strong>Monitoreo y actualización:</strong> ¿Cómo se monitoreará el desempeño del modelo a lo largo del tiempo? ¿Qué mecanismos se establecerán para actualizar el modelo con nuevos datos?</li>
+<li><strong>Evaluación del impacto:</strong> ¿Qué impacto tiene la aplicación del modelo en los resultados esperados? ¿Se cumplen los objetivos iniciales del modelamiento?</li>
+</ul>
+</section>
+</section>
+<section id="preparación-y-exploración-de-los-datos-1" class="level1">
+<h1>Preparación y exploración de los datos</h1>
+<section id="procesamiento-previo" class="level2">
+<h2 class="anchored" data-anchor-id="procesamiento-previo">Procesamiento previo</h2>
+<p>La preparación de datos implica transformar los datos en un formato adecuado para su uso en el modelamiento.</p>
+</section>
+<section id="limpieza-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="limpieza-de-datos">Limpieza de datos</h2>
+<ul>
+<li><strong>Imputación de valores faltantes:</strong> Selección de técnicas para manejar datos faltantes, como eliminación de casos, imputación con la media o mediana, o el uso de modelos predictivos.</li>
+<li><strong>Eliminación de duplicados:</strong> Identificación y eliminación de registros duplicados que podrían sesgar los resultados del modelo.</li>
+<li><strong>Corrección de errores:</strong> Revisión de los datos para corregir errores como registros mal ingresados, incoherencias, o valores fuera de rango.</li>
+</ul>
+</section>
+<section id="transformación-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="transformación-de-datos">Transformación de datos</h2>
+<ul>
+<li><strong>Normalización o estandarización:</strong> Ajuste de las escalas de las variables para que tengan un rango comparable, lo cual es especialmente importante en técnicas como el análisis de componentes principales o modelos de machine learning.</li>
+<li><strong>Codificación de variables categóricas:</strong> Conversión de variables categóricas en variables numéricas mediante técnicas como la codificación one-hot o el etiquetado ordinal.</li>
+<li><strong>Creación de nuevas variables:</strong> Generación de nuevas variables que puedan capturar relaciones más complejas en los datos (por ejemplo, interacciones entre variables o variables derivadas).</li>
+</ul>
+</section>
+<section id="selección-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="selección-de-datos">Selección de datos</h2>
+<ul>
+<li><strong>Selección de características:</strong> Identificación de variables irrelevantes o redundantes para simplificar el modelo y mejorar su interpretabilidad.</li>
+<li><strong>Partición en conjuntos de entrenamiento y prueba:</strong> Separación de los datos en conjuntos de entrenamiento y validación para evaluar el rendimiento del modelo de manera más robusta.</li>
+</ul>
+</section>
+<section id="análisis-descriptivo" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-descriptivo">Análisis descriptivo</h2>
+<p>El análisis descriptivo permite generar un diagnóstico sobre el contexto y apoya la selección de los modelos a ajustar.</p>
+</section>
+<section id="análisis-descriptivo-univariado" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-descriptivo-univariado">Análisis descriptivo univariado</h2>
+<ul>
+<li><strong>Media</strong>: Es el promedio de los valores de la variable. Proporciona una medida central de la distribución.</li>
+<li><strong>Mediana</strong>: Es el valor que divide la distribución en dos partes iguales. Útil para datos sesgados.</li>
+<li><strong>Desviación estándar</strong>: Mide la dispersión de los datos en relación con la media. Indica qué tan dispersos están los valores.</li>
+<li><strong>Moda</strong>: El valor que aparece con mayor frecuencia en el conjunto de datos.</li>
+<li><strong>Rango</strong>: Diferencia entre el valor máximo y el mínimo de la distribución.</li>
+</ul>
+</section>
+<section id="generación-de-visualizaciones" class="level2">
+<h2 class="anchored" data-anchor-id="generación-de-visualizaciones">Generación de visualizaciones</h2>
+<ul>
+<li><strong>Gráficos de dispersión</strong>: Utilizados para examinar la relación entre dos variables numéricas. Pueden ayudar a detectar correlaciones o patrones.</li>
+<li><strong>Histogramas</strong>: Representaciones gráficas que muestran la distribución de una variable continua. Ayudan a visualizar la frecuencia de los valores en diferentes intervalos.</li>
+<li><strong>Diagramas de caja (boxplots)</strong>: Herramientas gráficas que muestran la mediana, los cuartiles y los posibles valores atípicos de una variable. Útiles para identificar la dispersión y la simetría de la distribución.</li>
+<li><strong>Diagramas de violín</strong>: Combinan un diagrama de caja con un gráfico de densidad, proporcionando una visión más detallada de la distribución de la variable.</li>
+</ul>
+</section>
+<section id="análisis-correlacional" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-correlacional">Análisis correlacional</h2>
+<ul>
+<li><strong>Correlación de Pearson</strong>: Mide la fuerza y dirección de la relación lineal entre dos variables numéricas.</li>
+<li><strong>Correlación de Spearman</strong>: Mide la fuerza y dirección de la relación monótona entre dos variables, sin requerir que la relación sea lineal.</li>
+<li><strong>Correlación de Kendall</strong>: Mide la concordancia entre dos variables ordinales, útil para datos con rangos.</li>
+<li><strong>Matriz de correlación</strong>: Tabla que muestra las correlaciones entre múltiples variables a la vez. Es útil para identificar rápidamente relaciones fuertes o débiles entre varias variables.</li>
+</ul>
+</section>
+<section id="análisis-de-desagregación" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-desagregación">Análisis de desagregación</h2>
+<ul>
+<li><strong>Desagregación de datos</strong>: Separar los datos en subgrupos basados en categorías de una variable para examinar patrones o tendencias dentro de cada subgrupo.</li>
+<li><strong>Exploración de la estructura de los datos</strong>: Identificar patrones claros en los datos, como tendencias o ciclos, que puedan indicar la necesidad de una transformación.</li>
+</ul>
+</section>
+</section>
+<section id="correlación-desagregación-y-causalidad" class="level1">
+<h1>Correlación, desagregación y causalidad</h1>
+<section id="correlación-numérica---numérica" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-numérica---numérica">Correlación numérica - numérica</h2>
+<p>La asociación de variables es la herramienta que nos permite explorar y entender las relaciones entre diferentes conjuntos de datos. La correlación mide la fuerza y la dirección de la relación entre dos variables.</p>
+</section>
+<section id="dependencia-e-independencia-lineal" class="level2">
+<h2 class="anchored" data-anchor-id="dependencia-e-independencia-lineal">Dependencia e independencia lineal:</h2>
+<ul>
+<li><strong>Positiva</strong>: La relación es tal que a medida que una variable aumenta, la otra también tiende a aumentar. Ejemplo: La relación entre la altura y el peso de una persona.</li>
+<li><strong>Negativa</strong>: La relación es tal que a medida que una variable aumenta, la otra tiende a disminuir. Ejemplo: La relación entre el precio de un producto y la cantidad demandada.</li>
+<li><strong>Independiente</strong>: No hay una relación aparente entre las dos variables. Ejemplo: La relación entre el color de los ojos y el salario de una persona.</li>
+</ul>
+</section>
+<section id="correlación-lineal" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-lineal">Correlación lineal</h2>
+<section id="pearson" class="level3">
+<h3 class="anchored" data-anchor-id="pearson">Pearson</h3>
+<ul>
+<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.</li>
+<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.</li>
+<li><strong>Cálculo</strong>: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.</li>
+</ul>
+</section>
+</section>
+<section id="correlación-monótona" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-monótona">Correlación monótona</h2>
+<section id="spearman" class="level3">
+<h3 class="anchored" data-anchor-id="spearman">Spearman</h3>
+<ul>
+<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.</li>
+<li><strong>Ventaja</strong>: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.</li>
+<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.</li>
+</ul>
+</section>
+</section>
+<section id="correlación-monótona-1" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-monótona-1">Correlación monótona</h2>
+<section id="kendall" class="level3">
+<h3 class="anchored" data-anchor-id="kendall">Kendall</h3>
+<ul>
+<li><strong>Definición</strong>: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.</li>
+<li><strong>Cálculo</strong>:
+<ul>
+<li><strong>Concordancia</strong>: Dos pares de observaciones están en concordancia si el orden de las observaciones en ambos pares es el mismo.</li>
+<li><strong>Discordancia</strong>: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.</li>
+</ul></li>
+<li><strong>Aplicación</strong>: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.</li>
+</ul>
+</section>
+</section>
+<section id="asociación-numérica---categórica" class="level2">
+<h2 class="anchored" data-anchor-id="asociación-numérica---categórica">Asociación numérica - categórica</h2>
+<p>En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.</p>
+</section>
+<section id="elementos-gráficos" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-gráficos">Elementos gráficos</h2>
+<p>Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:</p>
+<ul>
+<li><strong>Diagramas de caja (boxplots)</strong>: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.</li>
+<li><strong>Gráficos de barras</strong>: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.</li>
+</ul>
+</section>
+<section id="asociación-numérica---categórica-1" class="level2">
+<h2 class="anchored" data-anchor-id="asociación-numérica---categórica-1">Asociación numérica - categórica</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_est-reg_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="anova" class="level2">
+<h2 class="anchored" data-anchor-id="anova">ANOVA</h2>
+<p>El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.</p>
+<section id="tipos" class="level3">
+<h3 class="anchored" data-anchor-id="tipos">Tipos</h3>
+<ul>
+<li><strong>ANOVA de una vía</strong>: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.</li>
+<li><strong>ANOVA de más vías</strong>: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.</li>
+</ul>
+</section>
+</section>
+<section id="anova-1" class="level2">
+<h2 class="anchored" data-anchor-id="anova-1">ANOVA</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+ESTRATO        5  41312    8262   102.1 &lt;2e-16 ***
+Residuals   2494 201832      81                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="test-kruskal-wallis" class="level2">
+<h2 class="anchored" data-anchor-id="test-kruskal-wallis">Test Kruskal-Wallis</h2>
+<p>El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.</p>
+<section id="uso" class="level3">
+<h3 class="anchored" data-anchor-id="uso">Uso</h3>
+<p>Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  INGLES_PUNT by ESTRATO
+Kruskal-Wallis chi-squared = 250.62, df = 5, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="asociación-categórica---categórica" class="level2">
+<h2 class="anchored" data-anchor-id="asociación-categórica---categórica">Asociación categórica - categórica</h2>
+<p>En ocasiones es necesario encontrar relaciones entre variables categóricas.</p>
+</section>
+<section id="tablas-de-contingencia" class="level2">
+<h2 class="anchored" data-anchor-id="tablas-de-contingencia">Tablas de contingencia</h2>
+<p>Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.</p>
+<section id="uso-1" class="level3">
+<h3 class="anchored" data-anchor-id="uso-1">Uso</h3>
+<p>Ayudan a visualizar y analizar la dependencia entre variables categóricas.</p>
+</section>
+</section>
+<section id="tablas-de-contingencia-1" class="level2">
+<h2 class="anchored" data-anchor-id="tablas-de-contingencia-1">Tablas de contingencia</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_est-reg_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="prueba-de-chi-cuadrado" class="level2">
+<h2 class="anchored" data-anchor-id="prueba-de-chi-cuadrado">Prueba de chi cuadrado</h2>
+<p>Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.</p>
+<section id="uso-2" class="level3">
+<h3 class="anchored" data-anchor-id="uso-2">Uso</h3>
+<p>Determina si hay una relación significativa entre las variables categóricas.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
+X-squared = 226.66, df = 20, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="prueba-exacta-de-fisher" class="level2">
+<h2 class="anchored" data-anchor-id="prueba-exacta-de-fisher">Prueba exacta de Fisher</h2>
+<p>Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.</p>
+<section id="uso-3" class="level3">
+<h3 class="anchored" data-anchor-id="uso-3">Uso</h3>
+<p>Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Fisher's Exact Test for Count Data with simulated p-value (based on
+    2000 replicates)
+
+data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
+p-value = 0.0004998
+alternative hypothesis: two.sided</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="regresión" class="level2">
+<h2 class="anchored" data-anchor-id="regresión">Regresión</h2>
+<p><span class="math display">\[
+y = \beta_0 + X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+\]</span></p>
+<p>Técnica estadística utilizada para modelar y analizar la relación entre una variable dependiente y una o más variables independientes.</p>
+<section id="componentes" class="level3">
+<h3 class="anchored" data-anchor-id="componentes">Componentes:</h3>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span>: Intersección (constante).</li>
+<li><span class="math inline">\(X_i\)</span>: Variables independientes.</li>
+<li><span class="math inline">\(\beta_i\)</span>: Coeficientes de las variables independientes.</li>
+<li><span class="math inline">\(\varepsilon\)</span>: Error aleatorio.</li>
+</ul>
+</section>
+</section>
+<section id="causalidad" class="level2">
+<h2 class="anchored" data-anchor-id="causalidad">Causalidad</h2>
+<p>La manera óptima de comprobar causalidad es ediante un experimento.</p>
+<ul>
+<li><strong>Definición</strong>: Método para establecer relaciones causales entre variables mediante la manipulación controlada de una o más variables independientes y la observación del efecto en una o más variables dependientes.</li>
+<li><strong>Importancia</strong>: Permite inferir causalidad en lugar de solo correlación, lo cual es crucial para la validez de los resultados.</li>
+<li><strong>Ejemplo</strong>: Un experimento clínico donde se prueba el efecto de un nuevo medicamento en la presión arterial de los pacientes.</li>
+</ul>
+</section>
+<section id="causalidad-1" class="level2">
+<h2 class="anchored" data-anchor-id="causalidad-1">Causalidad</h2>
+<section id="actividad-en-clase-1" class="level3">
+<h3 class="anchored" data-anchor-id="actividad-en-clase-1">Actividad en clase</h3>
+<p>En parejas, generar un escrito sobre la causalidad desde la perspectiva de un autor teórico que elijan. Extensión máxima de cuartilla.</p>
+</section>
+</section>
+</section>
+<section id="modelamiento-estadístico-1" class="level1">
+<h1>Modelamiento estadístico</h1>
+<section id="qué-es-un-modelo-estadístico-1" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-un-modelo-estadístico-1">Qué es un modelo estadístico</h2>
+<p>Un modelo estadístico es una representación matemática que describe cómo una o más variables aleatorias se relacionan entre sí.</p>
+<p>Tiene como propósito simplificar la realidad para entender las relaciones entre variables y hacer predicciones o inferencias.</p>
+</section>
+<section id="proceso-de-modelamieto-estadístico" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-modelamieto-estadístico">Proceso de modelamieto estadístico</h2>
+<ul>
+<li><p><strong>Formulación</strong>: Revisar la literatura existente. Formular hipótesis claras. Definir el modelo teórico con base en conceptos y teorías previas.</p></li>
+<li><p><strong>Estimación y ajuste</strong>: Implica el uso de métodos estadísticos para estimar los parámetros del modelo, como los coeficientes en una regresión. Una vez estimados los parámetros, se ajusta el modelo para que mejor represente los datos observados.</p></li>
+<li><p><strong>Validación y evaluación</strong>: La validación se refiere a la comprobación de la generalizabilidad del modelo y de sus supuestos. La evaluación se refiere a la bondad de ajuste, qué tanto reflejan los datos.</p></li>
+</ul>
+</section>
+<section id="formulación" class="level2">
+<h2 class="anchored" data-anchor-id="formulación">Formulación</h2>
+<section id="partes-de-un-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="partes-de-un-modelo">Partes de un modelo</h3>
+<ul>
+<li><strong>Variables dependientes e independientes</strong>: Identificación de las variables que serán explicadas y las que se usarán como predictores.</li>
+<li><strong>Relación funcional</strong>: La forma en que las variables independientes se combinan para influir en la variable dependiente.</li>
+<li><strong>Término de error</strong>: Captura la variabilidad no explicada por las variables independientes.</li>
+</ul>
+</section>
+</section>
+<section id="formulación-1" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-1">Formulación</h2>
+<section id="especificación-matemática" class="level3">
+<h3 class="anchored" data-anchor-id="especificación-matemática">Especificación matemática</h3>
+<p>La especificación matemática de un modelo implica:</p>
+<ul>
+<li><strong>Formulación de ecuaciones</strong>: Definir cómo las variables independientes afectan a la variable dependiente.</li>
+<li><strong>Definición de supuestos</strong>: Establecer los supuestos subyacentes (como la linealidad, independencia, homocedasticidad, etc.).</li>
+<li><strong>Notación y simbolismo</strong>: Uso de notación matemática clara para representar las relaciones y supuestos.</li>
+</ul>
+</section>
+</section>
+<section id="formulación-2" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-2">Formulación</h2>
+<section id="supuestos-teóricos" class="level3">
+<h3 class="anchored" data-anchor-id="supuestos-teóricos">Supuestos teóricos</h3>
+<p>Los modelos estadísticos se basan en varios supuestos teóricos:</p>
+<ul>
+<li><strong>Linealidad</strong>: Relación lineal entre variables independientes y dependientes.</li>
+<li><strong>Independencia de errores</strong>: Los errores no están correlacionados entre sí.</li>
+<li><strong>Homoscedasticidad</strong>: La varianza de los errores es constante.</li>
+<li><strong>Normalidad</strong>: Los errores siguen una distribución normal.</li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-y-ajuste">Estimación y ajuste</h2>
+<section id="parámetros-y-estimadores" class="level3">
+<h3 class="anchored" data-anchor-id="parámetros-y-estimadores">Parámetros y estimadores</h3>
+<p>Los conceptos clave son:</p>
+<ul>
+<li><strong>Parámetros</strong>: Valores desconocidos en el modelo que describen la relación entre variables.</li>
+<li><strong>Estimadores</strong>: Funciones que proporcionan valores aproximados de los parámetros basados en los datos.</li>
+<li><strong>Significancia</strong>: Métodos para generalizar el conocimiento subyacente de la muestra hacia la población.</li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste-1" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-y-ajuste-1">Estimación y ajuste</h2>
+<p>El proceso de estimación involucra:</p>
+<ul>
+<li><strong>Selección del método de estimación</strong>: Métodos como Mínimos Cuadrados Ordinarios (OLS), Máxima Verosimilitud, etc.</li>
+<li><strong>Cálculo de estimadores</strong>: Determinar los valores que minimizan o maximizan una función objetivo.</li>
+<li><strong>Evaluación de los estimadores</strong>: Análisis de la eficiencia, sesgo, y consistencia de los estimadores.</li>
+</ul>
+</section>
+<section id="estimación-y-ajuste-2" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-y-ajuste-2">Estimación y ajuste</h2>
+<section id="estimación-puntual" class="level3">
+<h3 class="anchored" data-anchor-id="estimación-puntual">Estimación puntual</h3>
+<p>Encontrar los valores de <span class="math inline">\(\beta\)</span> y <span class="math inline">\(\sigma^2\)</span> para reproducir <span class="math inline">\(y\)</span> tan precisamente como sea posible.</p>
+<ul>
+<li><p>Máxima verosimilitud</p></li>
+<li><p>OLS</p></li>
+<li><p>PLS</p></li>
+<li><p>LOESS</p></li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste-3" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-y-ajuste-3">Estimación y ajuste</h2>
+<div class="columns">
+<div class="column">
+<section id="intervalos-de-confianza-analíticos" class="level3">
+<h3 class="anchored" data-anchor-id="intervalos-de-confianza-analíticos">Intervalos de confianza analíticos</h3>
+<p>Los intervalos de confianza teóricos proporcionan un rango de valores dentro del cual se espera que se encuentre el verdadero valor de un coeficiente de regresión con un cierto nivel de confianza (generalmente 95%).</p>
+</section>
+</div><div class="column">
+<section id="bootstrap" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrap">Bootstrap</h3>
+<p>El bootstrap es un método no paramétrico que permite estimar la distribución de un estimador medisnte simulación. Al generar múltiples muestras de los datos originales mediante resampling con reemplazo, es posible recalcular varias observaciones del estimador y tener una muestra aleatoria de este.</p>
+</section>
+</div>
+</div>
+</section>
+<section id="estimación-y-ajuste-4" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-y-ajuste-4">Estimación y ajuste</h2>
+<p>La prueba de hipótesis global en un modelo de regresión evalúa si al menos una de las variables independientes tiene un efecto significativo sobre la variable dependiente. Esto se realiza mediante la siguiente hipótesis:</p>
+<ul>
+<li><p><strong>Hipótesis nula (H₀)</strong>: Todos los coeficientes de regresión son iguales a cero, es decir, las variables independientes no tienen efecto sobre la variable dependiente.</p></li>
+<li><p><strong>Hipótesis alternativa (H₁)</strong>: Al menos un coeficiente de regresión es diferente de cero, es decir, al menos una variable independiente tiene un efecto significativo.</p></li>
+</ul>
+<section id="procedimiento" class="level3">
+<h3 class="anchored" data-anchor-id="procedimiento">Procedimiento:</h3>
+<ol type="1">
+<li><strong>Cálculo del estadístico F</strong>: Se utiliza para comparar el modelo ajustado con un modelo nulo (sin variables predictoras).</li>
+<li><strong>Determinación del p-valor</strong>: El p-valor asociado con el estadístico F indica la probabilidad de observar un valor tan extremo como el calculado, bajo la hipótesis nula.</li>
+<li><strong>Decisión</strong>: Si el p-valor es menor que el nivel de significancia (α, comúnmente 0.05), se rechaza la hipótesis nula, concluyendo que el modelo tiene al menos un predictor significativo.</li>
+</ol>
+</section>
+</section>
+<section id="validación-y-evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="validación-y-evaluación">Validación y evaluación</h2>
+<section id="métricas-de-evaluación" class="level3">
+<h3 class="anchored" data-anchor-id="métricas-de-evaluación">Métricas de evaluación</h3>
+<p>Para evaluar un modelo se utilizan:</p>
+<ul>
+<li><strong>Coeficiente de determinación (R²)</strong>: Medida de la proporción de la varianza explicada.</li>
+<li><strong>Error cuadrático medio (MSE)</strong>: Promedio de los cuadrados de los errores.</li>
+<li><strong>AIC/BIC</strong>: Criterios de información para comparar modelos.</li>
+<li><strong>Pruebas de significancia</strong>: p-valores, pruebas F, t-pruebas para evaluar la relevancia de los parámetros.</li>
+<li><strong>Exactitud (accuracy) y precisión</strong>: métricas para evaluar modelos de respuesta categórica, sensibilidad y especificidad.</li>
+<li><strong>Curva ROC, AUC y matriz de confusión</strong>: estadígracos asociados a los modelos de respuesta cetegórica.</li>
+<li><strong>Validación cruzada</strong>: uso de datos de ajuste y prueba para el cálculo de las métricas.</li>
+</ul>
+</section>
+</section>
+<section id="modelos" class="level2">
+<h2 class="anchored" data-anchor-id="modelos">Modelos</h2>
+<section id="regresión-aprendizaje-supervisado" class="level3">
+<h3 class="anchored" data-anchor-id="regresión-aprendizaje-supervisado">Regresión (aprendizaje supervisado)</h3>
+<p>Modelos donde se predice o explica una variable dependiente a partir de una o más variables independientes.</p>
+</section>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<p>Regresión lineal, regresión logística, regresión Poisson.</p>
+</section>
+<section id="métodos-multivariados-aprendizaje-no-supervisado" class="level3">
+<h3 class="anchored" data-anchor-id="métodos-multivariados-aprendizaje-no-supervisado">Métodos multivariados (aprendizaje no supervisado)</h3>
+<p>Técnicas para descubrir estructuras subyacentes en los datos sin necesidad de una variable dependiente.</p>
+</section>
+<section id="ejemplos-1" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h3>
+<p>Análisis de componentes principales (PCA), análisis de conglomerados, análisis factorial.</p>
+</section>
+</section>
+<section id="modelos-de-regresión-explicativos" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regresión-explicativos">Modelos de regresión explicativos</h2>
+<p>El centro de nuestro aprendizaje en ciencias sociales es el modelamiento explicativo.</p>
+</section>
+<section id="modelos-de-regresión-explicativos-1" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regresión-explicativos-1">Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="lineal-normal" class="level3">
+<h3 class="anchored" data-anchor-id="lineal-normal">Lineal normal</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo que asume una relación lineal entre las variables y que los errores son normalmente distribuidos.</li>
+<li><strong>Aplicaciones</strong>: Estimación de relaciones entre variables cuantitativas.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="logit" class="level3">
+<h3 class="anchored" data-anchor-id="logit">Logit</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo utilizado para predecir probabilidades de eventos binarios (0 o 1).</li>
+<li><strong>Aplicaciones</strong>: Modelos de decisión, análisis de comportamiento.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-2" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regresión-explicativos-2">Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="poisson" class="level3">
+<h3 class="anchored" data-anchor-id="poisson">Poisson</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo para contar eventos que ocurren en un intervalo fijo.</li>
+<li><strong>Aplicaciones</strong>: Modelado de tasas de ocurrencia, como incidentes de accidentes.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="series-de-tiempo-datos-panel" class="level3">
+<h3 class="anchored" data-anchor-id="series-de-tiempo-datos-panel">Series de tiempo, Datos panel</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que consideran la dependencia temporal o la estructura de panel en los datos.</li>
+<li><strong>Aplicaciones</strong>: Pronósticos, análisis longitudinal.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-3" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regresión-explicativos-3">Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="espaciales-krigging" class="level3">
+<h3 class="anchored" data-anchor-id="espaciales-krigging">Espaciales (krigging)</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que incorporan la correlación espacial entre observaciones.</li>
+<li><strong>Aplicaciones</strong>: Geostatística, análisis de datos georreferenciados.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="de-efectos-fijos-y-aleatorios" class="level3">
+<h3 class="anchored" data-anchor-id="de-efectos-fijos-y-aleatorios">De efectos fijos y aleatorios</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que permiten controlar por variables no observadas que varían entre entidades.</li>
+<li><strong>Aplicaciones</strong>: Análisis de datos donde existen diferencias individuales inobservables.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-4" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regresión-explicativos-4">Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="modelos-de-supervivencia" class="level3">
+<h3 class="anchored" data-anchor-id="modelos-de-supervivencia">Modelos de supervivencia</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que analizan el tiempo hasta un evento de interés.</li>
+<li><strong>Aplicaciones</strong>: Análisis de tiempo hasta la muerte, recurrencia de enfermedades.</li>
+</ul>
+</section>
+</div><div class="column">
+
+</div>
+</div>
+</section>
+</section>
+<section id="modelo-de-regresón-lineal" class="level1">
+<h1>Modelo de regresón lineal</h1>
+<section id="modelo-de-regresón-lineal-1" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-regresón-lineal-1">Modelo de regresón lineal</h2>
+<p>La regresión lineal múltiple es un método estadístico que permite modelar la relación entre una variable dependiente continua y dos o más variables independientes (predictoras). Se utiliza para explicar el valor de la variable dependiente basado en los valores conocidos de las variables independientes.</p>
+</section>
+<section id="formulación-3" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-3">Formulación</h2>
+<div class="columns">
+<div class="column">
+<section id="especificación-matemática-1" class="level3">
+<h3 class="anchored" data-anchor-id="especificación-matemática-1">Especificación matemática</h3>
+<p><span class="math display">\[
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k + \varepsilon
+\]</span></p>
+</section>
+</div><div class="column">
+<section id="terminología" class="level3">
+<h3 class="anchored" data-anchor-id="terminología">Terminología</h3>
+<ul>
+<li><span class="math inline">\(X\)</span> : variables independientes/explicativas.</li>
+<li><span class="math inline">\(y\)</span> : variable dependiente - explicada - respuesta.</li>
+<li><span class="math inline">\(\beta_0\)</span> es la intersección o término constante.</li>
+<li><span class="math inline">\(\beta_1, \beta_2, \dots, \beta_n\)</span> : coeficientes de regresión.</li>
+<li><span class="math inline">\(\varepsilon\)</span> : errores/perturbaciones aleatorias.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="formulación-4" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-4">Formulación</h2>
+<section id="parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="parámetros">Parámetros</h3>
+<ul>
+<li><strong>Coeficientes de regresión <span class="math inline">\(\beta\)</span></strong>: Indican el cambio esperado en la variable dependiente <span class="math inline">\(Y\)</span> por cada unidad de cambio en una variable independiente <span class="math inline">\(X\)</span>, manteniendo las demás constantes.</li>
+<li><strong>Error estándar</strong>: Medida de la precisión de los coeficientes estimados.</li>
+<li><strong>Término de error <span class="math inline">\(\varepsilon\)</span></strong>: Captura la variabilidad en <span class="math inline">\(Y\)</span> que no es explicada por las variables independientes.</li>
+<li><strong>Estadísticos (t) y (p)-valor</strong>: Utilizados para probar la significancia de cada coeficiente.</li>
+</ul>
+</section>
+<section id="supuestos-teóricos-1" class="level3">
+<h3 class="anchored" data-anchor-id="supuestos-teóricos-1">Supuestos teóricos</h3>
+<ul>
+<li><strong>Linealidad</strong>: La relación entre las variables dependientes e independientes es lineal.</li>
+<li><strong>Independencia de los errores</strong>: Los errores <span class="math inline">\(\varepsilon\)</span> son independientes entre sí.</li>
+<li><strong>Homoscedasticidad</strong>: La varianza de los errores es constante en todos los niveles de las variables independientes.</li>
+<li><strong>Normalidad de los errores</strong>: Los errores <span class="math inline">\(\varepsilon\)</span> se distribuyen normalmente.</li>
+<li><strong>No multicolinealidad</strong>: Las variables independientes no están altamente correlacionadas entre sí.</li>
+</ul>
+</section>
+</section>
+<section id="covariables" class="level2">
+<h2 class="anchored" data-anchor-id="covariables">Covariables</h2>
+<section id="covariables-numéricas" class="level3">
+<h3 class="anchored" data-anchor-id="covariables-numéricas">Covariables numéricas</h3>
+<ul>
+<li><strong>Definición</strong>: Variables independientes que son numéricas y se utilizan en modelos de regresión para explicar la variación en la variable dependiente.</li>
+<li><strong>Ejemplo</strong>: Edad, ingresos, puntuación en una prueba.</li>
+</ul>
+</section>
+<section id="covariables-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="covariables-categóricas">Covariables categóricas</h3>
+<ul>
+<li>Requieren un procesamiento previo. Se convierten en variables dummy.</li>
+<li><strong>Definición</strong>: Variables independientes que son categóricas y se utilizan en modelos de regresión para explorar diferencias entre grupos o categorías.</li>
+<li><strong>Ejemplo</strong>: Género, tipo de tratamiento, región geográfica.</li>
+</ul>
+</section>
+</section>
+<section id="respuesta" class="level2">
+<h2 class="anchored" data-anchor-id="respuesta">Respuesta</h2>
+<section id="respuesta-numérica" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-numérica">Respuesta numérica</h3>
+<ul>
+<li><strong>Definición</strong>: Variable dependiente en modelos de regresión que es numérica.</li>
+<li><strong>Ejemplo</strong>: Precio de una vivienda, número de ventas.</li>
+</ul>
+</section>
+<section id="respuesta-categórica" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-categórica">Respuesta categórica</h3>
+<ul>
+<li>El trabajo con respuestas categóricas se sitúa por fuera del modelo de regresión lineal.</li>
+<li><strong>Definición</strong>: Variable dependiente en modelos de regresión que es categórica.</li>
+<li><strong>Ejemplo</strong>: Aprobado/No aprobado, compra/no compra.</li>
+</ul>
+</section>
+</section>
+<section id="comprobación-de-hipótesis" class="level2">
+<h2 class="anchored" data-anchor-id="comprobación-de-hipótesis">Comprobación de hipótesis</h2>
+<p>La evaluación de hipótesis mediante modelos de regresión implica determinar si los efectos de las variables independientes sobre la variable dependiente son significativos y en qué dirección se manifiestan. Este proceso se basa en la prueba de hipótesis para los coeficientes del modelo.</p>
+<section id="planteamiento-de-hipótesis" class="level3">
+<h3 class="anchored" data-anchor-id="planteamiento-de-hipótesis">Planteamiento de hipótesis</h3>
+<ul>
+<li><strong>Hipótesis nula ((H_0))</strong>: Establece que no hay efecto o relación significativa entre la variable independiente y la variable dependiente. En términos de regresión, esto significa que el coeficiente de la variable independiente es igual a cero ((_i = 0)).</li>
+<li><strong>Hipótesis alternativa ((H_A))</strong>: Sugiere que hay un efecto significativo. En regresión, esto implica que el coeficiente no es cero ((_i )).</li>
+</ul>
+</section>
+</section>
+<section id="proceso-de-estimación" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-estimación">Proceso de estimación</h2>
+<section id="intervalos-de-confianza-analíticos-1" class="level3">
+<h3 class="anchored" data-anchor-id="intervalos-de-confianza-analíticos-1">Intervalos de confianza analíticos</h3>
+<ul>
+<li><strong>Cálculo</strong>:
+<ul>
+<li>Se basa en los supuestos de normalidad de los errores y en la distribución de (t).</li>
+<li>Los límites del intervalo de confianza se calculan como: ( t_{/2} ()), donde () es el coeficiente estimado y (()) es su error estándar.</li>
+</ul></li>
+<li><strong>Importancia</strong>:
+<ul>
+<li>Proporciona una medida de la precisión de los estimadores.</li>
+<li>Ayuda a evaluar la significancia de los coeficientes: si el intervalo no incluye cero, el coeficiente es significativo.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="proceso-de-estimación-1" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-estimación-1">Proceso de estimación</h2>
+<section id="bootstrap-1" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrap-1">Bootstrap</h3>
+<ul>
+<li><strong>Proceso</strong>:
+<ul>
+<li>Generar un gran número de muestras bootstrap (por ejemplo, 1,000).</li>
+<li>Calcular los coeficientes de regresión para cada muestra.</li>
+<li>Obtener la distribución empírica de los coeficientes y derivar intervalos de confianza a partir de ella.</li>
+</ul></li>
+<li><strong>Ventajas</strong>:
+<ul>
+<li>No depende de los supuestos de normalidad de los errores.</li>
+<li>Es útil en situaciones donde los supuestos teóricos pueden no cumplirse o en modelos complejos.</li>
+</ul></li>
+<li><strong>Limitaciones</strong>:
+<ul>
+<li>Requiere un número elevado de simulaciones, lo que puede ser computacionalmente intensivo.</li>
+<li>La precisión de los intervalos bootstrap depende del tamaño de la muestra original.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="inferencia-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="inferencia-del-modelo">Inferencia del modelo</h2>
+<p>Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.</p>
+<section id="significancia-global" class="level3">
+<h3 class="anchored" data-anchor-id="significancia-global">Significancia global</h3>
+<p>¿Existe una relación estadísticamente significativa entre la variable respuesta y las variables explicativas en general?</p>
+<p><span class="math display">\[H_0:\beta_1 = \beta_2 = \ldots = \beta_p = 0
+\quad\text{frente a}\quad
+H_1:\beta_j\neq 0 \text{ para algún } j\]</span></p>
+</section>
+</section>
+<section id="inferencia-del-modelo-1" class="level2">
+<h2 class="anchored" data-anchor-id="inferencia-del-modelo-1">Inferencia del modelo</h2>
+<p>Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.</p>
+<section id="significancia-particular" class="level3">
+<h3 class="anchored" data-anchor-id="significancia-particular">Significancia particular</h3>
+<p>¿Existe una relación estadísticamente significativa entre la variable respuesta y una variable explicativa en particular?</p>
+<p><span class="math display">\[
+H_0:\beta_i = 0
+\quad\text{frente a}\quad
+H_1:\beta_i\neq 0
+\]</span></p>
+</section>
+</section>
+<section id="proceso-de-estimación-2" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-estimación-2">Proceso de estimación</h2>
+<section id="valores-ajustadospredichos" class="level3">
+<h3 class="anchored" data-anchor-id="valores-ajustadospredichos">Valores ajustados/predichos</h3>
+<p><span class="math display">\[
+\hat{y} = X\hat{\beta} + \hat\beta_0
+\]</span></p>
+</section>
+<section id="residuales" class="level3">
+<h3 class="anchored" data-anchor-id="residuales">Residuales</h3>
+<p><span class="math display">\[
+r = y - \hat{y}
+\]</span></p>
+</section>
+</section>
+<section id="validación-de-supuestos" class="level2">
+<h2 class="anchored" data-anchor-id="validación-de-supuestos">Validación de supuestos</h2>
+<p>Para que los resultados de la regresión lineal múltiple sean válidos, deben cumplirse ciertos supuestos. A continuación se presentan los métodos de evaluación para cada uno:</p>
+<ul>
+<li><strong>Linealidad</strong>:
+<ul>
+<li><strong>Método de evaluación</strong>: Se evalúa mediante la observación de posibles patrones en los residuos. Puedes utilizar gráficos de residuos frente a valores ajustados para verificar si los residuos están distribuidos aleatoriamente sin patrones evidentes.</li>
+<li><strong>Gráfico recomendado</strong>: Gráfico de dispersión de residuos versus valores ajustados.</li>
+</ul></li>
+<li><strong>Independencia de los errores</strong>:
+<ul>
+<li><strong>Método de evaluación</strong>: Se verifica mediante pruebas estadísticas como la prueba de Durbin-Watson para detectar autocorrelación en los residuos. Un valor cercano a 2 sugiere que no hay autocorrelación.</li>
+<li><strong>Prueba recomendada</strong>: Prueba de Durbin-Watson.</li>
+</ul></li>
+</ul>
+</section>
+<section id="validación-de-supuestos-1" class="level2">
+<h2 class="anchored" data-anchor-id="validación-de-supuestos-1">Validación de supuestos</h2>
+<ul>
+<li><strong>Homoscedasticidad</strong>:
+<ul>
+<li><strong>Método de evaluación</strong>: Se evalúa observando si la varianza de los residuos es constante a lo largo de todos los valores de las variables independientes. Se puede usar el gráfico de residuos estandarizados frente a valores ajustados.</li>
+<li><strong>Gráfico recomendado</strong>: Gráfico de residuos estandarizados versus valores ajustados.</li>
+</ul></li>
+<li><strong>Normalidad de los errores</strong>:
+<ul>
+<li><strong>Método de evaluación</strong>: Se verifica utilizando gráficos y pruebas estadísticas. Un gráfico de Q-Q (cuantil-cuantil) puede mostrar si los residuos siguen una distribución normal. Además, se pueden realizar pruebas de normalidad como la prueba de Shapiro-Wilk.</li>
+<li><strong>Gráficos y pruebas recomendadas</strong>: Gráfico Q-Q y prueba de Shapiro-Wilk.</li>
+</ul></li>
+</ul>
+</section>
+<section id="validación-de-supuestos-2" class="level2">
+<h2 class="anchored" data-anchor-id="validación-de-supuestos-2">Validación de supuestos</h2>
+<ul>
+<li><strong>No multicolinealidad</strong>:
+<ul>
+<li><strong>Método de evaluación</strong>: Se evalúa mediante el cálculo del Factor de Inflación de la Varianza (VIF) para cada variable independiente. Un VIF superior a 10 indica una alta multicolinealidad.</li>
+<li><strong>Métrica recomendada</strong>: Factor de Inflación de la Varianza (VIF).</li>
+</ul></li>
+</ul>
+</section>
+<section id="métricas-de-evaluación-1" class="level2">
+<h2 class="anchored" data-anchor-id="métricas-de-evaluación-1">Métricas de evaluación</h2>
+<ul>
+<li><strong>R-cuadrado <span class="math inline">\(R^2\)</span></strong>: Mide la proporción de la varianza en la variable dependiente que es explicada por las variables independientes. Un <span class="math inline">\(R^2\)</span> alto indica un buen ajuste del modelo.</li>
+<li><strong>R-cuadrado ajustado</strong>: Similar al <span class="math inline">\(R^2\)</span>, pero ajustado por el número de variables en el modelo, lo que lo hace más adecuado para comparaciones entre modelos con diferentes números de predictores.</li>
+<li><strong>Error estándar de la estimación</strong>: Mide la precisión de las predicciones del modelo.</li>
+<li><strong>Estadístico F</strong>: Evalúa la significancia global del modelo; es decir, si al menos una de las variables independientes tiene un efecto sobre la variable dependiente. A partir de este se obtiene un p-valor global.</li>
+<li><strong>p-valor</strong>: Para cada coeficiente, indica si la variable independiente asociada tiene un efecto significativo en la variable dependiente.</li>
+</ul>
+</section>
+<section id="coeficiente-de-determinación" class="level2">
+<h2 class="anchored" data-anchor-id="coeficiente-de-determinación">Coeficiente de determinación</h2>
+<p>Permite establecer el porcentaje de información explicada por el modelo. Un valor cercano a 1 (100%) hace referencia a un modelo de ajuste alto.</p>
+<section id="coeficiente-de-determinación-1" class="level3">
+<h3 class="anchored" data-anchor-id="coeficiente-de-determinación-1">Coeficiente de determinación</h3>
+<p><span class="math display">\[
+R^2 = \frac{SCR}{SCT} = 1- \frac{SCE}{SCT}
+\]</span></p>
+</section>
+<section id="coeficiente-de-determinación-ajustado" class="level3">
+<h3 class="anchored" data-anchor-id="coeficiente-de-determinación-ajustado">Coeficiente de determinación ajustado</h3>
+<p>$$ R_a^2 = 1 - (1-R^2)</p>
+<p>$$</p>
+</section>
+</section>
+<section id="práctica" class="level2">
+<h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
+<p><a href="https://seeing-theory.brown.edu/regression-analysis/">Análisis de regresión</a></p>
+</section>
+</section>
+<section id="modelo-de-regresión-logit" class="level1">
+<h1>Modelo de regresión logit</h1>
+<section id="modelo-de-regresión-logit-1" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-regresión-logit-1">Modelo de regresión logit</h2>
+<p>El modelo de regresión logit es utilizado para modelar una variable dependiente categórica, generalmente binaria, como una función de variables independientes. Es una forma de regresión no lineal que se usa ampliamente en análisis de datos donde el resultado es dicotómico.</p>
+</section>
+<section id="formulación-5" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-5">Formulación</h2>
+<section id="especificación-matemática-2" class="level3">
+<h3 class="anchored" data-anchor-id="especificación-matemática-2">Especificación matemática</h3>
+<p>La especificación matemática del modelo logit se basa en la función logística. La función de probabilidad para una variable dependiente binaria <span class="math inline">\(y\)</span> puede expresarse como:</p>
+<p><span class="math display">\[
+P(y = 1 \mid X) = \frac{1}{1 + e^{-(\beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k)}}
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(P(y = 1 \mid X)\)</span> es la probabilidad de que la variable dependiente sea igual a 1 dado el conjunto de variables independientes <span class="math inline">\(X\)</span>.</li>
+<li><span class="math inline">\(\beta_0\)</span> es el término constante o intercepto.</li>
+<li><span class="math inline">\(X_1, X_2, \dots, X_k\)</span> son las variables independientes.</li>
+<li><span class="math inline">\(\beta_1, \beta_2, \dots, \beta_k\)</span> son los coeficientes asociados con cada variable independiente.</li>
+</ul>
+</section>
+</section>
+<section id="formulación-6" class="level2">
+<h2 class="anchored" data-anchor-id="formulación-6">Formulación</h2>
+<section id="terminología-1" class="level3">
+<h3 class="anchored" data-anchor-id="terminología-1">Terminología</h3>
+<ul>
+<li><strong><span class="math inline">\(X\)</span></strong>: variables independientes/explicativas.</li>
+<li><strong><span class="math inline">\(y\)</span></strong>: variable dependiente, categórica, que toma valores 0 o 1.</li>
+<li><strong><span class="math inline">\(\beta_0\)</span></strong>: intersección o término constante.</li>
+<li><strong><span class="math inline">\(\beta_1, \beta_2, \dots, \beta_n\)</span></strong>: coeficientes de regresión que indican la relación entre las variables independientes y la probabilidad de que <span class="math inline">\(y = 1\)</span>.</li>
+<li><strong><span class="math inline">\(\varepsilon\)</span></strong>: errores o perturbaciones aleatorias (aunque en el modelo logit, la relación es probabilística y no se modelan errores de la misma forma que en la regresión lineal).</li>
+</ul>
+</section>
+</section>
+<section id="parámetros-del-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="parámetros-del-modelo">Parámetros del modelo</h2>
+<section id="parámetros-1" class="level3">
+<h3 class="anchored" data-anchor-id="parámetros-1">Parámetros</h3>
+<p>En el modelo logit, los parámetros <span class="math inline">\(\beta\)</span> se estiman mediante el método de máxima verosimilitud. Cada parámetro <span class="math inline">\(\beta_j\)</span> representa el cambio en el logaritmo de las probabilidades (<span class="math inline">\(\log \frac{P(y=1)}{P(y=0)}\)</span>) asociado con una unidad de cambio en la variable independiente <span class="math inline">\(X_j\)</span>, manteniendo constantes las otras variables.</p>
+</section>
+<section id="supuestos-teóricos-2" class="level3">
+<h3 class="anchored" data-anchor-id="supuestos-teóricos-2">Supuestos teóricos</h3>
+<ul>
+<li><strong>Independencia de las observaciones</strong>: Las observaciones deben ser independientes entre sí.</li>
+<li><strong>Linealidad en el logit</strong>: La relación entre las variables independientes y el logit de la probabilidad es lineal.</li>
+<li><strong>Ausencia de multicolinealidad</strong>: Las variables independientes no deben estar fuertemente correlacionadas entre sí.</li>
+</ul>
+</section>
+</section>
+<section id="covariables-1" class="level2">
+<h2 class="anchored" data-anchor-id="covariables-1">Covariables</h2>
+<section id="covariables-numéricas-1" class="level3">
+<h3 class="anchored" data-anchor-id="covariables-numéricas-1">Covariables numéricas</h3>
+<p>Las covariables numéricas son aquellas que se pueden medir cuantitativamente y se introducen directamente en el modelo como <span class="math inline">\(X_j\)</span>.</p>
+</section>
+<section id="covariables-categóricas-1" class="level3">
+<h3 class="anchored" data-anchor-id="covariables-categóricas-1">Covariables categóricas</h3>
+<p>Las covariables categóricas, al ser cualitativas, se deben convertir en variables dummies (0 o 1) antes de incluirlas en el modelo.</p>
+</section>
+</section>
+<section id="respuesta-1" class="level2">
+<h2 class="anchored" data-anchor-id="respuesta-1">Respuesta</h2>
+<section id="respuesta-categórica-1" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-categórica-1">Respuesta categórica</h3>
+<p>La variable respuesta en un modelo logit es categórica, usualmente binaria, y toma valores como 0 y 1.</p>
+</section>
+</section>
+<section id="comprobación-de-hipótesis-1" class="level2">
+<h2 class="anchored" data-anchor-id="comprobación-de-hipótesis-1">Comprobación de hipótesis</h2>
+<p>Se formulan las hipótesis coherentes con la teoría. Se busca comprobar si las hipótesis son ciertas en la población.</p>
+<section id="planteamiento-de-hipótesis-1" class="level3">
+<h3 class="anchored" data-anchor-id="planteamiento-de-hipótesis-1">Planteamiento de hipótesis</h3>
+<p>En un modelo logit, se pueden formular hipótesis sobre los coeficientes <span class="math inline">\(\beta_j\)</span> (la covariable <span class="math inline">\(j\)</span> tiene un impacto positivo o negativo en la variable respuesta):</p>
+<ul>
+<li><strong>Hipótesis nula (<span class="math inline">\(H_0\)</span>)</strong>: <span class="math inline">\(\beta_j = 0\)</span>, es decir, la variable independiente <span class="math inline">\(X_j\)</span> no tiene efecto sobre la probabilidad de que <span class="math inline">\(y = 1\)</span>.</li>
+<li><strong>Hipótesis alternativa (<span class="math inline">\(H_1\)</span>)</strong>: <span class="math inline">\(\beta_j \neq 0\)</span>, es decir, la variable independiente <span class="math inline">\(X_j\)</span> tiene un efecto significativo.</li>
+</ul>
+</section>
+</section>
+<section id="proceso-de-estimación-3" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-estimación-3">Proceso de estimación</h2>
+<section id="intervalos-de-confianza-analíticos-para-los-parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="intervalos-de-confianza-analíticos-para-los-parámetros">Intervalos de confianza analíticos para los parámetros</h3>
+<p>Los intervalos de confianza para los coeficientes <span class="math inline">\(\beta_j\)</span> se calculan bajo el supuesto de normalidad asintótica de las estimaciones de máxima verosimilitud. Estos intervalos permiten evaluar la precisión de las estimaciones.</p>
+</section>
+<section id="bootstrap-2" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrap-2">Bootstrap</h3>
+<p>El bootstrap es un método no paramétrico que se utiliza para estimar la distribución de los coeficientes <span class="math inline">\(\beta_j\)</span> y sus intervalos de confianza, generando múltiples muestras de la base de datos original.</p>
+</section>
+</section>
+<section id="inferencia-del-modelo-2" class="level2">
+<h2 class="anchored" data-anchor-id="inferencia-del-modelo-2">Inferencia del modelo</h2>
+<section id="significancia-global-1" class="level3">
+<h3 class="anchored" data-anchor-id="significancia-global-1">Significancia global</h3>
+<p>La significancia global del modelo se evalúa utilizando pruebas como la prueba de razón de verosimilitud (Likelihood Ratio Test), que compara la bondad de ajuste del modelo completo con un modelo reducido.</p>
+</section>
+<section id="significancia-particular-1" class="level3">
+<h3 class="anchored" data-anchor-id="significancia-particular-1">Significancia particular</h3>
+<p>Se evalúa la significancia individual de cada coeficiente <span class="math inline">\(\beta_j\)</span> mediante pruebas <span class="math inline">\(t\)</span>. Un valor <span class="math inline">\(p\)</span> bajo indica que la variable correspondiente tiene un efecto significativo sobre la probabilidad de que <span class="math inline">\(y = 1\)</span>.</p>
+</section>
+</section>
+<section id="proceso-de-estimación-4" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-de-estimación-4">Proceso de estimación</h2>
+<section id="probabilidades-predichas" class="level3">
+<h3 class="anchored" data-anchor-id="probabilidades-predichas">Probabilidades predichas</h3>
+<p>Los valores ajustados <span class="math inline">\(\hat{p}\)</span> son las probabilidades predichas de que <span class="math inline">\(y = 1\)</span>:</p>
+<p><span class="math display">\[
+\hat{p} = \frac{1}{1 + e^{-(\hat{\beta_0} + X_1\hat{\beta_1} + X_2\hat{\beta_2} + \dots + X_k\hat{\beta_k})}}
+\]</span></p>
+</section>
+<section id="valores-predichos" class="level3">
+<h3 class="anchored" data-anchor-id="valores-predichos">Valores predichos</h3>
+<p>Los valores ajustados <span class="math inline">\(\hat{y}\)</span> se obtienen mediante un umbral <span class="math inline">\(U\)</span> que se encuentra entre 0 y 1:</p>
+<p><span class="math display">\[
+\hat{y} = I(\hat{p} &lt; U)
+\]</span></p>
+</section>
+<section id="residuales-1" class="level3">
+<h3 class="anchored" data-anchor-id="residuales-1">Residuales</h3>
+<p>Los residuales en un modelo logit no se calculan de la misma manera que en un modelo de regresión lineal, pero se pueden evaluar las diferencias entre los valores observados y las probabilidades predichas.</p>
+<p><span class="math display">\[
+\left[y \cdot log(\hat{p}) + (1 - y) \cdot log(1 - \hat{p}) \right]
+\]</span></p>
+</section>
+</section>
+<section id="validación-de-supuestos-3" class="level2">
+<h2 class="anchored" data-anchor-id="validación-de-supuestos-3">Validación de supuestos</h2>
+<section id="linealidad-en-el-logit" class="level3">
+<h3 class="anchored" data-anchor-id="linealidad-en-el-logit">Linealidad en el logit</h3>
+<p>Se puede evaluar gráficamente o mediante pruebas específicas que verifican si la relación entre las variables independientes y el logit es lineal.</p>
+</section>
+<section id="independencia-de-los-errores" class="level3">
+<h3 class="anchored" data-anchor-id="independencia-de-los-errores">Independencia de los errores</h3>
+<p>Se verifica si las observaciones son independientes, usualmente mediante análisis de autocorrelación.</p>
+</section>
+<section id="ausencia-de-multicolinealidad" class="level3">
+<h3 class="anchored" data-anchor-id="ausencia-de-multicolinealidad">Ausencia de multicolinealidad</h3>
+<p>La multicolinealidad se evalúa mediante el cálculo de los factores de inflación de la varianza (VIF).</p>
+</section>
+</section>
+<section id="métricas-de-evaluación-2" class="level2">
+<h2 class="anchored" data-anchor-id="métricas-de-evaluación-2">Métricas de evaluación</h2>
+<section id="curva-roc" class="level3">
+<h3 class="anchored" data-anchor-id="curva-roc">Curva ROC</h3>
+<p>La curva ROC es una herramienta gráfica que evalúa la capacidad del modelo para discriminar entre las clases.</p>
+</section>
+<section id="auc" class="level3">
+<h3 class="anchored" data-anchor-id="auc">AUC</h3>
+<p>El área bajo la curva (AUC) cuantifica la capacidad del modelo para distinguir entre las clases. Un AUC de 0.5 indica un modelo sin capacidad predictiva, mientras que un AUC cercano a 1 indica un excelente modelo.</p>
+</section>
+</section>
+<section id="métricas-de-evaluación-3" class="level2">
+<h2 class="anchored" data-anchor-id="métricas-de-evaluación-3">Métricas de evaluación</h2>
+<p>La matriz de confusión es una herramienta que permite evaluar el rendimiento de un modelo de clasificación al resumir las predicciones realizadas frente a los resultados reales. Está compuesta por cuatro elementos:</p>
+<ul>
+<li><strong>Verdaderos Positivos (TP)</strong>: El modelo predice la clase positiva correctamente.</li>
+<li><strong>Falsos Positivos (FP)</strong>: El modelo predice la clase positiva incorrectamente.</li>
+<li><strong>Verdaderos Negativos (TN)</strong>: El modelo predice la clase negativa correctamente.</li>
+<li><strong>Falsos Negativos (FN)</strong>: El modelo predice la clase negativa incorrectamente.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Predicción Positiva</th>
+<th>Predicción Negativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Clase Positiva</strong></td>
+<td>Verdaderos Positivos (TP)</td>
+<td>Falsos Negativos (FN)</td>
+</tr>
+<tr class="even">
+<td><strong>Clase Negativa</strong></td>
+<td>Falsos Positivos (FP)</td>
+<td>Verdaderos Negativos (TN)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="métricas-de-evaluación-4" class="level2">
+<h2 class="anchored" data-anchor-id="métricas-de-evaluación-4">Métricas de evaluación</h2>
+<section id="exactitud" class="level3">
+<h3 class="anchored" data-anchor-id="exactitud">Exactitud</h3>
+<p>La exactitud es la proporción de predicciones correctas sobre el total de predicciones realizadas por el modelo <span class="math inline">\(\frac{\text{TP} + \text{TN}}{TOTAL}\)</span>.</p>
+</section>
+<section id="sensibilidad" class="level3">
+<h3 class="anchored" data-anchor-id="sensibilidad">Sensibilidad</h3>
+<p>La sensibilidad mide la proporción de verdaderos positivos correctamente identificados por el modelo: <span class="math inline">\(\frac{\text{TP}}{\text{TP} + \text{FN}}\)</span>. Indica la capacidad del modelo para identificar correctamente los casos positivos, es decir, cuántos de los casos positivos reales fueron detectados por el modelo.</p>
+</section>
+<section id="especificidad" class="level3">
+<h3 class="anchored" data-anchor-id="especificidad">Especificidad</h3>
+<p>La especificidad mide la proporción de verdaderos negativos correctamente identificados por el modelo: <span class="math inline">\(\text{Especificidad} = \frac{\text{TN}}{\text{TN} + \text{FP}}\)</span>. Refleja la capacidad del modelo para identificar correctamente los casos negativos, es decir, cuántos de los casos negativos reales fueron detectados por el modelo.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,537 @@
+---
+title: "Estadística II"
+subtitle: "Introducción a la inferencia estadística"
+author: "CruzJulián"
+
+lang: "es-co"
+
+---
+
+
+```{r}
+
+# Falta:
+#   
+#   Pasar todo esto al formato de openintrostatistics
+
+"http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf"
+
+
+```
+
+
+# Antecedentes
+
+## Presentación
+
+### Descripción del curso
+
+Estadística 2: Estadística Inferencial para el seminario de Técnicas Especiales de Investigación II, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea como introducción y con el objetivo de reforzar temas de estadística a los estudiantes sobre los conceptos de pruebas de estimación y pruebas de hipótesis.
+
+### Justificación
+
+Técnicas Especiales de Investigación II es la segunda de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en primer semestre, y los asistentes al seminario son de quinto y sexto semestre, se ve la necesidad de reforzar los temas de estadística inferencial para que los estudiantes vean la posibilidad de soportar sus investigaciones con datos tratados estadísticamente y dado el carácter investigativo de la Facultad.
+
+## Consideraciones
+
+El curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas ni la realización de tareas o trabajos profundos por fuera del aula. Más bien es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.
+
+
+## Objetivo General
+
+Ofrecer herramientas de estadística inferencial a los asistentes al seminario de Técnicas Especiales de Investigación II, como repaso de la estadística ofrecida en primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.
+
+
+## Objetivos Específicos
+
+ - Generar los conceptos y conocimientos sobre estimación y pruebas de hipótesis.
+ - Adelantar talleres prácticos que hagan evidentes los conceptos presentados.
+ - Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante.
+
+## Metodología
+
+Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.
+
+
+## Material
+
+[OpenIntro Statistics](https://openintro.org/book/os/)
+
+http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf
+
+```
+@book{132224,
+	author = {Kelmansky, Diana M. and Kirschenbaum, Juan Manuel},
+	title = {Estadística para todos :},
+	publisher = {Instituto Nacional de Educación Tecnológica INET,},
+	year = {2009.},
+	series = {Las ciencias naturales y la matemática},
+	address = {Buenos Aires :},
+	edition = {1ª ed.},
+	url = {http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf}
+}
+
+
+
+```
+
+
+# Sesión 1: ¿Hay un método científico?
+
+## Actividad en clase
+
+¿Qué es un cisne negro?
+
+## Positivismo
+
+Medición estricta
+
+Hace afirmaciones a partir de las pruebas.
+
+El dato construye el relato.
+
+Mido, pienso, afirmo.
+
+## Verificacionismo
+
+Medición.
+
+Hacer pruebas buscando verificar las afirmaciones.
+
+Buscar cisnes.
+
+Carnap
+
+Afirmo, compruebo, doy por válido.
+
+El dato verifica el relato.
+
+## Falsacionismo
+
+Popper. Afirmo, compruebo lo contrario, refuto. 
+
+Ingenuo, admite excepciones. Hace justificaciones sobre la teoría actual.
+
+Completo, no admite excepciones. Postula nuevas teorías. Las nueva teorías expllican mejor.
+
+Lakatos: hay un núcleo que no es comprobable.
+
+Fleck.
+
+Kuhn.
+
+## Paradigma
+
+No es tan importante saber, sino tener una manera para saber si sabes.
+
+## Reproductibilidad
+
+[Crisis de reproductibilidad](https://www.nature.com/articles/485298a.pdf)
+
+## El método científico
+
+Multiplicidad.
+
+El problema de la demarcación.
+
+Está científicamente comprobado.
+
+## El proceso estadístico
+
+
+
+## Hipótesis
+
+## ¿Experimento?
+
+## Muestra
+
+## Población
+
+## Probabilidad
+
+Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.
+
+## Estadística
+
+Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.
+
+## Modelo estadístico
+
+Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.
+
+# Sesión 2: estimación y estimadores
+
+## Parámetro
+
+Un **parámetro** es un valor numérico que describe una característica específica de una población completa. Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²), o la proporción poblacional (P). Como se trabaja con poblaciones, los parámetros son constantes pero, en la práctica, desconocidos, y se estima a partir de muestras.
+
+## Estimador
+
+Un **estimador** es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales. Un estimador es una variable aleatoria y puede variar de una muestra a otra. Ejemplos comunes incluyen la media muestral (\(\bar{x}\)) y la proporción muestral (\(\hat{p}\)).
+
+## estimación puntual
+
+La **estimación puntual** se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población. Por ejemplo, la media muestral (\(\bar{x}\)) es una estimación puntual de la media poblacional (μ).
+
+## Margen de error
+
+El **margen de error** refleja la cantidad de incertidumbre que hay en una estimación puntual. Se define como la mitad de la longitud de un intervalo de confianza y representa la variabilidad que se espera de una estimación debido al muestreo.
+
+## Empate técnico
+
+El **empate técnico** ocurre cuando las diferencias entre dos estimaciones puntuales, como medias o proporciones, no son estadísticamente significativas debido al margen de error. En este caso, las diferencias observadas podrían ser el resultado de la variabilidad muestral y no reflejan una verdadera diferencia en la población.
+
+## Ejemplos de estimadores
+
+Algunos **ejemplos de estimadores** incluyen:
+
+- **Media muestral** (\(\bar{x}\)) para estimar la media poblacional (μ).
+- **Varianza muestral** (s²) para estimar la varianza poblacional (σ²).
+- **Proporción muestral** (\(\hat{p}\)) para estimar la proporción poblacional (P).
+
+## Consistencia
+
+Un **estimador** es **consistente** si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. En otras palabras, un estimador consistente converge en probabilidad al parámetro que se está estimando.
+
+## Tamaño de muestra
+
+El **tamaño de muestra** afecta directamente la precisión de las estimaciones. Un mayor tamaño de muestra generalmente reduce el error estándar, disminuye el margen de error y mejora la confiabilidad de las estimaciones.
+
+## Estimación por intervalo
+
+La **estimación por intervalo** ofrece un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional con un cierto nivel de confianza. Un intervalo de confianza proporciona más información que una estimación puntual, reflejando tanto la estimación como la incertidumbre asociada.
+
+## Media
+
+Un **intervalo de confianza para la media** de una población se puede calcular utilizando la distribución t de Student (cuando la varianza poblacional es desconocida y el tamaño de muestra es pequeño) o la distribución normal (cuando el tamaño de muestra es grande).
+
+## Proporción
+
+El **intervalo de confianza para una proporción** se calcula utilizando la proporción muestral (\(\hat{p}\)) y el error estándar de la proporción. Se utiliza la distribución normal debido a la aproximación de la distribución binomial a la normal cuando el tamaño de muestra es grande.
+
+## Varianza
+
+El **intervalo de confianza para la varianza** se calcula utilizando la distribución chi-cuadrado. La varianza muestral (s²) es el estimador puntual, y el intervalo se ajusta de acuerdo con la distribución de esta varianza bajo el supuesto de normalidad.
+
+## Consistencia
+
+El **intervalo de confianza** es consistente si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse, lo que indica que la estimación puntual se vuelve más precisa.
+
+## Diferencia de medias
+
+Para evaluar la **diferencia de medias** entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el uso de la distribución t de Student.
+
+## Diferencia de proporciones
+
+El **intervalo de confianza para la diferencia de proporciones** entre dos poblaciones se construye de manera similar al de una proporción, pero utilizando la diferencia entre las proporciones muestrales. La fórmula depende de si se asume o no la homogeneidad de varianzas entre las dos proporciones.
+
+## Bootstrapping
+
+El **bootstrapping** es un método no paramétrico que se utiliza para estimar la distribución de un estimador, y por ende, sus intervalos de confianza, al generar múltiples muestras simuladas de la muestra original. Es particularmente útil cuando no se puede asumir una distribución normal de los datos.
+
+# Sesión 3: pruebas de hipótesis (una población)
+
+## Objetivo
+
+Establecer si existe **suficiente evidencia** en una muestra aleatoria para **rechazar** o **no rechazar** la **hipótesis nula** a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.
+
+## Problema de la arquitectura de las pruebas de hipótesis
+
+**Pregunta clave:** ¿Los videojuegos violentos causan comportamientos violentos?
+
+Este problema ejemplifica cómo se estructura una prueba de hipótesis: planteando una hipótesis nula (que niega una relación) y una alternativa (que afirma una relación), y evaluando cuál de estas hipótesis está mejor apoyada por los datos.
+
+## Terminología
+
+- **Hipótesis estadística**: Una aseveración sobre uno o más parámetros poblacionales que puede ser probada mediante datos muestrales.
+- **Sistema de hipótesis**: Conjunto de hipótesis nula y alternativa que se contrastan.
+- **Tipos de error**: Los posibles errores al tomar una decisión basada en una prueba de hipótesis.
+- **Nivel de significancia**: La probabilidad de cometer un error tipo 1, es decir, rechazar la hipótesis nula cuando en realidad es cierta.
+
+## Hipótesis estadística
+
+Una **hipótesis estadística** es una afirmación sobre un parámetro poblacional. Puede ser:
+
+- **hipótesis simple**: Especifica un valor único para el parámetro, por ejemplo, $H:\mu = \mu_0$.
+- **hipótesis compuesta**: Especifica un rango de valores posibles para el parámetro, por ejemplo, $H:\mu \geq \mu_0$, $H:\mu \leq \mu_0$, $H:\mu > \mu_0$, $H:\mu < \mu_0$, $H:\mu \neq \mu_0$.
+
+El valor $\mu_0$ es el **valor hipotético** contra el cual se compara la estimación muestral.
+
+## Sistema de hipótesis
+
+El **sistema de hipótesis** consiste en dos hipótesis contrapuestas:
+
+- **hipótesis nula ($H_0$)**: Es la hipótesis que se presume cierta inicialmente. Ejemplos:
+  - $H_0:\mu \leq \mu_0$
+  - $H_0:\mu \geq \mu_0$
+  - $H_0:\mu = \mu_0$
+
+- **hipótesis alternativa ($H_1$)**: Es la hipótesis que se acepta si los datos proporcionan suficiente evidencia para rechazar $H_0$. Ejemplos:
+  - $H_1:\mu > \mu_0$
+  - $H_1:\mu < \mu_0$
+  - $H_1:\mu \neq \mu_0$
+
+## Tipos de error
+
+En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
+
+- **error tipo 1**: Rechazar la hipótesis nula cuando esta es verdadera. La probabilidad de cometer este error es el nivel de significancia $\alpha$.
+- **error tipo 2**: No rechazar la hipótesis nula cuando esta es falsa. La probabilidad de cometer este error se denota como $\beta$.
+
+## Tipos de error
+
+En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuldWSenU1lKPw2F7kkKH5zraE5wHibmAdM21m88UDZDN1Jvqb)
+
+
+## Nivel de significancia
+
+El **nivel de significancia** ($\alpha$) es la probabilidad de cometer un error tipo 1, es decir, rechazar la hipótesis nula cuando en realidad es cierta. Este nivel se establece antes de realizar la prueba y comúnmente se fija en 0.05 o 0.01.
+
+- $$\alpha = P(\text{error tipo 1}) = P(\text{rechazar $H_0$}\mid H_0)$$
+
+## Rechazar la hipótesis nula
+
+Rechazar $H_0$ implica que se ha encontrado algo en la muestra tan improbable bajo la hipótesis nula, que lleva al investigador a favorecer la hipótesis alternativa $H_1$. Sin embargo, siempre existe la posibilidad de cometer un error tipo 1 al hacer esta decisión.
+
+### La ciencia es conservadora
+
+En estadística, se prefiere no rechazar $H_0$ erróneamente a rechazarla sin suficiente evidencia. Por esto, $H_0$ se mantiene a menos que haya **evidencia contundente** que obligue a revocarla. Este enfoque refleja un principio conservador en la ciencia, donde se requiere una alta carga de prueba para cambiar el estado actual del conocimiento.
+
+## Valor p
+
+El **valor $p$** es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta. 
+
+- Si $p < \alpha$, se rechaza $H_0$, lo que sugiere que la evidencia muestral no es compatible con $H_0$.
+- Si $p \geq \alpha$, no se rechaza $H_0$, indicando que los datos son consistentes con $H_0$.
+
+Es importante recordar que el valor $p$ no mide la probabilidad de que $H_0$ sea verdadera, sino la probabilidad de los datos observados bajo $H_0$.
+
+## Decisión
+
+La decisión en una prueba de hipótesis se basa en comparar el valor $p$ con el nivel de significancia $\alpha$:
+
+- **Si $p < \alpha$**, se **rechaza $H_0$**.
+- **Si $p \geq \alpha$**, **no se rechaza $H_0$**.
+
+Esta decisión refleja si la evidencia contra $H_0$ es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.
+
+## Prueba
+
+El proceso para realizar una prueba de hipótesis incluye los siguientes pasos:
+
+1. **Establecer las hipótesis**: Definir $H_0$ y $H_1$ basándose en el problema de investigación.
+2. **Formular el sistema de hipótesis** y seleccionar el nivel de significancia $\alpha$.
+3. **Calcular el valor $p$**: Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor $p$.
+4. **Tomar la decisión**: Rechazar $H_0$ si $p < \alpha$ o no rechazar $H_0$ si $p \geq \alpha$.
+5. **Interpretar los resultados**: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar $H_1$.
+
+## Pruebas paramétricas y no paramétricas
+
+### Pruebas paramétricas
+
+Las **pruebas paramétricas** estudian un parámetro de dimensión finita (una colección finita de parámetros), por esta razón presentan supuestos específicos sobre la distribución de los datos.
+
+### Pruebas no paramétricas
+
+Las **pruebas paramétricas** estudian un parámetro de dimensión infinita (funciones de densidad).
+
+**Analíticas**: Hacen uso de propiedades generales de las distribuciones.
+
+**Simulación estocástica**: Hacen uso de simulación computacional para obtener el valor-p.
+
+
+## Pruebas paramétricas
+
+Asumen que los datos siguen una distribución conocida, usualmente normal. Estas pruebas requieren que se cumplan ciertos supuestos, como la homogeneidad de varianzas y la linealidad.
+
+Estas pruebas son más potentes cuando los datos cumplen estos supuestos, ya que utilizan toda la información disponible en los datos.
+
+Cuando los datos no cumplen los supuestos, las pruebas pierden validez y los estudios rigor científico.
+
+- Prueba t de Student (para la comparación de medias)
+- ANOVA (para la comparación de medias entre múltiples grupos)
+
+## Pruebas no paramétricas analíticas
+
+Las **pruebas no paramétricas analíticas** hacen uso de propiedades matemáticas generales de las distribuciones continuas. Por lo tanto, no requieren supuestos tan fuertes sobre la distribución de los datos.
+
+Son útiles cuando los datos no cumplen los supuestos necesarios para las pruebas paramétricas, como en casos de datos con distribuciones no normales o escalas de medición ordinales.
+
+Son menos potentes que las pruebas paramétricas en los casos paramétricos. No obstante, son más flexibles y aplicables a una mayor variedad de situaciones.
+
+- Prueba de Mann-Whitney (para la comparación de dos grupos independientes)
+- Prueba de Wilcoxon (para la comparación de dos grupos pareados)
+- Prueba de Kruskal-Wallis (para la comparación de múltiples grupos)
+
+
+
+## Pruebas no paramétricas de simulación estocástica
+
+Las **pruebas de permutaciones** son métodos estadísticos no paramétricos que evalúan la significancia de un estadístico de prueba al permutar, simular o remuestrear los datos observados con el fin de obtener una muestra de estadísticos bajo H_0.
+
+Al comparar el estadístico observado con la muestra de los estadísticos obtenidos, se puede determinar si el efecto observado es significativo.
+
+- **Permutación**: Se basa en la idea de que si no hay efecto, todas las permutaciones de los datos son igualmente probables.
+
+- **Simulación**: Se basa en la idea de que es posible simular la hipótesis nula y encontrar una muestra para el estimador bajo estas condiciones.
+
+- **Remuestreo**: Se basa en la idea de que una muestra aleatoria de una muestra aleatoria es una muestra aleatoria.
+
+## Pruebas no paramétricas de simulación estocástica
+
+Al comparar el estadístico observado con la distribución de los estadísticos obtenidos de las permutaciones, se puede determinar si el efecto observado es significativo.
+
+**Calculo del valor p**: Se calcula como la proporción de permutaciones en las que el estadístico de prueba es al menos tan extremo como el observado.
+
+Estas pruebas no dependen de supuestos sobre la distribución de los datos, lo que las hace muy flexibles y robustas frente a diversas condiciones de los datos.
+
+
+## Cuándo usar cada tipo de prueba
+
+Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos elegir cuándo aplicar cada tipo de prueba.
+
+- **Pruebas paramétricas**: cuando los datos cumplen con los supuestos de normalidad y homogeneidad de varianzas, y se requiere mayor potencia estadística.
+
+- **Pruebas no paramétricas**: cuando los datos no cumplen con los supuestos paramétricos o cuando se trabaja con datos ordinales o no numéricos. Son útiles sean analíticas o de simulación estocástica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sesión 4: Pruebas de hipótesis (dos poblaciones)
+
+## Test t de Student para una muestra
+
+En la familia normal, una muestra aleatoria $X = \{X_1, ... , X_n\}$  especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu = \mu_0\\
+  H_A: \mu \neq \mu_0
+\end{align*}
+$$
+
+## Test de signos para una muestra
+
+En la familia de distribuciones continuas, siendo $\theta$ la mediana, una muestra aleatoria $X = \{X_1, ... , X_n\}$  especificamos las hipótesis.
+
+$$
+\begin{align*}
+  H_0: \theta = \theta_0\\
+  H_A: \theta \neq \theta_0
+\end{align*}
+$$
+
+## Test t de Student para dos muestras independientes
+
+En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo homogenedidad ($\sigma^2_x = \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+$$
+
+## Test t de Student para dos muestras independientes
+
+En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+$$
+
+## Test Wilcoxon - Mann - Whitney
+
+En la familia de las distribuciones continuas, siendo $\theta$ la mediana, sean dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \theta_X = \theta_Y\\
+  H_A: \theta_X \neq \theta_Y
+\end{align*}
+$$
+
+## Test t de Student para dos muestras pareadas
+
+En la familia normal, dos muestras aleatorias pareadas $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+$$
+
+Es suficiente ver que si $D = X - Y$ entonces podemos probar 
+
+$$
+\begin{align*}
+  H_0: \mu_D = 0\\
+  H_A: \mu_D \neq 0
+\end{align*}
+$$
+
+
+## Prueba de una sola proporción
+
+En una distribución Bernoulli($\pi$), sea una muestra $X = \{X_1, ... , X_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \pi_X = \pi_0\\
+  H_A: \pi_X \neq \pi_0
+\end{align*}
+$$
+
+## Prueba de dos proporciones
+
+En una distribución Bernoulli($\pi$), sean dos muestras $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \pi_X = \pi_y\\
+  H_A: \pi_X \neq \pi_y
+\end{align*}
+$$
+
+
+## Test de correlación de Pearson
+
+En la familia normal, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
+
+$$
+\begin{align*}
+H_0: \rho =   \rho_0\\
+H_A: \rho \neq   \rho_0
+\end{align*}
+$$
+
+## Test de correlación de Spearman
+
+En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
+
+$$
+\begin{align*}
+H_0: \rho_s =   \rho_{s0}\\
+H_A: \rho_s \neq   \rho_{s0}
+\end{align*}
+$$
+
+
+
+

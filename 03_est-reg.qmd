@@ -1,0 +1,1209 @@
+---
+title: "Estadística III"
+subtitle: "Introducción a la inferencia estadística"
+author: "CruzJulián"
+
+lang: "es-co"
+
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+## antecedentes
+
+library("ggplot2")
+library("dplyr")
+library("knitr")
+library("saber")
+library("ggplot2")
+
+data("SB11_20082")
+
+opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.show = "asis", fig.height = 3, fig.width = 8)
+
+```
+
+
+```{r}
+
+# library("googlesheets4")
+# 
+# SB11_20082 %>%
+#   filter(
+#     ESTU_ESTRATO != 8,
+#     !is.na(ESTU_NACIMIENTO_ANNO),
+#     !is.na(INFA_HERMANOS),
+#     !is.na(ECON_PERSONAS_HOGAR),
+#     !is.na(ESTU_ESTRATO),
+#     !is.na(ECON_SN_COMPUTADOR),
+#     !is.na(CIENCIAS_SOCIALES_PUNT)
+#   ) %>% 
+#   slice_sample(n = 5000) %>%
+#   write_sheet(ss = "1lCJlJmAoI8_M6RuI9vlvw0LYWgkWGH1CnKDLkIYfRdg", sheet = "sample")
+# 
+# SB11_20082 %>%
+#   slice_sample(n = 5000) -> tb_data_slice
+# 
+# lm(CIENCIAS_SOCIALES_PUNT ~ ESTU_NACIMIENTO_ANNO + INFA_HERMANOS + ECON_PERSONAS_HOGAR + as.character(ESTU_ESTRATO), data = tb_data_slice) %>% summary
+
+```
+
+
+# Antecedentes
+
+
+## Presentación
+
+Estadística 3: Proyecciones y Regresiones para el seminario de Técnicas Especiales de Investigación III, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea de una manera muy específica con el objetivo de dar a conocer a los estudiantes temas tan importantes como las proyecciones y regresiones.
+
+## Justificación
+
+Técnicas Especiales de Investigación III es la tercera de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en segundo semestre y los asistentes al seminario son de séptimo y octavo semestre, se ve la necesidad de iniciar con nuevos temas, que seguramente no vieron en su estadística descriptiva, sobre proyecciones y regresiones para generar en los estudiantes la necesidad de soportar sus investigaciones con datos tratados estadísticamente dado el carácter investigativo de la Facultad.
+
+## Consideraciones
+
+Sobre los contenidos teóricos y/o conceptuales básicos del programa
+
+Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.
+
+## Objetivo General
+
+Ofrecer herramientas de estadística relacionadas con proyecciones y regresiones a los asistentes al seminario de Técnicas Especiales de Investigación III, como introducción a nuevos temas de estadística, no contemplados en el programa de estadística descriptiva de primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.
+
+## Objetivos Específicos
+
+ - Generar conceptos de regresión y pronostico en el marco de las ciencias sociales
+
+ - Adelantar talleres prácticos que hagan evidentes los conceptos presentados
+
+ - Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante
+
+## Metodología
+
+Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.
+
+# Modelamiento
+
+## Qué es un modelo estadístico
+
+Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.
+
+### Se ve así
+
+$$
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+$$
+
+Pero...
+
+Cada número $\beta_i$ tiene unas propiedades. Por eso, el reporte de un modelo se vuelve un poco complejo de interpretar.
+
+## Actividad en clase
+
+$$
+[realrinc] = \beta_0 +  [hrs1] \cdot \beta_1 + \varepsilon
+$$
+[Revisemos las partes de un modelo](https://www.stathelp.se/en/regoutput_en.html)
+
+A continuación se presentan los resultados de un análisis realizado a partir de una encuesta estadounidense realizada en 2018. La variable dependiente es cuánto gana el encuestado en un año, en dólares estadounidenses. La variable independiente es cuántas horas trabajó el encuestado la semana pasada. En la encuesta real hay miles de respuestas, pero aquí se seleccionaron 46 de ellas al azar para facilitar la presentación de los resultados.
+
+## Justificación
+
+¿Por qué hacemos modelos?
+
+[To explain or to predict](https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf)
+
+## Modelamiento
+
+El modelamiento es una técnica esencial en la investigación científica, que permite representar y analizar fenómenos complejos del mundo real. Los modelos son simplificaciones que ayudan a entender, predecir y, en algunos casos, controlar estos fenómenos.
+
+### De la realidad a la teoría
+
+El proceso de modelamiento inicia con la observación de la realidad. A partir de estas observaciones, se desarrollan teorías que intentan explicar el comportamiento observado. Los modelos son representaciones de estas teorías, diseñadas para ser más manejables y comprensibles.
+
+### Modelamiento estadístico
+
+El modelamiento estadístico utiliza datos para construir modelos que describen y analizan relaciones entre variables. Estos modelos son fundamentales en diversas disciplinas científicas, como la economía, la psicología, la biología y la ingeniería, entre otras.
+
+## Tipos de modelos
+
+Existen diferentes tipos de modelos que se utilizan dependiendo de los objetivos de la investigación. Los principales son:
+
+### Descripción
+
+Modelos descriptivos que buscan representar las características básicas de los datos sin hacer suposiciones sobre la estructura subyacente.
+
+### Explicación
+
+Modelos explicativos que buscan identificar y entender las relaciones causales entre variables.
+
+### Pronóstico
+
+Modelos predictivos que se utilizan para hacer predicciones sobre futuros eventos o comportamientos basados en datos actuales o pasados.
+
+## Modelamiento descriptivo
+
+El modelamiento descriptivo se centra en resumir y visualizar los datos, proporcionando una imagen clara de lo que los datos muestran. Es el primer paso en cualquier análisis de datos, ya que ayuda a entender el contexto y las características básicas del conjunto de datos.
+
+
+## Herramientas del modelamiento descriptivo
+
+Las herramientas más comunes para el modelamiento descriptivo incluyen:
+
+- **Tablas de frecuencia:** que muestran cómo se distribuyen los valores de una variable.
+- **Medidas de tendencia central:** como la media, mediana y moda, que resumen el valor típico de los datos.
+- **Medidas de dispersión:** como la varianza y la desviación estándar, que indican cuánta variación hay en los datos.
+- **Gráficos:** como histogramas, diagramas de dispersión y gráficos de caja, que ayudan a visualizar la distribución y las relaciones entre variables.
+
+## Ejemplos del modelamiento descriptivo
+
+- **Análisis de la distribución de la edad en una población:** utilizando histogramas y medidas de tendencia central para resumir los datos.
+- **Estudio de la dispersión de precios en diferentes mercados:** utilizando gráficos de caja para comparar la variabilidad entre diferentes ubicaciones.
+
+## Modelamiento explicativo
+
+El modelamiento explicativo busca entender las causas y efectos dentro de un conjunto de datos. Este tipo de modelamiento es fundamental para probar hipótesis y teorías científicas, ya que permite establecer relaciones causales entre variables.
+
+
+## Herramientas del modelamiento explicativo
+
+Las herramientas más comunes para el modelamiento explicativo incluyen:
+
+- **Regresión lineal:** que permite examinar la relación entre una variable dependiente y una o más variables independientes.
+- **Análisis de varianza (ANOVA):** que se utiliza para comparar las medias de diferentes grupos y determinar si las diferencias observadas son estadísticamente significativas.
+- **Modelos estructurales:** que permiten analizar relaciones complejas entre múltiples variables, incluyendo efectos directos e indirectos.
+
+## Ejemplos del modelamiento explicativo
+
+- **Estudio de los factores que afectan el rendimiento académico:** utilizando regresión lineal para examinar el impacto de variables como el tiempo de estudio, el apoyo familiar y las características socioeconómicas.
+- **Investigación sobre los determinantes de la satisfacción laboral:** utilizando ANOVA para comparar diferentes grupos de empleados y entender cómo factores como el salario, las condiciones de trabajo y el liderazgo influyen en la satisfacción.
+
+## Modelamiento predictivo
+
+El modelamiento predictivo se utiliza para hacer predicciones sobre eventos futuros basados en datos históricos. Este tipo de modelamiento es clave en áreas como el pronóstico del tiempo, la predicción de ventas, y la identificación de riesgos en finanzas.
+
+
+## Herramientas del modelamiento predictivo
+
+Las herramientas más comunes para el modelamiento predictivo incluyen:
+
+- **Regresión logística:** que se utiliza para predecir una variable categórica, como el resultado de una elección o la probabilidad de que ocurra un evento.
+- **Árboles de decisión:** que dividen los datos en ramas para tomar decisiones basadas en reglas simples.
+- **Modelos de series temporales:** que analizan datos secuenciales en el tiempo para hacer predicciones sobre futuros puntos en la serie.
+
+## Ejemplos del modelamiento predictivo
+
+- **Predicción del comportamiento del cliente en una tienda en línea:** utilizando regresión logística para determinar la probabilidad de que un cliente compre un producto basado en su historial de navegación.
+- **Pronóstico de la demanda de energía:** utilizando modelos de series temporales para predecir el consumo de energía en diferentes estaciones del año.
+
+## Diferencias clave entre describir, explicar y pronosticar
+
+Es fundamental distinguir entre los objetivos del modelamiento descriptivo, explicativo y predictivo:
+
+- **Describir** se enfoca en resumir y visualizar los datos existentes.
+- **Explicar** busca entender las relaciones causales y los mecanismos subyacentes en los datos.
+- **Pronosticar** se orienta hacia la predicción de futuros eventos o comportamientos basados en patrones observados en los datos.
+
+## Etapas del modelamiento
+
+El modelamiento es un proceso complejo que involucra varias etapas clave, desde la definición del problema hasta la aplicación del modelo para realizar predicciones o comprender un fenómeno. Cada etapa es esencial para garantizar que el modelo sea preciso, interpretable y útil.
+
+## Etapas del modelamiento
+
+**Definición del problema:** establecer el objetivo del modelamiento.
+
+**Recolección de datos:** recopilar y preparar los datos que se utilizarán en el modelamiento.
+
+**Exploración y preparación:** entender la naturaleza y características de los datos disponibles.
+
+**Formulación del modelo:** plantear el modelo más adecuado según los objetivos. Debe existir una coincidencia entre los conceptos del contexto y las variables del modelo.
+
+**Estimación del modelo:** ajustar el modelo a los datos para obtener los parámetros que mejor representen las relaciones subyacentes.
+
+**Evaluación del modelo:** verificar la calidad del modelo utilizando medidas de ajuste y validación cruzada.
+
+**Interpretación y presentación de resultados:** analizar los resultados del modelo y presentarlos de manera comprensible para el público objetivo.
+
+**Aplicación del modelo:** utilizar el modelo para hacer predicciones o para comprender mejor el fenómeno en estudio.
+
+## Definición del problema
+
+La definición del problema es la primera y más crucial etapa en el proceso de modelamiento. Aquí se establece el objetivo del estudio, las preguntas de investigación que se desean responder y las hipótesis que se pretenden probar. Una clara definición del problema orienta todo el proceso de modelamiento, asegurando que los esfuerzos se centren en las preguntas más relevantes y que los resultados sean útiles para la toma de decisiones.
+
+En esta etapa, es importante:
+
+- **Identificar el fenómeno de interés:** ¿Qué es lo que se desea entender, explicar o predecir?
+- **Delimitar el alcance del estudio:** ¿Cuáles son los límites del problema? ¿Qué variables serán incluidas o excluidas?
+- **Establecer los objetivos del modelamiento:** ¿Qué se espera lograr con el modelo? ¿Se busca una descripción, una explicación o una predicción?
+
+## Recolección de datos
+
+La recolección de datos es el proceso de obtener la información necesaria para desarrollar y ajustar el modelo. Los datos pueden provenir de diversas fuentes, como encuestas, experimentos, registros históricos o bases de datos públicas. La calidad y la relevancia de los datos son fundamentales para el éxito del modelamiento.
+
+Durante esta etapa se deben considerar los siguientes aspectos:
+
+- **Selección de fuentes de datos:** ¿De dónde se obtendrán los datos? ¿Son fiables y relevantes para el problema definido?
+- **Preparación de los datos:** ¿Cómo se limpiarán, transformarán y organizarán los datos para que sean adecuados para el análisis? Esto puede incluir la eliminación de valores atípicos, el manejo de datos faltantes y la normalización de variables.
+- **Validación de datos:** ¿Cómo se asegurará la calidad y precisión de los datos recolectados?
+
+## Preparación y exploración de los datos
+
+La **preparación y exploración de los datos** es una fase crucial en cualquier proceso de modelamiento, ya que los datos en bruto generalmente no están listos para ser utilizados directamente en un modelo. Esta fase implica una serie de actividades destinadas a comprender, limpiar, y transformar los datos para que sean adecuados para el análisis. 
+
+## Formulación del modelo
+
+La selección del modelo es la etapa en la que se elige el tipo de modelo más adecuado para los datos y los objetivos de la investigación. Dependiendo del tipo de problema, se pueden considerar diferentes enfoques de modelamiento, como modelos descriptivos, explicativos o predictivos.
+
+Consideraciones clave durante esta etapa incluyen:
+
+- **Naturaleza del fenómeno:** ¿Qué tipo de relación existe entre las variables? ¿Es lineal, no lineal, categórica, etc.?
+- **Complejidad del modelo:** ¿Se necesita un modelo simple y fácil de interpretar, o es preferible un modelo complejo que capture más detalles?
+- **Disponibilidad de herramientas:** ¿Qué herramientas de software y métodos estadísticos están disponibles para ajustar el modelo?
+- **Soporte teórico del modelo:** ¿Qué supuestos tiene el modelo? ¿Cuáles son relacionales? ¿Cuáles son distribucionales? ¿Qué hipótesis resuelve?
+
+## Estimación del modelo
+
+La estimación del modelo implica ajustar el modelo seleccionado a los datos, es decir, encontrar los parámetros que mejor representan la relación entre las variables. Esta etapa es crucial para garantizar que el modelo sea una representación precisa y válida del fenómeno en estudio.
+
+Pasos en la estimación del modelo:
+
+- **Ajuste del modelo:** Utilización de métodos estadísticos para estimar los parámetros del modelo, como la regresión lineal, máxima verosimilitud, o técnicas de machine learning.
+- **Pruebas de significancia:** Evaluación de la significancia estadística de los parámetros estimados para determinar si tienen un impacto real en las variables dependientes.
+- **Verificación de supuestos:** Comprobación de que los supuestos del modelo se cumplen, como la normalidad de los errores, la homocedasticidad y la independencia de las observaciones.
+
+## Evaluación del modelo
+
+La evaluación del modelo es una etapa crítica donde se examina la precisión y la validez del modelo ajustado. Aquí se utilizan diversas métricas y pruebas para determinar si el modelo es adecuado y si puede generalizarse a otros datos.
+
+Aspectos a considerar durante la evaluación:
+
+- **Medidas de ajuste:** ¿Qué tan bien se ajusta el modelo a los datos observados? Medidas como el R², el error cuadrático medio (RMSE) y la log-verosimilitud se utilizan para evaluar el ajuste.
+- **Validación cruzada:** ¿Cómo se desempeña el modelo cuando se aplica a nuevos datos no utilizados en la estimación? La validación cruzada y la prueba en conjuntos de datos separados son técnicas comunes.
+- **Análisis de residuos:** ¿Los residuos del modelo son aleatorios y no muestran patrones sistemáticos? Este análisis ayuda a verificar la adecuación del modelo.
+
+## Interpretación y presentación de resultados
+
+Una vez que el modelo ha sido estimado y evaluado, la siguiente etapa es interpretar los resultados y presentarlos de manera que sean comprensibles y útiles para los tomadores de decisiones. La claridad en la interpretación es crucial para que los resultados del modelamiento tengan un impacto significativo.
+
+Puntos clave en esta etapa:
+
+- **Interpretación de los parámetros:** ¿Qué significan los coeficientes estimados en el contexto del problema? ¿Cómo se relacionan las variables independientes con la variable dependiente?
+- **Visualización de resultados:** ¿Cómo se pueden presentar los resultados de manera visual, utilizando gráficos y tablas para facilitar su comprensión?
+- **Conclusiones y recomendaciones:** ¿Qué conclusiones se pueden extraer del análisis? ¿Qué recomendaciones pueden hacerse en base a los resultados del modelo?
+
+## Aplicación del modelo
+
+La aplicación del modelo es la fase final, donde los resultados obtenidos del modelamiento se utilizan para tomar decisiones, hacer predicciones, o profundizar el entendimiento del fenómeno en estudio. Esta etapa puede incluir la implementación del modelo en sistemas de apoyo a la decisión, el uso del modelo para la planificación estratégica, o la publicación de los hallazgos en un contexto académico.
+
+Consideraciones en la aplicación del modelo:
+
+- **Implementación:** ¿Cómo se utilizará el modelo en la práctica? ¿Qué sistemas o procesos se verán afectados por la implementación del modelo?
+- **Monitoreo y actualización:** ¿Cómo se monitoreará el desempeño del modelo a lo largo del tiempo? ¿Qué mecanismos se establecerán para actualizar el modelo con nuevos datos?
+- **Evaluación del impacto:** ¿Qué impacto tiene la aplicación del modelo en los resultados esperados? ¿Se cumplen los objetivos iniciales del modelamiento?
+
+# Preparación y exploración de los datos
+
+## Procesamiento previo
+
+La preparación de datos implica transformar los datos en un formato adecuado para su uso en el modelamiento.
+
+
+## Limpieza de datos
+
+   - **Imputación de valores faltantes:** Selección de técnicas para manejar datos faltantes, como eliminación de casos, imputación con la media o mediana, o el uso de modelos predictivos.
+   - **Eliminación de duplicados:** Identificación y eliminación de registros duplicados que podrían sesgar los resultados del modelo.
+   - **Corrección de errores:** Revisión de los datos para corregir errores como registros mal ingresados, incoherencias, o valores fuera de rango.
+
+## Transformación de datos
+
+   - **Normalización o estandarización:** Ajuste de las escalas de las variables para que tengan un rango comparable, lo cual es especialmente importante en técnicas como el análisis de componentes principales o modelos de machine learning.
+   - **Codificación de variables categóricas:** Conversión de variables categóricas en variables numéricas mediante técnicas como la codificación one-hot o el etiquetado ordinal.
+   - **Creación de nuevas variables:** Generación de nuevas variables que puedan capturar relaciones más complejas en los datos (por ejemplo, interacciones entre variables o variables derivadas).
+
+## Selección de datos
+
+   - **Selección de características:** Identificación de variables irrelevantes o redundantes para simplificar el modelo y mejorar su interpretabilidad.
+   - **Partición en conjuntos de entrenamiento y prueba:** Separación de los datos en conjuntos de entrenamiento y validación para evaluar el rendimiento del modelo de manera más robusta.
+
+## Análisis descriptivo
+
+El análisis descriptivo permite generar un diagnóstico sobre el contexto y apoya la selección de los modelos a ajustar.
+
+## Análisis descriptivo univariado
+
+- **Media**: Es el promedio de los valores de la variable. Proporciona una medida central de la distribución.
+- **Mediana**: Es el valor que divide la distribución en dos partes iguales. Útil para datos sesgados.
+- **Desviación estándar**: Mide la dispersión de los datos en relación con la media. Indica qué tan dispersos están los valores.
+- **Moda**: El valor que aparece con mayor frecuencia en el conjunto de datos.
+- **Rango**: Diferencia entre el valor máximo y el mínimo de la distribución.
+
+## Generación de visualizaciones
+
+- **Gráficos de dispersión**: Utilizados para examinar la relación entre dos variables numéricas. Pueden ayudar a detectar correlaciones o patrones.
+- **Histogramas**: Representaciones gráficas que muestran la distribución de una variable continua. Ayudan a visualizar la frecuencia de los valores en diferentes intervalos.
+- **Diagramas de caja (boxplots)**: Herramientas gráficas que muestran la mediana, los cuartiles y los posibles valores atípicos de una variable. Útiles para identificar la dispersión y la simetría de la distribución.
+- **Diagramas de violín**: Combinan un diagrama de caja con un gráfico de densidad, proporcionando una visión más detallada de la distribución de la variable.
+
+## Análisis correlacional 
+
+- **Correlación de Pearson**: Mide la fuerza y dirección de la relación lineal entre dos variables numéricas.
+- **Correlación de Spearman**: Mide la fuerza y dirección de la relación monótona entre dos variables, sin requerir que la relación sea lineal.
+- **Correlación de Kendall**: Mide la concordancia entre dos variables ordinales, útil para datos con rangos.
+- **Matriz de correlación**: Tabla que muestra las correlaciones entre múltiples variables a la vez. Es útil para identificar rápidamente relaciones fuertes o débiles entre varias variables.
+
+## Análisis de desagregación
+
+- **Desagregación de datos**: Separar los datos en subgrupos basados en categorías de una variable para examinar patrones o tendencias dentro de cada subgrupo.
+- **Exploración de la estructura de los datos**: Identificar patrones claros en los datos, como tendencias o ciclos, que puedan indicar la necesidad de una transformación.
+
+
+# Correlación, desagregación y causalidad
+
+## Correlación numérica - numérica
+
+
+La asociación de variables es la herramienta que nos permite explorar y entender las relaciones entre diferentes conjuntos de datos. La correlación mide la fuerza y la dirección de la relación entre dos variables.
+
+## Dependencia e independencia lineal:
+
+- **Positiva**: La relación es tal que a medida que una variable aumenta, la otra también tiende a aumentar. Ejemplo: La relación entre la altura y el peso de una persona.
+- **Negativa**: La relación es tal que a medida que una variable aumenta, la otra tiende a disminuir. Ejemplo: La relación entre el precio de un producto y la cantidad demandada.
+- **Independiente**: No hay una relación aparente entre las dos variables. Ejemplo: La relación entre el color de los ojos y el salario de una persona.
+
+## Correlación lineal
+
+### Pearson
+
+- **Definición**: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.
+- **Rango**: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.
+- **Cálculo**: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.
+
+## Correlación monótona
+
+### Spearman
+
+- **Definición**: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.
+- **Ventaja**: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.
+- **Rango**: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.
+
+## Correlación monótona
+
+### Kendall
+
+- **Definición**: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.
+- **Cálculo**:
+  - **Concordancia**: Dos pares de observaciones están en concordancia si el orden de las observaciones en ambos pares es el mismo.
+  - **Discordancia**: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.
+- **Aplicación**: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.
+
+## Asociación numérica - categórica
+
+En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.
+
+## Elementos gráficos
+
+Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:
+
+- **Diagramas de caja (boxplots)**: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.
+- **Gráficos de barras**: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.
+
+## Asociación numérica - categórica
+
+```{r}
+library("stringr")
+
+SB11_20082 %>% 
+  filter(ESTU_ESTRATO != 8) %>% 
+  slice_sample(n = 2500) %>% 
+  mutate(
+    ESTRATO = as.ordered(ESTU_ESTRATO)
+    ) -> tb_example
+
+```
+
+
+```{r, fig.show='asis'}
+tb_example  %>% 
+  group_by(ESTRATO) %>% 
+  summarise(INGLES_PUNT = round(mean(INGLES_PUNT, na.rm = TRUE), 2)) %>% 
+  na.omit() %>% 
+  ggplot +
+  aes(x = INGLES_PUNT, label = INGLES_PUNT, y = ESTRATO) +
+  geom_col(fill = "#000000") +
+  geom_text(hjust = 2, color = "#cccccc") +
+  labs(x = "Puntaje en inglés", y = "Estrato") +
+  theme_minimal()
+
+
+```
+
+## ANOVA
+
+El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.
+
+### Tipos
+
+  - **ANOVA de una vía**: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.
+  - **ANOVA de más vías**: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.
+
+
+## ANOVA
+
+```{r, results='markup'}
+aov(INGLES_PUNT ~ ESTRATO, data = tb_example) %>% summary()
+
+```
+
+## Test Kruskal-Wallis
+
+El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.
+
+### Uso
+
+Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.
+
+```{r, results='markup'}
+kruskal.test(INGLES_PUNT ~ ESTRATO, data = tb_example)
+
+
+```
+
+## Asociación categórica - categórica
+
+En ocasiones es necesario encontrar relaciones entre variables categóricas.
+
+
+
+## Tablas de contingencia
+
+Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.
+
+### Uso
+
+Ayudan a visualizar y analizar la dependencia entre variables categóricas.
+
+## Tablas de contingencia
+
+```{r, results='markup'}
+library("scales")
+
+tb_example %>% 
+  count(COLE_INST_JORNADA, ESTRATO) %>%
+  mutate(
+  p = prop.table(n) %>% percent()
+  ) %>% 
+  ggplot +
+  aes(y = COLE_INST_JORNADA, x = ESTRATO, fill = n, label = p) +
+  geom_raster() +
+  scale_fill_gradient(low = "#ffccaa", high = "#f00", guide = "none") +
+  geom_text() +
+  labs(x = "Estrato", y = "Jornada") +
+  theme_minimal()
+
+  
+
+```
+
+## Prueba de chi cuadrado
+
+Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.
+
+
+### Uso
+
+Determina si hay una relación significativa entre las variables categóricas.
+
+```{r, results='markup'}
+chisq.test(tb_example$COLE_INST_JORNADA, tb_example$ESTRATO)
+
+```
+
+
+
+## Prueba exacta de Fisher
+
+Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.
+
+
+### Uso
+
+Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.
+
+
+```{r, results='markup'}
+fisher.test(tb_example$COLE_INST_JORNADA, tb_example$ESTRATO, simulate.p.value = TRUE)
+
+```
+
+## Regresión
+
+$$
+y = \beta_0 + X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+$$
+
+Técnica estadística utilizada para modelar y analizar la relación entre una variable dependiente y una o más variables independientes.
+
+
+### Componentes:
+
+  - $\beta_0$: Intersección (constante).
+  - $X_i$: Variables independientes.
+  - $\beta_i$: Coeficientes de las variables independientes.
+  - $\varepsilon$: Error aleatorio.
+
+## Causalidad
+
+La manera óptima de comprobar causalidad es ediante un experimento.
+
+- **Definición**: Método para establecer relaciones causales entre variables mediante la manipulación controlada de una o más variables independientes y la observación del efecto en una o más variables dependientes.
+- **Importancia**: Permite inferir causalidad en lugar de solo correlación, lo cual es crucial para la validez de los resultados.
+- **Ejemplo**: Un experimento clínico donde se prueba el efecto de un nuevo medicamento en la presión arterial de los pacientes.
+
+## Causalidad
+
+### Actividad en clase
+
+En parejas, generar un escrito sobre la causalidad desde la perspectiva de un autor teórico que elijan. Extensión máxima de cuartilla.
+
+# Modelamiento estadístico
+
+## Qué es un modelo estadístico
+
+Un modelo estadístico es una representación matemática que describe cómo una o más variables aleatorias se relacionan entre sí. 
+
+Tiene como propósito simplificar la realidad para entender las relaciones entre variables y hacer predicciones o inferencias.
+
+## Proceso de modelamieto estadístico
+
+ - **Formulación**: Revisar la literatura existente. Formular hipótesis claras. Definir el modelo teórico con base en conceptos y teorías previas.
+ 
+ - **Estimación y ajuste**: Implica el uso de métodos estadísticos para estimar los parámetros del modelo, como los coeficientes en una regresión. Una vez estimados los parámetros, se ajusta el modelo para que mejor represente los datos observados.
+
+ - **Validación y evaluación**: La validación se refiere a la comprobación de la generalizabilidad del modelo y de sus supuestos. La evaluación se refiere a la bondad de ajuste, qué tanto reflejan los datos.
+
+## Formulación
+
+### Partes de un modelo
+
+- **Variables dependientes e independientes**: Identificación de las variables que serán explicadas y las que se usarán como predictores.
+- **Relación funcional**: La forma en que las variables independientes se combinan para influir en la variable dependiente.
+- **Término de error**: Captura la variabilidad no explicada por las variables independientes.
+
+## Formulación
+
+### Especificación matemática
+
+La especificación matemática de un modelo implica:
+
+- **Formulación de ecuaciones**: Definir cómo las variables independientes afectan a la variable dependiente.
+- **Definición de supuestos**: Establecer los supuestos subyacentes (como la linealidad, independencia, homocedasticidad, etc.).
+- **Notación y simbolismo**: Uso de notación matemática clara para representar las relaciones y supuestos.
+
+## Formulación
+
+### Supuestos teóricos
+
+Los modelos estadísticos se basan en varios supuestos teóricos:
+
+- **Linealidad**: Relación lineal entre variables independientes y dependientes.
+- **Independencia de errores**: Los errores no están correlacionados entre sí.
+- **Homoscedasticidad**: La varianza de los errores es constante.
+- **Normalidad**: Los errores siguen una distribución normal.
+
+## Estimación y ajuste
+
+### Parámetros y estimadores
+
+Los conceptos clave son:
+
+- **Parámetros**: Valores desconocidos en el modelo que describen la relación entre variables.
+- **Estimadores**: Funciones que proporcionan valores aproximados de los parámetros basados en los datos.
+- **Significancia**: Métodos para generalizar el conocimiento subyacente de la muestra hacia la población.
+
+## Estimación y ajuste
+
+El proceso de estimación involucra:
+
+- **Selección del método de estimación**: Métodos como Mínimos Cuadrados Ordinarios (OLS), Máxima Verosimilitud, etc.
+- **Cálculo de estimadores**: Determinar los valores que minimizan o maximizan una función objetivo.
+- **Evaluación de los estimadores**: Análisis de la eficiencia, sesgo, y consistencia de los estimadores.
+
+## Estimación y ajuste
+
+### Estimación puntual
+
+Encontrar los valores de $\beta$ y $\sigma^2$ para reproducir $y$ tan precisamente como sea posible.
+
+
+ - Máxima verosimilitud
+ 
+ - OLS
+ 
+ - PLS
+ 
+ - LOESS
+
+
+## Estimación y ajuste
+
+:::: {.columns}
+
+::: {.column}
+
+### Intervalos de confianza analíticos
+
+Los intervalos de confianza teóricos proporcionan un rango de valores dentro del cual se espera que se encuentre el verdadero valor de un coeficiente de regresión con un cierto nivel de confianza (generalmente 95%).
+
+:::
+  
+::: {.column}
+
+### Bootstrap
+
+El bootstrap es un método no paramétrico que permite estimar la distribución de un estimador medisnte simulación. Al generar múltiples muestras de los datos originales mediante resampling con reemplazo, es posible recalcular varias observaciones del estimador y tener una muestra aleatoria de este.
+
+:::
+  
+::::
+
+## Estimación y ajuste
+
+La prueba de hipótesis global en un modelo de regresión evalúa si al menos una de las variables independientes tiene un efecto significativo sobre la variable dependiente. Esto se realiza mediante la siguiente hipótesis:
+
+- **Hipótesis nula (H₀)**: Todos los coeficientes de regresión son iguales a cero, es decir, las variables independientes no tienen efecto sobre la variable dependiente.
+  
+- **Hipótesis alternativa (H₁)**: Al menos un coeficiente de regresión es diferente de cero, es decir, al menos una variable independiente tiene un efecto significativo.
+
+### Procedimiento:
+
+1. **Cálculo del estadístico F**: Se utiliza para comparar el modelo ajustado con un modelo nulo (sin variables predictoras).
+2. **Determinación del p-valor**: El p-valor asociado con el estadístico F indica la probabilidad de observar un valor tan extremo como el calculado, bajo la hipótesis nula.
+3. **Decisión**: Si el p-valor es menor que el nivel de significancia (α, comúnmente 0.05), se rechaza la hipótesis nula, concluyendo que el modelo tiene al menos un predictor significativo.
+
+
+
+## Validación y evaluación
+
+### Métricas de evaluación
+
+Para evaluar un modelo se utilizan:
+
+- **Coeficiente de determinación (R²)**: Medida de la proporción de la varianza explicada.
+- **Error cuadrático medio (MSE)**: Promedio de los cuadrados de los errores.
+- **AIC/BIC**: Criterios de información para comparar modelos.
+- **Pruebas de significancia**: p-valores, pruebas F, t-pruebas para evaluar la relevancia de los parámetros.
+- **Exactitud (accuracy) y precisión**: métricas para evaluar modelos de respuesta categórica, sensibilidad y especificidad. 
+- **Curva ROC, AUC y matriz de confusión**: estadígracos asociados a los modelos de respuesta cetegórica.
+- **Validación cruzada**: uso de datos de ajuste y prueba para el cálculo de las métricas.
+
+## Modelos
+
+### Regresión (aprendizaje supervisado)
+
+Modelos donde se predice o explica una variable dependiente a partir de una o más variables independientes.
+
+
+### Ejemplos
+
+Regresión lineal, regresión logística, regresión Poisson.
+
+### Métodos multivariados (aprendizaje no supervisado)
+
+Técnicas para descubrir estructuras subyacentes en los datos sin necesidad de una variable dependiente.
+
+### Ejemplos
+
+Análisis de componentes principales (PCA), análisis de conglomerados, análisis factorial.
+
+## Modelos de regresión explicativos
+
+El centro de nuestro aprendizaje en ciencias sociales es el modelamiento explicativo. 
+
+## Modelos de regresión explicativos
+
+:::: {.columns}
+
+::: {.column}
+
+### Lineal normal
+
+- **Descripción**: Modelo que asume una relación lineal entre las variables y que los errores son normalmente distribuidos.
+- **Aplicaciones**: Estimación de relaciones entre variables cuantitativas.
+
+:::
+  
+::: {.column}
+
+### Logit
+
+- **Descripción**: Modelo utilizado para predecir probabilidades de eventos binarios (0 o 1).
+- **Aplicaciones**: Modelos de decisión, análisis de comportamiento.
+
+:::
+  
+::::
+
+## Modelos de regresión explicativos
+
+:::: {.columns}
+
+::: {.column}
+
+### Poisson
+
+- **Descripción**: Modelo para contar eventos que ocurren en un intervalo fijo.
+- **Aplicaciones**: Modelado de tasas de ocurrencia, como incidentes de accidentes.
+
+
+:::
+  
+::: {.column}
+
+### Series de tiempo, Datos panel
+
+- **Descripción**: Modelos que consideran la dependencia temporal o la estructura de panel en los datos.
+- **Aplicaciones**: Pronósticos, análisis longitudinal.
+
+:::
+  
+::::
+
+
+## Modelos de regresión explicativos
+
+
+:::: {.columns}
+
+::: {.column}
+
+### Espaciales (krigging)
+
+- **Descripción**: Modelos que incorporan la correlación espacial entre observaciones.
+- **Aplicaciones**: Geostatística, análisis de datos georreferenciados.
+
+:::
+  
+::: {.column}
+
+### De efectos fijos y aleatorios
+
+- **Descripción**: Modelos que permiten controlar por variables no observadas que varían entre entidades.
+- **Aplicaciones**: Análisis de datos donde existen diferencias individuales inobservables.
+
+:::
+  
+::::
+
+
+## Modelos de regresión explicativos
+
+:::: {.columns}
+
+::: {.column}
+
+### Modelos de supervivencia
+
+- **Descripción**: Modelos que analizan el tiempo hasta un evento de interés.
+- **Aplicaciones**: Análisis de tiempo hasta la muerte, recurrencia de enfermedades.
+
+:::
+  
+::: {.column}
+
+
+:::
+  
+::::
+
+
+# Modelo de regresón lineal
+
+## Modelo de regresón lineal
+
+
+La regresión lineal múltiple es un método estadístico que permite modelar la relación entre una variable dependiente continua y dos o más variables independientes (predictoras). Se utiliza para explicar el valor de la variable dependiente basado en los valores conocidos de las variables independientes.
+
+
+
+## Formulación
+
+:::: {.columns}
+
+::: {.column}
+
+### Especificación matemática
+
+
+$$
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k + \varepsilon
+$$
+
+:::
+  
+::: {.column}
+
+### Terminología
+
+ - $X$ : variables independientes/explicativas.
+ - $y$ : variable dependiente - explicada - respuesta.
+ - $\beta_0$ es la intersección o término constante.
+ - $\beta_1, \beta_2, \dots, \beta_n$ : coeficientes de regresión.
+ - $\varepsilon$ : errores/perturbaciones aleatorias.
+:::
+  
+::::
+
+## Formulación
+
+
+### Parámetros
+
+- **Coeficientes de regresión $\beta$**: Indican el cambio esperado en la variable dependiente $Y$ por cada unidad de cambio en una variable independiente $X$, manteniendo las demás constantes.
+- **Error estándar**: Medida de la precisión de los coeficientes estimados.
+- **Término de error $\varepsilon$**: Captura la variabilidad en $Y$ que no es explicada por las variables independientes.
+- **Estadísticos \(t\) y \(p\)-valor**: Utilizados para probar la significancia de cada coeficiente.
+
+### Supuestos teóricos
+
+- **Linealidad**: La relación entre las variables dependientes e independientes es lineal.
+- **Independencia de los errores**: Los errores $\varepsilon$ son independientes entre sí.
+- **Homoscedasticidad**: La varianza de los errores es constante en todos los niveles de las variables independientes.
+- **Normalidad de los errores**: Los errores $\varepsilon$ se distribuyen normalmente.
+- **No multicolinealidad**: Las variables independientes no están altamente correlacionadas entre sí.
+
+## Covariables
+
+### Covariables numéricas
+
+- **Definición**: Variables independientes que son numéricas y se utilizan en modelos de regresión para explicar la variación en la variable dependiente.
+- **Ejemplo**: Edad, ingresos, puntuación en una prueba.
+
+### Covariables categóricas
+
+- Requieren un procesamiento previo. Se convierten en variables dummy.
+- **Definición**: Variables independientes que son categóricas y se utilizan en modelos de regresión para explorar diferencias entre grupos o categorías.
+- **Ejemplo**: Género, tipo de tratamiento, región geográfica.
+
+## Respuesta
+
+### Respuesta numérica
+
+- **Definición**: Variable dependiente en modelos de regresión que es numérica.
+- **Ejemplo**: Precio de una vivienda, número de ventas.
+
+### Respuesta categórica
+
+- El trabajo con respuestas categóricas se sitúa por fuera del modelo de regresión lineal.
+- **Definición**: Variable dependiente en modelos de regresión que es categórica.
+- **Ejemplo**: Aprobado/No aprobado, compra/no compra.
+
+## Comprobación de hipótesis 
+
+La evaluación de hipótesis mediante modelos de regresión implica determinar si los efectos de las variables independientes sobre la variable dependiente son significativos y en qué dirección se manifiestan. Este proceso se basa en la prueba de hipótesis para los coeficientes del modelo.
+
+### Planteamiento de hipótesis
+
+- **Hipótesis nula (\(H_0\))**: Establece que no hay efecto o relación significativa entre la variable independiente y la variable dependiente. En términos de regresión, esto significa que el coeficiente de la variable independiente es igual a cero (\(\beta_i = 0\)).
+- **Hipótesis alternativa (\(H_A\))**: Sugiere que hay un efecto significativo. En regresión, esto implica que el coeficiente no es cero (\(\beta_i \ne 0\)).
+
+## Proceso de estimación
+
+### Intervalos de confianza analíticos
+
+- **Cálculo**:
+  - Se basa en los supuestos de normalidad de los errores y en la distribución de \(t\).
+  - Los límites del intervalo de confianza se calculan como: \(\hat{\beta} \pm t_{\alpha/2} \cdot \text{SE}(\hat{\beta})\), donde \(\hat{\beta}\) es el coeficiente estimado y \(\text{SE}(\hat{\beta})\) es su error estándar.
+- **Importancia**:
+  - Proporciona una medida de la precisión de los estimadores.
+  - Ayuda a evaluar la significancia de los coeficientes: si el intervalo no incluye cero, el coeficiente es significativo.
+
+## Proceso de estimación
+
+### Bootstrap
+
+- **Proceso**:
+  - Generar un gran número de muestras bootstrap (por ejemplo, 1,000).
+  - Calcular los coeficientes de regresión para cada muestra.
+  - Obtener la distribución empírica de los coeficientes y derivar intervalos de confianza a partir de ella.
+- **Ventajas**:
+  - No depende de los supuestos de normalidad de los errores.
+  - Es útil en situaciones donde los supuestos teóricos pueden no cumplirse o en modelos complejos.
+- **Limitaciones**:
+  - Requiere un número elevado de simulaciones, lo que puede ser computacionalmente intensivo.
+  - La precisión de los intervalos bootstrap depende del tamaño de la muestra original.
+
+## Inferencia del modelo
+
+Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.
+
+### Significancia global
+
+¿Existe una relación estadísticamente significativa entre la variable respuesta y las variables explicativas en general?
+
+$$H_0:\beta_1 = \beta_2 = \ldots = \beta_p = 0
+\quad\text{frente a}\quad
+H_1:\beta_j\neq 0 \text{ para algún } j$$
+
+## Inferencia del modelo
+
+Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.
+
+### Significancia particular
+
+¿Existe una relación estadísticamente significativa entre la variable respuesta y una variable explicativa en particular?
+
+$$
+H_0:\beta_i = 0
+\quad\text{frente a}\quad
+H_1:\beta_i\neq 0
+$$
+
+## Proceso de estimación
+
+### Valores ajustados/predichos
+
+$$
+\hat{y} = X\hat{\beta} + \hat\beta_0
+$$
+
+### Residuales
+
+
+$$
+r = y - \hat{y}
+$$
+
+## Validación de supuestos
+
+Para que los resultados de la regresión lineal múltiple sean válidos, deben cumplirse ciertos supuestos. A continuación se presentan los métodos de evaluación para cada uno:
+
+- **Linealidad**: 
+  - **Método de evaluación**: Se evalúa mediante la observación de posibles patrones en los residuos. Puedes utilizar gráficos de residuos frente a valores ajustados para verificar si los residuos están distribuidos aleatoriamente sin patrones evidentes.
+  - **Gráfico recomendado**: Gráfico de dispersión de residuos versus valores ajustados.
+
+- **Independencia de los errores**:
+  - **Método de evaluación**: Se verifica mediante pruebas estadísticas como la prueba de Durbin-Watson para detectar autocorrelación en los residuos. Un valor cercano a 2 sugiere que no hay autocorrelación.
+  - **Prueba recomendada**: Prueba de Durbin-Watson.
+
+## Validación de supuestos
+
+- **Homoscedasticidad**:
+  - **Método de evaluación**: Se evalúa observando si la varianza de los residuos es constante a lo largo de todos los valores de las variables independientes. Se puede usar el gráfico de residuos estandarizados frente a valores ajustados.
+  - **Gráfico recomendado**: Gráfico de residuos estandarizados versus valores ajustados.
+
+- **Normalidad de los errores**:
+  - **Método de evaluación**: Se verifica utilizando gráficos y pruebas estadísticas. Un gráfico de Q-Q (cuantil-cuantil) puede mostrar si los residuos siguen una distribución normal. Además, se pueden realizar pruebas de normalidad como la prueba de Shapiro-Wilk.
+  - **Gráficos y pruebas recomendadas**: Gráfico Q-Q y prueba de Shapiro-Wilk.
+
+## Validación de supuestos
+
+- **No multicolinealidad**:
+  - **Método de evaluación**: Se evalúa mediante el cálculo del Factor de Inflación de la Varianza (VIF) para cada variable independiente. Un VIF superior a 10 indica una alta multicolinealidad.
+  - **Métrica recomendada**: Factor de Inflación de la Varianza (VIF).
+
+## Métricas de evaluación
+
+- **R-cuadrado $R^2$**: Mide la proporción de la varianza en la variable dependiente que es explicada por las variables independientes. Un $R^2$ alto indica un buen ajuste del modelo.
+- **R-cuadrado ajustado**: Similar al $R^2$, pero ajustado por el número de variables en el modelo, lo que lo hace más adecuado para comparaciones entre modelos con diferentes números de predictores.
+- **Error estándar de la estimación**: Mide la precisión de las predicciones del modelo.
+- **Estadístico F**: Evalúa la significancia global del modelo; es decir, si al menos una de las variables independientes tiene un efecto sobre la variable dependiente. A partir de este se obtiene un p-valor global.
+- **p-valor**: Para cada coeficiente, indica si la variable independiente asociada tiene un efecto significativo en la variable dependiente.
+
+
+## Coeficiente de determinación
+
+Permite establecer el porcentaje de información explicada por el modelo. Un valor cercano a 1 (100%) hace referencia a un modelo de ajuste alto.
+
+### Coeficiente de determinación
+
+$$
+R^2 = \frac{SCR}{SCT} = 1- \frac{SCE}{SCT}
+$$
+
+### Coeficiente de determinación ajustado
+
+$$
+R_a^2 = 1 - \frac{n - 1}{n - p - 1}(1-R^2)
+
+$$
+
+## Práctica
+
+[Análisis de regresión](https://seeing-theory.brown.edu/regression-analysis/)
+
+# Modelo de regresión logit
+
+## Modelo de regresión logit
+
+El modelo de regresión logit es utilizado para modelar una variable dependiente categórica, generalmente binaria, como una función de variables independientes. Es una forma de regresión no lineal que se usa ampliamente en análisis de datos donde el resultado es dicotómico.
+
+
+## Formulación
+
+### Especificación matemática
+
+La especificación matemática del modelo logit se basa en la función logística. La función de probabilidad para una variable dependiente binaria $y$ puede expresarse como:
+
+$$
+P(y = 1 \mid X) = \frac{1}{1 + e^{-(\beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k)}}
+$$
+
+Donde:
+
+- $P(y = 1 \mid X)$ es la probabilidad de que la variable dependiente sea igual a 1 dado el conjunto de variables independientes $X$.
+- $\beta_0$ es el término constante o intercepto.
+- $X_1, X_2, \dots, X_k$ son las variables independientes.
+- $\beta_1, \beta_2, \dots, \beta_k$ son los coeficientes asociados con cada variable independiente.
+
+## Formulación
+
+### Terminología
+
+- **$X$**: variables independientes/explicativas.
+- **$y$**: variable dependiente, categórica, que toma valores 0 o 1.
+- **$\beta_0$**: intersección o término constante.
+- **$\beta_1, \beta_2, \dots, \beta_n$**: coeficientes de regresión que indican la relación entre las variables independientes y la probabilidad de que $y = 1$.
+- **$\varepsilon$**: errores o perturbaciones aleatorias (aunque en el modelo logit, la relación es probabilística y no se modelan errores de la misma forma que en la regresión lineal).
+
+## Parámetros del modelo
+
+### Parámetros
+
+En el modelo logit, los parámetros $\beta$ se estiman mediante el método de máxima verosimilitud. Cada parámetro $\beta_j$ representa el cambio en el logaritmo de las probabilidades ($\log \frac{P(y=1)}{P(y=0)}$) asociado con una unidad de cambio en la variable independiente $X_j$, manteniendo constantes las otras variables.
+
+### Supuestos teóricos
+
+- **Independencia de las observaciones**: Las observaciones deben ser independientes entre sí.
+- **Linealidad en el logit**: La relación entre las variables independientes y el logit de la probabilidad es lineal.
+- **Ausencia de multicolinealidad**: Las variables independientes no deben estar fuertemente correlacionadas entre sí.
+
+## Covariables
+
+### Covariables numéricas
+
+Las covariables numéricas son aquellas que se pueden medir cuantitativamente y se introducen directamente en el modelo como $X_j$.
+
+### Covariables categóricas
+
+Las covariables categóricas, al ser cualitativas, se deben convertir en variables dummies (0 o 1) antes de incluirlas en el modelo.
+
+## Respuesta
+
+### Respuesta categórica
+
+La variable respuesta en un modelo logit es categórica, usualmente binaria, y toma valores como 0 y 1.
+
+## Comprobación de hipótesis
+
+Se formulan las hipótesis coherentes con la teoría. Se busca comprobar si las hipótesis son ciertas en la población.
+
+### Planteamiento de hipótesis
+
+En un modelo logit, se pueden formular hipótesis sobre los coeficientes $\beta_j$ (la covariable $j$ tiene un impacto positivo o negativo en la variable respuesta):
+
+- **Hipótesis nula ($H_0$)**: $\beta_j = 0$, es decir, la variable independiente $X_j$ no tiene efecto sobre la probabilidad de que $y = 1$.
+- **Hipótesis alternativa ($H_1$)**: $\beta_j \neq 0$, es decir, la variable independiente $X_j$ tiene un efecto significativo.
+
+## Proceso de estimación
+
+### Intervalos de confianza analíticos para los parámetros
+
+Los intervalos de confianza para los coeficientes $\beta_j$ se calculan bajo el supuesto de normalidad asintótica de las estimaciones de máxima verosimilitud. Estos intervalos permiten evaluar la precisión de las estimaciones.
+
+### Bootstrap
+
+El bootstrap es un método no paramétrico que se utiliza para estimar la distribución de los coeficientes $\beta_j$ y sus intervalos de confianza, generando múltiples muestras de la base de datos original.
+
+## Inferencia del modelo
+
+### Significancia global
+
+La significancia global del modelo se evalúa utilizando pruebas como la prueba de razón de verosimilitud (Likelihood Ratio Test), que compara la bondad de ajuste del modelo completo con un modelo reducido.
+
+### Significancia particular
+
+Se evalúa la significancia individual de cada coeficiente $\beta_j$ mediante pruebas $t$. Un valor $p$ bajo indica que la variable correspondiente tiene un efecto significativo sobre la probabilidad de que $y = 1$.
+
+## Proceso de estimación
+
+### Probabilidades predichas
+
+Los valores ajustados $\hat{p}$ son las probabilidades predichas de que $y = 1$:
+
+$$
+\hat{p} = \frac{1}{1 + e^{-(\hat{\beta_0} + X_1\hat{\beta_1} + X_2\hat{\beta_2} + \dots + X_k\hat{\beta_k})}}
+$$
+
+### Valores predichos
+
+Los valores ajustados $\hat{y}$ se obtienen mediante un umbral $U$ que se encuentra entre 0 y 1:
+
+$$
+\hat{y} = I(\hat{p} < U)
+$$
+
+
+### Residuales
+
+Los residuales en un modelo logit no se calculan de la misma manera que en un modelo de regresión lineal, pero se pueden evaluar las diferencias entre los valores observados y las probabilidades predichas.
+
+$$
+ \left[y \cdot log(\hat{p}) + (1 - y) \cdot log(1 - \hat{p}) \right]
+$$
+
+## Validación de supuestos
+
+### Linealidad en el logit
+
+Se puede evaluar gráficamente o mediante pruebas específicas que verifican si la relación entre las variables independientes y el logit es lineal.
+
+### Independencia de los errores
+
+Se verifica si las observaciones son independientes, usualmente mediante análisis de autocorrelación.
+
+### Ausencia de multicolinealidad
+
+La multicolinealidad se evalúa mediante el cálculo de los factores de inflación de la varianza (VIF).
+
+## Métricas de evaluación
+
+### Curva ROC
+
+La curva ROC es una herramienta gráfica que evalúa la capacidad del modelo para discriminar entre las clases. 
+
+### AUC
+
+El área bajo la curva (AUC) cuantifica la capacidad del modelo para distinguir entre las clases. Un AUC de 0.5 indica un modelo sin capacidad predictiva, mientras que un AUC cercano a 1 indica un excelente modelo.
+
+
+## Métricas de evaluación
+
+La matriz de confusión es una herramienta que permite evaluar el rendimiento de un modelo de clasificación al resumir las predicciones realizadas frente a los resultados reales. Está compuesta por cuatro elementos:
+
+- **Verdaderos Positivos (TP)**: El modelo predice la clase positiva correctamente.
+- **Falsos Positivos (FP)**: El modelo predice la clase positiva incorrectamente.
+- **Verdaderos Negativos (TN)**: El modelo predice la clase negativa correctamente.
+- **Falsos Negativos (FN)**: El modelo predice la clase negativa incorrectamente.
+
+|                    | Predicción Positiva | Predicción Negativa |
+|--------------------|---------------------|---------------------|
+| **Clase Positiva** | Verdaderos Positivos (TP)  | Falsos Negativos (FN)  |
+| **Clase Negativa** | Falsos Positivos (FP)  | Verdaderos Negativos (TN)  |
+
+
+
+## Métricas de evaluación
+
+
+### Exactitud
+
+La exactitud es la proporción de predicciones correctas sobre el total de predicciones realizadas por el modelo $\frac{\text{TP} + \text{TN}}{TOTAL}$.
+
+### Sensibilidad 
+
+La sensibilidad mide la proporción de verdaderos positivos correctamente identificados por el modelo: $\frac{\text{TP}}{\text{TP} + \text{FN}}$. Indica la capacidad del modelo para identificar correctamente los casos positivos, es decir, cuántos de los casos positivos reales fueron detectados por el modelo.
+
+### Especificidad
+
+La especificidad mide la proporción de verdaderos negativos correctamente identificados por el modelo: $\text{Especificidad} = \frac{\text{TN}}{\text{TN} + \text{FP}}$. Refleja la capacidad del modelo para identificar correctamente los casos negativos, es decir, cuántos de los casos negativos reales fueron detectados por el modelo.
+

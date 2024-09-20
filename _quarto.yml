@@ -12,6 +12,10 @@ website:
         text: Introducción
       - href: 01_est-desc.qmd
         text: Estadística I
+      - href: 02_est-inf.qmd
+        text: Estadística II
+      - href: 03_est-reg.qmd
+        text: Estadística III
 
 format:
   html:
