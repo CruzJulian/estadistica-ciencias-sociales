@@ -16,6 +16,8 @@ website:
         text: Estadística II
       - href: 03_est-reg.qmd
         text: Estadística III
+      - href: 04_est-multi.qmd
+        text: Estadística IV
 
 format:
   html:

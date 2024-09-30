@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="CruzJulián">
 
-<title>Estadística III – Estadística</title>
+<title>Estadística - Estadística III</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -113,7 +113,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -138,9 +138,13 @@ window.Quarto = {
     <a class="nav-link active" href="./03_est-reg.html" aria-current="page"> 
 <span class="menu-text">Estadística III</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./04_est-multi.html"> 
+<span class="menu-text">Estadística IV</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -872,8 +876,8 @@ y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-ESTRATO        5  41312    8262   102.1 &lt;2e-16 ***
-Residuals   2494 201832      81                   
+ESTRATO        5  54191   10838   133.8 &lt;2e-16 ***
+Residuals   2494 202063      81                   
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -891,7 +895,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
     Kruskal-Wallis rank sum test
 
 data:  INGLES_PUNT by ESTRATO
-Kruskal-Wallis chi-squared = 250.62, df = 5, p-value &lt; 2.2e-16</code></pre>
+Kruskal-Wallis chi-squared = 318.27, df = 5, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -932,7 +936,7 @@ Kruskal-Wallis chi-squared = 250.62, df = 5, p-value &lt; 2.2e-16</code></pre>
     Pearson's Chi-squared test
 
 data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-X-squared = 226.66, df = 20, p-value &lt; 2.2e-16</code></pre>
+X-squared = 191.48, df = 20, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -1641,7 +1645,7 @@ P(y = 1 \mid X) = \frac{1}{1 + e^{-(\beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots
 <li><strong>Verdaderos Negativos (TN)</strong>: El modelo predice la clase negativa correctamente.</li>
 <li><strong>Falsos Negativos (FN)</strong>: El modelo predice la clase negativa incorrectamente.</li>
 </ul>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 32%">
 <col style="width: 33%">
@@ -1723,7 +1727,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1755,29 +1770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1785,7 +1778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
