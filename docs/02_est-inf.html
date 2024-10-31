@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -205,45 +171,87 @@ window.Quarto = {
   <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
   <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
   </ul></li>
-  <li><a href="#sesión-1-hay-un-método-científico" id="toc-sesión-1-hay-un-método-científico" class="nav-link" data-scroll-target="#sesión-1-hay-un-método-científico">Sesión 1: ¿Hay un método científico?</a>
+  <li><a href="#construyendo-un-marco-epistemológico-para-la-inferencia-estadística" id="toc-construyendo-un-marco-epistemológico-para-la-inferencia-estadística" class="nav-link" data-scroll-target="#construyendo-un-marco-epistemológico-para-la-inferencia-estadística">Construyendo un marco epistemológico para la inferencia estadística</a>
   <ul class="collapse">
+  <li><a href="#los-antiguos-griegos-y-la-deducción" id="toc-los-antiguos-griegos-y-la-deducción" class="nav-link" data-scroll-target="#los-antiguos-griegos-y-la-deducción">Los antiguos griegos y la deducción</a>
+  <ul class="collapse">
+  <li><a href="#sócrates-y-la-mayéutica" id="toc-sócrates-y-la-mayéutica" class="nav-link" data-scroll-target="#sócrates-y-la-mayéutica">Sócrates y la mayéutica</a></li>
+  <li><a href="#platón-y-la-dialéctica" id="toc-platón-y-la-dialéctica" class="nav-link" data-scroll-target="#platón-y-la-dialéctica">Platón y la dialéctica</a></li>
+  <li><a href="#aristóteles-y-la-lógica" id="toc-aristóteles-y-la-lógica" class="nav-link" data-scroll-target="#aristóteles-y-la-lógica">Aristóteles y la lógica</a></li>
+  <li><a href="#el-silogismo" id="toc-el-silogismo" class="nav-link" data-scroll-target="#el-silogismo">El silogismo</a></li>
+  </ul></li>
+  <li><a href="#el-novum-organum-de-bacon" id="toc-el-novum-organum-de-bacon" class="nav-link" data-scroll-target="#el-novum-organum-de-bacon">El <em>Novum Organum</em> de Bacon</a>
+  <ul class="collapse">
+  <li><a href="#la-deducción-contra-la-inducción" id="toc-la-deducción-contra-la-inducción" class="nav-link" data-scroll-target="#la-deducción-contra-la-inducción">La deducción contra la inducción</a></li>
+  </ul></li>
   <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase">Actividad en clase</a></li>
-  <li><a href="#positivismo" id="toc-positivismo" class="nav-link" data-scroll-target="#positivismo">Positivismo</a></li>
+  <li><a href="#fisher-neyman-pearson" id="toc-fisher-neyman-pearson" class="nav-link" data-scroll-target="#fisher-neyman-pearson">Fisher, Neyman, Pearson</a>
+  <ul class="collapse">
+  <li><a href="#las-reglas-para-hacer-inducción" id="toc-las-reglas-para-hacer-inducción" class="nav-link" data-scroll-target="#las-reglas-para-hacer-inducción">Las reglas para hacer inducción</a></li>
+  <li><a href="#generación-de-conocimiento-a-partir-de-datos" id="toc-generación-de-conocimiento-a-partir-de-datos" class="nav-link" data-scroll-target="#generación-de-conocimiento-a-partir-de-datos">Generación de conocimiento a partir de datos</a></li>
+  <li><a href="#inferencia-estadística" id="toc-inferencia-estadística" class="nav-link" data-scroll-target="#inferencia-estadística">Inferencia estadística</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#estimación" id="toc-estimación" class="nav-link" data-scroll-target="#estimación">Estimación</a>
+  <ul class="collapse">
+  <li><a href="#conceptos-iniciales" id="toc-conceptos-iniciales" class="nav-link" data-scroll-target="#conceptos-iniciales">Conceptos iniciales</a>
+  <ul class="collapse">
+  <li><a href="#parámetro" id="toc-parámetro" class="nav-link" data-scroll-target="#parámetro">Parámetro</a></li>
+  <li><a href="#estimador" id="toc-estimador" class="nav-link" data-scroll-target="#estimador">Estimador</a></li>
+  <li><a href="#muestra" id="toc-muestra" class="nav-link" data-scroll-target="#muestra">Muestra</a></li>
+  <li><a href="#población" id="toc-población" class="nav-link" data-scroll-target="#población">Población</a></li>
+  </ul></li>
+  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual">Estimación puntual</a>
+  <ul class="collapse">
+  <li><a href="#estimadores-y-parámetros" id="toc-estimadores-y-parámetros" class="nav-link" data-scroll-target="#estimadores-y-parámetros">Estimadores y parámetros</a></li>
+  <li><a href="#aplicación-interactiva" id="toc-aplicación-interactiva" class="nav-link" data-scroll-target="#aplicación-interactiva">Aplicación interactiva</a></li>
+  <li><a href="#ley-de-los-grandes-números" id="toc-ley-de-los-grandes-números" class="nav-link" data-scroll-target="#ley-de-los-grandes-números">Ley de los Grandes Números</a></li>
+  <li><a href="#consistencia" id="toc-consistencia" class="nav-link" data-scroll-target="#consistencia">Consistencia</a></li>
+  </ul></li>
+  <li><a href="#estimación-por-intervalo" id="toc-estimación-por-intervalo" class="nav-link" data-scroll-target="#estimación-por-intervalo">Estimación por intervalo</a>
+  <ul class="collapse">
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
+  <li><a href="#aplicación-interactiva-1" id="toc-aplicación-interactiva-1" class="nav-link" data-scroll-target="#aplicación-interactiva-1">Aplicación interactiva</a></li>
+  <li><a href="#consistencia-1" id="toc-consistencia-1" class="nav-link" data-scroll-target="#consistencia-1">Consistencia</a></li>
+  <li><a href="#construcción-de-los-intervalos-de-confianza" id="toc-construcción-de-los-intervalos-de-confianza" class="nav-link" data-scroll-target="#construcción-de-los-intervalos-de-confianza">Construcción de los intervalos de confianza</a></li>
+  <li><a href="#ventajas-y-desventajas-de-la-construcción-analítica" id="toc-ventajas-y-desventajas-de-la-construcción-analítica" class="nav-link" data-scroll-target="#ventajas-y-desventajas-de-la-construcción-analítica">Ventajas y desventajas de la construcción analítica</a></li>
+  <li><a href="#ventajas-y-desventajas-de-la-construcción-computacional" id="toc-ventajas-y-desventajas-de-la-construcción-computacional" class="nav-link" data-scroll-target="#ventajas-y-desventajas-de-la-construcción-computacional">Ventajas y desventajas de la construcción computacional</a></li>
+  <li><a href="#fórmulas-para-algunos-intervalos" id="toc-fórmulas-para-algunos-intervalos" class="nav-link" data-scroll-target="#fórmulas-para-algunos-intervalos">Fórmulas para algunos intervalos</a></li>
+  </ul></li>
+  <li><a href="#bootstrapping" id="toc-bootstrapping" class="nav-link" data-scroll-target="#bootstrapping">Bootstrapping</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-diferencia-de-medias" id="toc-ejemplo-diferencia-de-medias" class="nav-link" data-scroll-target="#ejemplo-diferencia-de-medias">Ejemplo: Diferencia de medias</a></li>
+  <li><a href="#ejemplo-diferencia-de-proporciones" id="toc-ejemplo-diferencia-de-proporciones" class="nav-link" data-scroll-target="#ejemplo-diferencia-de-proporciones">Ejemplo: Diferencia de proporciones</a></li>
+  <li><a href="#bootstrapping-ejemplo" id="toc-bootstrapping-ejemplo" class="nav-link" data-scroll-target="#bootstrapping-ejemplo">Bootstrapping ejemplo</a></li>
+  </ul></li>
+  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral">Tamaño muestral</a>
+  <ul class="collapse">
+  <li><a href="#margen-de-error" id="toc-margen-de-error" class="nav-link" data-scroll-target="#margen-de-error">Margen de error</a></li>
+  <li><a href="#empate-técnico" id="toc-empate-técnico" class="nav-link" data-scroll-target="#empate-técnico">Empate técnico</a></li>
+  </ul></li>
+  <li><a href="#tamaño-de-muestra" id="toc-tamaño-de-muestra" class="nav-link" data-scroll-target="#tamaño-de-muestra">Tamaño de muestra</a>
+  <ul class="collapse">
+  <li><a href="#tamaño-de-muestra-óptimo" id="toc-tamaño-de-muestra-óptimo" class="nav-link" data-scroll-target="#tamaño-de-muestra-óptimo">Tamaño de muestra óptimo</a></li>
+  <li><a href="#fórmulas-para-estimación" id="toc-fórmulas-para-estimación" class="nav-link" data-scroll-target="#fórmulas-para-estimación">Fórmulas para Estimación</a></li>
+  <li><a href="#aplicación-interactiva-2" id="toc-aplicación-interactiva-2" class="nav-link" data-scroll-target="#aplicación-interactiva-2">Aplicación Interactiva</a></li>
+  </ul></li>
+  <li><a href="#el-proceso-estadístico" id="toc-el-proceso-estadístico" class="nav-link" data-scroll-target="#el-proceso-estadístico">El proceso estadístico</a></li>
+  <li><a href="#hipótesis" id="toc-hipótesis" class="nav-link" data-scroll-target="#hipótesis">Hipótesis</a></li>
+  <li><a href="#experimento" id="toc-experimento" class="nav-link" data-scroll-target="#experimento">¿Experimento?</a></li>
+  <li><a href="#muestra-1" id="toc-muestra-1" class="nav-link" data-scroll-target="#muestra-1">Muestra</a></li>
+  <li><a href="#población-1" id="toc-población-1" class="nav-link" data-scroll-target="#población-1">Población</a></li>
+  <li><a href="#probabilidad" id="toc-probabilidad" class="nav-link" data-scroll-target="#probabilidad">Probabilidad</a></li>
+  <li><a href="#estadística" id="toc-estadística" class="nav-link" data-scroll-target="#estadística">Estadística</a></li>
+  <li><a href="#modelo-estadístico" id="toc-modelo-estadístico" class="nav-link" data-scroll-target="#modelo-estadístico">Modelo estadístico</a></li>
+  </ul></li>
+  <li><a href="#sesión-3-pruebas-de-hipótesis-una-población" id="toc-sesión-3-pruebas-de-hipótesis-una-población" class="nav-link" data-scroll-target="#sesión-3-pruebas-de-hipótesis-una-población">Sesión 3: pruebas de hipótesis (una población)</a>
+  <ul class="collapse">
+  <li><a href="#positivismo-comte-y" id="toc-positivismo-comte-y" class="nav-link" data-scroll-target="#positivismo-comte-y">Positivismo: Comte y …</a></li>
   <li><a href="#verificacionismo" id="toc-verificacionismo" class="nav-link" data-scroll-target="#verificacionismo">Verificacionismo</a></li>
   <li><a href="#falsacionismo" id="toc-falsacionismo" class="nav-link" data-scroll-target="#falsacionismo">Falsacionismo</a></li>
   <li><a href="#paradigma" id="toc-paradigma" class="nav-link" data-scroll-target="#paradigma">Paradigma</a></li>
   <li><a href="#reproductibilidad" id="toc-reproductibilidad" class="nav-link" data-scroll-target="#reproductibilidad">Reproductibilidad</a></li>
   <li><a href="#el-método-científico" id="toc-el-método-científico" class="nav-link" data-scroll-target="#el-método-científico">El método científico</a></li>
-  <li><a href="#el-proceso-estadístico" id="toc-el-proceso-estadístico" class="nav-link" data-scroll-target="#el-proceso-estadístico">El proceso estadístico</a></li>
-  <li><a href="#hipótesis" id="toc-hipótesis" class="nav-link" data-scroll-target="#hipótesis">Hipótesis</a></li>
-  <li><a href="#experimento" id="toc-experimento" class="nav-link" data-scroll-target="#experimento">¿Experimento?</a></li>
-  <li><a href="#muestra" id="toc-muestra" class="nav-link" data-scroll-target="#muestra">Muestra</a></li>
-  <li><a href="#población" id="toc-población" class="nav-link" data-scroll-target="#población">Población</a></li>
-  <li><a href="#probabilidad" id="toc-probabilidad" class="nav-link" data-scroll-target="#probabilidad">Probabilidad</a></li>
-  <li><a href="#estadística" id="toc-estadística" class="nav-link" data-scroll-target="#estadística">Estadística</a></li>
-  <li><a href="#modelo-estadístico" id="toc-modelo-estadístico" class="nav-link" data-scroll-target="#modelo-estadístico">Modelo estadístico</a></li>
-  </ul></li>
-  <li><a href="#sesión-2-estimación-y-estimadores" id="toc-sesión-2-estimación-y-estimadores" class="nav-link" data-scroll-target="#sesión-2-estimación-y-estimadores">Sesión 2: estimación y estimadores</a>
-  <ul class="collapse">
-  <li><a href="#parámetro" id="toc-parámetro" class="nav-link" data-scroll-target="#parámetro">Parámetro</a></li>
-  <li><a href="#estimador" id="toc-estimador" class="nav-link" data-scroll-target="#estimador">Estimador</a></li>
-  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual">estimación puntual</a></li>
-  <li><a href="#margen-de-error" id="toc-margen-de-error" class="nav-link" data-scroll-target="#margen-de-error">Margen de error</a></li>
-  <li><a href="#empate-técnico" id="toc-empate-técnico" class="nav-link" data-scroll-target="#empate-técnico">Empate técnico</a></li>
-  <li><a href="#ejemplos-de-estimadores" id="toc-ejemplos-de-estimadores" class="nav-link" data-scroll-target="#ejemplos-de-estimadores">Ejemplos de estimadores</a></li>
-  <li><a href="#consistencia" id="toc-consistencia" class="nav-link" data-scroll-target="#consistencia">Consistencia</a></li>
-  <li><a href="#tamaño-de-muestra" id="toc-tamaño-de-muestra" class="nav-link" data-scroll-target="#tamaño-de-muestra">Tamaño de muestra</a></li>
-  <li><a href="#estimación-por-intervalo" id="toc-estimación-por-intervalo" class="nav-link" data-scroll-target="#estimación-por-intervalo">Estimación por intervalo</a></li>
-  <li><a href="#media" id="toc-media" class="nav-link" data-scroll-target="#media">Media</a></li>
-  <li><a href="#proporción" id="toc-proporción" class="nav-link" data-scroll-target="#proporción">Proporción</a></li>
-  <li><a href="#varianza" id="toc-varianza" class="nav-link" data-scroll-target="#varianza">Varianza</a></li>
-  <li><a href="#consistencia-1" id="toc-consistencia-1" class="nav-link" data-scroll-target="#consistencia-1">Consistencia</a></li>
-  <li><a href="#diferencia-de-medias" id="toc-diferencia-de-medias" class="nav-link" data-scroll-target="#diferencia-de-medias">Diferencia de medias</a></li>
-  <li><a href="#diferencia-de-proporciones" id="toc-diferencia-de-proporciones" class="nav-link" data-scroll-target="#diferencia-de-proporciones">Diferencia de proporciones</a></li>
-  <li><a href="#bootstrapping" id="toc-bootstrapping" class="nav-link" data-scroll-target="#bootstrapping">Bootstrapping</a></li>
-  </ul></li>
-  <li><a href="#sesión-3-pruebas-de-hipótesis-una-población" id="toc-sesión-3-pruebas-de-hipótesis-una-población" class="nav-link" data-scroll-target="#sesión-3-pruebas-de-hipótesis-una-población">Sesión 3: pruebas de hipótesis (una población)</a>
-  <ul class="collapse">
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#problema-de-la-arquitectura-de-las-pruebas-de-hipótesis" id="toc-problema-de-la-arquitectura-de-las-pruebas-de-hipótesis" class="nav-link" data-scroll-target="#problema-de-la-arquitectura-de-las-pruebas-de-hipótesis">Problema de la arquitectura de las pruebas de hipótesis</a></li>
   <li><a href="#terminología" id="toc-terminología" class="nav-link" data-scroll-target="#terminología">Terminología</a></li>
@@ -316,11 +324,6 @@ window.Quarto = {
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Falta:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   Pasar todo esto al formato de openintrostatistics</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">"http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf"</code></pre>
 </div>
@@ -373,18 +376,391 @@ window.Quarto = {
     url = {http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf}
 }
 
-
 </code></pre>
 </section>
 </section>
-<section id="sesión-1-hay-un-método-científico" class="level1">
-<h1>Sesión 1: ¿Hay un método científico?</h1>
+<section id="construyendo-un-marco-epistemológico-para-la-inferencia-estadística" class="level1">
+<h1>Construyendo un marco epistemológico para la inferencia estadística</h1>
+<p>Para comprender cómo surgió la inferencia estadística y en qué se fundamenta, es necesario entender primero las bases epistemológicas de la ciencia. Los métodos que hoy empleamos en estadística, especialmente en inferencia, tienen raíces profundas en la filosofía clásica y el desarrollo del método científico. A través de la deducción, la inducción y otras formas de razonamiento, los científicos han perfeccionado métodos para obtener conocimientos que sean precisos y replicables.</p>
+<section id="los-antiguos-griegos-y-la-deducción" class="level2">
+<h2 class="anchored" data-anchor-id="los-antiguos-griegos-y-la-deducción">Los antiguos griegos y la deducción</h2>
+<section id="sócrates-y-la-mayéutica" class="level3">
+<h3 class="anchored" data-anchor-id="sócrates-y-la-mayéutica">Sócrates y la mayéutica</h3>
+<p>Sócrates fue uno de los primeros filósofos en enfatizar la importancia del cuestionamiento como herramienta para alcanzar la verdad. Su método, la <strong>mayéutica</strong>, consistía en formular preguntas para ayudar a su interlocutor a descubrir conocimientos por sí mismo, partiendo de sus propias creencias y explorando las inconsistencias en sus respuestas. A través del diálogo y la introspección, Sócrates buscaba llevar a los demás hacia una mejor comprensión de conceptos abstractos como la justicia, la verdad y el bien. Esta metodología sentó las bases para el pensamiento crítico, un pilar fundamental en la ciencia moderna.</p>
+</section>
+<section id="platón-y-la-dialéctica" class="level3">
+<h3 class="anchored" data-anchor-id="platón-y-la-dialéctica">Platón y la dialéctica</h3>
+<p>Platón, discípulo de Sócrates, amplió la mayéutica y formuló la <strong>dialéctica</strong> como un método para alcanzar conocimientos más profundos mediante la confrontación de ideas opuestas. A través del diálogo y la tensión entre las tesis y antítesis, Platón creía que se podía llegar a la síntesis, es decir, a una comprensión superior y más completa de la realidad. Este método dialéctico influyó en el desarrollo de sistemas de lógica y pensamiento analítico que aún sustentan la base epistemológica de la ciencia.</p>
+</section>
+<section id="aristóteles-y-la-lógica" class="level3">
+<h3 class="anchored" data-anchor-id="aristóteles-y-la-lógica">Aristóteles y la lógica</h3>
+<p>Aristóteles sistematizó la lógica como un método de razonamiento para llegar a conclusiones válidas a partir de premisas establecidas. En sus obras, como el <strong>Organon</strong>, formalizó el uso de la lógica deductiva y desarrolló una metodología para analizar y entender los principios subyacentes de los fenómenos. La lógica aristotélica no solo sentó las bases para el razonamiento científico, sino que también proporcionó las herramientas para la creación de sistemas de clasificación y el desarrollo de conceptos abstractos en la ciencia y las matemáticas.</p>
+</section>
+<section id="el-silogismo" class="level3">
+<h3 class="anchored" data-anchor-id="el-silogismo">El silogismo</h3>
+<p>Uno de los aportes más significativos de Aristóteles a la epistemología es el <strong>silogismo</strong>, una forma de razonamiento deductivo que permite derivar conclusiones a partir de dos o más premisas. El silogismo establece que si las premisas son verdaderas, la conclusión necesariamente debe serlo. Este tipo de razonamiento deductivo es un modelo de inferencia lógica que ha servido de base para el desarrollo de sistemas matemáticos y estadísticos. Un ejemplo clásico sería:</p>
+<ul>
+<li>Todos los hombres son mortales.<br>
+</li>
+<li>Sócrates es un hombre.<br>
+</li>
+<li>Por lo tanto, Sócrates es mortal.</li>
+</ul>
+<p>Un ejemplo del uso del mecanismo deductivo es el segundo libro más editado de la historia, <em>Los Elementos</em> de Euclides, que organiza el conocimiento geométrico mediante un sistema axiomático. En este texto, Euclides parte de unos pocos postulados y axiomas fundamentales, a partir de los cuales deduce rigurosamente una serie de teoremas y proposiciones. Este enfoque deductivo no solo demostró la efectividad de la lógica en las matemáticas, sino que también influyó profundamente en la metodología científica, sirviendo de modelo para estructurar el conocimiento de manera lógica y coherente.</p>
+<p>Otros ejemplos son <em>Ética demostrada según el orden geométrico</em> de Spinoza y <em>Philosophiæ Naturalis Principia Mathematica</em> de Isaac Newton. En <em>Ética</em>, Spinoza estructura su filosofía siguiendo el estilo geométrico de Euclides, utilizando definiciones, axiomas y proposiciones para desarrollar sus ideas sobre la naturaleza de Dios, la mente y la moralidad. Por su parte, en <em>Principia Mathematica</em>, Newton aplica un razonamiento deductivo para establecer las leyes del movimiento y la gravitación universal, partiendo de principios fundamentales y llegando a conclusiones que explican fenómenos físicos observables. Estos textos muestran cómo el método deductivo ha sido un pilar para avanzar en diversas disciplinas, desde la filosofía hasta la física.</p>
+</section>
+</section>
+<section id="el-novum-organum-de-bacon" class="level2">
+<h2 class="anchored" data-anchor-id="el-novum-organum-de-bacon">El <em>Novum Organum</em> de Bacon</h2>
+<section id="la-deducción-contra-la-inducción" class="level3">
+<h3 class="anchored" data-anchor-id="la-deducción-contra-la-inducción">La deducción contra la inducción</h3>
+<p>En el siglo XVII, Francis Bacon introdujo un enfoque revolucionario en su obra <em>Novum Organum</em>, en la que defendía la <strong>inducción</strong> como método para el conocimiento científico. Este enfoque rompió con la tradición aristotélica de deducción estricta, proponiendo que, en lugar de solo partir de premisas generales, los científicos deberían observar y analizar los fenómenos específicos para, a partir de ellos, generalizar leyes y principios.</p>
+<ul>
+<li><p><strong>La deducción</strong>: es un proceso de razonamiento que va de lo general a lo particular. Parte de leyes o teorías ya establecidas y aplica esas premisas para llegar a conclusiones específicas. La deducción asegura conclusiones válidas si las premisas son verdaderas, pero no permite descubrir nuevas leyes o principios.</p></li>
+<li><p><strong>La inducción</strong>: es el proceso de observación de casos particulares para generar conclusiones generales o teorías. En la inducción, el conocimiento se construye a partir de patrones observados en la realidad, permitiendo la creación de nuevas hipótesis y teorías. Sin embargo, este método no garantiza la certeza absoluta de sus conclusiones, ya que estas son probabilísticas y dependen de la representatividad de los datos.</p></li>
+</ul>
+<p>El trabajo de Bacon es fundamental porque sentó las bases para una ciencia basada en la observación empírica, un enfoque que siglos más tarde sería crucial en la inferencia estadística.</p>
+</section>
+</section>
 <section id="actividad-en-clase" class="level2">
 <h2 class="anchored" data-anchor-id="actividad-en-clase">Actividad en clase</h2>
-<p>¿Qué es un cisne negro?</p>
+<p><strong>¿Qué es un cisne negro?</strong></p>
+<p>El concepto de “cisne negro” se refiere a eventos altamente improbables e impredecibles, pero con un gran impacto cuando ocurren. La expresión fue popularizada por el filósofo Nassim Nicholas Taleb y subraya la limitación de los métodos inductivos, ya que una amplia observación de cisnes blancos no garantiza que no existan cisnes negros. Este concepto es clave para entender los límites de la inferencia estadística y la probabilidad, pues resalta la posibilidad de eventos fuera de nuestras expectativas basadas en observaciones pasadas.</p>
 </section>
-<section id="positivismo" class="level2">
-<h2 class="anchored" data-anchor-id="positivismo">Positivismo</h2>
+<section id="fisher-neyman-pearson" class="level2">
+<h2 class="anchored" data-anchor-id="fisher-neyman-pearson">Fisher, Neyman, Pearson</h2>
+<section id="las-reglas-para-hacer-inducción" class="level3">
+<h3 class="anchored" data-anchor-id="las-reglas-para-hacer-inducción">Las reglas para hacer inducción</h3>
+<p>Ronald A. Fisher, Jerzy Neyman y Egon Pearson fueron fundamentales para estructurar las <strong>reglas para hacer inducción</strong> en el contexto de la estadística moderna. Su trabajo permitió la formalización de métodos inferenciales que ayudan a generalizar conclusiones a partir de muestras. Estas reglas establecen la estructura de las pruebas de hipótesis y la generación de intervalos de confianza, permitiendo a los científicos tomar decisiones con base en evidencia empírica.</p>
+</section>
+<section id="generación-de-conocimiento-a-partir-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="generación-de-conocimiento-a-partir-de-datos">Generación de conocimiento a partir de datos</h3>
+<p>Fisher, Neyman y Pearson desarrollaron metodologías para derivar conocimiento a partir de datos de manera rigurosa, incorporando conceptos como la probabilidad y el error estadístico. A través de la estadística inferencial, lograron definir un proceso sistemático para probar hipótesis, medir la incertidumbre y proporcionar intervalos de confianza, contribuyendo significativamente a las ciencias experimentales y sociales.</p>
+</section>
+<section id="inferencia-estadística" class="level3">
+<h3 class="anchored" data-anchor-id="inferencia-estadística">Inferencia estadística</h3>
+<p>La inferencia estadística surgió en el siglo XX como una disciplina clave en la estadística, impulsada por la necesidad de tomar decisiones informadas a partir de datos. Su desarrollo fue influenciado por figuras como Ronald A. Fisher, Jerzy Neyman y Egon Pearson, quienes sentaron las bases de los métodos inferenciales que permiten generalizar conclusiones de una muestra a una población más amplia. Fisher introdujo conceptos fundamentales como el “p-valor” y la prueba de hipótesis, mientras que Neyman y Pearson formalizaron la teoría de pruebas con su trabajo sobre errores tipo I y II y la formulación de intervalos de confianza. La inferencia estadística se consolidó rápidamente en diversas áreas científicas, desde la biología y la medicina hasta las ciencias sociales y económicas, transformando la manera en que los investigadores validan teorías y estiman parámetros poblacionales. A lo largo del tiempo, esta área ha evolucionado, incorporando herramientas computacionales y métodos bayesianos que amplían las posibilidades de análisis en contextos de datos complejos y grandes volúmenes de información.</p>
+<p>Aquí tienes el contenido desarrollado para las secciones del segundo capítulo sobre estimación, siguiendo la estructura que proporcionaste:</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="estimación" class="level1">
+<h1>Estimación</h1>
+<section id="conceptos-iniciales" class="level2">
+<h2 class="anchored" data-anchor-id="conceptos-iniciales">Conceptos iniciales</h2>
+<p>Iniciamos por los conceptos que son fundamentales para entender la estimación en inferencia estadística. Estos conceptos ayudan a diferenciar entre la población y la muestra, así como a identificar las características numéricas que se desea estimar.</p>
+<section id="parámetro" class="level3">
+<h3 class="anchored" data-anchor-id="parámetro">Parámetro</h3>
+<p>Un <strong>parámetro</strong> es un valor numérico que describe una característica específica de una población completa. Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²) o la proporción poblacional (P). Dado que los parámetros se refieren a poblaciones enteras, son constantes, pero, en la práctica, generalmente son desconocidos. Por lo tanto, se necesita recurrir a métodos estadísticos para estimarlos a partir de muestras.</p>
+</section>
+<section id="estimador" class="level3">
+<h3 class="anchored" data-anchor-id="estimador">Estimador</h3>
+<p>Un <strong>estimador</strong> es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales. Un estimador es una variable aleatoria y, por lo tanto, puede variar de una muestra a otra. Los estimadores se utilizan para hacer inferencias sobre la población, y algunos ejemplos comunes incluyen la media muestral <span class="math inline">\(\bar{x}\)</span> y la proporción muestral <span class="math inline">\(\hat{p}\)</span>. La calidad de un estimador se evalúa en función de sus propiedades, como la consistencia y la unbiasedness (inexistencia de sesgo).</p>
+</section>
+<section id="muestra" class="level3">
+<h3 class="anchored" data-anchor-id="muestra">Muestra</h3>
+<p>Una <strong>muestra</strong> es un subconjunto de elementos extraídos de una población. La muestra se utiliza para realizar estimaciones sobre la población completa sin necesidad de medir a todos sus miembros. El tamaño y la calidad de la muestra son fundamentales para asegurar que las inferencias realizadas sean precisas y representativas. Una muestra puede ser aleatoria, estratificada o por conveniencia, dependiendo del método utilizado para su selección.</p>
+</section>
+<section id="población" class="level3">
+<h3 class="anchored" data-anchor-id="población">Población</h3>
+<p>La <strong>población</strong> se refiere al conjunto completo de individuos, elementos o unidades que comparten una característica particular que se está estudiando. Por ejemplo, si estamos interesados en el ingreso anual de todos los empleados de una empresa, la población sería todos los empleados. En la inferencia estadística, es crucial definir claramente la población para poder aplicar métodos de muestreo adecuados y realizar estimaciones precisas.</p>
+</section>
+</section>
+<section id="estimación-puntual" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-puntual">Estimación puntual</h2>
+<p>La <strong>estimación puntual</strong> se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población. Este enfoque proporciona una respuesta única a la pregunta de interés, pero no informa sobre la precisión de la estimación. Por ejemplo, la media muestral <span class="math inline">\(\bar{x}\)</span> es una estimación puntual de la media poblacional (μ).</p>
+<ul>
+<li><p><strong>Media muestral:</strong> Se toma una muestra de los ingresos anuales de 100 empleados de una empresa. La media de estos ingresos en la muestra es de $50,000. Este valor se utiliza como una <strong>estimación puntual</strong> de la media de los ingresos de toda la población de empleados.</p></li>
+<li><p><strong>Proporción muestral:</strong> En una encuesta realizada a 500 personas, 320 afirman que prefieren trabajar desde casa. La proporción muestral es <span class="math inline">\(\hat{p} = \frac{320}{500} = 0.64\)</span>, lo cual es una <strong>estimación puntual</strong> de la proporción real de personas que prefieren el trabajo remoto en la población general.</p></li>
+<li><p><strong>Varianza muestral:</strong> Una muestra de 50 estudiantes tiene una varianza de puntajes en un examen de 16 puntos cuadrados. Este valor se utiliza como una <strong>estimación puntual</strong> de la varianza de los puntajes en la población completa de estudiantes.</p></li>
+</ul>
+<section id="estimadores-y-parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="estimadores-y-parámetros">Estimadores y parámetros</h3>
+<p>Los estimadores son utilizados para estimar parámetros poblacionales. Algunos ejemplos incluyen:</p>
+<ul>
+<li><strong>Media muestral</strong> <span class="math inline">\(\bar{x}\)</span> para estimar la media poblacional (μ).</li>
+<li><strong>Varianza muestral</strong> <span class="math inline">\(s^2\)</span> para estimar la varianza poblacional (σ²).</li>
+<li><strong>Proporción muestral</strong> <span class="math inline">\(\hat{p}\)</span> para estimar la proporción poblacional (P).</li>
+<li><strong>Correlación de Pearson</strong> <span class="math inline">\(\hat{\rho}\)</span> para estimar la correlacción poblacional <span class="math inline">\(\rho\)</span>.</li>
+</ul>
+</section>
+<section id="aplicación-interactiva" class="level3">
+<h3 class="anchored" data-anchor-id="aplicación-interactiva">Aplicación interactiva</h3>
+<p>Para ilustrar la idea de estimación puntual, podemos estimar el número π utilizando simulaciones. Aquí tienes un recurso que permite interactuar con este concepto:</p>
+<p><a href="https://seeing-theory.brown.edu/frequentist-inference/">Estimación puntual</a></p>
+</section>
+<section id="ley-de-los-grandes-números" class="level3">
+<h3 class="anchored" data-anchor-id="ley-de-los-grandes-números">Ley de los Grandes Números</h3>
+<p>La <strong>Ley de los Grandes Números</strong> es un principio fundamental en la teoría de la probabilidad que establece que, a medida que aumenta el tamaño de una muestra, la media muestral <span class="math inline">\(\bar{x}\)</span> se acercará a la media poblacional (μ) de la población de la que se extrajo la muestra. Esta ley se basa en la idea de que las fluctuaciones aleatorias tienden a cancelarse entre sí en muestras más grandes, lo que resulta en una estimación más precisa del parámetro poblacional.</p>
+<p>Existen dos versiones de la Ley de los Grandes Números:</p>
+<ol type="1">
+<li><p><strong>Ley débil de los grandes números</strong>: Establece que, para cualquier valor ε positivo, la probabilidad de que la media muestral se desvíe de la media poblacional en más de ε tiende a cero a medida que el tamaño de la muestra (n) aumenta. Es decir, la media muestral se convierte en un estimador consistente de la media poblacional.</p></li>
+<li><p><strong>Ley fuerte de los grandes números</strong>: Afirmación más fuerte que la versión débil, establece que la media muestral converge casi seguramente a la media poblacional a medida que n tiende al infinito. Esto significa que, con una probabilidad de 1, la media muestral se aproximará a la media poblacional a medida que se tomen más y más muestras.</p></li>
+</ol>
+<p>La Ley de los Grandes Números es fundamental en estadística y asegura que los resultados obtenidos de las muestras se volverán más representativos de la población a medida que se aumente el tamaño de la muestra, lo que permite realizar inferencias más confiables sobre la población completa.</p>
+</section>
+<section id="consistencia" class="level3">
+<h3 class="anchored" data-anchor-id="consistencia">Consistencia</h3>
+<p>Un <strong>estimador puntual</strong> es <strong>consistente</strong> si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. En otras palabras, un estimador consistente converge en probabilidad al parámetro que se está estimando. Esta propiedad es crucial porque asegura que con muestras más grandes, nuestras estimaciones se vuelven más precisas y confiables, reduciendo la variabilidad y el error de estimación.</p>
+</section>
+</section>
+<section id="estimación-por-intervalo" class="level2">
+<h2 class="anchored" data-anchor-id="estimación-por-intervalo">Estimación por intervalo</h2>
+<p>La <strong>estimación por intervalo</strong> proporciona un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional con un cierto nivel de confianza. A diferencia de una estimación puntual, que ofrece un único valor, el intervalo de confianza incluye una medida de la incertidumbre asociada con la estimación. Esto permite a los investigadores entender no solo qué valor se estima, sino también la precisión y confiabilidad de dicha estimación.</p>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<section id="intervalo-de-confianza-para-la-media" class="level4">
+<h4 class="anchored" data-anchor-id="intervalo-de-confianza-para-la-media">Intervalo de confianza para la media</h4>
+<p>Para calcular un intervalo de confianza para la media de una población, se puede utilizar la distribución t de Student o la distribución normal, dependiendo del tamaño de la muestra y de si se conoce la varianza poblacional.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Supongamos que un investigador quiere estimar la media de la altura de los estudiantes de una universidad. Toma una muestra aleatoria de 30 estudiantes y calcula que la media muestral es de 1.70 metros con una desviación estándar de 0.10 metros. Dado que el tamaño de la muestra es pequeño, se utiliza la distribución t de Student. Si se quiere un nivel de confianza del 95%, el intervalo de confianza se calcula de la siguiente manera:</li>
+</ul>
+<p><span class="math display">\[IC = \bar{x} \pm t_{\alpha/2} \left(\frac{s}{\sqrt{n}}\right)\]</span></p>
+<p>Donde <span class="math inline">\(t_{\alpha/2}\)</span> es el valor crítico de t correspondiente al nivel de confianza del 95% y 29 grados de libertad (n-1), (s) es la desviación estándar muestral y (n) es el tamaño de la muestra. Supongamos que <span class="math inline">\(t_{0.025} \approx 2.045\)</span> para este caso:</p>
+<p><span class="math display">\[IC = 1.70 \pm 2.045 \left(\frac{0.10}{\sqrt{30}}\right) \approx 1.70 \pm 0.374\]</span></p>
+<p>El intervalo de confianza sería aproximadamente (1.63, 1.77). Esto significa que el investigador puede estar 95% seguro de que la media de altura de todos los estudiantes está entre 1.63 y 1.77 metros.</p>
+</section>
+<section id="intervalo-de-confianza-para-una-proporción" class="level4">
+<h4 class="anchored" data-anchor-id="intervalo-de-confianza-para-una-proporción">Intervalo de confianza para una proporción</h4>
+<p>El <strong>intervalo de confianza para una proporción</strong> se calcula utilizando la proporción muestral <span class="math inline">\(\hat{p}\)</span> y el error estándar de la proporción. Se utiliza la distribución normal, ya que se asume que la proporción muestral sigue una distribución normal cuando el tamaño de muestra es suficientemente grande.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Imaginemos que en una encuesta a 500 personas, 320 afirman que prefieren trabajar desde casa. La proporción muestral es:</li>
+</ul>
+<p><span class="math display">\[ \hat{p} = \frac{320}{500} = 0.64 \]</span></p>
+<p>El intervalo de confianza se puede calcular de la siguiente manera:</p>
+<p><span class="math display">\[ IC = \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}} \]</span></p>
+<p>Si elegimos un nivel de confianza del 95%, <span class="math inline">\(z_{0.025} \approx 1.96\)</span>:</p>
+<p><span class="math display">\[ IC = 0.64 \pm 1.96 \sqrt{\frac{0.64 \times (1 - 0.64)}{500}} \approx 0.64 \pm 0.045 \]</span></p>
+<p>Esto resulta en un intervalo de confianza de (0.595, 0.685). Por lo tanto, el investigador puede estar 95% seguro de que la proporción real de personas que prefieren trabajar desde casa en la población general está entre el 59.5% y el 68.5%.</p>
+</section>
+<section id="intervalo-de-confianza-para-la-varianza" class="level4">
+<h4 class="anchored" data-anchor-id="intervalo-de-confianza-para-la-varianza">Intervalo de confianza para la varianza</h4>
+<p>El <strong>intervalo de confianza para la varianza</strong> se calcula utilizando la distribución chi-cuadrado. La varianza muestral (s²) es el estimador puntual, y el intervalo se ajusta de acuerdo con la distribución de esta varianza bajo el supuesto de normalidad.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Supongamos que un investigador mide los tiempos de espera en una fila y obtiene una varianza muestral de (s^2 = 16) minutos² con una muestra de 15 observaciones. Para calcular un intervalo de confianza del 95% para la varianza poblacional, se utiliza la fórmula:</li>
+</ul>
+<p><span class="math display">\[ IC = \left(\frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}\right) \]</span></p>
+<p>Donde (n) es el tamaño de la muestra y (^2) son los valores críticos de la distribución chi-cuadrado. Si (n=15) y con un nivel de confianza del 95%, se pueden encontrar los valores críticos:</p>
+<p><span class="math display">\[ IC = \left(\frac{(15-1) \times 16}{\chi^2_{0.025, 14}}, \frac{(15-1) \times 16}{\chi^2_{0.975, 14}}\right) \]</span></p>
+<p>Si <span class="math inline">\(\chi^2_{0.025, 14} \approx 27.688\)</span> y <span class="math inline">\(\chi^2_{0.975, 14} \approx 5.629\)</span>:</p>
+<p><span class="math display">\[ IC \approx \left(\frac{14 \times 16}{27.688}, \frac{14 \times 16}{5.629}\right) \approx (8.520, 39.658) \]</span></p>
+<p>Esto significa que el investigador puede estar 95% seguro de que la varianza del tiempo de espera en la población está entre 8.520 y 39.658 minutos².</p>
+</section>
+</section>
+<section id="aplicación-interactiva-1" class="level3">
+<h3 class="anchored" data-anchor-id="aplicación-interactiva-1">Aplicación interactiva</h3>
+<p>Para ilustrar la idea de estimación por intervalo, puedes utilizar simulaciones interactivas que permiten explorar estos conceptos. Aquí tienes un recurso que permite interactuar con este concepto:</p>
+<p><a href="https://seeing-theory.brown.edu/frequentist-inference/">Estimación por intervalo</a></p>
+</section>
+<section id="consistencia-1" class="level3">
+<h3 class="anchored" data-anchor-id="consistencia-1">Consistencia</h3>
+<p>Un <strong>intervalo de confianza</strong> es considerado <strong>consistente</strong> si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse. Esto indica que la estimación se vuelve más precisa y refleja mejor el parámetro poblacional.</p>
+</section>
+<section id="construcción-de-los-intervalos-de-confianza" class="level3">
+<h3 class="anchored" data-anchor-id="construcción-de-los-intervalos-de-confianza">Construcción de los intervalos de confianza</h3>
+<p>La construcción de intervalos de confianza puede realizarse de dos maneras:</p>
+<ol type="1">
+<li><p><strong>Método analítico</strong>: Utiliza fórmulas y propiedades matemáticas para calcular los intervalos de confianza. Este método es eficiente cuando se cumplen las condiciones necesarias, como la normalidad de los datos.</p></li>
+<li><p><strong>Método computacional</strong>: Utiliza técnicas de remuestreo, como el bootstrapping, para estimar la distribución del estimador y generar intervalos de confianza sin necesidad de asumir una distribución específica.</p></li>
+</ol>
+</section>
+<section id="ventajas-y-desventajas-de-la-construcción-analítica" class="level3">
+<h3 class="anchored" data-anchor-id="ventajas-y-desventajas-de-la-construcción-analítica">Ventajas y desventajas de la construcción analítica</h3>
+<ul>
+<li><p><strong>Ventajas</strong>: - Menor costo computacional, ya que implica cálculos directos a partir de los datos. - Resultados más rápidos si se cumplen los supuestos de normalidad.</p></li>
+<li><p><strong>Desventajas</strong>: - Dependencia de supuestos que pueden no cumplirse en datos reales. - Puede no ser adecuado para distribuciones no estándar o en situaciones de muestras pequeñas.</p></li>
+</ul>
+</section>
+<section id="ventajas-y-desventajas-de-la-construcción-computacional" class="level3">
+<h3 class="anchored" data-anchor-id="ventajas-y-desventajas-de-la-construcción-computacional">Ventajas y desventajas de la construcción computacional</h3>
+<ul>
+<li><p><strong>Ventajas</strong>: - Flexible, ya que no depende de supuestos sobre la distribución de los datos. - Adecuado para cualquier tipo de muestra y variabilidad en los datos.</p></li>
+<li><p><strong>Desventajas</strong>: - Puede ser intensivo en recursos computacionales, especialmente para grandes volúmenes de datos. - Mayor tiempo de procesamiento y necesidad de software especializado.</p></li>
+</ul>
+</section>
+<section id="fórmulas-para-algunos-intervalos" class="level3">
+<h3 class="anchored" data-anchor-id="fórmulas-para-algunos-intervalos">Fórmulas para algunos intervalos</h3>
+<ul>
+<li><strong>Intervalo de confianza para la media</strong>:</li>
+</ul>
+<p><span class="math display">\[IC = \bar{x} \pm z\_{\alpha/2} \left(\frac{\sigma}{\sqrt{n}}\right) \quad \text{(si } \sigma \text{ es conocido)}\]</span></p>
+<p><span class="math display">\[IC = \bar{x} \pm t\_{\alpha/2} \left(\frac{s}{\sqrt{n}}\right) \quad \text{(si } \sigma \text{ es desconocido)}\]</span></p>
+<ul>
+<li><strong>Intervalo de confianza para la proporción</strong>:</li>
+</ul>
+<p><span class="math display">\[IC = \hat{p} \pm z\_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}\]</span></p>
+<ul>
+<li><strong>Intervalo de confianza para la varianza</strong>:</li>
+</ul>
+<p><span class="math display">\[ IC = \left(\frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}\right) \]</span></p>
+</section>
+</section>
+<section id="bootstrapping" class="level2">
+<h2 class="anchored" data-anchor-id="bootstrapping">Bootstrapping</h2>
+<p>El <strong>bootstrapping</strong> es un método no paramétrico que se utiliza para estimar la distribución de un estimador y, por ende, sus intervalos de confianza. Este método genera múltiples muestras simuladas (con reemplazo) de la muestra original, permitiendo construir un intervalo de confianza sin depender de la distribución subyacente de los datos.</p>
+<section id="ejemplo-diferencia-de-medias" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-diferencia-de-medias">Ejemplo: Diferencia de medias</h3>
+<p>Para evaluar la <strong>diferencia de medias</strong> entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el uso de la distribución t de Student o el método de bootstrapping.</p>
+<ul>
+<li><strong>Ejemplo</strong>: Supongamos que queremos comparar las alturas promedio de hombres y mujeres en una población. Recogemos datos de 50 hombres y 50 mujeres y encontramos que la media de los hombres es 1.80 metros y la media de las mujeres es 1.65 metros. La diferencia de medias es 0.15 metros. Aplicando el bootstrapping, podemos crear múltiples muestras de nuestras muestras originales para estimar la distribución de la diferencia de medias y, así, construir un intervalo de confianza.</li>
+</ul>
+</section>
+<section id="ejemplo-diferencia-de-proporciones" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-diferencia-de-proporciones">Ejemplo: Diferencia de proporciones</h3>
+<p>El <strong>intervalo de confianza para la diferencia de proporciones</strong> entre dos poblaciones se construye de manera similar al de una proporción, pero utilizando la diferencia entre las proporciones muestrales. Dependiendo de si se asume o no la homogeneidad de varianzas entre las dos proporciones, se pueden aplicar diferentes métodos.</p>
+<ul>
+<li><strong>Ejemplo</strong>: Si en una encuesta a 300 hombres, el 70% responde que prefiere el trabajo remoto, y en una encuesta a 250 mujeres, el 60% responde lo mismo, la diferencia de proporciones es 0.10. Para construir un intervalo de confianza, podemos aplicar el bootstrapping para simular la diferencia de proporciones y calcular el intervalo.</li>
+</ul>
+</section>
+<section id="bootstrapping-ejemplo" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrapping-ejemplo">Bootstrapping ejemplo</h3>
+<p>Para explorar el método de bootstrapping, puedes interactuar con simulaciones que permiten visualizar cómo funciona este proceso en la práctica. Aquí tienes un recurso que permite interactuar con este concepto:</p>
+<p><a href="https://seeing-theory.brown.edu/frequentist-inference/">Bootstrapping</a></p>
+</section>
+</section>
+<section id="tamaño-muestral" class="level2">
+<h2 class="anchored" data-anchor-id="tamaño-muestral">Tamaño muestral</h2>
+<p>El <strong>tamaño muestral</strong> es un aspecto crucial en el diseño de estudios estadísticos, ya que influye directamente en la precisión y confiabilidad de las estimaciones. Comprender cómo determinar el tamaño de muestra adecuado es fundamental para obtener resultados válidos y aplicables a una población más amplia.</p>
+<section id="margen-de-error" class="level3">
+<h3 class="anchored" data-anchor-id="margen-de-error">Margen de error</h3>
+<p>El <strong>margen de error</strong> es una medida que refleja la cantidad de incertidumbre asociada a una estimación puntual. Se define como la mitad de la longitud de un intervalo de confianza y representa la variabilidad esperada en una estimación debido al muestreo. Cuanto mayor sea el margen de error, menos confiable será la estimación.</p>
+<p><strong>Cálculo del margen de error:</strong></p>
+<p>El margen de error se puede calcular utilizando la siguiente fórmula:</p>
+<p><span class="math display">\[\text{Margen de error} = Z \times \left(\frac{\sigma}{\sqrt{n}}\right)\]</span></p>
+<p>Donde: - <span class="math inline">\(Z\)</span> es el valor crítico de la distribución normal estándar (por ejemplo, 1.96 para un nivel de confianza del 95%). - <span class="math inline">\(\sigma\)</span> es la desviación estándar de la población (o de la muestra si la desviación estándar de la población no está disponible). - <span class="math inline">\(n\)</span> es el tamaño de la muestra.</p>
+<section id="ejemplo" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo">Ejemplo:</h4>
+<ul>
+<li><p><strong>Encuesta electoral:</strong> En una encuesta a 1,000 votantes, el 48% afirma que votará por el candidato A. Si el margen de error es de ±3%, esto indica que el porcentaje real de votantes que apoyan al candidato A se estima que está entre el 45% y el 51%. Esto se puede expresar como un intervalo de confianza de (0.45, 0.51).</p></li>
+<li><p><strong>Estimación de ingresos:</strong> Se estima que el ingreso promedio de una población es de $50,000 con un margen de error de ±$2,000. Esto implica que el ingreso promedio real en la población se espera que esté entre $48,000 y $52,000. En este caso, el margen de error nos proporciona una indicación clara de la posible variabilidad en los ingresos de la población.</p></li>
+</ul>
+</section>
+</section>
+<section id="empate-técnico" class="level3">
+<h3 class="anchored" data-anchor-id="empate-técnico">Empate técnico</h3>
+<p>El <strong>empate técnico</strong> ocurre cuando las diferencias entre dos estimaciones puntuales, como medias o proporciones, no son estadísticamente significativas debido al margen de error. En este caso, las diferencias observadas podrían ser el resultado de la variabilidad muestral y no reflejan una verdadera diferencia en la población.</p>
+<section id="ejemplo-1" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-1">Ejemplo:</h4>
+<ul>
+<li><p><strong>Encuesta electoral:</strong> En una encuesta a 1,200 votantes, el candidato A obtiene el 46% de las intenciones de voto y el candidato B el 44%, con un margen de error de ±3%. Dado que el margen de error abarca los porcentajes de ambos candidatos (43% a 49% para A y 41% a 47% para B), se considera un empate técnico. Esto sugiere que no hay suficiente evidencia para afirmar que uno de los candidatos es preferido sobre el otro.</p></li>
+<li><p><strong>Competencia de ventas entre productos:</strong> En un análisis de ventas, el producto X alcanza el 35% de participación en el mercado y el producto Y el 33%, con un margen de error de ±2%. Aquí, el margen de error (33% a 37% para X y 31% a 35% para Y) se superpone, lo que lleva a declarar un empate técnico entre los productos. Este tipo de análisis es crucial en la investigación de mercados, donde decisiones de marketing deben basarse en resultados estadísticamente significativos.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="tamaño-de-muestra" class="level2">
+<h2 class="anchored" data-anchor-id="tamaño-de-muestra">Tamaño de muestra</h2>
+<p>El <strong>tamaño de muestra</strong> afecta directamente la precisión de las estimaciones. Un mayor tamaño de muestra generalmente reduce el error estándar, disminuye el margen de error y mejora la confiabilidad de las estimaciones. Sin embargo, también implica un aumento en los costos y el tiempo de recolección de datos.</p>
+<section id="tamaño-de-muestra-óptimo" class="level3">
+<h3 class="anchored" data-anchor-id="tamaño-de-muestra-óptimo">Tamaño de muestra óptimo</h3>
+<p>El tamaño de muestra óptimo se calcula bajo el supuesto de que cada registro genera un costo. En este sentido, la optimización se realiza disminuyendo el tamaño muestral con la restricción de que las estimaciones sean estadísticamente distintas de cero.</p>
+<p><strong>Consideraciones para determinar el tamaño óptimo:</strong></p>
+<ol type="1">
+<li><p><strong>Costos:</strong> Es fundamental considerar los costos asociados a la recolección de datos. Un tamaño muestral mayor a lo necesario puede generar costos innecesarios, mientras que un tamaño menor puede resultar en una estimación menos útil.</p></li>
+<li><p><strong>Variabilidad:</strong> La variabilidad dentro de la población impacta la determinación del tamaño de la muestra. Si la población es altamente variable, se necesitará un tamaño de muestra mayor para capturar esta variabilidad.</p></li>
+<li><p><strong>Nivel de confianza y margen de error deseados:</strong> Un mayor nivel de confianza o un margen de error más pequeño requerirá un tamaño de muestra más grande. Por ejemplo, si deseamos un nivel de confianza del 99% en lugar del 95%, el tamaño de la muestra tendrá que aumentar.</p></li>
+<li><p><strong>Tamaño poblacional:</strong> En poblaciones muy grandes, la relación entre el tamaño de la muestra y el tamaño poblacional es menos crítica. Sin embargo, en poblaciones pequeñas, se debe considerar el efecto de la muestra sobre el total.</p></li>
+</ol>
+</section>
+<section id="fórmulas-para-estimación" class="level3">
+<h3 class="anchored" data-anchor-id="fórmulas-para-estimación">Fórmulas para Estimación</h3>
+<section id="estimación-de-una-proporción-con-tamaño-poblacional-conocido" class="level4">
+<h4 class="anchored" data-anchor-id="estimación-de-una-proporción-con-tamaño-poblacional-conocido">1. Estimación de una Proporción con Tamaño Poblacional Conocido</h4>
+<p>Cuando se conoce el tamaño de la población y se desea estimar una proporción, se puede utilizar la siguiente fórmula:</p>
+<p><span class="math display">\[n = \frac{N \cdot Z^2 \cdot p(1 - p)}{(N - 1) \cdot E^2 + Z^2 \cdot p(1 - p)}\]</span></p>
+<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(N\)</span> = tamaño de la población - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(p\)</span> = proporción estimada de la población (por ejemplo, 0.5 si no se conoce) - <span class="math inline">\(E\)</span> = margen de error deseado</p>
+</section>
+<section id="estimación-de-una-proporción-con-tamaño-poblacional-desconocido" class="level4">
+<h4 class="anchored" data-anchor-id="estimación-de-una-proporción-con-tamaño-poblacional-desconocido">2. Estimación de una Proporción con Tamaño Poblacional Desconocido</h4>
+<p>Cuando el tamaño de la población es desconocido, se utiliza la siguiente fórmula simplificada:</p>
+<p><span class="math display">\[n = \frac{Z^2 \cdot p(1 - p)}{E^2}\]</span></p>
+<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(p\)</span> = proporción estimada de la población (puede ser 0.5 si se desea máxima variabilidad) - <span class="math inline">\(E\)</span> = margen de error deseado</p>
+</section>
+<section id="estimación-de-una-media-con-tamaño-poblacional-conocido" class="level4">
+<h4 class="anchored" data-anchor-id="estimación-de-una-media-con-tamaño-poblacional-conocido">3. Estimación de una Media con Tamaño Poblacional Conocido</h4>
+<p>Si el tamaño de la población es conocido y se desea estimar la media, se utiliza la siguiente fórmula:</p>
+<p><span class="math display">\[n = \frac{N \cdot Z^2 \cdot \sigma^2}{(N - 1) \cdot E^2 + Z^2 \cdot \sigma^2}\]</span></p>
+<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(N\)</span> = tamaño de la población - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(\sigma\)</span> = desviación estándar de la población - <span class="math inline">\(E\)</span> = margen de error deseado</p>
+</section>
+<section id="estimación-de-una-media-con-tamaño-poblacional-desconocido" class="level4">
+<h4 class="anchored" data-anchor-id="estimación-de-una-media-con-tamaño-poblacional-desconocido">4. Estimación de una Media con Tamaño Poblacional Desconocido</h4>
+<p>Cuando el tamaño de la población es desconocido, se utiliza la siguiente fórmula:</p>
+<p><span class="math display">\[n = \frac{Z^2 \cdot \sigma^2}{E^2}\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(n\)</span> = tamaño de la muestra</li>
+<li><span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%)</li>
+<li><span class="math inline">\(\sigma\)</span> = desviación estándar de la población (o de la muestra si es necesario)</li>
+<li><span class="math inline">\(E\)</span> = margen de error deseado</li>
+</ul>
+<p>Es importante considerar que, al utilizar estas fórmulas, se deben tener en cuenta supuestos como la normalidad de la población y la aleatoriedad de la muestra. Además, los valores de <span class="math inline">\(p\)</span> y <span class="math inline">\(\sigma\)</span> deben ser estimados de forma adecuada para obtener resultados confiables. Para poblaciones pequeñas, es recomendable aplicar una corrección de población finita si se utiliza la fórmula con el tamaño poblacional conocido.</p>
+<p>Estas fórmulas son herramientas esenciales en la investigación estadística y permiten a los investigadores diseñar estudios que produzcan estimaciones precisas y confiables.</p>
+</section>
+<section id="ejemplo-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplo-2">Ejemplo:</h4>
+<ul>
+<li>En un estudio sobre hábitos de consumo, se determina que el costo de encuestar a un individuo es de $10. Si se quiere estimar el gasto promedio mensual con un margen de error de ±$5 y un nivel de confianza del 95%, se puede calcular el tamaño de muestra necesario utilizando la fórmula del tamaño de muestra:</li>
+</ul>
+<p><span class="math display">\[n = \left(\frac{Z^2 \cdot \sigma^2}{E^2}\right)\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(E\)</span> es el margen de error deseado.</li>
+</ul>
+<p>Al determinar que la desviación estándar de los gastos mensuales es $50, se puede calcular el tamaño muestral óptimo para cumplir con los criterios de estudio.</p>
+<ul>
+<li><strong>Costo-beneficio:</strong> Supongamos que al calcular el tamaño muestral óptimo se determina que es de 100 encuestas. Si se decide llevar a cabo 150 encuestas, aunque se logra una mayor precisión, el costo adicional debe justificarse por los beneficios esperados del estudio.</li>
+</ul>
+<p>En resumen, un tamaño muestral mayor al óptimo produce estimaciones que son distintas de cero, pero incurre en costos innecesarios. Por otro lado, un tamaño muestral menor al óptimo produce estimaciones que son estadísticamente iguales a cero, disminuyendo la utilidad del ejercicio. Por lo tanto, encontrar un equilibrio entre precisión y costo es esencial en el diseño de estudios estadísticos.</p>
+</section>
+</section>
+<section id="aplicación-interactiva-2" class="level3">
+<h3 class="anchored" data-anchor-id="aplicación-interactiva-2">Aplicación Interactiva</h3>
+<p>Para ayudar a comprender cómo calcular el tamaño de muestra, se puede utilizar la siguiente herramienta interactiva:</p>
+<p><a href="http://gauss.medellin.unal.edu.co:3838/fhernanb/samplesize/">Cálculo del tamaño de muestra</a></p>
+<p>Esta aplicación te permite ingresar parámetros como el nivel de confianza, el margen de error, y la proporción esperada o la desviación estándar, dependiendo de si deseas estimar una proporción o una media. La herramienta calculará automáticamente el tamaño de muestra necesario para tu estudio, facilitando así la planificación y diseño de investigaciones.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol type="1">
+<li>Accede al enlace proporcionado.</li>
+<li>Selecciona el tipo de estimación que deseas realizar (proporción o media) y (si lo conoces) el temaño poblacional.</li>
+<li>Ingresa el margen de error que necesitas.</li>
+<li>Haz clic en “Calcular” para obtener el tamaño de muestra recomendado.</li>
+</ol>
+<p>Esta aplicación es especialmente útil para investigadores y profesionales que desean asegurarse de que sus estimaciones sean precisas y confiables, optimizando así los recursos destinados a la recolección de datos.</p>
+</section>
+</section>
+<section id="el-proceso-estadístico" class="level2">
+<h2 class="anchored" data-anchor-id="el-proceso-estadístico">El proceso estadístico</h2>
+</section>
+<section id="hipótesis" class="level2">
+<h2 class="anchored" data-anchor-id="hipótesis">Hipótesis</h2>
+</section>
+<section id="experimento" class="level2">
+<h2 class="anchored" data-anchor-id="experimento">¿Experimento?</h2>
+</section>
+<section id="muestra-1" class="level2">
+<h2 class="anchored" data-anchor-id="muestra-1">Muestra</h2>
+</section>
+<section id="población-1" class="level2">
+<h2 class="anchored" data-anchor-id="población-1">Población</h2>
+</section>
+<section id="probabilidad" class="level2">
+<h2 class="anchored" data-anchor-id="probabilidad">Probabilidad</h2>
+<p>Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.</p>
+</section>
+<section id="estadística" class="level2">
+<h2 class="anchored" data-anchor-id="estadística">Estadística</h2>
+<p>Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.</p>
+</section>
+<section id="modelo-estadístico" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-estadístico">Modelo estadístico</h2>
+<p>Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.</p>
+</section>
+</section>
+<section id="sesión-3-pruebas-de-hipótesis-una-población" class="level1">
+<h1>Sesión 3: pruebas de hipótesis (una población)</h1>
+<section id="positivismo-comte-y" class="level2">
+<h2 class="anchored" data-anchor-id="positivismo-comte-y">Positivismo: Comte y …</h2>
 <p>Medición estricta</p>
 <p>Hace afirmaciones a partir de las pruebas.</p>
 <p>El dato construye el relato.</p>
@@ -402,15 +778,17 @@ window.Quarto = {
 <section id="falsacionismo" class="level2">
 <h2 class="anchored" data-anchor-id="falsacionismo">Falsacionismo</h2>
 <p>Popper. Afirmo, compruebo lo contrario, refuto.</p>
-<p>Ingenuo, admite excepciones. Hace justificaciones sobre la teoría actual.</p>
-<p>Completo, no admite excepciones. Postula nuevas teorías. Las nueva teorías expllican mejor.</p>
-<p>Lakatos: hay un núcleo que no es comprobable.</p>
-<p>Fleck.</p>
-<p>Kuhn.</p>
+<p>Ingenuo, admite excepciones. Hace justificaciones sobre la teoría actual. Remiendos.</p>
+<p>Completo, no admite excepciones. Postula nuevas teorías. Las nueva teorías explican mejor.</p>
+<p>Lakatos: hay un núcleo duro que no es discutible.</p>
+<p>Los programas científicos</p>
+<p>Fleck…</p>
+<p>Kuhn…</p>
 </section>
 <section id="paradigma" class="level2">
 <h2 class="anchored" data-anchor-id="paradigma">Paradigma</h2>
 <p>No es tan importante saber, sino tener una manera para saber si sabes.</p>
+<p>Los programas científicos</p>
 </section>
 <section id="reproductibilidad" class="level2">
 <h2 class="anchored" data-anchor-id="reproductibilidad">Reproductibilidad</h2>
@@ -420,110 +798,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="el-método-científico">El método científico</h2>
 <p>Multiplicidad.</p>
 <p>El problema de la demarcación.</p>
-<p>Está científicamente comprobado.</p>
+<p>No diga: Está científicamente comprobado.</p>
 </section>
-<section id="el-proceso-estadístico" class="level2">
-<h2 class="anchored" data-anchor-id="el-proceso-estadístico">El proceso estadístico</h2>
-</section>
-<section id="hipótesis" class="level2">
-<h2 class="anchored" data-anchor-id="hipótesis">Hipótesis</h2>
-</section>
-<section id="experimento" class="level2">
-<h2 class="anchored" data-anchor-id="experimento">¿Experimento?</h2>
-</section>
-<section id="muestra" class="level2">
-<h2 class="anchored" data-anchor-id="muestra">Muestra</h2>
-</section>
-<section id="población" class="level2">
-<h2 class="anchored" data-anchor-id="población">Población</h2>
-</section>
-<section id="probabilidad" class="level2">
-<h2 class="anchored" data-anchor-id="probabilidad">Probabilidad</h2>
-<p>Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.</p>
-</section>
-<section id="estadística" class="level2">
-<h2 class="anchored" data-anchor-id="estadística">Estadística</h2>
-<p>Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.</p>
-</section>
-<section id="modelo-estadístico" class="level2">
-<h2 class="anchored" data-anchor-id="modelo-estadístico">Modelo estadístico</h2>
-<p>Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.</p>
-</section>
-</section>
-<section id="sesión-2-estimación-y-estimadores" class="level1">
-<h1>Sesión 2: estimación y estimadores</h1>
-<section id="parámetro" class="level2">
-<h2 class="anchored" data-anchor-id="parámetro">Parámetro</h2>
-<p>Un <strong>parámetro</strong> es un valor numérico que describe una característica específica de una población completa. Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²), o la proporción poblacional (P). Como se trabaja con poblaciones, los parámetros son constantes pero, en la práctica, desconocidos, y se estima a partir de muestras.</p>
-</section>
-<section id="estimador" class="level2">
-<h2 class="anchored" data-anchor-id="estimador">Estimador</h2>
-<p>Un <strong>estimador</strong> es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales. Un estimador es una variable aleatoria y puede variar de una muestra a otra. Ejemplos comunes incluyen la media muestral (({x})) y la proporción muestral (()).</p>
-</section>
-<section id="estimación-puntual" class="level2">
-<h2 class="anchored" data-anchor-id="estimación-puntual">estimación puntual</h2>
-<p>La <strong>estimación puntual</strong> se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población. Por ejemplo, la media muestral (({x})) es una estimación puntual de la media poblacional (μ).</p>
-</section>
-<section id="margen-de-error" class="level2">
-<h2 class="anchored" data-anchor-id="margen-de-error">Margen de error</h2>
-<p>El <strong>margen de error</strong> refleja la cantidad de incertidumbre que hay en una estimación puntual. Se define como la mitad de la longitud de un intervalo de confianza y representa la variabilidad que se espera de una estimación debido al muestreo.</p>
-</section>
-<section id="empate-técnico" class="level2">
-<h2 class="anchored" data-anchor-id="empate-técnico">Empate técnico</h2>
-<p>El <strong>empate técnico</strong> ocurre cuando las diferencias entre dos estimaciones puntuales, como medias o proporciones, no son estadísticamente significativas debido al margen de error. En este caso, las diferencias observadas podrían ser el resultado de la variabilidad muestral y no reflejan una verdadera diferencia en la población.</p>
-</section>
-<section id="ejemplos-de-estimadores" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplos-de-estimadores">Ejemplos de estimadores</h2>
-<p>Algunos <strong>ejemplos de estimadores</strong> incluyen:</p>
-<ul>
-<li><strong>Media muestral</strong> (({x})) para estimar la media poblacional (μ).</li>
-<li><strong>Varianza muestral</strong> (s²) para estimar la varianza poblacional (σ²).</li>
-<li><strong>Proporción muestral</strong> (()) para estimar la proporción poblacional (P).</li>
-</ul>
-</section>
-<section id="consistencia" class="level2">
-<h2 class="anchored" data-anchor-id="consistencia">Consistencia</h2>
-<p>Un <strong>estimador</strong> es <strong>consistente</strong> si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. En otras palabras, un estimador consistente converge en probabilidad al parámetro que se está estimando.</p>
-</section>
-<section id="tamaño-de-muestra" class="level2">
-<h2 class="anchored" data-anchor-id="tamaño-de-muestra">Tamaño de muestra</h2>
-<p>El <strong>tamaño de muestra</strong> afecta directamente la precisión de las estimaciones. Un mayor tamaño de muestra generalmente reduce el error estándar, disminuye el margen de error y mejora la confiabilidad de las estimaciones.</p>
-</section>
-<section id="estimación-por-intervalo" class="level2">
-<h2 class="anchored" data-anchor-id="estimación-por-intervalo">Estimación por intervalo</h2>
-<p>La <strong>estimación por intervalo</strong> ofrece un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional con un cierto nivel de confianza. Un intervalo de confianza proporciona más información que una estimación puntual, reflejando tanto la estimación como la incertidumbre asociada.</p>
-</section>
-<section id="media" class="level2">
-<h2 class="anchored" data-anchor-id="media">Media</h2>
-<p>Un <strong>intervalo de confianza para la media</strong> de una población se puede calcular utilizando la distribución t de Student (cuando la varianza poblacional es desconocida y el tamaño de muestra es pequeño) o la distribución normal (cuando el tamaño de muestra es grande).</p>
-</section>
-<section id="proporción" class="level2">
-<h2 class="anchored" data-anchor-id="proporción">Proporción</h2>
-<p>El <strong>intervalo de confianza para una proporción</strong> se calcula utilizando la proporción muestral (()) y el error estándar de la proporción. Se utiliza la distribución normal debido a la aproximación de la distribución binomial a la normal cuando el tamaño de muestra es grande.</p>
-</section>
-<section id="varianza" class="level2">
-<h2 class="anchored" data-anchor-id="varianza">Varianza</h2>
-<p>El <strong>intervalo de confianza para la varianza</strong> se calcula utilizando la distribución chi-cuadrado. La varianza muestral (s²) es el estimador puntual, y el intervalo se ajusta de acuerdo con la distribución de esta varianza bajo el supuesto de normalidad.</p>
-</section>
-<section id="consistencia-1" class="level2">
-<h2 class="anchored" data-anchor-id="consistencia-1">Consistencia</h2>
-<p>El <strong>intervalo de confianza</strong> es consistente si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse, lo que indica que la estimación puntual se vuelve más precisa.</p>
-</section>
-<section id="diferencia-de-medias" class="level2">
-<h2 class="anchored" data-anchor-id="diferencia-de-medias">Diferencia de medias</h2>
-<p>Para evaluar la <strong>diferencia de medias</strong> entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el uso de la distribución t de Student.</p>
-</section>
-<section id="diferencia-de-proporciones" class="level2">
-<h2 class="anchored" data-anchor-id="diferencia-de-proporciones">Diferencia de proporciones</h2>
-<p>El <strong>intervalo de confianza para la diferencia de proporciones</strong> entre dos poblaciones se construye de manera similar al de una proporción, pero utilizando la diferencia entre las proporciones muestrales. La fórmula depende de si se asume o no la homogeneidad de varianzas entre las dos proporciones.</p>
-</section>
-<section id="bootstrapping" class="level2">
-<h2 class="anchored" data-anchor-id="bootstrapping">Bootstrapping</h2>
-<p>El <strong>bootstrapping</strong> es un método no paramétrico que se utiliza para estimar la distribución de un estimador, y por ende, sus intervalos de confianza, al generar múltiples muestras simuladas de la muestra original. Es particularmente útil cuando no se puede asumir una distribución normal de los datos.</p>
-</section>
-</section>
-<section id="sesión-3-pruebas-de-hipótesis-una-población" class="level1">
-<h1>Sesión 3: pruebas de hipótesis (una población)</h1>
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <p>Establecer si existe <strong>suficiente evidencia</strong> en una muestra aleatoria para <strong>rechazar</strong> o <strong>no rechazar</strong> la <strong>hipótesis nula</strong> a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.</p>
@@ -555,13 +831,13 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="sistema-de-hipótesis">Sistema de hipótesis</h2>
 <p>El <strong>sistema de hipótesis</strong> consiste en dos hipótesis contrapuestas:</p>
 <ul>
-<li><strong>hipótesis nula (<span class="math inline">\(H_0\)</span>)</strong>: Es la hipótesis que se presume cierta inicialmente. Ejemplos:
+<li><strong>hipótesis nula (</strong><span class="math inline">\(H_0\)</span>): Es la hipótesis que se presume cierta inicialmente. Ejemplos:
 <ul>
 <li><span class="math inline">\(H_0:\mu \leq \mu_0\)</span></li>
 <li><span class="math inline">\(H_0:\mu \geq \mu_0\)</span></li>
 <li><span class="math inline">\(H_0:\mu = \mu_0\)</span></li>
 </ul></li>
-<li><strong>hipótesis alternativa (<span class="math inline">\(H_1\)</span>)</strong>: Es la hipótesis que se acepta si los datos proporcionan suficiente evidencia para rechazar <span class="math inline">\(H_0\)</span>. Ejemplos:
+<li><strong>hipótesis alternativa (</strong><span class="math inline">\(H_1\)</span>): Es la hipótesis que se acepta si los datos proporcionan suficiente evidencia para rechazar <span class="math inline">\(H_0\)</span>. Ejemplos:
 <ul>
 <li><span class="math inline">\(H_1:\mu &gt; \mu_0\)</span></li>
 <li><span class="math inline">\(H_1:\mu &lt; \mu_0\)</span></li>
@@ -599,7 +875,7 @@ window.Quarto = {
 </section>
 <section id="valor-p" class="level2">
 <h2 class="anchored" data-anchor-id="valor-p">Valor p</h2>
-<p>El <strong>valor <span class="math inline">\(p\)</span></strong> es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta.</p>
+<p>El <strong>valor</strong> <span class="math inline">\(p\)</span> es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta.</p>
 <ul>
 <li>Si <span class="math inline">\(p &lt; \alpha\)</span>, se rechaza <span class="math inline">\(H_0\)</span>, lo que sugiere que la evidencia muestral no es compatible con <span class="math inline">\(H_0\)</span>.</li>
 <li>Si <span class="math inline">\(p \geq \alpha\)</span>, no se rechaza <span class="math inline">\(H_0\)</span>, indicando que los datos son consistentes con <span class="math inline">\(H_0\)</span>.</li>
@@ -610,8 +886,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="decisión">Decisión</h2>
 <p>La decisión en una prueba de hipótesis se basa en comparar el valor <span class="math inline">\(p\)</span> con el nivel de significancia <span class="math inline">\(\alpha\)</span>:</p>
 <ul>
-<li><strong>Si <span class="math inline">\(p &lt; \alpha\)</span></strong>, se <strong>rechaza <span class="math inline">\(H_0\)</span></strong>.</li>
-<li><strong>Si <span class="math inline">\(p \geq \alpha\)</span></strong>, <strong>no se rechaza <span class="math inline">\(H_0\)</span></strong>.</li>
+<li><strong>Si</strong> <span class="math inline">\(p &lt; \alpha\)</span>, se <strong>rechaza</strong> <span class="math inline">\(H_0\)</span>.</li>
+<li><strong>Si</strong> <span class="math inline">\(p \geq \alpha\)</span>, <strong>no se rechaza</strong> <span class="math inline">\(H_0\)</span>.</li>
 </ul>
 <p>Esta decisión refleja si la evidencia contra <span class="math inline">\(H_0\)</span> es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.</p>
 </section>
@@ -621,7 +897,7 @@ window.Quarto = {
 <ol type="1">
 <li><strong>Establecer las hipótesis</strong>: Definir <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span> basándose en el problema de investigación.</li>
 <li><strong>Formular el sistema de hipótesis</strong> y seleccionar el nivel de significancia <span class="math inline">\(\alpha\)</span>.</li>
-<li><strong>Calcular el valor <span class="math inline">\(p\)</span></strong>: Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor <span class="math inline">\(p\)</span>.</li>
+<li><strong>Calcular el valor</strong> <span class="math inline">\(p\)</span>: Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor <span class="math inline">\(p\)</span>.</li>
 <li><strong>Tomar la decisión</strong>: Rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p &lt; \alpha\)</span> o no rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p \geq \alpha\)</span>.</li>
 <li><strong>Interpretar los resultados</strong>: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar <span class="math inline">\(H_1\)</span>.</li>
 </ol>
