@@ -8,7 +8,7 @@
 
 <meta name="author" content="CruzJulián">
 
-<title>Introducción – Estadística</title>
+<title>Muestreo – Estadística</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -94,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./intro.html" aria-current="page"> 
+    <a class="nav-link" href="./intro.html"> 
 <span class="menu-text">Introducción</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -167,27 +196,42 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes">Antecedentes</a>
+  <li><a href="#contexto-del-muestreo" id="toc-contexto-del-muestreo" class="nav-link active" data-scroll-target="#contexto-del-muestreo">Contexto del muestreo</a>
   <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación">Presentación</a>
-  <ul class="collapse">
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso">Descripción del Curso</a></li>
-  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación">Justificación</a></li>
+  <li><a href="#tendencias" id="toc-tendencias" class="nav-link" data-scroll-target="#tendencias">Tendencias</a></li>
+  <li><a href="#individuos" id="toc-individuos" class="nav-link" data-scroll-target="#individuos">Individuos</a></li>
   </ul></li>
-  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones">Consideraciones</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a>
+  <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo">Muestreo</a>
   <ul class="collapse">
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
-  <li><a href="#específicos" id="toc-específicos" class="nav-link" data-scroll-target="#específicos">Específicos</a></li>
+  <li><a href="#actividad-investiguemos" id="toc-actividad-investiguemos" class="nav-link" data-scroll-target="#actividad-investiguemos">Actividad: Investiguemos</a></li>
+  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo">Conceptos de muestreo</a></li>
+  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral">Marco muestral</a></li>
+  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral">Diseño muestral</a></li>
+  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral">Error muestral</a></li>
+  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral">Tamaño muestral</a></li>
+  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico">Muestreo no probabilístico</a></li>
+  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico">Muestreo probabilístico</a></li>
   </ul></li>
-  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
-  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
-  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">Evaluación</a></li>
-  <li><a href="#evaluación-1" id="toc-evaluación-1" class="nav-link" data-scroll-target="#evaluación-1">Evaluación</a></li>
-  <li><a href="#contenido" id="toc-contenido" class="nav-link" data-scroll-target="#contenido">Contenido</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
-  <li><a href="#narrativa" id="toc-narrativa" class="nav-link" data-scroll-target="#narrativa">Narrativa</a></li>
+  </ul></li>
+  <li><a href="#muestreo-no-probabilístico-1" id="toc-muestreo-no-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-no-probabilístico-1">Muestreo no probabilístico</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-por-cuotas" id="toc-muestreo-por-cuotas" class="nav-link" data-scroll-target="#muestreo-por-cuotas">Muestreo por cuotas</a></li>
+  <li><a href="#bola-de-nieve" id="toc-bola-de-nieve" class="nav-link" data-scroll-target="#bola-de-nieve">Bola de nieve</a></li>
+  <li><a href="#muestreo-discrecional" id="toc-muestreo-discrecional" class="nav-link" data-scroll-target="#muestreo-discrecional">Muestreo discrecional</a></li>
+  <li><a href="#muestreo-por-conveniencia" id="toc-muestreo-por-conveniencia" class="nav-link" data-scroll-target="#muestreo-por-conveniencia">Muestreo por conveniencia</a></li>
+  <li><a href="#muestreo-accidental" id="toc-muestreo-accidental" class="nav-link" data-scroll-target="#muestreo-accidental">Muestreo accidental</a></li>
+  </ul></li>
+  <li><a href="#muestreo-probabilístico-1" id="toc-muestreo-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-probabilístico-1">Muestreo probabilístico</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-aleatorio-simple" id="toc-muestreo-aleatorio-simple" class="nav-link" data-scroll-target="#muestreo-aleatorio-simple">Muestreo aleatorio simple</a></li>
+  <li><a href="#muestreo-por-etapas" id="toc-muestreo-por-etapas" class="nav-link" data-scroll-target="#muestreo-por-etapas">Muestreo por etapas</a></li>
+  <li><a href="#muestreo-por-conglomerados" id="toc-muestreo-por-conglomerados" class="nav-link" data-scroll-target="#muestreo-por-conglomerados">Muestreo por conglomerados</a></li>
+  <li><a href="#muestreo-estratificado" id="toc-muestreo-estratificado" class="nav-link" data-scroll-target="#muestreo-estratificado">Muestreo estratificado</a></li>
+  <li><a href="#técnicas-de-muestreo" id="toc-técnicas-de-muestreo" class="nav-link" data-scroll-target="#técnicas-de-muestreo">Técnicas de muestreo</a></li>
+  <li><a href="#factores-de-expansión" id="toc-factores-de-expansión" class="nav-link" data-scroll-target="#factores-de-expansión">Factores de expansión</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -197,8 +241,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introducción</h1>
-<p class="subtitle lead">Sobre la estadística clásica</p>
+<h1 class="title">Muestreo</h1>
+<p class="subtitle lead">Introducción al mundo cuantitativo</p>
 </div>
 
 
@@ -221,126 +265,231 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="antecedentes" class="level1">
-<h1>Antecedentes</h1>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
-<p>En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.</p>
-<p>Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.</p>
+<section id="contexto-del-muestreo" class="level1">
+<h1>Contexto del muestreo</h1>
+<section id="tendencias" class="level2">
+<h2 class="anchored" data-anchor-id="tendencias">Tendencias</h2>
+<p>El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.</p>
 </section>
-<section id="presentación" class="level2">
-<h2 class="anchored" data-anchor-id="presentación">Presentación</h2>
-<section id="descripción-del-curso" class="level3">
-<h3 class="anchored" data-anchor-id="descripción-del-curso">Descripción del Curso</h3>
-<p>Estadística I: Estadística Descriptiva para el seminario de Técnicas Especiales de Investigación I, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea como introducción y con el objetivo de acercar nuevamente a los estudiantes a los temas estadísticos.</p>
+<section id="individuos" class="level2">
+<h2 class="anchored" data-anchor-id="individuos">Individuos</h2>
+<p>Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría.</p>
 </section>
-<section id="justificación" class="level3">
-<h3 class="anchored" data-anchor-id="justificación">Justificación</h3>
-<p>Técnicas Especiales de Investigación I es la primera de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en primer semestre, y los asistentes al seminario son de tercero y cuarto semestre, se ve la necesidad de acercarlos nuevamente a los temas generales e introductorios para que se genere la intención de soportar sus investigaciones en datos tratados estadísticamente, dado el carácter investigativo de la Facultad.</p>
-</section>
-</section>
-<section id="consideraciones" class="level2">
-<h2 class="anchored" data-anchor-id="consideraciones">Consideraciones</h2>
-<p>Sobre los contenidos teóricos y/o conceptuales básicos del programa.</p>
-<p>Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.</p>
-</section>
-<section id="objetivo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<section id="general" class="level3">
-<h3 class="anchored" data-anchor-id="general">General</h3>
-<p>Ofrecer herramientas de estadística descriptiva a los asistentes al seminario de Técnicas Especiales de Investigación I, como primer acercamiento y repaso de la estadística ofrecida en primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.</p>
-</section>
-<section id="específicos" class="level3">
-<h3 class="anchored" data-anchor-id="específicos">Específicos</h3>
-<ul>
-<li><p>Reafirmar los conceptos y conocimientos sobre estadística descriptiva</p></li>
-<li><p>Adelantar talleres prácticos que hagan evidentes los conceptos presentados</p></li>
-<li><p>Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante</p></li>
-</ul>
-</section>
-</section>
-<section id="metodología" class="level2">
-<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
-<p>Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.</p>
-</section>
-<section id="material" class="level2">
-<h2 class="anchored" data-anchor-id="material">Material</h2>
-<p><a href="https://openintro.org/book/os/">OpenIntro Statistics</a></p>
-<p><a href="http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf">Estadística para todos - Diana Kelmansky</a></p>
-<p><a href="https://ayushthey.medium.com/discourse-of-objectivity-2eb2541f7177">Discourse of Objectivity</a></p>
-<p>http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf</p>
-<p><a href="https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf">To explain or to predict</a></p>
-<p><a href="https://dialnet.unirioja.es/descarga/articulo/4942056.pdf">Escalas de medición - Jorge Coronado Padilla</a></p>
-<p><a href="https://scielo.conicyt.cl/pdf/ijmorphol/v35n1/art37.pdf">Técnicas de Muestreo sobre una Población a Estudio - Tamara Otzen, Carlos Manterola</a></p>
-<p><a href="https://openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics - David Diez</a> Chapter 2: Summarizing data. 2.1, 2.2.</p>
-<p><a href="https://openaccess.uoc.edu/bitstream/10609/148455/1/AnalisisBivariante.pdf">Análisis bivariante - Jordi Mas Elias</a></p>
-<p><a href="https://www.istat.it/wp-content/uploads/2014/06/Handbook-on-Constructing-Composite-Indicators.pdf">Handbook on Constructing Composite Indicators: Methodology and User Guide</a></p>
-<p><a href="https://core.ac.uk/download/pdf/47265078.pdf">Diseño y validación de instrumentos de medición</a></p>
-<p><a href="http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe%20I.%20Principal%20Component%20Analysis%20(2ed.,%20Springer,%202002)(518s)_MVsa_.pdf">Principal Component Analysis</a></p>
-</section>
-<section id="evaluación" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación">Evaluación</h2>
-<p>La evaluación del curso se realiza mediante controles de lectura y quices de la siguiente manera:</p>
-<ul>
-<li><p>Al iniciar la clase, se realiza el control de lectura. Un examen de máximo 15 preguntas a cerca de la lectura realizada. Este examen tiene una duración de 15 minutos y comienza puntualmente. Las personas que llegan tarde tienen menos tiempo para responder.</p></li>
-<li><p>Al finalizar la clase se realiza el quiz. Un examen de máximo 15 preguntas a cerca de los temas vistos en clase. Este examen tiene una duración de 15 minutos y comienza 15 minutos antes de la hora de finalización de la calse. Las personas que terminan antes pueden salir.</p></li>
-<li><p>Solo las personas que obtienen una nota mayor a 2.5 en el control de lectura, tienen la oportunidad de presentar el quiz.</p></li>
-<li><p>La calificación total del curso se compone de la calificación de controles de lectura (10%) y quices (90%).</p></li>
-<li><p>Adicionalmente, se proponenen algunas actividades en clase que cuentan como 0.1 de la nota final.</p></li>
-</ul>
-</section>
-<section id="evaluación-1" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación-1">Evaluación</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Evaluación</th>
-<th style="text-align: left;">Valor (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Controles de lectura</td>
-<td style="text-align: left;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Quices</td>
-<td style="text-align: left;">90</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="contenido" class="level2">
-<h2 class="anchored" data-anchor-id="contenido">Contenido</h2>
-<p><strong>Introducción</strong></p>
-<p>Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los <strong>tipos de variables</strong>, que incluyen <strong>variables cualitativas</strong> (nominales y ordinales) y <strong>cuantitativas</strong> (discretas y continuas). A continuación, se aborda la <strong>tipología de preguntas</strong> en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los <strong>tipos de encuestas</strong>, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.</p>
-<p><strong>Muestreo</strong></p>
-<p>En este tema se abordan los fundamentos del <strong>muestreo</strong>, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: <strong>probabilístico</strong> y <strong>no probabilístico</strong>. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el <strong>muestreo aleatorio simple</strong>, el <strong>muestreo multietápico</strong>, el <strong>muestreo estratificado</strong> y el <strong>muestreo por conglomerados</strong>. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el <strong>muestreo por conveniencia</strong>, <strong>muestreo por cuotas</strong> o <strong>bola de nieve</strong>. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.</p>
-<p><strong>Estadística descriptiva para una variable</strong></p>
-<p>La <strong>estadística descriptiva para una variable</strong> se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las <strong>medidas de tendencia central</strong> como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las <strong>medidas de dispersión</strong> como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de <strong>gráficos</strong> como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.</p>
-<p><strong>Estadística descriptiva para dos o más variables</strong></p>
-<p>Este tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las <strong>tablas de contingencia</strong> para estudiar la relación entre dos variables cualitativas, así como las <strong>medidas de asociación</strong> como el <strong>coeficiente de correlación de Pearson</strong> y <strong>Spearman</strong> para variables cuantitativas. También se discuten las <strong>gráficas de dispersión</strong> para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una <strong>recta de regresión</strong> para predecir una variable en función de otra. Además, se examinan los <strong>coeficientes de correlación parcial</strong> y <strong>análisis multivariado</strong> para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.</p>
-</section>
-<section id="docente" class="level2">
-<h2 class="anchored" data-anchor-id="docente">Docente</h2>
-<p>Julián Cruz</p>
-<p>Soy científico de datos, profesional en estadística y magíster en ciencias. Cuento con más de 12 años de experiencia demostrada en analítica y ciencia de datos. Mi perfil contempla desde liderazgo de programas de capacitación y gestión del cambio, hasta ejecución proyectos de base tecnológica. Esta experiencia me ha permitido desarrollar diferentes competencias, como la orientación al valor en toma de decisiones, la conformación y desarrollo de equipos de alto desempeño y la negociación integradora.</p>
-</section>
-<section id="narrativa" class="level2">
-<h2 class="anchored" data-anchor-id="narrativa">Narrativa</h2>
 <div class="columns">
 <div class="column">
-<section id="creadores" class="level3">
-<h3 class="anchored" data-anchor-id="creadores">Creadores</h3>
-<p>Los creadores de herramientas, productos, servicios y experiencias deben tener un conocimiento profundo sobre el campo en el que actúan.</p>
+<section id="población" class="level2">
+<h2 class="anchored" data-anchor-id="población">Población</h2>
+<p>Para cualquier pregunta que interese responder, primero es necesario dirigir la atención a un grupo particular de individuos: personas, ciudades, animales, televisores, discos rígidos, tornillos o lamparitas.</p>
 </section>
 </div><div class="column">
-<section id="usuarios" class="level3">
-<h3 class="anchored" data-anchor-id="usuarios">Usuarios</h3>
-<p>Los usuarios de herramientas, productos, servicicios y experiencias deben tener claridad sobre su finalidad y el modo de uso.</p>
+<section id="muestra" class="level2">
+<h2 class="anchored" data-anchor-id="muestra">Muestra</h2>
+<p>Es un subconjunto de la población.</p>
+</section>
+<section id="representatividad" class="level2">
+<h2 class="anchored" data-anchor-id="representatividad">Representatividad</h2>
+<p>Una muestra es representativa de la población cuando todas las características importantes de la población tienen que estar en la muestra en la misma proporción que en la población.</p>
 </section>
 </div>
 </div>
+</section>
+<section id="muestreo" class="level1">
+<h1>Muestreo</h1>
+<p>¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.</p>
+<p>Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.</p>
+<section id="actividad-investiguemos" class="level2">
+<h2 class="anchored" data-anchor-id="actividad-investiguemos">Actividad: Investiguemos</h2>
+<p>¿Qué es un cisne negro y qué historia esconde?</p>
+</section>
+<section id="conceptos-de-muestreo" class="level2">
+<h2 class="anchored" data-anchor-id="conceptos-de-muestreo">Conceptos de muestreo</h2>
+<ul>
+<li><p>Marco</p></li>
+<li><p>Diseño</p></li>
+<li><p>Error</p></li>
+<li><p>Tamaño</p></li>
+</ul>
+</section>
+<section id="marco-muestral" class="level2">
+<h2 class="anchored" data-anchor-id="marco-muestral">Marco muestral</h2>
+<p>El marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.</p>
+<p>Este marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.</p>
+</section>
+<section id="diseño-muestral" class="level2">
+<h2 class="anchored" data-anchor-id="diseño-muestral">Diseño muestral</h2>
+<p>El diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.</p>
+<p>La elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.</p>
+<p>Es el diseño muestral lo que le da representatividad a la muestra.</p>
+</section>
+<section id="error-muestral" class="level2">
+<h2 class="anchored" data-anchor-id="error-muestral">Error muestral</h2>
+<p>El error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.</p>
+<p>El tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.</p>
+</section>
+<section id="tamaño-muestral" class="level2">
+<h2 class="anchored" data-anchor-id="tamaño-muestral">Tamaño muestral</h2>
+<p>El tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.</p>
+<p>La determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.</p>
+<p>Es el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.</p>
+</section>
+<section id="distintos-abordajes-del-muestreo" class="level2">
+<h2 class="anchored" data-anchor-id="distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</h2>
+<section id="muestreo-no-probabilístico" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h3>
+<p>No todos los elementos tienen probabilidad de ser seleccionados</p>
+<ul>
+<li>La muestra no es representativa (rigurosamente)</li>
+<li>No es posible calcular el error muestral</li>
+<li>Requiere menos recursos</li>
+</ul>
+</section>
+<section id="muestreo-probabilístico" class="level3">
+<h3 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h3>
+<p>Todos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.</p>
+</section>
+</section>
+</section>
+<section id="muestreo-no-probabilístico-1" class="level1">
+<h1>Muestreo no probabilístico</h1>
+<ul>
+<li>Por cuotas</li>
+<li>Bola de nieve</li>
+<li>Discrecional</li>
+<li>Conveniencia</li>
+<li>Accidental</li>
+</ul>
+<section id="muestreo-por-cuotas" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-por-cuotas">Muestreo por cuotas</h2>
+<p>Consiste en dividir la población en segmentos y obtener una cuota de cada segmento.</p>
+<p>Se utiliza cuando se tienen segmentos relevantes pero no se tiene acceso al marco muestral.</p>
+<p>En un estudio sobre preferencias de compra de automóviles, se decide utilizar el muestreo por cuotas para asegurar que la muestra sea representativa en términos de género y edad. El investigador establece cuotas basadas en la distribución de la población:</p>
+<ul>
+<li><strong>Género</strong>: 50% hombres, 50% mujeres.</li>
+<li><strong>Edad</strong>: 25% de 18-29 años, 25% de 30-39 años, 25% de 40-49 años, 25% de 50 años o más.</li>
+</ul>
+<p>El investigador luego selecciona participantes hasta que se cumplan las cuotas establecidas, por ejemplo, 100 hombres y 100 mujeres, distribuidos equitativamente entre los diferentes grupos de edad. Este método asegura que todas las categorías importantes estén adecuadamente representadas en la muestra.</p>
+</section>
+<section id="bola-de-nieve" class="level2">
+<h2 class="anchored" data-anchor-id="bola-de-nieve">Bola de nieve</h2>
+<p>Cada individuo refiere nuevos individuos.</p>
+<p>Se utiliza con poblaciones sensibles.</p>
+<p>En un estudio sobre los hábitos de ahorro entre migrantes de un país específico, se utiliza el muestreo bola de nieve debido a la dificultad de acceder a esta población. El investigador comienza con un pequeño grupo de migrantes conocidos que participan en el estudio. Luego, estos participantes refieren a otros migrantes que también podrían estar interesados en participar.</p>
+<p>A medida que más personas son entrevistadas, se continúa pidiendo referencias, lo que permite que la muestra “crezca como una bola de nieve”. Este método es especialmente útil para poblaciones difíciles de alcanzar o cuando no existe un marco muestral claro.</p>
+</section>
+<section id="muestreo-discrecional" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-discrecional">Muestreo discrecional</h2>
+<p>Consiste en tomar de la población los individuos que resulten representativos bajo el jucio de un experto.</p>
+<p>Se utiliza cuando hay un experto que ha realizado estudios previos.</p>
+<p>En un estudio exploratorio sobre las opiniones de expertos en inteligencia artificial, se decide utilizar el muestreo discrecional. El investigador selecciona intencionadamente a un grupo de 10 expertos reconocidos en el campo, basándose en su conocimiento y reputación en la industria. La selección no es aleatoria, sino que se realiza según el criterio del investigador, quien elige a estos expertos por considerarlos los más apropiados para proporcionar información valiosa y relevante para el estudio.</p>
+</section>
+<section id="muestreo-por-conveniencia" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-por-conveniencia">Muestreo por conveniencia</h2>
+<p>Consiste en estudiar los individuos más cercanos o voluntarios, ya que estos son más accesibles.</p>
+<p>Se utiliza en estudios cuyas poblaciones no son accesibles.</p>
+<p>En un estudio piloto sobre las preferencias de snacks saludables entre estudiantes universitarios, el investigador utiliza el muestreo por conveniencia debido a limitaciones de tiempo y recursos.</p>
+<p>El investigador selecciona a los estudiantes del curso de muestreo para que respondan a una breve encuesta. Este método se elige porque los participantes son fácilmente accesibles, aunque no necesariamente representan a toda la población estudiantil.</p>
+</section>
+<section id="muestreo-accidental" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-accidental">Muestreo accidental</h2>
+<p>Se selecciona un mecanismo de selección o acceso a los individuos encontrándolos por casualidad en un espacio definido sin ningún juicio previo.</p>
+<p>Se utiliza en poblaciones particularmente grandes con fines descriptivos y prácticos.</p>
+<p>En un estudio sobre las tendencias de la moda un investigador utiliza el muestreo accidental. Se aborda a los primeros 30 clientes que ingresan en una tienda de ropa durante una mañana para que respondan a una encuesta de satisfacción.</p>
+<p>Este método es accidental porque se seleccionan a los participantes en el lugar y momento de recolección.</p>
+</section>
+</section>
+<section id="muestreo-probabilístico-1" class="level1">
+<h1>Muestreo probabilístico</h1>
+<ul>
+<li><p>Aleatorio simple</p></li>
+<li><p>Por etapas</p></li>
+<li><p>Por conglomerados</p></li>
+<li><p>Por estratos</p></li>
+</ul>
+<section id="muestreo-aleatorio-simple" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-aleatorio-simple">Muestreo aleatorio simple</h2>
+<ul>
+<li>Definir la población</li>
+<li>Obtener el marco muestral</li>
+<li>Definir un tamaño muestral <span class="math inline">\(n\)</span></li>
+<li>Elegir aleatoriamente <span class="math inline">\(n\)</span> individuos de la población</li>
+</ul>
+<p>En un estudio sobre los hábitos de lectura de la población adulta en una ciudad, se decide utilizar el muestreo aleatorio simple. A partir de un listado completo de los 10,000 residentes adultos de la ciudad, el investigador selecciona 500 personas utilizando un generador de números aleatorios.</p>
+<p>Cada individuo tiene la misma probabilidad de ser seleccionado, lo que asegura que la muestra sea representativa de toda la población, minimizando sesgos en la selección.</p>
+</section>
+<section id="muestreo-por-etapas" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-por-etapas">Muestreo por etapas</h2>
+<ul>
+<li>Bietápico (2 etapas)</li>
+<li>Polietápico (3 etapas o más)</li>
+<li>Es necesario calcular tamaño muestral en cada etapa</li>
+</ul>
+<p>En un estudio nacional sobre el nivel educativo en zonas rurales, se utiliza el muestreo por etapas para facilitar la selección de la muestra.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se seleccionan al azar 10 estados de un total de 32 en el país.</li>
+<li><strong>Segunda etapa</strong>: Dentro de cada estado seleccionado, se eligen aleatoriamente 3 municipios rurales.</li>
+<li><strong>Tercera etapa</strong>: En cada municipio, se seleccionan aleatoriamente 5 escuelas primarias.</li>
+<li><strong>Cuarta etapa</strong>: Dentro de cada escuela seleccionada, se eligen al azar 30 estudiantes para participar en el estudio.</li>
+</ol>
+<p>Este método permite una selección eficiente y representativa en poblaciones grandes y dispersas, utilizando un enfoque jerárquico y secuencial.</p>
+</section>
+<section id="muestreo-por-conglomerados" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-por-conglomerados">Muestreo por conglomerados</h2>
+<ul>
+<li>Son heterogéneos en su interior.</li>
+<li>Son homogéneos entre sí</li>
+<li>Se selecciona una muestra primaria</li>
+<li>Se selecciona una muestra secundaria</li>
+<li>Ejemplo: ciudades, salones, centros comerciales</li>
+</ul>
+<p>En un estudio sobre el impacto de programas educativos en escuelas primarias, se utiliza el muestreo por conglomerados para simplificar el proceso de recolección de datos.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se seleccionan al azar 20 escuelas primarias de un listado completo de 200 en una región determinada.</li>
+<li><strong>Segunda etapa</strong>: Dentro de cada escuela seleccionada, se eligen al azar 3 clases para participar en el estudio.</li>
+<li><strong>Tercera etapa</strong>: Se recopilan datos de todos los estudiantes de las clases seleccionadas.</li>
+</ol>
+<p>Este método es útil cuando la población está agrupada en unidades naturales, como escuelas o barrios, y facilita la logística y los costos al reducir el número de unidades primarias que se deben tratar.</p>
+</section>
+<section id="muestreo-estratificado" class="level2">
+<h2 class="anchored" data-anchor-id="muestreo-estratificado">Muestreo estratificado</h2>
+<ul>
+<li>Son homogéneos en su interior</li>
+<li>Son heterogéneos entre sí</li>
+<li>Se selecciona una censo primario</li>
+<li>Se selecciona una muestra secundaria</li>
+</ul>
+<p>En un estudio sobre la satisfacción laboral en una empresa multinacional, se utiliza el muestreo estratificado para asegurar que todas las divisiones y niveles jerárquicos de la empresa estén representados.</p>
+<ol type="1">
+<li><strong>Primera etapa</strong>: Se divide a los empleados en diferentes estratos según su departamento (por ejemplo, Finanzas, Recursos Humanos, Marketing, etc.).</li>
+<li><strong>Segunda etapa</strong>: Se selecciona una muestra aleatoria de empleados de cada estrato para participar en la encuesta de satisfacción.</li>
+</ol>
+<p>Este método garantiza que cada subgrupo relevante dentro de la población esté representado en la muestra, permitiendo comparaciones más precisas entre diferentes departamentos y niveles jerárquicos.</p>
+</section>
+<section id="técnicas-de-muestreo" class="level2">
+<h2 class="anchored" data-anchor-id="técnicas-de-muestreo">Técnicas de muestreo</h2>
+<p><a href="https://youtu.be/gyGQ_qieVKM">Técnicas de muestreo</a></p>
+</section>
+<section id="factores-de-expansión" class="level2">
+<h2 class="anchored" data-anchor-id="factores-de-expansión">Factores de expansión</h2>
+<p>Cuando tenemos un diseño muestral, es posible saber cuántos individuos de la población son representados por un individuo de la muestra. Esta cantidad se denomina <em>Factores de expansión</em>.</p>
+<p>Los factores de expansión son particularmente útiles para calcular totales.</p>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>En esta actividad vamos a analizar una encuesta.</p>
+<ol type="1">
+<li><p>Elija una encuesta de la lista-</p></li>
+<li><p>Escudriñe la documentación. Busque el muestreo.</p></li>
+<li><p>Lea el muestreo cuidadosamente.</p></li>
+<li><p>Escriba cómo imagina los detalles de la ejecución: Obtención del marco muestral</p></li>
+</ol>
+<p>Encuestas</p>
+<ul>
+<li><a href="https://profamilia.org.co/investigaciones/ends/">Encuesta Nacional de Demografía y Salud (ENDS)/Ministerio de Salud y Protección Social</a></li>
+<li><a href="https://colombiatic.mintic.gov.co/679/w3-article-198835.html">Encuesta TIC Hogares</a></li>
+<li><a href="https://colombiatic.mintic.gov.co/679/w3-article-333031.html">Índice de brecha Digital</a></li>
+<li><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/agropecuario/encuesta-nacional-agropecuaria-ena">Encuesta Nacional Agropecuaria</a></li>
+<li><a href="https://www.sdp.gov.co/gestion-estudios-estrategicos/estudios-macro/encuesta-multiproposito/resultados">Encuesta Multipropósito</a></li>
+</ul>
 
 
 </section>

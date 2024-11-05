@@ -1,19 +1,48 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - intro.qmd
+    - C01_intro.qmd
+    - C01_univar.qmd
+    - C01_corr.qmd
+    - C02_episteme.qmd
+    - C02_muestreo.qmd
+    - C02_estim.qmd
+    - C02_tamano.qmd
+    - C02_hipotesis.qmd
+    - 03_est-reg.qmd
+    - 04_est-multi.qmd
 
 website:
   title: "Estadística"
   navbar:
     left:
-      - href: index.qmd
-        text: Inicio
-      - href: intro.qmd
-        text: Introducción
-      - href: 01_est-desc.qmd
-        text: Estadística I
-      - href: 02_est-inf.qmd
-        text: Estadística II
+      - text: Inicio
+        href: index.qmd
+      - text: Introducción
+        href: intro.qmd
+      - text: Descriptiva
+        menu:
+        - text: Introducción
+          href: C01_intro.qmd
+        - text: Univariado
+          href: C01_univar.qmd
+        - text: Correlacional
+          href: C01_corr.qmd
+      - text: Inferencial
+        menu:
+        - text: Introducción
+          href: C02_episteme.qmd
+        - text: Muestreo
+          href: C02_muestreo.qmd
+        - text: Estimación
+          href: C02_estim.qmd
+        - text: Tamaño muestral
+          href: C02_tamano.qmd
+        - text: Hipótesis
+          href: C02_hipotesis.qmd
       - href: 03_est-reg.qmd
         text: Estadística III
       - href: 04_est-multi.qmd

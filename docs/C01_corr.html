@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="CruzJulián">
 
-<title>Estadistica para Ciencias sociales – Estadística</title>
+<title>Estadística descriptiva para dos o más variables – Estadística</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,20 +54,49 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -82,14 +112,14 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Estadística</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
@@ -161,21 +191,43 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#dos-variables" id="toc-dos-variables" class="nav-link active" data-scroll-target="#dos-variables">Dos variables</a>
+  <ul class="collapse">
+  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link" data-scroll-target="#dos-variables-cualitativas">Dos variables cualitativas</a></li>
+  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas">Dos variables cuantitativas</a></li>
+  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza">Covarianza</a></li>
+  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson">Correlación de Pearson</a></li>
+  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman">Correlación de Spearman</a></li>
+  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</a></li>
+  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación">Correlación</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Estadistica para Ciencias sociales</h1>
+<h1 class="title">Estadística descriptiva para dos o más variables</h1>
+<p class="subtitle lead">Introducción al mundo cuantitativo</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>CruzJulián </p>
+          </div>
+  </div>
     
   
     
@@ -186,8 +238,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="dos-variables" class="level1">
+<h1>Dos variables</h1>
+<p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
+<ul>
+<li>Dos cualitativas</li>
+<li>Dos cuantitativas</li>
+<li>Una cuantitativa y una cualitativa</li>
+</ul>
+<section id="dos-variables-cualitativas" class="level2">
+<h2 class="anchored" data-anchor-id="dos-variables-cualitativas">Dos variables cualitativas</h2>
+<p>Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.</p>
+</section>
+<section id="dos-variables-cuantitativas" class="level2">
+<h2 class="anchored" data-anchor-id="dos-variables-cuantitativas">Dos variables cuantitativas</h2>
+<p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
+<ul>
+<li>Covarianza</li>
+<li>Correlación de Pearson</li>
+<li>Correlación de Spearman</li>
+</ul>
+</section>
+<section id="covarianza" class="level2">
+<h2 class="anchored" data-anchor-id="covarianza">Covarianza</h2>
+<p>Covarianza entre dos variables</p>
+<p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
+</section>
+<section id="correlación-de-pearson" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-de-pearson">Correlación de Pearson</h2>
+<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
+</section>
+<section id="correlación-de-spearman" class="level2">
+<h2 class="anchored" data-anchor-id="correlación-de-spearman">Correlación de Spearman</h2>
+<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
+<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
+</section>
+<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level2">
+<h2 class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</h2>
+<p>Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.</p>
+</section>
+<section id="correlación" class="level2">
+<h2 class="anchored" data-anchor-id="correlación">Correlación</h2>
+<p>¿Qué es la causalidad?</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -233,12 +329,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

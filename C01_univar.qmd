@@ -1,0 +1,136 @@
+---
+title: "Estadística descriptiva para una variable"
+subtitle: "Introducción al mundo cuantitativo"
+author: "CruzJulián"
+
+lang: "es-co"
+
+---
+
+
+# Repaso 
+
+## Tipos de variables:
+
+  + Cualitativas
+  + Cuantitativas
+     * Discretas
+     * Continuas
+
+## Escalas de medición
+
+ - Nominal
+ - Ordinal
+ - De intervalo
+ - De razón
+
+## Visualización
+
+ - Los gráficos dependen del tipo de variable
+ - Hay unos gráficos básicos (están en excel)
+ - Hay gráficos muy complejos, tenemos que desarrollar nuevas habilidades para leerlos!
+
+
+Aquí tienes una versión ampliada del material de estadística descriptiva, con mayor profundidad, ejemplos breves aplicados a la investigación social y explicaciones más detalladas:
+
+# Medidas de tendencia central
+
+Las medidas de tendencia central resumen el valor típico de una variable.
+
+## Frecuencia
+
+La frecuencia es el número de veces que ocurre cada valor. Por ejemplo, en una encuesta sobre nivel educativo, las respuestas pueden ser "primaria", "secundaria", "universidad". Si el 40% de los encuestados tiene educación universitaria, eso corresponde a una frecuencia de 40 en una muestra de 100 personas.
+
+## Proporción
+
+La proporción se refiere a la frecuencia relativa, es decir, el número de veces que ocurre un valor dividido entre el total de observaciones. Por ejemplo, si el 30% de una muestra de encuestados considera que el gobierno tiene un buen desempeño, esta proporción se puede expresar como 0.30 o el 30%.
+
+$$p = \frac{freq}{n}$$
+
+## Moda
+
+La moda es el valor más frecuente. Por ejemplo, si la mayoría de los encuestados trabaja en el sector servicios, la moda es "sector servicios". En variables continuas, como el ingreso, la moda puede no ser útil, ya que no suele haber muchos valores repetidos.
+
+## Media
+
+La media es el promedio de los valores. Es útil para variables cuantitativas y representa el "centro" de la distribución. Por ejemplo, si estamos estudiando los ingresos mensuales de una población, la media indicaría el ingreso promedio. 
+
+$$\overline{x} = \frac{1}{n} \sum\limits_{i = 1}^n x_i$$
+
+## Mediana
+
+La mediana es el valor que divide los datos en dos mitades. Es más robusta frente a valores atípicos que la media. Por ejemplo, si estamos analizando el número de hijos en una muestra y los valores son 1, 2, 2, 3 y 10, la mediana será 2, lo que refleja mejor la tendencia central que la media.
+
+$$\widetilde{x} \sim X_{(n/2)}$$
+
+# Medidas de localización
+
+## Cuantiles
+
+Los cuantiles dividen los datos en partes iguales. En estudios sociales, los cuantiles son útiles para evaluar la distribución de ingresos o educación. Por ejemplo, el cuartil más bajo (25%) representa el grupo con los ingresos más bajos.
+
+$$Q_\alpha(x)\sim X_{(\alpha)}$$
+
+## Percentiles
+
+Los percentiles son un caso especial de cuantiles y se usan para ver la posición de un valor dentro de una distribución. En educación, el percentil 90 indica que un estudiante superó al 90% de sus compañeros en una prueba estandarizada.
+
+## Cuartiles
+
+Los cuartiles dividen los datos en cuatro partes. El primer cuartil (Q1) es el 25% más bajo, y el tercer cuartil (Q3) es el 25% más alto. Estos son útiles para evaluar la dispersión de los ingresos dentro de una población.
+
+## Mínimo y máximo
+
+El mínimo es el valor más bajo en el conjunto de datos y el máximo es el valor más alto. En estudios sociales, pueden utilizarse para detectar posibles extremos en las variables, como el ingreso o la edad.
+
+
+# Medidas de dispersión
+
+## Varianza
+
+La varianza mide qué tan dispersos están los datos respecto a la media. En estudios de desigualdad de ingresos, una alta varianza indicaría grandes disparidades entre los ingresos de las personas.
+
+$$ S_x^2 =\frac{1}{n} \sum\limits_{i=1}^n (x_i-\overline{x})^2$$
+
+Ejemplo: En una muestra de ingresos de 2000, 2500, 3000, 3500 y 4000, la varianza nos indica cuánto se alejan estos valores de la media.
+
+## Desviación estándar
+
+La desviación estándar es la raíz cuadrada de la varianza y nos proporciona una medida de dispersión en las mismas unidades que los datos originales. Por ejemplo, si la desviación estándar de los ingresos en una población es alta, indica que hay una gran variabilidad en los ingresos.
+
+$$ S_x =\sqrt{S_x^2}$$
+
+## Rango intercuartílico (IQR)
+
+El rango intercuartílico es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1). Mide la dispersión central de los datos y es útil para evitar que los valores extremos influyan en la interpretación.
+
+$$ran(x) = Q_{0.75}(x) - Q_{0.25}(x)$$
+
+Ejemplo: En una encuesta de satisfacción con el gobierno, el IQR podría mostrar la variación en las respuestas del 50% central, ignorando los valores más extremos de descontento o satisfacción.
+
+## Rango
+
+El rango es la diferencia entre el valor máximo y el mínimo. Aunque es fácil de calcular, puede verse afectado por valores atípicos. Por ejemplo, en el análisis de ingresos, el rango puede ser muy amplio si hay pocos individuos con ingresos extremadamente altos.
+
+$$Rango = Q_{1}(x) - Q_{0}(x)$$
+
+
+## Hablemos bien
+
+No diga: la gente votó en promedio por el candidato X
+
+Diga: la gente votó en mayor proporción por el candidato X
+
+
+## Actividad en clase
+
+No diga:
+
+ - Esta alternativa es muy buena, nos ahorra menos dolores de cabeza
+
+ - La edad promedio de los estudiantes es entre 15 y 20 años. 
+ 
+ - Uno de cada tres estudiantes no sabe estadística.
+
+ - Más de la mitad de los estudiantes que presentaron la prueba saber están por debajo del promedio del puntaje de inglés.
+

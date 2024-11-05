@@ -1,0 +1,56 @@
+---
+title: "Estadística descriptiva para dos o más variables"
+subtitle: "Introducción al mundo cuantitativo"
+author: "CruzJulián"
+
+lang: "es-co"
+
+---
+
+
+# Dos variables
+
+Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.
+
+ - Dos cualitativas
+ - Dos cuantitativas
+ - Una cuantitativa y una cualitativa
+ 
+## Dos variables cualitativas
+
+Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.
+
+## Dos variables cuantitativas
+
+La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.
+
+ - Covarianza
+ - Correlación de Pearson
+ - Correlación de Spearman
+
+
+## Covarianza
+
+Covarianza entre dos variables
+
+$$ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})$$
+
+## Correlación de Pearson
+
+$$\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}$$
+
+## Correlación de Spearman
+
+$$\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}$$
+
+donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.
+
+## Una variable cualitativa y otra cuantitativa
+
+Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.
+
+## Correlación
+
+¿Qué es la causalidad?
+
+
