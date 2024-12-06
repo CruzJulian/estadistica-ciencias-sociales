@@ -1,136 +1,307 @@
----
-title: "Estadística descriptiva para una variable"
-subtitle: "Introducción al mundo cuantitativo"
-author: "CruzJulián"
+# Estadística descriptiva para una variable
 
-lang: "es-co"
+## Medidas de frecuencia
 
----
+En el análisis de datos dentro de las ciencias sociales, las medidas de frecuencia permiten describir de manera precisa la distribución de variables **categóricas** y ayudan a comprender patrones generales en poblaciones o muestras. Estas medidas son esenciales para resumir y comunicar la información de forma efectiva, aportando una base sólida para el análisis estadístico posterior.
 
+### Frecuencia
 
-# Repaso 
-
-## Tipos de variables:
-
-  + Cualitativas
-  + Cuantitativas
-     * Discretas
-     * Continuas
-
-## Escalas de medición
-
- - Nominal
- - Ordinal
- - De intervalo
- - De razón
-
-## Visualización
-
- - Los gráficos dependen del tipo de variable
- - Hay unos gráficos básicos (están en excel)
- - Hay gráficos muy complejos, tenemos que desarrollar nuevas habilidades para leerlos!
+La **frecuencia absoluta** es el conteo del número de veces que aparece una categoría específica en un conjunto de datos. Es la medida más básica de estadística descriptiva y es crucial para comprender la distribución de variables cualitativas. Las categorías en un conjunto de datos representan respuestas a preguntas de encuestas, atributos de los participantes o clasificaciones en estudios sociales.
 
 
-Aquí tienes una versión ampliada del material de estadística descriptiva, con mayor profundidad, ejemplos breves aplicados a la investigación social y explicaciones más detalladas:
+::: {.callout-tip}
 
-# Medidas de tendencia central
+**Ejemplo aplicado a las ciencias sociales**: En un estudio sobre preferencias políticas, los encuestados pueden expresar su afinidad por diferentes partidos. Si en una muestra de 500 personas, 150 apoyan el partido A, 200 el partido B y 150 no apoyan a ningún partido, la frecuencia de cada categoría sería:
 
-Las medidas de tendencia central resumen el valor típico de una variable.
+- **Partido A**: 150
+- **Partido B**: 200
+- **Ninguno**: 150
 
-## Frecuencia
+Este conteo ayuda a determinar cuál es el partido con mayor número de seguidores y, por ende, cuál tiene una posición predominante en la muestra.
 
-La frecuencia es el número de veces que ocurre cada valor. Por ejemplo, en una encuesta sobre nivel educativo, las respuestas pueden ser "primaria", "secundaria", "universidad". Si el 40% de los encuestados tiene educación universitaria, eso corresponde a una frecuencia de 40 en una muestra de 100 personas.
+:::
 
-## Proporción
 
-La proporción se refiere a la frecuencia relativa, es decir, el número de veces que ocurre un valor dividido entre el total de observaciones. Por ejemplo, si el 30% de una muestra de encuestados considera que el gobierno tiene un buen desempeño, esta proporción se puede expresar como 0.30 o el 30%.
+### Proporción
 
-$$p = \frac{freq}{n}$$
+La **proporción** se utiliza para expresar la frecuencia relativa de una categoría con respecto al total de observaciones, facilitando la comparación entre diferentes grupos de datos. Se calcula dividiendo la frecuencia de una categoría por el total de observaciones.
 
-## Moda
 
-La moda es el valor más frecuente. Por ejemplo, si la mayoría de los encuestados trabaja en el sector servicios, la moda es "sector servicios". En variables continuas, como el ingreso, la moda puede no ser útil, ya que no suele haber muchos valores repetidos.
 
-## Media
+::: {.callout-warning}
 
-La media es el promedio de los valores. Es útil para variables cuantitativas y representa el "centro" de la distribución. Por ejemplo, si estamos estudiando los ingresos mensuales de una población, la media indicaría el ingreso promedio. 
+**Fórmula:**
 
-$$\overline{x} = \frac{1}{n} \sum\limits_{i = 1}^n x_i$$
+$$p_i = \frac{\#\text{freq}_i}{n}$$
 
-## Mediana
+Donde:
 
-La mediana es el valor que divide los datos en dos mitades. Es más robusta frente a valores atípicos que la media. Por ejemplo, si estamos analizando el número de hijos en una muestra y los valores son 1, 2, 2, 3 y 10, la mediana será 2, lo que refleja mejor la tendencia central que la media.
+- $p_i$ es la proporción.
+- $\#\text{freq}_i$ es la frecuencia de la categoría específica ($i$-ésima).
+- $n$ es el número total de observaciones.
 
-$$\widetilde{x} \sim X_{(n/2)}$$
 
-# Medidas de localización
+:::
 
-## Cuantiles
+::: {.callout-tip}
+**Ejemplo contextualizado**: Supongamos que en una encuesta sobre el uso de redes sociales, se encontró que 320 de 800 personas utilizan redes sociales diariamente. La proporción de usuarios diarios es:
 
-Los cuantiles dividen los datos en partes iguales. En estudios sociales, los cuantiles son útiles para evaluar la distribución de ingresos o educación. Por ejemplo, el cuartil más bajo (25%) representa el grupo con los ingresos más bajos.
+$$p_{rs} = \frac{320}{800} = 0.40 \text{ o } 40\%$$
 
-$$Q_\alpha(x)\sim X_{(\alpha)}$$
+Este resultado indica que el 40% de los encuestados son usuarios diarios de redes sociales, un hallazgo importante para estudios sobre comportamiento digital y hábitos de consumo en la sociedad.
 
-## Percentiles
 
-Los percentiles son un caso especial de cuantiles y se usan para ver la posición de un valor dentro de una distribución. En educación, el percentil 90 indica que un estudiante superó al 90% de sus compañeros en una prueba estandarizada.
 
-## Cuartiles
+:::
 
-Los cuartiles dividen los datos en cuatro partes. El primer cuartil (Q1) es el 25% más bajo, y el tercer cuartil (Q3) es el 25% más alto. Estos son útiles para evaluar la dispersión de los ingresos dentro de una población.
+Las frecuencias relativas suelen presentarse en porcentajes. Un **porcentaje** es una forma de expresar una fracción o proporción sobre un total de 100, facilitando la comparación y comprensión de datos en contextos variados. Se utiliza ampliamente en estadísticas, finanzas y análisis cuantitativo para representar partes de un todo. La palabra "porcentaje" proviene del latín "per centum," que significa "por cada cien." Su uso se remonta a la antigua Roma, donde los comerciantes y cobradores de impuestos empleaban fracciones y cálculos semejantes al porcentaje moderno para facilitar transacciones y registros contables. A lo largo de los siglos, el concepto se perfeccionó, especialmente durante el Renacimiento, con la expansión del comercio y la necesidad de representar proporciones de forma estandarizada, llevando al símbolo "%" que hoy es universal.
 
-## Mínimo y máximo
+### Moda
+
+La **moda** es la categoría con mayor frecuencia en un conjunto de datos y representa el valor más común o frecuente. Esta medida es particularmente útil en estudios sociales cuando se analizan características como la ocupación, el nivel de estudios o las opiniones sobre políticas públicas. La moda permite identificar tendencias dominantes o respuestas mayoritarias en la población estudiada.
+
+
+::: {.callout-tip}
+
+**Ejemplo aplicado**: Imaginemos un estudio que investiga la ocupación principal de los trabajadores en una ciudad. Si los datos muestran que, de 1,000 encuestados, 450 trabajan en el sector servicios, 300 en el sector manufacturero y 250 en el sector tecnológico. En este caso la moda es "Sector servicios"
+
+Este dato resalta que la ocupación predominante en la muestra es el sector servicios, una observación relevante para estudios de desarrollo económico y planificación urbana.
+
+
+:::
+
+### Nota sobre variables continuas
+
+La moda tiene aplicaciones limitadas en variables continuas, como el ingreso o la altura, ya que estas tienden a no repetir valores exactos con frecuencia significativa. Sin embargo, en ciertas investigaciones sociales, agrupar datos en rangos puede hacer que la moda sea más útil. Por ejemplo, si se clasifica el ingreso en intervalos como "menos de \$10,000", "\$10,001-\$20,000",..., etc., puede ser posible identificar una moda representativa del grupo con mayor frecuencia.
+
+
+::: {.callout-tip}
+
+**Ejemplo adaptado**: Si se analizan los ingresos de 500 hogares y el intervalo "\$10,001-\$20,000" tiene la mayor cantidad de hogares (150), entonces la moda del ingreso agrupado es ese intervalo específico. Esta información puede ser crucial para entender el nivel socioeconómico predominante en un área geográfica y para la formulación de políticas de asistencia económica.
+
+
+:::
+
+## Medidas de tendencia central
+
+Las **medidas de tendencia central** son estadísticas descriptivas que representan el valor típico o central de un conjunto de datos. Estas medidas permiten comprender dónde se encuentra el "centro" de una distribución y son fundamentales en la investigación cuantitativa en ciencias sociales, donde se estudian fenómenos como ingresos, opiniones o resultados de encuestas.
+
+### Media aritmética
+
+La **media aritmética**, comúnmente conocida como promedio, es la medida de tendencia central más utilizada. Se obtiene sumando todos los valores de un conjunto de datos y dividiendo el resultado por el número total de observaciones. La media es ideal para describir conjuntos de datos simétricos y es especialmente útil en estudios de ciencias sociales cuando se necesita resumir características cuantitativas como la edad, el ingreso o la puntuación de una encuesta.
+
+::: {.callout-warning}
+**Fórmula de la media:**
+$$\overline{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
+
+Donde:
+
+- $\overline{x}$ es la media,
+- $n$ es el número de observaciones,
+- $x_i$ representa cada valor individual del conjunto de datos.
+
+
+:::
+
+::: {.callout-tip}
+
+**Ejemplo en ciencias sociales**: Supongamos que estamos estudiando los ingresos mensuales en una comunidad y los datos obtenidos en dólares son: 1,200, 1,500, 1,800, 2,000 y 20,000. La media de estos ingresos es:
+
+$$\overline{x} = \frac{1,200 + 1,500 + 1,800 + 2,000 + 20,000}{5} = \frac{26,500}{5} = 5,300$$
+
+
+Aunque la media es 5,300, este valor puede no representar adecuadamente la distribución, ya que un ingreso atípico de 20,000 distorsiona el promedio.
+
+
+:::
+
+### Mediana
+
+La **mediana** es la medida de tendencia central que divide un conjunto de datos ordenados en dos partes iguales, es decir, la mitad de los datos está por debajo y la otra mitad por encima de la mediana. Esta medida es más resistente a los valores extremos que la media, por lo que es preferida en distribuciones sesgadas o con outliers.
+
+::: {.callout-tip}
+
+**Procedimiento para encontrar la mediana**:
+
+- Si el número de observaciones es impar, la mediana es el valor central.
+- Si es par, la mediana es el promedio de los dos valores centrales.
+
+:::
+
+
+::: {.callout-tip}
+
+**Ejemplo aplicado**: Si analizamos el número de hijos en familias de una comunidad y los datos ordenados son: 1, 2, 2, 3 y 10, la mediana es 2, ya que es el valor del medio.
+
+:::
+
+
+
+### Otras medidas de tendencia central
+
+#### Media armónica
+
+La **media armónica** es útil para conjuntos de datos que representan tasas o razones, ya que pondera los valores de forma que las observaciones más pequeñas tengan un mayor impacto. Se define como el inverso del promedio de los inversos de los valores.
+
+
+::: {.callout-warning}
+**Fórmula de la media armónica:**
+
+$$\overline{x}_{\text{arm}} = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$
+
+Donde: 
+
+:::
+
+::: {.callout-tip}
+
+**Ejemplo en ciencias sociales**: Supongamos que estudiamos la eficiencia de diferentes métodos de transporte urbano en términos de tiempo por viaje. Si los tiempos por viaje (en minutos) son 10, 15 y 20, la media armónica es:
+
+$$\overline{x}_{\text{arm}} = \frac{3}{\frac{1}{10} + \frac{1}{15} + \frac{1}{20}} \approx 13.04$$
+Esta media pondera más los viajes cortos y es útil en análisis donde las tasas individuales son significativas.
+
+:::
+
+
+
+
+#### Media geométrica
+
+La **media geométrica** es apropiada para datos que representan crecimiento proporcional o tasas de cambio, como el crecimiento de la población o el rendimiento económico. Es el \( n \)-ésimo raíz del producto de todos los valores.
+
+
+::: {.callout-warning}
+**Fórmula de la media geométrica:**
+
+$$\overline{x}_{\text{geo}} = \sqrt[n]{x_1 \cdot x_2 \cdot \ldots \cdot x_n}$$
+
+:::
+
+
+
+::: {.callout-tip}
+**Ejemplo en ciencias sociales**: Si una población crece anualmente a tasas de 1.05, 1.10 y 1.08, la media geométrica del crecimiento es:
+
+$$\overline{x}_{\text{geo}} = \sqrt[3]{1.05 \times 1.10 \times 1.08} \approx 1.076$$
+
+Lo que implica un crecimiento promedio anual del 7.6%.
+
+:::
+
+
+#### Comparación de las medidas
+
+En resumen, la **media aritmética** es ideal para datos simétricos y sin valores extremos, la **mediana** es preferible en distribuciones sesgadas o con valores atípicos, y las **medias armónica y geométrica** se utilizan en contextos específicos relacionados con tasas o datos multiplicativos. Estas medidas permiten a los investigadores de las ciencias sociales interpretar adecuadamente los datos y tomar decisiones basadas en análisis cuantitativos sólidos.
+
+
+
+## Medidas de localización
+
+### Mínimo y máximo
 
 El mínimo es el valor más bajo en el conjunto de datos y el máximo es el valor más alto. En estudios sociales, pueden utilizarse para detectar posibles extremos en las variables, como el ingreso o la edad.
 
+### Cuantiles
 
-# Medidas de dispersión
+Los cuantiles dividen los datos en partes iguales. En estudios sociales, los cuantiles son útiles para evaluar la distribución de ingresos o educación. Por ejemplo, el cuartil más bajo (25%) representa el grupo con los ingresos más bajos.
 
-## Varianza
+
+::: {.callout-warning}
+
+$$Q_\alpha(x)\sim X_{(\alpha)}$$
+
+:::
+
+
+
+### Percentiles
+
+Los percentiles son un caso especial de cuantiles y se usan para ver la posición de un valor dentro de una distribución. En educación, el percentil 90 indica que un estudiante superó al 90% de sus compañeros en una prueba estandarizada.
+
+### Cuartiles
+
+Los cuartiles dividen los datos en cuatro partes. El primer cuartil (Q1) es el 25% más bajo, y el tercer cuartil (Q3) es el 25% más alto. Estos son útiles para evaluar la dispersión de los ingresos dentro de una población.
+
+
+## Medidas de dispersión
+
+### Varianza
 
 La varianza mide qué tan dispersos están los datos respecto a la media. En estudios de desigualdad de ingresos, una alta varianza indicaría grandes disparidades entre los ingresos de las personas.
 
+::: {.callout-warning}
+
 $$ S_x^2 =\frac{1}{n} \sum\limits_{i=1}^n (x_i-\overline{x})^2$$
+
+:::
+
+
+::: {.callout-tip}
 
 Ejemplo: En una muestra de ingresos de 2000, 2500, 3000, 3500 y 4000, la varianza nos indica cuánto se alejan estos valores de la media.
 
-## Desviación estándar
+:::
+
+
+
+### Desviación estándar
 
 La desviación estándar es la raíz cuadrada de la varianza y nos proporciona una medida de dispersión en las mismas unidades que los datos originales. Por ejemplo, si la desviación estándar de los ingresos en una población es alta, indica que hay una gran variabilidad en los ingresos.
 
+
+::: {.callout-warning}
 $$ S_x =\sqrt{S_x^2}$$
 
-## Rango intercuartílico (IQR)
+:::
+
+
+### Rango intercuartílico (IQR)
 
 El rango intercuartílico es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1). Mide la dispersión central de los datos y es útil para evitar que los valores extremos influyan en la interpretación.
 
-$$ran(x) = Q_{0.75}(x) - Q_{0.25}(x)$$
+::: {.callout-warning}
+$$ran(x) = Q_{3}(x) - Q_{1}(x)$$
+
+:::
+
+
 
 Ejemplo: En una encuesta de satisfacción con el gobierno, el IQR podría mostrar la variación en las respuestas del 50% central, ignorando los valores más extremos de descontento o satisfacción.
 
-## Rango
+### Rango
 
 El rango es la diferencia entre el valor máximo y el mínimo. Aunque es fácil de calcular, puede verse afectado por valores atípicos. Por ejemplo, en el análisis de ingresos, el rango puede ser muy amplio si hay pocos individuos con ingresos extremadamente altos.
 
-$$Rango = Q_{1}(x) - Q_{0}(x)$$
+
+::: {.callout-warning}
+
+$$Rango = max(x) - min(x)$$
+
+:::
 
 
-## Hablemos bien
+## Ejercicios y actividades
 
-No diga: la gente votó en promedio por el candidato X
+### Hablemos bien
 
-Diga: la gente votó en mayor proporción por el candidato X
+No diga: la gente votó **en promedio** por el candidato X
+
+Diga: la gente votó en **mayor proporción** por el candidato X
 
 
-## Actividad en clase
+### Actividad
 
 No diga:
 
  - Esta alternativa es muy buena, nos ahorra menos dolores de cabeza
 
- - La edad promedio de los estudiantes es entre 15 y 20 años. 
+ - La edad promedio de los estudiantes está entre 15 y 20 años. 
  
- - Uno de cada tres estudiantes no sabe estadística.
+ - En total, uno de cada tres estudiantes no sabe estadística.
+
+Analice
 
  - Más de la mitad de los estudiantes que presentaron la prueba saber están por debajo del promedio del puntaje de inglés.
+ 
+ - El 70% de los colombianos tienen ingresos por debajo de la media.
 

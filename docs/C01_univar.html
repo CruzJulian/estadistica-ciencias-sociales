@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
 
-<title>Estadística descriptiva para una variable – Estadística</title>
+<title>3&nbsp; Estadística descriptiva para una variable – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C01_corr.html" rel="next">
+<link href="./C01_prepara.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -54,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -101,130 +102,193 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_univar.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#repaso" id="toc-repaso" class="nav-link active" data-scroll-target="#repaso">Repaso</a>
+  <li><a href="#medidas-de-frecuencia" id="toc-medidas-de-frecuencia" class="nav-link active" data-scroll-target="#medidas-de-frecuencia"><span class="header-section-number">3.1</span> Medidas de frecuencia</a>
   <ul class="collapse">
-  <li><a href="#tipos-de-variables" id="toc-tipos-de-variables" class="nav-link" data-scroll-target="#tipos-de-variables">Tipos de variables:</a></li>
-  <li><a href="#escalas-de-medición" id="toc-escalas-de-medición" class="nav-link" data-scroll-target="#escalas-de-medición">Escalas de medición</a></li>
-  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización">Visualización</a></li>
+  <li><a href="#frecuencia" id="toc-frecuencia" class="nav-link" data-scroll-target="#frecuencia"><span class="header-section-number">3.1.1</span> Frecuencia</a></li>
+  <li><a href="#proporción" id="toc-proporción" class="nav-link" data-scroll-target="#proporción"><span class="header-section-number">3.1.2</span> Proporción</a></li>
+  <li><a href="#moda" id="toc-moda" class="nav-link" data-scroll-target="#moda"><span class="header-section-number">3.1.3</span> Moda</a></li>
+  <li><a href="#nota-sobre-variables-continuas" id="toc-nota-sobre-variables-continuas" class="nav-link" data-scroll-target="#nota-sobre-variables-continuas"><span class="header-section-number">3.1.4</span> Nota sobre variables continuas</a></li>
   </ul></li>
-  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central">Medidas de tendencia central</a>
+  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central"><span class="header-section-number">3.2</span> Medidas de tendencia central</a>
   <ul class="collapse">
-  <li><a href="#frecuencia" id="toc-frecuencia" class="nav-link" data-scroll-target="#frecuencia">Frecuencia</a></li>
-  <li><a href="#proporción" id="toc-proporción" class="nav-link" data-scroll-target="#proporción">Proporción</a></li>
-  <li><a href="#moda" id="toc-moda" class="nav-link" data-scroll-target="#moda">Moda</a></li>
-  <li><a href="#media" id="toc-media" class="nav-link" data-scroll-target="#media">Media</a></li>
-  <li><a href="#mediana" id="toc-mediana" class="nav-link" data-scroll-target="#mediana">Mediana</a></li>
+  <li><a href="#media-aritmética" id="toc-media-aritmética" class="nav-link" data-scroll-target="#media-aritmética"><span class="header-section-number">3.2.1</span> Media aritmética</a></li>
+  <li><a href="#mediana" id="toc-mediana" class="nav-link" data-scroll-target="#mediana"><span class="header-section-number">3.2.2</span> Mediana</a></li>
+  <li><a href="#otras-medidas-de-tendencia-central" id="toc-otras-medidas-de-tendencia-central" class="nav-link" data-scroll-target="#otras-medidas-de-tendencia-central"><span class="header-section-number">3.2.3</span> Otras medidas de tendencia central</a></li>
   </ul></li>
-  <li><a href="#medidas-de-localización" id="toc-medidas-de-localización" class="nav-link" data-scroll-target="#medidas-de-localización">Medidas de localización</a>
+  <li><a href="#medidas-de-localización" id="toc-medidas-de-localización" class="nav-link" data-scroll-target="#medidas-de-localización"><span class="header-section-number">3.3</span> Medidas de localización</a>
   <ul class="collapse">
-  <li><a href="#cuantiles" id="toc-cuantiles" class="nav-link" data-scroll-target="#cuantiles">Cuantiles</a></li>
-  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles">Percentiles</a></li>
-  <li><a href="#cuartiles" id="toc-cuartiles" class="nav-link" data-scroll-target="#cuartiles">Cuartiles</a></li>
-  <li><a href="#mínimo-y-máximo" id="toc-mínimo-y-máximo" class="nav-link" data-scroll-target="#mínimo-y-máximo">Mínimo y máximo</a></li>
+  <li><a href="#mínimo-y-máximo" id="toc-mínimo-y-máximo" class="nav-link" data-scroll-target="#mínimo-y-máximo"><span class="header-section-number">3.3.1</span> Mínimo y máximo</a></li>
+  <li><a href="#cuantiles" id="toc-cuantiles" class="nav-link" data-scroll-target="#cuantiles"><span class="header-section-number">3.3.2</span> Cuantiles</a></li>
+  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles"><span class="header-section-number">3.3.3</span> Percentiles</a></li>
+  <li><a href="#cuartiles" id="toc-cuartiles" class="nav-link" data-scroll-target="#cuartiles"><span class="header-section-number">3.3.4</span> Cuartiles</a></li>
   </ul></li>
-  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión">Medidas de dispersión</a>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="header-section-number">3.4</span> Medidas de dispersión</a>
   <ul class="collapse">
-  <li><a href="#varianza" id="toc-varianza" class="nav-link" data-scroll-target="#varianza">Varianza</a></li>
-  <li><a href="#desviación-estándar" id="toc-desviación-estándar" class="nav-link" data-scroll-target="#desviación-estándar">Desviación estándar</a></li>
-  <li><a href="#rango-intercuartílico-iqr" id="toc-rango-intercuartílico-iqr" class="nav-link" data-scroll-target="#rango-intercuartílico-iqr">Rango intercuartílico (IQR)</a></li>
-  <li><a href="#rango" id="toc-rango" class="nav-link" data-scroll-target="#rango">Rango</a></li>
-  <li><a href="#hablemos-bien" id="toc-hablemos-bien" class="nav-link" data-scroll-target="#hablemos-bien">Hablemos bien</a></li>
-  <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase">Actividad en clase</a></li>
+  <li><a href="#varianza" id="toc-varianza" class="nav-link" data-scroll-target="#varianza"><span class="header-section-number">3.4.1</span> Varianza</a></li>
+  <li><a href="#desviación-estándar" id="toc-desviación-estándar" class="nav-link" data-scroll-target="#desviación-estándar"><span class="header-section-number">3.4.2</span> Desviación estándar</a></li>
+  <li><a href="#rango-intercuartílico-iqr" id="toc-rango-intercuartílico-iqr" class="nav-link" data-scroll-target="#rango-intercuartílico-iqr"><span class="header-section-number">3.4.3</span> Rango intercuartílico (IQR)</a></li>
+  <li><a href="#rango" id="toc-rango" class="nav-link" data-scroll-target="#rango"><span class="header-section-number">3.4.4</span> Rango</a></li>
+  </ul></li>
+  <li><a href="#ejercicios-y-actividades" id="toc-ejercicios-y-actividades" class="nav-link" data-scroll-target="#ejercicios-y-actividades"><span class="header-section-number">3.5</span> Ejercicios y actividades</a>
+  <ul class="collapse">
+  <li><a href="#hablemos-bien" id="toc-hablemos-bien" class="nav-link" data-scroll-target="#hablemos-bien"><span class="header-section-number">3.5.1</span> Hablemos bien</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad"><span class="header-section-number">3.5.2</span> Actividad</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -232,22 +296,15 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_univar.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística descriptiva para una variable</h1>
-<p class="subtitle lead">Introducción al mundo cuantitativo</p>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
-          </div>
-  </div>
     
   
     
@@ -258,122 +315,393 @@ window.Quarto = {
 </header>
 
 
-<section id="repaso" class="level1">
-<h1>Repaso</h1>
-<section id="tipos-de-variables" class="level2">
-<h2 class="anchored" data-anchor-id="tipos-de-variables">Tipos de variables:</h2>
+<section id="medidas-de-frecuencia" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="medidas-de-frecuencia"><span class="header-section-number">3.1</span> Medidas de frecuencia</h2>
+<p>En el análisis de datos dentro de las ciencias sociales, las medidas de frecuencia permiten describir de manera precisa la distribución de variables <strong>categóricas</strong> y ayudan a comprender patrones generales en poblaciones o muestras. Estas medidas son esenciales para resumir y comunicar la información de forma efectiva, aportando una base sólida para el análisis estadístico posterior.</p>
+<section id="frecuencia" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="frecuencia"><span class="header-section-number">3.1.1</span> Frecuencia</h3>
+<p>La <strong>frecuencia absoluta</strong> es el conteo del número de veces que aparece una categoría específica en un conjunto de datos. Es la medida más básica de estadística descriptiva y es crucial para comprender la distribución de variables cualitativas. Las categorías en un conjunto de datos representan respuestas a preguntas de encuestas, atributos de los participantes o clasificaciones en estudios sociales.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo aplicado a las ciencias sociales</strong>: En un estudio sobre preferencias políticas, los encuestados pueden expresar su afinidad por diferentes partidos. Si en una muestra de 500 personas, 150 apoyan el partido A, 200 el partido B y 150 no apoyan a ningún partido, la frecuencia de cada categoría sería:</p>
 <ul>
-<li>Cualitativas</li>
-<li>Cuantitativas
-<ul>
-<li>Discretas</li>
-<li>Continuas</li>
-</ul></li>
+<li><strong>Partido A</strong>: 150</li>
+<li><strong>Partido B</strong>: 200</li>
+<li><strong>Ninguno</strong>: 150</li>
 </ul>
+<p>Este conteo ayuda a determinar cuál es el partido con mayor número de seguidores y, por ende, cuál tiene una posición predominante en la muestra.</p>
+</div>
+</div>
 </section>
-<section id="escalas-de-medición" class="level2">
-<h2 class="anchored" data-anchor-id="escalas-de-medición">Escalas de medición</h2>
+<section id="proporción" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="proporción"><span class="header-section-number">3.1.2</span> Proporción</h3>
+<p>La <strong>proporción</strong> se utiliza para expresar la frecuencia relativa de una categoría con respecto al total de observaciones, facilitando la comparación entre diferentes grupos de datos. Se calcula dividiendo la frecuencia de una categoría por el total de observaciones.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fórmula:</strong></p>
+<p><span class="math display">\[p_i = \frac{\#\text{freq}_i}{n}\]</span></p>
+<p>Donde:</p>
 <ul>
-<li>Nominal</li>
-<li>Ordinal</li>
-<li>De intervalo</li>
-<li>De razón</li>
+<li><span class="math inline">\(p_i\)</span> es la proporción.</li>
+<li><span class="math inline">\(\#\text{freq}_i\)</span> es la frecuencia de la categoría específica (<span class="math inline">\(i\)</span>-ésima).</li>
+<li><span class="math inline">\(n\)</span> es el número total de observaciones.</li>
 </ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo contextualizado</strong>: Supongamos que en una encuesta sobre el uso de redes sociales, se encontró que 320 de 800 personas utilizan redes sociales diariamente. La proporción de usuarios diarios es:</p>
+<p><span class="math display">\[p_{rs} = \frac{320}{800} = 0.40 \text{ o } 40\%\]</span></p>
+<p>Este resultado indica que el 40% de los encuestados son usuarios diarios de redes sociales, un hallazgo importante para estudios sobre comportamiento digital y hábitos de consumo en la sociedad.</p>
+</div>
+</div>
+<p>Las frecuencias relativas suelen presentarse en porcentajes. Un <strong>porcentaje</strong> es una forma de expresar una fracción o proporción sobre un total de 100, facilitando la comparación y comprensión de datos en contextos variados. Se utiliza ampliamente en estadísticas, finanzas y análisis cuantitativo para representar partes de un todo. La palabra “porcentaje” proviene del latín “per centum,” que significa “por cada cien.” Su uso se remonta a la antigua Roma, donde los comerciantes y cobradores de impuestos empleaban fracciones y cálculos semejantes al porcentaje moderno para facilitar transacciones y registros contables. A lo largo de los siglos, el concepto se perfeccionó, especialmente durante el Renacimiento, con la expansión del comercio y la necesidad de representar proporciones de forma estandarizada, llevando al símbolo “%” que hoy es universal.</p>
 </section>
-<section id="visualización" class="level2">
-<h2 class="anchored" data-anchor-id="visualización">Visualización</h2>
+<section id="moda" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="moda"><span class="header-section-number">3.1.3</span> Moda</h3>
+<p>La <strong>moda</strong> es la categoría con mayor frecuencia en un conjunto de datos y representa el valor más común o frecuente. Esta medida es particularmente útil en estudios sociales cuando se analizan características como la ocupación, el nivel de estudios o las opiniones sobre políticas públicas. La moda permite identificar tendencias dominantes o respuestas mayoritarias en la población estudiada.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo aplicado</strong>: Imaginemos un estudio que investiga la ocupación principal de los trabajadores en una ciudad. Si los datos muestran que, de 1,000 encuestados, 450 trabajan en el sector servicios, 300 en el sector manufacturero y 250 en el sector tecnológico. En este caso la moda es “Sector servicios”</p>
+<p>Este dato resalta que la ocupación predominante en la muestra es el sector servicios, una observación relevante para estudios de desarrollo económico y planificación urbana.</p>
+</div>
+</div>
+</section>
+<section id="nota-sobre-variables-continuas" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="nota-sobre-variables-continuas"><span class="header-section-number">3.1.4</span> Nota sobre variables continuas</h3>
+<p>La moda tiene aplicaciones limitadas en variables continuas, como el ingreso o la altura, ya que estas tienden a no repetir valores exactos con frecuencia significativa. Sin embargo, en ciertas investigaciones sociales, agrupar datos en rangos puede hacer que la moda sea más útil. Por ejemplo, si se clasifica el ingreso en intervalos como “menos de $10,000”, “$10,001-$20,000”,…, etc., puede ser posible identificar una moda representativa del grupo con mayor frecuencia.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo adaptado</strong>: Si se analizan los ingresos de 500 hogares y el intervalo “$10,001-$20,000” tiene la mayor cantidad de hogares (150), entonces la moda del ingreso agrupado es ese intervalo específico. Esta información puede ser crucial para entender el nivel socioeconómico predominante en un área geográfica y para la formulación de políticas de asistencia económica.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="medidas-de-tendencia-central" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="medidas-de-tendencia-central"><span class="header-section-number">3.2</span> Medidas de tendencia central</h2>
+<p>Las <strong>medidas de tendencia central</strong> son estadísticas descriptivas que representan el valor típico o central de un conjunto de datos. Estas medidas permiten comprender dónde se encuentra el “centro” de una distribución y son fundamentales en la investigación cuantitativa en ciencias sociales, donde se estudian fenómenos como ingresos, opiniones o resultados de encuestas.</p>
+<section id="media-aritmética" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="media-aritmética"><span class="header-section-number">3.2.1</span> Media aritmética</h3>
+<p>La <strong>media aritmética</strong>, comúnmente conocida como promedio, es la medida de tendencia central más utilizada. Se obtiene sumando todos los valores de un conjunto de datos y dividiendo el resultado por el número total de observaciones. La media es ideal para describir conjuntos de datos simétricos y es especialmente útil en estudios de ciencias sociales cuando se necesita resumir características cuantitativas como la edad, el ingreso o la puntuación de una encuesta.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fórmula de la media:</strong> <span class="math display">\[\overline{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\]</span></p>
+<p>Donde:</p>
 <ul>
-<li>Los gráficos dependen del tipo de variable</li>
-<li>Hay unos gráficos básicos (están en excel)</li>
-<li>Hay gráficos muy complejos, tenemos que desarrollar nuevas habilidades para leerlos!</li>
+<li><span class="math inline">\(\overline{x}\)</span> es la media,</li>
+<li><span class="math inline">\(n\)</span> es el número de observaciones,</li>
+<li><span class="math inline">\(x_i\)</span> representa cada valor individual del conjunto de datos.</li>
 </ul>
-<p>Aquí tienes una versión ampliada del material de estadística descriptiva, con mayor profundidad, ejemplos breves aplicados a la investigación social y explicaciones más detalladas:</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo en ciencias sociales</strong>: Supongamos que estamos estudiando los ingresos mensuales en una comunidad y los datos obtenidos en dólares son: 1,200, 1,500, 1,800, 2,000 y 20,000. La media de estos ingresos es:</p>
+<p><span class="math display">\[\overline{x} = \frac{1,200 + 1,500 + 1,800 + 2,000 + 20,000}{5} = \frac{26,500}{5} = 5,300\]</span></p>
+<p>Aunque la media es 5,300, este valor puede no representar adecuadamente la distribución, ya que un ingreso atípico de 20,000 distorsiona el promedio.</p>
+</div>
+</div>
+</section>
+<section id="mediana" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="mediana"><span class="header-section-number">3.2.2</span> Mediana</h3>
+<p>La <strong>mediana</strong> es la medida de tendencia central que divide un conjunto de datos ordenados en dos partes iguales, es decir, la mitad de los datos está por debajo y la otra mitad por encima de la mediana. Esta medida es más resistente a los valores extremos que la media, por lo que es preferida en distribuciones sesgadas o con outliers.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Procedimiento para encontrar la mediana</strong>:</p>
+<ul>
+<li>Si el número de observaciones es impar, la mediana es el valor central.</li>
+<li>Si es par, la mediana es el promedio de los dos valores centrales.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo aplicado</strong>: Si analizamos el número de hijos en familias de una comunidad y los datos ordenados son: 1, 2, 2, 3 y 10, la mediana es 2, ya que es el valor del medio.</p>
+</div>
+</div>
+</section>
+<section id="otras-medidas-de-tendencia-central" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="otras-medidas-de-tendencia-central"><span class="header-section-number">3.2.3</span> Otras medidas de tendencia central</h3>
+<section id="media-armónica" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="media-armónica"><span class="header-section-number">3.2.3.1</span> Media armónica</h4>
+<p>La <strong>media armónica</strong> es útil para conjuntos de datos que representan tasas o razones, ya que pondera los valores de forma que las observaciones más pequeñas tengan un mayor impacto. Se define como el inverso del promedio de los inversos de los valores.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fórmula de la media armónica:</strong></p>
+<p><span class="math display">\[\overline{x}_{\text{arm}} = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}\]</span></p>
+<p>Donde:</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo en ciencias sociales</strong>: Supongamos que estudiamos la eficiencia de diferentes métodos de transporte urbano en términos de tiempo por viaje. Si los tiempos por viaje (en minutos) son 10, 15 y 20, la media armónica es:</p>
+<p><span class="math display">\[\overline{x}_{\text{arm}} = \frac{3}{\frac{1}{10} + \frac{1}{15} + \frac{1}{20}} \approx 13.04\]</span> Esta media pondera más los viajes cortos y es útil en análisis donde las tasas individuales son significativas.</p>
+</div>
+</div>
+</section>
+<section id="media-geométrica" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="media-geométrica"><span class="header-section-number">3.2.3.2</span> Media geométrica</h4>
+<p>La <strong>media geométrica</strong> es apropiada para datos que representan crecimiento proporcional o tasas de cambio, como el crecimiento de la población o el rendimiento económico. Es el ( n )-ésimo raíz del producto de todos los valores.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fórmula de la media geométrica:</strong></p>
+<p><span class="math display">\[\overline{x}_{\text{geo}} = \sqrt[n]{x_1 \cdot x_2 \cdot \ldots \cdot x_n}\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ejemplo en ciencias sociales</strong>: Si una población crece anualmente a tasas de 1.05, 1.10 y 1.08, la media geométrica del crecimiento es:</p>
+<p><span class="math display">\[\overline{x}_{\text{geo}} = \sqrt[3]{1.05 \times 1.10 \times 1.08} \approx 1.076\]</span></p>
+<p>Lo que implica un crecimiento promedio anual del 7.6%.</p>
+</div>
+</div>
+</section>
+<section id="comparación-de-las-medidas" class="level4" data-number="3.2.3.3">
+<h4 data-number="3.2.3.3" class="anchored" data-anchor-id="comparación-de-las-medidas"><span class="header-section-number">3.2.3.3</span> Comparación de las medidas</h4>
+<p>En resumen, la <strong>media aritmética</strong> es ideal para datos simétricos y sin valores extremos, la <strong>mediana</strong> es preferible en distribuciones sesgadas o con valores atípicos, y las <strong>medias armónica y geométrica</strong> se utilizan en contextos específicos relacionados con tasas o datos multiplicativos. Estas medidas permiten a los investigadores de las ciencias sociales interpretar adecuadamente los datos y tomar decisiones basadas en análisis cuantitativos sólidos.</p>
 </section>
 </section>
-<section id="medidas-de-tendencia-central" class="level1">
-<h1>Medidas de tendencia central</h1>
-<p>Las medidas de tendencia central resumen el valor típico de una variable.</p>
-<section id="frecuencia" class="level2">
-<h2 class="anchored" data-anchor-id="frecuencia">Frecuencia</h2>
-<p>La frecuencia es el número de veces que ocurre cada valor. Por ejemplo, en una encuesta sobre nivel educativo, las respuestas pueden ser “primaria”, “secundaria”, “universidad”. Si el 40% de los encuestados tiene educación universitaria, eso corresponde a una frecuencia de 40 en una muestra de 100 personas.</p>
 </section>
-<section id="proporción" class="level2">
-<h2 class="anchored" data-anchor-id="proporción">Proporción</h2>
-<p>La proporción se refiere a la frecuencia relativa, es decir, el número de veces que ocurre un valor dividido entre el total de observaciones. Por ejemplo, si el 30% de una muestra de encuestados considera que el gobierno tiene un buen desempeño, esta proporción se puede expresar como 0.30 o el 30%.</p>
-<p><span class="math display">\[p = \frac{freq}{n}\]</span></p>
-</section>
-<section id="moda" class="level2">
-<h2 class="anchored" data-anchor-id="moda">Moda</h2>
-<p>La moda es el valor más frecuente. Por ejemplo, si la mayoría de los encuestados trabaja en el sector servicios, la moda es “sector servicios”. En variables continuas, como el ingreso, la moda puede no ser útil, ya que no suele haber muchos valores repetidos.</p>
-</section>
-<section id="media" class="level2">
-<h2 class="anchored" data-anchor-id="media">Media</h2>
-<p>La media es el promedio de los valores. Es útil para variables cuantitativas y representa el “centro” de la distribución. Por ejemplo, si estamos estudiando los ingresos mensuales de una población, la media indicaría el ingreso promedio.</p>
-<p><span class="math display">\[\overline{x} = \frac{1}{n} \sum\limits_{i = 1}^n x_i\]</span></p>
-</section>
-<section id="mediana" class="level2">
-<h2 class="anchored" data-anchor-id="mediana">Mediana</h2>
-<p>La mediana es el valor que divide los datos en dos mitades. Es más robusta frente a valores atípicos que la media. Por ejemplo, si estamos analizando el número de hijos en una muestra y los valores son 1, 2, 2, 3 y 10, la mediana será 2, lo que refleja mejor la tendencia central que la media.</p>
-<p><span class="math display">\[\widetilde{x} \sim X_{(n/2)}\]</span></p>
-</section>
-</section>
-<section id="medidas-de-localización" class="level1">
-<h1>Medidas de localización</h1>
-<section id="cuantiles" class="level2">
-<h2 class="anchored" data-anchor-id="cuantiles">Cuantiles</h2>
-<p>Los cuantiles dividen los datos en partes iguales. En estudios sociales, los cuantiles son útiles para evaluar la distribución de ingresos o educación. Por ejemplo, el cuartil más bajo (25%) representa el grupo con los ingresos más bajos.</p>
-<p><span class="math display">\[Q_\alpha(x)\sim X_{(\alpha)}\]</span></p>
-</section>
-<section id="percentiles" class="level2">
-<h2 class="anchored" data-anchor-id="percentiles">Percentiles</h2>
-<p>Los percentiles son un caso especial de cuantiles y se usan para ver la posición de un valor dentro de una distribución. En educación, el percentil 90 indica que un estudiante superó al 90% de sus compañeros en una prueba estandarizada.</p>
-</section>
-<section id="cuartiles" class="level2">
-<h2 class="anchored" data-anchor-id="cuartiles">Cuartiles</h2>
-<p>Los cuartiles dividen los datos en cuatro partes. El primer cuartil (Q1) es el 25% más bajo, y el tercer cuartil (Q3) es el 25% más alto. Estos son útiles para evaluar la dispersión de los ingresos dentro de una población.</p>
-</section>
-<section id="mínimo-y-máximo" class="level2">
-<h2 class="anchored" data-anchor-id="mínimo-y-máximo">Mínimo y máximo</h2>
+<section id="medidas-de-localización" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="medidas-de-localización"><span class="header-section-number">3.3</span> Medidas de localización</h2>
+<section id="mínimo-y-máximo" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="mínimo-y-máximo"><span class="header-section-number">3.3.1</span> Mínimo y máximo</h3>
 <p>El mínimo es el valor más bajo en el conjunto de datos y el máximo es el valor más alto. En estudios sociales, pueden utilizarse para detectar posibles extremos en las variables, como el ingreso o la edad.</p>
 </section>
+<section id="cuantiles" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="cuantiles"><span class="header-section-number">3.3.2</span> Cuantiles</h3>
+<p>Los cuantiles dividen los datos en partes iguales. En estudios sociales, los cuantiles son útiles para evaluar la distribución de ingresos o educación. Por ejemplo, el cuartil más bajo (25%) representa el grupo con los ingresos más bajos.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Q_\alpha(x)\sim X_{(\alpha)}\]</span></p>
+</div>
+</div>
 </section>
-<section id="medidas-de-dispersión" class="level1">
-<h1>Medidas de dispersión</h1>
-<section id="varianza" class="level2">
-<h2 class="anchored" data-anchor-id="varianza">Varianza</h2>
+<section id="percentiles" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">3.3.3</span> Percentiles</h3>
+<p>Los percentiles son un caso especial de cuantiles y se usan para ver la posición de un valor dentro de una distribución. En educación, el percentil 90 indica que un estudiante superó al 90% de sus compañeros en una prueba estandarizada.</p>
+</section>
+<section id="cuartiles" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="cuartiles"><span class="header-section-number">3.3.4</span> Cuartiles</h3>
+<p>Los cuartiles dividen los datos en cuatro partes. El primer cuartil (Q1) es el 25% más bajo, y el tercer cuartil (Q3) es el 25% más alto. Estos son útiles para evaluar la dispersión de los ingresos dentro de una población.</p>
+</section>
+</section>
+<section id="medidas-de-dispersión" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">3.4</span> Medidas de dispersión</h2>
+<section id="varianza" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="varianza"><span class="header-section-number">3.4.1</span> Varianza</h3>
 <p>La varianza mide qué tan dispersos están los datos respecto a la media. En estudios de desigualdad de ingresos, una alta varianza indicaría grandes disparidades entre los ingresos de las personas.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[ S_x^2 =\frac{1}{n} \sum\limits_{i=1}^n (x_i-\overline{x})^2\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Ejemplo: En una muestra de ingresos de 2000, 2500, 3000, 3500 y 4000, la varianza nos indica cuánto se alejan estos valores de la media.</p>
+</div>
+</div>
 </section>
-<section id="desviación-estándar" class="level2">
-<h2 class="anchored" data-anchor-id="desviación-estándar">Desviación estándar</h2>
+<section id="desviación-estándar" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="desviación-estándar"><span class="header-section-number">3.4.2</span> Desviación estándar</h3>
 <p>La desviación estándar es la raíz cuadrada de la varianza y nos proporciona una medida de dispersión en las mismas unidades que los datos originales. Por ejemplo, si la desviación estándar de los ingresos en una población es alta, indica que hay una gran variabilidad en los ingresos.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[ S_x =\sqrt{S_x^2}\]</span></p>
+</div>
+</div>
 </section>
-<section id="rango-intercuartílico-iqr" class="level2">
-<h2 class="anchored" data-anchor-id="rango-intercuartílico-iqr">Rango intercuartílico (IQR)</h2>
+<section id="rango-intercuartílico-iqr" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="rango-intercuartílico-iqr"><span class="header-section-number">3.4.3</span> Rango intercuartílico (IQR)</h3>
 <p>El rango intercuartílico es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1). Mide la dispersión central de los datos y es útil para evitar que los valores extremos influyan en la interpretación.</p>
-<p><span class="math display">\[ran(x) = Q_{0.75}(x) - Q_{0.25}(x)\]</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[ran(x) = Q_{3}(x) - Q_{1}(x)\]</span></p>
+</div>
+</div>
 <p>Ejemplo: En una encuesta de satisfacción con el gobierno, el IQR podría mostrar la variación en las respuestas del 50% central, ignorando los valores más extremos de descontento o satisfacción.</p>
 </section>
-<section id="rango" class="level2">
-<h2 class="anchored" data-anchor-id="rango">Rango</h2>
+<section id="rango" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="rango"><span class="header-section-number">3.4.4</span> Rango</h3>
 <p>El rango es la diferencia entre el valor máximo y el mínimo. Aunque es fácil de calcular, puede verse afectado por valores atípicos. Por ejemplo, en el análisis de ingresos, el rango puede ser muy amplio si hay pocos individuos con ingresos extremadamente altos.</p>
-<p><span class="math display">\[Rango = Q_{1}(x) - Q_{0}(x)\]</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Rango = max(x) - min(x)\]</span></p>
+</div>
+</div>
 </section>
-<section id="hablemos-bien" class="level2">
-<h2 class="anchored" data-anchor-id="hablemos-bien">Hablemos bien</h2>
-<p>No diga: la gente votó en promedio por el candidato X</p>
-<p>Diga: la gente votó en mayor proporción por el candidato X</p>
 </section>
-<section id="actividad-en-clase" class="level2">
-<h2 class="anchored" data-anchor-id="actividad-en-clase">Actividad en clase</h2>
+<section id="ejercicios-y-actividades" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="ejercicios-y-actividades"><span class="header-section-number">3.5</span> Ejercicios y actividades</h2>
+<section id="hablemos-bien" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="hablemos-bien"><span class="header-section-number">3.5.1</span> Hablemos bien</h3>
+<p>No diga: la gente votó <strong>en promedio</strong> por el candidato X</p>
+<p>Diga: la gente votó en <strong>mayor proporción</strong> por el candidato X</p>
+</section>
+<section id="actividad" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="actividad"><span class="header-section-number">3.5.2</span> Actividad</h3>
 <p>No diga:</p>
 <ul>
 <li><p>Esta alternativa es muy buena, nos ahorra menos dolores de cabeza</p></li>
-<li><p>La edad promedio de los estudiantes es entre 15 y 20 años.</p></li>
-<li><p>Uno de cada tres estudiantes no sabe estadística.</p></li>
+<li><p>La edad promedio de los estudiantes está entre 15 y 20 años.</p></li>
+<li><p>En total, uno de cada tres estudiantes no sabe estadística.</p></li>
+</ul>
+<p>Analice</p>
+<ul>
 <li><p>Más de la mitad de los estudiantes que presentaron la prueba saber están por debajo del promedio del puntaje de inglés.</p></li>
+<li><p>El 70% de los colombianos tienen ingresos por debajo de la media.</p></li>
 </ul>
 
 
@@ -424,12 +752,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -801,6 +1129,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C01_prepara.html" class="pagination-link" aria-label="Preparación de los datos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C01_corr.html" class="pagination-link" aria-label="Correlación">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

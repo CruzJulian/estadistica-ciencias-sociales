@@ -1,6 +1,54 @@
----
-title: "Estadistica para Ciencias sociales"
----
+# Comencemos {.unnumbered}
+
+```{r}
+# justificar los textos vía css
+# Pruebas de hipótesis: analíticas paramétricas, analíticas no paramétricas, computacionales paramétricas, computacionales no paramétricas.
+# Poner todas las fórmulas en cajas
+# Variables cualitativas, cómo se ven en un gráfico, cuáles son sus elementos visuales, cómo se trabajan en modelamiento, datos cíclicos, datos textuales
+# Hacer capítulo de preparación de los datos.
+#### Completar la fórmula de las estadíustias descriptivas
+# Actualizar los covers para que coincidan con los capítulos
+```
 
 
+El Laboratorio Interdisciplinar de Medición Social (LABMEDISOCIAL) se complace en presentar estas notas de clase sobre estadística en ciencias sociales.
+
+La estadística, en su esencia, constituye un puente entre la observación empírica y la construcción de conocimiento científico. En el ámbito de las ciencias sociales, su aplicación trasciende el análisis de datos para convertirse en una herramienta indispensable en la formulación de teorías, la validación de hipótesis y la toma de decisiones fundamentadas. Este libro se concibe como una contribución a ese esfuerzo, ofreciendo una integración rigurosa de fundamentos teóricos y aplicaciones prácticas, sustentada en la investigación social.
+
+En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.
+
+Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.
+
+## Material {.unnumbered}
+
+Los contenidos han sio generados utilizando modelos de generaci´no de texto y consultando algunos materiales que se comparten a continuación. Es importante prever que **algunos de estos vínculos pueden caducar con el tiempo**, por lo cual no es raro que se pierda el acceso a los materiales.
+
+[OpenIntro Statistics](https://openintro.org/book/os/){target="_blank"}
+
+[Estadística para todos - Diana Kelmansky](http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf){target="_blank"}
+
+[Discourse of Objectivity](https://ayushthey.medium.com/discourse-of-objectivity-2eb2541f7177){target="_blank"}
+
+[To explain or to predict](https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf){target="_blank"}
+
+[Escalas de medición - Jorge Coronado Padilla](https://dialnet.unirioja.es/descarga/articulo/4942056.pdf){target="_blank"}
+
+[Técnicas de Muestreo sobre una Población a Estudio - Tamara Otzen, Carlos Manterola](https://scielo.conicyt.cl/pdf/ijmorphol/v35n1/art37.pdf){target="_blank"}
+
+[OpenIntro Statistics - David Diez](https://openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php){target="_blank"}
+
+[Análisis bivariante - Jordi Mas Elias](https://openaccess.uoc.edu/bitstream/10609/148455/1/AnalisisBivariante.pdf){target="_blank"}
+
+[Handbook on Constructing Composite Indicators: Methodology and User Guide](https://www.istat.it/wp-content/uploads/2014/06/Handbook-on-Constructing-Composite-Indicators.pdf){target="_blank"}
+
+[Diseño y validación de instrumentos de medición](https://core.ac.uk/download/pdf/47265078.pdf){target="_blank"}
+
+[Principal Component Analysis](http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe%20I.%20Principal%20Component%20Analysis%20(2ed.,%20Springer,%202002)(518s)_MVsa_.pdf){target="_blank"}
+
+
+## Recopilación {.unnumbered}
+
+La tarea de recopilar y organizar la información ha sido llevada a cabo por Julián Cruz.
+
+Científico de datos, profesional en estadística y magíster en ciencias, con más de 15 años de experiencia demostrada en analítica y ciencia de datos. Su perfil contempla desde liderazgo de programas de capacitación y gestión del cambio, hasta ejecución proyectos de base tecnológica. A través de esta experiencia ha desarrollado diferentes competencias, como la orientación al valor en toma de decisiones, la conformación y desarrollo de equipos de alto desempeño y la negociación integradora.
 

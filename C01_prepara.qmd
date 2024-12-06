@@ -1,0 +1,14 @@
+# Preparación de los datos
+
+## Imputación de datos
+
+## Identificación de atípicos
+
+## De categórico a numérico
+
+## De numérico a categórico
+
+## Trabajo con fechas
+
+
+

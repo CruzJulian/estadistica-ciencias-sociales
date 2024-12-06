@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
+<meta name="author" content="Julián Cruz">
 
-<title>Estadística descriptiva para dos o más variables – Estadística</title>
+<title>4&nbsp; Correlación – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,6 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C01_dist.html" rel="next">
+<link href="./C01_univar.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +77,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -101,110 +137,171 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#dos-variables" id="toc-dos-variables" class="nav-link active" data-scroll-target="#dos-variables">Dos variables</a>
+  <li><a href="#dos-variables" id="toc-dos-variables" class="nav-link active" data-scroll-target="#dos-variables"><span class="header-section-number">5</span> Dos variables</a>
   <ul class="collapse">
-  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link" data-scroll-target="#dos-variables-cualitativas">Dos variables cualitativas</a></li>
-  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas">Dos variables cuantitativas</a></li>
-  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza">Covarianza</a></li>
-  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson">Correlación de Pearson</a></li>
-  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman">Correlación de Spearman</a></li>
-  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</a></li>
-  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación">Correlación</a></li>
+  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link" data-scroll-target="#dos-variables-cualitativas"><span class="header-section-number">5.1</span> Dos variables cualitativas</a></li>
+  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas"><span class="header-section-number">5.2</span> Dos variables cuantitativas</a></li>
+  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza"><span class="header-section-number">5.3</span> Covarianza</a></li>
+  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson"><span class="header-section-number">5.4</span> Correlación de Pearson</a></li>
+  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman"><span class="header-section-number">5.5</span> Correlación de Spearman</a></li>
+  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">5.6</span> Una variable cualitativa y otra cuantitativa</a></li>
+  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación"><span class="header-section-number">5.7</span> Correlación</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -212,10 +309,10 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística descriptiva para dos o más variables</h1>
-<p class="subtitle lead">Introducción al mundo cuantitativo</p>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></h1>
+<p class="subtitle lead">Estadística descriptiva</p>
 </div>
 
 
@@ -225,7 +322,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
+             <p>Julián Cruz </p>
           </div>
   </div>
     
@@ -238,20 +335,23 @@ window.Quarto = {
 </header>
 
 
-<section id="dos-variables" class="level1">
-<h1>Dos variables</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Reescribir bien</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="dos-variables" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Dos variables</h1>
 <p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
 <ul>
 <li>Dos cualitativas</li>
 <li>Dos cuantitativas</li>
 <li>Una cuantitativa y una cualitativa</li>
 </ul>
-<section id="dos-variables-cualitativas" class="level2">
-<h2 class="anchored" data-anchor-id="dos-variables-cualitativas">Dos variables cualitativas</h2>
+<section id="dos-variables-cualitativas" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="dos-variables-cualitativas"><span class="header-section-number">5.1</span> Dos variables cualitativas</h2>
 <p>Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.</p>
 </section>
-<section id="dos-variables-cuantitativas" class="level2">
-<h2 class="anchored" data-anchor-id="dos-variables-cuantitativas">Dos variables cuantitativas</h2>
+<section id="dos-variables-cuantitativas" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="dos-variables-cuantitativas"><span class="header-section-number">5.2</span> Dos variables cuantitativas</h2>
 <p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
 <ul>
 <li>Covarianza</li>
@@ -259,26 +359,26 @@ window.Quarto = {
 <li>Correlación de Spearman</li>
 </ul>
 </section>
-<section id="covarianza" class="level2">
-<h2 class="anchored" data-anchor-id="covarianza">Covarianza</h2>
+<section id="covarianza" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="covarianza"><span class="header-section-number">5.3</span> Covarianza</h2>
 <p>Covarianza entre dos variables</p>
 <p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
 </section>
-<section id="correlación-de-pearson" class="level2">
-<h2 class="anchored" data-anchor-id="correlación-de-pearson">Correlación de Pearson</h2>
+<section id="correlación-de-pearson" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="correlación-de-pearson"><span class="header-section-number">5.4</span> Correlación de Pearson</h2>
 <p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
 </section>
-<section id="correlación-de-spearman" class="level2">
-<h2 class="anchored" data-anchor-id="correlación-de-spearman">Correlación de Spearman</h2>
+<section id="correlación-de-spearman" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="correlación-de-spearman"><span class="header-section-number">5.5</span> Correlación de Spearman</h2>
 <p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
 <p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
 </section>
-<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level2">
-<h2 class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa">Una variable cualitativa y otra cuantitativa</h2>
+<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">5.6</span> Una variable cualitativa y otra cuantitativa</h2>
 <p>Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.</p>
 </section>
-<section id="correlación" class="level2">
-<h2 class="anchored" data-anchor-id="correlación">Correlación</h2>
+<section id="correlación" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="correlación"><span class="header-section-number">5.7</span> Correlación</h2>
 <p>¿Qué es la causalidad?</p>
 
 
@@ -706,6 +806,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C01_univar.html" class="pagination-link" aria-label="Estadística descriptiva para una variable">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C01_dist.html" class="pagination-link" aria-label="Distribuciones">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

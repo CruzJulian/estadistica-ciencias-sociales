@@ -1,0 +1,186 @@
+# Pruebas y tipos de pruebas
+
+
+Para probar una hipótesis los procedimientos se dividen en cuatro tipos
+
+ - ...
+
+## Pruebas paramétricas
+
+Las **pruebas paramétricas** estudian un parámetro de dimensión finita (una colección finita de parámetros), por esta razón presentan supuestos específicos sobre la distribución de los datos.
+
+Las **pruebas paramétricas** estudian un parámetro de dimensión infinita (funciones de densidad).
+
+**Analíticas**: Hacen uso de propiedades generales de las distribuciones.
+
+**Simulación estocástica**: Hacen uso de simulación computacional para obtener el valor-p.
+
+Asumen que los datos siguen una distribución conocida, usualmente normal. Estas pruebas requieren que se cumplan ciertos supuestos, como la homogeneidad de varianzas y la linealidad.
+
+Estas pruebas son más potentes cuando los datos cumplen estos supuestos, ya que utilizan toda la información disponible en los datos.
+
+Cuando los datos no cumplen los supuestos, las pruebas pierden validez y los estudios rigor científico.
+
+-   Prueba t de Student (para la comparación de medias)
+-   ANOVA (para la comparación de medias entre múltiples grupos)
+
+## Pruebas no paramétricas analíticas
+
+Las **pruebas no paramétricas analíticas** hacen uso de propiedades matemáticas generales de las distribuciones continuas. Por lo tanto, no requieren supuestos tan fuertes sobre la distribución de los datos.
+
+Son útiles cuando los datos no cumplen los supuestos necesarios para las pruebas paramétricas, como en casos de datos con distribuciones no normales o escalas de medición ordinales.
+
+Son menos potentes que las pruebas paramétricas en los casos paramétricos. No obstante, son más flexibles y aplicables a una mayor variedad de situaciones.
+
+-   Prueba de Mann-Whitney (para la comparación de dos grupos independientes)
+-   Prueba de Wilcoxon (para la comparación de dos grupos pareados)
+-   Prueba de Kruskal-Wallis (para la comparación de múltiples grupos)
+
+## Pruebas no paramétricas de simulación estocástica
+
+Las **pruebas de permutaciones** son métodos estadísticos no paramétricos que evalúan la significancia de un estadístico de prueba al permutar, simular o remuestrear los datos observados con el fin de obtener una muestra de estadísticos bajo H_0.
+
+Al comparar el estadístico observado con la muestra de los estadísticos obtenidos, se puede determinar si el efecto observado es significativo.
+
+-   **Permutación**: Se basa en la idea de que si no hay efecto, todas las permutaciones de los datos son igualmente probables.
+
+-   **Simulación**: Se basa en la idea de que es posible simular la hipótesis nula y encontrar una muestra para el estimador bajo estas condiciones.
+
+-   **Remuestreo**: Se basa en la idea de que una muestra aleatoria de una muestra aleatoria es una muestra aleatoria.
+
+Al comparar el estadístico observado con la distribución de los estadísticos obtenidos de las permutaciones, se puede determinar si el efecto observado es significativo.
+
+**Calculo del valor p**: Se calcula como la proporción de permutaciones en las que el estadístico de prueba es al menos tan extremo como el observado.
+
+Estas pruebas no dependen de supuestos sobre la distribución de los datos, lo que las hace muy flexibles y robustas frente a diversas condiciones de los datos.
+
+## Cuándo usar cada tipo de prueba
+
+Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos elegir cuándo aplicar cada tipo de prueba.
+
+-   **Pruebas paramétricas**: cuando los datos cumplen con los supuestos de normalidad y homogeneidad de varianzas, y se requiere mayor potencia estadística.
+
+-   **Pruebas no paramétricas**: cuando los datos no cumplen con los supuestos paramétricos o cuando se trabaja con datos ordinales o no numéricos. Son útiles sean analíticas o de simulación estocástica.
+
+
+## Pruebas de hipótesis más usadas
+
+### Test t de Student para una muestra
+
+En la familia normal, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu &= \mu_0\\
+  H_A: \mu &\neq \mu_0
+\end{align*}
+$$
+
+### Test de signos para una muestra
+
+En la familia de distribuciones continuas, siendo $\theta$ la mediana, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis.
+
+$$
+\begin{align*}
+  H_0: \theta &= \theta_0\\
+  H_A: \theta &\neq \theta_0
+\end{align*}
+$$
+
+### Test t de Student para dos muestras independientes
+
+En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo homogenedidad ($\sigma^2_x = \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X &= \mu_Y\\
+  H_A: \mu_X &\neq \mu_Y
+\end{align*}
+$$
+
+### Test t de Student para dos muestras independientes
+
+En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X &= \mu_Y\\
+  H_A: \mu_X &\neq \mu_Y
+\end{align*}
+$$
+
+### Test Wilcoxon - Mann - Whitney
+
+En la familia de las distribuciones continuas, siendo $\theta$ la mediana, sean dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \theta_X &= \theta_Y\\
+  H_A: \theta_X &\neq \theta_Y
+\end{align*}
+$$
+
+### Test t de Student para dos muestras pareadas
+
+En la familia normal, dos muestras aleatorias pareadas $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \mu_X &= \mu_Y\\
+  H_A: \mu_X &\neq \mu_Y
+\end{align*}
+$$
+
+Es suficiente ver que si $D = X - Y$ entonces podemos probar
+
+$$
+\begin{align*}
+  H_0: \mu_D &= 0\\
+  H_A: \mu_D &\neq 0
+\end{align*}
+$$
+
+### Prueba de una sola proporción
+
+En una distribución Bernoulli($\pi$), sea una muestra $X = \{X_1, ... , X_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \pi_X &= \pi_0\\
+  H_A: \pi_X &\neq \pi_0
+\end{align*}
+$$
+
+### Prueba de dos proporciones
+
+En una distribución Bernoulli($\pi$), sean dos muestras $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
+
+$$
+\begin{align*}
+  H_0: \pi_X &= \pi_y\\
+  H_A: \pi_X &\neq \pi_y
+\end{align*}
+$$
+
+### Test de correlación de Pearson
+
+En la familia normal, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
+
+$$
+\begin{align*}
+H_0: \rho &=   \rho_0\\
+H_A: \rho &\neq   \rho_0
+\end{align*}
+$$
+
+### Test de correlación de Spearman
+
+En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
+
+$$
+\begin{align*}
+H_0: \rho_s &=   \rho_{s0}\\
+H_A: \rho_s &\neq   \rho_{s0}
+\end{align*}
+$$
+

@@ -51,7 +51,7 @@ Los estimadores son utilizados para estimar parámetros poblacionales. Algunos e
 
 Para ilustrar la idea de estimación puntual, podemos estimar el número π utilizando simulaciones. Aquí tienes un recurso que permite interactuar con este concepto:
 
-[Estimación puntual](https://seeing-theory.brown.edu/frequentist-inference/)
+[Estimación puntual](https://seeing-theory.brown.edu/frequentist-inference/){target="_blank"}
 
 ## Ley de los Grandes Números
 
@@ -167,7 +167,7 @@ Esto significa que el investigador puede estar 95% seguro de que la varianza del
 
 Para ilustrar la idea de estimación por intervalo, puedes utilizar simulaciones interactivas que permiten explorar estos conceptos. Aquí tienes un recurso que permite interactuar con este concepto:
 
-[Estimación por intervalo](https://seeing-theory.brown.edu/frequentist-inference/)
+[Estimación por intervalo](https://seeing-theory.brown.edu/frequentist-inference/){target="_blank"}
 
 ## Consistencia
 
@@ -242,5 +242,5 @@ El **intervalo de confianza para la diferencia de proporciones** entre dos pobla
 
 Para explorar el método de bootstrapping, puedes interactuar con simulaciones que permiten visualizar cómo funciona este proceso en la práctica. Aquí tienes un recurso que permite interactuar con este concepto:
 
-[Bootstrapping](https://seeing-theory.brown.edu/frequentist-inference/)
+[Bootstrapping](https://seeing-theory.brown.edu/frequentist-inference/){target="_blank"}
 

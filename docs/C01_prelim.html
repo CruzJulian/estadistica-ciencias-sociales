@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Preliminares – Estadística para Ciencias Sociales</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./C01_prepara.html" rel="next">
+<link href="./C01_cover.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_prelim.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#la-verdad-y-la-objetividad" id="toc-la-verdad-y-la-objetividad" class="nav-link active" data-scroll-target="#la-verdad-y-la-objetividad"><span class="header-section-number">1.1</span> La verdad y la objetividad</a>
+  <ul class="collapse">
+  <li><a href="#existe-la-verdad" id="toc-existe-la-verdad" class="nav-link" data-scroll-target="#existe-la-verdad"><span class="header-section-number">1.1.1</span> ¿Existe la verdad?</a></li>
+  </ul></li>
+  <li><a href="#verdad-y-objetividad-en-la-modernidad" id="toc-verdad-y-objetividad-en-la-modernidad" class="nav-link" data-scroll-target="#verdad-y-objetividad-en-la-modernidad"><span class="header-section-number">1.2</span> Verdad y objetividad en la modernidad</a>
+  <ul class="collapse">
+  <li><a href="#el-surgimiento-de-la-objetividad-moderna" id="toc-el-surgimiento-de-la-objetividad-moderna" class="nav-link" data-scroll-target="#el-surgimiento-de-la-objetividad-moderna"><span class="header-section-number">1.2.1</span> El surgimiento de la objetividad moderna</a></li>
+  <li><a href="#características-de-la-objetividad-en-la-modernidad" id="toc-características-de-la-objetividad-en-la-modernidad" class="nav-link" data-scroll-target="#características-de-la-objetividad-en-la-modernidad"><span class="header-section-number">1.2.2</span> Características de la objetividad en la modernidad</a></li>
+  <li><a href="#críticas-y-tensiones" id="toc-críticas-y-tensiones" class="nav-link" data-scroll-target="#críticas-y-tensiones"><span class="header-section-number">1.2.3</span> Críticas y tensiones</a></li>
+  </ul></li>
+  <li><a href="#verdad-y-objetividad-en-la-postmodernidad" id="toc-verdad-y-objetividad-en-la-postmodernidad" class="nav-link" data-scroll-target="#verdad-y-objetividad-en-la-postmodernidad"><span class="header-section-number">1.3</span> Verdad y objetividad en la postmodernidad</a>
+  <ul class="collapse">
+  <li><a href="#la-objetividad-en-la-postmodernidad" id="toc-la-objetividad-en-la-postmodernidad" class="nav-link" data-scroll-target="#la-objetividad-en-la-postmodernidad"><span class="header-section-number">1.3.1</span> La Objetividad en la Postmodernidad</a></li>
+  <li><a href="#críticas-postmodernas-a-la-objetividad" id="toc-críticas-postmodernas-a-la-objetividad" class="nav-link" data-scroll-target="#críticas-postmodernas-a-la-objetividad"><span class="header-section-number">1.3.2</span> Críticas postmodernas a la objetividad</a></li>
+  <li><a href="#la-objetividad-como-diálogo-y-negociación" id="toc-la-objetividad-como-diálogo-y-negociación" class="nav-link" data-scroll-target="#la-objetividad-como-diálogo-y-negociación"><span class="header-section-number">1.3.3</span> La objetividad como diálogo y negociación</a></li>
+  <li><a href="#tensiones-y-desafíos" id="toc-tensiones-y-desafíos" class="nav-link" data-scroll-target="#tensiones-y-desafíos"><span class="header-section-number">1.3.4</span> Tensiones y desafíos</a></li>
+  </ul></li>
+  <li><a href="#la-información" id="toc-la-información" class="nav-link" data-scroll-target="#la-información"><span class="header-section-number">1.4</span> La información</a>
+  <ul class="collapse">
+  <li><a href="#las-ciencias-son-políticas" id="toc-las-ciencias-son-políticas" class="nav-link" data-scroll-target="#las-ciencias-son-políticas"><span class="header-section-number">1.4.1</span> Las ciencias son políticas</a></li>
+  <li><a href="#las-ciencias-son-herramientas" id="toc-las-ciencias-son-herramientas" class="nav-link" data-scroll-target="#las-ciencias-son-herramientas"><span class="header-section-number">1.4.2</span> Las ciencias son herramientas</a></li>
+  <li><a href="#qué-es-un-modelo-científico" id="toc-qué-es-un-modelo-científico" class="nav-link" data-scroll-target="#qué-es-un-modelo-científico"><span class="header-section-number">1.4.3</span> ¿Qué es un modelo científico?</a></li>
+  <li><a href="#información-y-ciencia" id="toc-información-y-ciencia" class="nav-link" data-scroll-target="#información-y-ciencia"><span class="header-section-number">1.4.4</span> Información y ciencia</a></li>
+  </ul></li>
+  <li><a href="#definiciones" id="toc-definiciones" class="nav-link" data-scroll-target="#definiciones"><span class="header-section-number">1.5</span> Definiciones</a>
+  <ul class="collapse">
+  <li><a href="#qué-son-los-datos" id="toc-qué-son-los-datos" class="nav-link" data-scroll-target="#qué-son-los-datos"><span class="header-section-number">1.5.1</span> ¿Qué son los datos?</a></li>
+  <li><a href="#qué-son-las-variables" id="toc-qué-son-las-variables" class="nav-link" data-scroll-target="#qué-son-las-variables"><span class="header-section-number">1.5.2</span> ¿Qué son las variables?</a></li>
+  <li><a href="#qué-son-los-individuos" id="toc-qué-son-los-individuos" class="nav-link" data-scroll-target="#qué-son-los-individuos"><span class="header-section-number">1.5.3</span> ¿Qué son los individuos?</a></li>
+  </ul></li>
+  <li><a href="#primer-arcercamiento-cómo-son-los-datos" id="toc-primer-arcercamiento-cómo-son-los-datos" class="nav-link" data-scroll-target="#primer-arcercamiento-cómo-son-los-datos"><span class="header-section-number">1.6</span> Primer arcercamiento: ¿Cómo son los datos?</a></li>
+  <li><a href="#tipos-de-datos" id="toc-tipos-de-datos" class="nav-link" data-scroll-target="#tipos-de-datos"><span class="header-section-number">1.7</span> Tipos de datos</a>
+  <ul class="collapse">
+  <li><a href="#tendencias-y-patrones-globales" id="toc-tendencias-y-patrones-globales" class="nav-link" data-scroll-target="#tendencias-y-patrones-globales"><span class="header-section-number">1.7.1</span> Tendencias y patrones globales</a></li>
+  <li><a href="#unidades-de-análisis" id="toc-unidades-de-análisis" class="nav-link" data-scroll-target="#unidades-de-análisis"><span class="header-section-number">1.7.2</span> Unidades de análisis</a></li>
+  </ul></li>
+  <li><a href="#variables-características-observables-y-medibles" id="toc-variables-características-observables-y-medibles" class="nav-link" data-scroll-target="#variables-características-observables-y-medibles"><span class="header-section-number">1.8</span> Variables: Características observables y medibles</a>
+  <ul class="collapse">
+  <li><a href="#clasificación-de-las-variables" id="toc-clasificación-de-las-variables" class="nav-link" data-scroll-target="#clasificación-de-las-variables"><span class="header-section-number">1.8.1</span> Clasificación de las variables</a></li>
+  <li><a href="#medición-asignación-de-valores-a-las-observaciones" id="toc-medición-asignación-de-valores-a-las-observaciones" class="nav-link" data-scroll-target="#medición-asignación-de-valores-a-las-observaciones"><span class="header-section-number">1.8.2</span> Medición: Asignación de valores a las observaciones</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_prelim.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La estadística, en su concepción moderna, es el resultado de un extenso desarrollo histórico y epistemológico que refleja la evolución del pensamiento humano en su búsqueda de patrones y significados en la incertidumbre. Sus raíces se remontan a la antigüedad, cuando civilizaciones como las babilónicas y egipcias utilizaban conteos y registros para la administración y predicción. Sin embargo, fue en el Renacimiento, con la formalización del pensamiento probabilístico por figuras como Gerolamo Cardano y Pierre de Fermat, cuando emergieron las bases matemáticas que darían forma a su carácter científico.</p>
+<p>La epistemología de la estadística comenzó a consolidarse en el siglo XVIII, con las contribuciones de pensadores como Thomas Bayes, quien introdujo un enfoque probabilístico basado en la actualización del conocimiento, y Carl Friedrich Gauss, cuya teoría de errores cimentó el papel de la estadística en la inferencia científica. A medida que el método científico se institucionalizaba, la estadística se convirtió en un vehículo para traducir fenómenos observables en explicaciones cuantitativas, adoptando principios de objetividad, reproducibilidad y rigor.</p>
+<p>El siglo XX marcó una transformación paradigmática, impulsada por avances en la teoría de conjuntos, el cálculo y la computación. La estadística inferencial y la probabilidad frecuentista, promovidas por Ronald A. Fisher, Jerzy Neyman y Egon Pearson, coexistieron con enfoques bayesianos, destacando debates epistemológicos sobre la naturaleza del azar y la inferencia. Esta diversidad metodológica enriqueció su aplicabilidad, desde el diseño de experimentos hasta el análisis de sistemas complejos en las ciencias sociales.</p>
+<p>Hoy, la estadística es no solo un instrumento técnico, sino también un lenguaje epistemológico que da forma a cómo entendemos la realidad. Su desarrollo histórico subraya la tensión entre el dato y la interpretación, entre el caos del mundo empírico y la búsqueda de orden intelectual.</p>
+<section id="la-verdad-y-la-objetividad" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="la-verdad-y-la-objetividad"><span class="header-section-number">1.1</span> La verdad y la objetividad</h2>
+<p>La necesidad de procesar información es inherente al ser humano, un reflejo de su insaciable curiosidad por comprender el mundo que lo rodea. En un universo complejo e incierto, la información se presenta como un recurso esencial para la supervivencia, la toma de decisiones y la construcción de conocimiento. Sin procesarla, los datos brutos carecen de significado; es mediante el análisis y la síntesis que transformamos fragmentos dispersos en narrativas coherentes que guían nuestra acción. Esta capacidad no solo nos define como especie, sino que también alimenta nuestra aspiración más profunda: la búsqueda de la verdad.</p>
+<section id="existe-la-verdad" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="existe-la-verdad"><span class="header-section-number">1.1.1</span> ¿Existe la verdad?</h3>
+<p>La existencia de la verdad es una cuestión filosófica que ha desafiado a pensadores desde tiempos antiguos. Para Platón, la verdad era una forma ideal, un conocimiento absoluto al que solo se accedía mediante la razón. En contraste, las tradiciones empiristas, como las de Aristóteles o Locke, vincularon la verdad con la experiencia y la observación. Sin embargo, estas concepciones comparten una premisa: que la verdad es algo objetivo, independiente del observador.</p>
+<p>En un sentido práctico, la verdad parece manifestarse en dos planos: como correspondencia con la realidad y como coherencia lógica dentro de un sistema de pensamiento. La primera implica que una afirmación es verdadera si refleja fielmente un hecho, mientras que la segunda sugiere que la verdad puede ser relativa a los marcos epistemológicos que la sustentan. Esto lleva a una paradoja: aunque aspiramos a la objetividad, nuestra percepción de la verdad está inevitablemente condicionada por nuestra cultura, lenguaje y experiencia.</p>
+</section>
+</section>
+<section id="verdad-y-objetividad-en-la-modernidad" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="verdad-y-objetividad-en-la-modernidad"><span class="header-section-number">1.2</span> Verdad y objetividad en la modernidad</h2>
+<p>La modernidad abrazó un enfoque racionalista y científico de la verdad, fundado en la fe en el progreso y en la capacidad humana de descubrir leyes universales que rigen la naturaleza y la sociedad. Este paradigma, influido por el empirismo y el método científico, promovió una visión de la verdad como algo accesible a través del rigor metodológico y la acumulación de evidencias. La Revolución Científica y la Ilustración, con pensadores como Descartes, Kant y Newton, consolidaron esta noción, priorizando la objetividad y la replicabilidad como criterios de validez.</p>
+<p>Sin embargo, esta confianza en la verdad objetiva también trajo tensiones. Por un lado, el poder del conocimiento científico revolucionó la tecnología, la medicina y la economía. Por otro, redujo la complejidad humana y social a ecuaciones y categorías simplificadas, marginando otras formas de saber, como las éticas, estéticas y espirituales. La modernidad trató la verdad como una meta absoluta, pero al hacerlo, a menudo ignoró las dimensiones subjetivas y plurales de la experiencia humana.</p>
+<p>La objetividad en la modernidad se concibe como un ideal epistemológico central, que busca eliminar la influencia de valores, emociones o prejuicios individuales en la producción de conocimiento. Este concepto está profundamente enraizado en el contexto histórico, filosófico y científico de la modernidad, un período caracterizado por la confianza en la razón, el método científico y el progreso.</p>
+<section id="el-surgimiento-de-la-objetividad-moderna" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="el-surgimiento-de-la-objetividad-moderna"><span class="header-section-number">1.2.1</span> El surgimiento de la objetividad moderna</h3>
+<p>La modernidad, influenciada por la Ilustración y la Revolución Científica, estableció la objetividad como el estándar para alcanzar verdades universales. Filósofos como Descartes promovieron una visión racionalista en la que el pensamiento lógico y metódico podía superar las limitaciones de la percepción subjetiva. La objetividad se convirtió en un mecanismo para garantizar que el conocimiento no estuviera contaminado por creencias personales, ideologías o tradiciones.</p>
+<p>En este contexto, la ciencia se posicionó como el paradigma del conocimiento objetivo. Galileo, Newton y otros pioneros de la ciencia moderna formularon leyes universales que prometían describir la naturaleza de manera imparcial. El método científico, con su énfasis en la observación sistemática, la experimentación controlada y la replicabilidad, se estableció como el camino hacia un conocimiento fiable y verificable.</p>
+</section>
+<section id="características-de-la-objetividad-en-la-modernidad" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="características-de-la-objetividad-en-la-modernidad"><span class="header-section-number">1.2.2</span> Características de la objetividad en la modernidad</h3>
+<ol type="1">
+<li><p><strong>Universalidad</strong>: La objetividad buscaba verdades aplicables a todos los contextos, independientemente de las diferencias culturales, históricas o individuales. Por ejemplo, las leyes de la física se consideraron válidas tanto en Europa como en otras partes del mundo.</p></li>
+<li><p><strong>Neutralidad</strong>: La modernidad aspiraba a un conocimiento libre de intereses particulares, de manera que la investigación científica pudiera ser una empresa independiente de valores políticos, éticos o sociales.</p></li>
+<li><p><strong>Rigor metódico</strong>: La objetividad requería procedimientos estandarizados que redujeran al mínimo la influencia de sesgos personales. Esto incluía el uso de instrumentos de medición, controles experimentales y protocolos reproducibles.</p></li>
+<li><p><strong>Despersonalización</strong>: En aras de la objetividad, se promovió una separación entre el investigador y el objeto de estudio. El científico debía actuar como un observador distante, dejando a un lado emociones, creencias y deseos personales.</p></li>
+</ol>
+</section>
+<section id="críticas-y-tensiones" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="críticas-y-tensiones"><span class="header-section-number">1.2.3</span> Críticas y tensiones</h3>
+<p>Aunque la objetividad en la modernidad permitió avances extraordinarios en ciencia y tecnología, también generó críticas y tensiones. Una de las principales críticas es que la objetividad moderna a menudo enmascara los contextos sociales, políticos y culturales que inevitablemente influyen en la producción de conocimiento. Por ejemplo, Donna Haraway argumenta que todo conocimiento es situado, es decir, que está condicionado por la perspectiva y el contexto del observador, incluso en disciplinas científicas.</p>
+<p>Asimismo, la idea de neutralidad ha sido cuestionada. La investigación científica no está aislada de los intereses económicos y políticos: qué se investiga, cómo se financia y cómo se aplica el conocimiento son decisiones influenciadas por valores y estructuras de poder. En este sentido, la objetividad moderna ha sido vista como una aspiración más que como una realidad alcanzable.</p>
+<p>La objetividad en la modernidad representó un ideal revolucionario que buscaba superar la subjetividad individual y alcanzar verdades universales mediante el rigor metodológico y la neutralidad. Aunque permitió el desarrollo de un conocimiento confiable y replicable, sus limitaciones y tensiones muestran que incluso los estándares más altos de objetividad no están exentos de condicionamientos humanos. Este reconocimiento no invalida su valor, sino que nos invita a reflexionar críticamente sobre cómo construimos conocimiento en contextos históricos y sociales específicos.</p>
+</section>
+</section>
+<section id="verdad-y-objetividad-en-la-postmodernidad" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="verdad-y-objetividad-en-la-postmodernidad"><span class="header-section-number">1.3</span> Verdad y objetividad en la postmodernidad</h2>
+<p>La postmodernidad desafió la narrrativa hegemónica de verdad universal, cuestionando la existencia misma de una verdad universal. En este contexto, pensadores como Michel Foucault, Jean-François Lyotard y Jacques Derrida argumentaron que lo que llamamos “verdad” es una construcción social, moldeada por relaciones de poder, discursos dominantes y contextos históricos. Según este enfoque, no hay una verdad única, sino una multiplicidad de verdades, cada una dependiente de los valores, intereses y perspectivas que la producen.</p>
+<p>Este giro epistemológico desestabilizó las certezas modernas, abriendo espacio para voces antes excluidas y reconociendo la importancia de la narrativa, la identidad y la subjetividad. Sin embargo, también planteó un desafío: si toda verdad es relativa, ¿cómo distinguimos entre lo válido y lo falso? En la postmodernidad, la verdad se trata no como un punto fijo, sino como un proceso dinámico de negociación entre perspectivas, un diálogo interminable que refleja la diversidad y la complejidad de la experiencia humana.</p>
+<p>La búsqueda de la verdad es tanto una necesidad como un desafío. Procesamos información para darle sentido al caos, pero nuestras herramientas y paradigmas siempre están limitados por el contexto histórico y cultural. La modernidad trató la verdad como algo que podía descubrirse y validarse de manera objetiva, mientras que la postmodernidad nos recuerda que nuestras nociones de verdad están intrínsecamente ligadas a nuestras perspectivas. En última instancia, procesar información y buscar la verdad son actos profundamente humanos, que reflejan no solo nuestra capacidad intelectual, sino también nuestra vulnerabilidad, creatividad y deseo de trascender.</p>
+<p>La ciencia, en su esencia, se erige como un esfuerzo humano para interpretar el mundo, generando conocimiento estructurado que busca explicar fenómenos y resolver problemas. Para abordar cuestiones como el significado de la información, el carácter político de las ciencias, su función instrumental y la naturaleza de los modelos científicos, es necesario explorar sus fundamentos epistemológicos y sociales.</p>
+<section id="la-objetividad-en-la-postmodernidad" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="la-objetividad-en-la-postmodernidad"><span class="header-section-number">1.3.1</span> La Objetividad en la Postmodernidad</h3>
+<p>La postmodernidad cuestiona profundamente la noción de objetividad tal como fue concebida en la modernidad, socavando la idea de que es posible acceder a una verdad universal, imparcial y libre de influencias culturales o subjetivas. En lugar de considerar la objetividad como un estándar absoluto, la postmodernidad la percibe como una construcción social y cultural, moldeada por discursos, relaciones de poder y contextos históricos.</p>
+</section>
+<section id="críticas-postmodernas-a-la-objetividad" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="críticas-postmodernas-a-la-objetividad"><span class="header-section-number">1.3.2</span> Críticas postmodernas a la objetividad</h3>
+<ol type="1">
+<li><p><strong>La verdad como construcción social</strong>: Filósofos postmodernos como Michel Foucault y Jacques Derrida argumentaron que lo que llamamos “verdad” es el resultado de prácticas discursivas y estructuras de poder. La objetividad, desde esta perspectiva, no es neutral, sino una herramienta utilizada para legitimar ciertos conocimientos y excluir otros. Por ejemplo, Foucault mostró cómo las instituciones científicas han sido históricamente influidas por intereses políticos y económicos, moldeando lo que se considera verdadero.</p></li>
+<li><p><strong>El rechazo a las narrativas universales</strong>: Jean-François Lyotard, en su obra <em>La condición postmoderna</em>, criticó las “metanarrativas” de la modernidad, como el progreso y la ciencia, que pretendían ofrecer explicaciones globales y objetivas de la realidad. Para Lyotard, la postmodernidad celebra las “micronarrativas”, perspectivas locales y situadas que reflejan la diversidad y la pluralidad del conocimiento humano.</p></li>
+<li><p><strong>El conocimiento situado</strong>: La feminista Donna Haraway introdujo el concepto de “conocimientos situados”, que sostiene que todo conocimiento está condicionado por la posición del sujeto que lo produce. Según Haraway, la objetividad debe entenderse no como una ausencia de perspectiva, sino como un reconocimiento crítico de las propias limitaciones y el contexto desde el cual se genera el conocimiento.</p></li>
+<li><p><strong>Relativismo y pluralismo</strong>: En la postmodernidad, la objetividad es reemplazada por una aceptación del relativismo y el pluralismo epistemológico. Esto no implica que todas las verdades sean iguales, sino que ninguna puede reclamar supremacía universal sin considerar su contexto. Por ejemplo, una investigación científica puede ser rigurosa dentro de su marco metodológico, pero su validez depende de los valores y presupuestos que subyacen a ese marco.</p></li>
+</ol>
+</section>
+<section id="la-objetividad-como-diálogo-y-negociación" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="la-objetividad-como-diálogo-y-negociación"><span class="header-section-number">1.3.3</span> La objetividad como diálogo y negociación</h3>
+<p>En lugar de desechar por completo la idea de objetividad, la postmodernidad sugiere replantearla como un proceso dinámico de diálogo y negociación entre perspectivas diversas. Este enfoque reconoce que:<br>
+- No existe un punto de vista totalmente neutro, pero es posible alcanzar consensos provisionales basados en la crítica y el intercambio.<br>
+- La objetividad no elimina los sesgos, pero puede gestionarlos mediante la transparencia y la reflexividad.<br>
+- El conocimiento es siempre parcial, pero puede ser útil y significativo si se reconoce su contexto y sus límites.</p>
+</section>
+<section id="tensiones-y-desafíos" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="tensiones-y-desafíos"><span class="header-section-number">1.3.4</span> Tensiones y desafíos</h3>
+<p>La crítica postmoderna a la objetividad ha abierto nuevas posibilidades para incluir voces marginadas y valorar diferentes formas de conocimiento. Sin embargo, también plantea desafíos:<br>
+- ¿Cómo evaluamos la validez de diferentes perspectivas sin recurrir a criterios universales?<br>
+- ¿Cómo evitamos el riesgo del relativismo extremo, en el que todo conocimiento tiene el mismo peso, independientemente de su rigor o evidencia?<br>
+- ¿Cómo reconciliamos la diversidad de narrativas con la necesidad de acciones colectivas basadas en hechos comunes, como en el caso del cambio climático?</p>
+<p>La objetividad en la postmodernidad no es un ideal fijo, sino una práctica crítica y reflexiva que valora la pluralidad de perspectivas sin renunciar a la búsqueda de consensos. En lugar de perseguir una verdad absoluta e independiente, la postmodernidad nos invita a reconocer la complejidad, contingencia y contextualidad del conocimiento. Este enfoque no rechaza la objetividad, sino que la transforma en una herramienta más humana y adaptable para comprender y actuar en un mundo diverso y en constante cambio.</p>
+</section>
+</section>
+<section id="la-información" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="la-información"><span class="header-section-number">1.4</span> La información</h2>
+<p>La información puede definirse como el conjunto de datos organizados y contextualizados que transmiten significado. No es solo un registro de hechos aislados, sino una estructura que conecta elementos para generar conocimiento. Claude Shannon, en su teoría de la información, la describió como una medida de reducción de incertidumbre en un sistema, enfatizando su dimensión cuantitativa.</p>
+<p>Sin embargo, la información también posee una dimensión cualitativa: depende de quién la interpreta, del contexto en el que se utiliza y del propósito que sirve. Es materia prima para la construcción del conocimiento, el puente entre lo desconocido y lo entendible, un recurso que define no solo cómo comprendemos el mundo, sino cómo lo transformamos.</p>
+<section id="las-ciencias-son-políticas" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="las-ciencias-son-políticas"><span class="header-section-number">1.4.1</span> Las ciencias son políticas</h3>
+<p>Las ciencias no existen en un vacío neutral; están inmersas en sistemas sociales, económicos y culturales que las moldean y que, a su vez, son influenciados por ellas. Esta relación las convierte en intrínsecamente políticas. Por “políticas”, no solo se entiende la intervención de intereses gubernamentales o ideológicos, sino también la dinámica de poder que define qué se investiga, quién financia dicha investigación y cómo se aplica su conocimiento.</p>
+<p>Por ejemplo, los avances en biotecnología pueden abordar problemas de hambre global, pero también generar desigualdades si los beneficios se concentran en sectores privilegiados. El cambio climático, otro ejemplo, es un campo donde la ciencia enfrenta intereses corporativos y políticos que intentan influir en sus hallazgos y narrativas. En este sentido, las ciencias reflejan no solo la búsqueda de la verdad, sino también los valores y prioridades de la sociedad que las produce.</p>
+</section>
+<section id="las-ciencias-son-herramientas" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="las-ciencias-son-herramientas"><span class="header-section-number">1.4.2</span> Las ciencias son herramientas</h3>
+<p>Si bien las ciencias están impregnadas de políticas y valores, también son herramientas esenciales para entender y actuar sobre el mundo. Su capacidad de generar conocimiento riguroso permite desarrollar tecnologías, formular políticas públicas efectivas y abordar desafíos globales. En este sentido, las ciencias son instrumentos al servicio de la humanidad, aunque la dirección de su uso depende de las intenciones humanas.</p>
+<p>Por ejemplo, las ciencias médicas han permitido erradicar enfermedades y mejorar la calidad de vida, mientras que la física y la ingeniería han desarrollado tecnologías que revolucionan las comunicaciones, la energía y el transporte. Sin embargo, como herramientas, las ciencias son éticamente neutras: su impacto depende de cómo las aplicamos y con qué fines.</p>
+</section>
+<section id="qué-es-un-modelo-científico" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="qué-es-un-modelo-científico"><span class="header-section-number">1.4.3</span> ¿Qué es un modelo científico?</h3>
+<p>Un modelo científico es una representación simplificada de un fenómeno complejo que permite comprender, predecir y manipular su comportamiento. Los modelos son esenciales en la ciencia porque nos ofrecen una manera de explorar aspectos de la realidad que no pueden observarse directamente o que son demasiado complicados para abordarse en su totalidad.</p>
+<p>Por ejemplo, en la meteorología, los modelos climáticos simulan sistemas atmosféricos para prever patrones de lluvia y temperatura. En la física, los modelos cuánticos explican el comportamiento de partículas subatómicas, mientras que en las ciencias sociales, los modelos económicos intentan captar las dinámicas de mercado.</p>
+<p>Sin embargo, todo modelo científico es una aproximación, no una réplica exacta de la realidad. Su valor radica en su utilidad, no en su perfección. Como dijo el estadístico George Box, “todos los modelos son erróneos, pero algunos son útiles”. Esta afirmación subraya que los modelos no son verdades absolutas, sino herramientas conceptuales diseñadas para guiar nuestro entendimiento y acción.</p>
+</section>
+<section id="información-y-ciencia" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="información-y-ciencia"><span class="header-section-number">1.4.4</span> Información y ciencia</h3>
+<p>La información, las ciencias y los modelos científicos son elementos interdependientes que estructuran nuestra forma de entender y actuar sobre el mundo. La información es la base del conocimiento; las ciencias son tanto herramientas como reflejo de las dinámicas políticas que las atraviesan; y los modelos científicos son construcciones que hacen posible desentrañar la complejidad de la realidad. Juntos, estos conceptos no solo iluminan el mundo, sino también nuestras propias limitaciones y posibilidades como seres humanos en busca de sentido.</p>
+<p>La replicabilidad es un principio fundamental en la ciencia, que garantiza la validez y la fiabilidad de los hallazgos científicos. Consiste en la capacidad de repetir un experimento o estudio bajo condiciones similares y obtener resultados consistentes. Este proceso actúa como un mecanismo de control que permite verificar si los descubrimientos están libres de errores, sesgos o influencias externas. En disciplinas empíricas, la replicabilidad refuerza la confianza en el conocimiento generado, estableciendo estándares que distinguen a la ciencia de otras formas de comprensión, como las creencias o la opinión. Es, en esencia, la piedra angular que sostiene la credibilidad del método científico.</p>
+<p>Sin embargo, en la práctica, la replicabilidad enfrenta desafíos significativos. Factores como la falta de transparencia en los métodos, la presión por publicar resultados novedosos y las limitaciones en la disponibilidad de recursos dificultan la reproducción de estudios. En años recientes, varias disciplinas, desde la psicología hasta la biomedicina, han experimentado lo que se denomina la “crisis de replicabilidad”, donde numerosos resultados publicados no pueden ser replicados por otros investigadores. Esta situación ha llevado a un llamado global para adoptar prácticas más rigurosas, como el uso de pre-registros, la publicación de datos abiertos y la implementación de análisis reproducibles, que refuercen la integridad de la ciencia y aseguren que el conocimiento generado sea verdaderamente confiable.</p>
+<blockquote class="blockquote">
+<p>Lo objetivo no existe. Tenemos conocimiento más subjetivo y menos subjetivo. El conocimiento menos subjetivo es el conocimiento científico, porque se basa en lo replicable.</p>
+</blockquote>
+</section>
+</section>
+<section id="definiciones" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="definiciones"><span class="header-section-number">1.5</span> Definiciones</h2>
+<p>La estadística, como disciplina, se basa en el análisis sistemático de información cuantitativa o cualitativa para describir, interpretar y predecir fenómenos. Tres conceptos clave estructuran este análisis: los datos, las variables y los individuos. Cada uno cumple un rol específico, interconectado y esencial en el proceso de generación de conocimiento.</p>
+<section id="qué-son-los-datos" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="qué-son-los-datos"><span class="header-section-number">1.5.1</span> ¿Qué son los datos?</h3>
+<p>Los datos son el registro de observaciones, medidas o respuestas recopiladas sobre un fenómeno o población de interés. Constituyen la materia prima del análisis estadístico y pueden ser numéricos (cuantitativos) o descriptivos (cualitativos). Los datos por sí mismos son neutros; adquieren significado solo cuando se contextualizan y se analizan en relación con una pregunta o hipótesis.</p>
+<p>Por ejemplo, el registro de temperaturas diarias en una ciudad o las respuestas a una encuesta sobre hábitos de consumo son datos. Estos sirven como base para identificar patrones, realizar comparaciones y construir modelos que representen aspectos de la realidad.</p>
+</section>
+<section id="qué-son-las-variables" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="qué-son-las-variables"><span class="header-section-number">1.5.2</span> ¿Qué son las variables?</h3>
+<p>Las variables son características o atributos que pueden tomar diferentes valores entre los individuos de un conjunto o población. Representan las dimensiones específicas que se desean observar o analizar en un estudio.</p>
+<p>Las variables se clasifican según su naturaleza:</p>
+<ol type="1">
+<li><p><strong>Cuantitativas</strong>: Representan cantidades medibles, como la altura, el peso o los ingresos.</p>
+<ul>
+<li><strong>Discretas</strong>: Toman valores específicos, como el número de hijos en una familia.<br>
+</li>
+<li><strong>Continuas</strong>: Pueden tomar cualquier valor dentro de un rango, como la temperatura o el tiempo.</li>
+</ul></li>
+<li><p><strong>Cualitativas</strong>: Representan categorías o cualidades, como el género, la nacionalidad o el color de los ojos.</p>
+<ul>
+<li><strong>Nominales</strong>: No tienen un orden intrínseco, como el estado civil.<br>
+</li>
+<li><strong>Ordinales</strong>: Poseen un orden, como los niveles educativos.</li>
+</ul></li>
+</ol>
+<p>Las variables permiten organizar y estructurar los datos para realizar análisis significativos. Por ejemplo, en un estudio sobre la educación, “nivel educativo” podría ser una variable cualitativa ordinal, mientras que “puntaje en una prueba” sería cuantitativa continua.</p>
+</section>
+<section id="qué-son-los-individuos" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="qué-son-los-individuos"><span class="header-section-number">1.5.3</span> ¿Qué son los individuos?</h3>
+<p>Los individuos son las unidades básicas de observación o análisis dentro de una población. Pueden ser personas, objetos, organismos, eventos o entidades, dependiendo del contexto del estudio.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>En un censo poblacional, los individuos son las personas encuestadas.<br>
+</li>
+<li>En un experimento agrícola, los individuos podrían ser plantas o parcelas de tierra.<br>
+</li>
+<li>En un análisis de mercado, los individuos son los productos o consumidores.</li>
+</ul>
+<p>Cada individuo se caracteriza por tener valores específicos para las variables consideradas en el estudio. Por ejemplo, en una encuesta sobre hábitos alimenticios, un individuo (una persona) podría tener valores como edad = 30 años, género = femenino, y frecuencia de consumo de frutas = 5 veces por semana.</p>
+</section>
+</section>
+<section id="primer-arcercamiento-cómo-son-los-datos" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="primer-arcercamiento-cómo-son-los-datos"><span class="header-section-number">1.6</span> Primer arcercamiento: ¿Cómo son los datos?</h2>
+<p>En el panorama actual, donde la información fluye en volúmenes masivos y de manera constante, el análisis de datos se ha convertido en un componente esencial para comprender fenómenos sociales. Sin embargo, en el ámbito de las ciencias sociales, persiste una brecha significativa entre las competencias cuantitativas necesarias para el análisis de datos y las herramientas empleadas por los investigadores. Esta brecha no solo es tecnológica, sino también epistemológica y cultural, lo que genera una resistencia hacia el desarrollo de habilidades cuantitativas.</p>
+<p>El uso de programación en el análisis de datos es frecuentemente percibido como un campo exclusivo de disciplinas STEM (ciencia, tecnología, ingeniería y matemáticas). Esta percepción puede desmotivar a los científicos sociales, quienes a menudo ven estas competencias como ajenas a sus intereses y tradiciones. Sin embargo, esta distancia es un obstáculo tanto para la investigación académica como para el desarrollo profesional en un mundo donde las decisiones basadas en datos son cada vez más frecuentes.</p>
+<p>A medida que las metodologías de análisis avanzan, la integración de enfoques cuantitativos se vuelve inevitable. La combinación de grandes volúmenes de datos (<em>big data</em>), tecnologías accesibles y herramientas estadísticas ha revolucionado la forma en que se abordan preguntas de investigación. Desde el análisis de redes sociales hasta el estudio de comportamientos colectivos, las ciencias sociales dependen cada vez más de métodos que requieren un manejo competente de datos y software especializado.</p>
+<p>Sin embargo, el uso de herramientas básicas, como hojas de cálculo, limita el alcance y la profundidad de los análisis. Aunque son útiles en los primeros pasos, carecen de la capacidad para manejar datasets complejos, realizar análisis avanzados o automatizar procesos, lo que resulta en una dependencia de enfoques manuales y un posible sesgo en los resultados.</p>
+<p>La resistencia al desarrollo de competencias cuantitativas no es solo un problema de acceso a tecnología, sino también de cultura académica. Durante décadas, las ciencias sociales han privilegiado enfoques cualitativos y narrativos, subestimando las posibilidades de las herramientas cuantitativas para enriquecer la comprensión de los fenómenos sociales. Esta resistencia cultural se traduce en una falta de programas educativos orientados al análisis de datos en ciencias sociales, perpetuando la brecha tecnológica.</p>
+<p>Reconstruir esta relación requiere un cambio de perspectiva en varios niveles:</p>
+<ol type="1">
+<li><p><strong>Formación interdisciplinaria</strong>: Incorporar competencias de programación, análisis de datos y estadística en la formación de los científicos sociales. Esto no implica abandonar los enfoques cualitativos, sino complementarlos con habilidades cuantitativas que amplíen su capacidad de análisis.</p></li>
+<li><p><strong>Acceso a herramientas accesibles y avanzadas</strong>: Herramientas como R, Python y software estadístico especializado permiten a los científicos sociales realizar análisis más complejos sin depender de costosos recursos. Estas herramientas deben integrarse en los currículos de las ciencias sociales, acompañadas de una pedagogía que enfatice su utilidad.</p></li>
+<li><p><strong>Cambio de mentalidad hacia los datos</strong>: Los datos no deben ser vistos solo como números, sino como representaciones de fenómenos humanos y sociales. Este enfoque humanista puede ayudar a reducir la distancia entre el científico social y los métodos cuantitativos, reconociendo que los datos también cuentan historias y reflejan dinámicas sociales significativas.</p></li>
+<li><p><strong>Enfoque en la relevancia profesional</strong>: Más allá de la academia, el análisis de datos es una habilidad esencial en sectores como el marketing, la política, la planificación urbana y el desarrollo comunitario. Los científicos sociales con competencias cuantitativas tienen una ventaja competitiva en un mercado laboral que valora cada vez más las decisiones basadas en datos.</p></li>
+</ol>
+<p>Un primer acercamiento a los datos puede verse de esta manera. Para nuestro ejemplo vamos a pensar en un conjunto de 100 personas que recién ingresan a una universidad en Bogotá en 1990, indagamos el género y la edad de cada una de ellas. Estos datos se pueden ver de esta forma.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 1: Edades de 100 personas coloreadas por género, siendo femeninos los rojos y masculinos los azules. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Esta forma de ver los datos no nos entrega una información fácil de comprender. Por esta razón, la <strong>visualización de datos</strong> es importante en el análisis estadístico. Para comprender mejor, abordemos primero la edad. Podemos ver los datos de la edad como puntos en el eje horizontal.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 2: Edades de 100 personas en el eje horizontal. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Esta visualización nos entrega un poco más de información, podemos entender el valor más alto, el más bajo, y en general el espacio que ocupan los datos en el eje horizontal. Los datos que ocupan mucho espacio se llaman <strong>dispersos</strong>, si el espacio es poco, se llaman <strong>concentrados</strong>. Más adelante veremos medidas para esta característica y profundizaremos al respecto. Para verlos mejor, podemos diseminarlos verticalmente. Este es un truco que ayuda a comprender mejor los datos, impidiendo que se sobrepongan los puntos. Para esto se agrega ruido en el eje vertical, pero este ruido no tiene significado.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 3: Edades de 100 personas en el eje horizontal con ruido vertical. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Podemos trazar líneas imaginarias para entender mejor los datos. Las primeras líneas imaginarias son el máximo y el mínimo. Al trazar estas líneas podemos contener el 100% de los datos. Es muy fácil.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 4: Edades de 100 personas en el eje horizontal con máximo y mínimo. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>divide los datos en dos conjuntos de igual magnitud. A la derecha de la línea se encuentra la misma cantidad de datos que a la izquierda. Esta línea se encuentra en un punto muy importante del eje horizontal, este valor se denomina la mediana. La mediana de un conjunto de datos es el valor que divide a los datos en dos conjuntos de igual magnitud.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 5: Edades de 100 personas en el eje horizontal con su mediana. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Usando más líneas imaginarias podemos dividirlos en cuatro partes iguales.Estas líneas imaginarias distribuyen los datos de la edad en cuatro conjuntos de igual magnitud. Al igual que la mediana, estos valores son importantes. Se denominan cuartiles. En cada uno de los conjuntos resultantes, se encuentra el 25% de los datos.</p>
+<p>Entonces, funciona de la siguiente forma: el cuartil cero <span class="math inline">\((Q_0)\)</span> corresponde al valor mínimo; el primer cuartil <span class="math inline">\((Q_1)\)</span> separa el 25% de los datos; el segundo cuartil <span class="math inline">\((Q_2)\)</span> coincide con la mediana, porque separa el 50% de los datos; el tercer cuartil <span class="math inline">\((Q_3)\)</span> separa el 75% de los datos; y el cuarto cuartil <span class="math inline">\((Q_4)\)</span> coincide con el máximo de los datos.</p>
+<p>Estos cuartiles en general no tienen la misma distancia entre ellos. Lo usual es que se ubiquen en distancias diferentes según los datos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 6: Edades de 100 personas en el eje horizontal con cuartiles. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Estas líneas imaginarias que son importantes, se pueden consolidar en un solo gráfico, que se denomina gráfico de caja y bigotes. Este gráfico está conformado por la mediana y los cuartiles. Este es un gráfico escencial en el análisis de datos y lo vamos a ver en muchas investigaciones.</p>
+<p>Este gráfico tiene un cambio con respecto a la construcción anterior: aquí se utilizan un máximo teórico y un mínimo teórico. Esto se realiza con el fin de identificar visualmente los datos de los extremos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption>Figura 7: Edades de 100 personas, gráfico de caja y bigotes. Fuente: elaboración propia a partir de simulación.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Abordemos el género ahora. Podemos usar el color para identificar el género en los datos. Realizamos el mismo procedimiento añadiendo el color del género. En este caso, ya podemos identificar la tendencia, de puntos rojos más a la derecha y azules a la izquierda.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Organizamos los datos verticalemnte por género. Esto os permite tenre dos nubes de puntos y facilita la interpretación, ahora es más notoria la tendencia hacia a la derecha y hacia la izquerda de los puntos rojos y azules respectivamente.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Al elaborar una gráfico de caja para cada género es posible ver la tendencia. Esta característica que no resultaba fácil de identificar en el primer gráfico, ahora es muy notoria. Las medianas y los cuartiles de los datos agrupados por género difieren. Esto nos permite obtener hipótesis que podremos comprobar más adelante.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C01_prelim_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="tipos-de-datos" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="tipos-de-datos"><span class="header-section-number">1.7</span> Tipos de datos</h2>
+<p>El análisis de datos es la columna vertebral de la investigación científica y social, donde se busca extraer patrones, relaciones y tendencias a partir de observaciones sistemáticas. Los datos son el insumo principal de este análisis, y comprender sus diferentes tipos y propiedades es esencial para elegir las metodologías y enfoques más adecuados. A continuación, se profundiza en los conceptos clave presentados, estructurándolos en torno a su relevancia en la investigación.</p>
+<section id="tendencias-y-patrones-globales" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="tendencias-y-patrones-globales"><span class="header-section-number">1.7.1</span> Tendencias y patrones globales</h3>
+<p>Las tendencias representan comportamientos agregados que emergen de las características individuales de una población. A diferencia de una afirmación puntual o específica sobre un individuo, las tendencias buscan capturar patrones generalizables que describen cómo un grupo, en promedio, se comporta respecto a una variable o conjunto de variables. Este enfoque es crucial en disciplinas como la economía, la sociología y la epidemiología, donde los fenómenos globales informan decisiones de política pública o estrategias organizacionales.</p>
+<p>Por ejemplo, al analizar los hábitos de consumo en un país, una tendencia podría revelar que el promedio de gasto en entretenimiento es más alto en grupos jóvenes que en mayores de 50 años. Sin embargo, esta tendencia no asegura que todos los jóvenes gasten más en entretenimiento, sino que describe un comportamiento predominante dentro de la población estudiada. Este desajuste entre las tendencias y los comportamientos individuales resalta la importancia de interpretar los datos globales como representativos, pero no absolutos.</p>
+</section>
+<section id="unidades-de-análisis" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="unidades-de-análisis"><span class="header-section-number">1.7.2</span> Unidades de análisis</h3>
+<p>Los individuos son las unidades básicas de observación en cualquier estudio. Representan los elementos de la población objeto de análisis, que pueden ser personas, empresas, organismos o eventos, dependiendo del contexto de la investigación. En términos analíticos, los individuos son la fuente de datos a partir de los cuales se construyen modelos, hipótesis y conclusiones.</p>
+<p>La elección de los individuos y su caracterización es clave, ya que determina la validez y generalizabilidad de los resultados. Por ejemplo, en un estudio sobre hábitos alimenticios, seleccionar individuos representativos de diferentes regiones y estratos socioeconómicos garantizará que las conclusiones puedan extrapolarse al resto de la población. Este concepto está íntimamente ligado al diseño del muestreo y la operacionalización de las variables.</p>
+</section>
+</section>
+<section id="variables-características-observables-y-medibles" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="variables-características-observables-y-medibles"><span class="header-section-number">1.8</span> Variables: Características observables y medibles</h2>
+<p>Las variables son los rasgos o atributos que describen a los individuos y sobre los cuales se recopila información. Funcionan como el puente entre las observaciones individuales y los análisis que buscan generalizar comportamientos.</p>
+<section id="clasificación-de-las-variables" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="clasificación-de-las-variables"><span class="header-section-number">1.8.1</span> Clasificación de las variables</h3>
+<ol type="1">
+<li><p><strong>Cuantitativas</strong>: Estas variables representan magnitudes numéricas que se pueden medir. Por otro lado, las variables numéricas o cuantitativas permiten medir y realizar cálculos matemáticos. La distinción entre discretas y continuas tiene implicaciones metodológicas: mientras que las discretas suelen analizarse con conteos y proporciones, las continuas requieren herramientas que consideren distribuciones más complejas. Estas variables son esenciales en áreas como la economía y la biología, donde los fenómenos físicos y financieros se representan mediante medidas precisas.</p>
+<ul>
+<li><p><strong>Discretas</strong>: Toman valores finitos o contables, como el número de hijos en una familia.</p></li>
+<li><p><strong>Continuas</strong>: Admiten infinitos valores dentro de un rango, como la temperatura medida en grados Celsius.</p></li>
+</ul></li>
+<li><p><strong>Categóricas</strong>: Representan atributos o categorías que no necesariamente poseen un valor numérico. Las variables categóricas agrupan a los individuos en categorías o clases. Su análisis permite identificar frecuencias y distribuciones dentro de la población. Por ejemplo, analizar la afiliación política de un grupo puede mostrar que el 40% prefiere un partido A, mientras que el 30% opta por un partido B. Este tipo de variable es fundamental en estudios demográficos y de percepción social, donde las características subjetivas y de identidad son el foco principal.</p>
+<ul>
+<li><strong>Nominales</strong>: Categorías sin orden intrínseco, como el color de los ojos o el estado civil.<br>
+</li>
+<li><strong>Ordinales</strong>: Categorías con un orden lógico, como los niveles educativos o el nivel de satisfacción.</li>
+</ul></li>
+</ol>
+</section>
+<section id="medición-asignación-de-valores-a-las-observaciones" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="medición-asignación-de-valores-a-las-observaciones"><span class="header-section-number">1.8.2</span> Medición: Asignación de valores a las observaciones</h3>
+<p>La medición es el proceso mediante el cual las características de los individuos se transforman en datos observables y cuantificables. Este proceso debe ser riguroso y consistente, basado en reglas preestablecidas que garanticen la comparabilidad y la reproducibilidad de los resultados.</p>
+<p>Por ejemplo, en un estudio sobre bienestar subjetivo, es esencial que las escalas utilizadas para medir “felicidad” o “satisfacción” estén claramente definidas, estandarizadas y validadas. Una medición precisa y confiable no solo facilita el análisis estadístico, sino que también asegura que las conclusiones se basen en datos sólidos y significativos.</p>
+<p>Los tipos de datos, las variables y las técnicas de medición constituyen los elementos centrales del análisis en cualquier disciplina. Entender cómo se relacionan las tendencias globales con las características individuales, cómo se seleccionan y clasifican las variables, y cómo se mide con precisión cada atributo son habilidades fundamentales para el análisis riguroso. Este marco integrado no solo es esencial para la investigación académica, sino también para la toma de decisiones informadas en contextos profesionales y sociales. La reconceptualización del trabajo con datos requiere, por tanto, no solo conocimiento técnico, sino también una reflexión crítica sobre las implicaciones de cómo estructuramos y utilizamos la información.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C01_cover.html" class="pagination-link" aria-label="Estadística descriptiva">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Estadística descriptiva</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C01_prepara.html" class="pagination-link" aria-label="Preparación de los datos">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

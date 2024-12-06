@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
 
-<title>Introducción – Estadística</title>
+<title>Estadística descriptiva – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C01_prelim.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -54,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -72,123 +73,166 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./intro.html" aria-current="page"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes">Antecedentes</a>
-  <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación">Presentación</a>
-  <ul class="collapse">
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso">Descripción del Curso</a></li>
-  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación">Justificación</a></li>
-  </ul></li>
-  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones">Consideraciones</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a>
-  <ul class="collapse">
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
-  <li><a href="#específicos" id="toc-específicos" class="nav-link" data-scroll-target="#específicos">Específicos</a></li>
-  </ul></li>
-  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
-  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
-  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">Evaluación</a></li>
-  <li><a href="#evaluación-1" id="toc-evaluación-1" class="nav-link" data-scroll-target="#evaluación-1">Evaluación</a></li>
-  <li><a href="#contenido" id="toc-contenido" class="nav-link" data-scroll-target="#contenido">Contenido</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
-  <li><a href="#narrativa" id="toc-narrativa" class="nav-link" data-scroll-target="#narrativa">Narrativa</a></li>
-  </ul></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo">Muestreo</a></li>
+  <li><a href="#estadística-descriptiva-para-una-variable" id="toc-estadística-descriptiva-para-una-variable" class="nav-link" data-scroll-target="#estadística-descriptiva-para-una-variable">Estadística descriptiva para una variable</a></li>
+  <li><a href="#estadística-descriptiva-para-dos-o-más-variables" id="toc-estadística-descriptiva-para-dos-o-más-variables" class="nav-link" data-scroll-target="#estadística-descriptiva-para-dos-o-más-variables">Estadística descriptiva para dos o más variables</a></li>
   </ul>
 </nav>
     </div>
@@ -197,20 +241,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introducción</h1>
-<p class="subtitle lead">Sobre la estadística clásica</p>
+<h1 class="title">Estadística descriptiva</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
-          </div>
-  </div>
     
   
     
@@ -221,129 +258,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="antecedentes" class="level1">
-<h1>Antecedentes</h1>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
-<p>En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.</p>
-<p>Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.</p>
-</section>
-<section id="presentación" class="level2">
-<h2 class="anchored" data-anchor-id="presentación">Presentación</h2>
-<section id="descripción-del-curso" class="level3">
-<h3 class="anchored" data-anchor-id="descripción-del-curso">Descripción del Curso</h3>
-<p>Estadística I: Estadística Descriptiva para el seminario de Técnicas Especiales de Investigación I, es un curso muy rápido e introductorio que se ofrece a los estudiantes como parte del conjunto de herramientas que hacen parte de la programación completa de la materia. El contenido de las sesiones se plantea como introducción y con el objetivo de acercar nuevamente a los estudiantes a los temas estadísticos.</p>
-</section>
-<section id="justificación" class="level3">
-<h3 class="anchored" data-anchor-id="justificación">Justificación</h3>
-<p>Técnicas Especiales de Investigación I es la primera de las cuatro materias del ciclo que orienta a los estudiantes en el desarrollo de sus proyectos de grado. Dado que la única estadística que se ofrece en los programas de Ciencias Sociales de Universidad Externado de Colombia se da en primer semestre, y los asistentes al seminario son de tercero y cuarto semestre, se ve la necesidad de acercarlos nuevamente a los temas generales e introductorios para que se genere la intención de soportar sus investigaciones en datos tratados estadísticamente, dado el carácter investigativo de la Facultad.</p>
-</section>
-</section>
-<section id="consideraciones" class="level2">
-<h2 class="anchored" data-anchor-id="consideraciones">Consideraciones</h2>
-<p>Sobre los contenidos teóricos y/o conceptuales básicos del programa.</p>
-<p>Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.</p>
-</section>
-<section id="objetivo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<section id="general" class="level3">
-<h3 class="anchored" data-anchor-id="general">General</h3>
-<p>Ofrecer herramientas de estadística descriptiva a los asistentes al seminario de Técnicas Especiales de Investigación I, como primer acercamiento y repaso de la estadística ofrecida en primer semestre, para que se vea la pertinencia y necesidad de incorporar procesamiento y análisis estadístico a los proyectos de investigación.</p>
-</section>
-<section id="específicos" class="level3">
-<h3 class="anchored" data-anchor-id="específicos">Específicos</h3>
-<ul>
-<li><p>Reafirmar los conceptos y conocimientos sobre estadística descriptiva</p></li>
-<li><p>Adelantar talleres prácticos que hagan evidentes los conceptos presentados</p></li>
-<li><p>Orientar la aplicación de estos conceptos en los proyectos particulares de cada estudiante</p></li>
-</ul>
-</section>
-</section>
-<section id="metodología" class="level2">
-<h2 class="anchored" data-anchor-id="metodología">Metodología</h2>
-<p>Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.</p>
-</section>
-<section id="material" class="level2">
-<h2 class="anchored" data-anchor-id="material">Material</h2>
-<p><a href="https://openintro.org/book/os/">OpenIntro Statistics</a></p>
-<p><a href="http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf">Estadística para todos - Diana Kelmansky</a></p>
-<p><a href="https://ayushthey.medium.com/discourse-of-objectivity-2eb2541f7177">Discourse of Objectivity</a></p>
-<p>http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf</p>
-<p><a href="https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf">To explain or to predict</a></p>
-<p><a href="https://dialnet.unirioja.es/descarga/articulo/4942056.pdf">Escalas de medición - Jorge Coronado Padilla</a></p>
-<p><a href="https://scielo.conicyt.cl/pdf/ijmorphol/v35n1/art37.pdf">Técnicas de Muestreo sobre una Población a Estudio - Tamara Otzen, Carlos Manterola</a></p>
-<p><a href="https://openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics - David Diez</a> Chapter 2: Summarizing data. 2.1, 2.2.</p>
-<p><a href="https://openaccess.uoc.edu/bitstream/10609/148455/1/AnalisisBivariante.pdf">Análisis bivariante - Jordi Mas Elias</a></p>
-<p><a href="https://www.istat.it/wp-content/uploads/2014/06/Handbook-on-Constructing-Composite-Indicators.pdf">Handbook on Constructing Composite Indicators: Methodology and User Guide</a></p>
-<p><a href="https://core.ac.uk/download/pdf/47265078.pdf">Diseño y validación de instrumentos de medición</a></p>
-<p><a href="http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe%20I.%20Principal%20Component%20Analysis%20(2ed.,%20Springer,%202002)(518s)_MVsa_.pdf">Principal Component Analysis</a></p>
-</section>
-<section id="evaluación" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación">Evaluación</h2>
-<p>La evaluación del curso se realiza mediante controles de lectura y quices de la siguiente manera:</p>
-<ul>
-<li><p>Al iniciar la clase, se realiza el control de lectura. Un examen de máximo 15 preguntas a cerca de la lectura realizada. Este examen tiene una duración de 15 minutos y comienza puntualmente. Las personas que llegan tarde tienen menos tiempo para responder.</p></li>
-<li><p>Al finalizar la clase se realiza el quiz. Un examen de máximo 15 preguntas a cerca de los temas vistos en clase. Este examen tiene una duración de 15 minutos y comienza 15 minutos antes de la hora de finalización de la calse. Las personas que terminan antes pueden salir.</p></li>
-<li><p>Solo las personas que obtienen una nota mayor a 2.5 en el control de lectura, tienen la oportunidad de presentar el quiz.</p></li>
-<li><p>La calificación total del curso se compone de la calificación de controles de lectura (10%) y quices (90%).</p></li>
-<li><p>Adicionalmente, se proponenen algunas actividades en clase que cuentan como 0.1 de la nota final.</p></li>
-</ul>
-</section>
-<section id="evaluación-1" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación-1">Evaluación</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Evaluación</th>
-<th style="text-align: left;">Valor (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Controles de lectura</td>
-<td style="text-align: left;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Quices</td>
-<td style="text-align: left;">90</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="contenido" class="level2">
-<h2 class="anchored" data-anchor-id="contenido">Contenido</h2>
-<p><strong>Introducción</strong></p>
+<p>En esta primera sección se examina la estadística descriptiva. El contenido ha sido seleccionado cuidadosamente con el fin de agregar valor a los análisis cuantitativos que se proponen al interior de las investigaciones en ciencias sociales.</p>
+<section id="introducción" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los <strong>tipos de variables</strong>, que incluyen <strong>variables cualitativas</strong> (nominales y ordinales) y <strong>cuantitativas</strong> (discretas y continuas). A continuación, se aborda la <strong>tipología de preguntas</strong> en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los <strong>tipos de encuestas</strong>, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.</p>
-<p><strong>Muestreo</strong></p>
+</section>
+<section id="muestreo" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="muestreo">Muestreo</h2>
 <p>En este tema se abordan los fundamentos del <strong>muestreo</strong>, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: <strong>probabilístico</strong> y <strong>no probabilístico</strong>. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el <strong>muestreo aleatorio simple</strong>, el <strong>muestreo multietápico</strong>, el <strong>muestreo estratificado</strong> y el <strong>muestreo por conglomerados</strong>. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el <strong>muestreo por conveniencia</strong>, <strong>muestreo por cuotas</strong> o <strong>bola de nieve</strong>. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.</p>
-<p><strong>Estadística descriptiva para una variable</strong></p>
+</section>
+<section id="estadística-descriptiva-para-una-variable" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="estadística-descriptiva-para-una-variable">Estadística descriptiva para una variable</h2>
 <p>La <strong>estadística descriptiva para una variable</strong> se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las <strong>medidas de tendencia central</strong> como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las <strong>medidas de dispersión</strong> como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de <strong>gráficos</strong> como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.</p>
-<p><strong>Estadística descriptiva para dos o más variables</strong></p>
+</section>
+<section id="estadística-descriptiva-para-dos-o-más-variables" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="estadística-descriptiva-para-dos-o-más-variables">Estadística descriptiva para dos o más variables</h2>
 <p>Este tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las <strong>tablas de contingencia</strong> para estudiar la relación entre dos variables cualitativas, así como las <strong>medidas de asociación</strong> como el <strong>coeficiente de correlación de Pearson</strong> y <strong>Spearman</strong> para variables cuantitativas. También se discuten las <strong>gráficas de dispersión</strong> para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una <strong>recta de regresión</strong> para predecir una variable en función de otra. Además, se examinan los <strong>coeficientes de correlación parcial</strong> y <strong>análisis multivariado</strong> para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.</p>
-</section>
-<section id="docente" class="level2">
-<h2 class="anchored" data-anchor-id="docente">Docente</h2>
-<p>Julián Cruz</p>
-<p>Soy científico de datos, profesional en estadística y magíster en ciencias. Cuento con más de 12 años de experiencia demostrada en analítica y ciencia de datos. Mi perfil contempla desde liderazgo de programas de capacitación y gestión del cambio, hasta ejecución proyectos de base tecnológica. Esta experiencia me ha permitido desarrollar diferentes competencias, como la orientación al valor en toma de decisiones, la conformación y desarrollo de equipos de alto desempeño y la negociación integradora.</p>
-</section>
-<section id="narrativa" class="level2">
-<h2 class="anchored" data-anchor-id="narrativa">Narrativa</h2>
-<div class="columns">
-<div class="column">
-<section id="creadores" class="level3">
-<h3 class="anchored" data-anchor-id="creadores">Creadores</h3>
-<p>Los creadores de herramientas, productos, servicios y experiencias deben tener un conocimiento profundo sobre el campo en el que actúan.</p>
-</section>
-</div><div class="column">
-<section id="usuarios" class="level3">
-<h3 class="anchored" data-anchor-id="usuarios">Usuarios</h3>
-<p>Los usuarios de herramientas, productos, servicicios y experiencias deben tener claridad sobre su finalidad y el modo de uso.</p>
-</section>
-</div>
-</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -390,12 +322,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -767,6 +699,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Comencemos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Comencemos</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C01_prelim.html" class="pagination-link" aria-label="Preliminares">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

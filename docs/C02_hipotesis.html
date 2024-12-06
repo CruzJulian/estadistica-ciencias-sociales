@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
 
-<title>Pruebas de hipótesis – Estadística</title>
+<title>11&nbsp; Hipótesis – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,6 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C02_pruebas.html" rel="next">
+<link href="./C02_tamano.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -54,17 +89,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -101,156 +136,195 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_hipotesis.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#la-hipótesis-en-el-contexto-del-desarrollo-científico" id="toc-la-hipótesis-en-el-contexto-del-desarrollo-científico" class="nav-link active" data-scroll-target="#la-hipótesis-en-el-contexto-del-desarrollo-científico">La hipótesis en el contexto del desarrollo científico</a>
+  <li><a href="#la-hipótesis-en-el-contexto-del-desarrollo-científico" id="toc-la-hipótesis-en-el-contexto-del-desarrollo-científico" class="nav-link active" data-scroll-target="#la-hipótesis-en-el-contexto-del-desarrollo-científico"><span class="header-section-number">11.1</span> La hipótesis en el contexto del desarrollo científico</a>
   <ul class="collapse">
-  <li><a href="#qué-es-la-reproducibilidad-y-por-qué-es-importante" id="toc-qué-es-la-reproducibilidad-y-por-qué-es-importante" class="nav-link" data-scroll-target="#qué-es-la-reproducibilidad-y-por-qué-es-importante">Qué es la reproducibilidad y por qué es importante</a></li>
-  <li><a href="#reproductibilidad" id="toc-reproductibilidad" class="nav-link" data-scroll-target="#reproductibilidad">Reproductibilidad</a></li>
-  <li><a href="#probabilidad" id="toc-probabilidad" class="nav-link" data-scroll-target="#probabilidad">Probabilidad</a></li>
-  <li><a href="#estadística" id="toc-estadística" class="nav-link" data-scroll-target="#estadística">Estadística</a></li>
-  <li><a href="#modelo-estadístico" id="toc-modelo-estadístico" class="nav-link" data-scroll-target="#modelo-estadístico">Modelo estadístico</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
-  <li><a href="#arquitectura-de-las-pruebas-de-hipótesis" id="toc-arquitectura-de-las-pruebas-de-hipótesis" class="nav-link" data-scroll-target="#arquitectura-de-las-pruebas-de-hipótesis">Arquitectura de las pruebas de hipótesis</a>
-  <ul class="collapse">
-  <li><a href="#la-tetera-de-russell-y-la-carga-de-la-prueba" id="toc-la-tetera-de-russell-y-la-carga-de-la-prueba" class="nav-link" data-scroll-target="#la-tetera-de-russell-y-la-carga-de-la-prueba">La tetera de Russell y la carga de la prueba</a></li>
-  <li><a href="#la-arquitectura-fundamental-de-una-prueba-de-hipótesis" id="toc-la-arquitectura-fundamental-de-una-prueba-de-hipótesis" class="nav-link" data-scroll-target="#la-arquitectura-fundamental-de-una-prueba-de-hipótesis">La arquitectura fundamental de una prueba de hipótesis</a></li>
-  <li><a href="#un-ejemplo-aplicado-videojuegos-violentos-y-comportamientos-agresivos" id="toc-un-ejemplo-aplicado-videojuegos-violentos-y-comportamientos-agresivos" class="nav-link" data-scroll-target="#un-ejemplo-aplicado-videojuegos-violentos-y-comportamientos-agresivos">Un ejemplo aplicado: videojuegos violentos y comportamientos agresivos</a></li>
-  <li><a href="#reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" id="toc-reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" class="nav-link" data-scroll-target="#reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba">Reflexiones sobre la evidencia y la carga de la prueba</a></li>
+  <li><a href="#qué-es-la-reproducibilidad-y-por-qué-es-importante" id="toc-qué-es-la-reproducibilidad-y-por-qué-es-importante" class="nav-link" data-scroll-target="#qué-es-la-reproducibilidad-y-por-qué-es-importante"><span class="header-section-number">11.1.1</span> Qué es la reproducibilidad y por qué es importante</a></li>
+  <li><a href="#reproductibilidad" id="toc-reproductibilidad" class="nav-link" data-scroll-target="#reproductibilidad"><span class="header-section-number">11.1.2</span> Reproductibilidad</a></li>
+  <li><a href="#probabilidad" id="toc-probabilidad" class="nav-link" data-scroll-target="#probabilidad"><span class="header-section-number">11.1.3</span> Probabilidad</a></li>
+  <li><a href="#estadística" id="toc-estadística" class="nav-link" data-scroll-target="#estadística"><span class="header-section-number">11.1.4</span> Estadística</a></li>
+  <li><a href="#modelo-estadístico" id="toc-modelo-estadístico" class="nav-link" data-scroll-target="#modelo-estadístico"><span class="header-section-number">11.1.5</span> Modelo estadístico</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">11.1.6</span> Objetivo</a></li>
   </ul></li>
-  <li><a href="#terminología" id="toc-terminología" class="nav-link" data-scroll-target="#terminología">Terminología</a>
+  <li><a href="#arquitectura-de-las-pruebas-de-hipótesis" id="toc-arquitectura-de-las-pruebas-de-hipótesis" class="nav-link" data-scroll-target="#arquitectura-de-las-pruebas-de-hipótesis"><span class="header-section-number">11.2</span> Arquitectura de las pruebas de hipótesis</a>
   <ul class="collapse">
-  <li><a href="#hipótesis-estadística" id="toc-hipótesis-estadística" class="nav-link" data-scroll-target="#hipótesis-estadística">Hipótesis estadística</a></li>
-  <li><a href="#sistema-de-hipótesis" id="toc-sistema-de-hipótesis" class="nav-link" data-scroll-target="#sistema-de-hipótesis">Sistema de hipótesis</a></li>
-  <li><a href="#tipos-de-error" id="toc-tipos-de-error" class="nav-link" data-scroll-target="#tipos-de-error">Tipos de error</a></li>
-  <li><a href="#nivel-de-significancia" id="toc-nivel-de-significancia" class="nav-link" data-scroll-target="#nivel-de-significancia">Nivel de significancia</a></li>
-  <li><a href="#integrando-los-conceptos-en-la-práctica" id="toc-integrando-los-conceptos-en-la-práctica" class="nav-link" data-scroll-target="#integrando-los-conceptos-en-la-práctica">Integrando los conceptos en la práctica</a></li>
+  <li><a href="#la-tetera-de-russell-y-la-carga-de-la-prueba" id="toc-la-tetera-de-russell-y-la-carga-de-la-prueba" class="nav-link" data-scroll-target="#la-tetera-de-russell-y-la-carga-de-la-prueba"><span class="header-section-number">11.2.1</span> La tetera de Russell y la carga de la prueba</a></li>
+  <li><a href="#la-arquitectura-fundamental-de-una-prueba-de-hipótesis" id="toc-la-arquitectura-fundamental-de-una-prueba-de-hipótesis" class="nav-link" data-scroll-target="#la-arquitectura-fundamental-de-una-prueba-de-hipótesis"><span class="header-section-number">11.2.2</span> La arquitectura fundamental de una prueba de hipótesis</a></li>
+  <li><a href="#reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" id="toc-reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" class="nav-link" data-scroll-target="#reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba"><span class="header-section-number">11.2.3</span> Reflexiones sobre la evidencia y la carga de la prueba</a></li>
   </ul></li>
-  <li><a href="#tipos-de-error-1" id="toc-tipos-de-error-1" class="nav-link" data-scroll-target="#tipos-de-error-1">Tipos de error</a></li>
-  <li><a href="#tipos-de-error-2" id="toc-tipos-de-error-2" class="nav-link" data-scroll-target="#tipos-de-error-2">Tipos de error</a></li>
-  <li><a href="#nivel-de-significancia-1" id="toc-nivel-de-significancia-1" class="nav-link" data-scroll-target="#nivel-de-significancia-1">Nivel de significancia</a></li>
-  <li><a href="#rechazar-la-hipótesis-nula" id="toc-rechazar-la-hipótesis-nula" class="nav-link" data-scroll-target="#rechazar-la-hipótesis-nula">Rechazar la hipótesis nula</a></li>
-  <li><a href="#valor-p" id="toc-valor-p" class="nav-link" data-scroll-target="#valor-p">Valor p</a></li>
-  <li><a href="#decisión" id="toc-decisión" class="nav-link" data-scroll-target="#decisión">Decisión</a></li>
-  <li><a href="#prueba" id="toc-prueba" class="nav-link" data-scroll-target="#prueba">Prueba</a>
+  <li><a href="#terminología" id="toc-terminología" class="nav-link" data-scroll-target="#terminología"><span class="header-section-number">11.3</span> Terminología</a>
   <ul class="collapse">
-  <li><a href="#el-papel-de-la-significancia-estadística-y-el-error" id="toc-el-papel-de-la-significancia-estadística-y-el-error" class="nav-link" data-scroll-target="#el-papel-de-la-significancia-estadística-y-el-error">El papel de la significancia estadística y el error</a></li>
+  <li><a href="#hipótesis-estadística" id="toc-hipótesis-estadística" class="nav-link" data-scroll-target="#hipótesis-estadística"><span class="header-section-number">11.3.1</span> Hipótesis estadística</a></li>
+  <li><a href="#sistema-de-hipótesis" id="toc-sistema-de-hipótesis" class="nav-link" data-scroll-target="#sistema-de-hipótesis"><span class="header-section-number">11.3.2</span> Sistema de hipótesis</a></li>
+  <li><a href="#tipos-de-error" id="toc-tipos-de-error" class="nav-link" data-scroll-target="#tipos-de-error"><span class="header-section-number">11.3.3</span> Tipos de error</a></li>
+  <li><a href="#nivel-de-significancia" id="toc-nivel-de-significancia" class="nav-link" data-scroll-target="#nivel-de-significancia"><span class="header-section-number">11.3.4</span> Nivel de significancia</a></li>
+  <li><a href="#integrando-los-conceptos-en-la-práctica" id="toc-integrando-los-conceptos-en-la-práctica" class="nav-link" data-scroll-target="#integrando-los-conceptos-en-la-práctica"><span class="header-section-number">11.3.5</span> Integrando los conceptos en la práctica</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#pruebas-paramétricas-y-no-paramétricas" id="toc-pruebas-paramétricas-y-no-paramétricas" class="nav-link" data-scroll-target="#pruebas-paramétricas-y-no-paramétricas">Pruebas paramétricas y no paramétricas</a>
+  <li><a href="#aquí-vamos" id="toc-aquí-vamos" class="nav-link" data-scroll-target="#aquí-vamos"><span class="header-section-number">11.4</span> AQUÍ VAMOS</a></li>
+  <li><a href="#tipos-de-error-1" id="toc-tipos-de-error-1" class="nav-link" data-scroll-target="#tipos-de-error-1"><span class="header-section-number">11.5</span> Tipos de error</a></li>
+  <li><a href="#tipos-de-error-2" id="toc-tipos-de-error-2" class="nav-link" data-scroll-target="#tipos-de-error-2"><span class="header-section-number">11.6</span> Tipos de error</a></li>
+  <li><a href="#nivel-de-significancia-1" id="toc-nivel-de-significancia-1" class="nav-link" data-scroll-target="#nivel-de-significancia-1"><span class="header-section-number">11.7</span> Nivel de significancia</a></li>
+  <li><a href="#rechazar-la-hipótesis-nula" id="toc-rechazar-la-hipótesis-nula" class="nav-link" data-scroll-target="#rechazar-la-hipótesis-nula"><span class="header-section-number">11.8</span> Rechazar la hipótesis nula</a></li>
+  <li><a href="#valor-p" id="toc-valor-p" class="nav-link" data-scroll-target="#valor-p"><span class="header-section-number">11.9</span> Valor p</a></li>
+  <li><a href="#decisión" id="toc-decisión" class="nav-link" data-scroll-target="#decisión"><span class="header-section-number">11.10</span> Decisión</a></li>
+  <li><a href="#prueba" id="toc-prueba" class="nav-link" data-scroll-target="#prueba"><span class="header-section-number">11.11</span> Prueba</a>
   <ul class="collapse">
-  <li><a href="#pruebas-paramétricas" id="toc-pruebas-paramétricas" class="nav-link" data-scroll-target="#pruebas-paramétricas">Pruebas paramétricas</a></li>
-  <li><a href="#pruebas-no-paramétricas" id="toc-pruebas-no-paramétricas" class="nav-link" data-scroll-target="#pruebas-no-paramétricas">Pruebas no paramétricas</a></li>
-  <li><a href="#pruebas-paramétricas-1" id="toc-pruebas-paramétricas-1" class="nav-link" data-scroll-target="#pruebas-paramétricas-1">Pruebas paramétricas</a></li>
-  <li><a href="#pruebas-no-paramétricas-analíticas" id="toc-pruebas-no-paramétricas-analíticas" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-analíticas">Pruebas no paramétricas analíticas</a></li>
-  <li><a href="#pruebas-no-paramétricas-de-simulación-estocástica" id="toc-pruebas-no-paramétricas-de-simulación-estocástica" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-de-simulación-estocástica">Pruebas no paramétricas de simulación estocástica</a></li>
-  <li><a href="#cuándo-usar-cada-tipo-de-prueba" id="toc-cuándo-usar-cada-tipo-de-prueba" class="nav-link" data-scroll-target="#cuándo-usar-cada-tipo-de-prueba">Cuándo usar cada tipo de prueba</a></li>
-  </ul></li>
-  <li><a href="#pruebas-de-hipótesis-más-usadas" id="toc-pruebas-de-hipótesis-más-usadas" class="nav-link" data-scroll-target="#pruebas-de-hipótesis-más-usadas">Pruebas de hipótesis más usadas</a>
-  <ul class="collapse">
-  <li><a href="#test-t-de-student-para-una-muestra" id="toc-test-t-de-student-para-una-muestra" class="nav-link" data-scroll-target="#test-t-de-student-para-una-muestra">Test t de Student para una muestra</a></li>
-  <li><a href="#test-de-signos-para-una-muestra" id="toc-test-de-signos-para-una-muestra" class="nav-link" data-scroll-target="#test-de-signos-para-una-muestra">Test de signos para una muestra</a></li>
-  <li><a href="#test-t-de-student-para-dos-muestras-independientes" id="toc-test-t-de-student-para-dos-muestras-independientes" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-independientes">Test t de Student para dos muestras independientes</a></li>
-  <li><a href="#test-t-de-student-para-dos-muestras-independientes-1" id="toc-test-t-de-student-para-dos-muestras-independientes-1" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-independientes-1">Test t de Student para dos muestras independientes</a></li>
-  <li><a href="#test-wilcoxon---mann---whitney" id="toc-test-wilcoxon---mann---whitney" class="nav-link" data-scroll-target="#test-wilcoxon---mann---whitney">Test Wilcoxon - Mann - Whitney</a></li>
-  <li><a href="#test-t-de-student-para-dos-muestras-pareadas" id="toc-test-t-de-student-para-dos-muestras-pareadas" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-pareadas">Test t de Student para dos muestras pareadas</a></li>
-  <li><a href="#prueba-de-una-sola-proporción" id="toc-prueba-de-una-sola-proporción" class="nav-link" data-scroll-target="#prueba-de-una-sola-proporción">Prueba de una sola proporción</a></li>
-  <li><a href="#prueba-de-dos-proporciones" id="toc-prueba-de-dos-proporciones" class="nav-link" data-scroll-target="#prueba-de-dos-proporciones">Prueba de dos proporciones</a></li>
-  <li><a href="#test-de-correlación-de-pearson" id="toc-test-de-correlación-de-pearson" class="nav-link" data-scroll-target="#test-de-correlación-de-pearson">Test de correlación de Pearson</a></li>
-  <li><a href="#test-de-correlación-de-spearman" id="toc-test-de-correlación-de-spearman" class="nav-link" data-scroll-target="#test-de-correlación-de-spearman">Test de correlación de Spearman</a></li>
+  <li><a href="#el-papel-de-la-significancia-estadística-y-el-error" id="toc-el-papel-de-la-significancia-estadística-y-el-error" class="nav-link" data-scroll-target="#el-papel-de-la-significancia-estadística-y-el-error"><span class="header-section-number">11.11.1</span> El papel de la significancia estadística y el error</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -258,22 +332,15 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_hipotesis.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Pruebas de hipótesis</h1>
-<p class="subtitle lead">Estadística inferencial</p>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
-          </div>
-  </div>
     
   
     
@@ -284,78 +351,94 @@ window.Quarto = {
 </header>
 
 
-<section id="la-hipótesis-en-el-contexto-del-desarrollo-científico" class="level1">
-<h1>La hipótesis en el contexto del desarrollo científico</h1>
+<section id="la-hipótesis-en-el-contexto-del-desarrollo-científico" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="la-hipótesis-en-el-contexto-del-desarrollo-científico"><span class="header-section-number">11.1</span> La hipótesis en el contexto del desarrollo científico</h2>
 <p>Epistemológicamente, una <strong>hipótesis</strong> es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que las hipótesis funcionan como un puente entre la teoría y los datos empíricos. Una hipótesis permite a los investigadores establecer un marco para la investigación, formulando preguntas que pueden ser respondidas mediante métodos científicos. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.</p>
 <p>Las pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en datos. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión.</p>
-<section id="qué-es-la-reproducibilidad-y-por-qué-es-importante" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-la-reproducibilidad-y-por-qué-es-importante">Qué es la reproducibilidad y por qué es importante</h2>
+<section id="qué-es-la-reproducibilidad-y-por-qué-es-importante" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="qué-es-la-reproducibilidad-y-por-qué-es-importante"><span class="header-section-number">11.1.1</span> Qué es la reproducibilidad y por qué es importante</h3>
 <p>La <strong>reproducibilidad</strong> es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.</p>
 <ul>
 <li><strong>Importancia:</strong> La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado.</li>
 </ul>
 </section>
-<section id="reproductibilidad" class="level2">
-<h2 class="anchored" data-anchor-id="reproductibilidad">Reproductibilidad</h2>
+<section id="reproductibilidad" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="reproductibilidad"><span class="header-section-number">11.1.2</span> Reproductibilidad</h3>
 <p>La <strong>crisis actual de la reproducibilidad</strong> en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados</p>
 <p>en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos.</p>
 <ul>
 <li><strong>Los escándalos en la ciencia:</strong> Casos de fraude, mala conducta científica y prácticas poco éticas han salido a la luz, socavando la confianza en la investigación. Esto ha llevado a un llamado a la transparencia en los métodos y datos utilizados, así como a la implementación de mejores prácticas para asegurar la reproducibilidad.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arreglar todo esto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="probabilidad" class="level2">
-<h2 class="anchored" data-anchor-id="probabilidad">Probabilidad</h2>
+<section id="probabilidad" class="level3" data-number="11.1.3">
+<h3 data-number="11.1.3" class="anchored" data-anchor-id="probabilidad"><span class="header-section-number">11.1.3</span> Probabilidad</h3>
 <p>Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.</p>
 </section>
-<section id="estadística" class="level2">
-<h2 class="anchored" data-anchor-id="estadística">Estadística</h2>
+<section id="estadística" class="level3" data-number="11.1.4">
+<h3 data-number="11.1.4" class="anchored" data-anchor-id="estadística"><span class="header-section-number">11.1.4</span> Estadística</h3>
 <p>Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.</p>
 </section>
-<section id="modelo-estadístico" class="level2">
-<h2 class="anchored" data-anchor-id="modelo-estadístico">Modelo estadístico</h2>
+<section id="modelo-estadístico" class="level3" data-number="11.1.5">
+<h3 data-number="11.1.5" class="anchored" data-anchor-id="modelo-estadístico"><span class="header-section-number">11.1.5</span> Modelo estadístico</h3>
 <p>Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.</p>
 </section>
-<section id="objetivo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<section id="objetivo" class="level3" data-number="11.1.6">
+<h3 data-number="11.1.6" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">11.1.6</span> Objetivo</h3>
 <p>Establecer si existe <strong>suficiente evidencia</strong> en una muestra aleatoria para <strong>rechazar</strong> o <strong>no rechazar</strong> la <strong>hipótesis nula</strong> a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.</p>
 </section>
-<section id="arquitectura-de-las-pruebas-de-hipótesis" class="level2">
-<h2 class="anchored" data-anchor-id="arquitectura-de-las-pruebas-de-hipótesis">Arquitectura de las pruebas de hipótesis</h2>
+</section>
+<section id="arquitectura-de-las-pruebas-de-hipótesis" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="arquitectura-de-las-pruebas-de-hipótesis"><span class="header-section-number">11.2</span> Arquitectura de las pruebas de hipótesis</h2>
 <p>En el ámbito de la estadística y la investigación científica, la comprensión y aplicación de las pruebas de hipótesis es fundamental para validar teorías y conclusiones basadas en datos. Estas pruebas se estructuran de manera que permiten a los investigadores tomar decisiones informadas acerca de la relación entre variables y la existencia de efectos en estudios empíricos. Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la <em>tetera de Russell</em>, la cual ejemplifica la importancia de la carga de la prueba y su relación con la validación de afirmaciones complejas.</p>
-<section id="la-tetera-de-russell-y-la-carga-de-la-prueba" class="level3">
-<h3 class="anchored" data-anchor-id="la-tetera-de-russell-y-la-carga-de-la-prueba">La tetera de Russell y la carga de la prueba</h3>
+<section id="la-tetera-de-russell-y-la-carga-de-la-prueba" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="la-tetera-de-russell-y-la-carga-de-la-prueba"><span class="header-section-number">11.2.1</span> La tetera de Russell y la carga de la prueba</h3>
 <p>Bertrand Russell, filósofo y matemático británico, introdujo la analogía de una pequeña tetera de porcelana que orbita el Sol entre la Tierra y Marte, tan diminuta que ningún telescopio podría detectarla. La premisa de Russell es que, si alguien afirmara la existencia de esta tetera, la responsabilidad de demostrar su existencia recaería sobre esa persona y no sobre los escépticos, quienes no tendrían que probar la inexistencia de la misma. Este argumento sirve para destacar un principio esencial en la lógica y la ciencia: la carga de la prueba recae en quienes hacen afirmaciones poco usuales.</p>
 <p>Russell empleó esta metáfora en el contexto de la religión, pero su aplicación es igualmente poderosa en la ciencia y la estadística. En el campo de las pruebas de hipótesis, se establece que la evidencia es la herramienta clave para sostener o rechazar afirmaciones. Esta carga de la prueba se traduce en un proceso metódico y riguroso que permite a los investigadores evaluar si los datos apoyan una hipótesis específica.</p>
 </section>
-<section id="la-arquitectura-fundamental-de-una-prueba-de-hipótesis" class="level3">
-<h3 class="anchored" data-anchor-id="la-arquitectura-fundamental-de-una-prueba-de-hipótesis">La arquitectura fundamental de una prueba de hipótesis</h3>
+<section id="la-arquitectura-fundamental-de-una-prueba-de-hipótesis" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="la-arquitectura-fundamental-de-una-prueba-de-hipótesis"><span class="header-section-number">11.2.2</span> La arquitectura fundamental de una prueba de hipótesis</h3>
 <p>En estadística, la arquitectura de las pruebas de hipótesis se sostiene en dos componentes principales: la <strong>hipótesis nula (H₀)</strong> y la <strong>hipótesis alternativa (H₁)</strong>.</p>
 <ul>
 <li><p><strong>Hipótesis nula (H₀):</strong> Es la suposición inicial que niega la existencia de un efecto o relación en la población de estudio. Es un punto de partida que establece que cualquier efecto observado es producto de la variabilidad natural o de un azar inherente. La hipótesis nula se formula de manera que, para rechazarla, se debe contar con evidencia suficiente que contradiga su planteamiento. No obstante, debido a su enunciado, su verificación resulta muy costosa.</p></li>
 <li><p><strong>Hipótesis alternativa (H₁):</strong> Esta hipótesis propone la existencia de un efecto o relación y es la contraparte de la hipótesis nula. Si los datos recolectados ofrecen pruebas suficientes, se puede rechazar la hipótesis nula en favor de la hipótesis alternativa.</p></li>
 </ul>
 <p>Este enfoque dual asegura que los investigadores se acerquen al análisis de manera objetiva, comenzando con la suposición de que no hay un efecto y buscando evidencia que justifique su rechazo.</p>
-</section>
-<section id="un-ejemplo-aplicado-videojuegos-violentos-y-comportamientos-agresivos" class="level3">
-<h3 class="anchored" data-anchor-id="un-ejemplo-aplicado-videojuegos-violentos-y-comportamientos-agresivos">Un ejemplo aplicado: videojuegos violentos y comportamientos agresivos</h3>
-<p>Considere el siguiente problema de investigación: <strong>¿Los videojuegos violentos causan comportamientos violentos?</strong>. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mejorar el ejemplo, lo demostrable y lo indemostrable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Ejemplo aplicado a las ciencias sociales</strong>: Considere el siguiente problema de investigación: <strong>¿Los videojuegos violentos causan comportamientos violentos?</strong>. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:</p>
 <ul>
-<li><strong>Hipótesis nula (H₀):</strong> Los videojuegos violentos no causan un aumento en los comportamientos violentos.</li>
-<li><strong>Hipótesis alternativa (H₁):</strong> Los videojuegos violentos causan un aumento en los comportamientos violentos.</li>
+<li><p><strong>Hipótesis nula (H₀):</strong> Los videojuegos violentos no causan un aumento en los comportamientos violentos.</p></li>
+<li><p><strong>Hipótesis alternativa (H₁):</strong> Los videojuegos violentos causan un aumento en los comportamientos violentos.</p></li>
 </ul>
+</div>
+</div>
 <p>El propósito de la prueba de hipótesis es analizar los datos recolectados en estudios experimentales u observacionales para determinar si hay suficiente evidencia empírica para rechazar la hipótesis nula y aceptar la hipótesis alternativa. Aquí, la prueba recae en la demostración de H₁: si los datos muestran una relación estadísticamente significativa entre la exposición a videojuegos violentos y comportamientos agresivos, entonces la hipótesis nula puede ser rechazada razonablemente.</p>
 </section>
-<section id="reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" class="level3">
-<h3 class="anchored" data-anchor-id="reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba">Reflexiones sobre la evidencia y la carga de la prueba</h3>
+<section id="reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba" class="level3" data-number="11.2.3">
+<h3 data-number="11.2.3" class="anchored" data-anchor-id="reflexiones-sobre-la-evidencia-y-la-carga-de-la-prueba"><span class="header-section-number">11.2.3</span> Reflexiones sobre la evidencia y la carga de la prueba</h3>
 <p>La analogía de la tetera de Russell es particularmente relevante al considerar la <strong>evidencia necesaria para sostener o rechazar una hipótesis</strong>. Así como Russell enfatizaba que es quien afirma la existencia de la tetera quien debe probar su existencia, en las pruebas de hipótesis, los investigadores deben demostrar que los datos apoyan la hipótesis alternativa y no asumir la verdad de H₁ sin evidencia adecuada. De lo contrario, el rigor científico y la validez de las conclusiones estarían en entredicho.</p>
 <p>Este enfoque protege a la ciencia de afirmaciones infundadas y promueve una práctica investigativa basada en pruebas y datos sólidos. Al entender la arquitectura de las pruebas de hipótesis, los investigadores pueden abordar preguntas complejas con un marco metodológico que garantiza que sus conclusiones estén respaldadas por evidencia empírica y análisis crítico.</p>
 </section>
 </section>
-<section id="terminología" class="level2">
-<h2 class="anchored" data-anchor-id="terminología">Terminología</h2>
+<section id="terminología" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="terminología"><span class="header-section-number">11.3</span> Terminología</h2>
 <p>La comprensión profunda de la terminología asociada con las pruebas de hipótesis es esencial para el análisis y la interpretación de datos en la estadística. A continuación, se presentan definiciones y explicaciones detalladas de los conceptos clave que constituyen la base de cualquier prueba de hipótesis.</p>
-<section id="hipótesis-estadística" class="level3">
-<h3 class="anchored" data-anchor-id="hipótesis-estadística">Hipótesis estadística</h3>
+<section id="hipótesis-estadística" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="hipótesis-estadística"><span class="header-section-number">11.3.1</span> Hipótesis estadística</h3>
 <p>Una <strong>hipótesis estadística</strong> es una afirmación sobre un parámetro poblacional que se somete a prueba mediante datos muestrales. Este tipo de hipótesis se formula con el fin de validar o refutar una suposición sobre la población a partir de la evidencia obtenida en la muestra. Dependiendo de la naturaleza de la afirmación, una hipótesis puede clasificarse en:</p>
 <ul>
 <li><strong>Hipótesis simple</strong>: Es aquella que especifica un valor único y preciso para el parámetro de la población. Por ejemplo, si se formula la hipótesis <span class="math inline">\(H_0: \mu = \mu_0\)</span>, se está afirmando que la media poblacional es exactamente igual a un valor conocido <span class="math inline">\(\mu_0\)</span>.</li>
@@ -363,8 +446,8 @@ window.Quarto = {
 </ul>
 <p>En estas hipótesis, el valor <span class="math inline">\(\mu_0\)</span> se conoce como el <strong>valor hipotético</strong>, que es el punto de referencia contra el cual se compara la estimación muestral para determinar si la hipótesis debe ser aceptada o rechazada.</p>
 </section>
-<section id="sistema-de-hipótesis" class="level3">
-<h3 class="anchored" data-anchor-id="sistema-de-hipótesis">Sistema de hipótesis</h3>
+<section id="sistema-de-hipótesis" class="level3" data-number="11.3.2">
+<h3 data-number="11.3.2" class="anchored" data-anchor-id="sistema-de-hipótesis"><span class="header-section-number">11.3.2</span> Sistema de hipótesis</h3>
 <p>El <strong>sistema de hipótesis</strong> es el conjunto de hipótesis contrapuestas que se comparan en el proceso de la prueba de hipótesis. Este sistema incluye dos componentes principales:</p>
 <ul>
 <li><strong>Hipótesis nula (<span class="math inline">\(H_0\)</span>)</strong>: Es la hipótesis de partida que se presume cierta y que no se rechaza a menos que los datos muestren una evidencia fuerte en su contra. La hipótesis nula se formula generalmente como una afirmación de igualdad o de ausencia de efecto. Ejemplos de hipótesis nulas pueden ser:
@@ -382,8 +465,8 @@ window.Quarto = {
 </ul>
 <p>Este sistema de hipótesis es el núcleo de la prueba estadística y establece un marco para decidir si los datos muestrales respaldan o refutan la hipótesis nula.</p>
 </section>
-<section id="tipos-de-error" class="level3">
-<h3 class="anchored" data-anchor-id="tipos-de-error">Tipos de error</h3>
+<section id="tipos-de-error" class="level3" data-number="11.3.3">
+<h3 data-number="11.3.3" class="anchored" data-anchor-id="tipos-de-error"><span class="header-section-number">11.3.3</span> Tipos de error</h3>
 <p>En el proceso de tomar decisiones basadas en pruebas de hipótesis, es posible cometer errores. Estos errores se clasifican en dos tipos principales:</p>
 <ul>
 <li><p><strong>Error tipo I</strong>: Ocurre cuando se rechaza la hipótesis nula siendo esta verdadera. Es decir, se concluye incorrectamente que hay un efecto o diferencia cuando en realidad no lo hay. La probabilidad de cometer un error tipo I se denota por <span class="math inline">\(\alpha\)</span>, que también se conoce como el <strong>nivel de significancia</strong> de la prueba. Este es un parámetro que se establece de antemano y refleja el nivel de tolerancia al riesgo de rechazar una hipótesis verdadera.</p></li>
@@ -391,43 +474,45 @@ window.Quarto = {
 </ul>
 <p>La relación entre los tipos de error y la potencia de la prueba es fundamental para comprender la eficacia y precisión de una prueba estadística. Un investigador debe equilibrar estos errores al diseñar una prueba, ya que reducir la probabilidad de un error tipo I puede incrementar la probabilidad de un error tipo II, y viceversa.</p>
 </section>
-<section id="nivel-de-significancia" class="level3">
-<h3 class="anchored" data-anchor-id="nivel-de-significancia">Nivel de significancia</h3>
+<section id="nivel-de-significancia" class="level3" data-number="11.3.4">
+<h3 data-number="11.3.4" class="anchored" data-anchor-id="nivel-de-significancia"><span class="header-section-number">11.3.4</span> Nivel de significancia</h3>
 <p>El <strong>nivel de significancia</strong> (<span class="math inline">\(\alpha\)</span>) es un umbral predefinido que establece la probabilidad máxima aceptable de cometer un error tipo I. Comúnmente, los niveles de significancia utilizados son 0.05, 0.01, o 0.10. Este valor define el criterio para decidir si los resultados de una prueba son estadísticamente significativos. Si el valor p obtenido de la prueba es menor o igual a <span class="math inline">\(\alpha\)</span>, se rechaza la hipótesis nula en favor de la hipótesis alternativa, indicando que los resultados observados son lo suficientemente raros como para no atribuirse al azar.</p>
 <p>La elección del nivel de significancia depende del contexto y las consecuencias de cometer un error tipo I. En estudios donde el costo de un error tipo I es alto, se elige un <span class="math inline">\(\alpha\)</span> más bajo (e.g., 0.01). En otros casos, donde la tolerancia al riesgo es mayor, se podría optar por un <span class="math inline">\(\alpha\)</span> más alto (e.g., 0.10).</p>
 </section>
-<section id="integrando-los-conceptos-en-la-práctica" class="level3">
-<h3 class="anchored" data-anchor-id="integrando-los-conceptos-en-la-práctica">Integrando los conceptos en la práctica</h3>
+<section id="integrando-los-conceptos-en-la-práctica" class="level3" data-number="11.3.5">
+<h3 data-number="11.3.5" class="anchored" data-anchor-id="integrando-los-conceptos-en-la-práctica"><span class="header-section-number">11.3.5</span> Integrando los conceptos en la práctica</h3>
 <p>La correcta formulación de hipótesis y la comprensión de los tipos de error y del nivel de significancia permiten a los investigadores tomar decisiones informadas basadas en los datos muestrales. En un estudio, el análisis de hipótesis proporciona un camino claro para evaluar si una afirmación sobre la población es plausible o si debe ser rechazada en función de la evidencia empírica. Este enfoque estructurado es la base para el análisis crítico y la validación de resultados en investigación científica y en aplicaciones prácticas en diversos campos.</p>
 </section>
 </section>
-<section id="tipos-de-error-1" class="level2">
-<h2 class="anchored" data-anchor-id="tipos-de-error-1">Tipos de error</h2>
+<section id="aquí-vamos" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="aquí-vamos"><span class="header-section-number">11.4</span> AQUÍ VAMOS</h2>
+</section>
+<section id="tipos-de-error-1" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="tipos-de-error-1"><span class="header-section-number">11.5</span> Tipos de error</h2>
 <p>En una prueba de hipótesis, pueden ocurrir dos tipos de errores.</p>
 <ul>
 <li><strong>error tipo 1</strong>: Rechazar la hipótesis nula cuando esta es verdadera. La probabilidad de cometer este error es el nivel de significancia <span class="math inline">\(\alpha\)</span>.</li>
 <li><strong>error tipo 2</strong>: No rechazar la hipótesis nula cuando esta es falsa. La probabilidad de cometer este error se denota como <span class="math inline">\(\beta\)</span>.</li>
 </ul>
 </section>
-<section id="tipos-de-error-2" class="level2">
-<h2 class="anchored" data-anchor-id="tipos-de-error-2">Tipos de error</h2>
+<section id="tipos-de-error-2" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="tipos-de-error-2"><span class="header-section-number">11.6</span> Tipos de error</h2>
 <p>En una prueba de hipótesis, pueden ocurrir dos tipos de errores.</p>
-<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuldWSenU1lKPw2F7kkKH5zraE5wHibmAdM21m88UDZDN1Jvqb.png" class="img-fluid"></p>
 </section>
-<section id="nivel-de-significancia-1" class="level2">
-<h2 class="anchored" data-anchor-id="nivel-de-significancia-1">Nivel de significancia</h2>
+<section id="nivel-de-significancia-1" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="nivel-de-significancia-1"><span class="header-section-number">11.7</span> Nivel de significancia</h2>
 <p>El <strong>nivel de significancia</strong> (<span class="math inline">\(\alpha\)</span>) es la probabilidad de cometer un error tipo 1, es decir, rechazar la hipótesis nula cuando en realidad es cierta. Este nivel se establece antes de realizar la prueba y comúnmente se fija en 0.05 o 0.01.</p>
 <ul>
 <li><span class="math display">\[\alpha = P(\text{error tipo 1}) = P(\text{rechazar $H_0$}\mid H_0)\]</span></li>
 </ul>
 </section>
-<section id="rechazar-la-hipótesis-nula" class="level2">
-<h2 class="anchored" data-anchor-id="rechazar-la-hipótesis-nula">Rechazar la hipótesis nula</h2>
+<section id="rechazar-la-hipótesis-nula" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="rechazar-la-hipótesis-nula"><span class="header-section-number">11.8</span> Rechazar la hipótesis nula</h2>
 <p>Rechazar <span class="math inline">\(H_0\)</span> implica que se ha encontrado algo en la muestra tan improbable bajo la hipótesis nula, que lleva al investigador a favorecer la hipótesis alternativa <span class="math inline">\(H_1\)</span>. Sin embargo, siempre existe la posibilidad de cometer un error tipo 1 al hacer esta decisión.</p>
 <p>En estadística, se prefiere no rechazar <span class="math inline">\(H_0\)</span> erróneamente a rechazarla sin suficiente evidencia. Por esto, <span class="math inline">\(H_0\)</span> se mantiene a menos que haya <strong>evidencia contundente</strong> que obligue a revocarla. Este enfoque refleja un principio conservador en la ciencia, donde se requiere una alta carga de prueba para cambiar el estado actual del conocimiento.</p>
 </section>
-<section id="valor-p" class="level2">
-<h2 class="anchored" data-anchor-id="valor-p">Valor p</h2>
+<section id="valor-p" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="valor-p"><span class="header-section-number">11.9</span> Valor p</h2>
 <p>El <strong>valor</strong> <span class="math inline">\(p\)</span> es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta.</p>
 <ul>
 <li>Si <span class="math inline">\(p &lt; \alpha\)</span>, se rechaza <span class="math inline">\(H_0\)</span>, lo que sugiere que la evidencia muestral no es compatible con <span class="math inline">\(H_0\)</span>.</li>
@@ -435,8 +520,8 @@ window.Quarto = {
 </ul>
 <p>Es importante recordar que el valor <span class="math inline">\(p\)</span> no mide la probabilidad de que <span class="math inline">\(H_0\)</span> sea verdadera, sino la probabilidad de los datos observados bajo <span class="math inline">\(H_0\)</span>.</p>
 </section>
-<section id="decisión" class="level2">
-<h2 class="anchored" data-anchor-id="decisión">Decisión</h2>
+<section id="decisión" class="level2" data-number="11.10">
+<h2 data-number="11.10" class="anchored" data-anchor-id="decisión"><span class="header-section-number">11.10</span> Decisión</h2>
 <p>La decisión en una prueba de hipótesis se basa en comparar el valor <span class="math inline">\(p\)</span> con el nivel de significancia <span class="math inline">\(\alpha\)</span>:</p>
 <ul>
 <li><strong>Si</strong> <span class="math inline">\(p &lt; \alpha\)</span>, se <strong>rechaza</strong> <span class="math inline">\(H_0\)</span>.</li>
@@ -444,8 +529,8 @@ window.Quarto = {
 </ul>
 <p>Esta decisión refleja si la evidencia contra <span class="math inline">\(H_0\)</span> es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.</p>
 </section>
-<section id="prueba" class="level2">
-<h2 class="anchored" data-anchor-id="prueba">Prueba</h2>
+<section id="prueba" class="level2" data-number="11.11">
+<h2 data-number="11.11" class="anchored" data-anchor-id="prueba"><span class="header-section-number">11.11</span> Prueba</h2>
 <p>El proceso para realizar una prueba de hipótesis incluye los siguientes pasos:</p>
 <ol type="1">
 <li><strong>Establecer las hipótesis</strong>: Definir <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span> basándose en el problema de investigación.</li>
@@ -454,176 +539,10 @@ window.Quarto = {
 <li><strong>Tomar la decisión</strong>: Rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p &lt; \alpha\)</span> o no rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p \geq \alpha\)</span>.</li>
 <li><strong>Interpretar los resultados</strong>: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar <span class="math inline">\(H_1\)</span>.</li>
 </ol>
-<section id="el-papel-de-la-significancia-estadística-y-el-error" class="level3">
-<h3 class="anchored" data-anchor-id="el-papel-de-la-significancia-estadística-y-el-error">El papel de la significancia estadística y el error</h3>
+<section id="el-papel-de-la-significancia-estadística-y-el-error" class="level3" data-number="11.11.1">
+<h3 data-number="11.11.1" class="anchored" data-anchor-id="el-papel-de-la-significancia-estadística-y-el-error"><span class="header-section-number">11.11.1</span> El papel de la significancia estadística y el error</h3>
 <p>El proceso de las pruebas de hipótesis incluye la definición de un nivel de significancia (α), que es la probabilidad de rechazar la hipótesis nula cuando es verdadera (error tipo I). Comúnmente, se utiliza un nivel de significancia de 0.05, lo que implica que hay un 5% de probabilidad de cometer un error al rechazar H₀ incorrectamente.</p>
 <p>El resultado de una prueba estadística produce un valor p, que representa la probabilidad de observar los datos obtenidos, o más extremos, bajo la suposición de que H₀ es cierta. Si el valor p es menor que el nivel de significancia, se rechaza H₀ en favor de H₁. Sin embargo, si el valor p es mayor, no se rechaza H₀, lo que sugiere que no hay suficiente evidencia para afirmar un efecto significativo.</p>
-</section>
-</section>
-</section>
-<section id="pruebas-paramétricas-y-no-paramétricas" class="level1">
-<h1>Pruebas paramétricas y no paramétricas</h1>
-<section id="pruebas-paramétricas" class="level2">
-<h2 class="anchored" data-anchor-id="pruebas-paramétricas">Pruebas paramétricas</h2>
-<p>Las <strong>pruebas paramétricas</strong> estudian un parámetro de dimensión finita (una colección finita de parámetros), por esta razón presentan supuestos específicos sobre la distribución de los datos.</p>
-</section>
-<section id="pruebas-no-paramétricas" class="level2">
-<h2 class="anchored" data-anchor-id="pruebas-no-paramétricas">Pruebas no paramétricas</h2>
-<p>Las <strong>pruebas paramétricas</strong> estudian un parámetro de dimensión infinita (funciones de densidad).</p>
-<p><strong>Analíticas</strong>: Hacen uso de propiedades generales de las distribuciones.</p>
-<p><strong>Simulación estocástica</strong>: Hacen uso de simulación computacional para obtener el valor-p.</p>
-</section>
-<section id="pruebas-paramétricas-1" class="level2">
-<h2 class="anchored" data-anchor-id="pruebas-paramétricas-1">Pruebas paramétricas</h2>
-<p>Asumen que los datos siguen una distribución conocida, usualmente normal. Estas pruebas requieren que se cumplan ciertos supuestos, como la homogeneidad de varianzas y la linealidad.</p>
-<p>Estas pruebas son más potentes cuando los datos cumplen estos supuestos, ya que utilizan toda la información disponible en los datos.</p>
-<p>Cuando los datos no cumplen los supuestos, las pruebas pierden validez y los estudios rigor científico.</p>
-<ul>
-<li>Prueba t de Student (para la comparación de medias)</li>
-<li>ANOVA (para la comparación de medias entre múltiples grupos)</li>
-</ul>
-</section>
-<section id="pruebas-no-paramétricas-analíticas" class="level2">
-<h2 class="anchored" data-anchor-id="pruebas-no-paramétricas-analíticas">Pruebas no paramétricas analíticas</h2>
-<p>Las <strong>pruebas no paramétricas analíticas</strong> hacen uso de propiedades matemáticas generales de las distribuciones continuas. Por lo tanto, no requieren supuestos tan fuertes sobre la distribución de los datos.</p>
-<p>Son útiles cuando los datos no cumplen los supuestos necesarios para las pruebas paramétricas, como en casos de datos con distribuciones no normales o escalas de medición ordinales.</p>
-<p>Son menos potentes que las pruebas paramétricas en los casos paramétricos. No obstante, son más flexibles y aplicables a una mayor variedad de situaciones.</p>
-<ul>
-<li>Prueba de Mann-Whitney (para la comparación de dos grupos independientes)</li>
-<li>Prueba de Wilcoxon (para la comparación de dos grupos pareados)</li>
-<li>Prueba de Kruskal-Wallis (para la comparación de múltiples grupos)</li>
-</ul>
-</section>
-<section id="pruebas-no-paramétricas-de-simulación-estocástica" class="level2">
-<h2 class="anchored" data-anchor-id="pruebas-no-paramétricas-de-simulación-estocástica">Pruebas no paramétricas de simulación estocástica</h2>
-<p>Las <strong>pruebas de permutaciones</strong> son métodos estadísticos no paramétricos que evalúan la significancia de un estadístico de prueba al permutar, simular o remuestrear los datos observados con el fin de obtener una muestra de estadísticos bajo H_0.</p>
-<p>Al comparar el estadístico observado con la muestra de los estadísticos obtenidos, se puede determinar si el efecto observado es significativo.</p>
-<ul>
-<li><p><strong>Permutación</strong>: Se basa en la idea de que si no hay efecto, todas las permutaciones de los datos son igualmente probables.</p></li>
-<li><p><strong>Simulación</strong>: Se basa en la idea de que es posible simular la hipótesis nula y encontrar una muestra para el estimador bajo estas condiciones.</p></li>
-<li><p><strong>Remuestreo</strong>: Se basa en la idea de que una muestra aleatoria de una muestra aleatoria es una muestra aleatoria.</p></li>
-</ul>
-<p>Al comparar el estadístico observado con la distribución de los estadísticos obtenidos de las permutaciones, se puede determinar si el efecto observado es significativo.</p>
-<p><strong>Calculo del valor p</strong>: Se calcula como la proporción de permutaciones en las que el estadístico de prueba es al menos tan extremo como el observado.</p>
-<p>Estas pruebas no dependen de supuestos sobre la distribución de los datos, lo que las hace muy flexibles y robustas frente a diversas condiciones de los datos.</p>
-</section>
-<section id="cuándo-usar-cada-tipo-de-prueba" class="level2">
-<h2 class="anchored" data-anchor-id="cuándo-usar-cada-tipo-de-prueba">Cuándo usar cada tipo de prueba</h2>
-<p>Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos elegir cuándo aplicar cada tipo de prueba.</p>
-<ul>
-<li><p><strong>Pruebas paramétricas</strong>: cuando los datos cumplen con los supuestos de normalidad y homogeneidad de varianzas, y se requiere mayor potencia estadística.</p></li>
-<li><p><strong>Pruebas no paramétricas</strong>: cuando los datos no cumplen con los supuestos paramétricos o cuando se trabaja con datos ordinales o no numéricos. Son útiles sean analíticas o de simulación estocástica.</p></li>
-</ul>
-</section>
-</section>
-<section id="pruebas-de-hipótesis-más-usadas" class="level1">
-<h1>Pruebas de hipótesis más usadas</h1>
-<section id="test-t-de-student-para-una-muestra" class="level2">
-<h2 class="anchored" data-anchor-id="test-t-de-student-para-una-muestra">Test t de Student para una muestra</h2>
-<p>En la familia normal, una muestra aleatoria <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \mu = \mu_0\\
-  H_A: \mu \neq \mu_0
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-de-signos-para-una-muestra" class="level2">
-<h2 class="anchored" data-anchor-id="test-de-signos-para-una-muestra">Test de signos para una muestra</h2>
-<p>En la familia de distribuciones continuas, siendo <span class="math inline">\(\theta\)</span> la mediana, una muestra aleatoria <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> especificamos las hipótesis.</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \theta = \theta_0\\
-  H_A: \theta \neq \theta_0
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-t-de-student-para-dos-muestras-independientes" class="level2">
-<h2 class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-independientes">Test t de Student para dos muestras independientes</h2>
-<p>En la familia normal, dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo homogenedidad (<span class="math inline">\(\sigma^2_x = \sigma^2_y\)</span>), especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-t-de-student-para-dos-muestras-independientes-1" class="level2">
-<h2 class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-independientes-1">Test t de Student para dos muestras independientes</h2>
-<p>En la familia normal, dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo heterogenedidad (<span class="math inline">\(\sigma^2_x \neq \sigma^2_y\)</span>), especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-wilcoxon---mann---whitney" class="level2">
-<h2 class="anchored" data-anchor-id="test-wilcoxon---mann---whitney">Test Wilcoxon - Mann - Whitney</h2>
-<p>En la familia de las distribuciones continuas, siendo <span class="math inline">\(\theta\)</span> la mediana, sean dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \theta_X = \theta_Y\\
-  H_A: \theta_X \neq \theta_Y
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-t-de-student-para-dos-muestras-pareadas" class="level2">
-<h2 class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-pareadas">Test t de Student para dos muestras pareadas</h2>
-<p>En la familia normal, dos muestras aleatorias pareadas <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo heterogenedidad (<span class="math inline">\(\sigma^2_x \neq \sigma^2_y\)</span>), especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-\]</span></p>
-<p>Es suficiente ver que si <span class="math inline">\(D = X - Y\)</span> entonces podemos probar</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \mu_D = 0\\
-  H_A: \mu_D \neq 0
-\end{align*}
-\]</span></p>
-</section>
-<section id="prueba-de-una-sola-proporción" class="level2">
-<h2 class="anchored" data-anchor-id="prueba-de-una-sola-proporción">Prueba de una sola proporción</h2>
-<p>En una distribución Bernoulli(<span class="math inline">\(\pi\)</span>), sea una muestra <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span>, especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \pi_X = \pi_0\\
-  H_A: \pi_X \neq \pi_0
-\end{align*}
-\]</span></p>
-</section>
-<section id="prueba-de-dos-proporciones" class="level2">
-<h2 class="anchored" data-anchor-id="prueba-de-dos-proporciones">Prueba de dos proporciones</h2>
-<p>En una distribución Bernoulli(<span class="math inline">\(\pi\)</span>), sean dos muestras <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-  H_0: \pi_X = \pi_y\\
-  H_A: \pi_X \neq \pi_y
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-de-correlación-de-pearson" class="level2">
-<h2 class="anchored" data-anchor-id="test-de-correlación-de-pearson">Test de correlación de Pearson</h2>
-<p>En la familia normal, sea una muestra aleatoria de dos variables <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span> especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-H_0: \rho =   \rho_0\\
-H_A: \rho \neq   \rho_0
-\end{align*}
-\]</span></p>
-</section>
-<section id="test-de-correlación-de-spearman" class="level2">
-<h2 class="anchored" data-anchor-id="test-de-correlación-de-spearman">Test de correlación de Spearman</h2>
-<p>En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span> especificamos las hipótesis</p>
-<p><span class="math display">\[
-\begin{align*}
-H_0: \rho_s =   \rho_{s0}\\
-H_A: \rho_s \neq   \rho_{s0}
-\end{align*}
-\]</span></p>
 
 
 </section>
@@ -673,12 +592,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1050,6 +969,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C02_tamano.html" class="pagination-link" aria-label="Tamaño muestral">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C02_pruebas.html" class="pagination-link" aria-label="Pruebas y tipos de pruebas">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

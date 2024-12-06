@@ -1,0 +1,73 @@
+---
+title: "Visualización"
+subtitle: "Estadística descriptiva"
+author: "Julián Cruz"
+lang: "es-co"
+
+---
+
+
+# Visualización
+
+Iniciamos el tema de visualización de datos con una lectura refrescante: [Gráficas para la ciencia y ciencia para las gráficas](https://culturacientifica.com/2019/04/25/graficas-para-la-ciencia-y-ciencia-para-las-graficas/)
+
+## ¿Por qué visualización? 
+
+ - [El cuarteto de Anscombe](https://en.wikipedia.org/wiki/Anscombe%27s_quartet){target="_blank"}
+ - [Seeing theory](https://seeing-theory.brown.edu){target="_blank"}
+
+## Veamos ejemplos
+
+ - [Information is beautiful](https://informationisbeautiful.net/){target="_blank"}
+ - [gapmminder](https://www.gapminder.org/tools){target="_blank"}
+ - [shiny:](https://shiny.rstudio.com/gallery/){target="_blank"}
+ - [plotly](https://plot.ly/feed){target="_blank"}
+ - [Beter Life Index OECD](https://www.oecdbetterlifeindex.org/es/){target="_blank"}
+ - [Top 10 Countries by Inflation Rate (1980-2018)](https://www.youtube.com/watch?v=dwZ6B5kalbQ){target="_blank"}
+
+## El ejemplo de Napoleón
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png)
+
+Fuente: [Data visualization education using the storytelling with Minard's figurative map](https://www.researchgate.net/publication/327579298_Data_visualization_education_using_the_storytelling_with_Minard's_figurative_map){target="_blank"}
+
+
+## Gráficos tradicionales
+
+![](https://www.addintools.com/documents/excel/images/excel-chart-tools-ribbon-683-186.png)
+
+
+## Escala de Cleveland y McGill
+
+![](https://culturacientifica.com/app/uploads/2019/04/Figura-2-768x358.png)
+
+
+## Buenas prácticas de visualización
+
+[Buenas prácticas de la visualización - Víctor Pascual](https://youtu.be/TbE8icMHSzs){target="_blank"}
+
+## Gráficos
+
+Los gráficos más comunes utilizados en datos son los siguientes.
+
+1. **Gráfico de barras**: útil para comparar categorías. Variación: **gráfico de lollipop**, donde se usan puntos conectados por líneas en lugar de barras.
+   
+2. **Gráfico de torta (pastel)**: muestra proporciones. Variación: **gráfico de dona**, que es similar pero con un espacio vacío en el centro.
+
+3. **Histograma**: representa la distribución de frecuencias de una variable cuantitativa. Variación: **gráfico de densidad**, que suaviza las frecuencias en una curva continua para mostrar la distribución de los datos.
+
+4. **Gráfico de dispersión**: muestra la relación entre dos variables cuantitativas. Variación: **gráfico de jitter**, que separa los puntos amontonados para revelar la densidad de los datos.
+
+5. **Boxplot (diagrama de caja y bigotes)**: resume la distribución de una variable. Variación: **gráfico de violín**, que añade una visualización de la densidad en ambos lados del gráfico.
+
+6. **Gráfico de líneas**: útil para visualizar tendencias a lo largo del tiempo. Variación: **gráfico de áreas**, donde el área bajo la línea está sombreada, destacando la magnitud.
+
+7. **Mapa de calor (heatmap)**: visualiza patrones de datos a través de variaciones de color. Variación: **clustered heatmap**, que agrupa los datos por similitud, facilitando la interpretación de patrones.
+
+8. **Gráfico de burbujas**: similar al gráfico de dispersión, pero con el tamaño de las burbujas que representa una tercera variable.
+
+9. **Gráfico de radar (o de araña)**: muestra múltiples variables radiales. Variación: **gráfico de radar de área**, que sombrea el área debajo de los valores para enfatizar la comparación entre categorías.
+
+
+
+

@@ -8,13 +8,16 @@ lang: "es-co"
 ---
 
 
+```{r}
+# Reescribir bien
+
+```
+
+
 # Antecedentes
 
 ## Introducción
 
-En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.
-
-Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.
 
 ## Presentación
 
@@ -52,34 +55,6 @@ Ofrecer herramientas de estadística descriptiva a los asistentes al seminario d
 
 Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.
 
-## Material
-
-[OpenIntro Statistics](https://openintro.org/book/os/)
-
-[Estadística para todos - Diana Kelmansky](http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf)
-
-[Discourse of Objectivity](https://ayushthey.medium.com/discourse-of-objectivity-2eb2541f7177)
-
-http://www.bnm.me.gov.ar/giga1/documentos/EL001858.pdf
-
-[To explain or to predict](https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf)
-
-
-[Escalas de medición - Jorge Coronado Padilla](https://dialnet.unirioja.es/descarga/articulo/4942056.pdf)
-
-[Técnicas de Muestreo sobre una Población a Estudio - Tamara Otzen, Carlos Manterola](https://scielo.conicyt.cl/pdf/ijmorphol/v35n1/art37.pdf)
-
-[OpenIntro Statistics - David Diez](https://openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php) Chapter 2: Summarizing data. 2.1, 2.2.
-
-[Análisis bivariante - Jordi Mas Elias](https://openaccess.uoc.edu/bitstream/10609/148455/1/AnalisisBivariante.pdf)
-
-[Handbook on Constructing Composite Indicators: Methodology and User Guide](https://www.istat.it/wp-content/uploads/2014/06/Handbook-on-Constructing-Composite-Indicators.pdf)
-
-[Diseño y validación de instrumentos de medición](https://core.ac.uk/download/pdf/47265078.pdf)
-
-[Principal Component Analysis](http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe%20I.%20Principal%20Component%20Analysis%20(2ed.,%20Springer,%202002)(518s)_MVsa_.pdf)
-
-
 
 ## Evaluación
 
@@ -102,23 +77,7 @@ La evaluación del curso se realiza mediante controles de lectura y quices de la
 |Controles de lectura|10            |
 |Quices              |90            |
 
-## Contenido
 
-**Introducción**
-
-Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los **tipos de variables**, que incluyen **variables cualitativas** (nominales y ordinales) y **cuantitativas** (discretas y continuas). A continuación, se aborda la **tipología de preguntas** en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los **tipos de encuestas**, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.
-
-**Muestreo**
-
-En este tema se abordan los fundamentos del **muestreo**, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: **probabilístico** y **no probabilístico**. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el **muestreo aleatorio simple**, el **muestreo multietápico**, el **muestreo estratificado** y el **muestreo por conglomerados**. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el **muestreo por conveniencia**, **muestreo por cuotas** o **bola de nieve**. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.
-
-**Estadística descriptiva para una variable**
-
-La **estadística descriptiva para una variable** se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las **medidas de tendencia central** como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las **medidas de dispersión** como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de **gráficos** como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.
-
-**Estadística descriptiva para dos o más variables**
-
-Este tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las **tablas de contingencia** para estudiar la relación entre dos variables cualitativas, así como las **medidas de asociación** como el **coeficiente de correlación de Pearson** y **Spearman** para variables cuantitativas. También se discuten las **gráficas de dispersión** para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una **recta de regresión** para predecir una variable en función de otra. Además, se examinan los **coeficientes de correlación parcial** y **análisis multivariado** para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.
 
 ## Docente
 

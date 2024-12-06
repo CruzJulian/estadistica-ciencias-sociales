@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
+<meta name="author" content="Julián Cruz">
 
-<title>Introducción – Estadística</title>
+<title>6&nbsp; Visualización – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C02_cover.html" rel="next">
+<link href="./C01_dist.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -72,130 +74,171 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_vis.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#preámbulo" id="toc-preámbulo" class="nav-link active" data-scroll-target="#preámbulo">Preámbulo</a>
+  <li><a href="#visualización" id="toc-visualización" class="nav-link active" data-scroll-target="#visualización"><span class="header-section-number">7</span> Visualización</a>
   <ul class="collapse">
-  <li><a href="#expectativas" id="toc-expectativas" class="nav-link" data-scroll-target="#expectativas">Expectativas</a></li>
-  <li><a href="#información" id="toc-información" class="nav-link" data-scroll-target="#información">Información</a></li>
-  <li><a href="#escenarios-de-datos" id="toc-escenarios-de-datos" class="nav-link" data-scroll-target="#escenarios-de-datos">Escenarios de datos</a></li>
-  <li><a href="#primera-actividad-cómo-son-los-datos" id="toc-primera-actividad-cómo-son-los-datos" class="nav-link" data-scroll-target="#primera-actividad-cómo-son-los-datos">Primera actividad: ¿Cómo son los datos?</a></li>
-  </ul></li>
-  <li><a href="#tipos-de-datos" id="toc-tipos-de-datos" class="nav-link" data-scroll-target="#tipos-de-datos">Tipos de datos</a>
-  <ul class="collapse">
-  <li><a href="#tendencias" id="toc-tendencias" class="nav-link" data-scroll-target="#tendencias">Tendencias</a></li>
-  <li><a href="#individuos" id="toc-individuos" class="nav-link" data-scroll-target="#individuos">Individuos</a></li>
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
-  <li><a href="#tipos-de-variable" id="toc-tipos-de-variable" class="nav-link" data-scroll-target="#tipos-de-variable">Tipos de variable</a></li>
-  <li><a href="#variables-categóricas" id="toc-variables-categóricas" class="nav-link" data-scroll-target="#variables-categóricas">Variables categóricas</a></li>
-  <li><a href="#variables-numéricas" id="toc-variables-numéricas" class="nav-link" data-scroll-target="#variables-numéricas">Variables numéricas</a></li>
-  <li><a href="#medición" id="toc-medición" class="nav-link" data-scroll-target="#medición">Medición</a></li>
-  <li><a href="#escalas-de-medición" id="toc-escalas-de-medición" class="nav-link" data-scroll-target="#escalas-de-medición">Escalas de medición</a></li>
-  <li><a href="#escalas-categóricas" id="toc-escalas-categóricas" class="nav-link" data-scroll-target="#escalas-categóricas">Escalas categóricas</a></li>
-  <li><a href="#escalas-numéricas" id="toc-escalas-numéricas" class="nav-link" data-scroll-target="#escalas-numéricas">Escalas numéricas</a></li>
-  </ul></li>
-  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización">Visualización</a>
-  <ul class="collapse">
-  <li><a href="#por-qué-visualización" id="toc-por-qué-visualización" class="nav-link" data-scroll-target="#por-qué-visualización">¿Por qué visualización?</a></li>
-  <li><a href="#veamos-ejemplos" id="toc-veamos-ejemplos" class="nav-link" data-scroll-target="#veamos-ejemplos">Veamos ejemplos</a></li>
-  <li><a href="#el-ejemplo-de-napoleón" id="toc-el-ejemplo-de-napoleón" class="nav-link" data-scroll-target="#el-ejemplo-de-napoleón">El ejemplo de Napoleón</a></li>
-  <li><a href="#gráficos-tradicionales" id="toc-gráficos-tradicionales" class="nav-link" data-scroll-target="#gráficos-tradicionales">Gráficos tradicionales</a></li>
-  <li><a href="#escala-de-cleveland-y-mcgill" id="toc-escala-de-cleveland-y-mcgill" class="nav-link" data-scroll-target="#escala-de-cleveland-y-mcgill">Escala de Cleveland y McGill</a></li>
-  <li><a href="#buenas-prácticas-de-visualización" id="toc-buenas-prácticas-de-visualización" class="nav-link" data-scroll-target="#buenas-prácticas-de-visualización">Buenas prácticas de visualización</a></li>
-  <li><a href="#gráficos" id="toc-gráficos" class="nav-link" data-scroll-target="#gráficos">Gráficos</a></li>
+  <li><a href="#por-qué-visualización" id="toc-por-qué-visualización" class="nav-link" data-scroll-target="#por-qué-visualización"><span class="header-section-number">7.1</span> ¿Por qué visualización?</a></li>
+  <li><a href="#veamos-ejemplos" id="toc-veamos-ejemplos" class="nav-link" data-scroll-target="#veamos-ejemplos"><span class="header-section-number">7.2</span> Veamos ejemplos</a></li>
+  <li><a href="#el-ejemplo-de-napoleón" id="toc-el-ejemplo-de-napoleón" class="nav-link" data-scroll-target="#el-ejemplo-de-napoleón"><span class="header-section-number">7.3</span> El ejemplo de Napoleón</a></li>
+  <li><a href="#gráficos-tradicionales" id="toc-gráficos-tradicionales" class="nav-link" data-scroll-target="#gráficos-tradicionales"><span class="header-section-number">7.4</span> Gráficos tradicionales</a></li>
+  <li><a href="#escala-de-cleveland-y-mcgill" id="toc-escala-de-cleveland-y-mcgill" class="nav-link" data-scroll-target="#escala-de-cleveland-y-mcgill"><span class="header-section-number">7.5</span> Escala de Cleveland y McGill</a></li>
+  <li><a href="#buenas-prácticas-de-visualización" id="toc-buenas-prácticas-de-visualización" class="nav-link" data-scroll-target="#buenas-prácticas-de-visualización"><span class="header-section-number">7.6</span> Buenas prácticas de visualización</a></li>
+  <li><a href="#gráficos" id="toc-gráficos" class="nav-link" data-scroll-target="#gráficos"><span class="header-section-number">7.7</span> Gráficos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,10 +246,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_vis.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introducción</h1>
-<p class="subtitle lead">Introducción al mundo cuantitativo</p>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></h1>
+<p class="subtitle lead">Estadística descriptiva</p>
 </div>
 
 
@@ -216,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
+             <p>Julián Cruz </p>
           </div>
   </div>
     
@@ -229,253 +272,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preámbulo" class="level1">
-<h1>Preámbulo</h1>
-<section id="expectativas" class="level2">
-<h2 class="anchored" data-anchor-id="expectativas">Expectativas</h2>
-<p>Problemas que vamos a tener cuando seamos grandes.</p>
-<ul>
-<li><p>Excel</p></li>
-<li><p>Datos grandes.</p></li>
-<li><p>Ir a ciegas con un análisis de datos.</p></li>
-<li><p>No saber el idioma de los datos.</p></li>
-<li><p>No entender un modelo</p></li>
-<li><p>La medición de los humanos</p></li>
-</ul>
-</section>
-<section id="información" class="level2">
-<h2 class="anchored" data-anchor-id="información">Información</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li><p>¿Por qué queremos procesar información?</p></li>
-<li><p>¿Existe la verdad?</p></li>
-<li><p>¿Cómo se trata la verdad en la modernidad?</p></li>
-<li><p>¿Cómo se trata la verdad en la postmodernidad?</p></li>
-</ul>
-</div><div class="column">
-<ul>
-<li><p>¿Qué es la información?</p></li>
-<li><p>¿Queremos ciencias políticas o políticas científicas?</p></li>
-<li><p>¿Qué es un modelo científico?</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="escenarios-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="escenarios-de-datos">Escenarios de datos</h2>
-<ul>
-<li><p>¿Qué son los datos?</p></li>
-<li><p>¿Qué son las variables?</p></li>
-<li><p>¿Qué son los individuos?</p></li>
-</ul>
-</section>
-<section id="primera-actividad-cómo-son-los-datos" class="level2">
-<h2 class="anchored" data-anchor-id="primera-actividad-cómo-son-los-datos">Primera actividad: ¿Cómo son los datos?</h2>
-<p>En muchos contextos el tema de los datos implica programación. Esto genera una impresión lejana en el ámbito de las ciencias sociales. La creación de brechas tecnológicas aleja al científico social del análisis de datos.</p>
-<p>Es normal tener una resistencia en el desarrollo de competencias cuantitativas. Las metodologías de análisis de información conducen a lo cuantitativo de manera inevitable. El desarrollo de las habilidades no solo es indispensable para la investigación, sino para la vida profesional.</p>
-<p>El acercamiento del científico social a lo cuantitativo comprende el uso de herramientas muy básicas.</p>
-<p>La reconceptualización del trabajo con datos resulta necesaria.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Podemos ver los datos como puntos en el eje de la edad.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Podemos diseminarlos verticalmente para verlos mejor.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Podemos trazar líneas imaginarias para dividirlos en partes iguales.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Usando más líneas imaginarias podemos dividirlos en cuatro partes iguales.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Conformamos un gráfico de caja y bigotes.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Iniciamos de nuevo, desde el principio añadiendo el color del género.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Añadiendo espacio vertical se visualiza una tendencia.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Organizamos los datos verticalemnte por género.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Una caja para cada género es lo apropiado. ¿Podemos ver ahora la tendencia?</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_intro_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="tipos-de-datos" class="level1">
-<h1>Tipos de datos</h1>
-<section id="tendencias" class="level2">
-<h2 class="anchored" data-anchor-id="tendencias">Tendencias</h2>
-<p>El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.</p>
-</section>
-<section id="individuos" class="level2">
-<h2 class="anchored" data-anchor-id="individuos">Individuos</h2>
-<p>Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría.</p>
-</section>
-<section id="variables" class="level2">
-<h2 class="anchored" data-anchor-id="variables">Variables</h2>
-<p>Una <em>variable</em> es una característica observable o medible de un individuo, que se describe acorde a una escala de medición bien definida. Cada rasgo, aspecto o característica de una población constituye una variable.</p>
-</section>
-<section id="tipos-de-variable" class="level2">
-<h2 class="anchored" data-anchor-id="tipos-de-variable">Tipos de variable</h2>
-<ul>
-<li><p>Variables categóricas</p></li>
-<li><p>Variables numéricas</p></li>
-<li><p>Variables temporales</p></li>
-</ul>
-</section>
-<section id="variables-categóricas" class="level2">
-<h2 class="anchored" data-anchor-id="variables-categóricas">Variables categóricas</h2>
-<p>Las <em>variables cualitativas</em> son aquellas que se expresan en forma verbal como categorías o atributos. El género, la afiliación política, la nacionalidad y la profesión son ejemplos de variables cualitativas.</p>
-</section>
-<section id="variables-numéricas" class="level2">
-<h2 class="anchored" data-anchor-id="variables-numéricas">Variables numéricas</h2>
-<p>Las <em>variables cuantitativas</em> son aquellas que varían en términos de cantidad y se registran o expresan en forma numérica. La edad, el peso, la estatura, la temperatura y el salario son ejemplos de variables cuantitativas. A su vez, estas variables se clasifican como sigue:</p>
-<ul>
-<li><p>Variables discretas: no admiten siempre un valor intermedio entre dos valores cualesquiera de la variable. Por ejemplo, el número de hijos de una persona es una variable cuantitativa discreta.</p></li>
-<li><p>Variables continuas: siempre admiten un valor intermedio entre dos valores cualesquiera de la variable. Por ejemplo, el salario de un empleado medido en millones de pesos es una variable cuantitativa continua.</p></li>
-</ul>
-</section>
-<section id="medición" class="level2">
-<h2 class="anchored" data-anchor-id="medición">Medición</h2>
-<p>La <em>medición</em> es un proceso mediante el cual se asignan valores cuantitativos o cualitativos a los atributos de los elementos objeto de estudio, de acuerdo a unas reglas claramente preestablecidas.</p>
-</section>
-<section id="escalas-de-medición" class="level2">
-<h2 class="anchored" data-anchor-id="escalas-de-medición">Escalas de medición</h2>
-<p>Una <em>escala de medición</em> es un esquema específico para asignar símbolos o números con el objeto de designar los valores de una variable.</p>
-<ul>
-<li>Nominal</li>
-<li>Ordinal</li>
-<li>Intervalo</li>
-<li>Razón</li>
-</ul>
-</section>
-<section id="escalas-categóricas" class="level2">
-<h2 class="anchored" data-anchor-id="escalas-categóricas">Escalas categóricas</h2>
-<p><strong>Escala nominal:</strong> La <em>escala nominal</em> es aquella donde se clasifican los individuos en categorías distintas. Consiste en agrupar los individuos de acuerdo a alguna cualidad que los hagan propios de una categoría determinada.</p>
-<p><strong>Escala ordinal:</strong> La <em>escala ordinal</em> es aquella donde se clasifican las unidades de observación en categrías. Estas categorías poseen una posición con relación a la característica que miden. Así, es posible conocer el orden de las categorías pero no la distancia que hay entre las posiciones.</p>
-</section>
-<section id="escalas-numéricas" class="level2">
-<h2 class="anchored" data-anchor-id="escalas-numéricas">Escalas numéricas</h2>
-<p><strong>Escala de intervalo:</strong> La <em>escala de intervalo</em> es aquella donde se ordenan los elementos según la magnitud del atributo que representan y se proveen intervalos iguales entre las unidades de medida. No posee un cero absoluto, dado que es establecido por convención de forma arbitraria por los expertos en el área de estudio; el 0 no implica la ausencia del atributo.</p>
-<p><strong>Escala de razón:</strong> Por último, la <em>escala de razón</em> es aquella donde el punto 0 no es arbitrario y corresponde a una total ausencia de la característica observada.</p>
-</section>
-</section>
-<section id="visualización" class="level1">
-<h1>Visualización</h1>
+<section id="visualización" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Visualización</h1>
 <p>Iniciamos el tema de visualización de datos con una lectura refrescante: <a href="https://culturacientifica.com/2019/04/25/graficas-para-la-ciencia-y-ciencia-para-las-graficas/">Gráficas para la ciencia y ciencia para las gráficas</a></p>
-<section id="por-qué-visualización" class="level2">
-<h2 class="anchored" data-anchor-id="por-qué-visualización">¿Por qué visualización?</h2>
+<section id="por-qué-visualización" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="por-qué-visualización"><span class="header-section-number">7.1</span> ¿Por qué visualización?</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">El cuarteto de Anscombe</a></li>
-<li><a href="https://seeing-theory.brown.edu">Seeing theory</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet" target="_blank">El cuarteto de Anscombe</a></li>
+<li><a href="https://seeing-theory.brown.edu" target="_blank">Seeing theory</a></li>
 </ul>
 </section>
-<section id="veamos-ejemplos" class="level2">
-<h2 class="anchored" data-anchor-id="veamos-ejemplos">Veamos ejemplos</h2>
+<section id="veamos-ejemplos" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="veamos-ejemplos"><span class="header-section-number">7.2</span> Veamos ejemplos</h2>
 <ul>
-<li><p><a href="https://informationisbeautiful.net/">Information is beautiful</a></p></li>
-<li><p><a href="https://www.gapminder.org/tools">gapmminder</a></p></li>
-<li><p><a href="https://shiny.rstudio.com/gallery/">shiny:</a></p></li>
-<li><p><a href="https://plot.ly/feed">plotly</a></p></li>
-<li><p><a href="https://www.oecd.org/en/data/dashboards.html">Beter Life Index OECD</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=dwZ6B5kalbQ">Top 10 Countries by Inflation Rate (1980-2018)</a></p></li>
+<li><a href="https://informationisbeautiful.net/" target="_blank">Information is beautiful</a></li>
+<li><a href="https://www.gapminder.org/tools" target="_blank">gapmminder</a></li>
+<li><a href="https://shiny.rstudio.com/gallery/" target="_blank">shiny:</a></li>
+<li><a href="https://plot.ly/feed" target="_blank">plotly</a></li>
+<li><a href="https://www.oecdbetterlifeindex.org/es/" target="_blank">Beter Life Index OECD</a></li>
+<li><a href="https://www.youtube.com/watch?v=dwZ6B5kalbQ" target="_blank">Top 10 Countries by Inflation Rate (1980-2018)</a></li>
 </ul>
 </section>
-<section id="el-ejemplo-de-napoleón" class="level2">
-<h2 class="anchored" data-anchor-id="el-ejemplo-de-napoleón">El ejemplo de Napoleón</h2>
-<p><img src="https://www.researchgate.net/profile/Dae-Heung-Jang/publication/327579298/figure/fig1/AS:669684911325187@1536676733297/Minards-map-of-Napoleons-disastrous-Russian-campaign-of-1812.ppm" class="img-fluid"></p>
-<p>Fuente: <a href="https://www.researchgate.net/publication/327579298_Data_visualization_education_using_the_storytelling_with_Minard's_figurative_map">Data visualization education using the storytelling with Minard’s figurative map</a></p>
+<section id="el-ejemplo-de-napoleón" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="el-ejemplo-de-napoleón"><span class="header-section-number">7.3</span> El ejemplo de Napoleón</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png" class="img-fluid"></p>
+<p>Fuente: <a href="https://www.researchgate.net/publication/327579298_Data_visualization_education_using_the_storytelling_with_Minard's_figurative_map" target="_blank">Data visualization education using the storytelling with Minard’s figurative map</a></p>
 </section>
-<section id="gráficos-tradicionales" class="level2">
-<h2 class="anchored" data-anchor-id="gráficos-tradicionales">Gráficos tradicionales</h2>
+<section id="gráficos-tradicionales" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="gráficos-tradicionales"><span class="header-section-number">7.4</span> Gráficos tradicionales</h2>
 <p><img src="https://www.addintools.com/documents/excel/images/excel-chart-tools-ribbon-683-186.png" class="img-fluid"></p>
 </section>
-<section id="escala-de-cleveland-y-mcgill" class="level2">
-<h2 class="anchored" data-anchor-id="escala-de-cleveland-y-mcgill">Escala de Cleveland y McGill</h2>
+<section id="escala-de-cleveland-y-mcgill" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="escala-de-cleveland-y-mcgill"><span class="header-section-number">7.5</span> Escala de Cleveland y McGill</h2>
 <p><img src="https://culturacientifica.com/app/uploads/2019/04/Figura-2-768x358.png" class="img-fluid"></p>
 </section>
-<section id="buenas-prácticas-de-visualización" class="level2">
-<h2 class="anchored" data-anchor-id="buenas-prácticas-de-visualización">Buenas prácticas de visualización</h2>
-<p><a href="https://youtu.be/TbE8icMHSzs">Buenas prácticas de la visualización - Víctor Pascual</a></p>
+<section id="buenas-prácticas-de-visualización" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="buenas-prácticas-de-visualización"><span class="header-section-number">7.6</span> Buenas prácticas de visualización</h2>
+<p><a href="https://youtu.be/TbE8icMHSzs" target="_blank">Buenas prácticas de la visualización - Víctor Pascual</a></p>
 </section>
-<section id="gráficos" class="level2">
-<h2 class="anchored" data-anchor-id="gráficos">Gráficos</h2>
+<section id="gráficos" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="gráficos"><span class="header-section-number">7.7</span> Gráficos</h2>
 <p>Los gráficos más comunes utilizados en datos son los siguientes.</p>
 <ol type="1">
 <li><p><strong>Gráfico de barras</strong>: útil para comparar categorías. Variación: <strong>gráfico de lollipop</strong>, donde se usan puntos conectados por líneas en lugar de barras.</p></li>
@@ -914,6 +750,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C01_dist.html" class="pagination-link" aria-label="Distribuciones">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C02_cover.html" class="pagination-link" aria-label="Estadística inferencial">
+        <span class="nav-page-text">Estadística inferencial</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

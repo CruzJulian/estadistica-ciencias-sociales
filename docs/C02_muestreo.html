@@ -8,7 +8,7 @@
 
 <meta name="author" content="CruzJulián">
 
-<title>Muestreo – Estadística</title>
+<title>8&nbsp; Muestreo – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C02_estim.html" rel="next">
+<link href="./C02_episteme.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -101,137 +103,198 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_muestreo.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contexto-del-muestreo" id="toc-contexto-del-muestreo" class="nav-link active" data-scroll-target="#contexto-del-muestreo">Contexto del muestreo</a>
+  <li><a href="#contexto-del-muestreo" id="toc-contexto-del-muestreo" class="nav-link active" data-scroll-target="#contexto-del-muestreo"><span class="header-section-number">9</span> Contexto del muestreo</a>
   <ul class="collapse">
-  <li><a href="#tendencias" id="toc-tendencias" class="nav-link" data-scroll-target="#tendencias">Tendencias</a></li>
-  <li><a href="#individuos" id="toc-individuos" class="nav-link" data-scroll-target="#individuos">Individuos</a></li>
+  <li><a href="#tendencias" id="toc-tendencias" class="nav-link" data-scroll-target="#tendencias"><span class="header-section-number">9.1</span> Tendencias</a></li>
+  <li><a href="#individuos" id="toc-individuos" class="nav-link" data-scroll-target="#individuos"><span class="header-section-number">9.2</span> Individuos</a></li>
   </ul></li>
-  <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo">Muestreo</a>
+  <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo"><span class="header-section-number">10</span> Muestreo</a>
   <ul class="collapse">
-  <li><a href="#actividad-investiguemos" id="toc-actividad-investiguemos" class="nav-link" data-scroll-target="#actividad-investiguemos">Actividad: Investiguemos</a></li>
-  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo">Conceptos de muestreo</a></li>
-  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral">Marco muestral</a></li>
-  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral">Diseño muestral</a></li>
-  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral">Error muestral</a></li>
-  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral">Tamaño muestral</a></li>
-  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</a>
+  <li><a href="#actividad-investiguemos" id="toc-actividad-investiguemos" class="nav-link" data-scroll-target="#actividad-investiguemos"><span class="header-section-number">10.1</span> Actividad: Investiguemos</a></li>
+  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo"><span class="header-section-number">10.2</span> Conceptos de muestreo</a></li>
+  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral"><span class="header-section-number">10.3</span> Marco muestral</a></li>
+  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral"><span class="header-section-number">10.4</span> Diseño muestral</a></li>
+  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral"><span class="header-section-number">10.5</span> Error muestral</a></li>
+  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral"><span class="header-section-number">10.6</span> Tamaño muestral</a></li>
+  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo"><span class="header-section-number">10.7</span> Distintos abordajes del muestreo</a>
   <ul class="collapse">
-  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico">Muestreo no probabilístico</a></li>
-  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico">Muestreo probabilístico</a></li>
+  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico"><span class="header-section-number">10.7.1</span> Muestreo no probabilístico</a></li>
+  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico"><span class="header-section-number">10.7.2</span> Muestreo probabilístico</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#muestreo-no-probabilístico-1" id="toc-muestreo-no-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-no-probabilístico-1">Muestreo no probabilístico</a>
+  <li><a href="#muestreo-no-probabilístico-1" id="toc-muestreo-no-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-no-probabilístico-1"><span class="header-section-number">11</span> Muestreo no probabilístico</a>
   <ul class="collapse">
-  <li><a href="#muestreo-por-cuotas" id="toc-muestreo-por-cuotas" class="nav-link" data-scroll-target="#muestreo-por-cuotas">Muestreo por cuotas</a></li>
-  <li><a href="#bola-de-nieve" id="toc-bola-de-nieve" class="nav-link" data-scroll-target="#bola-de-nieve">Bola de nieve</a></li>
-  <li><a href="#muestreo-discrecional" id="toc-muestreo-discrecional" class="nav-link" data-scroll-target="#muestreo-discrecional">Muestreo discrecional</a></li>
-  <li><a href="#muestreo-por-conveniencia" id="toc-muestreo-por-conveniencia" class="nav-link" data-scroll-target="#muestreo-por-conveniencia">Muestreo por conveniencia</a></li>
-  <li><a href="#muestreo-accidental" id="toc-muestreo-accidental" class="nav-link" data-scroll-target="#muestreo-accidental">Muestreo accidental</a></li>
+  <li><a href="#muestreo-por-cuotas" id="toc-muestreo-por-cuotas" class="nav-link" data-scroll-target="#muestreo-por-cuotas"><span class="header-section-number">11.1</span> Muestreo por cuotas</a></li>
+  <li><a href="#bola-de-nieve" id="toc-bola-de-nieve" class="nav-link" data-scroll-target="#bola-de-nieve"><span class="header-section-number">11.2</span> Bola de nieve</a></li>
+  <li><a href="#muestreo-discrecional" id="toc-muestreo-discrecional" class="nav-link" data-scroll-target="#muestreo-discrecional"><span class="header-section-number">11.3</span> Muestreo discrecional</a></li>
+  <li><a href="#muestreo-por-conveniencia" id="toc-muestreo-por-conveniencia" class="nav-link" data-scroll-target="#muestreo-por-conveniencia"><span class="header-section-number">11.4</span> Muestreo por conveniencia</a></li>
+  <li><a href="#muestreo-accidental" id="toc-muestreo-accidental" class="nav-link" data-scroll-target="#muestreo-accidental"><span class="header-section-number">11.5</span> Muestreo accidental</a></li>
   </ul></li>
-  <li><a href="#muestreo-probabilístico-1" id="toc-muestreo-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-probabilístico-1">Muestreo probabilístico</a>
+  <li><a href="#muestreo-probabilístico-1" id="toc-muestreo-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-probabilístico-1"><span class="header-section-number">12</span> Muestreo probabilístico</a>
   <ul class="collapse">
-  <li><a href="#muestreo-aleatorio-simple" id="toc-muestreo-aleatorio-simple" class="nav-link" data-scroll-target="#muestreo-aleatorio-simple">Muestreo aleatorio simple</a></li>
-  <li><a href="#muestreo-por-etapas" id="toc-muestreo-por-etapas" class="nav-link" data-scroll-target="#muestreo-por-etapas">Muestreo por etapas</a></li>
-  <li><a href="#muestreo-por-conglomerados" id="toc-muestreo-por-conglomerados" class="nav-link" data-scroll-target="#muestreo-por-conglomerados">Muestreo por conglomerados</a></li>
-  <li><a href="#muestreo-estratificado" id="toc-muestreo-estratificado" class="nav-link" data-scroll-target="#muestreo-estratificado">Muestreo estratificado</a></li>
-  <li><a href="#técnicas-de-muestreo" id="toc-técnicas-de-muestreo" class="nav-link" data-scroll-target="#técnicas-de-muestreo">Técnicas de muestreo</a></li>
-  <li><a href="#factores-de-expansión" id="toc-factores-de-expansión" class="nav-link" data-scroll-target="#factores-de-expansión">Factores de expansión</a></li>
-  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#muestreo-aleatorio-simple" id="toc-muestreo-aleatorio-simple" class="nav-link" data-scroll-target="#muestreo-aleatorio-simple"><span class="header-section-number">12.1</span> Muestreo aleatorio simple</a></li>
+  <li><a href="#muestreo-por-etapas" id="toc-muestreo-por-etapas" class="nav-link" data-scroll-target="#muestreo-por-etapas"><span class="header-section-number">12.2</span> Muestreo por etapas</a></li>
+  <li><a href="#muestreo-por-conglomerados" id="toc-muestreo-por-conglomerados" class="nav-link" data-scroll-target="#muestreo-por-conglomerados"><span class="header-section-number">12.3</span> Muestreo por conglomerados</a></li>
+  <li><a href="#muestreo-estratificado" id="toc-muestreo-estratificado" class="nav-link" data-scroll-target="#muestreo-estratificado"><span class="header-section-number">12.4</span> Muestreo estratificado</a></li>
+  <li><a href="#técnicas-de-muestreo" id="toc-técnicas-de-muestreo" class="nav-link" data-scroll-target="#técnicas-de-muestreo"><span class="header-section-number">12.5</span> Técnicas de muestreo</a></li>
+  <li><a href="#factores-de-expansión" id="toc-factores-de-expansión" class="nav-link" data-scroll-target="#factores-de-expansión"><span class="header-section-number">12.6</span> Factores de expansión</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad"><span class="header-section-number">12.7</span> Actividad</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -239,9 +302,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_muestreo.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Muestreo</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></h1>
 <p class="subtitle lead">Introducción al mundo cuantitativo</p>
 </div>
 
@@ -265,44 +328,44 @@ window.Quarto = {
 </header>
 
 
-<section id="contexto-del-muestreo" class="level1">
-<h1>Contexto del muestreo</h1>
-<section id="tendencias" class="level2">
-<h2 class="anchored" data-anchor-id="tendencias">Tendencias</h2>
+<section id="contexto-del-muestreo" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Contexto del muestreo</h1>
+<section id="tendencias" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="tendencias"><span class="header-section-number">9.1</span> Tendencias</h2>
 <p>El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.</p>
 </section>
-<section id="individuos" class="level2">
-<h2 class="anchored" data-anchor-id="individuos">Individuos</h2>
+<section id="individuos" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="individuos"><span class="header-section-number">9.2</span> Individuos</h2>
 <p>Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría.</p>
 </section>
 <div class="columns">
 <div class="column">
-<section id="población" class="level2">
-<h2 class="anchored" data-anchor-id="población">Población</h2>
+<section id="población" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="población"><span class="header-section-number">9.3</span> Población</h2>
 <p>Para cualquier pregunta que interese responder, primero es necesario dirigir la atención a un grupo particular de individuos: personas, ciudades, animales, televisores, discos rígidos, tornillos o lamparitas.</p>
 </section>
 </div><div class="column">
-<section id="muestra" class="level2">
-<h2 class="anchored" data-anchor-id="muestra">Muestra</h2>
+<section id="muestra" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="muestra"><span class="header-section-number">9.4</span> Muestra</h2>
 <p>Es un subconjunto de la población.</p>
 </section>
-<section id="representatividad" class="level2">
-<h2 class="anchored" data-anchor-id="representatividad">Representatividad</h2>
+<section id="representatividad" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="representatividad"><span class="header-section-number">9.5</span> Representatividad</h2>
 <p>Una muestra es representativa de la población cuando todas las características importantes de la población tienen que estar en la muestra en la misma proporción que en la población.</p>
 </section>
 </div>
 </div>
 </section>
-<section id="muestreo" class="level1">
-<h1>Muestreo</h1>
+<section id="muestreo" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Muestreo</h1>
 <p>¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.</p>
 <p>Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.</p>
-<section id="actividad-investiguemos" class="level2">
-<h2 class="anchored" data-anchor-id="actividad-investiguemos">Actividad: Investiguemos</h2>
+<section id="actividad-investiguemos" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="actividad-investiguemos"><span class="header-section-number">10.1</span> Actividad: Investiguemos</h2>
 <p>¿Qué es un cisne negro y qué historia esconde?</p>
 </section>
-<section id="conceptos-de-muestreo" class="level2">
-<h2 class="anchored" data-anchor-id="conceptos-de-muestreo">Conceptos de muestreo</h2>
+<section id="conceptos-de-muestreo" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="conceptos-de-muestreo"><span class="header-section-number">10.2</span> Conceptos de muestreo</h2>
 <ul>
 <li><p>Marco</p></li>
 <li><p>Diseño</p></li>
@@ -310,32 +373,32 @@ window.Quarto = {
 <li><p>Tamaño</p></li>
 </ul>
 </section>
-<section id="marco-muestral" class="level2">
-<h2 class="anchored" data-anchor-id="marco-muestral">Marco muestral</h2>
+<section id="marco-muestral" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="marco-muestral"><span class="header-section-number">10.3</span> Marco muestral</h2>
 <p>El marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.</p>
 <p>Este marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.</p>
 </section>
-<section id="diseño-muestral" class="level2">
-<h2 class="anchored" data-anchor-id="diseño-muestral">Diseño muestral</h2>
+<section id="diseño-muestral" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="diseño-muestral"><span class="header-section-number">10.4</span> Diseño muestral</h2>
 <p>El diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.</p>
 <p>La elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.</p>
 <p>Es el diseño muestral lo que le da representatividad a la muestra.</p>
 </section>
-<section id="error-muestral" class="level2">
-<h2 class="anchored" data-anchor-id="error-muestral">Error muestral</h2>
+<section id="error-muestral" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="error-muestral"><span class="header-section-number">10.5</span> Error muestral</h2>
 <p>El error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.</p>
 <p>El tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.</p>
 </section>
-<section id="tamaño-muestral" class="level2">
-<h2 class="anchored" data-anchor-id="tamaño-muestral">Tamaño muestral</h2>
+<section id="tamaño-muestral" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="tamaño-muestral"><span class="header-section-number">10.6</span> Tamaño muestral</h2>
 <p>El tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.</p>
 <p>La determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.</p>
 <p>Es el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.</p>
 </section>
-<section id="distintos-abordajes-del-muestreo" class="level2">
-<h2 class="anchored" data-anchor-id="distintos-abordajes-del-muestreo">Distintos abordajes del muestreo</h2>
-<section id="muestreo-no-probabilístico" class="level3">
-<h3 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h3>
+<section id="distintos-abordajes-del-muestreo" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="distintos-abordajes-del-muestreo"><span class="header-section-number">10.7</span> Distintos abordajes del muestreo</h2>
+<section id="muestreo-no-probabilístico" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="muestreo-no-probabilístico"><span class="header-section-number">10.7.1</span> Muestreo no probabilístico</h3>
 <p>No todos los elementos tienen probabilidad de ser seleccionados</p>
 <ul>
 <li>La muestra no es representativa (rigurosamente)</li>
@@ -343,14 +406,14 @@ window.Quarto = {
 <li>Requiere menos recursos</li>
 </ul>
 </section>
-<section id="muestreo-probabilístico" class="level3">
-<h3 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h3>
+<section id="muestreo-probabilístico" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="muestreo-probabilístico"><span class="header-section-number">10.7.2</span> Muestreo probabilístico</h3>
 <p>Todos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.</p>
 </section>
 </section>
 </section>
-<section id="muestreo-no-probabilístico-1" class="level1">
-<h1>Muestreo no probabilístico</h1>
+<section id="muestreo-no-probabilístico-1" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Muestreo no probabilístico</h1>
 <ul>
 <li>Por cuotas</li>
 <li>Bola de nieve</li>
@@ -358,8 +421,8 @@ window.Quarto = {
 <li>Conveniencia</li>
 <li>Accidental</li>
 </ul>
-<section id="muestreo-por-cuotas" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-por-cuotas">Muestreo por cuotas</h2>
+<section id="muestreo-por-cuotas" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="muestreo-por-cuotas"><span class="header-section-number">11.1</span> Muestreo por cuotas</h2>
 <p>Consiste en dividir la población en segmentos y obtener una cuota de cada segmento.</p>
 <p>Se utiliza cuando se tienen segmentos relevantes pero no se tiene acceso al marco muestral.</p>
 <p>En un estudio sobre preferencias de compra de automóviles, se decide utilizar el muestreo por cuotas para asegurar que la muestra sea representativa en términos de género y edad. El investigador establece cuotas basadas en la distribución de la población:</p>
@@ -369,44 +432,44 @@ window.Quarto = {
 </ul>
 <p>El investigador luego selecciona participantes hasta que se cumplan las cuotas establecidas, por ejemplo, 100 hombres y 100 mujeres, distribuidos equitativamente entre los diferentes grupos de edad. Este método asegura que todas las categorías importantes estén adecuadamente representadas en la muestra.</p>
 </section>
-<section id="bola-de-nieve" class="level2">
-<h2 class="anchored" data-anchor-id="bola-de-nieve">Bola de nieve</h2>
+<section id="bola-de-nieve" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="bola-de-nieve"><span class="header-section-number">11.2</span> Bola de nieve</h2>
 <p>Cada individuo refiere nuevos individuos.</p>
 <p>Se utiliza con poblaciones sensibles.</p>
 <p>En un estudio sobre los hábitos de ahorro entre migrantes de un país específico, se utiliza el muestreo bola de nieve debido a la dificultad de acceder a esta población. El investigador comienza con un pequeño grupo de migrantes conocidos que participan en el estudio. Luego, estos participantes refieren a otros migrantes que también podrían estar interesados en participar.</p>
 <p>A medida que más personas son entrevistadas, se continúa pidiendo referencias, lo que permite que la muestra “crezca como una bola de nieve”. Este método es especialmente útil para poblaciones difíciles de alcanzar o cuando no existe un marco muestral claro.</p>
 </section>
-<section id="muestreo-discrecional" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-discrecional">Muestreo discrecional</h2>
+<section id="muestreo-discrecional" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="muestreo-discrecional"><span class="header-section-number">11.3</span> Muestreo discrecional</h2>
 <p>Consiste en tomar de la población los individuos que resulten representativos bajo el jucio de un experto.</p>
 <p>Se utiliza cuando hay un experto que ha realizado estudios previos.</p>
 <p>En un estudio exploratorio sobre las opiniones de expertos en inteligencia artificial, se decide utilizar el muestreo discrecional. El investigador selecciona intencionadamente a un grupo de 10 expertos reconocidos en el campo, basándose en su conocimiento y reputación en la industria. La selección no es aleatoria, sino que se realiza según el criterio del investigador, quien elige a estos expertos por considerarlos los más apropiados para proporcionar información valiosa y relevante para el estudio.</p>
 </section>
-<section id="muestreo-por-conveniencia" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-por-conveniencia">Muestreo por conveniencia</h2>
+<section id="muestreo-por-conveniencia" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="muestreo-por-conveniencia"><span class="header-section-number">11.4</span> Muestreo por conveniencia</h2>
 <p>Consiste en estudiar los individuos más cercanos o voluntarios, ya que estos son más accesibles.</p>
 <p>Se utiliza en estudios cuyas poblaciones no son accesibles.</p>
 <p>En un estudio piloto sobre las preferencias de snacks saludables entre estudiantes universitarios, el investigador utiliza el muestreo por conveniencia debido a limitaciones de tiempo y recursos.</p>
 <p>El investigador selecciona a los estudiantes del curso de muestreo para que respondan a una breve encuesta. Este método se elige porque los participantes son fácilmente accesibles, aunque no necesariamente representan a toda la población estudiantil.</p>
 </section>
-<section id="muestreo-accidental" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-accidental">Muestreo accidental</h2>
+<section id="muestreo-accidental" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="muestreo-accidental"><span class="header-section-number">11.5</span> Muestreo accidental</h2>
 <p>Se selecciona un mecanismo de selección o acceso a los individuos encontrándolos por casualidad en un espacio definido sin ningún juicio previo.</p>
 <p>Se utiliza en poblaciones particularmente grandes con fines descriptivos y prácticos.</p>
 <p>En un estudio sobre las tendencias de la moda un investigador utiliza el muestreo accidental. Se aborda a los primeros 30 clientes que ingresan en una tienda de ropa durante una mañana para que respondan a una encuesta de satisfacción.</p>
 <p>Este método es accidental porque se seleccionan a los participantes en el lugar y momento de recolección.</p>
 </section>
 </section>
-<section id="muestreo-probabilístico-1" class="level1">
-<h1>Muestreo probabilístico</h1>
+<section id="muestreo-probabilístico-1" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Muestreo probabilístico</h1>
 <ul>
 <li><p>Aleatorio simple</p></li>
 <li><p>Por etapas</p></li>
 <li><p>Por conglomerados</p></li>
 <li><p>Por estratos</p></li>
 </ul>
-<section id="muestreo-aleatorio-simple" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-aleatorio-simple">Muestreo aleatorio simple</h2>
+<section id="muestreo-aleatorio-simple" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="muestreo-aleatorio-simple"><span class="header-section-number">12.1</span> Muestreo aleatorio simple</h2>
 <ul>
 <li>Definir la población</li>
 <li>Obtener el marco muestral</li>
@@ -416,8 +479,8 @@ window.Quarto = {
 <p>En un estudio sobre los hábitos de lectura de la población adulta en una ciudad, se decide utilizar el muestreo aleatorio simple. A partir de un listado completo de los 10,000 residentes adultos de la ciudad, el investigador selecciona 500 personas utilizando un generador de números aleatorios.</p>
 <p>Cada individuo tiene la misma probabilidad de ser seleccionado, lo que asegura que la muestra sea representativa de toda la población, minimizando sesgos en la selección.</p>
 </section>
-<section id="muestreo-por-etapas" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-por-etapas">Muestreo por etapas</h2>
+<section id="muestreo-por-etapas" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="muestreo-por-etapas"><span class="header-section-number">12.2</span> Muestreo por etapas</h2>
 <ul>
 <li>Bietápico (2 etapas)</li>
 <li>Polietápico (3 etapas o más)</li>
@@ -432,8 +495,8 @@ window.Quarto = {
 </ol>
 <p>Este método permite una selección eficiente y representativa en poblaciones grandes y dispersas, utilizando un enfoque jerárquico y secuencial.</p>
 </section>
-<section id="muestreo-por-conglomerados" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-por-conglomerados">Muestreo por conglomerados</h2>
+<section id="muestreo-por-conglomerados" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="muestreo-por-conglomerados"><span class="header-section-number">12.3</span> Muestreo por conglomerados</h2>
 <ul>
 <li>Son heterogéneos en su interior.</li>
 <li>Son homogéneos entre sí</li>
@@ -449,8 +512,8 @@ window.Quarto = {
 </ol>
 <p>Este método es útil cuando la población está agrupada en unidades naturales, como escuelas o barrios, y facilita la logística y los costos al reducir el número de unidades primarias que se deben tratar.</p>
 </section>
-<section id="muestreo-estratificado" class="level2">
-<h2 class="anchored" data-anchor-id="muestreo-estratificado">Muestreo estratificado</h2>
+<section id="muestreo-estratificado" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="muestreo-estratificado"><span class="header-section-number">12.4</span> Muestreo estratificado</h2>
 <ul>
 <li>Son homogéneos en su interior</li>
 <li>Son heterogéneos entre sí</li>
@@ -464,17 +527,17 @@ window.Quarto = {
 </ol>
 <p>Este método garantiza que cada subgrupo relevante dentro de la población esté representado en la muestra, permitiendo comparaciones más precisas entre diferentes departamentos y niveles jerárquicos.</p>
 </section>
-<section id="técnicas-de-muestreo" class="level2">
-<h2 class="anchored" data-anchor-id="técnicas-de-muestreo">Técnicas de muestreo</h2>
+<section id="técnicas-de-muestreo" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="técnicas-de-muestreo"><span class="header-section-number">12.5</span> Técnicas de muestreo</h2>
 <p><a href="https://youtu.be/gyGQ_qieVKM">Técnicas de muestreo</a></p>
 </section>
-<section id="factores-de-expansión" class="level2">
-<h2 class="anchored" data-anchor-id="factores-de-expansión">Factores de expansión</h2>
+<section id="factores-de-expansión" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="factores-de-expansión"><span class="header-section-number">12.6</span> Factores de expansión</h2>
 <p>Cuando tenemos un diseño muestral, es posible saber cuántos individuos de la población son representados por un individuo de la muestra. Esta cantidad se denomina <em>Factores de expansión</em>.</p>
 <p>Los factores de expansión son particularmente útiles para calcular totales.</p>
 </section>
-<section id="actividad" class="level2">
-<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<section id="actividad" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="actividad"><span class="header-section-number">12.7</span> Actividad</h2>
 <p>En esta actividad vamos a analizar una encuesta.</p>
 <ol type="1">
 <li><p>Elija una encuesta de la lista-</p></li>
@@ -916,6 +979,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C02_episteme.html" class="pagination-link" aria-label="Construyendo un marco epistemológico para la inferencia estadística">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C02_estim.html" class="pagination-link" aria-label="Estimación">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

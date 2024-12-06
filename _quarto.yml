@@ -1,58 +1,51 @@
 project:
-  type: website
+  type: book
   output-dir: docs
-  render:
+  # render:
+  #   - index.qmd
+  #   - intro.qmd
+  #   - C01_intro.qmd
+  #   - C01_univar.qmd
+  #   - C01_corr.qmd
+  #   - C01_dist.qmd
+  #   - C02_episteme.qmd
+  #   - C02_muestreo.qmd
+  #   - C02_estim.qmd
+  #   - C02_tamano.qmd
+  #   - C02_hipotesis.qmd
+  #   - 03_est-reg.qmd
+  #   - 04_est-multi.qmd
+
+book:
+  title: "Estadística para Ciencias Sociales"
+  author: "Julián Cruz"
+  chapters:
     - index.qmd
-    - intro.qmd
-    - C01_intro.qmd
-    - C01_univar.qmd
-    - C01_corr.qmd
-    - C02_episteme.qmd
-    - C02_muestreo.qmd
-    - C02_estim.qmd
-    - C02_tamano.qmd
-    - C02_hipotesis.qmd
+    - part: C01_cover.qmd
+      chapters:
+        - C01_prelim.qmd
+        - C01_prepara.qmd
+        - C01_univar.qmd
+        - C01_corr.qmd
+        - C01_dist.qmd
+        - C01_vis.qmd
+    - part: C02_cover.qmd
+      chapters:
+        - C02_episteme.qmd
+        - C02_muestreo.qmd
+        - C02_estim.qmd
+        - C02_tamano.qmd
+        - C02_hipotesis.qmd
+        - C02_pruebas.qmd
     - 03_est-reg.qmd
     - 04_est-multi.qmd
 
-website:
-  title: "Estadística"
-  navbar:
-    left:
-      - text: Inicio
-        href: index.qmd
-      - text: Introducción
-        href: intro.qmd
-      - text: Descriptiva
-        menu:
-        - text: Introducción
-          href: C01_intro.qmd
-        - text: Univariado
-          href: C01_univar.qmd
-        - text: Correlacional
-          href: C01_corr.qmd
-      - text: Inferencial
-        menu:
-        - text: Introducción
-          href: C02_episteme.qmd
-        - text: Muestreo
-          href: C02_muestreo.qmd
-        - text: Estimación
-          href: C02_estim.qmd
-        - text: Tamaño muestral
-          href: C02_tamano.qmd
-        - text: Hipótesis
-          href: C02_hipotesis.qmd
-      - href: 03_est-reg.qmd
-        text: Estadística III
-      - href: 04_est-multi.qmd
-        text: Estadística IV
-
 format:
   html:
-    theme: cosmo
+    theme: litera
     css: styles.css
-    toc: true
+  # pdf: default
 
-
+bibliography: biblio.bibtex
+csl: apa.csl
 

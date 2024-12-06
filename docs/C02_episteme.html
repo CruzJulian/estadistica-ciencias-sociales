@@ -8,7 +8,7 @@
 
 <meta name="author" content="CruzJulián">
 
-<title>Construyendo un marco epistemológico para la inferencia estadística – Estadística</title>
+<title>7&nbsp; Construyendo un marco epistemológico para la inferencia estadística – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./C02_muestreo.html" rel="next">
+<link href="./C02_cover.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -72,118 +74,179 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Estadística</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">Introducción</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptiva" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptiva</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptiva">    
-        <li>
-    <a class="dropdown-item" href="./C01_intro.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_univar.html">
- <span class="dropdown-text">Univariado</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C01_corr.html">
- <span class="dropdown-text">Correlacional</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Inferencial</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-inferencial">    
-        <li>
-    <a class="dropdown-item" href="./C02_episteme.html">
- <span class="dropdown-text">Introducción</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_muestreo.html">
- <span class="dropdown-text">Muestreo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_estim.html">
- <span class="dropdown-text">Estimación</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_tamano.html">
- <span class="dropdown-text">Tamaño muestral</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./C02_hipotesis.html">
- <span class="dropdown-text">Hipótesis</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./03_est-reg.html"> 
-<span class="menu-text">Estadística III</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./04_est-multi.html"> 
-<span class="menu-text">Estadística IV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_episteme.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#los-antiguos-griegos-y-la-deducción" id="toc-los-antiguos-griegos-y-la-deducción" class="nav-link active" data-scroll-target="#los-antiguos-griegos-y-la-deducción">Los antiguos griegos y la deducción</a>
+  <li><a href="#los-antiguos-griegos-y-la-deducción" id="toc-los-antiguos-griegos-y-la-deducción" class="nav-link active" data-scroll-target="#los-antiguos-griegos-y-la-deducción"><span class="header-section-number">8</span> Los antiguos griegos y la deducción</a>
   <ul class="collapse">
-  <li><a href="#sócrates-y-la-mayéutica" id="toc-sócrates-y-la-mayéutica" class="nav-link" data-scroll-target="#sócrates-y-la-mayéutica">Sócrates y la mayéutica</a></li>
-  <li><a href="#platón-y-la-dialéctica" id="toc-platón-y-la-dialéctica" class="nav-link" data-scroll-target="#platón-y-la-dialéctica">Platón y la dialéctica</a></li>
-  <li><a href="#aristóteles-y-la-lógica" id="toc-aristóteles-y-la-lógica" class="nav-link" data-scroll-target="#aristóteles-y-la-lógica">Aristóteles y la lógica</a></li>
-  <li><a href="#el-silogismo" id="toc-el-silogismo" class="nav-link" data-scroll-target="#el-silogismo">El silogismo</a></li>
+  <li><a href="#sócrates-y-la-mayéutica" id="toc-sócrates-y-la-mayéutica" class="nav-link" data-scroll-target="#sócrates-y-la-mayéutica"><span class="header-section-number">8.1</span> Sócrates y la mayéutica</a></li>
+  <li><a href="#platón-y-la-dialéctica" id="toc-platón-y-la-dialéctica" class="nav-link" data-scroll-target="#platón-y-la-dialéctica"><span class="header-section-number">8.2</span> Platón y la dialéctica</a></li>
+  <li><a href="#aristóteles-y-la-lógica" id="toc-aristóteles-y-la-lógica" class="nav-link" data-scroll-target="#aristóteles-y-la-lógica"><span class="header-section-number">8.3</span> Aristóteles y la lógica</a></li>
+  <li><a href="#el-silogismo" id="toc-el-silogismo" class="nav-link" data-scroll-target="#el-silogismo"><span class="header-section-number">8.4</span> El silogismo</a></li>
   </ul></li>
-  <li><a href="#el-novum-organum-de-bacon" id="toc-el-novum-organum-de-bacon" class="nav-link" data-scroll-target="#el-novum-organum-de-bacon">El <em>Novum Organum</em> de Bacon</a>
+  <li><a href="#el-novum-organum-de-bacon" id="toc-el-novum-organum-de-bacon" class="nav-link" data-scroll-target="#el-novum-organum-de-bacon"><span class="header-section-number">9</span> El <em>Novum Organum</em> de Bacon</a>
   <ul class="collapse">
-  <li><a href="#la-deducción-contra-la-inducción" id="toc-la-deducción-contra-la-inducción" class="nav-link" data-scroll-target="#la-deducción-contra-la-inducción">La deducción contra la inducción</a></li>
-  <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase">Actividad en clase</a></li>
+  <li><a href="#la-deducción-contra-la-inducción" id="toc-la-deducción-contra-la-inducción" class="nav-link" data-scroll-target="#la-deducción-contra-la-inducción"><span class="header-section-number">9.1</span> La deducción contra la inducción</a></li>
+  <li><a href="#actividad-qué-es-un-cisne-negro" id="toc-actividad-qué-es-un-cisne-negro" class="nav-link" data-scroll-target="#actividad-qué-es-un-cisne-negro"><span class="header-section-number">9.2</span> Actividad: ¿Qué es un cisne negro?</a></li>
   </ul></li>
-  <li><a href="#fisher-neyman-pearson" id="toc-fisher-neyman-pearson" class="nav-link" data-scroll-target="#fisher-neyman-pearson">Fisher, Neyman, Pearson</a>
+  <li><a href="#fisher-neyman-pearson" id="toc-fisher-neyman-pearson" class="nav-link" data-scroll-target="#fisher-neyman-pearson"><span class="header-section-number">10</span> Fisher, Neyman, Pearson</a>
   <ul class="collapse">
-  <li><a href="#las-reglas-para-hacer-inducción" id="toc-las-reglas-para-hacer-inducción" class="nav-link" data-scroll-target="#las-reglas-para-hacer-inducción">Las reglas para hacer inducción</a></li>
-  <li><a href="#generación-de-conocimiento-a-partir-de-datos" id="toc-generación-de-conocimiento-a-partir-de-datos" class="nav-link" data-scroll-target="#generación-de-conocimiento-a-partir-de-datos">Generación de conocimiento a partir de datos</a></li>
-  <li><a href="#inferencia-estadística" id="toc-inferencia-estadística" class="nav-link" data-scroll-target="#inferencia-estadística">Inferencia estadística</a></li>
+  <li><a href="#las-reglas-para-hacer-inducción" id="toc-las-reglas-para-hacer-inducción" class="nav-link" data-scroll-target="#las-reglas-para-hacer-inducción"><span class="header-section-number">10.1</span> Las reglas para hacer inducción</a></li>
+  <li><a href="#generación-de-conocimiento-a-partir-de-datos" id="toc-generación-de-conocimiento-a-partir-de-datos" class="nav-link" data-scroll-target="#generación-de-conocimiento-a-partir-de-datos"><span class="header-section-number">10.2</span> Generación de conocimiento a partir de datos</a></li>
+  <li><a href="#inferencia-estadística" id="toc-inferencia-estadística" class="nav-link" data-scroll-target="#inferencia-estadística"><span class="header-section-number">10.3</span> Inferencia estadística</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -191,9 +254,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_episteme.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Construyendo un marco epistemológico para la inferencia estadística</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Construyendo un marco epistemológico para la inferencia estadística</span></h1>
 <p class="subtitle lead">Estadística inferencial</p>
 </div>
 
@@ -218,22 +281,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Para comprender cómo surgió la inferencia estadística y en qué se fundamenta, es necesario entender primero las bases epistemológicas de la ciencia. Los métodos que hoy empleamos en estadística, especialmente en inferencia, tienen raíces profundas en la filosofía clásica y el desarrollo del método científico. A través de la deducción, la inducción y otras formas de razonamiento, los científicos han perfeccionado métodos para obtener conocimientos que sean precisos y replicables.</p>
-<section id="los-antiguos-griegos-y-la-deducción" class="level1">
-<h1>Los antiguos griegos y la deducción</h1>
-<section id="sócrates-y-la-mayéutica" class="level2">
-<h2 class="anchored" data-anchor-id="sócrates-y-la-mayéutica">Sócrates y la mayéutica</h2>
+<section id="los-antiguos-griegos-y-la-deducción" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Los antiguos griegos y la deducción</h1>
+<section id="sócrates-y-la-mayéutica" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sócrates-y-la-mayéutica"><span class="header-section-number">8.1</span> Sócrates y la mayéutica</h2>
 <p>Sócrates fue uno de los primeros filósofos en enfatizar la importancia del cuestionamiento como herramienta para alcanzar la verdad. Su método, la <strong>mayéutica</strong>, consistía en formular preguntas para ayudar a su interlocutor a descubrir conocimientos por sí mismo, partiendo de sus propias creencias y explorando las inconsistencias en sus respuestas. A través del diálogo y la introspección, Sócrates buscaba llevar a los demás hacia una mejor comprensión de conceptos abstractos como la justicia, la verdad y el bien. Esta metodología sentó las bases para el pensamiento crítico, un pilar fundamental en la ciencia moderna.</p>
 </section>
-<section id="platón-y-la-dialéctica" class="level2">
-<h2 class="anchored" data-anchor-id="platón-y-la-dialéctica">Platón y la dialéctica</h2>
+<section id="platón-y-la-dialéctica" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="platón-y-la-dialéctica"><span class="header-section-number">8.2</span> Platón y la dialéctica</h2>
 <p>Platón, discípulo de Sócrates, amplió la mayéutica y formuló la <strong>dialéctica</strong> como un método para alcanzar conocimientos más profundos mediante la confrontación de ideas opuestas. A través del diálogo y la tensión entre las tesis y antítesis, Platón creía que se podía llegar a la síntesis, es decir, a una comprensión superior y más completa de la realidad. Este método dialéctico influyó en el desarrollo de sistemas de lógica y pensamiento analítico que aún sustentan la base epistemológica de la ciencia.</p>
 </section>
-<section id="aristóteles-y-la-lógica" class="level2">
-<h2 class="anchored" data-anchor-id="aristóteles-y-la-lógica">Aristóteles y la lógica</h2>
+<section id="aristóteles-y-la-lógica" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="aristóteles-y-la-lógica"><span class="header-section-number">8.3</span> Aristóteles y la lógica</h2>
 <p>Aristóteles sistematizó la lógica como un método de razonamiento para llegar a conclusiones válidas a partir de premisas establecidas. En sus obras, como el <strong>Organon</strong>, formalizó el uso de la lógica deductiva y desarrolló una metodología para analizar y entender los principios subyacentes de los fenómenos. La lógica aristotélica no solo sentó las bases para el razonamiento científico, sino que también proporcionó las herramientas para la creación de sistemas de clasificación y el desarrollo de conceptos abstractos en la ciencia y las matemáticas.</p>
 </section>
-<section id="el-silogismo" class="level2">
-<h2 class="anchored" data-anchor-id="el-silogismo">El silogismo</h2>
+<section id="el-silogismo" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="el-silogismo"><span class="header-section-number">8.4</span> El silogismo</h2>
 <p>Uno de los aportes más significativos de Aristóteles a la epistemología es el <strong>silogismo</strong>, una forma de razonamiento deductivo que permite derivar conclusiones a partir de dos o más premisas. El silogismo establece que si las premisas son verdaderas, la conclusión necesariamente debe serlo. Este tipo de razonamiento deductivo es un modelo de inferencia lógica que ha servido de base para el desarrollo de sistemas matemáticos y estadísticos. Un ejemplo clásico sería:</p>
 <ul>
 <li>Todos los hombres son mortales.<br>
@@ -246,10 +309,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Otros ejemplos son <em>Ética demostrada según el orden geométrico</em> de Spinoza y <em>Philosophiæ Naturalis Principia Mathematica</em> de Isaac Newton. En <em>Ética</em>, Spinoza estructura su filosofía siguiendo el estilo geométrico de Euclides, utilizando definiciones, axiomas y proposiciones para desarrollar sus ideas sobre la naturaleza de Dios, la mente y la moralidad. Por su parte, en <em>Principia Mathematica</em>, Newton aplica un razonamiento deductivo para establecer las leyes del movimiento y la gravitación universal, partiendo de principios fundamentales y llegando a conclusiones que explican fenómenos físicos observables. Estos textos muestran cómo el método deductivo ha sido un pilar para avanzar en diversas disciplinas, desde la filosofía hasta la física.</p>
 </section>
 </section>
-<section id="el-novum-organum-de-bacon" class="level1">
-<h1>El <em>Novum Organum</em> de Bacon</h1>
-<section id="la-deducción-contra-la-inducción" class="level2">
-<h2 class="anchored" data-anchor-id="la-deducción-contra-la-inducción">La deducción contra la inducción</h2>
+<section id="el-novum-organum-de-bacon" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> El <em>Novum Organum</em> de Bacon</h1>
+<section id="la-deducción-contra-la-inducción" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="la-deducción-contra-la-inducción"><span class="header-section-number">9.1</span> La deducción contra la inducción</h2>
 <p>En el siglo XVII, Francis Bacon introdujo un enfoque revolucionario en su obra <em>Novum Organum</em>, en la que defendía la <strong>inducción</strong> como método para el conocimiento científico. Este enfoque rompió con la tradición aristotélica de deducción estricta, proponiendo que, en lugar de solo partir de premisas generales, los científicos deberían observar y analizar los fenómenos específicos para, a partir de ellos, generalizar leyes y principios.</p>
 <ul>
 <li><p><strong>La deducción</strong>: es un proceso de razonamiento que va de lo general a lo particular. Parte de leyes o teorías ya establecidas y aplica esas premisas para llegar a conclusiones específicas. La deducción asegura conclusiones válidas si las premisas son verdaderas, pero no permite descubrir nuevas leyes o principios.</p></li>
@@ -257,24 +320,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>El trabajo de Bacon es fundamental porque sentó las bases para una ciencia basada en la observación empírica, un enfoque que siglos más tarde sería crucial en la inferencia estadística.</p>
 </section>
-<section id="actividad-en-clase" class="level2">
-<h2 class="anchored" data-anchor-id="actividad-en-clase">Actividad en clase</h2>
-<p><strong>¿Qué es un cisne negro?</strong></p>
+<section id="actividad-qué-es-un-cisne-negro" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="actividad-qué-es-un-cisne-negro"><span class="header-section-number">9.2</span> Actividad: ¿Qué es un cisne negro?</h2>
 <p>El concepto de “cisne negro” se refiere a eventos altamente improbables e impredecibles, pero con un gran impacto cuando ocurren. La expresión fue popularizada por el filósofo Nassim Nicholas Taleb y subraya la limitación de los métodos inductivos, ya que una amplia observación de cisnes blancos no garantiza que no existan cisnes negros. Este concepto es clave para entender los límites de la inferencia estadística y la probabilidad, pues resalta la posibilidad de eventos fuera de nuestras expectativas basadas en observaciones pasadas.</p>
 </section>
 </section>
-<section id="fisher-neyman-pearson" class="level1">
-<h1>Fisher, Neyman, Pearson</h1>
-<section id="las-reglas-para-hacer-inducción" class="level2">
-<h2 class="anchored" data-anchor-id="las-reglas-para-hacer-inducción">Las reglas para hacer inducción</h2>
+<section id="fisher-neyman-pearson" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Fisher, Neyman, Pearson</h1>
+<section id="las-reglas-para-hacer-inducción" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="las-reglas-para-hacer-inducción"><span class="header-section-number">10.1</span> Las reglas para hacer inducción</h2>
 <p>Ronald A. Fisher, Jerzy Neyman y Egon Pearson fueron fundamentales para estructurar las <strong>reglas para hacer inducción</strong> en el contexto de la estadística moderna. Su trabajo permitió la formalización de métodos inferenciales que ayudan a generalizar conclusiones a partir de muestras. Estas reglas establecen la estructura de las pruebas de hipótesis y la generación de intervalos de confianza, permitiendo a los científicos tomar decisiones con base en evidencia empírica.</p>
 </section>
-<section id="generación-de-conocimiento-a-partir-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="generación-de-conocimiento-a-partir-de-datos">Generación de conocimiento a partir de datos</h2>
+<section id="generación-de-conocimiento-a-partir-de-datos" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="generación-de-conocimiento-a-partir-de-datos"><span class="header-section-number">10.2</span> Generación de conocimiento a partir de datos</h2>
 <p>Fisher, Neyman y Pearson desarrollaron metodologías para derivar conocimiento a partir de datos de manera rigurosa, incorporando conceptos como la probabilidad y el error estadístico. A través de la estadística inferencial, lograron definir un proceso sistemático para probar hipótesis, medir la incertidumbre y proporcionar intervalos de confianza, contribuyendo significativamente a las ciencias experimentales y sociales.</p>
 </section>
-<section id="inferencia-estadística" class="level2">
-<h2 class="anchored" data-anchor-id="inferencia-estadística">Inferencia estadística</h2>
+<section id="inferencia-estadística" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="inferencia-estadística"><span class="header-section-number">10.3</span> Inferencia estadística</h2>
 <p>La inferencia estadística surgió en el siglo XX como una disciplina clave en la estadística, impulsada por la necesidad de tomar decisiones informadas a partir de datos. Su desarrollo fue influenciado por figuras como Ronald A. Fisher, Jerzy Neyman y Egon Pearson, quienes sentaron las bases de los métodos inferenciales que permiten generalizar conclusiones de una muestra a una población más amplia. Fisher introdujo conceptos fundamentales como el “p-valor” y la prueba de hipótesis, mientras que Neyman y Pearson formalizaron la teoría de pruebas con su trabajo sobre errores tipo I y II y la formulación de intervalos de confianza. La inferencia estadística se consolidó rápidamente en diversas áreas científicas, desde la biología y la medicina hasta las ciencias sociales y económicas, transformando la manera en que los investigadores validan teorías y estiman parámetros poblacionales. A lo largo del tiempo, esta área ha evolucionado, incorporando herramientas computacionales y métodos bayesianos que amplían las posibilidades de análisis en contextos de datos complejos y grandes volúmenes de información.</p>
 
 
@@ -702,6 +764,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C02_cover.html" class="pagination-link" aria-label="Estadística inferencial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Estadística inferencial</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C02_muestreo.html" class="pagination-link" aria-label="Muestreo">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

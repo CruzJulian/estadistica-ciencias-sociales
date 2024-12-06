@@ -1,11 +1,17 @@
 ---
-title: "Estadística descriptiva para dos o más variables"
-subtitle: "Introducción al mundo cuantitativo"
-author: "CruzJulián"
-
+title: "Correlación"
+subtitle: "Estadística descriptiva"
+author: "Julián Cruz"
 lang: "es-co"
 
 ---
+
+```{r}
+
+## Reescribir bien
+
+```
+
 
 
 # Dos variables

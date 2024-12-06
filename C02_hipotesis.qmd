@@ -1,25 +1,18 @@
----
-title: "Pruebas de hipótesis"
-subtitle: "Estadística inferencial"
-author: "CruzJulián"
+# Hipótesis
 
-lang: "es-co"
-
----
-
-# La hipótesis en el contexto del desarrollo científico
+## La hipótesis en el contexto del desarrollo científico
 
 Epistemológicamente, una **hipótesis** es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que las hipótesis funcionan como un puente entre la teoría y los datos empíricos. Una hipótesis permite a los investigadores establecer un marco para la investigación, formulando preguntas que pueden ser respondidas mediante métodos científicos. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.
 
 Las pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en datos. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión.
 
-## Qué es la reproducibilidad y por qué es importante
+### Qué es la reproducibilidad y por qué es importante
 
 La **reproducibilidad** es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.
 
 - **Importancia:** La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado.
 
-## Reproductibilidad
+### Reproductibilidad
 
 La **crisis actual de la reproducibilidad** en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados
 
@@ -27,21 +20,24 @@ La **crisis actual de la reproducibilidad** en la ciencia se refiere a la crecie
 
 - **Los escándalos en la ciencia:** Casos de fraude, mala conducta científica y prácticas poco éticas han salido a la luz, socavando la confianza en la investigación. Esto ha llevado a un llamado a la transparencia en los métodos y datos utilizados, así como a la implementación de mejores prácticas para asegurar la reproducibilidad.
 
+```{r}
+# arreglar todo esto
+```
 
-## Probabilidad
+### Probabilidad
 
 Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.
 
-## Estadística
+### Estadística
 
 Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.
 
-## Modelo estadístico
+### Modelo estadístico
 
 Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.
 
 
-## Objetivo
+### Objetivo
 
 Establecer si existe **suficiente evidencia** en una muestra aleatoria para **rechazar** o **no rechazar** la **hipótesis nula** a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.
 
@@ -65,12 +61,21 @@ En estadística, la arquitectura de las pruebas de hipótesis se sostiene en dos
 
 Este enfoque dual asegura que los investigadores se acerquen al análisis de manera objetiva, comenzando con la suposición de que no hay un efecto y buscando evidencia que justifique su rechazo.
 
-### Un ejemplo aplicado: videojuegos violentos y comportamientos agresivos
 
-Considere el siguiente problema de investigación: **¿Los videojuegos violentos causan comportamientos violentos?**. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:
+::: {.callout-tip}
+
+```{r}
+# Mejorar el ejemplo, lo demostrable y lo indemostrable
+```
+
+**Ejemplo aplicado a las ciencias sociales**: Considere el siguiente problema de investigación: **¿Los videojuegos violentos causan comportamientos violentos?**. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:
 
 - **Hipótesis nula (H₀):** Los videojuegos violentos no causan un aumento en los comportamientos violentos.
+
 - **Hipótesis alternativa (H₁):** Los videojuegos violentos causan un aumento en los comportamientos violentos.
+
+:::
+
 
 El propósito de la prueba de hipótesis es analizar los datos recolectados en estudios experimentales u observacionales para determinar si hay suficiente evidencia empírica para rechazar la hipótesis nula y aceptar la hipótesis alternativa. Aquí, la prueba recae en la demostración de H₁: si los datos muestran una relación estadísticamente significativa entre la exposición a videojuegos violentos y comportamientos agresivos, entonces la hipótesis nula puede ser rechazada razonablemente.
 
@@ -129,6 +134,8 @@ La elección del nivel de significancia depende del contexto y las consecuencias
 
 La correcta formulación de hipótesis y la comprensión de los tipos de error y del nivel de significancia permiten a los investigadores tomar decisiones informadas basadas en los datos muestrales. En un estudio, el análisis de hipótesis proporciona un camino claro para evaluar si una afirmación sobre la población es plausible o si debe ser rechazada en función de la evidencia empírica. Este enfoque estructurado es la base para el análisis crítico y la validación de resultados en investigación científica y en aplicaciones prácticas en diversos campos.
 
+## AQUÍ VAMOS
+
 ## Tipos de error
 
 En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
@@ -139,8 +146,6 @@ En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
 ## Tipos de error
 
 En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuldWSenU1lKPw2F7kkKH5zraE5wHibmAdM21m88UDZDN1Jvqb)
 
 ## Nivel de significancia
 
@@ -190,189 +195,4 @@ El proceso de las pruebas de hipótesis incluye la definición de un nivel de si
 El resultado de una prueba estadística produce un valor p, que representa la probabilidad de observar los datos obtenidos, o más extremos, bajo la suposición de que H₀ es cierta. Si el valor p es menor que el nivel de significancia, se rechaza H₀ en favor de H₁. Sin embargo, si el valor p es mayor, no se rechaza H₀, lo que sugiere que no hay suficiente evidencia para afirmar un efecto significativo.
 
 
-
-# Pruebas paramétricas y no paramétricas
-
-## Pruebas paramétricas
-
-Las **pruebas paramétricas** estudian un parámetro de dimensión finita (una colección finita de parámetros), por esta razón presentan supuestos específicos sobre la distribución de los datos.
-
-## Pruebas no paramétricas
-
-Las **pruebas paramétricas** estudian un parámetro de dimensión infinita (funciones de densidad).
-
-**Analíticas**: Hacen uso de propiedades generales de las distribuciones.
-
-**Simulación estocástica**: Hacen uso de simulación computacional para obtener el valor-p.
-
-## Pruebas paramétricas
-
-Asumen que los datos siguen una distribución conocida, usualmente normal. Estas pruebas requieren que se cumplan ciertos supuestos, como la homogeneidad de varianzas y la linealidad.
-
-Estas pruebas son más potentes cuando los datos cumplen estos supuestos, ya que utilizan toda la información disponible en los datos.
-
-Cuando los datos no cumplen los supuestos, las pruebas pierden validez y los estudios rigor científico.
-
--   Prueba t de Student (para la comparación de medias)
--   ANOVA (para la comparación de medias entre múltiples grupos)
-
-## Pruebas no paramétricas analíticas
-
-Las **pruebas no paramétricas analíticas** hacen uso de propiedades matemáticas generales de las distribuciones continuas. Por lo tanto, no requieren supuestos tan fuertes sobre la distribución de los datos.
-
-Son útiles cuando los datos no cumplen los supuestos necesarios para las pruebas paramétricas, como en casos de datos con distribuciones no normales o escalas de medición ordinales.
-
-Son menos potentes que las pruebas paramétricas en los casos paramétricos. No obstante, son más flexibles y aplicables a una mayor variedad de situaciones.
-
--   Prueba de Mann-Whitney (para la comparación de dos grupos independientes)
--   Prueba de Wilcoxon (para la comparación de dos grupos pareados)
--   Prueba de Kruskal-Wallis (para la comparación de múltiples grupos)
-
-## Pruebas no paramétricas de simulación estocástica
-
-Las **pruebas de permutaciones** son métodos estadísticos no paramétricos que evalúan la significancia de un estadístico de prueba al permutar, simular o remuestrear los datos observados con el fin de obtener una muestra de estadísticos bajo H_0.
-
-Al comparar el estadístico observado con la muestra de los estadísticos obtenidos, se puede determinar si el efecto observado es significativo.
-
--   **Permutación**: Se basa en la idea de que si no hay efecto, todas las permutaciones de los datos son igualmente probables.
-
--   **Simulación**: Se basa en la idea de que es posible simular la hipótesis nula y encontrar una muestra para el estimador bajo estas condiciones.
-
--   **Remuestreo**: Se basa en la idea de que una muestra aleatoria de una muestra aleatoria es una muestra aleatoria.
-
-Al comparar el estadístico observado con la distribución de los estadísticos obtenidos de las permutaciones, se puede determinar si el efecto observado es significativo.
-
-**Calculo del valor p**: Se calcula como la proporción de permutaciones en las que el estadístico de prueba es al menos tan extremo como el observado.
-
-Estas pruebas no dependen de supuestos sobre la distribución de los datos, lo que las hace muy flexibles y robustas frente a diversas condiciones de los datos.
-
-## Cuándo usar cada tipo de prueba
-
-Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos elegir cuándo aplicar cada tipo de prueba.
-
--   **Pruebas paramétricas**: cuando los datos cumplen con los supuestos de normalidad y homogeneidad de varianzas, y se requiere mayor potencia estadística.
-
--   **Pruebas no paramétricas**: cuando los datos no cumplen con los supuestos paramétricos o cuando se trabaja con datos ordinales o no numéricos. Son útiles sean analíticas o de simulación estocástica.
-
-
-# Pruebas de hipótesis más usadas
-
-## Test t de Student para una muestra
-
-En la familia normal, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \mu = \mu_0\\
-  H_A: \mu \neq \mu_0
-\end{align*}
-$$
-
-## Test de signos para una muestra
-
-En la familia de distribuciones continuas, siendo $\theta$ la mediana, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis.
-
-$$
-\begin{align*}
-  H_0: \theta = \theta_0\\
-  H_A: \theta \neq \theta_0
-\end{align*}
-$$
-
-## Test t de Student para dos muestras independientes
-
-En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo homogenedidad ($\sigma^2_x = \sigma^2_y$), especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-$$
-
-## Test t de Student para dos muestras independientes
-
-En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-$$
-
-## Test Wilcoxon - Mann - Whitney
-
-En la familia de las distribuciones continuas, siendo $\theta$ la mediana, sean dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \theta_X = \theta_Y\\
-  H_A: \theta_X \neq \theta_Y
-\end{align*}
-$$
-
-## Test t de Student para dos muestras pareadas
-
-En la familia normal, dos muestras aleatorias pareadas $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \mu_X = \mu_Y\\
-  H_A: \mu_X \neq \mu_Y
-\end{align*}
-$$
-
-Es suficiente ver que si $D = X - Y$ entonces podemos probar
-
-$$
-\begin{align*}
-  H_0: \mu_D = 0\\
-  H_A: \mu_D \neq 0
-\end{align*}
-$$
-
-## Prueba de una sola proporción
-
-En una distribución Bernoulli($\pi$), sea una muestra $X = \{X_1, ... , X_n\}$, especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \pi_X = \pi_0\\
-  H_A: \pi_X \neq \pi_0
-\end{align*}
-$$
-
-## Prueba de dos proporciones
-
-En una distribución Bernoulli($\pi$), sean dos muestras $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
-
-$$
-\begin{align*}
-  H_0: \pi_X = \pi_y\\
-  H_A: \pi_X \neq \pi_y
-\end{align*}
-$$
-
-## Test de correlación de Pearson
-
-En la familia normal, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
-
-$$
-\begin{align*}
-H_0: \rho =   \rho_0\\
-H_A: \rho \neq   \rho_0
-\end{align*}
-$$
-
-## Test de correlación de Spearman
-
-En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
-
-$$
-\begin{align*}
-H_0: \rho_s =   \rho_{s0}\\
-H_A: \rho_s \neq   \rho_{s0}
-\end{align*}
-$$
 

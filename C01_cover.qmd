@@ -1,0 +1,20 @@
+
+# Estadística descriptiva {.unnumbered}
+
+En esta primera sección se examina la estadística descriptiva. El contenido ha sido seleccionado cuidadosamente con el fin de agregar valor a los análisis cuantitativos que se proponen al interior de las investigaciones en ciencias sociales.
+
+## Introducción {.unnumbered}
+
+Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los **tipos de variables**, que incluyen **variables cualitativas** (nominales y ordinales) y **cuantitativas** (discretas y continuas). A continuación, se aborda la **tipología de preguntas** en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los **tipos de encuestas**, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.
+
+## Muestreo {.unnumbered}
+
+En este tema se abordan los fundamentos del **muestreo**, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: **probabilístico** y **no probabilístico**. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el **muestreo aleatorio simple**, el **muestreo multietápico**, el **muestreo estratificado** y el **muestreo por conglomerados**. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el **muestreo por conveniencia**, **muestreo por cuotas** o **bola de nieve**. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.
+
+## Estadística descriptiva para una variable {.unnumbered}
+
+La **estadística descriptiva para una variable** se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las **medidas de tendencia central** como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las **medidas de dispersión** como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de **gráficos** como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.
+
+## Estadística descriptiva para dos o más variables {.unnumbered}
+
+Este tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las **tablas de contingencia** para estudiar la relación entre dos variables cualitativas, así como las **medidas de asociación** como el **coeficiente de correlación de Pearson** y **Spearman** para variables cuantitativas. También se discuten las **gráficas de dispersión** para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una **recta de regresión** para predecir una variable en función de otra. Además, se examinan los **coeficientes de correlación parcial** y **análisis multivariado** para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CruzJulián">
 
-<title>10&nbsp; Tamaño muestral – Estadística para Ciencias Sociales</title>
+<title>12&nbsp; Pruebas y tipos de pruebas – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./C02_hipotesis.html" rel="next">
-<link href="./C02_estim.html" rel="prev">
+<link href="./03_est-reg.html" rel="next">
+<link href="./C02_hipotesis.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -56,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -109,13 +108,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_tamano.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_pruebas.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -132,7 +131,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Buscar"></div>
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -147,7 +146,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estadística descriptiva</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -194,7 +193,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estadística inferencial</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -219,7 +218,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link active">
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
   </div>
 </li>
@@ -231,7 +230,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
   </div>
 </li>
@@ -256,27 +255,25 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link active" data-scroll-target="#error-muestral"><span class="header-section-number">11</span> Error muestral</a>
+  <li><a href="#pruebas-paramétricas" id="toc-pruebas-paramétricas" class="nav-link active" data-scroll-target="#pruebas-paramétricas"><span class="header-section-number">12.1</span> Pruebas paramétricas</a></li>
+  <li><a href="#pruebas-no-paramétricas-analíticas" id="toc-pruebas-no-paramétricas-analíticas" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-analíticas"><span class="header-section-number">12.2</span> Pruebas no paramétricas analíticas</a></li>
+  <li><a href="#pruebas-no-paramétricas-de-simulación-estocástica" id="toc-pruebas-no-paramétricas-de-simulación-estocástica" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-de-simulación-estocástica"><span class="header-section-number">12.3</span> Pruebas no paramétricas de simulación estocástica</a></li>
+  <li><a href="#cuándo-usar-cada-tipo-de-prueba" id="toc-cuándo-usar-cada-tipo-de-prueba" class="nav-link" data-scroll-target="#cuándo-usar-cada-tipo-de-prueba"><span class="header-section-number">12.4</span> Cuándo usar cada tipo de prueba</a></li>
+  <li><a href="#pruebas-de-hipótesis-más-usadas" id="toc-pruebas-de-hipótesis-más-usadas" class="nav-link" data-scroll-target="#pruebas-de-hipótesis-más-usadas"><span class="header-section-number">12.5</span> Pruebas de hipótesis más usadas</a>
   <ul class="collapse">
-  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo"><span class="header-section-number">11.1</span> Ejemplo:</a></li>
-  <li><a href="#empate-técnico" id="toc-empate-técnico" class="nav-link" data-scroll-target="#empate-técnico"><span class="header-section-number">11.2</span> Empate técnico</a></li>
-  <li><a href="#ejemplo-1" id="toc-ejemplo-1" class="nav-link" data-scroll-target="#ejemplo-1"><span class="header-section-number">11.3</span> Ejemplo:</a></li>
-  </ul></li>
-  <li><a href="#tamaño-de-muestra" id="toc-tamaño-de-muestra" class="nav-link" data-scroll-target="#tamaño-de-muestra"><span class="header-section-number">12</span> Tamaño de muestra</a>
-  <ul class="collapse">
-  <li><a href="#tamaño-de-muestra-óptimo" id="toc-tamaño-de-muestra-óptimo" class="nav-link" data-scroll-target="#tamaño-de-muestra-óptimo"><span class="header-section-number">12.1</span> Tamaño de muestra óptimo</a></li>
-  </ul></li>
-  <li><a href="#fórmulas-para-estimación" id="toc-fórmulas-para-estimación" class="nav-link" data-scroll-target="#fórmulas-para-estimación"><span class="header-section-number">13</span> Fórmulas para Estimación</a>
-  <ul class="collapse">
-  <li><a href="#estimación-de-una-proporción-con-tamaño-poblacional-conocido" id="toc-estimación-de-una-proporción-con-tamaño-poblacional-conocido" class="nav-link" data-scroll-target="#estimación-de-una-proporción-con-tamaño-poblacional-conocido"><span class="header-section-number">13.1</span> 1. Estimación de una Proporción con Tamaño Poblacional Conocido</a></li>
-  <li><a href="#estimación-de-una-proporción-con-tamaño-poblacional-desconocido" id="toc-estimación-de-una-proporción-con-tamaño-poblacional-desconocido" class="nav-link" data-scroll-target="#estimación-de-una-proporción-con-tamaño-poblacional-desconocido"><span class="header-section-number">13.2</span> 2. Estimación de una Proporción con Tamaño Poblacional Desconocido</a></li>
-  <li><a href="#estimación-de-una-media-con-tamaño-poblacional-conocido" id="toc-estimación-de-una-media-con-tamaño-poblacional-conocido" class="nav-link" data-scroll-target="#estimación-de-una-media-con-tamaño-poblacional-conocido"><span class="header-section-number">13.3</span> 3. Estimación de una Media con Tamaño Poblacional Conocido</a></li>
-  <li><a href="#estimación-de-una-media-con-tamaño-poblacional-desconocido" id="toc-estimación-de-una-media-con-tamaño-poblacional-desconocido" class="nav-link" data-scroll-target="#estimación-de-una-media-con-tamaño-poblacional-desconocido"><span class="header-section-number">13.4</span> 4. Estimación de una Media con Tamaño Poblacional Desconocido</a></li>
-  <li><a href="#ejemplo-2" id="toc-ejemplo-2" class="nav-link" data-scroll-target="#ejemplo-2"><span class="header-section-number">13.5</span> Ejemplo:</a></li>
-  <li><a href="#aplicación-interactiva" id="toc-aplicación-interactiva" class="nav-link" data-scroll-target="#aplicación-interactiva"><span class="header-section-number">13.6</span> Aplicación Interactiva</a></li>
+  <li><a href="#test-t-de-student-para-una-muestra" id="toc-test-t-de-student-para-una-muestra" class="nav-link" data-scroll-target="#test-t-de-student-para-una-muestra"><span class="header-section-number">12.5.1</span> Test t de Student para una muestra</a></li>
+  <li><a href="#test-de-signos-para-una-muestra" id="toc-test-de-signos-para-una-muestra" class="nav-link" data-scroll-target="#test-de-signos-para-una-muestra"><span class="header-section-number">12.5.2</span> Test de signos para una muestra</a></li>
+  <li><a href="#test-t-de-student-para-dos-muestras-independientes" id="toc-test-t-de-student-para-dos-muestras-independientes" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-independientes"><span class="header-section-number">12.5.3</span> Test t de Student para dos muestras independientes</a></li>
+  <li><a href="#test-t-de-student-para-dos-muestras-independientes-1" id="toc-test-t-de-student-para-dos-muestras-independientes-1" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-independientes-1"><span class="header-section-number">12.5.4</span> Test t de Student para dos muestras independientes</a></li>
+  <li><a href="#test-wilcoxon---mann---whitney" id="toc-test-wilcoxon---mann---whitney" class="nav-link" data-scroll-target="#test-wilcoxon---mann---whitney"><span class="header-section-number">12.5.5</span> Test Wilcoxon - Mann - Whitney</a></li>
+  <li><a href="#test-t-de-student-para-dos-muestras-pareadas" id="toc-test-t-de-student-para-dos-muestras-pareadas" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-pareadas"><span class="header-section-number">12.5.6</span> Test t de Student para dos muestras pareadas</a></li>
+  <li><a href="#prueba-de-una-sola-proporción" id="toc-prueba-de-una-sola-proporción" class="nav-link" data-scroll-target="#prueba-de-una-sola-proporción"><span class="header-section-number">12.5.7</span> Prueba de una sola proporción</a></li>
+  <li><a href="#prueba-de-dos-proporciones" id="toc-prueba-de-dos-proporciones" class="nav-link" data-scroll-target="#prueba-de-dos-proporciones"><span class="header-section-number">12.5.8</span> Prueba de dos proporciones</a></li>
+  <li><a href="#test-de-correlación-de-pearson" id="toc-test-de-correlación-de-pearson" class="nav-link" data-scroll-target="#test-de-correlación-de-pearson"><span class="header-section-number">12.5.9</span> Test de correlación de Pearson</a></li>
+  <li><a href="#test-de-correlación-de-spearman" id="toc-test-de-correlación-de-spearman" class="nav-link" data-scroll-target="#test-de-correlación-de-spearman"><span class="header-section-number">12.5.10</span> Test de correlación de Spearman</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -284,22 +281,15 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_tamano.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_pruebas.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></h1>
-<p class="subtitle lead">Estadística inferencial</p>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>CruzJulián </p>
-          </div>
-  </div>
     
   
     
@@ -310,111 +300,164 @@ window.Quarto = {
 </header>
 
 
-<p>El <strong>tamaño muestral</strong> es un aspecto crucial en el diseño de estudios estadísticos, ya que influye directamente en la precisión y confiabilidad de las estimaciones. Comprender cómo determinar el tamaño de muestra adecuado es fundamental para obtener resultados válidos y aplicables a una población más amplia.</p>
-<section id="error-muestral" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Error muestral</h1>
-<p>El <strong>margen de error</strong> es una medida que refleja la cantidad de incertidumbre asociada a una estimación puntual. Se define como la mitad de la longitud de un intervalo de confianza y representa la variabilidad esperada en una estimación debido al muestreo. Cuanto mayor sea el margen de error, menos confiable será la estimación.</p>
-<p><strong>Cálculo del margen de error:</strong></p>
-<p>El margen de error se puede calcular utilizando la siguiente fórmula:</p>
-<p><span class="math display">\[\text{Margen de error} = Z \times \left(\frac{\sigma}{\sqrt{n}}\right)\]</span></p>
-<p>Donde: - <span class="math inline">\(Z\)</span> es el valor crítico de la distribución normal estándar (por ejemplo, 1.96 para un nivel de confianza del 95%). - <span class="math inline">\(\sigma\)</span> es la desviación estándar de la población (o de la muestra si la desviación estándar de la población no está disponible). - <span class="math inline">\(n\)</span> es el tamaño de la muestra.</p>
-<section id="ejemplo" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">11.1</span> Ejemplo:</h2>
+<p>Para probar una hipótesis los procedimientos se dividen en cuatro tipos</p>
 <ul>
-<li><p><strong>Encuesta electoral:</strong> En una encuesta a 1,000 votantes, el 48% afirma que votará por el candidato A. Si el margen de error es de ±3%, esto indica que el porcentaje real de votantes que apoyan al candidato A se estima que está entre el 45% y el 51%. Esto se puede expresar como un intervalo de confianza de (0.45, 0.51).</p></li>
-<li><p><strong>Estimación de ingresos:</strong> Se estima que el ingreso promedio de una población es de $50,000 con un margen de error de ±$2,000. Esto implica que el ingreso promedio real en la población se espera que esté entre $48,000 y $52,000. En este caso, el margen de error nos proporciona una indicación clara de la posible variabilidad en los ingresos de la población.</p></li>
+<li>…</li>
+</ul>
+<section id="pruebas-paramétricas" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="pruebas-paramétricas"><span class="header-section-number">12.1</span> Pruebas paramétricas</h2>
+<p>Las <strong>pruebas paramétricas</strong> estudian un parámetro de dimensión finita (una colección finita de parámetros), por esta razón presentan supuestos específicos sobre la distribución de los datos.</p>
+<p>Las <strong>pruebas paramétricas</strong> estudian un parámetro de dimensión infinita (funciones de densidad).</p>
+<p><strong>Analíticas</strong>: Hacen uso de propiedades generales de las distribuciones.</p>
+<p><strong>Simulación estocástica</strong>: Hacen uso de simulación computacional para obtener el valor-p.</p>
+<p>Asumen que los datos siguen una distribución conocida, usualmente normal. Estas pruebas requieren que se cumplan ciertos supuestos, como la homogeneidad de varianzas y la linealidad.</p>
+<p>Estas pruebas son más potentes cuando los datos cumplen estos supuestos, ya que utilizan toda la información disponible en los datos.</p>
+<p>Cuando los datos no cumplen los supuestos, las pruebas pierden validez y los estudios rigor científico.</p>
+<ul>
+<li>Prueba t de Student (para la comparación de medias)</li>
+<li>ANOVA (para la comparación de medias entre múltiples grupos)</li>
 </ul>
 </section>
-<section id="empate-técnico" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="empate-técnico"><span class="header-section-number">11.2</span> Empate técnico</h2>
-<p>El <strong>empate técnico</strong> ocurre cuando las diferencias entre dos estimaciones puntuales, como medias o proporciones, no son estadísticamente significativas debido al margen de error. En este caso, las diferencias observadas podrían ser el resultado de la variabilidad muestral y no reflejan una verdadera diferencia en la población.</p>
-</section>
-<section id="ejemplo-1" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="ejemplo-1"><span class="header-section-number">11.3</span> Ejemplo:</h2>
+<section id="pruebas-no-paramétricas-analíticas" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="pruebas-no-paramétricas-analíticas"><span class="header-section-number">12.2</span> Pruebas no paramétricas analíticas</h2>
+<p>Las <strong>pruebas no paramétricas analíticas</strong> hacen uso de propiedades matemáticas generales de las distribuciones continuas. Por lo tanto, no requieren supuestos tan fuertes sobre la distribución de los datos.</p>
+<p>Son útiles cuando los datos no cumplen los supuestos necesarios para las pruebas paramétricas, como en casos de datos con distribuciones no normales o escalas de medición ordinales.</p>
+<p>Son menos potentes que las pruebas paramétricas en los casos paramétricos. No obstante, son más flexibles y aplicables a una mayor variedad de situaciones.</p>
 <ul>
-<li><p><strong>Encuesta electoral:</strong> En una encuesta a 1,200 votantes, el candidato A obtiene el 46% de las intenciones de voto y el candidato B el 44%, con un margen de error de ±3%. Dado que el margen de error abarca los porcentajes de ambos candidatos (43% a 49% para A y 41% a 47% para B), se considera un empate técnico. Esto sugiere que no hay suficiente evidencia para afirmar que uno de los candidatos es preferido sobre el otro.</p></li>
-<li><p><strong>Competencia de ventas entre productos:</strong> En un análisis de ventas, el producto X alcanza el 35% de participación en el mercado y el producto Y el 33%, con un margen de error de ±2%. Aquí, el margen de error (33% a 37% para X y 31% a 35% para Y) se superpone, lo que lleva a declarar un empate técnico entre los productos. Este tipo de análisis es crucial en la investigación de mercados, donde decisiones de marketing deben basarse en resultados estadísticamente significativos.</p></li>
+<li>Prueba de Mann-Whitney (para la comparación de dos grupos independientes)</li>
+<li>Prueba de Wilcoxon (para la comparación de dos grupos pareados)</li>
+<li>Prueba de Kruskal-Wallis (para la comparación de múltiples grupos)</li>
 </ul>
 </section>
-</section>
-<section id="tamaño-de-muestra" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Tamaño de muestra</h1>
-<p>El <strong>tamaño de muestra</strong> afecta directamente la precisión de las estimaciones. Un mayor tamaño de muestra generalmente reduce el error estándar, disminuye el margen de error y mejora la confiabilidad de las estimaciones. Sin embargo, también implica un aumento en los costos y el tiempo de recolección de datos.</p>
-<section id="tamaño-de-muestra-óptimo" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="tamaño-de-muestra-óptimo"><span class="header-section-number">12.1</span> Tamaño de muestra óptimo</h2>
-<p>El tamaño de muestra óptimo se calcula bajo el supuesto de que cada registro genera un costo. En este sentido, la optimización se realiza disminuyendo el tamaño muestral con la restricción de que las estimaciones sean estadísticamente distintas de cero.</p>
-<p><strong>Consideraciones para determinar el tamaño óptimo:</strong></p>
-<ol type="1">
-<li><p><strong>Costos:</strong> Es fundamental considerar los costos asociados a la recolección de datos. Un tamaño muestral mayor a lo necesario puede generar costos innecesarios, mientras que un tamaño menor puede resultar en una estimación menos útil.</p></li>
-<li><p><strong>Variabilidad:</strong> La variabilidad dentro de la población impacta la determinación del tamaño de la muestra. Si la población es altamente variable, se necesitará un tamaño de muestra mayor para capturar esta variabilidad.</p></li>
-<li><p><strong>Nivel de confianza y margen de error deseados:</strong> Un mayor nivel de confianza o un margen de error más pequeño requerirá un tamaño de muestra más grande. Por ejemplo, si deseamos un nivel de confianza del 99% en lugar del 95%, el tamaño de la muestra tendrá que aumentar.</p></li>
-<li><p><strong>Tamaño poblacional:</strong> En poblaciones muy grandes, la relación entre el tamaño de la muestra y el tamaño poblacional es menos crítica. Sin embargo, en poblaciones pequeñas, se debe considerar el efecto de la muestra sobre el total.</p></li>
-</ol>
-</section>
-</section>
-<section id="fórmulas-para-estimación" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Fórmulas para Estimación</h1>
-<section id="estimación-de-una-proporción-con-tamaño-poblacional-conocido" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="estimación-de-una-proporción-con-tamaño-poblacional-conocido"><span class="header-section-number">13.1</span> 1. Estimación de una Proporción con Tamaño Poblacional Conocido</h2>
-<p>Cuando se conoce el tamaño de la población y se desea estimar una proporción, se puede utilizar la siguiente fórmula:</p>
-<p><span class="math display">\[n = \frac{N \cdot Z^2 \cdot p(1 - p)}{(N - 1) \cdot E^2 + Z^2 \cdot p(1 - p)}\]</span></p>
-<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(N\)</span> = tamaño de la población - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(p\)</span> = proporción estimada de la población (por ejemplo, 0.5 si no se conoce) - <span class="math inline">\(E\)</span> = margen de error deseado</p>
-</section>
-<section id="estimación-de-una-proporción-con-tamaño-poblacional-desconocido" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="estimación-de-una-proporción-con-tamaño-poblacional-desconocido"><span class="header-section-number">13.2</span> 2. Estimación de una Proporción con Tamaño Poblacional Desconocido</h2>
-<p>Cuando el tamaño de la población es desconocido, se utiliza la siguiente fórmula simplificada:</p>
-<p><span class="math display">\[n = \frac{Z^2 \cdot p(1 - p)}{E^2}\]</span></p>
-<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(p\)</span> = proporción estimada de la población (puede ser 0.5 si se desea máxima variabilidad) - <span class="math inline">\(E\)</span> = margen de error deseado</p>
-</section>
-<section id="estimación-de-una-media-con-tamaño-poblacional-conocido" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="estimación-de-una-media-con-tamaño-poblacional-conocido"><span class="header-section-number">13.3</span> 3. Estimación de una Media con Tamaño Poblacional Conocido</h2>
-<p>Si el tamaño de la población es conocido y se desea estimar la media, se utiliza la siguiente fórmula:</p>
-<p><span class="math display">\[n = \frac{N \cdot Z^2 \cdot \sigma^2}{(N - 1) \cdot E^2 + Z^2 \cdot \sigma^2}\]</span></p>
-<p>Donde: - <span class="math inline">\(n\)</span> = tamaño de la muestra - <span class="math inline">\(N\)</span> = tamaño de la población - <span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%) - <span class="math inline">\(\sigma\)</span> = desviación estándar de la población - <span class="math inline">\(E\)</span> = margen de error deseado</p>
-</section>
-<section id="estimación-de-una-media-con-tamaño-poblacional-desconocido" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="estimación-de-una-media-con-tamaño-poblacional-desconocido"><span class="header-section-number">13.4</span> 4. Estimación de una Media con Tamaño Poblacional Desconocido</h2>
-<p>Cuando el tamaño de la población es desconocido, se utiliza la siguiente fórmula:</p>
-<p><span class="math display">\[n = \frac{Z^2 \cdot \sigma^2}{E^2}\]</span></p>
-<p>Donde:</p>
+<section id="pruebas-no-paramétricas-de-simulación-estocástica" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="pruebas-no-paramétricas-de-simulación-estocástica"><span class="header-section-number">12.3</span> Pruebas no paramétricas de simulación estocástica</h2>
+<p>Las <strong>pruebas de permutaciones</strong> son métodos estadísticos no paramétricos que evalúan la significancia de un estadístico de prueba al permutar, simular o remuestrear los datos observados con el fin de obtener una muestra de estadísticos bajo H_0.</p>
+<p>Al comparar el estadístico observado con la muestra de los estadísticos obtenidos, se puede determinar si el efecto observado es significativo.</p>
 <ul>
-<li><span class="math inline">\(n\)</span> = tamaño de la muestra</li>
-<li><span class="math inline">\(Z\)</span> = valor crítico de la distribución normal (por ejemplo, 1.96 para un nivel de confianza del 95%)</li>
-<li><span class="math inline">\(\sigma\)</span> = desviación estándar de la población (o de la muestra si es necesario)</li>
-<li><span class="math inline">\(E\)</span> = margen de error deseado</li>
+<li><p><strong>Permutación</strong>: Se basa en la idea de que si no hay efecto, todas las permutaciones de los datos son igualmente probables.</p></li>
+<li><p><strong>Simulación</strong>: Se basa en la idea de que es posible simular la hipótesis nula y encontrar una muestra para el estimador bajo estas condiciones.</p></li>
+<li><p><strong>Remuestreo</strong>: Se basa en la idea de que una muestra aleatoria de una muestra aleatoria es una muestra aleatoria.</p></li>
 </ul>
-<p>Es importante considerar que, al utilizar estas fórmulas, se deben tener en cuenta supuestos como la normalidad de la población y la aleatoriedad de la muestra. Además, los valores de <span class="math inline">\(p\)</span> y <span class="math inline">\(\sigma\)</span> deben ser estimados de forma adecuada para obtener resultados confiables. Para poblaciones pequeñas, es recomendable aplicar una corrección de población finita si se utiliza la fórmula con el tamaño poblacional conocido.</p>
-<p>Estas fórmulas son herramientas esenciales en la investigación estadística y permiten a los investigadores diseñar estudios que produzcan estimaciones precisas y confiables.</p>
+<p>Al comparar el estadístico observado con la distribución de los estadísticos obtenidos de las permutaciones, se puede determinar si el efecto observado es significativo.</p>
+<p><strong>Calculo del valor p</strong>: Se calcula como la proporción de permutaciones en las que el estadístico de prueba es al menos tan extremo como el observado.</p>
+<p>Estas pruebas no dependen de supuestos sobre la distribución de los datos, lo que las hace muy flexibles y robustas frente a diversas condiciones de los datos.</p>
 </section>
-<section id="ejemplo-2" class="level2" data-number="13.5">
-<h2 data-number="13.5" class="anchored" data-anchor-id="ejemplo-2"><span class="header-section-number">13.5</span> Ejemplo:</h2>
+<section id="cuándo-usar-cada-tipo-de-prueba" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="cuándo-usar-cada-tipo-de-prueba"><span class="header-section-number">12.4</span> Cuándo usar cada tipo de prueba</h2>
+<p>Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos elegir cuándo aplicar cada tipo de prueba.</p>
 <ul>
-<li>En un estudio sobre hábitos de consumo, se determina que el costo de encuestar a un individuo es de $10. Si se quiere estimar el gasto promedio mensual con un margen de error de ±$5 y un nivel de confianza del 95%, se puede calcular el tamaño de muestra necesario utilizando la fórmula del tamaño de muestra:</li>
+<li><p><strong>Pruebas paramétricas</strong>: cuando los datos cumplen con los supuestos de normalidad y homogeneidad de varianzas, y se requiere mayor potencia estadística.</p></li>
+<li><p><strong>Pruebas no paramétricas</strong>: cuando los datos no cumplen con los supuestos paramétricos o cuando se trabaja con datos ordinales o no numéricos. Son útiles sean analíticas o de simulación estocástica.</p></li>
 </ul>
-<p><span class="math display">\[n = \left(\frac{Z^2 \cdot \sigma^2}{E^2}\right)\]</span></p>
-<p>Donde:</p>
-<ul>
-<li><span class="math inline">\(E\)</span> es el margen de error deseado.</li>
-</ul>
-<p>Al determinar que la desviación estándar de los gastos mensuales es $50, se puede calcular el tamaño muestral óptimo para cumplir con los criterios de estudio.</p>
-<ul>
-<li><strong>Costo-beneficio:</strong> Supongamos que al calcular el tamaño muestral óptimo se determina que es de 100 encuestas. Si se decide llevar a cabo 150 encuestas, aunque se logra una mayor precisión, el costo adicional debe justificarse por los beneficios esperados del estudio.</li>
-</ul>
-<p>En resumen, un tamaño muestral mayor al óptimo produce estimaciones que son distintas de cero, pero incurre en costos innecesarios. Por otro lado, un tamaño muestral menor al óptimo produce estimaciones que son estadísticamente iguales a cero, disminuyendo la utilidad del ejercicio. Por lo tanto, encontrar un equilibrio entre precisión y costo es esencial en el diseño de estudios estadísticos.</p>
 </section>
-<section id="aplicación-interactiva" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="aplicación-interactiva"><span class="header-section-number">13.6</span> Aplicación Interactiva</h2>
-<p>Para ayudar a comprender cómo calcular el tamaño de muestra, se puede utilizar la siguiente herramienta interactiva:</p>
-<p><a href="http://gauss.medellin.unal.edu.co:3838/fhernanb/samplesize/">Cálculo del tamaño de muestra</a></p>
-<p>Esta aplicación te permite ingresar parámetros como el nivel de confianza, el margen de error, y la proporción esperada o la desviación estándar, dependiendo de si deseas estimar una proporción o una media. La herramienta calculará automáticamente el tamaño de muestra necesario para tu estudio, facilitando así la planificación y diseño de investigaciones.</p>
-<p><strong>Instrucciones:</strong></p>
-<ol type="1">
-<li>Accede al enlace proporcionado.</li>
-<li>Selecciona el tipo de estimación que deseas realizar (proporción o media) y (si lo conoces) el temaño poblacional.</li>
-<li>Ingresa el margen de error que necesitas.</li>
-<li>Haz clic en “Calcular” para obtener el tamaño de muestra recomendado.</li>
-</ol>
-<p>Esta aplicación es especialmente útil para investigadores y profesionales que desean asegurarse de que sus estimaciones sean precisas y confiables, optimizando así los recursos destinados a la recolección de datos.</p>
+<section id="pruebas-de-hipótesis-más-usadas" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="pruebas-de-hipótesis-más-usadas"><span class="header-section-number">12.5</span> Pruebas de hipótesis más usadas</h2>
+<section id="test-t-de-student-para-una-muestra" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="test-t-de-student-para-una-muestra"><span class="header-section-number">12.5.1</span> Test t de Student para una muestra</h3>
+<p>En la familia normal, una muestra aleatoria <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \mu = \mu_0\\
+  H_A: \mu \neq \mu_0
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-de-signos-para-una-muestra" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="test-de-signos-para-una-muestra"><span class="header-section-number">12.5.2</span> Test de signos para una muestra</h3>
+<p>En la familia de distribuciones continuas, siendo <span class="math inline">\(\theta\)</span> la mediana, una muestra aleatoria <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> especificamos las hipótesis.</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \theta = \theta_0\\
+  H_A: \theta \neq \theta_0
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-t-de-student-para-dos-muestras-independientes" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-independientes"><span class="header-section-number">12.5.3</span> Test t de Student para dos muestras independientes</h3>
+<p>En la familia normal, dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo homogenedidad (<span class="math inline">\(\sigma^2_x = \sigma^2_y\)</span>), especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-t-de-student-para-dos-muestras-independientes-1" class="level3" data-number="12.5.4">
+<h3 data-number="12.5.4" class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-independientes-1"><span class="header-section-number">12.5.4</span> Test t de Student para dos muestras independientes</h3>
+<p>En la familia normal, dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo heterogenedidad (<span class="math inline">\(\sigma^2_x \neq \sigma^2_y\)</span>), especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-wilcoxon---mann---whitney" class="level3" data-number="12.5.5">
+<h3 data-number="12.5.5" class="anchored" data-anchor-id="test-wilcoxon---mann---whitney"><span class="header-section-number">12.5.5</span> Test Wilcoxon - Mann - Whitney</h3>
+<p>En la familia de las distribuciones continuas, siendo <span class="math inline">\(\theta\)</span> la mediana, sean dos muestras aleatorias <span class="math inline">\(X = \{X_1, ... , X_m\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \theta_X = \theta_Y\\
+  H_A: \theta_X \neq \theta_Y
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-t-de-student-para-dos-muestras-pareadas" class="level3" data-number="12.5.6">
+<h3 data-number="12.5.6" class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-pareadas"><span class="header-section-number">12.5.6</span> Test t de Student para dos muestras pareadas</h3>
+<p>En la familia normal, dos muestras aleatorias pareadas <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, bajo heterogenedidad (<span class="math inline">\(\sigma^2_x \neq \sigma^2_y\)</span>), especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \mu_X = \mu_Y\\
+  H_A: \mu_X \neq \mu_Y
+\end{align*}
+\]</span></p>
+<p>Es suficiente ver que si <span class="math inline">\(D = X - Y\)</span> entonces podemos probar</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \mu_D = 0\\
+  H_A: \mu_D \neq 0
+\end{align*}
+\]</span></p>
+</section>
+<section id="prueba-de-una-sola-proporción" class="level3" data-number="12.5.7">
+<h3 data-number="12.5.7" class="anchored" data-anchor-id="prueba-de-una-sola-proporción"><span class="header-section-number">12.5.7</span> Prueba de una sola proporción</h3>
+<p>En una distribución Bernoulli(<span class="math inline">\(\pi\)</span>), sea una muestra <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span>, especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \pi_X = \pi_0\\
+  H_A: \pi_X \neq \pi_0
+\end{align*}
+\]</span></p>
+</section>
+<section id="prueba-de-dos-proporciones" class="level3" data-number="12.5.8">
+<h3 data-number="12.5.8" class="anchored" data-anchor-id="prueba-de-dos-proporciones"><span class="header-section-number">12.5.8</span> Prueba de dos proporciones</h3>
+<p>En una distribución Bernoulli(<span class="math inline">\(\pi\)</span>), sean dos muestras <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span>, especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+  H_0: \pi_X = \pi_y\\
+  H_A: \pi_X \neq \pi_y
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-de-correlación-de-pearson" class="level3" data-number="12.5.9">
+<h3 data-number="12.5.9" class="anchored" data-anchor-id="test-de-correlación-de-pearson"><span class="header-section-number">12.5.9</span> Test de correlación de Pearson</h3>
+<p>En la familia normal, sea una muestra aleatoria de dos variables <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span> especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+H_0: \rho =   \rho_0\\
+H_A: \rho \neq   \rho_0
+\end{align*}
+\]</span></p>
+</section>
+<section id="test-de-correlación-de-spearman" class="level3" data-number="12.5.10">
+<h3 data-number="12.5.10" class="anchored" data-anchor-id="test-de-correlación-de-spearman"><span class="header-section-number">12.5.10</span> Test de correlación de Spearman</h3>
+<p>En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables <span class="math inline">\(X = \{X_1, ... , X_n\}\)</span> y <span class="math inline">\(Y = \{Y_1, ... , Y_n\}\)</span> especificamos las hipótesis</p>
+<p><span class="math display">\[
+\begin{align*}
+H_0: \rho_s =   \rho_{s0}\\
+H_A: \rho_s \neq   \rho_{s0}
+\end{align*}
+\]</span></p>
 
 
 </section>
@@ -464,12 +507,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -843,13 +886,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./C02_estim.html" class="pagination-link" aria-label="Estimación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span>
+      <a href="./C02_hipotesis.html" class="pagination-link" aria-label="Hipótesis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./C02_hipotesis.html" class="pagination-link" aria-label="Hipótesis">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03_est-reg.html" class="pagination-link" aria-label="Estadística III">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
