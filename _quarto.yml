@@ -19,8 +19,13 @@ project:
 book:
   title: "Estadística para Ciencias Sociales"
   author: "Julián Cruz"
+  cover-image: 05_img/cover.png
+  sidebar:
+    style: docked
+    background: light
   chapters:
     - index.qmd
+    - C99_todo.qmd
     - part: C01_cover.qmd
       chapters:
         - C01_prelim.qmd
@@ -44,7 +49,7 @@ format:
   html:
     theme: litera
     css: styles.css
-  # pdf: default
+  pdf: default
 
 bibliography: biblio.bibtex
 csl: apa.csl

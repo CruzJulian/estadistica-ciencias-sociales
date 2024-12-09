@@ -69,118 +69,97 @@ Dependiendo de la cantidad de conocimiento que tenemos sobre los datos podemos e
 
 En la familia normal, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \mu &= \mu_0\\
   H_A: \mu &\neq \mu_0
 \end{align*}
-$$
+
 
 ### Test de signos para una muestra
 
 En la familia de distribuciones continuas, siendo $\theta$ la mediana, una muestra aleatoria $X = \{X_1, ... , X_n\}$ especificamos las hipótesis.
 
-$$
 \begin{align*}
   H_0: \theta &= \theta_0\\
   H_A: \theta &\neq \theta_0
 \end{align*}
-$$
 
 ### Test t de Student para dos muestras independientes
 
 En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo homogenedidad ($\sigma^2_x = \sigma^2_y$), especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \mu_X &= \mu_Y\\
   H_A: \mu_X &\neq \mu_Y
 \end{align*}
-$$
 
 ### Test t de Student para dos muestras independientes
 
 En la familia normal, dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \mu_X &= \mu_Y\\
   H_A: \mu_X &\neq \mu_Y
 \end{align*}
-$$
 
 ### Test Wilcoxon - Mann - Whitney
 
 En la familia de las distribuciones continuas, siendo $\theta$ la mediana, sean dos muestras aleatorias $X = \{X_1, ... , X_m\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \theta_X &= \theta_Y\\
   H_A: \theta_X &\neq \theta_Y
 \end{align*}
-$$
 
 ### Test t de Student para dos muestras pareadas
 
 En la familia normal, dos muestras aleatorias pareadas $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, bajo heterogenedidad ($\sigma^2_x \neq \sigma^2_y$), especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \mu_X &= \mu_Y\\
   H_A: \mu_X &\neq \mu_Y
 \end{align*}
-$$
 
 Es suficiente ver que si $D = X - Y$ entonces podemos probar
 
-$$
 \begin{align*}
   H_0: \mu_D &= 0\\
   H_A: \mu_D &\neq 0
 \end{align*}
-$$
 
 ### Prueba de una sola proporción
 
 En una distribución Bernoulli($\pi$), sea una muestra $X = \{X_1, ... , X_n\}$, especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \pi_X &= \pi_0\\
   H_A: \pi_X &\neq \pi_0
 \end{align*}
-$$
 
 ### Prueba de dos proporciones
 
 En una distribución Bernoulli($\pi$), sean dos muestras $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$, especificamos las hipótesis
 
-$$
 \begin{align*}
   H_0: \pi_X &= \pi_y\\
   H_A: \pi_X &\neq \pi_y
 \end{align*}
-$$
 
 ### Test de correlación de Pearson
 
 En la familia normal, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
 
-$$
 \begin{align*}
 H_0: \rho &=   \rho_0\\
 H_A: \rho &\neq   \rho_0
 \end{align*}
-$$
 
 ### Test de correlación de Spearman
 
 En la familia de distribuciones continuas, sea una muestra aleatoria de dos variables $X = \{X_1, ... , X_n\}$ y $Y = \{Y_1, ... , Y_n\}$ especificamos las hipótesis
 
-$$
 \begin{align*}
 H_0: \rho_s &=   \rho_{s0}\\
 H_A: \rho_s &\neq   \rho_{s0}
 \end{align*}
-$$
 

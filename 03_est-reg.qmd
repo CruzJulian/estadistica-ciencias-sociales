@@ -301,25 +301,6 @@ Consideraciones en la aplicación del modelo:
 - **Monitoreo y actualización:** ¿Cómo se monitoreará el desempeño del modelo a lo largo del tiempo? ¿Qué mecanismos se establecerán para actualizar el modelo con nuevos datos?
 - **Evaluación del impacto:** ¿Qué impacto tiene la aplicación del modelo en los resultados esperados? ¿Se cumplen los objetivos iniciales del modelamiento?
 
-# Preparación y exploración de los datos
-
-## Procesamiento previo
-
-La preparación de datos implica transformar los datos en un formato adecuado para su uso en el modelamiento.
-
-
-## Limpieza de datos
-
-   - **Imputación de valores faltantes:** Selección de técnicas para manejar datos faltantes, como eliminación de casos, imputación con la media o mediana, o el uso de modelos predictivos.
-   - **Eliminación de duplicados:** Identificación y eliminación de registros duplicados que podrían sesgar los resultados del modelo.
-   - **Corrección de errores:** Revisión de los datos para corregir errores como registros mal ingresados, incoherencias, o valores fuera de rango.
-
-## Transformación de datos
-
-   - **Normalización o estandarización:** Ajuste de las escalas de las variables para que tengan un rango comparable, lo cual es especialmente importante en técnicas como el análisis de componentes principales o modelos de machine learning.
-   - **Codificación de variables categóricas:** Conversión de variables categóricas en variables numéricas mediante técnicas como la codificación one-hot o el etiquetado ordinal.
-   - **Creación de nuevas variables:** Generación de nuevas variables que puedan capturar relaciones más complejas en los datos (por ejemplo, interacciones entre variables o variables derivadas).
-
 ## Selección de datos
 
    - **Selección de características:** Identificación de variables irrelevantes o redundantes para simplificar el modelo y mejorar su interpretabilidad.
@@ -911,8 +892,8 @@ La evaluación de hipótesis mediante modelos de regresión implica determinar s
 ### Intervalos de confianza analíticos
 
 - **Cálculo**:
-  - Se basa en los supuestos de normalidad de los errores y en la distribución de \(t\).
-  - Los límites del intervalo de confianza se calculan como: \(\hat{\beta} \pm t_{\alpha/2} \cdot \text{SE}(\hat{\beta})\), donde \(\hat{\beta}\) es el coeficiente estimado y \(\text{SE}(\hat{\beta})\) es su error estándar.
+  - Se basa en los supuestos de normalidad de los errores y en la distribución de $t$.
+  - Los límites del intervalo de confianza se calculan como: $\hat{\beta} \pm t_{\alpha/2} \cdot \text{SE}(\hat{\beta})$, donde $\hat{\beta}$ es el coeficiente estimado y $\text{SE}(\hat{\beta})$ es su error estándar.
 - **Importancia**:
   - Proporciona una medida de la precisión de los estimadores.
   - Ayuda a evaluar la significancia de los coeficientes: si el intervalo no incluye cero, el coeficiente es significativo.
@@ -1023,8 +1004,7 @@ $$
 ### Coeficiente de determinación ajustado
 
 $$
-R_a^2 = 1 - \frac{n - 1}{n - p - 1}(1-R^2)
-
+R_a^{2} = 1 - \frac{n - 1}{n - p - 1}(1-R^{2}) 
 $$
 
 ## Práctica

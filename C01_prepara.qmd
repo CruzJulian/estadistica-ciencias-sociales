@@ -1,14 +1,53 @@
 # Preparación de los datos
 
-## Imputación de datos
 
-## Identificación de atípicos
+## Limpieza
 
-## De categórico a numérico
+### Identificación de atípicos
 
-## De numérico a categórico
+### Corrección de errores
 
-## Trabajo con fechas
+### Codificación y decodificación
 
+Qué hacer cuando el sexo es 1 - hombre y 2- mujer, o el nivel educativo es 1 -primaria incompleta, 2 - primaria completa... como en spss
+
+
+### Imputación de datos
+
+## Modificaciones
+
+### De categórico a numérico
+
+### De numérico a categórico
+
+### Trabajo con fechas
+
+## Escalamiento univariado
+
+### Normalización
+
+### Estandarización
+
+### Uniformado
+
+
+---
+
+## Procesamiento previo
+
+La preparación de datos implica transformar los datos en un formato adecuado para su uso en el modelamiento.
+
+
+## Limpieza de datos
+
+   - **Imputación de valores faltantes:** Selección de técnicas para manejar datos faltantes, como eliminación de casos, imputación con la media o mediana, o el uso de modelos predictivos.
+   - **Eliminación de duplicados:** Identificación y eliminación de registros duplicados que podrían sesgar los resultados del modelo.
+   - **Corrección de errores:** Revisión de los datos para corregir errores como registros mal ingresados, incoherencias, o valores fuera de rango.
+
+## Transformación de datos
+
+   - **Normalización o estandarización:** Ajuste de las escalas de las variables para que tengan un rango comparable, lo cual es especialmente importante en técnicas como el análisis de componentes principales o modelos de machine learning.
+   - **Codificación de variables categóricas:** Conversión de variables categóricas en variables numéricas mediante técnicas como la codificación one-hot o el etiquetado ordinal.
+   - **Creación de nuevas variables:** Generación de nuevas variables que puedan capturar relaciones más complejas en los datos (por ejemplo, interacciones entre variables o variables derivadas).
 
 
