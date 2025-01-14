@@ -2,58 +2,41 @@
 
 ## La hipótesis en el contexto del desarrollo científico
 
-Epistemológicamente, una **hipótesis** es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que las hipótesis funcionan como un puente entre la teoría y los datos empíricos. Una hipótesis permite a los investigadores establecer un marco para la investigación, formulando preguntas que pueden ser respondidas mediante métodos científicos. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.
+Epistemológicamente, una **hipótesis** es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que proporciona un puente entre la teoría y los datos empíricos, permitiendo transformar ideas abstractas en afirmaciones que pueden ser verificadas o refutadas. La capacidad de someter hipótesis a pruebas rigurosas y sistemáticas es lo que distingue al conocimiento científico de otras formas de conocimiento. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.
 
-Las pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en datos. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión.
+Las pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en evidencias. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión. En términos metodológicos, este procedimiento implica formular una **hipótesis nula** (H₀), que representa una afirmación inicial de no asociación o ausencia de efecto, y una **hipótesis alternativa** (Hₐ), que propone una relación o efecto específico entre las variables. Estas hipótesis son sometidas a un análisis estadístico que permite determinar si los datos observados son consistentes con la hipótesis nula o si proporcionan evidencia suficiente para apoyar la hipótesis alternativa.
 
-### Qué es la reproducibilidad y por qué es importante
+En este sentido, es posible ver los modelos científicos como conjuntos lógicos y coherentes de hipótesis. Por ejemplo, el modelo del universo de Ptolomeo, desarrollado en la antigüedad, proponía que los cuerpos celestes giraban en esferas perfectas alrededor de la Tierra. Este modelo contenía implícitamente numerosas hipótesis sobre el movimiento y la disposición de los astros que, con el tiempo, fueron refutadas por observaciones empíricas y reemplazadas por el modelo heliocéntrico de Copérnico.
+
+Otros modelos más cercanos a las ciencias sociales incluyen el modelo histórico-materialista de Karl Marx, que se basa en la hipótesis de que los cambios sociales y económicos son impulsados por las contradicciones inherentes a los modos de producción. Este modelo se ha sometido a pruebas empíricas en diferentes contextos históricos, como los análisis de la transición del feudalismo al capitalismo. De manera similar, el modelo de Max Weber sobre la acción social postula que las acciones humanas están motivadas por un conjunto de significados subjetivos que pueden ser interpretados en función de diferentes tipos de racionalidad, como la racionalidad instrumental o valorativa. Este modelo ha sido evaluado empíricamente en investigaciones sociológicas que analizan fenómenos como el comportamiento económico o la ética religiosa.
+
+Cada uno de estos modelos tiene sus hipótesis, que han sido comprobadas mediante estudios con información empírica, recopilada a través de métodos cuantitativos, cualitativos o mixtos. Por ejemplo, el análisis de encuestas, los estudios históricos y los experimentos sociales han permitido evaluar la aplicabilidad de estas hipótesis en diferentes contextos.
+
+En consecuencia, las hipótesis no solo son elementos centrales en la construcción y validación de teorías científicas, sino que también sirven como herramientas para estructurar la investigación empírica. La subjetividad del conocimiento se minimiza cuando las hipótesis son verificables independientemente del investigador. Esta propiedad en el ámbito científico se denomina reproducibilidad. 
+
+## Qué es la reproducibilidad y por qué es importante
 
 La **reproducibilidad** es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.
 
-- **Importancia:** La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado.
+La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado. No obstante, no es una práctica común y varios medios han reportado una [crisis en la reproducibilidad](https://www.pnas.org/doi/10.1073/pnas.1708272114).
 
-### Reproductibilidad
+La **crisis actual de la reproducibilidad** en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos. Por ejemplo, [un artículo de la revista Nature](https://www.science.org/doi/10.1126/science.aac4716) encontro que tan solo para una treintena de 100 experimentos de psicología publicados en las mejores revistas científicas del campo se habían podido reproducir sus resultados. También es posible encontrar esta controversia en ciencias [de la salud](https://pmc.ncbi.nlm.nih.gov/articles/PMC1182327/), [económicas](https://www.aeaweb.org/articles?id=10.1257/aer.p20171031) y [otras disciplinas](https://www.nature.com/articles/533452a)
 
-La **crisis actual de la reproducibilidad** en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados
+# Pruebas de hipótesis
 
- en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos. 
+## Objetivo
 
-- **Los escándalos en la ciencia:** Casos de fraude, mala conducta científica y prácticas poco éticas han salido a la luz, socavando la confianza en la investigación. Esto ha llevado a un llamado a la transparencia en los métodos y datos utilizados, así como a la implementación de mejores prácticas para asegurar la reproducibilidad.
-
-```{r}
-# arreglar todo esto
-```
-
-### Probabilidad
-
-Es posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.
-
-### Estadística
-
-Análogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.
-
-### Modelo estadístico
-
-Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.
-
-
-### Objetivo
-
-Establecer si existe **suficiente evidencia** en una muestra aleatoria para **rechazar** o **no rechazar** la **hipótesis nula** a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.
+El objetivo de una prueba de hipótesis es stablecer si existe **suficiente evidencia** en una muestra aleatoria para **rechazar** o **no rechazar** la **hipótesis nula** a nivel poblacional. Esto busca determinar cuál hipótesis explica mejor los datos observados en la población.
 
 ## Arquitectura de las pruebas de hipótesis
 
 En el ámbito de la estadística y la investigación científica, la comprensión y aplicación de las pruebas de hipótesis es fundamental para validar teorías y conclusiones basadas en datos. Estas pruebas se estructuran de manera que permiten a los investigadores tomar decisiones informadas acerca de la relación entre variables y la existencia de efectos en estudios empíricos. Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la *tetera de Russell*, la cual ejemplifica la importancia de la carga de la prueba y su relación con la validación de afirmaciones complejas.
 
-### La tetera de Russell y la carga de la prueba
-
 Bertrand Russell, filósofo y matemático británico, introdujo la analogía de una pequeña tetera de porcelana que orbita el Sol entre la Tierra y Marte, tan diminuta que ningún telescopio podría detectarla. La premisa de Russell es que, si alguien afirmara la existencia de esta tetera, la responsabilidad de demostrar su existencia recaería sobre esa persona y no sobre los escépticos, quienes no tendrían que probar la inexistencia de la misma. Este argumento sirve para destacar un principio esencial en la lógica y la ciencia: la carga de la prueba recae en quienes hacen afirmaciones poco usuales.
 
 Russell empleó esta metáfora en el contexto de la religión, pero su aplicación es igualmente poderosa en la ciencia y la estadística. En el campo de las pruebas de hipótesis, se establece que la evidencia es la herramienta clave para sostener o rechazar afirmaciones. Esta carga de la prueba se traduce en un proceso metódico y riguroso que permite a los investigadores evaluar si los datos apoyan una hipótesis específica.
 
-### La arquitectura fundamental de una prueba de hipótesis
-
-En estadística, la arquitectura de las pruebas de hipótesis se sostiene en dos componentes principales: la **hipótesis nula (H₀)** y la **hipótesis alternativa (H₁)**.
+En estadística, la arquitectura de las pruebas de hipótesis propone la conformación en cada caso de dos hipótesis principales: la **hipótesis nula (H₀)** y la **hipótesis alternativa (H₁)**.
 
 - **Hipótesis nula (H₀):** Es la suposición inicial que niega la existencia de un efecto o relación en la población de estudio. Es un punto de partida que establece que cualquier efecto observado es producto de la variabilidad natural o de un azar inherente. La hipótesis nula se formula de manera que, para rechazarla, se debe contar con evidencia suficiente que contradiga su planteamiento. No obstante, debido a su enunciado, su verificación resulta muy costosa.
 
@@ -64,11 +47,7 @@ Este enfoque dual asegura que los investigadores se acerquen al análisis de man
 
 ::: {.callout-tip}
 
-```{r}
-# Mejorar el ejemplo, lo demostrable y lo indemostrable
-```
-
-**Ejemplo aplicado a las ciencias sociales**: Considere el siguiente problema de investigación: **¿Los videojuegos violentos causan comportamientos violentos?**. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:
+**Ejemplo aplicado a las ciencias sociales**: Considere el siguiente problema de investigación: **¿Los videojuegos violentos causan comportamientos violentos?**. La prueba de hipótesis en este caso se separa en la existencia de la relación causal mencionada frente a su inexistencia. Debido a que es imposible demostrar la inexistencia de la relación, el sistema de hipótesis se estructuraría de la siguiente manera:
 
 - **Hipótesis nula (H₀):** Los videojuegos violentos no causan un aumento en los comportamientos violentos.
 
@@ -124,6 +103,8 @@ En el proceso de tomar decisiones basadas en pruebas de hipótesis, es posible c
 
 La relación entre los tipos de error y la potencia de la prueba es fundamental para comprender la eficacia y precisión de una prueba estadística. Un investigador debe equilibrar estos errores al diseñar una prueba, ya que reducir la probabilidad de un error tipo I puede incrementar la probabilidad de un error tipo II, y viceversa.
 
+### effect sizes
+
 ### Nivel de significancia
 
 El **nivel de significancia** ($\alpha$) es un umbral predefinido que establece la probabilidad máxima aceptable de cometer un error tipo I. Comúnmente, los niveles de significancia utilizados son 0.05, 0.01, o 0.10. Este valor define el criterio para decidir si los resultados de una prueba son estadísticamente significativos. Si el valor p obtenido de la prueba es menor o igual a $\alpha$, se rechaza la hipótesis nula en favor de la hipótesis alternativa, indicando que los resultados observados son lo suficientemente raros como para no atribuirse al azar.
@@ -133,8 +114,6 @@ La elección del nivel de significancia depende del contexto y las consecuencias
 ### Integrando los conceptos en la práctica
 
 La correcta formulación de hipótesis y la comprensión de los tipos de error y del nivel de significancia permiten a los investigadores tomar decisiones informadas basadas en los datos muestrales. En un estudio, el análisis de hipótesis proporciona un camino claro para evaluar si una afirmación sobre la población es plausible o si debe ser rechazada en función de la evidencia empírica. Este enfoque estructurado es la base para el análisis crítico y la validación de resultados en investigación científica y en aplicaciones prácticas en diversos campos.
-
-## AQUÍ VAMOS
 
 ## Tipos de error
 

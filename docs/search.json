@@ -40,46 +40,6 @@
     ]
   },
   {
-    "objectID": "C01_cover.html",
-    "href": "C01_cover.html",
-    "title": "Estadística descriptiva",
-    "section": "",
-    "text": "Introducción\nEste primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los tipos de variables, que incluyen variables cualitativas (nominales y ordinales) y cuantitativas (discretas y continuas). A continuación, se aborda la tipología de preguntas en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los tipos de encuestas, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.",
-    "crumbs": [
-      "Estadística descriptiva"
-    ]
-  },
-  {
-    "objectID": "C01_cover.html#muestreo",
-    "href": "C01_cover.html#muestreo",
-    "title": "Estadística descriptiva",
-    "section": "Muestreo",
-    "text": "Muestreo\nEn este tema se abordan los fundamentos del muestreo, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: probabilístico y no probabilístico. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el muestreo aleatorio simple, el muestreo multietápico, el muestreo estratificado y el muestreo por conglomerados. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el muestreo por conveniencia, muestreo por cuotas o bola de nieve. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.",
-    "crumbs": [
-      "Estadística descriptiva"
-    ]
-  },
-  {
-    "objectID": "C01_cover.html#estadística-descriptiva-para-una-variable",
-    "href": "C01_cover.html#estadística-descriptiva-para-una-variable",
-    "title": "Estadística descriptiva",
-    "section": "Estadística descriptiva para una variable",
-    "text": "Estadística descriptiva para una variable\nLa estadística descriptiva para una variable se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las medidas de tendencia central como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las medidas de dispersión como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de gráficos como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.",
-    "crumbs": [
-      "Estadística descriptiva"
-    ]
-  },
-  {
-    "objectID": "C01_cover.html#estadística-descriptiva-para-dos-o-más-variables",
-    "href": "C01_cover.html#estadística-descriptiva-para-dos-o-más-variables",
-    "title": "Estadística descriptiva",
-    "section": "Estadística descriptiva para dos o más variables",
-    "text": "Estadística descriptiva para dos o más variables\nEste tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las tablas de contingencia para estudiar la relación entre dos variables cualitativas, así como las medidas de asociación como el coeficiente de correlación de Pearson y Spearman para variables cuantitativas. También se discuten las gráficas de dispersión para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una recta de regresión para predecir una variable en función de otra. Además, se examinan los coeficientes de correlación parcial y análisis multivariado para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.",
-    "crumbs": [
-      "Estadística descriptiva"
-    ]
-  },
-  {
     "objectID": "C01_prelim.html",
     "href": "C01_prelim.html",
     "title": "1  Preliminares",
@@ -498,56 +458,6 @@
     ]
   },
   {
-    "objectID": "C02_cover.html",
-    "href": "C02_cover.html",
-    "title": "Estadística inferencial",
-    "section": "",
-    "text": "Contenido\nEn esta primera sección se examina la estadística descriptiva. El contenido ha sido seleccionado cuidadosamente con el fin de agregar valor a los análisis cuantitativos que se proponen al interior de las investigaciones en ciencias sociales.",
-    "crumbs": [
-      "Estadística inferencial"
-    ]
-  },
-  {
-    "objectID": "C02_cover.html#introducción",
-    "href": "C02_cover.html#introducción",
-    "title": "Estadística inferencial",
-    "section": "Introducción",
-    "text": "Introducción\nEste primer tema introduce a los estudiantes en los conceptos básicos de la estadística inferencial..",
-    "crumbs": [
-      "Estadística inferencial"
-    ]
-  },
-  {
-    "objectID": "C02_cover.html#intervalos-de-confianza",
-    "href": "C02_cover.html#intervalos-de-confianza",
-    "title": "Estadística inferencial",
-    "section": "Intervalos de confianza",
-    "text": "Intervalos de confianza",
-    "crumbs": [
-      "Estadística inferencial"
-    ]
-  },
-  {
-    "objectID": "C02_cover.html#pruebas-de-hipótesis-paramétricas",
-    "href": "C02_cover.html#pruebas-de-hipótesis-paramétricas",
-    "title": "Estadística inferencial",
-    "section": "Pruebas de hipótesis paramétricas",
-    "text": "Pruebas de hipótesis paramétricas",
-    "crumbs": [
-      "Estadística inferencial"
-    ]
-  },
-  {
-    "objectID": "C02_cover.html#pruebas-de-hipótesis-no-paramétricas",
-    "href": "C02_cover.html#pruebas-de-hipótesis-no-paramétricas",
-    "title": "Estadística inferencial",
-    "section": "Pruebas de hipótesis no paramétricas",
-    "text": "Pruebas de hipótesis no paramétricas",
-    "crumbs": [
-      "Estadística inferencial"
-    ]
-  },
-  {
     "objectID": "C02_episteme.html",
     "href": "C02_episteme.html",
     "title": "7  Inferencia estadística",
@@ -658,22 +568,11 @@
     ]
   },
   {
-    "objectID": "C02_muestreo.html#actividad-investiguemos",
-    "href": "C02_muestreo.html#actividad-investiguemos",
-    "title": "8  Muestreo",
-    "section": "10.1 Actividad: Investiguemos",
-    "text": "10.1 Actividad: Investiguemos\n¿Qué es un cisne negro y qué historia esconde?",
-    "crumbs": [
-      "Estadística inferencial",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
-    ]
-  },
-  {
     "objectID": "C02_muestreo.html#conceptos-de-muestreo",
     "href": "C02_muestreo.html#conceptos-de-muestreo",
     "title": "8  Muestreo",
-    "section": "10.2 Conceptos de muestreo",
-    "text": "10.2 Conceptos de muestreo\n\nMarco\nDiseño\nError\nTamaño",
+    "section": "10.1 Conceptos de muestreo",
+    "text": "10.1 Conceptos de muestreo\n\nMarco\nDiseño\nError\nTamaño",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -683,8 +582,8 @@
     "objectID": "C02_muestreo.html#marco-muestral",
     "href": "C02_muestreo.html#marco-muestral",
     "title": "8  Muestreo",
-    "section": "10.3 Marco muestral",
-    "text": "10.3 Marco muestral\nEl marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.\nEste marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.",
+    "section": "10.2 Marco muestral",
+    "text": "10.2 Marco muestral\nEl marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.\nEste marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -694,8 +593,8 @@
     "objectID": "C02_muestreo.html#diseño-muestral",
     "href": "C02_muestreo.html#diseño-muestral",
     "title": "8  Muestreo",
-    "section": "10.4 Diseño muestral",
-    "text": "10.4 Diseño muestral\nEl diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.\nLa elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.\nEs el diseño muestral lo que le da representatividad a la muestra.",
+    "section": "10.3 Diseño muestral",
+    "text": "10.3 Diseño muestral\nEl diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.\nLa elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.\nEs el diseño muestral lo que le da representatividad a la muestra.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -705,8 +604,8 @@
     "objectID": "C02_muestreo.html#error-muestral",
     "href": "C02_muestreo.html#error-muestral",
     "title": "8  Muestreo",
-    "section": "10.5 Error muestral",
-    "text": "10.5 Error muestral\nEl error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.\nEl tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.",
+    "section": "10.4 Error muestral",
+    "text": "10.4 Error muestral\nEl error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.\nEl tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -716,8 +615,8 @@
     "objectID": "C02_muestreo.html#tamaño-muestral",
     "href": "C02_muestreo.html#tamaño-muestral",
     "title": "8  Muestreo",
-    "section": "10.6 Tamaño muestral",
-    "text": "10.6 Tamaño muestral\nEl tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.\nLa determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.\nEs el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.",
+    "section": "10.5 Tamaño muestral",
+    "text": "10.5 Tamaño muestral\nEl tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.\nLa determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.\nEs el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -727,8 +626,8 @@
     "objectID": "C02_muestreo.html#distintos-abordajes-del-muestreo",
     "href": "C02_muestreo.html#distintos-abordajes-del-muestreo",
     "title": "8  Muestreo",
-    "section": "10.7 Distintos abordajes del muestreo",
-    "text": "10.7 Distintos abordajes del muestreo\n\n10.7.1 Muestreo no probabilístico\nNo todos los elementos tienen probabilidad de ser seleccionados\n\nLa muestra no es representativa (rigurosamente)\nNo es posible calcular el error muestral\nRequiere menos recursos\n\n\n\n10.7.2 Muestreo probabilístico\nTodos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.",
+    "section": "10.6 Distintos abordajes del muestreo",
+    "text": "10.6 Distintos abordajes del muestreo\n\n10.6.1 Muestreo no probabilístico\nNo todos los elementos tienen probabilidad de ser seleccionados\n\nLa muestra no es representativa (rigurosamente)\nNo es posible calcular el error muestral\nRequiere menos recursos\n\n\n\n10.6.2 Muestreo probabilístico\nTodos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Muestreo</span>"
@@ -1212,18 +1111,29 @@
     "href": "C02_hipotesis.html",
     "title": "11  Hipótesis",
     "section": "",
-    "text": "11.1 La hipótesis en el contexto del desarrollo científico\nEpistemológicamente, una hipótesis es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que las hipótesis funcionan como un puente entre la teoría y los datos empíricos. Una hipótesis permite a los investigadores establecer un marco para la investigación, formulando preguntas que pueden ser respondidas mediante métodos científicos. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.\nLas pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en datos. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión.",
+    "text": "11.1 La hipótesis en el contexto del desarrollo científico\nEpistemológicamente, una hipótesis es una proposición que establece una relación entre variables, formulada para ser sometida a prueba a través de la observación y la experimentación. Este proceso es esencial en el desarrollo científico, ya que proporciona un puente entre la teoría y los datos empíricos, permitiendo transformar ideas abstractas en afirmaciones que pueden ser verificadas o refutadas. La capacidad de someter hipótesis a pruebas rigurosas y sistemáticas es lo que distingue al conocimiento científico de otras formas de conocimiento. Al plantear una hipótesis, el investigador no solo está formulando una afirmación, sino que también está invitando a la crítica y la validación a través de experimentos y observaciones.\nLas pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en evidencias. Este enfoque no solo fomenta la acumulación de conocimiento, sino que también contribuye a la evolución de teorías dentro de un campo determinado. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico, manteniendo siempre un carácter provisional y sujeto a revisión. En términos metodológicos, este procedimiento implica formular una hipótesis nula (H₀), que representa una afirmación inicial de no asociación o ausencia de efecto, y una hipótesis alternativa (Hₐ), que propone una relación o efecto específico entre las variables. Estas hipótesis son sometidas a un análisis estadístico que permite determinar si los datos observados son consistentes con la hipótesis nula o si proporcionan evidencia suficiente para apoyar la hipótesis alternativa.\nEn este sentido, es posible ver los modelos científicos como conjuntos lógicos y coherentes de hipótesis. Por ejemplo, el modelo del universo de Ptolomeo, desarrollado en la antigüedad, proponía que los cuerpos celestes giraban en esferas perfectas alrededor de la Tierra. Este modelo contenía implícitamente numerosas hipótesis sobre el movimiento y la disposición de los astros que, con el tiempo, fueron refutadas por observaciones empíricas y reemplazadas por el modelo heliocéntrico de Copérnico.\nOtros modelos más cercanos a las ciencias sociales incluyen el modelo histórico-materialista de Karl Marx, que se basa en la hipótesis de que los cambios sociales y económicos son impulsados por las contradicciones inherentes a los modos de producción. Este modelo se ha sometido a pruebas empíricas en diferentes contextos históricos, como los análisis de la transición del feudalismo al capitalismo. De manera similar, el modelo de Max Weber sobre la acción social postula que las acciones humanas están motivadas por un conjunto de significados subjetivos que pueden ser interpretados en función de diferentes tipos de racionalidad, como la racionalidad instrumental o valorativa. Este modelo ha sido evaluado empíricamente en investigaciones sociológicas que analizan fenómenos como el comportamiento económico o la ética religiosa.\nCada uno de estos modelos tiene sus hipótesis, que han sido comprobadas mediante estudios con información empírica, recopilada a través de métodos cuantitativos, cualitativos o mixtos. Por ejemplo, el análisis de encuestas, los estudios históricos y los experimentos sociales han permitido evaluar la aplicabilidad de estas hipótesis en diferentes contextos.\nEn consecuencia, las hipótesis no solo son elementos centrales en la construcción y validación de teorías científicas, sino que también sirven como herramientas para estructurar la investigación empírica. La subjetividad del conocimiento se minimiza cuando las hipótesis son verificables independientemente del investigador. Esta propiedad en el ámbito científico se denomina reproducibilidad.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
     ]
   },
   {
-    "objectID": "C02_hipotesis.html#la-hipótesis-en-el-contexto-del-desarrollo-científico",
-    "href": "C02_hipotesis.html#la-hipótesis-en-el-contexto-del-desarrollo-científico",
+    "objectID": "C02_hipotesis.html#qué-es-la-reproducibilidad-y-por-qué-es-importante",
+    "href": "C02_hipotesis.html#qué-es-la-reproducibilidad-y-por-qué-es-importante",
     "title": "11  Hipótesis",
-    "section": "",
-    "text": "11.1.1 Qué es la reproducibilidad y por qué es importante\nLa reproducibilidad es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.\n\nImportancia: La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado.\n\n\n\n11.1.2 Reproductibilidad\nLa crisis actual de la reproducibilidad en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados\nen diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos.\n\nLos escándalos en la ciencia: Casos de fraude, mala conducta científica y prácticas poco éticas han salido a la luz, socavando la confianza en la investigación. Esto ha llevado a un llamado a la transparencia en los métodos y datos utilizados, así como a la implementación de mejores prácticas para asegurar la reproducibilidad.\n\n\n# arreglar todo esto\n\n\n\n11.1.3 Probabilidad\nEs posible ver la probabilidad como el estudio del comportamiento de los datos generados a partir de una distribución conocida.\n\n\n11.1.4 Estadística\nAnálogamente, la estadística es el estudio del comportamiento de las distribuciones asociadas a un conjunto de datos dado.\n\n\n11.1.5 Modelo estadístico\nUn modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.\n\n\n11.1.6 Objetivo\nEstablecer si existe suficiente evidencia en una muestra aleatoria para rechazar o no rechazar la hipótesis nula a nivel poblacional. El objetivo es determinar cuál hipótesis explica mejor los datos observados en la población.",
+    "section": "11.2 Qué es la reproducibilidad y por qué es importante",
+    "text": "11.2 Qué es la reproducibilidad y por qué es importante\nLa reproducibilidad es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.\nLa reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad, los hallazgos pueden ser considerados anecdóticos y su impacto en la ciencia puede ser severamente cuestionado. No obstante, no es una práctica común y varios medios han reportado una crisis en la reproducibilidad.\nLa crisis actual de la reproducibilidad en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos. Por ejemplo, un artículo de la revista Nature encontro que tan solo para una treintena de 100 experimentos de psicología publicados en las mejores revistas científicas del campo se habían podido reproducir sus resultados. También es posible encontrar esta controversia en ciencias de la salud, económicas y otras disciplinas",
+    "crumbs": [
+      "Estadística inferencial",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
+    ]
+  },
+  {
+    "objectID": "C02_hipotesis.html#objetivo",
+    "href": "C02_hipotesis.html#objetivo",
+    "title": "11  Hipótesis",
+    "section": "12.1 Objetivo",
+    "text": "12.1 Objetivo\nEl objetivo de una prueba de hipótesis es stablecer si existe suficiente evidencia en una muestra aleatoria para rechazar o no rechazar la hipótesis nula a nivel poblacional. Esto busca determinar cuál hipótesis explica mejor los datos observados en la población.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1233,8 +1143,8 @@
     "objectID": "C02_hipotesis.html#arquitectura-de-las-pruebas-de-hipótesis",
     "href": "C02_hipotesis.html#arquitectura-de-las-pruebas-de-hipótesis",
     "title": "11  Hipótesis",
-    "section": "11.2 Arquitectura de las pruebas de hipótesis",
-    "text": "11.2 Arquitectura de las pruebas de hipótesis\nEn el ámbito de la estadística y la investigación científica, la comprensión y aplicación de las pruebas de hipótesis es fundamental para validar teorías y conclusiones basadas en datos. Estas pruebas se estructuran de manera que permiten a los investigadores tomar decisiones informadas acerca de la relación entre variables y la existencia de efectos en estudios empíricos. Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la tetera de Russell, la cual ejemplifica la importancia de la carga de la prueba y su relación con la validación de afirmaciones complejas.\n\n11.2.1 La tetera de Russell y la carga de la prueba\nBertrand Russell, filósofo y matemático británico, introdujo la analogía de una pequeña tetera de porcelana que orbita el Sol entre la Tierra y Marte, tan diminuta que ningún telescopio podría detectarla. La premisa de Russell es que, si alguien afirmara la existencia de esta tetera, la responsabilidad de demostrar su existencia recaería sobre esa persona y no sobre los escépticos, quienes no tendrían que probar la inexistencia de la misma. Este argumento sirve para destacar un principio esencial en la lógica y la ciencia: la carga de la prueba recae en quienes hacen afirmaciones poco usuales.\nRussell empleó esta metáfora en el contexto de la religión, pero su aplicación es igualmente poderosa en la ciencia y la estadística. En el campo de las pruebas de hipótesis, se establece que la evidencia es la herramienta clave para sostener o rechazar afirmaciones. Esta carga de la prueba se traduce en un proceso metódico y riguroso que permite a los investigadores evaluar si los datos apoyan una hipótesis específica.\n\n\n11.2.2 La arquitectura fundamental de una prueba de hipótesis\nEn estadística, la arquitectura de las pruebas de hipótesis se sostiene en dos componentes principales: la hipótesis nula (H₀) y la hipótesis alternativa (H₁).\n\nHipótesis nula (H₀): Es la suposición inicial que niega la existencia de un efecto o relación en la población de estudio. Es un punto de partida que establece que cualquier efecto observado es producto de la variabilidad natural o de un azar inherente. La hipótesis nula se formula de manera que, para rechazarla, se debe contar con evidencia suficiente que contradiga su planteamiento. No obstante, debido a su enunciado, su verificación resulta muy costosa.\nHipótesis alternativa (H₁): Esta hipótesis propone la existencia de un efecto o relación y es la contraparte de la hipótesis nula. Si los datos recolectados ofrecen pruebas suficientes, se puede rechazar la hipótesis nula en favor de la hipótesis alternativa.\n\nEste enfoque dual asegura que los investigadores se acerquen al análisis de manera objetiva, comenzando con la suposición de que no hay un efecto y buscando evidencia que justifique su rechazo.\n\n\n\n\n\n\nTip\n\n\n\n\n# Mejorar el ejemplo, lo demostrable y lo indemostrable\n\nEjemplo aplicado a las ciencias sociales: Considere el siguiente problema de investigación: ¿Los videojuegos violentos causan comportamientos violentos?. La prueba de hipótesis en este caso se estructuraría de la siguiente manera:\n\nHipótesis nula (H₀): Los videojuegos violentos no causan un aumento en los comportamientos violentos.\nHipótesis alternativa (H₁): Los videojuegos violentos causan un aumento en los comportamientos violentos.\n\n\n\nEl propósito de la prueba de hipótesis es analizar los datos recolectados en estudios experimentales u observacionales para determinar si hay suficiente evidencia empírica para rechazar la hipótesis nula y aceptar la hipótesis alternativa. Aquí, la prueba recae en la demostración de H₁: si los datos muestran una relación estadísticamente significativa entre la exposición a videojuegos violentos y comportamientos agresivos, entonces la hipótesis nula puede ser rechazada razonablemente.\n\n\n11.2.3 Reflexiones sobre la evidencia y la carga de la prueba\nLa analogía de la tetera de Russell es particularmente relevante al considerar la evidencia necesaria para sostener o rechazar una hipótesis. Así como Russell enfatizaba que es quien afirma la existencia de la tetera quien debe probar su existencia, en las pruebas de hipótesis, los investigadores deben demostrar que los datos apoyan la hipótesis alternativa y no asumir la verdad de H₁ sin evidencia adecuada. De lo contrario, el rigor científico y la validez de las conclusiones estarían en entredicho.\nEste enfoque protege a la ciencia de afirmaciones infundadas y promueve una práctica investigativa basada en pruebas y datos sólidos. Al entender la arquitectura de las pruebas de hipótesis, los investigadores pueden abordar preguntas complejas con un marco metodológico que garantiza que sus conclusiones estén respaldadas por evidencia empírica y análisis crítico.",
+    "section": "12.2 Arquitectura de las pruebas de hipótesis",
+    "text": "12.2 Arquitectura de las pruebas de hipótesis\nEn el ámbito de la estadística y la investigación científica, la comprensión y aplicación de las pruebas de hipótesis es fundamental para validar teorías y conclusiones basadas en datos. Estas pruebas se estructuran de manera que permiten a los investigadores tomar decisiones informadas acerca de la relación entre variables y la existencia de efectos en estudios empíricos. Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la tetera de Russell, la cual ejemplifica la importancia de la carga de la prueba y su relación con la validación de afirmaciones complejas.\nBertrand Russell, filósofo y matemático británico, introdujo la analogía de una pequeña tetera de porcelana que orbita el Sol entre la Tierra y Marte, tan diminuta que ningún telescopio podría detectarla. La premisa de Russell es que, si alguien afirmara la existencia de esta tetera, la responsabilidad de demostrar su existencia recaería sobre esa persona y no sobre los escépticos, quienes no tendrían que probar la inexistencia de la misma. Este argumento sirve para destacar un principio esencial en la lógica y la ciencia: la carga de la prueba recae en quienes hacen afirmaciones poco usuales.\nRussell empleó esta metáfora en el contexto de la religión, pero su aplicación es igualmente poderosa en la ciencia y la estadística. En el campo de las pruebas de hipótesis, se establece que la evidencia es la herramienta clave para sostener o rechazar afirmaciones. Esta carga de la prueba se traduce en un proceso metódico y riguroso que permite a los investigadores evaluar si los datos apoyan una hipótesis específica.\nEn estadística, la arquitectura de las pruebas de hipótesis propone la conformación en cada caso de dos hipótesis principales: la hipótesis nula (H₀) y la hipótesis alternativa (H₁).\n\nHipótesis nula (H₀): Es la suposición inicial que niega la existencia de un efecto o relación en la población de estudio. Es un punto de partida que establece que cualquier efecto observado es producto de la variabilidad natural o de un azar inherente. La hipótesis nula se formula de manera que, para rechazarla, se debe contar con evidencia suficiente que contradiga su planteamiento. No obstante, debido a su enunciado, su verificación resulta muy costosa.\nHipótesis alternativa (H₁): Esta hipótesis propone la existencia de un efecto o relación y es la contraparte de la hipótesis nula. Si los datos recolectados ofrecen pruebas suficientes, se puede rechazar la hipótesis nula en favor de la hipótesis alternativa.\n\nEste enfoque dual asegura que los investigadores se acerquen al análisis de manera objetiva, comenzando con la suposición de que no hay un efecto y buscando evidencia que justifique su rechazo.\n\n\n\n\n\n\nTip\n\n\n\nEjemplo aplicado a las ciencias sociales: Considere el siguiente problema de investigación: ¿Los videojuegos violentos causan comportamientos violentos?. La prueba de hipótesis en este caso se separa en la existencia de la relación causal mencionada frente a su inexistencia. Debido a que es imposible demostrar la inexistencia de la relación, el sistema de hipótesis se estructuraría de la siguiente manera:\n\nHipótesis nula (H₀): Los videojuegos violentos no causan un aumento en los comportamientos violentos.\nHipótesis alternativa (H₁): Los videojuegos violentos causan un aumento en los comportamientos violentos.\n\n\n\nEl propósito de la prueba de hipótesis es analizar los datos recolectados en estudios experimentales u observacionales para determinar si hay suficiente evidencia empírica para rechazar la hipótesis nula y aceptar la hipótesis alternativa. Aquí, la prueba recae en la demostración de H₁: si los datos muestran una relación estadísticamente significativa entre la exposición a videojuegos violentos y comportamientos agresivos, entonces la hipótesis nula puede ser rechazada razonablemente.\n\n12.2.1 Reflexiones sobre la evidencia y la carga de la prueba\nLa analogía de la tetera de Russell es particularmente relevante al considerar la evidencia necesaria para sostener o rechazar una hipótesis. Así como Russell enfatizaba que es quien afirma la existencia de la tetera quien debe probar su existencia, en las pruebas de hipótesis, los investigadores deben demostrar que los datos apoyan la hipótesis alternativa y no asumir la verdad de H₁ sin evidencia adecuada. De lo contrario, el rigor científico y la validez de las conclusiones estarían en entredicho.\nEste enfoque protege a la ciencia de afirmaciones infundadas y promueve una práctica investigativa basada en pruebas y datos sólidos. Al entender la arquitectura de las pruebas de hipótesis, los investigadores pueden abordar preguntas complejas con un marco metodológico que garantiza que sus conclusiones estén respaldadas por evidencia empírica y análisis crítico.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1244,19 +1154,8 @@
     "objectID": "C02_hipotesis.html#terminología",
     "href": "C02_hipotesis.html#terminología",
     "title": "11  Hipótesis",
-    "section": "11.3 Terminología",
-    "text": "11.3 Terminología\nLa comprensión profunda de la terminología asociada con las pruebas de hipótesis es esencial para el análisis y la interpretación de datos en la estadística. A continuación, se presentan definiciones y explicaciones detalladas de los conceptos clave que constituyen la base de cualquier prueba de hipótesis.\n\n11.3.1 Hipótesis estadística\nUna hipótesis estadística es una afirmación sobre un parámetro poblacional que se somete a prueba mediante datos muestrales. Este tipo de hipótesis se formula con el fin de validar o refutar una suposición sobre la población a partir de la evidencia obtenida en la muestra. Dependiendo de la naturaleza de la afirmación, una hipótesis puede clasificarse en:\n\nHipótesis simple: Es aquella que especifica un valor único y preciso para el parámetro de la población. Por ejemplo, si se formula la hipótesis \\(H_0: \\mu = \\mu_0\\), se está afirmando que la media poblacional es exactamente igual a un valor conocido \\(\\mu_0\\).\nHipótesis compuesta: Esta hipótesis especifica un rango de valores para el parámetro poblacional en lugar de un único valor. Ejemplos de hipótesis compuestas incluyen \\(H: \\mu \\geq \\mu_0\\), \\(H: \\mu \\leq \\mu_0\\), \\(H: \\mu &gt; \\mu_0\\), \\(H: \\mu &lt; \\mu_0\\), y \\(H: \\mu \\neq \\mu_0\\).\n\nEn estas hipótesis, el valor \\(\\mu_0\\) se conoce como el valor hipotético, que es el punto de referencia contra el cual se compara la estimación muestral para determinar si la hipótesis debe ser aceptada o rechazada.\n\n\n11.3.2 Sistema de hipótesis\nEl sistema de hipótesis es el conjunto de hipótesis contrapuestas que se comparan en el proceso de la prueba de hipótesis. Este sistema incluye dos componentes principales:\n\nHipótesis nula (\\(H_0\\)): Es la hipótesis de partida que se presume cierta y que no se rechaza a menos que los datos muestren una evidencia fuerte en su contra. La hipótesis nula se formula generalmente como una afirmación de igualdad o de ausencia de efecto. Ejemplos de hipótesis nulas pueden ser:\n\n\\(H_0: \\mu \\leq \\mu_0\\), que implica que la media poblacional es menor o igual al valor hipotético.\n\\(H_0: \\mu \\geq \\mu_0\\), que sugiere que la media es mayor o igual al valor hipotético.\n\\(H_0: \\mu = \\mu_0\\), que postula que la media es exactamente igual al valor hipotético.\n\nHipótesis alternativa (\\(H_1\\)): Representa la afirmación que se acepta si los datos muestrales proporcionan suficiente evidencia en contra de \\(H_0\\). Es la hipótesis que postula la existencia de un efecto, una diferencia o una relación significativa. Algunos ejemplos incluyen:\n\n\\(H_1: \\mu &gt; \\mu_0\\), que sostiene que la media poblacional es mayor que el valor hipotético.\n\\(H_1: \\mu &lt; \\mu_0\\), que indica que la media es menor que el valor hipotético.\n\\(H_1: \\mu \\neq \\mu_0\\), que señala que la media es diferente al valor hipotético, sin especificar si es mayor o menor.\n\n\nEste sistema de hipótesis es el núcleo de la prueba estadística y establece un marco para decidir si los datos muestrales respaldan o refutan la hipótesis nula.\n\n\n11.3.3 Tipos de error\nEn el proceso de tomar decisiones basadas en pruebas de hipótesis, es posible cometer errores. Estos errores se clasifican en dos tipos principales:\n\nError tipo I: Ocurre cuando se rechaza la hipótesis nula siendo esta verdadera. Es decir, se concluye incorrectamente que hay un efecto o diferencia cuando en realidad no lo hay. La probabilidad de cometer un error tipo I se denota por \\(\\alpha\\), que también se conoce como el nivel de significancia de la prueba. Este es un parámetro que se establece de antemano y refleja el nivel de tolerancia al riesgo de rechazar una hipótesis verdadera.\nError tipo II: Se produce cuando no se rechaza la hipótesis nula cuando esta es falsa. En otras palabras, se falla en detectar un efecto o diferencia que realmente existe. La probabilidad de cometer un error tipo II se denota por \\(\\beta\\). El complemento de \\(\\beta\\) se llama potencia de la prueba y representa la probabilidad de rechazar correctamente una hipótesis nula falsa.\n\nLa relación entre los tipos de error y la potencia de la prueba es fundamental para comprender la eficacia y precisión de una prueba estadística. Un investigador debe equilibrar estos errores al diseñar una prueba, ya que reducir la probabilidad de un error tipo I puede incrementar la probabilidad de un error tipo II, y viceversa.\n\n\n11.3.4 Nivel de significancia\nEl nivel de significancia (\\(\\alpha\\)) es un umbral predefinido que establece la probabilidad máxima aceptable de cometer un error tipo I. Comúnmente, los niveles de significancia utilizados son 0.05, 0.01, o 0.10. Este valor define el criterio para decidir si los resultados de una prueba son estadísticamente significativos. Si el valor p obtenido de la prueba es menor o igual a \\(\\alpha\\), se rechaza la hipótesis nula en favor de la hipótesis alternativa, indicando que los resultados observados son lo suficientemente raros como para no atribuirse al azar.\nLa elección del nivel de significancia depende del contexto y las consecuencias de cometer un error tipo I. En estudios donde el costo de un error tipo I es alto, se elige un \\(\\alpha\\) más bajo (e.g., 0.01). En otros casos, donde la tolerancia al riesgo es mayor, se podría optar por un \\(\\alpha\\) más alto (e.g., 0.10).\n\n\n11.3.5 Integrando los conceptos en la práctica\nLa correcta formulación de hipótesis y la comprensión de los tipos de error y del nivel de significancia permiten a los investigadores tomar decisiones informadas basadas en los datos muestrales. En un estudio, el análisis de hipótesis proporciona un camino claro para evaluar si una afirmación sobre la población es plausible o si debe ser rechazada en función de la evidencia empírica. Este enfoque estructurado es la base para el análisis crítico y la validación de resultados en investigación científica y en aplicaciones prácticas en diversos campos.",
-    "crumbs": [
-      "Estadística inferencial",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
-    ]
-  },
-  {
-    "objectID": "C02_hipotesis.html#aquí-vamos",
-    "href": "C02_hipotesis.html#aquí-vamos",
-    "title": "11  Hipótesis",
-    "section": "11.4 AQUÍ VAMOS",
-    "text": "11.4 AQUÍ VAMOS",
+    "section": "12.3 Terminología",
+    "text": "12.3 Terminología\nLa comprensión profunda de la terminología asociada con las pruebas de hipótesis es esencial para el análisis y la interpretación de datos en la estadística. A continuación, se presentan definiciones y explicaciones detalladas de los conceptos clave que constituyen la base de cualquier prueba de hipótesis.\n\n12.3.1 Hipótesis estadística\nUna hipótesis estadística es una afirmación sobre un parámetro poblacional que se somete a prueba mediante datos muestrales. Este tipo de hipótesis se formula con el fin de validar o refutar una suposición sobre la población a partir de la evidencia obtenida en la muestra. Dependiendo de la naturaleza de la afirmación, una hipótesis puede clasificarse en:\n\nHipótesis simple: Es aquella que especifica un valor único y preciso para el parámetro de la población. Por ejemplo, si se formula la hipótesis \\(H_0: \\mu = \\mu_0\\), se está afirmando que la media poblacional es exactamente igual a un valor conocido \\(\\mu_0\\).\nHipótesis compuesta: Esta hipótesis especifica un rango de valores para el parámetro poblacional en lugar de un único valor. Ejemplos de hipótesis compuestas incluyen \\(H: \\mu \\geq \\mu_0\\), \\(H: \\mu \\leq \\mu_0\\), \\(H: \\mu &gt; \\mu_0\\), \\(H: \\mu &lt; \\mu_0\\), y \\(H: \\mu \\neq \\mu_0\\).\n\nEn estas hipótesis, el valor \\(\\mu_0\\) se conoce como el valor hipotético, que es el punto de referencia contra el cual se compara la estimación muestral para determinar si la hipótesis debe ser aceptada o rechazada.\n\n\n12.3.2 Sistema de hipótesis\nEl sistema de hipótesis es el conjunto de hipótesis contrapuestas que se comparan en el proceso de la prueba de hipótesis. Este sistema incluye dos componentes principales:\n\nHipótesis nula (\\(H_0\\)): Es la hipótesis de partida que se presume cierta y que no se rechaza a menos que los datos muestren una evidencia fuerte en su contra. La hipótesis nula se formula generalmente como una afirmación de igualdad o de ausencia de efecto. Ejemplos de hipótesis nulas pueden ser:\n\n\\(H_0: \\mu \\leq \\mu_0\\), que implica que la media poblacional es menor o igual al valor hipotético.\n\\(H_0: \\mu \\geq \\mu_0\\), que sugiere que la media es mayor o igual al valor hipotético.\n\\(H_0: \\mu = \\mu_0\\), que postula que la media es exactamente igual al valor hipotético.\n\nHipótesis alternativa (\\(H_1\\)): Representa la afirmación que se acepta si los datos muestrales proporcionan suficiente evidencia en contra de \\(H_0\\). Es la hipótesis que postula la existencia de un efecto, una diferencia o una relación significativa. Algunos ejemplos incluyen:\n\n\\(H_1: \\mu &gt; \\mu_0\\), que sostiene que la media poblacional es mayor que el valor hipotético.\n\\(H_1: \\mu &lt; \\mu_0\\), que indica que la media es menor que el valor hipotético.\n\\(H_1: \\mu \\neq \\mu_0\\), que señala que la media es diferente al valor hipotético, sin especificar si es mayor o menor.\n\n\nEste sistema de hipótesis es el núcleo de la prueba estadística y establece un marco para decidir si los datos muestrales respaldan o refutan la hipótesis nula.\n\n\n12.3.3 Tipos de error\nEn el proceso de tomar decisiones basadas en pruebas de hipótesis, es posible cometer errores. Estos errores se clasifican en dos tipos principales:\n\nError tipo I: Ocurre cuando se rechaza la hipótesis nula siendo esta verdadera. Es decir, se concluye incorrectamente que hay un efecto o diferencia cuando en realidad no lo hay. La probabilidad de cometer un error tipo I se denota por \\(\\alpha\\), que también se conoce como el nivel de significancia de la prueba. Este es un parámetro que se establece de antemano y refleja el nivel de tolerancia al riesgo de rechazar una hipótesis verdadera.\nError tipo II: Se produce cuando no se rechaza la hipótesis nula cuando esta es falsa. En otras palabras, se falla en detectar un efecto o diferencia que realmente existe. La probabilidad de cometer un error tipo II se denota por \\(\\beta\\). El complemento de \\(\\beta\\) se llama potencia de la prueba y representa la probabilidad de rechazar correctamente una hipótesis nula falsa.\n\nLa relación entre los tipos de error y la potencia de la prueba es fundamental para comprender la eficacia y precisión de una prueba estadística. Un investigador debe equilibrar estos errores al diseñar una prueba, ya que reducir la probabilidad de un error tipo I puede incrementar la probabilidad de un error tipo II, y viceversa.\n\n\n12.3.4 effect sizes\n\n\n12.3.5 Nivel de significancia\nEl nivel de significancia (\\(\\alpha\\)) es un umbral predefinido que establece la probabilidad máxima aceptable de cometer un error tipo I. Comúnmente, los niveles de significancia utilizados son 0.05, 0.01, o 0.10. Este valor define el criterio para decidir si los resultados de una prueba son estadísticamente significativos. Si el valor p obtenido de la prueba es menor o igual a \\(\\alpha\\), se rechaza la hipótesis nula en favor de la hipótesis alternativa, indicando que los resultados observados son lo suficientemente raros como para no atribuirse al azar.\nLa elección del nivel de significancia depende del contexto y las consecuencias de cometer un error tipo I. En estudios donde el costo de un error tipo I es alto, se elige un \\(\\alpha\\) más bajo (e.g., 0.01). En otros casos, donde la tolerancia al riesgo es mayor, se podría optar por un \\(\\alpha\\) más alto (e.g., 0.10).\n\n\n12.3.6 Integrando los conceptos en la práctica\nLa correcta formulación de hipótesis y la comprensión de los tipos de error y del nivel de significancia permiten a los investigadores tomar decisiones informadas basadas en los datos muestrales. En un estudio, el análisis de hipótesis proporciona un camino claro para evaluar si una afirmación sobre la población es plausible o si debe ser rechazada en función de la evidencia empírica. Este enfoque estructurado es la base para el análisis crítico y la validación de resultados en investigación científica y en aplicaciones prácticas en diversos campos.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1266,8 +1165,8 @@
     "objectID": "C02_hipotesis.html#tipos-de-error-1",
     "href": "C02_hipotesis.html#tipos-de-error-1",
     "title": "11  Hipótesis",
-    "section": "11.5 Tipos de error",
-    "text": "11.5 Tipos de error\nEn una prueba de hipótesis, pueden ocurrir dos tipos de errores.\n\nerror tipo 1: Rechazar la hipótesis nula cuando esta es verdadera. La probabilidad de cometer este error es el nivel de significancia \\(\\alpha\\).\nerror tipo 2: No rechazar la hipótesis nula cuando esta es falsa. La probabilidad de cometer este error se denota como \\(\\beta\\).",
+    "section": "12.4 Tipos de error",
+    "text": "12.4 Tipos de error\nEn una prueba de hipótesis, pueden ocurrir dos tipos de errores.\n\nerror tipo 1: Rechazar la hipótesis nula cuando esta es verdadera. La probabilidad de cometer este error es el nivel de significancia \\(\\alpha\\).\nerror tipo 2: No rechazar la hipótesis nula cuando esta es falsa. La probabilidad de cometer este error se denota como \\(\\beta\\).",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1277,8 +1176,8 @@
     "objectID": "C02_hipotesis.html#tipos-de-error-2",
     "href": "C02_hipotesis.html#tipos-de-error-2",
     "title": "11  Hipótesis",
-    "section": "11.6 Tipos de error",
-    "text": "11.6 Tipos de error\nEn una prueba de hipótesis, pueden ocurrir dos tipos de errores.",
+    "section": "12.5 Tipos de error",
+    "text": "12.5 Tipos de error\nEn una prueba de hipótesis, pueden ocurrir dos tipos de errores.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1288,8 +1187,8 @@
     "objectID": "C02_hipotesis.html#nivel-de-significancia-1",
     "href": "C02_hipotesis.html#nivel-de-significancia-1",
     "title": "11  Hipótesis",
-    "section": "11.7 Nivel de significancia",
-    "text": "11.7 Nivel de significancia\nEl nivel de significancia (\\(\\alpha\\)) es la probabilidad de cometer un error tipo 1, es decir, rechazar la hipótesis nula cuando en realidad es cierta. Este nivel se establece antes de realizar la prueba y comúnmente se fija en 0.05 o 0.01.\n\n\\[\\alpha = P(\\text{error tipo 1}) = P(\\text{rechazar $H_0$}\\mid H_0)\\]",
+    "section": "12.6 Nivel de significancia",
+    "text": "12.6 Nivel de significancia\nEl nivel de significancia (\\(\\alpha\\)) es la probabilidad de cometer un error tipo 1, es decir, rechazar la hipótesis nula cuando en realidad es cierta. Este nivel se establece antes de realizar la prueba y comúnmente se fija en 0.05 o 0.01.\n\n\\[\\alpha = P(\\text{error tipo 1}) = P(\\text{rechazar $H_0$}\\mid H_0)\\]",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1299,8 +1198,8 @@
     "objectID": "C02_hipotesis.html#rechazar-la-hipótesis-nula",
     "href": "C02_hipotesis.html#rechazar-la-hipótesis-nula",
     "title": "11  Hipótesis",
-    "section": "11.8 Rechazar la hipótesis nula",
-    "text": "11.8 Rechazar la hipótesis nula\nRechazar \\(H_0\\) implica que se ha encontrado algo en la muestra tan improbable bajo la hipótesis nula, que lleva al investigador a favorecer la hipótesis alternativa \\(H_1\\). Sin embargo, siempre existe la posibilidad de cometer un error tipo 1 al hacer esta decisión.\nEn estadística, se prefiere no rechazar \\(H_0\\) erróneamente a rechazarla sin suficiente evidencia. Por esto, \\(H_0\\) se mantiene a menos que haya evidencia contundente que obligue a revocarla. Este enfoque refleja un principio conservador en la ciencia, donde se requiere una alta carga de prueba para cambiar el estado actual del conocimiento.",
+    "section": "12.7 Rechazar la hipótesis nula",
+    "text": "12.7 Rechazar la hipótesis nula\nRechazar \\(H_0\\) implica que se ha encontrado algo en la muestra tan improbable bajo la hipótesis nula, que lleva al investigador a favorecer la hipótesis alternativa \\(H_1\\). Sin embargo, siempre existe la posibilidad de cometer un error tipo 1 al hacer esta decisión.\nEn estadística, se prefiere no rechazar \\(H_0\\) erróneamente a rechazarla sin suficiente evidencia. Por esto, \\(H_0\\) se mantiene a menos que haya evidencia contundente que obligue a revocarla. Este enfoque refleja un principio conservador en la ciencia, donde se requiere una alta carga de prueba para cambiar el estado actual del conocimiento.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1310,8 +1209,8 @@
     "objectID": "C02_hipotesis.html#valor-p",
     "href": "C02_hipotesis.html#valor-p",
     "title": "11  Hipótesis",
-    "section": "11.9 Valor p",
-    "text": "11.9 Valor p\nEl valor \\(p\\) es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta.\n\nSi \\(p &lt; \\alpha\\), se rechaza \\(H_0\\), lo que sugiere que la evidencia muestral no es compatible con \\(H_0\\).\nSi \\(p \\geq \\alpha\\), no se rechaza \\(H_0\\), indicando que los datos son consistentes con \\(H_0\\).\n\nEs importante recordar que el valor \\(p\\) no mide la probabilidad de que \\(H_0\\) sea verdadera, sino la probabilidad de los datos observados bajo \\(H_0\\).",
+    "section": "12.8 Valor p",
+    "text": "12.8 Valor p\nEl valor \\(p\\) es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta.\n\nSi \\(p &lt; \\alpha\\), se rechaza \\(H_0\\), lo que sugiere que la evidencia muestral no es compatible con \\(H_0\\).\nSi \\(p \\geq \\alpha\\), no se rechaza \\(H_0\\), indicando que los datos son consistentes con \\(H_0\\).\n\nEs importante recordar que el valor \\(p\\) no mide la probabilidad de que \\(H_0\\) sea verdadera, sino la probabilidad de los datos observados bajo \\(H_0\\).",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1321,8 +1220,8 @@
     "objectID": "C02_hipotesis.html#decisión",
     "href": "C02_hipotesis.html#decisión",
     "title": "11  Hipótesis",
-    "section": "11.10 Decisión",
-    "text": "11.10 Decisión\nLa decisión en una prueba de hipótesis se basa en comparar el valor \\(p\\) con el nivel de significancia \\(\\alpha\\):\n\nSi \\(p &lt; \\alpha\\), se rechaza \\(H_0\\).\nSi \\(p \\geq \\alpha\\), no se rechaza \\(H_0\\).\n\nEsta decisión refleja si la evidencia contra \\(H_0\\) es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.",
+    "section": "12.9 Decisión",
+    "text": "12.9 Decisión\nLa decisión en una prueba de hipótesis se basa en comparar el valor \\(p\\) con el nivel de significancia \\(\\alpha\\):\n\nSi \\(p &lt; \\alpha\\), se rechaza \\(H_0\\).\nSi \\(p \\geq \\alpha\\), no se rechaza \\(H_0\\).\n\nEsta decisión refleja si la evidencia contra \\(H_0\\) es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1332,8 +1231,8 @@
     "objectID": "C02_hipotesis.html#prueba",
     "href": "C02_hipotesis.html#prueba",
     "title": "11  Hipótesis",
-    "section": "11.11 Prueba",
-    "text": "11.11 Prueba\nEl proceso para realizar una prueba de hipótesis incluye los siguientes pasos:\n\nEstablecer las hipótesis: Definir \\(H_0\\) y \\(H_1\\) basándose en el problema de investigación.\nFormular el sistema de hipótesis y seleccionar el nivel de significancia \\(\\alpha\\).\nCalcular el valor \\(p\\): Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor \\(p\\).\nTomar la decisión: Rechazar \\(H_0\\) si \\(p &lt; \\alpha\\) o no rechazar \\(H_0\\) si \\(p \\geq \\alpha\\).\nInterpretar los resultados: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar \\(H_1\\).\n\n\n11.11.1 El papel de la significancia estadística y el error\nEl proceso de las pruebas de hipótesis incluye la definición de un nivel de significancia (α), que es la probabilidad de rechazar la hipótesis nula cuando es verdadera (error tipo I). Comúnmente, se utiliza un nivel de significancia de 0.05, lo que implica que hay un 5% de probabilidad de cometer un error al rechazar H₀ incorrectamente.\nEl resultado de una prueba estadística produce un valor p, que representa la probabilidad de observar los datos obtenidos, o más extremos, bajo la suposición de que H₀ es cierta. Si el valor p es menor que el nivel de significancia, se rechaza H₀ en favor de H₁. Sin embargo, si el valor p es mayor, no se rechaza H₀, lo que sugiere que no hay suficiente evidencia para afirmar un efecto significativo.",
+    "section": "12.10 Prueba",
+    "text": "12.10 Prueba\nEl proceso para realizar una prueba de hipótesis incluye los siguientes pasos:\n\nEstablecer las hipótesis: Definir \\(H_0\\) y \\(H_1\\) basándose en el problema de investigación.\nFormular el sistema de hipótesis y seleccionar el nivel de significancia \\(\\alpha\\).\nCalcular el valor \\(p\\): Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor \\(p\\).\nTomar la decisión: Rechazar \\(H_0\\) si \\(p &lt; \\alpha\\) o no rechazar \\(H_0\\) si \\(p \\geq \\alpha\\).\nInterpretar los resultados: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar \\(H_1\\).\n\n\n12.10.1 El papel de la significancia estadística y el error\nEl proceso de las pruebas de hipótesis incluye la definición de un nivel de significancia (α), que es la probabilidad de rechazar la hipótesis nula cuando es verdadera (error tipo I). Comúnmente, se utiliza un nivel de significancia de 0.05, lo que implica que hay un 5% de probabilidad de cometer un error al rechazar H₀ incorrectamente.\nEl resultado de una prueba estadística produce un valor p, que representa la probabilidad de observar los datos obtenidos, o más extremos, bajo la suposición de que H₀ es cierta. Si el valor p es menor que el nivel de significancia, se rechaza H₀ en favor de H₁. Sin embargo, si el valor p es mayor, no se rechaza H₀, lo que sugiere que no hay suficiente evidencia para afirmar un efecto significativo.",
     "crumbs": [
       "Estadística inferencial",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hipótesis</span>"
@@ -1880,7 +1779,7 @@
     "href": "03_est-reg.html#anova-1",
     "title": "13  Estadística III",
     "section": "16.10 ANOVA",
-    "text": "16.10 ANOVA\n\n\n              Df Sum Sq Mean Sq F value Pr(&gt;F)    \nESTRATO        5  54626   10925   138.3 &lt;2e-16 ***\nResiduals   2494 196996      79                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
+    "text": "16.10 ANOVA\n\n\n              Df Sum Sq Mean Sq F value Pr(&gt;F)    \nESTRATO        5  43610    8722   112.2 &lt;2e-16 ***\nResiduals   2494 193812      78                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estadística III</span>"
     ]
@@ -1890,7 +1789,7 @@
     "href": "03_est-reg.html#test-kruskal-wallis",
     "title": "13  Estadística III",
     "section": "16.11 Test Kruskal-Wallis",
-    "text": "16.11 Test Kruskal-Wallis\nEl test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.\n\n16.11.1 Uso\nIdeal para datos ordinales o cuando la variable numérica no sigue una distribución normal.\n\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  INGLES_PUNT by ESTRATO\nKruskal-Wallis chi-squared = 321.83, df = 5, p-value &lt; 2.2e-16",
+    "text": "16.11 Test Kruskal-Wallis\nEl test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.\n\n16.11.1 Uso\nIdeal para datos ordinales o cuando la variable numérica no sigue una distribución normal.\n\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  INGLES_PUNT by ESTRATO\nKruskal-Wallis chi-squared = 258.19, df = 5, p-value &lt; 2.2e-16",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estadística III</span>"
     ]
@@ -1930,7 +1829,7 @@
     "href": "03_est-reg.html#prueba-de-chi-cuadrado",
     "title": "13  Estadística III",
     "section": "16.15 Prueba de chi cuadrado",
-    "text": "16.15 Prueba de chi cuadrado\nPrueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.\n\n16.15.1 Uso\nDetermina si hay una relación significativa entre las variables categóricas.\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO\nX-squared = 152.1, df = 20, p-value &lt; 2.2e-16",
+    "text": "16.15 Prueba de chi cuadrado\nPrueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.\n\n16.15.1 Uso\nDetermina si hay una relación significativa entre las variables categóricas.\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO\nX-squared = 151.31, df = 20, p-value &lt; 2.2e-16",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estadística III</span>"
     ]
@@ -2893,6 +2792,96 @@
     "text": "20.7 Alfa de Cronbach\n\nEl valor mínimo aceptable para el coeficiente alfa de Cronbach es 0,70; por debajo de ese valor la consistencia interna de la escala utilizada es baja. Por su parte, el valor máximo esperado es 0,90; por encima de este valor se considera que hay redundancia o duplicación.\n\nAproximación al uso del coeficiente alfa de Cronbach",
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estadística IV</span>"
+    ]
+  },
+  {
+    "objectID": "C01_cover.html",
+    "href": "C01_cover.html",
+    "title": "Estadística descriptiva",
+    "section": "",
+    "text": "Introducción\nEste primer tema introduce a los estudiantes en los conceptos básicos de la estadística, comenzando por una definición de estadística y su relevancia en el análisis de datos. Se exploran los tipos de variables, que incluyen variables cualitativas (nominales y ordinales) y cuantitativas (discretas y continuas). A continuación, se aborda la tipología de preguntas en encuestas, diferenciando entre preguntas abiertas, cerradas y escalas, y cómo estas se relacionan con la medición de las variables. También se presentan los tipos de encuestas, clasificadas según el método de recolección (presencial, telefónica, online, etc.), su estructura (estructuradas, semi-estructuradas, no estructuradas) y los contextos en los que se aplican, lo cual es fundamental para la adecuada recolección de datos en cualquier estudio estadístico.",
+    "crumbs": [
+      "Estadística descriptiva"
+    ]
+  },
+  {
+    "objectID": "C01_cover.html#muestreo",
+    "href": "C01_cover.html#muestreo",
+    "title": "Estadística descriptiva",
+    "section": "Muestreo",
+    "text": "Muestreo\nEn este tema se abordan los fundamentos del muestreo, que es el proceso de seleccionar una parte representativa de una población para inferir conclusiones sobre el total. Se explican dos grandes tipos de muestreo: probabilístico y no probabilístico. En el muestreo probabilístico, cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado, y se estudian técnicas como el muestreo aleatorio simple, el muestreo multietápico, el muestreo estratificado y el muestreo por conglomerados. En el muestreo no probabilístico, la selección no se basa en probabilidades, sino en criterios subjetivos o conveniencia, como el muestreo por conveniencia, muestreo por cuotas o bola de nieve. Este tema profundiza en las ventajas y limitaciones de cada enfoque, subrayando la importancia de la representatividad de la muestra y cómo esto afecta los resultados y su generalización.",
+    "crumbs": [
+      "Estadística descriptiva"
+    ]
+  },
+  {
+    "objectID": "C01_cover.html#estadística-descriptiva-para-una-variable",
+    "href": "C01_cover.html#estadística-descriptiva-para-una-variable",
+    "title": "Estadística descriptiva",
+    "section": "Estadística descriptiva para una variable",
+    "text": "Estadística descriptiva para una variable\nLa estadística descriptiva para una variable se centra en la síntesis y descripción de los datos mediante medidas numéricas y representaciones gráficas. Se examinan las medidas de tendencia central como la media, la mediana y la moda, que resumen el comportamiento típico de la variable. También se analizan las medidas de dispersión como el rango, la varianza y la desviación estándar, que describen la variabilidad en los datos. El tema incluye el uso de gráficos como histogramas, gráficos de barras y diagramas de caja para visualizar la distribución de los datos. Estas herramientas permiten una comprensión clara de cómo los datos están distribuidos y proporcionan una base sólida para la inferencia estadística.",
+    "crumbs": [
+      "Estadística descriptiva"
+    ]
+  },
+  {
+    "objectID": "C01_cover.html#estadística-descriptiva-para-dos-o-más-variables",
+    "href": "C01_cover.html#estadística-descriptiva-para-dos-o-más-variables",
+    "title": "Estadística descriptiva",
+    "section": "Estadística descriptiva para dos o más variables",
+    "text": "Estadística descriptiva para dos o más variables\nEste tema amplía el análisis de la estadística descriptiva a dos o más variables, abordando técnicas para analizar relaciones y asociaciones entre ellas. Se introducen las tablas de contingencia para estudiar la relación entre dos variables cualitativas, así como las medidas de asociación como el coeficiente de correlación de Pearson y Spearman para variables cuantitativas. También se discuten las gráficas de dispersión para visualizar relaciones entre dos variables cuantitativas y cómo se puede ajustar una recta de regresión para predecir una variable en función de otra. Además, se examinan los coeficientes de correlación parcial y análisis multivariado para explorar cómo varias variables se relacionan simultáneamente, lo que permite una comprensión más profunda de las interacciones dentro de los datos.",
+    "crumbs": [
+      "Estadística descriptiva"
+    ]
+  },
+  {
+    "objectID": "C02_cover.html",
+    "href": "C02_cover.html",
+    "title": "Estadística inferencial",
+    "section": "",
+    "text": "Contenido\nEn esta primera sección se examina la estadística descriptiva. El contenido ha sido seleccionado cuidadosamente con el fin de agregar valor a los análisis cuantitativos que se proponen al interior de las investigaciones en ciencias sociales.",
+    "crumbs": [
+      "Estadística inferencial"
+    ]
+  },
+  {
+    "objectID": "C02_cover.html#introducción",
+    "href": "C02_cover.html#introducción",
+    "title": "Estadística inferencial",
+    "section": "Introducción",
+    "text": "Introducción\nEste primer tema introduce a los estudiantes en los conceptos básicos de la estadística inferencial..",
+    "crumbs": [
+      "Estadística inferencial"
+    ]
+  },
+  {
+    "objectID": "C02_cover.html#intervalos-de-confianza",
+    "href": "C02_cover.html#intervalos-de-confianza",
+    "title": "Estadística inferencial",
+    "section": "Intervalos de confianza",
+    "text": "Intervalos de confianza",
+    "crumbs": [
+      "Estadística inferencial"
+    ]
+  },
+  {
+    "objectID": "C02_cover.html#pruebas-de-hipótesis-paramétricas",
+    "href": "C02_cover.html#pruebas-de-hipótesis-paramétricas",
+    "title": "Estadística inferencial",
+    "section": "Pruebas de hipótesis paramétricas",
+    "text": "Pruebas de hipótesis paramétricas",
+    "crumbs": [
+      "Estadística inferencial"
+    ]
+  },
+  {
+    "objectID": "C02_cover.html#pruebas-de-hipótesis-no-paramétricas",
+    "href": "C02_cover.html#pruebas-de-hipótesis-no-paramétricas",
+    "title": "Estadística inferencial",
+    "section": "Pruebas de hipótesis no paramétricas",
+    "text": "Pruebas de hipótesis no paramétricas",
+    "crumbs": [
+      "Estadística inferencial"
     ]
   }
 ]

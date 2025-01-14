@@ -45,10 +45,6 @@ Una muestra es representativa de la población cuando todas las características
 
 Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.
 
-## Actividad: Investiguemos
-
-¿Qué es un cisne negro y qué historia esconde?
-
 ## Conceptos de muestreo
 
  - Marco

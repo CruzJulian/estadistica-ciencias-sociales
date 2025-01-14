@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="CruzJulián">
 
-<title>Estadística para Ciencias Sociales - 8&nbsp; Muestreo</title>
+<title>8&nbsp; Muestreo – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -109,13 +109,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C02_cover.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="./C02_muestreo.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -153,7 +153,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estadística descriptiva</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -200,7 +200,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estadística inferencial</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -272,16 +272,15 @@ window.Quarto = {
   </ul></li>
   <li><a href="#muestreo" id="toc-muestreo" class="nav-link" data-scroll-target="#muestreo"><span class="header-section-number">10</span> Muestreo</a>
   <ul class="collapse">
-  <li><a href="#actividad-investiguemos" id="toc-actividad-investiguemos" class="nav-link" data-scroll-target="#actividad-investiguemos"><span class="header-section-number">10.1</span> Actividad: Investiguemos</a></li>
-  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo"><span class="header-section-number">10.2</span> Conceptos de muestreo</a></li>
-  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral"><span class="header-section-number">10.3</span> Marco muestral</a></li>
-  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral"><span class="header-section-number">10.4</span> Diseño muestral</a></li>
-  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral"><span class="header-section-number">10.5</span> Error muestral</a></li>
-  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral"><span class="header-section-number">10.6</span> Tamaño muestral</a></li>
-  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo"><span class="header-section-number">10.7</span> Distintos abordajes del muestreo</a>
+  <li><a href="#conceptos-de-muestreo" id="toc-conceptos-de-muestreo" class="nav-link" data-scroll-target="#conceptos-de-muestreo"><span class="header-section-number">10.1</span> Conceptos de muestreo</a></li>
+  <li><a href="#marco-muestral" id="toc-marco-muestral" class="nav-link" data-scroll-target="#marco-muestral"><span class="header-section-number">10.2</span> Marco muestral</a></li>
+  <li><a href="#diseño-muestral" id="toc-diseño-muestral" class="nav-link" data-scroll-target="#diseño-muestral"><span class="header-section-number">10.3</span> Diseño muestral</a></li>
+  <li><a href="#error-muestral" id="toc-error-muestral" class="nav-link" data-scroll-target="#error-muestral"><span class="header-section-number">10.4</span> Error muestral</a></li>
+  <li><a href="#tamaño-muestral" id="toc-tamaño-muestral" class="nav-link" data-scroll-target="#tamaño-muestral"><span class="header-section-number">10.5</span> Tamaño muestral</a></li>
+  <li><a href="#distintos-abordajes-del-muestreo" id="toc-distintos-abordajes-del-muestreo" class="nav-link" data-scroll-target="#distintos-abordajes-del-muestreo"><span class="header-section-number">10.6</span> Distintos abordajes del muestreo</a>
   <ul class="collapse">
-  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico"><span class="header-section-number">10.7.1</span> Muestreo no probabilístico</a></li>
-  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico"><span class="header-section-number">10.7.2</span> Muestreo probabilístico</a></li>
+  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico"><span class="header-section-number">10.6.1</span> Muestreo no probabilístico</a></li>
+  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico"><span class="header-section-number">10.6.2</span> Muestreo probabilístico</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#muestreo-no-probabilístico-1" id="toc-muestreo-no-probabilístico-1" class="nav-link" data-scroll-target="#muestreo-no-probabilístico-1"><span class="header-section-number">11</span> Muestreo no probabilístico</a>
@@ -366,12 +365,8 @@ window.Quarto = {
 <h1 data-number="10"><span class="header-section-number">10</span> Muestreo</h1>
 <p>¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.</p>
 <p>Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.</p>
-<section id="actividad-investiguemos" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="actividad-investiguemos"><span class="header-section-number">10.1</span> Actividad: Investiguemos</h2>
-<p>¿Qué es un cisne negro y qué historia esconde?</p>
-</section>
-<section id="conceptos-de-muestreo" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="conceptos-de-muestreo"><span class="header-section-number">10.2</span> Conceptos de muestreo</h2>
+<section id="conceptos-de-muestreo" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="conceptos-de-muestreo"><span class="header-section-number">10.1</span> Conceptos de muestreo</h2>
 <ul>
 <li><p>Marco</p></li>
 <li><p>Diseño</p></li>
@@ -379,32 +374,32 @@ window.Quarto = {
 <li><p>Tamaño</p></li>
 </ul>
 </section>
-<section id="marco-muestral" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="marco-muestral"><span class="header-section-number">10.3</span> Marco muestral</h2>
+<section id="marco-muestral" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="marco-muestral"><span class="header-section-number">10.2</span> Marco muestral</h2>
 <p>El marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.</p>
 <p>Este marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.</p>
 </section>
-<section id="diseño-muestral" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="diseño-muestral"><span class="header-section-number">10.4</span> Diseño muestral</h2>
+<section id="diseño-muestral" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="diseño-muestral"><span class="header-section-number">10.3</span> Diseño muestral</h2>
 <p>El diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.</p>
 <p>La elección del diseño depende de los objetivos del estudio, las características de la población y los recursos disponibles.</p>
 <p>Es el diseño muestral lo que le da representatividad a la muestra.</p>
 </section>
-<section id="error-muestral" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="error-muestral"><span class="header-section-number">10.5</span> Error muestral</h2>
+<section id="error-muestral" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="error-muestral"><span class="header-section-number">10.4</span> Error muestral</h2>
 <p>El error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.</p>
 <p>El tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.</p>
 </section>
-<section id="tamaño-muestral" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="tamaño-muestral"><span class="header-section-number">10.6</span> Tamaño muestral</h2>
+<section id="tamaño-muestral" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="tamaño-muestral"><span class="header-section-number">10.5</span> Tamaño muestral</h2>
 <p>El tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.</p>
 <p>La determinación del tamaño muestral depende del nivel de confianza deseado, el margen de error aceptable y la variabilidad esperada en la población.</p>
 <p>Es el tamaño muestral lo que le da significancia a las estimaciones. No hay muestras significativas.</p>
 </section>
-<section id="distintos-abordajes-del-muestreo" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="distintos-abordajes-del-muestreo"><span class="header-section-number">10.7</span> Distintos abordajes del muestreo</h2>
-<section id="muestreo-no-probabilístico" class="level3" data-number="10.7.1">
-<h3 data-number="10.7.1" class="anchored" data-anchor-id="muestreo-no-probabilístico"><span class="header-section-number">10.7.1</span> Muestreo no probabilístico</h3>
+<section id="distintos-abordajes-del-muestreo" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="distintos-abordajes-del-muestreo"><span class="header-section-number">10.6</span> Distintos abordajes del muestreo</h2>
+<section id="muestreo-no-probabilístico" class="level3" data-number="10.6.1">
+<h3 data-number="10.6.1" class="anchored" data-anchor-id="muestreo-no-probabilístico"><span class="header-section-number">10.6.1</span> Muestreo no probabilístico</h3>
 <p>No todos los elementos tienen probabilidad de ser seleccionados</p>
 <ul>
 <li>La muestra no es representativa (rigurosamente)</li>
@@ -412,8 +407,8 @@ window.Quarto = {
 <li>Requiere menos recursos</li>
 </ul>
 </section>
-<section id="muestreo-probabilístico" class="level3" data-number="10.7.2">
-<h3 data-number="10.7.2" class="anchored" data-anchor-id="muestreo-probabilístico"><span class="header-section-number">10.7.2</span> Muestreo probabilístico</h3>
+<section id="muestreo-probabilístico" class="level3" data-number="10.6.2">
+<h3 data-number="10.6.2" class="anchored" data-anchor-id="muestreo-probabilístico"><span class="header-section-number">10.6.2</span> Muestreo probabilístico</h3>
 <p>Todos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.</p>
 </section>
 </section>
@@ -600,18 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -643,7 +627,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -651,7 +657,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
