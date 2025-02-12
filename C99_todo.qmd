@@ -14,3 +14,50 @@
 # Que todo salga en pdf
 # Poner una portada
 ```
+
+
+Asignación de capítulos:
+
+```{r}
+# C01_prelim: Juan Diego.
+# C01_prepara: Néstor
+# C01_corr: Miguel
+# C01_vis: Néstor
+# C01_dist: Miguel
+# C02_episteme: Juan Diego
+# 
+# Asignación de tareas
+# 
+# Portada: Néstor
+# Revisión global: Todos
+# Revisón bibliográfica: Raquel
+# Diagramas: Raquel
+# Revisión de publicación (tablas y gráficos): Raquel
+# Prólogo: ?
+# 
+# 
+# 
+# Importante: Citación y bibliografía en cada capítulo en bibtex
+# 
+# 
+
+```
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Caja para escribir ejemplos
+
+:::
+
+
+::: {.callout-warning}
+## Fórmula
+
+Caja para escribir fórmulas
+
+:::
+
+
+
