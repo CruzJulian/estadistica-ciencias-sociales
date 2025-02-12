@@ -8,7 +8,7 @@
 
 <meta name="author" content="CruzJulián">
 
-<title>14&nbsp; Estadística IV – Estadística para Ciencias Sociales</title>
+<title>17&nbsp; Estadística IV – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03_est-reg.html" rel="prev">
+<link href="./C03_reg-logit.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +131,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_est-multi.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_est-multi.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Estadística IV</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -178,7 +198,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Correlación</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +262,45 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C03_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C03_cover.html</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_est-reg.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span></a>
+  <a href="./C03_abordaje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_modelamiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_reg-lineal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_reg-logit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
   </div>
 </li>
     </ul>
@@ -264,128 +313,128 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes"><span class="header-section-number">15</span> Antecedentes</a>
+  <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link active" data-scroll-target="#antecedentes"><span class="header-section-number">18</span> Antecedentes</a>
   <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción"><span class="header-section-number">15.1</span> Introducción</a></li>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación"><span class="header-section-number">15.2</span> Presentación</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción"><span class="header-section-number">18.1</span> Introducción</a></li>
+  <li><a href="#presentación" id="toc-presentación" class="nav-link" data-scroll-target="#presentación"><span class="header-section-number">18.2</span> Presentación</a>
   <ul class="collapse">
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso"><span class="header-section-number">15.2.1</span> Descripción del Curso</a></li>
-  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación"><span class="header-section-number">15.2.2</span> Justificación</a></li>
+  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso"><span class="header-section-number">18.2.1</span> Descripción del Curso</a></li>
+  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación"><span class="header-section-number">18.2.2</span> Justificación</a></li>
   </ul></li>
-  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones"><span class="header-section-number">15.3</span> Consideraciones</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">15.4</span> Objetivo</a></li>
-  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología"><span class="header-section-number">15.5</span> Metodología</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente"><span class="header-section-number">15.6</span> Docente</a>
+  <li><a href="#consideraciones" id="toc-consideraciones" class="nav-link" data-scroll-target="#consideraciones"><span class="header-section-number">18.3</span> Consideraciones</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">18.4</span> Objetivo</a></li>
+  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología"><span class="header-section-number">18.5</span> Metodología</a></li>
+  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente"><span class="header-section-number">18.6</span> Docente</a>
   <ul class="collapse">
-  <li><a href="#julián-cruz" id="toc-julián-cruz" class="nav-link" data-scroll-target="#julián-cruz"><span class="header-section-number">15.6.1</span> Julián Cruz</a></li>
+  <li><a href="#julián-cruz" id="toc-julián-cruz" class="nav-link" data-scroll-target="#julián-cruz"><span class="header-section-number">18.6.1</span> Julián Cruz</a></li>
   </ul></li>
-  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material"><span class="header-section-number">15.7</span> Material</a></li>
-  <li><a href="#narrativa" id="toc-narrativa" class="nav-link" data-scroll-target="#narrativa"><span class="header-section-number">15.8</span> Narrativa</a></li>
+  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material"><span class="header-section-number">18.7</span> Material</a></li>
+  <li><a href="#narrativa" id="toc-narrativa" class="nav-link" data-scroll-target="#narrativa"><span class="header-section-number">18.8</span> Narrativa</a></li>
   </ul></li>
-  <li><a href="#acercamiento-epistemológico" id="toc-acercamiento-epistemológico" class="nav-link" data-scroll-target="#acercamiento-epistemológico"><span class="header-section-number">16</span> Acercamiento epistemológico</a>
+  <li><a href="#acercamiento-epistemológico" id="toc-acercamiento-epistemológico" class="nav-link" data-scroll-target="#acercamiento-epistemológico"><span class="header-section-number">19</span> Acercamiento epistemológico</a>
   <ul class="collapse">
-  <li><a href="#cambio-en-el-paradigma" id="toc-cambio-en-el-paradigma" class="nav-link" data-scroll-target="#cambio-en-el-paradigma"><span class="header-section-number">16.1</span> Cambio en el paradigma</a>
+  <li><a href="#cambio-en-el-paradigma" id="toc-cambio-en-el-paradigma" class="nav-link" data-scroll-target="#cambio-en-el-paradigma"><span class="header-section-number">19.1</span> Cambio en el paradigma</a>
   <ul class="collapse">
-  <li><a href="#paradigma-clásico" id="toc-paradigma-clásico" class="nav-link" data-scroll-target="#paradigma-clásico"><span class="header-section-number">16.1.1</span> Paradigma clásico</a></li>
-  <li><a href="#paradigma-emergente" id="toc-paradigma-emergente" class="nav-link" data-scroll-target="#paradigma-emergente"><span class="header-section-number">16.1.2</span> Paradigma emergente</a></li>
+  <li><a href="#paradigma-clásico" id="toc-paradigma-clásico" class="nav-link" data-scroll-target="#paradigma-clásico"><span class="header-section-number">19.1.1</span> Paradigma clásico</a></li>
+  <li><a href="#paradigma-emergente" id="toc-paradigma-emergente" class="nav-link" data-scroll-target="#paradigma-emergente"><span class="header-section-number">19.1.2</span> Paradigma emergente</a></li>
   </ul></li>
-  <li><a href="#paradigma-clásico-1" id="toc-paradigma-clásico-1" class="nav-link" data-scroll-target="#paradigma-clásico-1"><span class="header-section-number">16.2</span> Paradigma clásico</a></li>
-  <li><a href="#paradigma-emergente-1" id="toc-paradigma-emergente-1" class="nav-link" data-scroll-target="#paradigma-emergente-1"><span class="header-section-number">16.3</span> Paradigma emergente</a></li>
-  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo"><span class="header-section-number">16.4</span> Ejemplo</a>
+  <li><a href="#paradigma-clásico-1" id="toc-paradigma-clásico-1" class="nav-link" data-scroll-target="#paradigma-clásico-1"><span class="header-section-number">19.2</span> Paradigma clásico</a></li>
+  <li><a href="#paradigma-emergente-1" id="toc-paradigma-emergente-1" class="nav-link" data-scroll-target="#paradigma-emergente-1"><span class="header-section-number">19.3</span> Paradigma emergente</a></li>
+  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo"><span class="header-section-number">19.4</span> Ejemplo</a>
   <ul class="collapse">
-  <li><a href="#linealidad" id="toc-linealidad" class="nav-link" data-scroll-target="#linealidad"><span class="header-section-number">16.4.1</span> Linealidad</a></li>
-  <li><a href="#complejidad" id="toc-complejidad" class="nav-link" data-scroll-target="#complejidad"><span class="header-section-number">16.4.2</span> Complejidad</a></li>
+  <li><a href="#linealidad" id="toc-linealidad" class="nav-link" data-scroll-target="#linealidad"><span class="header-section-number">19.4.1</span> Linealidad</a></li>
+  <li><a href="#complejidad" id="toc-complejidad" class="nav-link" data-scroll-target="#complejidad"><span class="header-section-number">19.4.2</span> Complejidad</a></li>
   </ul></li>
-  <li><a href="#tipo-de-estudio" id="toc-tipo-de-estudio" class="nav-link" data-scroll-target="#tipo-de-estudio"><span class="header-section-number">16.5</span> Tipo de estudio</a></li>
-  <li><a href="#epistemología-de-la-ciencia" id="toc-epistemología-de-la-ciencia" class="nav-link" data-scroll-target="#epistemología-de-la-ciencia"><span class="header-section-number">16.6</span> Epistemología de la ciencia</a></li>
-  <li><a href="#metodología-1" id="toc-metodología-1" class="nav-link" data-scroll-target="#metodología-1"><span class="header-section-number">16.7</span> Metodología</a></li>
+  <li><a href="#tipo-de-estudio" id="toc-tipo-de-estudio" class="nav-link" data-scroll-target="#tipo-de-estudio"><span class="header-section-number">19.5</span> Tipo de estudio</a></li>
+  <li><a href="#epistemología-de-la-ciencia" id="toc-epistemología-de-la-ciencia" class="nav-link" data-scroll-target="#epistemología-de-la-ciencia"><span class="header-section-number">19.6</span> Epistemología de la ciencia</a></li>
+  <li><a href="#metodología-1" id="toc-metodología-1" class="nav-link" data-scroll-target="#metodología-1"><span class="header-section-number">19.7</span> Metodología</a></li>
   </ul></li>
-  <li><a href="#intrumentos" id="toc-intrumentos" class="nav-link" data-scroll-target="#intrumentos"><span class="header-section-number">17</span> Intrumentos</a>
+  <li><a href="#intrumentos" id="toc-intrumentos" class="nav-link" data-scroll-target="#intrumentos"><span class="header-section-number">20</span> Intrumentos</a>
   <ul class="collapse">
-  <li><a href="#instrumentos" id="toc-instrumentos" class="nav-link" data-scroll-target="#instrumentos"><span class="header-section-number">17.1</span> Instrumentos</a></li>
-  <li><a href="#cuestionarios" id="toc-cuestionarios" class="nav-link" data-scroll-target="#cuestionarios"><span class="header-section-number">17.2</span> Cuestionarios</a></li>
-  <li><a href="#construcción" id="toc-construcción" class="nav-link" data-scroll-target="#construcción"><span class="header-section-number">17.3</span> Construcción</a></li>
-  <li><a href="#la-pregunta" id="toc-la-pregunta" class="nav-link" data-scroll-target="#la-pregunta"><span class="header-section-number">17.4</span> La pregunta</a></li>
-  <li><a href="#tipos-de-preguntas" id="toc-tipos-de-preguntas" class="nav-link" data-scroll-target="#tipos-de-preguntas"><span class="header-section-number">17.5</span> Tipos de preguntas</a>
+  <li><a href="#instrumentos" id="toc-instrumentos" class="nav-link" data-scroll-target="#instrumentos"><span class="header-section-number">20.1</span> Instrumentos</a></li>
+  <li><a href="#cuestionarios" id="toc-cuestionarios" class="nav-link" data-scroll-target="#cuestionarios"><span class="header-section-number">20.2</span> Cuestionarios</a></li>
+  <li><a href="#construcción" id="toc-construcción" class="nav-link" data-scroll-target="#construcción"><span class="header-section-number">20.3</span> Construcción</a></li>
+  <li><a href="#la-pregunta" id="toc-la-pregunta" class="nav-link" data-scroll-target="#la-pregunta"><span class="header-section-number">20.4</span> La pregunta</a></li>
+  <li><a href="#tipos-de-preguntas" id="toc-tipos-de-preguntas" class="nav-link" data-scroll-target="#tipos-de-preguntas"><span class="header-section-number">20.5</span> Tipos de preguntas</a>
   <ul class="collapse">
-  <li><a href="#abiertas" id="toc-abiertas" class="nav-link" data-scroll-target="#abiertas"><span class="header-section-number">17.5.1</span> Abiertas</a></li>
-  <li><a href="#cerradas" id="toc-cerradas" class="nav-link" data-scroll-target="#cerradas"><span class="header-section-number">17.5.2</span> Cerradas</a></li>
+  <li><a href="#abiertas" id="toc-abiertas" class="nav-link" data-scroll-target="#abiertas"><span class="header-section-number">20.5.1</span> Abiertas</a></li>
+  <li><a href="#cerradas" id="toc-cerradas" class="nav-link" data-scroll-target="#cerradas"><span class="header-section-number">20.5.2</span> Cerradas</a></li>
   </ul></li>
-  <li><a href="#estructuras-de-preguntas" id="toc-estructuras-de-preguntas" class="nav-link" data-scroll-target="#estructuras-de-preguntas"><span class="header-section-number">17.6</span> Estructuras de preguntas</a></li>
-  <li><a href="#votos-múltiples" id="toc-votos-múltiples" class="nav-link" data-scroll-target="#votos-múltiples"><span class="header-section-number">17.7</span> Votos múltiples</a></li>
-  <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking"><span class="header-section-number">17.8</span> Ranking</a></li>
-  <li><a href="#likert" id="toc-likert" class="nav-link" data-scroll-target="#likert"><span class="header-section-number">17.9</span> Likert</a></li>
-  <li><a href="#buenas-prácticas" id="toc-buenas-prácticas" class="nav-link" data-scroll-target="#buenas-prácticas"><span class="header-section-number">17.10</span> Buenas prácticas</a></li>
+  <li><a href="#estructuras-de-preguntas" id="toc-estructuras-de-preguntas" class="nav-link" data-scroll-target="#estructuras-de-preguntas"><span class="header-section-number">20.6</span> Estructuras de preguntas</a></li>
+  <li><a href="#votos-múltiples" id="toc-votos-múltiples" class="nav-link" data-scroll-target="#votos-múltiples"><span class="header-section-number">20.7</span> Votos múltiples</a></li>
+  <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking"><span class="header-section-number">20.8</span> Ranking</a></li>
+  <li><a href="#likert" id="toc-likert" class="nav-link" data-scroll-target="#likert"><span class="header-section-number">20.9</span> Likert</a></li>
+  <li><a href="#buenas-prácticas" id="toc-buenas-prácticas" class="nav-link" data-scroll-target="#buenas-prácticas"><span class="header-section-number">20.10</span> Buenas prácticas</a></li>
   </ul></li>
-  <li><a href="#medición" id="toc-medición" class="nav-link" data-scroll-target="#medición"><span class="header-section-number">18</span> Medición</a>
+  <li><a href="#medición" id="toc-medición" class="nav-link" data-scroll-target="#medición"><span class="header-section-number">21</span> Medición</a>
   <ul class="collapse">
-  <li><a href="#indicadores-y-métricas" id="toc-indicadores-y-métricas" class="nav-link" data-scroll-target="#indicadores-y-métricas"><span class="header-section-number">18.1</span> Indicadores y métricas</a></li>
-  <li><a href="#puedes-medir-usando-un-indicador-pero-quieres" id="toc-puedes-medir-usando-un-indicador-pero-quieres" class="nav-link" data-scroll-target="#puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">18.2</span> Puedes medir usando un indicador: ¿pero quieres?</a>
+  <li><a href="#indicadores-y-métricas" id="toc-indicadores-y-métricas" class="nav-link" data-scroll-target="#indicadores-y-métricas"><span class="header-section-number">21.1</span> Indicadores y métricas</a></li>
+  <li><a href="#puedes-medir-usando-un-indicador-pero-quieres" id="toc-puedes-medir-usando-un-indicador-pero-quieres" class="nav-link" data-scroll-target="#puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">21.2</span> Puedes medir usando un indicador: ¿pero quieres?</a>
   <ul class="collapse">
-  <li><a href="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" id="toc-por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="nav-link" data-scroll-target="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">18.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</a></li>
-  <li><a href="#aquí-las-ambulancias-no-llegan" id="toc-aquí-las-ambulancias-no-llegan" class="nav-link" data-scroll-target="#aquí-las-ambulancias-no-llegan"><span class="header-section-number">18.2.2</span> Aquí las ambulancias no llegan</a></li>
+  <li><a href="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" id="toc-por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="nav-link" data-scroll-target="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">21.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</a></li>
+  <li><a href="#aquí-las-ambulancias-no-llegan" id="toc-aquí-las-ambulancias-no-llegan" class="nav-link" data-scroll-target="#aquí-las-ambulancias-no-llegan"><span class="header-section-number">21.2.2</span> Aquí las ambulancias no llegan</a></li>
   </ul></li>
-  <li><a href="#constructos" id="toc-constructos" class="nav-link" data-scroll-target="#constructos"><span class="header-section-number">18.3</span> Constructos</a>
+  <li><a href="#constructos" id="toc-constructos" class="nav-link" data-scroll-target="#constructos"><span class="header-section-number">21.3</span> Constructos</a>
   <ul class="collapse">
-  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición"><span class="header-section-number">18.3.1</span> Definición</a></li>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición"><span class="header-section-number">21.3.1</span> Definición</a></li>
   </ul></li>
-  <li><a href="#tipos-de-constructos" id="toc-tipos-de-constructos" class="nav-link" data-scroll-target="#tipos-de-constructos"><span class="header-section-number">18.4</span> Tipos de constructos</a>
+  <li><a href="#tipos-de-constructos" id="toc-tipos-de-constructos" class="nav-link" data-scroll-target="#tipos-de-constructos"><span class="header-section-number">21.4</span> Tipos de constructos</a>
   <ul class="collapse">
-  <li><a href="#constructos-formativos" id="toc-constructos-formativos" class="nav-link" data-scroll-target="#constructos-formativos"><span class="header-section-number">18.4.1</span> Constructos formativos</a></li>
-  <li><a href="#constructos-reflexivos" id="toc-constructos-reflexivos" class="nav-link" data-scroll-target="#constructos-reflexivos"><span class="header-section-number">18.4.2</span> Constructos reflexivos</a></li>
+  <li><a href="#constructos-formativos" id="toc-constructos-formativos" class="nav-link" data-scroll-target="#constructos-formativos"><span class="header-section-number">21.4.1</span> Constructos formativos</a></li>
+  <li><a href="#constructos-reflexivos" id="toc-constructos-reflexivos" class="nav-link" data-scroll-target="#constructos-reflexivos"><span class="header-section-number">21.4.2</span> Constructos reflexivos</a></li>
   </ul></li>
-  <li><a href="#medición-de-constructos" id="toc-medición-de-constructos" class="nav-link" data-scroll-target="#medición-de-constructos"><span class="header-section-number">18.5</span> Medición de constructos</a></li>
-  <li><a href="#validación" id="toc-validación" class="nav-link" data-scroll-target="#validación"><span class="header-section-number">18.6</span> Validación</a>
+  <li><a href="#medición-de-constructos" id="toc-medición-de-constructos" class="nav-link" data-scroll-target="#medición-de-constructos"><span class="header-section-number">21.5</span> Medición de constructos</a></li>
+  <li><a href="#validación" id="toc-validación" class="nav-link" data-scroll-target="#validación"><span class="header-section-number">21.6</span> Validación</a>
   <ul class="collapse">
-  <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez"><span class="header-section-number">18.6.1</span> Validez</a></li>
-  <li><a href="#confiabilidad" id="toc-confiabilidad" class="nav-link" data-scroll-target="#confiabilidad"><span class="header-section-number">18.6.2</span> Confiabilidad</a></li>
+  <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez"><span class="header-section-number">21.6.1</span> Validez</a></li>
+  <li><a href="#confiabilidad" id="toc-confiabilidad" class="nav-link" data-scroll-target="#confiabilidad"><span class="header-section-number">21.6.2</span> Confiabilidad</a></li>
   </ul></li>
-  <li><a href="#validez-de-contenido" id="toc-validez-de-contenido" class="nav-link" data-scroll-target="#validez-de-contenido"><span class="header-section-number">18.7</span> Validez de contenido</a></li>
-  <li><a href="#validez-convergente-y-discriminante" id="toc-validez-convergente-y-discriminante" class="nav-link" data-scroll-target="#validez-convergente-y-discriminante"><span class="header-section-number">18.8</span> Validez convergente y discriminante</a>
+  <li><a href="#validez-de-contenido" id="toc-validez-de-contenido" class="nav-link" data-scroll-target="#validez-de-contenido"><span class="header-section-number">21.7</span> Validez de contenido</a></li>
+  <li><a href="#validez-convergente-y-discriminante" id="toc-validez-convergente-y-discriminante" class="nav-link" data-scroll-target="#validez-convergente-y-discriminante"><span class="header-section-number">21.8</span> Validez convergente y discriminante</a>
   <ul class="collapse">
-  <li><a href="#convergente" id="toc-convergente" class="nav-link" data-scroll-target="#convergente"><span class="header-section-number">18.8.1</span> Convergente</a></li>
-  <li><a href="#discriminante" id="toc-discriminante" class="nav-link" data-scroll-target="#discriminante"><span class="header-section-number">18.8.2</span> Discriminante</a></li>
+  <li><a href="#convergente" id="toc-convergente" class="nav-link" data-scroll-target="#convergente"><span class="header-section-number">21.8.1</span> Convergente</a></li>
+  <li><a href="#discriminante" id="toc-discriminante" class="nav-link" data-scroll-target="#discriminante"><span class="header-section-number">21.8.2</span> Discriminante</a></li>
   </ul></li>
-  <li><a href="#consistencia-interna" id="toc-consistencia-interna" class="nav-link" data-scroll-target="#consistencia-interna"><span class="header-section-number">18.9</span> Consistencia interna</a>
+  <li><a href="#consistencia-interna" id="toc-consistencia-interna" class="nav-link" data-scroll-target="#consistencia-interna"><span class="header-section-number">21.9</span> Consistencia interna</a>
   <ul class="collapse">
-  <li><a href="#medidas" id="toc-medidas" class="nav-link" data-scroll-target="#medidas"><span class="header-section-number">18.9.1</span> Medidas</a></li>
+  <li><a href="#medidas" id="toc-medidas" class="nav-link" data-scroll-target="#medidas"><span class="header-section-number">21.9.1</span> Medidas</a></li>
   </ul></li>
-  <li><a href="#consistencia-externa" id="toc-consistencia-externa" class="nav-link" data-scroll-target="#consistencia-externa"><span class="header-section-number">18.10</span> Consistencia externa</a></li>
+  <li><a href="#consistencia-externa" id="toc-consistencia-externa" class="nav-link" data-scroll-target="#consistencia-externa"><span class="header-section-number">21.10</span> Consistencia externa</a></li>
   </ul></li>
-  <li><a href="#taller" id="toc-taller" class="nav-link" data-scroll-target="#taller"><span class="header-section-number">19</span> Taller</a>
+  <li><a href="#taller" id="toc-taller" class="nav-link" data-scroll-target="#taller"><span class="header-section-number">22</span> Taller</a>
   <ul class="collapse">
-  <li><a href="#taller-1" id="toc-taller-1" class="nav-link" data-scroll-target="#taller-1"><span class="header-section-number">19.1</span> Taller</a>
+  <li><a href="#taller-1" id="toc-taller-1" class="nav-link" data-scroll-target="#taller-1"><span class="header-section-number">22.1</span> Taller</a>
   <ul class="collapse">
-  <li><a href="#contexto" id="toc-contexto" class="nav-link" data-scroll-target="#contexto"><span class="header-section-number">19.1.1</span> Contexto</a></li>
-  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers"><span class="header-section-number">19.1.2</span> Papers</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">19.1.3</span> </a></li>
+  <li><a href="#contexto" id="toc-contexto" class="nav-link" data-scroll-target="#contexto"><span class="header-section-number">22.1.1</span> Contexto</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers"><span class="header-section-number">22.1.2</span> Papers</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">22.1.3</span> </a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#tópicos" id="toc-tópicos" class="nav-link" data-scroll-target="#tópicos"><span class="header-section-number">20</span> Tópicos</a>
+  <li><a href="#tópicos" id="toc-tópicos" class="nav-link" data-scroll-target="#tópicos"><span class="header-section-number">23</span> Tópicos</a>
   <ul class="collapse">
-  <li><a href="#reducción-de-dimensiones" id="toc-reducción-de-dimensiones" class="nav-link" data-scroll-target="#reducción-de-dimensiones"><span class="header-section-number">20.1</span> Reducción de dimensiones</a></li>
-  <li><a href="#acp" id="toc-acp" class="nav-link" data-scroll-target="#acp"><span class="header-section-number">20.2</span> ACP</a>
+  <li><a href="#reducción-de-dimensiones" id="toc-reducción-de-dimensiones" class="nav-link" data-scroll-target="#reducción-de-dimensiones"><span class="header-section-number">23.1</span> Reducción de dimensiones</a></li>
+  <li><a href="#acp" id="toc-acp" class="nav-link" data-scroll-target="#acp"><span class="header-section-number">23.2</span> ACP</a>
   <ul class="collapse">
-  <li><a href="#definición-matemática" id="toc-definición-matemática" class="nav-link" data-scroll-target="#definición-matemática"><span class="header-section-number">20.2.1</span> Definición matemática</a></li>
-  <li><a href="#significado-matemático" id="toc-significado-matemático" class="nav-link" data-scroll-target="#significado-matemático"><span class="header-section-number">20.2.2</span> Significado matemático</a></li>
+  <li><a href="#definición-matemática" id="toc-definición-matemática" class="nav-link" data-scroll-target="#definición-matemática"><span class="header-section-number">23.2.1</span> Definición matemática</a></li>
+  <li><a href="#significado-matemático" id="toc-significado-matemático" class="nav-link" data-scroll-target="#significado-matemático"><span class="header-section-number">23.2.2</span> Significado matemático</a></li>
   </ul></li>
-  <li><a href="#acp-1" id="toc-acp-1" class="nav-link" data-scroll-target="#acp-1"><span class="header-section-number">20.3</span> ACP</a>
+  <li><a href="#acp-1" id="toc-acp-1" class="nav-link" data-scroll-target="#acp-1"><span class="header-section-number">23.3</span> ACP</a>
   <ul class="collapse">
-  <li><a href="#características" id="toc-características" class="nav-link" data-scroll-target="#características"><span class="header-section-number">20.3.1</span> Características</a></li>
-  <li><a href="#ejemplo-1" id="toc-ejemplo-1" class="nav-link" data-scroll-target="#ejemplo-1"><span class="header-section-number">20.3.2</span> Ejemplo</a></li>
+  <li><a href="#características" id="toc-características" class="nav-link" data-scroll-target="#características"><span class="header-section-number">23.3.1</span> Características</a></li>
+  <li><a href="#ejemplo-1" id="toc-ejemplo-1" class="nav-link" data-scroll-target="#ejemplo-1"><span class="header-section-number">23.3.2</span> Ejemplo</a></li>
   </ul></li>
-  <li><a href="#acp-2" id="toc-acp-2" class="nav-link" data-scroll-target="#acp-2"><span class="header-section-number">20.4</span> ACP</a>
+  <li><a href="#acp-2" id="toc-acp-2" class="nav-link" data-scroll-target="#acp-2"><span class="header-section-number">23.4</span> ACP</a>
   <ul class="collapse">
-  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación"><span class="header-section-number">20.4.1</span> Evaluación</a></li>
+  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación"><span class="header-section-number">23.4.1</span> Evaluación</a></li>
   </ul></li>
-  <li><a href="#alpha-de-cronbach" id="toc-alpha-de-cronbach" class="nav-link" data-scroll-target="#alpha-de-cronbach"><span class="header-section-number">20.5</span> Alpha de Cronbach</a>
+  <li><a href="#alpha-de-cronbach" id="toc-alpha-de-cronbach" class="nav-link" data-scroll-target="#alpha-de-cronbach"><span class="header-section-number">23.5</span> Alpha de Cronbach</a>
   <ul class="collapse">
-  <li><a href="#consistencia-interna-1" id="toc-consistencia-interna-1" class="nav-link" data-scroll-target="#consistencia-interna-1"><span class="header-section-number">20.5.1</span> Consistencia interna</a></li>
+  <li><a href="#consistencia-interna-1" id="toc-consistencia-interna-1" class="nav-link" data-scroll-target="#consistencia-interna-1"><span class="header-section-number">23.5.1</span> Consistencia interna</a></li>
   </ul></li>
-  <li><a href="#alpha-de-cronbach-1" id="toc-alpha-de-cronbach-1" class="nav-link" data-scroll-target="#alpha-de-cronbach-1"><span class="header-section-number">20.6</span> Alpha de Cronbach</a></li>
-  <li><a href="#alfa-de-cronbach" id="toc-alfa-de-cronbach" class="nav-link" data-scroll-target="#alfa-de-cronbach"><span class="header-section-number">20.7</span> Alfa de Cronbach</a></li>
+  <li><a href="#alpha-de-cronbach-1" id="toc-alpha-de-cronbach-1" class="nav-link" data-scroll-target="#alpha-de-cronbach-1"><span class="header-section-number">23.6</span> Alpha de Cronbach</a></li>
+  <li><a href="#alfa-de-cronbach" id="toc-alfa-de-cronbach" class="nav-link" data-scroll-target="#alfa-de-cronbach"><span class="header-section-number">23.7</span> Alfa de Cronbach</a></li>
   </ul></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">21</span> Referencias</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">24</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -394,7 +443,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estadística IV</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Estadística IV</span></h1>
 <p class="subtitle lead">Estadística multivariada</p>
 </div>
 
@@ -418,83 +467,83 @@ window.Quarto = {
 </header>
 
 
-<section id="antecedentes" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Antecedentes</h1>
-<section id="introducción" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">15.1</span> Introducción</h2>
+<section id="antecedentes" class="level1" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> Antecedentes</h1>
+<section id="introducción" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">18.1</span> Introducción</h2>
 <p>En investigación social, el uso adecuado de métodos estadísticos para comprender la estructura y operatividad de un fenómeno determinado, constituye una ventaja del investigador en un entorno competitio de alto desempaño. Una gran variedad de procesos de planeación y evaluación de actividades gubernamentales, administrativas, económicas y financieras, se basan en resultados obtenidos mediante el análisis estadístico de los fenómenos en ellos involucrados.</p>
 <p>Además, dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información.</p>
 </section>
-<section id="presentación" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="presentación"><span class="header-section-number">15.2</span> Presentación</h2>
-<section id="descripción-del-curso" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="descripción-del-curso"><span class="header-section-number">15.2.1</span> Descripción del Curso</h3>
+<section id="presentación" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="presentación"><span class="header-section-number">18.2</span> Presentación</h2>
+<section id="descripción-del-curso" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="descripción-del-curso"><span class="header-section-number">18.2.1</span> Descripción del Curso</h3>
 <p>Estadística IV: Estadística multivariada es un curso avanzado que capacita a los estudiantes en el diseño y evaluación de herramientas de medición en investigaciones sociales. El contenido abarca la conceptualización de constructos formativos y reflexivos, así como la creación de instrumentos como cuestionarios y formularios. Los estudiantes aprenderán a definir, construir y evaluar estos instrumentos, asegurando consistencia, validez y generalización de los resultados. Se abordarán diferentes escalas de medición (binaria, Likert, ordinal y numérica), además de preguntas cerradas y abiertas.</p>
 </section>
-<section id="justificación" class="level3" data-number="15.2.2">
-<h3 data-number="15.2.2" class="anchored" data-anchor-id="justificación"><span class="header-section-number">15.2.2</span> Justificación</h3>
+<section id="justificación" class="level3" data-number="18.2.2">
+<h3 data-number="18.2.2" class="anchored" data-anchor-id="justificación"><span class="header-section-number">18.2.2</span> Justificación</h3>
 <p>Estadística IV: Estadística multivariada es una asignatura fundamental dentro del ciclo formativo en técnicas especiales de investigación, enfocada en fortalecer las competencias de los estudiantes en la creación y validación de instrumentos de medición. Este curso cubre áreas clave como el diseño de cuestionarios, la evaluación de constructos formativos y reflexivos, y la implementación de algoritmos de agrupación y segmentación, esenciales para la investigación social.</p>
 </section>
 </section>
-<section id="consideraciones" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="consideraciones"><span class="header-section-number">15.3</span> Consideraciones</h2>
+<section id="consideraciones" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="consideraciones"><span class="header-section-number">18.3</span> Consideraciones</h2>
 <p>Sobre los contenidos teóricos y/o conceptuales básicos del programa.</p>
 <p>Es curso está lleno de contenidos prácticos y ligeros que no exigen a los estudiantes mayores conocimientos o destrezas sobre los temas, ni la realización de tareas o trabajos profundos por fuera del aula. Lo que se busca es impartir conocimiento y entregar herramientas básicas de estadística como apoyo a las investigaciones y documentos exigidos como proyectos de investigación.</p>
 </section>
-<section id="objetivo" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">15.4</span> Objetivo</h2>
+<section id="objetivo" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">18.4</span> Objetivo</h2>
 <p>Examinar cómo ocurre la recolección de datos en una investigación de tipo cuantitativo.</p>
 </section>
-<section id="metodología" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="metodología"><span class="header-section-number">15.5</span> Metodología</h2>
+<section id="metodología" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="metodología"><span class="header-section-number">18.5</span> Metodología</h2>
 <p>Curso magistral con talleres prácticos en donde se involucren todos los asistentes mediante el desarrollo de un taller y exposición de resultados.</p>
 </section>
-<section id="docente" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="docente"><span class="header-section-number">15.6</span> Docente</h2>
-<section id="julián-cruz" class="level3" data-number="15.6.1">
-<h3 data-number="15.6.1" class="anchored" data-anchor-id="julián-cruz"><span class="header-section-number">15.6.1</span> Julián Cruz</h3>
+<section id="docente" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="docente"><span class="header-section-number">18.6</span> Docente</h2>
+<section id="julián-cruz" class="level3" data-number="18.6.1">
+<h3 data-number="18.6.1" class="anchored" data-anchor-id="julián-cruz"><span class="header-section-number">18.6.1</span> Julián Cruz</h3>
 <p>Soy científico de datos, profesional en estadística y magíster en ciencias. Cuento con más de 12 años de experiencia demostrada en analítica y ciencia de datos. Mi perfil contempla desde liderazgo de programas de capacitación y gestión del cambio, hasta ejecución proyectos de base tecnológica. Esta experiencia me ha permitido desarrollar diferentes competencias, como la orientación al valor en toma de decisiones, la conformación y desarrollo de equipos de alto desempeño y la negociación integradora.</p>
 </section>
 </section>
-<section id="material" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="material"><span class="header-section-number">15.7</span> Material</h2>
+<section id="material" class="level2" data-number="18.7">
+<h2 data-number="18.7" class="anchored" data-anchor-id="material"><span class="header-section-number">18.7</span> Material</h2>
 <p><a href="https://www.istat.it/wp-content/uploads/2014/06/Handbook-on-Constructing-Composite-Indicators.pdf">Handbook on Constructing Composite Indicators: Methodology and User Guide</a></p>
 <p><a href="https://core.ac.uk/download/pdf/47265078.pdf">Diseño y validación de instrumentos de medición</a></p>
 <p><a href="http://cda.psych.uiuc.edu/statistical_learning_course/Jolliffe%20I.%20Principal%20Component%20Analysis%20(2ed.,%20Springer,%202002)(518s)_MVsa_.pdf">Principal Component Analysis</a></p>
 </section>
-<section id="narrativa" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="narrativa"><span class="header-section-number">15.8</span> Narrativa</h2>
+<section id="narrativa" class="level2" data-number="18.8">
+<h2 data-number="18.8" class="anchored" data-anchor-id="narrativa"><span class="header-section-number">18.8</span> Narrativa</h2>
 <div class="columns">
 <div class="column">
-<section id="creadores" class="level3" data-number="15.8.1">
-<h3 data-number="15.8.1" class="anchored" data-anchor-id="creadores"><span class="header-section-number">15.8.1</span> Creadores</h3>
+<section id="creadores" class="level3" data-number="18.8.1">
+<h3 data-number="18.8.1" class="anchored" data-anchor-id="creadores"><span class="header-section-number">18.8.1</span> Creadores</h3>
 <p>Los creadores de herramientas, productos, servicios y experiencias deben tener un conocimiento profundo sobre el campo en el que actúan.</p>
 </section>
 </div><div class="column">
-<section id="usuarios" class="level3" data-number="15.8.2">
-<h3 data-number="15.8.2" class="anchored" data-anchor-id="usuarios"><span class="header-section-number">15.8.2</span> Usuarios</h3>
+<section id="usuarios" class="level3" data-number="18.8.2">
+<h3 data-number="18.8.2" class="anchored" data-anchor-id="usuarios"><span class="header-section-number">18.8.2</span> Usuarios</h3>
 <p>Los usuarios de herramientas, productos, servicicios y experiencias deben tener claridad sobre su finalidad y el modo de uso.</p>
 </section>
 </div>
 </div>
 </section>
 </section>
-<section id="acercamiento-epistemológico" class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> Acercamiento epistemológico</h1>
-<section id="cambio-en-el-paradigma" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="cambio-en-el-paradigma"><span class="header-section-number">16.1</span> Cambio en el paradigma</h2>
+<section id="acercamiento-epistemológico" class="level1" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> Acercamiento epistemológico</h1>
+<section id="cambio-en-el-paradigma" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="cambio-en-el-paradigma"><span class="header-section-number">19.1</span> Cambio en el paradigma</h2>
 <p>En este momento se está llevando a cabo un cambio profundo en los enfoques del análisis de datos y la modelización, que reflejan la evolución de la metodología estadística hacia la ciencia de datos.</p>
-<section id="paradigma-clásico" class="level3" data-number="16.1.1">
-<h3 data-number="16.1.1" class="anchored" data-anchor-id="paradigma-clásico"><span class="header-section-number">16.1.1</span> Paradigma clásico</h3>
+<section id="paradigma-clásico" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="paradigma-clásico"><span class="header-section-number">19.1.1</span> Paradigma clásico</h3>
 <p>Se basa en modelos estadísticos tradicionales con supuestos de linealidad y trabaja con conjuntos de datos pequeños. El enfoque está en la inferencia y la explicación basada en muestras limitadas.</p>
 </section>
-<section id="paradigma-emergente" class="level3" data-number="16.1.2">
-<h3 data-number="16.1.2" class="anchored" data-anchor-id="paradigma-emergente"><span class="header-section-number">16.1.2</span> Paradigma emergente</h3>
+<section id="paradigma-emergente" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="paradigma-emergente"><span class="header-section-number">19.1.2</span> Paradigma emergente</h3>
 <p>Utiliza técnicas de aprendizaje automático e inteligencia artificial para analizar grandes volúmenes de datos. Se enfoca en la eficiencia computacional y en manejar la complejidad de relaciones no lineales, con un fuerte énfasis en la precisión predictiva y en la capacidad de trabajar con datos masivos.</p>
 </section>
 </section>
-<section id="paradigma-clásico-1" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="paradigma-clásico-1"><span class="header-section-number">16.2</span> Paradigma clásico</h2>
+<section id="paradigma-clásico-1" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="paradigma-clásico-1"><span class="header-section-number">19.2</span> Paradigma clásico</h2>
 <ul>
 <li><p>Conjuntos pequeños de datos. Datos caros. Eficiencia = uso de menos datos.</p></li>
 <li><p>Problema población - muestra. Inferencia estadística. Supuestos distribucionales.</p></li>
@@ -502,8 +551,8 @@ window.Quarto = {
 <li><p>Explicación = Predicción. Hipótesis y pronóstico.</p></li>
 </ul>
 </section>
-<section id="paradigma-emergente-1" class="level2" data-number="16.3">
-<h2 data-number="16.3" class="anchored" data-anchor-id="paradigma-emergente-1"><span class="header-section-number">16.3</span> Paradigma emergente</h2>
+<section id="paradigma-emergente-1" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="paradigma-emergente-1"><span class="header-section-number">19.3</span> Paradigma emergente</h2>
 <ul>
 <li><p>Conjuntos grandes de datos. Datos baratos. Eficiencia = Eficiencia computacional.</p></li>
 <li><p>Problema sesgo - varianza. Sobreajuste. Validación cruzada.</p></li>
@@ -513,19 +562,19 @@ window.Quarto = {
 <li><p>Pronósticos precisos. Inteligencia artificial.</p></li>
 </ul>
 </section>
-<section id="ejemplo" class="level2" data-number="16.4">
-<h2 data-number="16.4" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">16.4</span> Ejemplo</h2>
+<section id="ejemplo" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">19.4</span> Ejemplo</h2>
 <p>Algunos ejemplos del paradigma clásico y del paradigma emergente</p>
-<section id="linealidad" class="level3" data-number="16.4.1">
-<h3 data-number="16.4.1" class="anchored" data-anchor-id="linealidad"><span class="header-section-number">16.4.1</span> Linealidad</h3>
+<section id="linealidad" class="level3" data-number="19.4.1">
+<h3 data-number="19.4.1" class="anchored" data-anchor-id="linealidad"><span class="header-section-number">19.4.1</span> Linealidad</h3>
 <ul>
 <li><p>PCA</p></li>
 <li><p>Análisis factorial</p></li>
 <li><p>SEM</p></li>
 </ul>
 </section>
-<section id="complejidad" class="level3" data-number="16.4.2">
-<h3 data-number="16.4.2" class="anchored" data-anchor-id="complejidad"><span class="header-section-number">16.4.2</span> Complejidad</h3>
+<section id="complejidad" class="level3" data-number="19.4.2">
+<h3 data-number="19.4.2" class="anchored" data-anchor-id="complejidad"><span class="header-section-number">19.4.2</span> Complejidad</h3>
 <ul>
 <li><p>Distancias</p></li>
 <li><p>t-Sne</p></li>
@@ -536,8 +585,8 @@ window.Quarto = {
 </blockquote>
 </section>
 </section>
-<section id="tipo-de-estudio" class="level2" data-number="16.5">
-<h2 data-number="16.5" class="anchored" data-anchor-id="tipo-de-estudio"><span class="header-section-number">16.5</span> Tipo de estudio</h2>
+<section id="tipo-de-estudio" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="tipo-de-estudio"><span class="header-section-number">19.5</span> Tipo de estudio</h2>
 <p>De acuerdo a la pregunta el estudio puede ser:</p>
 <ul>
 <li>Descriptivo.</li>
@@ -551,8 +600,8 @@ window.Quarto = {
 <li><strong>Confirmatorio.</strong></li>
 </ul>
 </section>
-<section id="epistemología-de-la-ciencia" class="level2" data-number="16.6">
-<h2 data-number="16.6" class="anchored" data-anchor-id="epistemología-de-la-ciencia"><span class="header-section-number">16.6</span> Epistemología de la ciencia</h2>
+<section id="epistemología-de-la-ciencia" class="level2" data-number="19.6">
+<h2 data-number="19.6" class="anchored" data-anchor-id="epistemología-de-la-ciencia"><span class="header-section-number">19.6</span> Epistemología de la ciencia</h2>
 <p>Un repaso</p>
 <ul>
 <li><p>Positivismo: Enfoque en la observación empírica y datos objetivos.</p></li>
@@ -561,8 +610,8 @@ window.Quarto = {
 <li><p>Paradigmas Científicos: El conocimiento avanza a través de cambios en los paradigmas científicos.</p></li>
 </ul>
 </section>
-<section id="metodología-1" class="level2" data-number="16.7">
-<h2 data-number="16.7" class="anchored" data-anchor-id="metodología-1"><span class="header-section-number">16.7</span> Metodología</h2>
+<section id="metodología-1" class="level2" data-number="19.7">
+<h2 data-number="19.7" class="anchored" data-anchor-id="metodología-1"><span class="header-section-number">19.7</span> Metodología</h2>
 <ul>
 <li>Planeación.</li>
 <li>Diseño.</li>
@@ -573,42 +622,42 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="intrumentos" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Intrumentos</h1>
-<section id="instrumentos" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="instrumentos"><span class="header-section-number">17.1</span> Instrumentos</h2>
+<section id="intrumentos" class="level1" data-number="20">
+<h1 data-number="20"><span class="header-section-number">20</span> Intrumentos</h1>
+<section id="instrumentos" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="instrumentos"><span class="header-section-number">20.1</span> Instrumentos</h2>
 <p>Un instrumento de medida es una técnica o conjunto de técnicas que permitirán una asignación numérica que cuantifique las manifestaciones de un constructo que es medible solo de manera indirecta. (Herrera, 1998)</p>
 </section>
-<section id="cuestionarios" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="cuestionarios"><span class="header-section-number">17.2</span> Cuestionarios</h2>
+<section id="cuestionarios" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="cuestionarios"><span class="header-section-number">20.2</span> Cuestionarios</h2>
 <p>Un cuestionario es un conjunto de preguntas que indagan por aspectos concernientes al constructo.</p>
 <p>Las preguntas o ítems tienen un valor particular en la construcción de un cuestionario.</p>
 </section>
-<section id="construcción" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="construcción"><span class="header-section-number">17.3</span> Construcción</h2>
+<section id="construcción" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="construcción"><span class="header-section-number">20.3</span> Construcción</h2>
 <p>La construcción de un cuestionario, es decir, de definición de las preguntas que lleva, no ocurre de manera subjetiva.</p>
 <p>Es preferible tomar como base cuestionarios previos o estudios detallados anteriores o partir de una investigación cualitativa anterior.</p>
 </section>
-<section id="la-pregunta" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="la-pregunta"><span class="header-section-number">17.4</span> La pregunta</h2>
+<section id="la-pregunta" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="la-pregunta"><span class="header-section-number">20.4</span> La pregunta</h2>
 <ul>
 <li>Qué se pregunta. Debe estar relacionado con lo que se quiere medir.</li>
 <li>Cada pregunta es atómica. No indaga por diferentes aspectos al mismo tiempo.</li>
 </ul>
 </section>
-<section id="tipos-de-preguntas" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="tipos-de-preguntas"><span class="header-section-number">17.5</span> Tipos de preguntas</h2>
+<section id="tipos-de-preguntas" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="tipos-de-preguntas"><span class="header-section-number">20.5</span> Tipos de preguntas</h2>
 <p>Las preguntas que se realizan pueden ser:</p>
-<section id="abiertas" class="level3" data-number="17.5.1">
-<h3 data-number="17.5.1" class="anchored" data-anchor-id="abiertas"><span class="header-section-number">17.5.1</span> Abiertas</h3>
+<section id="abiertas" class="level3" data-number="20.5.1">
+<h3 data-number="20.5.1" class="anchored" data-anchor-id="abiertas"><span class="header-section-number">20.5.1</span> Abiertas</h3>
 <ul>
 <li>El usuario responde un párrafo con sus apreciaciones.</li>
 <li>En general no se incluyen por no tener un abordaje desde la estadística clásica.</li>
 <li>Pueden ser analizadas con minería de texto y procesamiento del lenguaje natural.</li>
 </ul>
 </section>
-<section id="cerradas" class="level3" data-number="17.5.2">
-<h3 data-number="17.5.2" class="anchored" data-anchor-id="cerradas"><span class="header-section-number">17.5.2</span> Cerradas</h3>
+<section id="cerradas" class="level3" data-number="20.5.2">
+<h3 data-number="20.5.2" class="anchored" data-anchor-id="cerradas"><span class="header-section-number">20.5.2</span> Cerradas</h3>
 <ul>
 <li>Numéricas</li>
 <li>Opción múltiple con única respuesta.</li>
@@ -616,8 +665,8 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="estructuras-de-preguntas" class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="estructuras-de-preguntas"><span class="header-section-number">17.6</span> Estructuras de preguntas</h2>
+<section id="estructuras-de-preguntas" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="estructuras-de-preguntas"><span class="header-section-number">20.6</span> Estructuras de preguntas</h2>
 <p>Algunos mecanismos de indagación más compleja.</p>
 <ul>
 <li>Votos múltiples.</li>
@@ -625,20 +674,20 @@ window.Quarto = {
 <li>Likert.</li>
 </ul>
 </section>
-<section id="votos-múltiples" class="level2" data-number="17.7">
-<h2 data-number="17.7" class="anchored" data-anchor-id="votos-múltiples"><span class="header-section-number">17.7</span> Votos múltiples</h2>
+<section id="votos-múltiples" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="votos-múltiples"><span class="header-section-number">20.7</span> Votos múltiples</h2>
 <p>Es una estructura de votación, cada integrante del grupo tiene un número de votos con respecto a un conjunto de alternativas. A diferencia de una votación única, donde se selecciona solo una opción, la votación múltiple permite elegir varias opciones, ofreciendo una visión más completa de las preferencias del grupo.</p>
 <p>Ejemplo: Imagina que tienes una lista de marcas de automóviles: Tesla, BMW, Mercedes, Audi, Toyota, Ford, Honda, Volvo. Se te pide que votes por las tres marcas que más te gusten.</p>
 <p>¿Cómo crees que se analiza?</p>
 </section>
-<section id="ranking" class="level2" data-number="17.8">
-<h2 data-number="17.8" class="anchored" data-anchor-id="ranking"><span class="header-section-number">17.8</span> Ranking</h2>
+<section id="ranking" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="ranking"><span class="header-section-number">20.8</span> Ranking</h2>
 <p>Se solicita a los participantes que organicen de mayor a menor una lista según un criterio definido. Este proceso permite capturar las preferencias relativas entre las diferentes opciones.</p>
 <p>Ejemplo: Imagina que tienes una lista de postres: tiramisú, helado de vainilla, cheesecake, brownie, mousse de chocolate, flan, macarrones, crème brûlée. Se te pide que los organices de mayor a menor según lo deliciosos que te parezcan.</p>
 <p>¿Cómo crees que se analiza?</p>
 </section>
-<section id="likert" class="level2" data-number="17.9">
-<h2 data-number="17.9" class="anchored" data-anchor-id="likert"><span class="header-section-number">17.9</span> Likert</h2>
+<section id="likert" class="level2" data-number="20.9">
+<h2 data-number="20.9" class="anchored" data-anchor-id="likert"><span class="header-section-number">20.9</span> Likert</h2>
 <p>Se solicita a los participantes que puntúen una lista de afirmaciones según una escala definida.</p>
 <p>Ejemplo: Imagina que se les pide a los participantes que expresen su nivel de acuerdo con las siguientes afirmaciones sobre ética en el lugar de trabajo:</p>
 <p>“Es aceptable que los empleados reporten irregularidades de manera anónima.”</p>
@@ -647,8 +696,8 @@ window.Quarto = {
 <p>Los participantes deben calificar cada afirmación en una escala que va desde “totalmente en desacuerdo”, “en desacuerdo”, “neutral”, “de acuerdo” hasta “totalmente de acuerdo”.</p>
 <p>¿Cómo crees que se analiza?</p>
 </section>
-<section id="buenas-prácticas" class="level2" data-number="17.10">
-<h2 data-number="17.10" class="anchored" data-anchor-id="buenas-prácticas"><span class="header-section-number">17.10</span> Buenas prácticas</h2>
+<section id="buenas-prácticas" class="level2" data-number="20.10">
+<h2 data-number="20.10" class="anchored" data-anchor-id="buenas-prácticas"><span class="header-section-number">20.10</span> Buenas prácticas</h2>
 <p>En los procesos de diseño de instrumentos hay una serie de buenas prácticas:</p>
 <ul>
 <li>No usar filtros en las encuestas.</li>
@@ -663,36 +712,36 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="medición" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Medición</h1>
-<section id="indicadores-y-métricas" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="indicadores-y-métricas"><span class="header-section-number">18.1</span> Indicadores y métricas</h2>
+<section id="medición" class="level1" data-number="21">
+<h1 data-number="21"><span class="header-section-number">21</span> Medición</h1>
+<section id="indicadores-y-métricas" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="indicadores-y-métricas"><span class="header-section-number">21.1</span> Indicadores y métricas</h2>
 <p>Los indicadores son herramientas cuantitativas utilizadas para medir, monitorear y evaluar un fenómeno o proceso específico. Un indicador generalmente se compone de un numerador y un denominador, lo que permite contextualizar la medición y compararla en diferentes situaciones. Por ejemplo, un indicador común en economía es la tasa de desempleo, que se calcula dividiendo el número de personas desempleadas (numerador) por la población activa total (denominador), y se expresa como un porcentaje.</p>
 <p>Las métricas, aunque también son números que sirven para evaluar aspectos de un fenómeno, suelen referirse a medidas directas que no necesariamente requieren un numerador y un denominador. Son herramientas clave en la evaluación del rendimiento y pueden incluir una amplia gama de datos, desde cifras de ventas hasta tiempos de respuesta en un sistema. Por ejemplo, en un sitio web, una métrica común es el tiempo promedio que un usuario pasa en una página.</p>
 </section>
-<section id="puedes-medir-usando-un-indicador-pero-quieres" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">18.2</span> Puedes medir usando un indicador: ¿pero quieres?</h2>
-<section id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="level3" data-number="18.2.1">
-<h3 data-number="18.2.1" class="anchored" data-anchor-id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">18.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</h3>
+<section id="puedes-medir-usando-un-indicador-pero-quieres" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">21.2</span> Puedes medir usando un indicador: ¿pero quieres?</h2>
+<section id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="level3" data-number="21.2.1">
+<h3 data-number="21.2.1" class="anchored" data-anchor-id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">21.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</h3>
 <p>En gran Bretaña, se propuso medir la calidad de la salud con un indicador: que cuando un paciente llamara a su médico, le dieran cita en menos de cuarenta y ocho horas. Spoiler: <a href="https://www.standard.co.uk/news/mother-catches-out-blair-over-gps-7272924.html">(no funcionó, sólo se atendían llamadas para atención inmediata y se prohibieron las citas por adelantado)</a>.</p>
 </section>
-<section id="aquí-las-ambulancias-no-llegan" class="level3" data-number="18.2.2">
-<h3 data-number="18.2.2" class="anchored" data-anchor-id="aquí-las-ambulancias-no-llegan"><span class="header-section-number">18.2.2</span> Aquí las ambulancias no llegan</h3>
+<section id="aquí-las-ambulancias-no-llegan" class="level3" data-number="21.2.2">
+<h3 data-number="21.2.2" class="anchored" data-anchor-id="aquí-las-ambulancias-no-llegan"><span class="header-section-number">21.2.2</span> Aquí las ambulancias no llegan</h3>
 <p>En gran Bretaña, se propuso medir la calidad de la salud con un indicador: que cuando había una llamada de emergencia desde una zona urbana, y se consideraba que el caso <em>ponía en peligro una vida humana de forma inmediata</em> el servicio de ambulancias tenía ocho minutos para llegar al lugar. Spoiler: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2667302/pdf/rssa0172-0161.pdf">no funcionó, las ambulancias sólo iban a lugares cercanos. Cancelaban servicios y reiniciaban rutas.</a>.</p>
 </section>
 </section>
-<section id="constructos" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="constructos"><span class="header-section-number">18.3</span> Constructos</h2>
-<section id="definición" class="level3" data-number="18.3.1">
-<h3 data-number="18.3.1" class="anchored" data-anchor-id="definición"><span class="header-section-number">18.3.1</span> Definición</h3>
+<section id="constructos" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="constructos"><span class="header-section-number">21.3</span> Constructos</h2>
+<section id="definición" class="level3" data-number="21.3.1">
+<h3 data-number="21.3.1" class="anchored" data-anchor-id="definición"><span class="header-section-number">21.3.1</span> Definición</h3>
 <p>Un constructo es un aspecto medible relacionado con el fenómeno o sistema que se investiga. Un constructo puede ser unidimensional (linealidad) o multidimensional (complejidad). Generalmente, la medición de un constructo no se puede realizar de manera directa. Este concepto es usado en economía, psicometría, marketing, etc.</p>
 <p>Según Gras (1980) un constructo es la representación sobre algún aspecto sobre el objeto que será observado, medido y relacionado con otros constructos.</p>
 </section>
 </section>
-<section id="tipos-de-constructos" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="tipos-de-constructos"><span class="header-section-number">18.4</span> Tipos de constructos</h2>
-<section id="constructos-formativos" class="level3" data-number="18.4.1">
-<h3 data-number="18.4.1" class="anchored" data-anchor-id="constructos-formativos"><span class="header-section-number">18.4.1</span> Constructos formativos</h3>
+<section id="tipos-de-constructos" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="tipos-de-constructos"><span class="header-section-number">21.4</span> Tipos de constructos</h2>
+<section id="constructos-formativos" class="level3" data-number="21.4.1">
+<h3 data-number="21.4.1" class="anchored" data-anchor-id="constructos-formativos"><span class="header-section-number">21.4.1</span> Constructos formativos</h3>
 <p>Se miden a partir de sus causas.</p>
 <ul>
 <li>Calidad.</li>
@@ -700,8 +749,8 @@ window.Quarto = {
 <li>Score de crédito.</li>
 </ul>
 </section>
-<section id="constructos-reflexivos" class="level3" data-number="18.4.2">
-<h3 data-number="18.4.2" class="anchored" data-anchor-id="constructos-reflexivos"><span class="header-section-number">18.4.2</span> Constructos reflexivos</h3>
+<section id="constructos-reflexivos" class="level3" data-number="21.4.2">
+<h3 data-number="21.4.2" class="anchored" data-anchor-id="constructos-reflexivos"><span class="header-section-number">21.4.2</span> Constructos reflexivos</h3>
 <p>Se miden a partir de sus consecuencias.</p>
 <ul>
 <li>Logro académico.</li>
@@ -710,32 +759,32 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="medición-de-constructos" class="level2" data-number="18.5">
-<h2 data-number="18.5" class="anchored" data-anchor-id="medición-de-constructos"><span class="header-section-number">18.5</span> Medición de constructos</h2>
+<section id="medición-de-constructos" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="medición-de-constructos"><span class="header-section-number">21.5</span> Medición de constructos</h2>
 <p>La medición de un constructo es una variable latente. Las variables latentes requieren una medición indirecta, que se realiza a partir de variables observables.</p>
 <p>Briones (1998) establece que los constructos son medibles a través de sus manifestaciones externas, es decir, sus indicadores. Los constructos pueden ser definidos como propiedad subyacentes medidos solamente en forma indirecta, son definiciones mentales de los eventos de objetos los cuales pueden variar.</p>
 <p>Los constructos se miden mediante instrumentos. Los instrumentos pasan por un proceso de validación.</p>
 </section>
-<section id="validación" class="level2" data-number="18.6">
-<h2 data-number="18.6" class="anchored" data-anchor-id="validación"><span class="header-section-number">18.6</span> Validación</h2>
+<section id="validación" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="validación"><span class="header-section-number">21.6</span> Validación</h2>
 <p>Validar un instrumento requiere la realización de un proceso de recolección de datos.</p>
-<section id="validez" class="level3" data-number="18.6.1">
-<h3 data-number="18.6.1" class="anchored" data-anchor-id="validez"><span class="header-section-number">18.6.1</span> Validez</h3>
+<section id="validez" class="level3" data-number="21.6.1">
+<h3 data-number="21.6.1" class="anchored" data-anchor-id="validez"><span class="header-section-number">21.6.1</span> Validez</h3>
 <p>Que el instrumento concuerde con el constructo que dice medir.</p>
 <ul>
 <li>Según algunos, la sección de matemáticas en la prueba Saber 11 depende demasiado de la comprensión de lectura.</li>
 </ul>
 </section>
-<section id="confiabilidad" class="level3" data-number="18.6.2">
-<h3 data-number="18.6.2" class="anchored" data-anchor-id="confiabilidad"><span class="header-section-number">18.6.2</span> Confiabilidad</h3>
+<section id="confiabilidad" class="level3" data-number="21.6.2">
+<h3 data-number="21.6.2" class="anchored" data-anchor-id="confiabilidad"><span class="header-section-number">21.6.2</span> Confiabilidad</h3>
 <p>Al repetir la medición, los resultados se mantienen.</p>
 <ul>
 <li>Según algunos, los resultados de metemáticas de años distintos de la prueba Saber 11, no son comparables entre sí.</li>
 </ul>
 </section>
 </section>
-<section id="validez-de-contenido" class="level2" data-number="18.7">
-<h2 data-number="18.7" class="anchored" data-anchor-id="validez-de-contenido"><span class="header-section-number">18.7</span> Validez de contenido</h2>
+<section id="validez-de-contenido" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="validez-de-contenido"><span class="header-section-number">21.7</span> Validez de contenido</h2>
 <p>Los ítems agotan el constructo.</p>
 <p>Un cuestionario se evalúa solicitando a un grupo de expertos que puntúen los ítems en varios aspectos. Generalmente, los aspectos a evaluar son:</p>
 <ul>
@@ -746,23 +795,23 @@ window.Quarto = {
 </ul>
 <p>La concordancia entre expertos se mide utilizando un procedimiento, como el Kappa de Cohen o el Kappa de Fleiss.</p>
 </section>
-<section id="validez-convergente-y-discriminante" class="level2" data-number="18.8">
-<h2 data-number="18.8" class="anchored" data-anchor-id="validez-convergente-y-discriminante"><span class="header-section-number">18.8</span> Validez convergente y discriminante</h2>
+<section id="validez-convergente-y-discriminante" class="level2" data-number="21.8">
+<h2 data-number="21.8" class="anchored" data-anchor-id="validez-convergente-y-discriminante"><span class="header-section-number">21.8</span> Validez convergente y discriminante</h2>
 <p>Son dos tipos de validez complementarios.</p>
-<section id="convergente" class="level3" data-number="18.8.1">
-<h3 data-number="18.8.1" class="anchored" data-anchor-id="convergente"><span class="header-section-number">18.8.1</span> Convergente</h3>
+<section id="convergente" class="level3" data-number="21.8.1">
+<h3 data-number="21.8.1" class="anchored" data-anchor-id="convergente"><span class="header-section-number">21.8.1</span> Convergente</h3>
 <p>Que los ítems que están relacionados con el constructo en la teoría lo estén en la realidad.</p>
 </section>
-<section id="discriminante" class="level3" data-number="18.8.2">
-<h3 data-number="18.8.2" class="anchored" data-anchor-id="discriminante"><span class="header-section-number">18.8.2</span> Discriminante</h3>
+<section id="discriminante" class="level3" data-number="21.8.2">
+<h3 data-number="21.8.2" class="anchored" data-anchor-id="discriminante"><span class="header-section-number">21.8.2</span> Discriminante</h3>
 <p>Que los ítems que no están relacionados con el constructo en la teoría no lo estén en la realidad.</p>
 </section>
 </section>
-<section id="consistencia-interna" class="level2" data-number="18.9">
-<h2 data-number="18.9" class="anchored" data-anchor-id="consistencia-interna"><span class="header-section-number">18.9</span> Consistencia interna</h2>
+<section id="consistencia-interna" class="level2" data-number="21.9">
+<h2 data-number="21.9" class="anchored" data-anchor-id="consistencia-interna"><span class="header-section-number">21.9</span> Consistencia interna</h2>
 <p>La consistencia interna es la propiedad de los ítems de estár altamente correlacionadas entre sí, lo que indica que están asociadas a un trazo latente. Dado que esta consistencia interna se encuentra reflejada en la estructura de correlación de las variables es posible medirla y analizarla.</p>
-<section id="medidas" class="level3" data-number="18.9.1">
-<h3 data-number="18.9.1" class="anchored" data-anchor-id="medidas"><span class="header-section-number">18.9.1</span> Medidas</h3>
+<section id="medidas" class="level3" data-number="21.9.1">
+<h3 data-number="21.9.1" class="anchored" data-anchor-id="medidas"><span class="header-section-number">21.9.1</span> Medidas</h3>
 <p>Algunas de las medidas más usadas para analizar la consistencia entre variables.</p>
 <ul>
 <li><p><a href="https://doi.org/10.1007/BF02310555">Alfa de Cronbach</a></p></li>
@@ -771,18 +820,18 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="consistencia-externa" class="level2" data-number="18.10">
-<h2 data-number="18.10" class="anchored" data-anchor-id="consistencia-externa"><span class="header-section-number">18.10</span> Consistencia externa</h2>
+<section id="consistencia-externa" class="level2" data-number="21.10">
+<h2 data-number="21.10" class="anchored" data-anchor-id="consistencia-externa"><span class="header-section-number">21.10</span> Consistencia externa</h2>
 <p>La medición que hacemos es consistente con la obtenida mediante otros instrumentos.</p>
 </section>
 </section>
-<section id="taller" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Taller</h1>
-<section id="taller-1" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="taller-1"><span class="header-section-number">19.1</span> Taller</h2>
+<section id="taller" class="level1" data-number="22">
+<h1 data-number="22"><span class="header-section-number">22</span> Taller</h1>
+<section id="taller-1" class="level2" data-number="22.1">
+<h2 data-number="22.1" class="anchored" data-anchor-id="taller-1"><span class="header-section-number">22.1</span> Taller</h2>
 <p>Vamos a revisar la validación de un instrumento.</p>
-<section id="contexto" class="level3" data-number="19.1.1">
-<h3 data-number="19.1.1" class="anchored" data-anchor-id="contexto"><span class="header-section-number">19.1.1</span> Contexto</h3>
+<section id="contexto" class="level3" data-number="22.1.1">
+<h3 data-number="22.1.1" class="anchored" data-anchor-id="contexto"><span class="header-section-number">22.1.1</span> Contexto</h3>
 <p><strong>Propósito</strong> – Este artículo informa sobre el desarrollo y validación de un índice de medición de soborno para el sector empresarial, que, basado en la teoría institucional, busca superar las limitaciones de las mediciones tradicionales, reconociendo las dinámicas que originan el fenómeno e identificando los componentes del proceso.</p>
 <p><strong>Diseño/metodología/enfoque</strong> – Para la construcción del índice se utilizaron técnicas de análisis correlacional y de componentes principales, así como rigurosas pruebas estadísticas, validando el instrumento en una muestra de 2.963 empresas de América Latina, entre ellas Argentina, Colombia, Chile, Ecuador, Guatemala, México y Perú.</p>
 <p><strong>Hallazgos</strong> – El resultado fue un instrumento compuesto por dos dimensiones: (1) reglas de juego antisoborno, que incluyen conocimiento normativo y esfuerzo antisoborno, y (2) soborno como hábito percibido, permitiendo una representación objetiva de la realidad debido a su consistencia interna, validez concurrente y discriminante.</p>
@@ -794,13 +843,13 @@ window.Quarto = {
 <p><strong>H2.</strong> Dado que son indicadores de la institucionalización de fuerzas opuestas, las reglas de juego antisoborno y el soborno como hábito percibido deben tener una correlación negativa.</p>
 <p><img src="theorethical-model.png" class="img-fluid"></p>
 </section>
-<section id="papers" class="level3" data-number="19.1.2">
-<h3 data-number="19.1.2" class="anchored" data-anchor-id="papers"><span class="header-section-number">19.1.2</span> Papers</h3>
+<section id="papers" class="level3" data-number="22.1.2">
+<h3 data-number="22.1.2" class="anchored" data-anchor-id="papers"><span class="header-section-number">22.1.2</span> Papers</h3>
 <p><a href="https://www.emerald.com/insight/content/doi/10.1108/ARLA-04-2022-0099/full/html">Institutionalization of corporate bribery: a measurement proposal with evidence from a Latin American sample</a></p>
 <p><a href="https://www.routledge.com/Organizational-Corruption-Crime-and-Covid-19-Upholding-Integrity-and-Transparency-in-Times-of-Crisis/Stachowicz-Stanusch-Amann-Hauser-Kleinhempel-Tripathi/p/book/9781032548845">4. Is corporate bribery institutionalized in Latin America? Evidence from a comparative study in seven countries</a></p>
 </section>
-<section id="section" class="level3" data-number="19.1.3">
-<h3 data-number="19.1.3" class="anchored" data-anchor-id="section"><span class="header-section-number">19.1.3</span> </h3>
+<section id="section" class="level3" data-number="22.1.3">
+<h3 data-number="22.1.3" class="anchored" data-anchor-id="section"><span class="header-section-number">22.1.3</span> </h3>
 <p><a href="642_analisis_factorial.docx">Ejemplo de medición</a></p>
 <ol type="1">
 <li><p>Escudriñar el documento.</p></li>
@@ -818,10 +867,10 @@ window.Quarto = {
 </section>
 </section>
 </section>
-<section id="tópicos" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Tópicos</h1>
-<section id="reducción-de-dimensiones" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="reducción-de-dimensiones"><span class="header-section-number">20.1</span> Reducción de dimensiones</h2>
+<section id="tópicos" class="level1" data-number="23">
+<h1 data-number="23"><span class="header-section-number">23</span> Tópicos</h1>
+<section id="reducción-de-dimensiones" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="reducción-de-dimensiones"><span class="header-section-number">23.1</span> Reducción de dimensiones</h2>
 <p>Necesitamos reducir las dimensiones de un conjunto de datos por varias razones:</p>
 <ul>
 <li><p>Visualización: poder observar los datos en 2 o 3 dimensiones.</p></li>
@@ -829,40 +878,40 @@ window.Quarto = {
 <li><p>Modelaje: poder disminuir la cantidad de variables que entran en un modelo.</p></li>
 </ul>
 </section>
-<section id="acp" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="acp"><span class="header-section-number">20.2</span> ACP</h2>
+<section id="acp" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="acp"><span class="header-section-number">23.2</span> ACP</h2>
 <p>El análisis de componentes principales es un método de reducción de dimensiones basado en proyecciones de espacios vectoriales.</p>
-<section id="definición-matemática" class="level3" data-number="20.2.1">
-<h3 data-number="20.2.1" class="anchored" data-anchor-id="definición-matemática"><span class="header-section-number">20.2.1</span> Definición matemática</h3>
+<section id="definición-matemática" class="level3" data-number="23.2.1">
+<h3 data-number="23.2.1" class="anchored" data-anchor-id="definición-matemática"><span class="header-section-number">23.2.1</span> Definición matemática</h3>
 <p>Dado un conjunto de variables <span class="math inline">\(X\)</span> el procedimiento encuentra coeficientes <span class="math inline">\(\alpha\)</span> que maximizan la información explicada en su combinación lineal <span class="math inline">\(Z\)</span>, así:</p>
 <p><span class="math display">\[Z = X\alpha = \sum_{i=1}^k \alpha_i X_i\]</span></p>
 </section>
-<section id="significado-matemático" class="level3" data-number="20.2.2">
-<h3 data-number="20.2.2" class="anchored" data-anchor-id="significado-matemático"><span class="header-section-number">20.2.2</span> Significado matemático</h3>
+<section id="significado-matemático" class="level3" data-number="23.2.2">
+<h3 data-number="23.2.2" class="anchored" data-anchor-id="significado-matemático"><span class="header-section-number">23.2.2</span> Significado matemático</h3>
 <p>Esto significa una rotación en el espacio, cambiando los ejes previos por ejes nuevos.</p>
 </section>
 </section>
-<section id="acp-1" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="acp-1"><span class="header-section-number">20.3</span> ACP</h2>
-<section id="características" class="level3" data-number="20.3.1">
-<h3 data-number="20.3.1" class="anchored" data-anchor-id="características"><span class="header-section-number">20.3.1</span> Características</h3>
+<section id="acp-1" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="acp-1"><span class="header-section-number">23.3</span> ACP</h2>
+<section id="características" class="level3" data-number="23.3.1">
+<h3 data-number="23.3.1" class="anchored" data-anchor-id="características"><span class="header-section-number">23.3.1</span> Características</h3>
 <ul>
 <li>Es lineal: las transformaciones que contempla son lineales.</li>
 <li>Es interpretable: es posible establecer cuál variable es más o menos importante.</li>
 <li>Los ejes son interpretables a posteriori.</li>
 </ul>
 </section>
-<section id="ejemplo-1" class="level3" data-number="20.3.2">
-<h3 data-number="20.3.2" class="anchored" data-anchor-id="ejemplo-1"><span class="header-section-number">20.3.2</span> Ejemplo</h3>
+<section id="ejemplo-1" class="level3" data-number="23.3.2">
+<h3 data-number="23.3.2" class="anchored" data-anchor-id="ejemplo-1"><span class="header-section-number">23.3.2</span> Ejemplo</h3>
 <ul>
 <li><a href="http://setosa.io/ev/principal-component-analysis/">setosa.io</a></li>
 </ul>
 </section>
 </section>
-<section id="acp-2" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="acp-2"><span class="header-section-number">20.4</span> ACP</h2>
-<section id="evaluación" class="level3" data-number="20.4.1">
-<h3 data-number="20.4.1" class="anchored" data-anchor-id="evaluación"><span class="header-section-number">20.4.1</span> Evaluación</h3>
+<section id="acp-2" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="acp-2"><span class="header-section-number">23.4</span> ACP</h2>
+<section id="evaluación" class="level3" data-number="23.4.1">
+<h3 data-number="23.4.1" class="anchored" data-anchor-id="evaluación"><span class="header-section-number">23.4.1</span> Evaluación</h3>
 <p>El procedimiento produce:</p>
 <ul>
 <li><p>Un círculo de correlaciones: Deben estar las flechas apuntando todas en la misma dirección.</p></li>
@@ -870,32 +919,37 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="alpha-de-cronbach" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="alpha-de-cronbach"><span class="header-section-number">20.5</span> Alpha de Cronbach</h2>
-<section id="consistencia-interna-1" class="level3" data-number="20.5.1">
-<h3 data-number="20.5.1" class="anchored" data-anchor-id="consistencia-interna-1"><span class="header-section-number">20.5.1</span> Consistencia interna</h3>
+<section id="alpha-de-cronbach" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="alpha-de-cronbach"><span class="header-section-number">23.5</span> Alpha de Cronbach</h2>
+<section id="consistencia-interna-1" class="level3" data-number="23.5.1">
+<h3 data-number="23.5.1" class="anchored" data-anchor-id="consistencia-interna-1"><span class="header-section-number">23.5.1</span> Consistencia interna</h3>
 <p>En los casos donde todas las variables son mediciones indirectas distintas de un mismo aspecto no medible, se hace referencia a la propiedad denominada consistencia interna. La consistencia interna consiste en la propiedad de las variables en estar altamente correlacionadas entre sí, lo que indica que están asociadas a un trazo latente. Dado que esta consistencia interna se encuentra reflejada en a estructura de correlación de las variables es posible medirla y analizarla.</p>
 </section>
 </section>
-<section id="alpha-de-cronbach-1" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="alpha-de-cronbach-1"><span class="header-section-number">20.6</span> Alpha de Cronbach</h2>
-<p>El Alfa de Cronbach <span class="citation" data-cites="Cronbach1951">(<a href="#ref-Cronbach1951" role="doc-biblioref"><strong>Cronbach1951?</strong></a>)</span> es una de las medidas más usadas para analizar la consistencia entre variables.</p>
+<section id="alpha-de-cronbach-1" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="alpha-de-cronbach-1"><span class="header-section-number">23.6</span> Alpha de Cronbach</h2>
+<p>El Alfa de Cronbach <span class="citation" data-cites="Cronbach1951">(<a href="#ref-Cronbach1951" role="doc-biblioref">Cronbach, 1951</a>)</span> es una de las medidas más usadas para analizar la consistencia entre variables.</p>
 <p>Dados <span class="math inline">\(K\)</span> variables <span class="math inline">\(Y_1, Y_2, ..., Y_K\)</span> y su suma <span class="math inline">\(X = Y_1 + Y_2 + ... + Y_K\)</span>, el Alfa de Chronbach está dado por la expresión</p>
 <p><span class="math display">\[\alpha = \frac{K}{K-1} \left(1-\frac{\sum_{i = 1}^K \sigma^2_{Y_i}}{\sigma^2_X}\right)\]</span></p>
 </section>
-<section id="alfa-de-cronbach" class="level2" data-number="20.7">
-<h2 data-number="20.7" class="anchored" data-anchor-id="alfa-de-cronbach"><span class="header-section-number">20.7</span> Alfa de Cronbach</h2>
+<section id="alfa-de-cronbach" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="alfa-de-cronbach"><span class="header-section-number">23.7</span> Alfa de Cronbach</h2>
 <blockquote class="blockquote">
 <p>El valor mínimo aceptable para el coeficiente alfa de Cronbach es 0,70; por debajo de ese valor la consistencia interna de la escala utilizada es baja. Por su parte, el valor máximo esperado es 0,90; por encima de este valor se considera que hay redundancia o duplicación.</p>
 </blockquote>
 <p><a href="http://scielo.org.co/pdf/rcp/v34n4/v34n4a09.pdf">Aproximación al uso del coeficiente alfa de Cronbach</a></p>
 </section>
 </section>
-<section id="referencias" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Referencias</h1>
+<section id="referencias" class="level1" data-number="24">
+<h1 data-number="24"><span class="header-section-number">24</span> Referencias</h1>
 <p>Cohen, R. J., Swerdlik, M. E., &amp; Phillips, S. M. (1996). Psychological testing and assessment: An introduction to tests and measurement. Mayfield Publishing Co.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Cronbach1951" class="csl-entry" role="listitem">
+Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. <em>Psychometrika</em>, <em>16</em>(3), 297-334. http://doi.org/<a href="https://doi.org/10.1007/BF02310555">10.1007/BF02310555</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1321,8 +1375,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03_est-reg.html" class="pagination-link" aria-label="Estadística III">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estadística III</span></span>
+      <a href="./C03_reg-logit.html" class="pagination-link" aria-label="Modelo de regresión logit">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

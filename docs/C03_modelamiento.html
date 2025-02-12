@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>14&nbsp; Modelamiento descriptivo – Estadística para Ciencias Sociales</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./C03_reg-lineal.html" rel="next">
+<link href="./C03_abordaje.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">C03_cover.html</a></li><li class="breadcrumb-item"><a href="./C03_modelamiento.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comencemos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C99_todo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ToDo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C01_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prelim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_prepara.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparación de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_univar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_dist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C01_vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualización</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C02_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_episteme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_estim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_tamano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_hipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C02_pruebas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pruebas y tipos de pruebas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./C03_cover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">C03_cover.html</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_abordaje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_modelamiento.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_reg-lineal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C03_reg-logit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_est-multi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Estadística IV</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#herramientas-del-modelamiento-descriptivo" id="toc-herramientas-del-modelamiento-descriptivo" class="nav-link active" data-scroll-target="#herramientas-del-modelamiento-descriptivo"><span class="header-section-number">14.1</span> Herramientas del modelamiento descriptivo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-descriptivo" id="toc-ejemplos-del-modelamiento-descriptivo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-descriptivo"><span class="header-section-number">14.2</span> Ejemplos del modelamiento descriptivo</a></li>
+  <li><a href="#modelamiento-explicativo" id="toc-modelamiento-explicativo" class="nav-link" data-scroll-target="#modelamiento-explicativo"><span class="header-section-number">14.3</span> Modelamiento explicativo</a></li>
+  <li><a href="#herramientas-del-modelamiento-explicativo" id="toc-herramientas-del-modelamiento-explicativo" class="nav-link" data-scroll-target="#herramientas-del-modelamiento-explicativo"><span class="header-section-number">14.4</span> Herramientas del modelamiento explicativo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-explicativo" id="toc-ejemplos-del-modelamiento-explicativo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-explicativo"><span class="header-section-number">14.5</span> Ejemplos del modelamiento explicativo</a></li>
+  <li><a href="#modelamiento-predictivo" id="toc-modelamiento-predictivo" class="nav-link" data-scroll-target="#modelamiento-predictivo"><span class="header-section-number">14.6</span> Modelamiento predictivo</a></li>
+  <li><a href="#herramientas-del-modelamiento-predictivo" id="toc-herramientas-del-modelamiento-predictivo" class="nav-link" data-scroll-target="#herramientas-del-modelamiento-predictivo"><span class="header-section-number">14.7</span> Herramientas del modelamiento predictivo</a></li>
+  <li><a href="#ejemplos-del-modelamiento-predictivo" id="toc-ejemplos-del-modelamiento-predictivo" class="nav-link" data-scroll-target="#ejemplos-del-modelamiento-predictivo"><span class="header-section-number">14.8</span> Ejemplos del modelamiento predictivo</a></li>
+  <li><a href="#diferencias-clave-entre-describir-explicar-y-pronosticar" id="toc-diferencias-clave-entre-describir-explicar-y-pronosticar" class="nav-link" data-scroll-target="#diferencias-clave-entre-describir-explicar-y-pronosticar"><span class="header-section-number">14.9</span> Diferencias clave entre describir, explicar y pronosticar</a></li>
+  <li><a href="#etapas-del-modelamiento" id="toc-etapas-del-modelamiento" class="nav-link" data-scroll-target="#etapas-del-modelamiento"><span class="header-section-number">14.10</span> Etapas del modelamiento</a>
+  <ul class="collapse">
+  <li><a href="#definición-del-problema" id="toc-definición-del-problema" class="nav-link" data-scroll-target="#definición-del-problema"><span class="header-section-number">14.10.1</span> Definición del problema</a></li>
+  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos"><span class="header-section-number">14.10.2</span> Recolección de datos</a></li>
+  <li><a href="#preparación-y-exploración-de-los-datos" id="toc-preparación-y-exploración-de-los-datos" class="nav-link" data-scroll-target="#preparación-y-exploración-de-los-datos"><span class="header-section-number">14.10.3</span> Preparación y exploración de los datos</a></li>
+  </ul></li>
+  <li><a href="#formulación-del-modelo" id="toc-formulación-del-modelo" class="nav-link" data-scroll-target="#formulación-del-modelo"><span class="header-section-number">14.11</span> Formulación del modelo</a></li>
+  <li><a href="#estimación-del-modelo" id="toc-estimación-del-modelo" class="nav-link" data-scroll-target="#estimación-del-modelo"><span class="header-section-number">14.12</span> Estimación del modelo</a></li>
+  <li><a href="#evaluación-del-modelo" id="toc-evaluación-del-modelo" class="nav-link" data-scroll-target="#evaluación-del-modelo"><span class="header-section-number">14.13</span> Evaluación del modelo</a></li>
+  <li><a href="#interpretación-y-presentación-de-resultados" id="toc-interpretación-y-presentación-de-resultados" class="nav-link" data-scroll-target="#interpretación-y-presentación-de-resultados"><span class="header-section-number">14.14</span> Interpretación y presentación de resultados</a></li>
+  <li><a href="#aplicación-del-modelo" id="toc-aplicación-del-modelo" class="nav-link" data-scroll-target="#aplicación-del-modelo"><span class="header-section-number">14.15</span> Aplicación del modelo</a></li>
+  <li><a href="#selección-de-datos" id="toc-selección-de-datos" class="nav-link" data-scroll-target="#selección-de-datos"><span class="header-section-number">14.16</span> Selección de datos</a></li>
+  <li><a href="#análisis-descriptivo" id="toc-análisis-descriptivo" class="nav-link" data-scroll-target="#análisis-descriptivo"><span class="header-section-number">14.17</span> Análisis descriptivo</a></li>
+  <li><a href="#análisis-descriptivo-univariado" id="toc-análisis-descriptivo-univariado" class="nav-link" data-scroll-target="#análisis-descriptivo-univariado"><span class="header-section-number">14.18</span> Análisis descriptivo univariado</a></li>
+  <li><a href="#generación-de-visualizaciones" id="toc-generación-de-visualizaciones" class="nav-link" data-scroll-target="#generación-de-visualizaciones"><span class="header-section-number">14.19</span> Generación de visualizaciones</a></li>
+  <li><a href="#análisis-correlacional" id="toc-análisis-correlacional" class="nav-link" data-scroll-target="#análisis-correlacional"><span class="header-section-number">14.20</span> Análisis correlacional</a></li>
+  <li><a href="#análisis-de-desagregación" id="toc-análisis-de-desagregación" class="nav-link" data-scroll-target="#análisis-de-desagregación"><span class="header-section-number">14.21</span> Análisis de desagregación</a></li>
+  <li><a href="#correlación-desagregación-y-causalidad" id="toc-correlación-desagregación-y-causalidad" class="nav-link" data-scroll-target="#correlación-desagregación-y-causalidad"><span class="header-section-number">15</span> Correlación, desagregación y causalidad</a>
+  <ul class="collapse">
+  <li><a href="#correlación-numérica---numérica" id="toc-correlación-numérica---numérica" class="nav-link" data-scroll-target="#correlación-numérica---numérica"><span class="header-section-number">15.1</span> Correlación numérica - numérica</a></li>
+  <li><a href="#dependencia-e-independencia-lineal" id="toc-dependencia-e-independencia-lineal" class="nav-link" data-scroll-target="#dependencia-e-independencia-lineal"><span class="header-section-number">15.2</span> Dependencia e independencia lineal:</a></li>
+  <li><a href="#regresión" id="toc-regresión" class="nav-link" data-scroll-target="#regresión"><span class="header-section-number">15.3</span> Regresión</a>
+  <ul class="collapse">
+  <li><a href="#componentes" id="toc-componentes" class="nav-link" data-scroll-target="#componentes"><span class="header-section-number">15.3.1</span> Componentes:</a></li>
+  </ul></li>
+  <li><a href="#causalidad" id="toc-causalidad" class="nav-link" data-scroll-target="#causalidad"><span class="header-section-number">15.4</span> Causalidad</a></li>
+  <li><a href="#causalidad-1" id="toc-causalidad-1" class="nav-link" data-scroll-target="#causalidad-1"><span class="header-section-number">15.5</span> Causalidad</a>
+  <ul class="collapse">
+  <li><a href="#actividad-en-clase" id="toc-actividad-en-clase" class="nav-link" data-scroll-target="#actividad-en-clase"><span class="header-section-number">15.5.1</span> Actividad en clase</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#modelamiento-estadístico" id="toc-modelamiento-estadístico" class="nav-link" data-scroll-target="#modelamiento-estadístico"><span class="header-section-number">16</span> Modelamiento estadístico</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-un-modelo-estadístico" id="toc-qué-es-un-modelo-estadístico" class="nav-link" data-scroll-target="#qué-es-un-modelo-estadístico"><span class="header-section-number">16.1</span> Qué es un modelo estadístico</a></li>
+  <li><a href="#proceso-de-modelamieto-estadístico" id="toc-proceso-de-modelamieto-estadístico" class="nav-link" data-scroll-target="#proceso-de-modelamieto-estadístico"><span class="header-section-number">16.2</span> Proceso de modelamieto estadístico</a></li>
+  <li><a href="#formulación" id="toc-formulación" class="nav-link" data-scroll-target="#formulación"><span class="header-section-number">16.3</span> Formulación</a>
+  <ul class="collapse">
+  <li><a href="#partes-de-un-modelo" id="toc-partes-de-un-modelo" class="nav-link" data-scroll-target="#partes-de-un-modelo"><span class="header-section-number">16.3.1</span> Partes de un modelo</a></li>
+  </ul></li>
+  <li><a href="#formulación-1" id="toc-formulación-1" class="nav-link" data-scroll-target="#formulación-1"><span class="header-section-number">16.4</span> Formulación</a>
+  <ul class="collapse">
+  <li><a href="#especificación-matemática" id="toc-especificación-matemática" class="nav-link" data-scroll-target="#especificación-matemática"><span class="header-section-number">16.4.1</span> Especificación matemática</a></li>
+  </ul></li>
+  <li><a href="#formulación-2" id="toc-formulación-2" class="nav-link" data-scroll-target="#formulación-2"><span class="header-section-number">16.5</span> Formulación</a>
+  <ul class="collapse">
+  <li><a href="#supuestos-teóricos" id="toc-supuestos-teóricos" class="nav-link" data-scroll-target="#supuestos-teóricos"><span class="header-section-number">16.5.1</span> Supuestos teóricos</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste" id="toc-estimación-y-ajuste" class="nav-link" data-scroll-target="#estimación-y-ajuste"><span class="header-section-number">16.6</span> Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#parámetros-y-estimadores" id="toc-parámetros-y-estimadores" class="nav-link" data-scroll-target="#parámetros-y-estimadores"><span class="header-section-number">16.6.1</span> Parámetros y estimadores</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste-1" id="toc-estimación-y-ajuste-1" class="nav-link" data-scroll-target="#estimación-y-ajuste-1"><span class="header-section-number">16.7</span> Estimación y ajuste</a></li>
+  <li><a href="#estimación-y-ajuste-2" id="toc-estimación-y-ajuste-2" class="nav-link" data-scroll-target="#estimación-y-ajuste-2"><span class="header-section-number">16.8</span> Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual"><span class="header-section-number">16.8.1</span> Estimación puntual</a></li>
+  </ul></li>
+  <li><a href="#estimación-y-ajuste-3" id="toc-estimación-y-ajuste-3" class="nav-link" data-scroll-target="#estimación-y-ajuste-3"><span class="header-section-number">16.9</span> Estimación y ajuste</a></li>
+  <li><a href="#estimación-y-ajuste-4" id="toc-estimación-y-ajuste-4" class="nav-link" data-scroll-target="#estimación-y-ajuste-4"><span class="header-section-number">16.10</span> Estimación y ajuste</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento"><span class="header-section-number">16.10.1</span> Procedimiento:</a></li>
+  </ul></li>
+  <li><a href="#validación-y-evaluación" id="toc-validación-y-evaluación" class="nav-link" data-scroll-target="#validación-y-evaluación"><span class="header-section-number">16.11</span> Validación y evaluación</a>
+  <ul class="collapse">
+  <li><a href="#métricas-de-evaluación" id="toc-métricas-de-evaluación" class="nav-link" data-scroll-target="#métricas-de-evaluación"><span class="header-section-number">16.11.1</span> Métricas de evaluación</a></li>
+  </ul></li>
+  <li><a href="#modelos" id="toc-modelos" class="nav-link" data-scroll-target="#modelos"><span class="header-section-number">16.12</span> Modelos</a>
+  <ul class="collapse">
+  <li><a href="#regresión-aprendizaje-supervisado" id="toc-regresión-aprendizaje-supervisado" class="nav-link" data-scroll-target="#regresión-aprendizaje-supervisado"><span class="header-section-number">16.12.1</span> Regresión (aprendizaje supervisado)</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos"><span class="header-section-number">16.12.2</span> Ejemplos</a></li>
+  <li><a href="#métodos-multivariados-aprendizaje-no-supervisado" id="toc-métodos-multivariados-aprendizaje-no-supervisado" class="nav-link" data-scroll-target="#métodos-multivariados-aprendizaje-no-supervisado"><span class="header-section-number">16.12.3</span> Métodos multivariados (aprendizaje no supervisado)</a></li>
+  <li><a href="#ejemplos-1" id="toc-ejemplos-1" class="nav-link" data-scroll-target="#ejemplos-1"><span class="header-section-number">16.12.4</span> Ejemplos</a></li>
+  </ul></li>
+  <li><a href="#modelos-de-regresión-explicativos" id="toc-modelos-de-regresión-explicativos" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos"><span class="header-section-number">16.13</span> Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-1" id="toc-modelos-de-regresión-explicativos-1" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-1"><span class="header-section-number">16.14</span> Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-2" id="toc-modelos-de-regresión-explicativos-2" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-2"><span class="header-section-number">16.15</span> Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-3" id="toc-modelos-de-regresión-explicativos-3" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-3"><span class="header-section-number">16.16</span> Modelos de regresión explicativos</a></li>
+  <li><a href="#modelos-de-regresión-explicativos-4" id="toc-modelos-de-regresión-explicativos-4" class="nav-link" data-scroll-target="#modelos-de-regresión-explicativos-4"><span class="header-section-number">16.17</span> Modelos de regresión explicativos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">C03_cover.html</a></li><li class="breadcrumb-item"><a href="./C03_modelamiento.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Modelamiento descriptivo</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>El modelamiento descriptivo se centra en resumir y visualizar los datos, proporcionando una imagen clara de lo que los datos muestran. Es el primer paso en cualquier análisis de datos, ya que ayuda a entender el contexto y las características básicas del conjunto de datos.</p>
+<section id="herramientas-del-modelamiento-descriptivo" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="herramientas-del-modelamiento-descriptivo"><span class="header-section-number">14.1</span> Herramientas del modelamiento descriptivo</h2>
+<p>Las herramientas más comunes para el modelamiento descriptivo incluyen:</p>
+<ul>
+<li><strong>Tablas de frecuencia:</strong> que muestran cómo se distribuyen los valores de una variable.</li>
+<li><strong>Medidas de tendencia central:</strong> como la media, mediana y moda, que resumen el valor típico de los datos.</li>
+<li><strong>Medidas de dispersión:</strong> como la varianza y la desviación estándar, que indican cuánta variación hay en los datos.</li>
+<li><strong>Gráficos:</strong> como histogramas, diagramas de dispersión y gráficos de caja, que ayudan a visualizar la distribución y las relaciones entre variables.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-descriptivo" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="ejemplos-del-modelamiento-descriptivo"><span class="header-section-number">14.2</span> Ejemplos del modelamiento descriptivo</h2>
+<ul>
+<li><strong>Análisis de la distribución de la edad en una población:</strong> utilizando histogramas y medidas de tendencia central para resumir los datos.</li>
+<li><strong>Estudio de la dispersión de precios en diferentes mercados:</strong> utilizando gráficos de caja para comparar la variabilidad entre diferentes ubicaciones.</li>
+</ul>
+</section>
+<section id="modelamiento-explicativo" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="modelamiento-explicativo"><span class="header-section-number">14.3</span> Modelamiento explicativo</h2>
+<p>El modelamiento explicativo busca entender las causas y efectos dentro de un conjunto de datos. Este tipo de modelamiento es fundamental para probar hipótesis y teorías científicas, ya que permite establecer relaciones causales entre variables.</p>
+</section>
+<section id="herramientas-del-modelamiento-explicativo" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="herramientas-del-modelamiento-explicativo"><span class="header-section-number">14.4</span> Herramientas del modelamiento explicativo</h2>
+<p>Las herramientas más comunes para el modelamiento explicativo incluyen:</p>
+<ul>
+<li><strong>Regresión lineal:</strong> que permite examinar la relación entre una variable dependiente y una o más variables independientes.</li>
+<li><strong>Análisis de varianza (ANOVA):</strong> que se utiliza para comparar las medias de diferentes grupos y determinar si las diferencias observadas son estadísticamente significativas.</li>
+<li><strong>Modelos estructurales:</strong> que permiten analizar relaciones complejas entre múltiples variables, incluyendo efectos directos e indirectos.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-explicativo" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="ejemplos-del-modelamiento-explicativo"><span class="header-section-number">14.5</span> Ejemplos del modelamiento explicativo</h2>
+<ul>
+<li><strong>Estudio de los factores que afectan el rendimiento académico:</strong> utilizando regresión lineal para examinar el impacto de variables como el tiempo de estudio, el apoyo familiar y las características socioeconómicas.</li>
+<li><strong>Investigación sobre los determinantes de la satisfacción laboral:</strong> utilizando ANOVA para comparar diferentes grupos de empleados y entender cómo factores como el salario, las condiciones de trabajo y el liderazgo influyen en la satisfacción.</li>
+</ul>
+</section>
+<section id="modelamiento-predictivo" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="modelamiento-predictivo"><span class="header-section-number">14.6</span> Modelamiento predictivo</h2>
+<p>El modelamiento predictivo se utiliza para hacer predicciones sobre eventos futuros basados en datos históricos. Este tipo de modelamiento es clave en áreas como el pronóstico del tiempo, la predicción de ventas, y la identificación de riesgos en finanzas.</p>
+</section>
+<section id="herramientas-del-modelamiento-predictivo" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="herramientas-del-modelamiento-predictivo"><span class="header-section-number">14.7</span> Herramientas del modelamiento predictivo</h2>
+<p>Las herramientas más comunes para el modelamiento predictivo incluyen:</p>
+<ul>
+<li><strong>Regresión logística:</strong> que se utiliza para predecir una variable categórica, como el resultado de una elección o la probabilidad de que ocurra un evento.</li>
+<li><strong>Árboles de decisión:</strong> que dividen los datos en ramas para tomar decisiones basadas en reglas simples.</li>
+<li><strong>Modelos de series temporales:</strong> que analizan datos secuenciales en el tiempo para hacer predicciones sobre futuros puntos en la serie.</li>
+</ul>
+</section>
+<section id="ejemplos-del-modelamiento-predictivo" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="ejemplos-del-modelamiento-predictivo"><span class="header-section-number">14.8</span> Ejemplos del modelamiento predictivo</h2>
+<ul>
+<li><strong>Predicción del comportamiento del cliente en una tienda en línea:</strong> utilizando regresión logística para determinar la probabilidad de que un cliente compre un producto basado en su historial de navegación.</li>
+<li><strong>Pronóstico de la demanda de energía:</strong> utilizando modelos de series temporales para predecir el consumo de energía en diferentes estaciones del año.</li>
+</ul>
+</section>
+<section id="diferencias-clave-entre-describir-explicar-y-pronosticar" class="level2" data-number="14.9">
+<h2 data-number="14.9" class="anchored" data-anchor-id="diferencias-clave-entre-describir-explicar-y-pronosticar"><span class="header-section-number">14.9</span> Diferencias clave entre describir, explicar y pronosticar</h2>
+<p>Es fundamental distinguir entre los objetivos del modelamiento descriptivo, explicativo y predictivo:</p>
+<ul>
+<li><strong>Describir</strong> se enfoca en resumir y visualizar los datos existentes.</li>
+<li><strong>Explicar</strong> busca entender las relaciones causales y los mecanismos subyacentes en los datos.</li>
+<li><strong>Pronosticar</strong> se orienta hacia la predicción de futuros eventos o comportamientos basados en patrones observados en los datos.</li>
+</ul>
+</section>
+<section id="etapas-del-modelamiento" class="level2" data-number="14.10">
+<h2 data-number="14.10" class="anchored" data-anchor-id="etapas-del-modelamiento"><span class="header-section-number">14.10</span> Etapas del modelamiento</h2>
+<p>El modelamiento es un proceso complejo que involucra varias etapas clave, desde la definición del problema hasta la aplicación del modelo para realizar predicciones o comprender un fenómeno. Cada etapa es esencial para garantizar que el modelo sea preciso, interpretable y útil.</p>
+<p><strong>Definición del problema:</strong> establecer el objetivo del modelamiento.</p>
+<p><strong>Recolección de datos:</strong> recopilar y preparar los datos que se utilizarán en el modelamiento.</p>
+<p><strong>Exploración y preparación:</strong> entender la naturaleza y características de los datos disponibles.</p>
+<p><strong>Formulación del modelo:</strong> plantear el modelo más adecuado según los objetivos. Debe existir una coincidencia entre los conceptos del contexto y las variables del modelo.</p>
+<p><strong>Estimación del modelo:</strong> ajustar el modelo a los datos para obtener los parámetros que mejor representen las relaciones subyacentes.</p>
+<p><strong>Evaluación del modelo:</strong> verificar la calidad del modelo utilizando medidas de ajuste y validación cruzada.</p>
+<p><strong>Interpretación y presentación de resultados:</strong> analizar los resultados del modelo y presentarlos de manera comprensible para el público objetivo.</p>
+<p><strong>Aplicación del modelo:</strong> utilizar el modelo para hacer predicciones o para comprender mejor el fenómeno en estudio.</p>
+<section id="definición-del-problema" class="level3" data-number="14.10.1">
+<h3 data-number="14.10.1" class="anchored" data-anchor-id="definición-del-problema"><span class="header-section-number">14.10.1</span> Definición del problema</h3>
+<p>La definición del problema es la primera y más crucial etapa en el proceso de modelamiento. Aquí se establece el objetivo del estudio, las preguntas de investigación que se desean responder y las hipótesis que se pretenden probar. Una clara definición del problema orienta todo el proceso de modelamiento, asegurando que los esfuerzos se centren en las preguntas más relevantes y que los resultados sean útiles para la toma de decisiones.</p>
+<p>En esta etapa, es importante:</p>
+<ul>
+<li><strong>Identificar el fenómeno de interés:</strong> ¿Qué es lo que se desea entender, explicar o predecir?</li>
+<li><strong>Delimitar el alcance del estudio:</strong> ¿Cuáles son los límites del problema? ¿Qué variables serán incluidas o excluidas?</li>
+<li><strong>Establecer los objetivos del modelamiento:</strong> ¿Qué se espera lograr con el modelo? ¿Se busca una descripción, una explicación o una predicción?</li>
+</ul>
+</section>
+<section id="recolección-de-datos" class="level3" data-number="14.10.2">
+<h3 data-number="14.10.2" class="anchored" data-anchor-id="recolección-de-datos"><span class="header-section-number">14.10.2</span> Recolección de datos</h3>
+<p>La recolección de datos es el proceso de obtener la información necesaria para desarrollar y ajustar el modelo. Los datos pueden provenir de diversas fuentes, como encuestas, experimentos, registros históricos o bases de datos públicas. La calidad y la relevancia de los datos son fundamentales para el éxito del modelamiento.</p>
+<p>Durante esta etapa se deben considerar los siguientes aspectos:</p>
+<ul>
+<li><strong>Selección de fuentes de datos:</strong> ¿De dónde se obtendrán los datos? ¿Son fiables y relevantes para el problema definido?</li>
+<li><strong>Preparación de los datos:</strong> ¿Cómo se limpiarán, transformarán y organizarán los datos para que sean adecuados para el análisis? Esto puede incluir la eliminación de valores atípicos, el manejo de datos faltantes y la normalización de variables.</li>
+<li><strong>Validación de datos:</strong> ¿Cómo se asegurará la calidad y precisión de los datos recolectados?</li>
+</ul>
+</section>
+<section id="preparación-y-exploración-de-los-datos" class="level3" data-number="14.10.3">
+<h3 data-number="14.10.3" class="anchored" data-anchor-id="preparación-y-exploración-de-los-datos"><span class="header-section-number">14.10.3</span> Preparación y exploración de los datos</h3>
+<p>La <strong>preparación y exploración de los datos</strong> es una fase crucial en cualquier proceso de modelamiento, ya que los datos en bruto generalmente no están listos para ser utilizados directamente en un modelo. Esta fase implica una serie de actividades destinadas a comprender, limpiar, y transformar los datos para que sean adecuados para el análisis.</p>
+</section>
+</section>
+<section id="formulación-del-modelo" class="level2" data-number="14.11">
+<h2 data-number="14.11" class="anchored" data-anchor-id="formulación-del-modelo"><span class="header-section-number">14.11</span> Formulación del modelo</h2>
+<p>La selección del modelo es la etapa en la que se elige el tipo de modelo más adecuado para los datos y los objetivos de la investigación. Dependiendo del tipo de problema, se pueden considerar diferentes enfoques de modelamiento, como modelos descriptivos, explicativos o predictivos.</p>
+<p>Consideraciones clave durante esta etapa incluyen:</p>
+<ul>
+<li><strong>Naturaleza del fenómeno:</strong> ¿Qué tipo de relación existe entre las variables? ¿Es lineal, no lineal, categórica, etc.?</li>
+<li><strong>Complejidad del modelo:</strong> ¿Se necesita un modelo simple y fácil de interpretar, o es preferible un modelo complejo que capture más detalles?</li>
+<li><strong>Disponibilidad de herramientas:</strong> ¿Qué herramientas de software y métodos estadísticos están disponibles para ajustar el modelo?</li>
+<li><strong>Soporte teórico del modelo:</strong> ¿Qué supuestos tiene el modelo? ¿Cuáles son relacionales? ¿Cuáles son distribucionales? ¿Qué hipótesis resuelve?</li>
+</ul>
+</section>
+<section id="estimación-del-modelo" class="level2" data-number="14.12">
+<h2 data-number="14.12" class="anchored" data-anchor-id="estimación-del-modelo"><span class="header-section-number">14.12</span> Estimación del modelo</h2>
+<p>La estimación del modelo implica ajustar el modelo seleccionado a los datos, es decir, encontrar los parámetros que mejor representan la relación entre las variables. Esta etapa es crucial para garantizar que el modelo sea una representación precisa y válida del fenómeno en estudio.</p>
+<p>Pasos en la estimación del modelo:</p>
+<ul>
+<li><strong>Ajuste del modelo:</strong> Utilización de métodos estadísticos para estimar los parámetros del modelo, como la regresión lineal, máxima verosimilitud, o técnicas de machine learning.</li>
+<li><strong>Pruebas de significancia:</strong> Evaluación de la significancia estadística de los parámetros estimados para determinar si tienen un impacto real en las variables dependientes.</li>
+<li><strong>Verificación de supuestos:</strong> Comprobación de que los supuestos del modelo se cumplen, como la normalidad de los errores, la homocedasticidad y la independencia de las observaciones.</li>
+</ul>
+</section>
+<section id="evaluación-del-modelo" class="level2" data-number="14.13">
+<h2 data-number="14.13" class="anchored" data-anchor-id="evaluación-del-modelo"><span class="header-section-number">14.13</span> Evaluación del modelo</h2>
+<p>La evaluación del modelo es una etapa crítica donde se examina la precisión y la validez del modelo ajustado. Aquí se utilizan diversas métricas y pruebas para determinar si el modelo es adecuado y si puede generalizarse a otros datos.</p>
+<p>Aspectos a considerar durante la evaluación:</p>
+<ul>
+<li><strong>Medidas de ajuste:</strong> ¿Qué tan bien se ajusta el modelo a los datos observados? Medidas como el R², el error cuadrático medio (RMSE) y la log-verosimilitud se utilizan para evaluar el ajuste.</li>
+<li><strong>Validación cruzada:</strong> ¿Cómo se desempeña el modelo cuando se aplica a nuevos datos no utilizados en la estimación? La validación cruzada y la prueba en conjuntos de datos separados son técnicas comunes.</li>
+<li><strong>Análisis de residuos:</strong> ¿Los residuos del modelo son aleatorios y no muestran patrones sistemáticos? Este análisis ayuda a verificar la adecuación del modelo.</li>
+</ul>
+</section>
+<section id="interpretación-y-presentación-de-resultados" class="level2" data-number="14.14">
+<h2 data-number="14.14" class="anchored" data-anchor-id="interpretación-y-presentación-de-resultados"><span class="header-section-number">14.14</span> Interpretación y presentación de resultados</h2>
+<p>Una vez que el modelo ha sido estimado y evaluado, la siguiente etapa es interpretar los resultados y presentarlos de manera que sean comprensibles y útiles para los tomadores de decisiones. La claridad en la interpretación es crucial para que los resultados del modelamiento tengan un impacto significativo.</p>
+<p>Puntos clave en esta etapa:</p>
+<ul>
+<li><strong>Interpretación de los parámetros:</strong> ¿Qué significan los coeficientes estimados en el contexto del problema? ¿Cómo se relacionan las variables independientes con la variable dependiente?</li>
+<li><strong>Visualización de resultados:</strong> ¿Cómo se pueden presentar los resultados de manera visual, utilizando gráficos y tablas para facilitar su comprensión?</li>
+<li><strong>Conclusiones y recomendaciones:</strong> ¿Qué conclusiones se pueden extraer del análisis? ¿Qué recomendaciones pueden hacerse en base a los resultados del modelo?</li>
+</ul>
+</section>
+<section id="aplicación-del-modelo" class="level2" data-number="14.15">
+<h2 data-number="14.15" class="anchored" data-anchor-id="aplicación-del-modelo"><span class="header-section-number">14.15</span> Aplicación del modelo</h2>
+<p>La aplicación del modelo es la fase final, donde los resultados obtenidos del modelamiento se utilizan para tomar decisiones, hacer predicciones, o profundizar el entendimiento del fenómeno en estudio. Esta etapa puede incluir la implementación del modelo en sistemas de apoyo a la decisión, el uso del modelo para la planificación estratégica, o la publicación de los hallazgos en un contexto académico.</p>
+<p>Consideraciones en la aplicación del modelo:</p>
+<ul>
+<li><strong>Implementación:</strong> ¿Cómo se utilizará el modelo en la práctica? ¿Qué sistemas o procesos se verán afectados por la implementación del modelo?</li>
+<li><strong>Monitoreo y actualización:</strong> ¿Cómo se monitoreará el desempeño del modelo a lo largo del tiempo? ¿Qué mecanismos se establecerán para actualizar el modelo con nuevos datos?</li>
+<li><strong>Evaluación del impacto:</strong> ¿Qué impacto tiene la aplicación del modelo en los resultados esperados? ¿Se cumplen los objetivos iniciales del modelamiento?</li>
+</ul>
+</section>
+<section id="selección-de-datos" class="level2" data-number="14.16">
+<h2 data-number="14.16" class="anchored" data-anchor-id="selección-de-datos"><span class="header-section-number">14.16</span> Selección de datos</h2>
+<ul>
+<li><strong>Selección de características:</strong> Identificación de variables irrelevantes o redundantes para simplificar el modelo y mejorar su interpretabilidad.</li>
+<li><strong>Partición en conjuntos de entrenamiento y prueba:</strong> Separación de los datos en conjuntos de entrenamiento y validación para evaluar el rendimiento del modelo de manera más robusta.</li>
+</ul>
+</section>
+<section id="análisis-descriptivo" class="level2" data-number="14.17">
+<h2 data-number="14.17" class="anchored" data-anchor-id="análisis-descriptivo"><span class="header-section-number">14.17</span> Análisis descriptivo</h2>
+<p>El análisis descriptivo permite generar un diagnóstico sobre el contexto y apoya la selección de los modelos a ajustar.</p>
+</section>
+<section id="análisis-descriptivo-univariado" class="level2" data-number="14.18">
+<h2 data-number="14.18" class="anchored" data-anchor-id="análisis-descriptivo-univariado"><span class="header-section-number">14.18</span> Análisis descriptivo univariado</h2>
+<ul>
+<li><strong>Media</strong>: Es el promedio de los valores de la variable. Proporciona una medida central de la distribución.</li>
+<li><strong>Mediana</strong>: Es el valor que divide la distribución en dos partes iguales. Útil para datos sesgados.</li>
+<li><strong>Desviación estándar</strong>: Mide la dispersión de los datos en relación con la media. Indica qué tan dispersos están los valores.</li>
+<li><strong>Moda</strong>: El valor que aparece con mayor frecuencia en el conjunto de datos.</li>
+<li><strong>Rango</strong>: Diferencia entre el valor máximo y el mínimo de la distribución.</li>
+</ul>
+</section>
+<section id="generación-de-visualizaciones" class="level2" data-number="14.19">
+<h2 data-number="14.19" class="anchored" data-anchor-id="generación-de-visualizaciones"><span class="header-section-number">14.19</span> Generación de visualizaciones</h2>
+<ul>
+<li><strong>Gráficos de dispersión</strong>: Utilizados para examinar la relación entre dos variables numéricas. Pueden ayudar a detectar correlaciones o patrones.</li>
+<li><strong>Histogramas</strong>: Representaciones gráficas que muestran la distribución de una variable continua. Ayudan a visualizar la frecuencia de los valores en diferentes intervalos.</li>
+<li><strong>Diagramas de caja (boxplots)</strong>: Herramientas gráficas que muestran la mediana, los cuartiles y los posibles valores atípicos de una variable. Útiles para identificar la dispersión y la simetría de la distribución.</li>
+<li><strong>Diagramas de violín</strong>: Combinan un diagrama de caja con un gráfico de densidad, proporcionando una visión más detallada de la distribución de la variable.</li>
+</ul>
+</section>
+<section id="análisis-correlacional" class="level2" data-number="14.20">
+<h2 data-number="14.20" class="anchored" data-anchor-id="análisis-correlacional"><span class="header-section-number">14.20</span> Análisis correlacional</h2>
+<ul>
+<li><strong>Correlación de Pearson</strong>: Mide la fuerza y dirección de la relación lineal entre dos variables numéricas.</li>
+<li><strong>Correlación de Spearman</strong>: Mide la fuerza y dirección de la relación monótona entre dos variables, sin requerir que la relación sea lineal.</li>
+<li><strong>Correlación de Kendall</strong>: Mide la concordancia entre dos variables ordinales, útil para datos con rangos.</li>
+<li><strong>Matriz de correlación</strong>: Tabla que muestra las correlaciones entre múltiples variables a la vez. Es útil para identificar rápidamente relaciones fuertes o débiles entre varias variables.</li>
+</ul>
+</section>
+<section id="análisis-de-desagregación" class="level2" data-number="14.21">
+<h2 data-number="14.21" class="anchored" data-anchor-id="análisis-de-desagregación"><span class="header-section-number">14.21</span> Análisis de desagregación</h2>
+<ul>
+<li><strong>Desagregación de datos</strong>: Separar los datos en subgrupos basados en categorías de una variable para examinar patrones o tendencias dentro de cada subgrupo.</li>
+<li><strong>Exploración de la estructura de los datos</strong>: Identificar patrones claros en los datos, como tendencias o ciclos, que puedan indicar la necesidad de una transformación.</li>
+</ul>
+</section>
+<section id="correlación-desagregación-y-causalidad" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Correlación, desagregación y causalidad</h1>
+<section id="correlación-numérica---numérica" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="correlación-numérica---numérica"><span class="header-section-number">15.1</span> Correlación numérica - numérica</h2>
+<p>La asociación de variables es la herramienta que nos permite explorar y entender las relaciones entre diferentes conjuntos de datos. La correlación mide la fuerza y la dirección de la relación entre dos variables.</p>
+</section>
+<section id="dependencia-e-independencia-lineal" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="dependencia-e-independencia-lineal"><span class="header-section-number">15.2</span> Dependencia e independencia lineal:</h2>
+<ul>
+<li><strong>Positiva</strong>: La relación es tal que a medida que una variable aumenta, la otra también tiende a aumentar. Ejemplo: La relación entre la altura y el peso de una persona.</li>
+<li><strong>Negativa</strong>: La relación es tal que a medida que una variable aumenta, la otra tiende a disminuir. Ejemplo: La relación entre el precio de un producto y la cantidad demandada.</li>
+<li><strong>Independiente</strong>: No hay una relación aparente entre las dos variables. Ejemplo: La relación entre el color de los ojos y el salario de una persona.</li>
+</ul>
+</section>
+<section id="regresión" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="regresión"><span class="header-section-number">15.3</span> Regresión</h2>
+<p><span class="math display">\[
+y = \beta_0 + X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+\]</span></p>
+<p>Técnica estadística utilizada para modelar y analizar la relación entre una variable dependiente y una o más variables independientes.</p>
+<section id="componentes" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="componentes"><span class="header-section-number">15.3.1</span> Componentes:</h3>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span>: Intersección (constante).</li>
+<li><span class="math inline">\(X_i\)</span>: Variables independientes.</li>
+<li><span class="math inline">\(\beta_i\)</span>: Coeficientes de las variables independientes.</li>
+<li><span class="math inline">\(\varepsilon\)</span>: Error aleatorio.</li>
+</ul>
+</section>
+</section>
+<section id="causalidad" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="causalidad"><span class="header-section-number">15.4</span> Causalidad</h2>
+<p>La manera óptima de comprobar causalidad es ediante un experimento.</p>
+<ul>
+<li><strong>Definición</strong>: Método para establecer relaciones causales entre variables mediante la manipulación controlada de una o más variables independientes y la observación del efecto en una o más variables dependientes.</li>
+<li><strong>Importancia</strong>: Permite inferir causalidad en lugar de solo correlación, lo cual es crucial para la validez de los resultados.</li>
+<li><strong>Ejemplo</strong>: Un experimento clínico donde se prueba el efecto de un nuevo medicamento en la presión arterial de los pacientes.</li>
+</ul>
+</section>
+<section id="causalidad-1" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="causalidad-1"><span class="header-section-number">15.5</span> Causalidad</h2>
+<section id="actividad-en-clase" class="level3" data-number="15.5.1">
+<h3 data-number="15.5.1" class="anchored" data-anchor-id="actividad-en-clase"><span class="header-section-number">15.5.1</span> Actividad en clase</h3>
+<p>En parejas, generar un escrito sobre la causalidad desde la perspectiva de un autor teórico que elijan. Extensión máxima de cuartilla.</p>
+</section>
+</section>
+</section>
+<section id="modelamiento-estadístico" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> Modelamiento estadístico</h1>
+<section id="qué-es-un-modelo-estadístico" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="qué-es-un-modelo-estadístico"><span class="header-section-number">16.1</span> Qué es un modelo estadístico</h2>
+<p>Un modelo estadístico es una representación matemática que describe cómo una o más variables aleatorias se relacionan entre sí.</p>
+<p>Tiene como propósito simplificar la realidad para entender las relaciones entre variables y hacer predicciones o inferencias.</p>
+</section>
+<section id="proceso-de-modelamieto-estadístico" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="proceso-de-modelamieto-estadístico"><span class="header-section-number">16.2</span> Proceso de modelamieto estadístico</h2>
+<ul>
+<li><p><strong>Formulación</strong>: Revisar la literatura existente. Formular hipótesis claras. Definir el modelo teórico con base en conceptos y teorías previas.</p></li>
+<li><p><strong>Estimación y ajuste</strong>: Implica el uso de métodos estadísticos para estimar los parámetros del modelo, como los coeficientes en una regresión. Una vez estimados los parámetros, se ajusta el modelo para que mejor represente los datos observados.</p></li>
+<li><p><strong>Validación y evaluación</strong>: La validación se refiere a la comprobación de la generalizabilidad del modelo y de sus supuestos. La evaluación se refiere a la bondad de ajuste, qué tanto reflejan los datos.</p></li>
+</ul>
+</section>
+<section id="formulación" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="formulación"><span class="header-section-number">16.3</span> Formulación</h2>
+<section id="partes-de-un-modelo" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="partes-de-un-modelo"><span class="header-section-number">16.3.1</span> Partes de un modelo</h3>
+<ul>
+<li><strong>Variables dependientes e independientes</strong>: Identificación de las variables que serán explicadas y las que se usarán como predictores.</li>
+<li><strong>Relación funcional</strong>: La forma en que las variables independientes se combinan para influir en la variable dependiente.</li>
+<li><strong>Término de error</strong>: Captura la variabilidad no explicada por las variables independientes.</li>
+</ul>
+</section>
+</section>
+<section id="formulación-1" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="formulación-1"><span class="header-section-number">16.4</span> Formulación</h2>
+<section id="especificación-matemática" class="level3" data-number="16.4.1">
+<h3 data-number="16.4.1" class="anchored" data-anchor-id="especificación-matemática"><span class="header-section-number">16.4.1</span> Especificación matemática</h3>
+<p>La especificación matemática de un modelo implica:</p>
+<ul>
+<li><strong>Formulación de ecuaciones</strong>: Definir cómo las variables independientes afectan a la variable dependiente.</li>
+<li><strong>Definición de supuestos</strong>: Establecer los supuestos subyacentes (como la linealidad, independencia, homocedasticidad, etc.).</li>
+<li><strong>Notación y simbolismo</strong>: Uso de notación matemática clara para representar las relaciones y supuestos.</li>
+</ul>
+</section>
+</section>
+<section id="formulación-2" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="formulación-2"><span class="header-section-number">16.5</span> Formulación</h2>
+<section id="supuestos-teóricos" class="level3" data-number="16.5.1">
+<h3 data-number="16.5.1" class="anchored" data-anchor-id="supuestos-teóricos"><span class="header-section-number">16.5.1</span> Supuestos teóricos</h3>
+<p>Los modelos estadísticos se basan en varios supuestos teóricos:</p>
+<ul>
+<li><strong>Linealidad</strong>: Relación lineal entre variables independientes y dependientes.</li>
+<li><strong>Independencia de errores</strong>: Los errores no están correlacionados entre sí.</li>
+<li><strong>Homoscedasticidad</strong>: La varianza de los errores es constante.</li>
+<li><strong>Normalidad</strong>: Los errores siguen una distribución normal.</li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="estimación-y-ajuste"><span class="header-section-number">16.6</span> Estimación y ajuste</h2>
+<section id="parámetros-y-estimadores" class="level3" data-number="16.6.1">
+<h3 data-number="16.6.1" class="anchored" data-anchor-id="parámetros-y-estimadores"><span class="header-section-number">16.6.1</span> Parámetros y estimadores</h3>
+<p>Los conceptos clave son:</p>
+<ul>
+<li><strong>Parámetros</strong>: Valores desconocidos en el modelo que describen la relación entre variables.</li>
+<li><strong>Estimadores</strong>: Funciones que proporcionan valores aproximados de los parámetros basados en los datos.</li>
+<li><strong>Significancia</strong>: Métodos para generalizar el conocimiento subyacente de la muestra hacia la población.</li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste-1" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="estimación-y-ajuste-1"><span class="header-section-number">16.7</span> Estimación y ajuste</h2>
+<p>El proceso de estimación involucra:</p>
+<ul>
+<li><strong>Selección del método de estimación</strong>: Métodos como Mínimos Cuadrados Ordinarios (OLS), Máxima Verosimilitud, etc.</li>
+<li><strong>Cálculo de estimadores</strong>: Determinar los valores que minimizan o maximizan una función objetivo.</li>
+<li><strong>Evaluación de los estimadores</strong>: Análisis de la eficiencia, sesgo, y consistencia de los estimadores.</li>
+</ul>
+</section>
+<section id="estimación-y-ajuste-2" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="estimación-y-ajuste-2"><span class="header-section-number">16.8</span> Estimación y ajuste</h2>
+<section id="estimación-puntual" class="level3" data-number="16.8.1">
+<h3 data-number="16.8.1" class="anchored" data-anchor-id="estimación-puntual"><span class="header-section-number">16.8.1</span> Estimación puntual</h3>
+<p>Encontrar los valores de <span class="math inline">\(\beta\)</span> y <span class="math inline">\(\sigma^2\)</span> para reproducir <span class="math inline">\(y\)</span> tan precisamente como sea posible.</p>
+<ul>
+<li><p>Máxima verosimilitud</p></li>
+<li><p>OLS</p></li>
+<li><p>PLS</p></li>
+<li><p>LOESS</p></li>
+</ul>
+</section>
+</section>
+<section id="estimación-y-ajuste-3" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="estimación-y-ajuste-3"><span class="header-section-number">16.9</span> Estimación y ajuste</h2>
+<div class="columns">
+<div class="column">
+<section id="intervalos-de-confianza-analíticos" class="level3" data-number="16.9.1">
+<h3 data-number="16.9.1" class="anchored" data-anchor-id="intervalos-de-confianza-analíticos"><span class="header-section-number">16.9.1</span> Intervalos de confianza analíticos</h3>
+<p>Los intervalos de confianza teóricos proporcionan un rango de valores dentro del cual se espera que se encuentre el verdadero valor de un coeficiente de regresión con un cierto nivel de confianza (generalmente 95%).</p>
+</section>
+</div><div class="column">
+<section id="bootstrap" class="level3" data-number="16.9.2">
+<h3 data-number="16.9.2" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">16.9.2</span> Bootstrap</h3>
+<p>El bootstrap es un método no paramétrico que permite estimar la distribución de un estimador medisnte simulación. Al generar múltiples muestras de los datos originales mediante resampling con reemplazo, es posible recalcular varias observaciones del estimador y tener una muestra aleatoria de este.</p>
+</section>
+</div>
+</div>
+</section>
+<section id="estimación-y-ajuste-4" class="level2" data-number="16.10">
+<h2 data-number="16.10" class="anchored" data-anchor-id="estimación-y-ajuste-4"><span class="header-section-number">16.10</span> Estimación y ajuste</h2>
+<p>La prueba de hipótesis global en un modelo de regresión evalúa si al menos una de las variables independientes tiene un efecto significativo sobre la variable dependiente. Esto se realiza mediante la siguiente hipótesis:</p>
+<ul>
+<li><p><strong>Hipótesis nula (H₀)</strong>: Todos los coeficientes de regresión son iguales a cero, es decir, las variables independientes no tienen efecto sobre la variable dependiente.</p></li>
+<li><p><strong>Hipótesis alternativa (H₁)</strong>: Al menos un coeficiente de regresión es diferente de cero, es decir, al menos una variable independiente tiene un efecto significativo.</p></li>
+</ul>
+<section id="procedimiento" class="level3" data-number="16.10.1">
+<h3 data-number="16.10.1" class="anchored" data-anchor-id="procedimiento"><span class="header-section-number">16.10.1</span> Procedimiento:</h3>
+<ol type="1">
+<li><strong>Cálculo del estadístico F</strong>: Se utiliza para comparar el modelo ajustado con un modelo nulo (sin variables predictoras).</li>
+<li><strong>Determinación del p-valor</strong>: El p-valor asociado con el estadístico F indica la probabilidad de observar un valor tan extremo como el calculado, bajo la hipótesis nula.</li>
+<li><strong>Decisión</strong>: Si el p-valor es menor que el nivel de significancia (α, comúnmente 0.05), se rechaza la hipótesis nula, concluyendo que el modelo tiene al menos un predictor significativo.</li>
+</ol>
+</section>
+</section>
+<section id="validación-y-evaluación" class="level2" data-number="16.11">
+<h2 data-number="16.11" class="anchored" data-anchor-id="validación-y-evaluación"><span class="header-section-number">16.11</span> Validación y evaluación</h2>
+<section id="métricas-de-evaluación" class="level3" data-number="16.11.1">
+<h3 data-number="16.11.1" class="anchored" data-anchor-id="métricas-de-evaluación"><span class="header-section-number">16.11.1</span> Métricas de evaluación</h3>
+<p>Para evaluar un modelo se utilizan:</p>
+<ul>
+<li><strong>Coeficiente de determinación (R²)</strong>: Medida de la proporción de la varianza explicada.</li>
+<li><strong>Error cuadrático medio (MSE)</strong>: Promedio de los cuadrados de los errores.</li>
+<li><strong>AIC/BIC</strong>: Criterios de información para comparar modelos.</li>
+<li><strong>Pruebas de significancia</strong>: p-valores, pruebas F, t-pruebas para evaluar la relevancia de los parámetros.</li>
+<li><strong>Exactitud (accuracy) y precisión</strong>: métricas para evaluar modelos de respuesta categórica, sensibilidad y especificidad.</li>
+<li><strong>Curva ROC, AUC y matriz de confusión</strong>: estadígracos asociados a los modelos de respuesta cetegórica.</li>
+<li><strong>Validación cruzada</strong>: uso de datos de ajuste y prueba para el cálculo de las métricas.</li>
+</ul>
+</section>
+</section>
+<section id="modelos" class="level2" data-number="16.12">
+<h2 data-number="16.12" class="anchored" data-anchor-id="modelos"><span class="header-section-number">16.12</span> Modelos</h2>
+<section id="regresión-aprendizaje-supervisado" class="level3" data-number="16.12.1">
+<h3 data-number="16.12.1" class="anchored" data-anchor-id="regresión-aprendizaje-supervisado"><span class="header-section-number">16.12.1</span> Regresión (aprendizaje supervisado)</h3>
+<p>Modelos donde se predice o explica una variable dependiente a partir de una o más variables independientes.</p>
+</section>
+<section id="ejemplos" class="level3" data-number="16.12.2">
+<h3 data-number="16.12.2" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">16.12.2</span> Ejemplos</h3>
+<p>Regresión lineal, regresión logística, regresión Poisson.</p>
+</section>
+<section id="métodos-multivariados-aprendizaje-no-supervisado" class="level3" data-number="16.12.3">
+<h3 data-number="16.12.3" class="anchored" data-anchor-id="métodos-multivariados-aprendizaje-no-supervisado"><span class="header-section-number">16.12.3</span> Métodos multivariados (aprendizaje no supervisado)</h3>
+<p>Técnicas para descubrir estructuras subyacentes en los datos sin necesidad de una variable dependiente.</p>
+</section>
+<section id="ejemplos-1" class="level3" data-number="16.12.4">
+<h3 data-number="16.12.4" class="anchored" data-anchor-id="ejemplos-1"><span class="header-section-number">16.12.4</span> Ejemplos</h3>
+<p>Análisis de componentes principales (PCA), análisis de conglomerados, análisis factorial.</p>
+</section>
+</section>
+<section id="modelos-de-regresión-explicativos" class="level2" data-number="16.13">
+<h2 data-number="16.13" class="anchored" data-anchor-id="modelos-de-regresión-explicativos"><span class="header-section-number">16.13</span> Modelos de regresión explicativos</h2>
+<p>El centro de nuestro aprendizaje en ciencias sociales es el modelamiento explicativo.</p>
+</section>
+<section id="modelos-de-regresión-explicativos-1" class="level2" data-number="16.14">
+<h2 data-number="16.14" class="anchored" data-anchor-id="modelos-de-regresión-explicativos-1"><span class="header-section-number">16.14</span> Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="lineal-normal" class="level3" data-number="16.14.1">
+<h3 data-number="16.14.1" class="anchored" data-anchor-id="lineal-normal"><span class="header-section-number">16.14.1</span> Lineal normal</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo que asume una relación lineal entre las variables y que los errores son normalmente distribuidos.</li>
+<li><strong>Aplicaciones</strong>: Estimación de relaciones entre variables cuantitativas.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="logit" class="level3" data-number="16.14.2">
+<h3 data-number="16.14.2" class="anchored" data-anchor-id="logit"><span class="header-section-number">16.14.2</span> Logit</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo utilizado para predecir probabilidades de eventos binarios (0 o 1).</li>
+<li><strong>Aplicaciones</strong>: Modelos de decisión, análisis de comportamiento.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-2" class="level2" data-number="16.15">
+<h2 data-number="16.15" class="anchored" data-anchor-id="modelos-de-regresión-explicativos-2"><span class="header-section-number">16.15</span> Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="poisson" class="level3" data-number="16.15.1">
+<h3 data-number="16.15.1" class="anchored" data-anchor-id="poisson"><span class="header-section-number">16.15.1</span> Poisson</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelo para contar eventos que ocurren en un intervalo fijo.</li>
+<li><strong>Aplicaciones</strong>: Modelado de tasas de ocurrencia, como incidentes de accidentes.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="series-de-tiempo-datos-panel" class="level3" data-number="16.15.2">
+<h3 data-number="16.15.2" class="anchored" data-anchor-id="series-de-tiempo-datos-panel"><span class="header-section-number">16.15.2</span> Series de tiempo, Datos panel</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que consideran la dependencia temporal o la estructura de panel en los datos.</li>
+<li><strong>Aplicaciones</strong>: Pronósticos, análisis longitudinal.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-3" class="level2" data-number="16.16">
+<h2 data-number="16.16" class="anchored" data-anchor-id="modelos-de-regresión-explicativos-3"><span class="header-section-number">16.16</span> Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="espaciales-krigging" class="level3" data-number="16.16.1">
+<h3 data-number="16.16.1" class="anchored" data-anchor-id="espaciales-krigging"><span class="header-section-number">16.16.1</span> Espaciales (krigging)</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que incorporan la correlación espacial entre observaciones.</li>
+<li><strong>Aplicaciones</strong>: Geostatística, análisis de datos georreferenciados.</li>
+</ul>
+</section>
+</div><div class="column">
+<section id="de-efectos-fijos-y-aleatorios" class="level3" data-number="16.16.2">
+<h3 data-number="16.16.2" class="anchored" data-anchor-id="de-efectos-fijos-y-aleatorios"><span class="header-section-number">16.16.2</span> De efectos fijos y aleatorios</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que permiten controlar por variables no observadas que varían entre entidades.</li>
+<li><strong>Aplicaciones</strong>: Análisis de datos donde existen diferencias individuales inobservables.</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="modelos-de-regresión-explicativos-4" class="level2" data-number="16.17">
+<h2 data-number="16.17" class="anchored" data-anchor-id="modelos-de-regresión-explicativos-4"><span class="header-section-number">16.17</span> Modelos de regresión explicativos</h2>
+<div class="columns">
+<div class="column">
+<section id="modelos-de-supervivencia" class="level3" data-number="16.17.1">
+<h3 data-number="16.17.1" class="anchored" data-anchor-id="modelos-de-supervivencia"><span class="header-section-number">16.17.1</span> Modelos de supervivencia</h3>
+<ul>
+<li><strong>Descripción</strong>: Modelos que analizan el tiempo hasta un evento de interés.</li>
+<li><strong>Aplicaciones</strong>: Análisis de tiempo hasta la muerte, recurrencia de enfermedades.</li>
+</ul>
+</section>
+</div><div class="column">
+
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./C03_abordaje.html" class="pagination-link" aria-label="antecedentes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">antecedentes</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./C03_reg-lineal.html" class="pagination-link" aria-label="antecedentes">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">antecedentes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

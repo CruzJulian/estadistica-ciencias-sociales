@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Dos variables – Estadística para Ciencias Sociales</title>
+<title>16&nbsp; Modelo de regresión logit – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./C01_dist.html" rel="next">
-<link href="./C01_univar.html" rel="prev">
+<link href="./04_est-multi.html" rel="next">
+<link href="./C03_reg-lineal.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">C03_cover.html</a></li><li class="breadcrumb-item"><a href="./C03_reg-logit.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +177,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link active">
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
   </div>
 </li>
@@ -271,7 +271,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C03_reg-logit.html" class="sidebar-item-text sidebar-link">
+  <a href="./C03_reg-logit.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></span></a>
   </div>
 </li>
@@ -293,50 +293,66 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link active" data-scroll-target="#dos-variables-cualitativas"><span class="header-section-number">4.1</span> Dos variables cualitativas</a></li>
-  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas"><span class="header-section-number">4.2</span> Dos variables cuantitativas</a></li>
-  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza"><span class="header-section-number">4.3</span> Covarianza</a></li>
-  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson"><span class="header-section-number">4.4</span> Correlación de Pearson</a></li>
-  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman"><span class="header-section-number">4.5</span> Correlación de Spearman</a></li>
-  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">4.6</span> Una variable cualitativa y otra cuantitativa</a></li>
-  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación"><span class="header-section-number">4.7</span> Correlación</a></li>
-  <li><a href="#correlación-lineal" id="toc-correlación-lineal" class="nav-link" data-scroll-target="#correlación-lineal"><span class="header-section-number">4.8</span> Correlación lineal</a>
+  <li><a href="#modelo-de-regresión-logit" id="toc-modelo-de-regresión-logit" class="nav-link active" data-scroll-target="#modelo-de-regresión-logit"><span class="header-section-number">16.1</span> Modelo de regresión logit</a></li>
+  <li><a href="#formulación" id="toc-formulación" class="nav-link" data-scroll-target="#formulación"><span class="header-section-number">16.2</span> Formulación</a>
   <ul class="collapse">
-  <li><a href="#pearson" id="toc-pearson" class="nav-link" data-scroll-target="#pearson"><span class="header-section-number">4.8.1</span> Pearson</a></li>
+  <li><a href="#especificación-matemática" id="toc-especificación-matemática" class="nav-link" data-scroll-target="#especificación-matemática"><span class="header-section-number">16.2.1</span> Especificación matemática</a></li>
   </ul></li>
-  <li><a href="#correlación-monótona" id="toc-correlación-monótona" class="nav-link" data-scroll-target="#correlación-monótona"><span class="header-section-number">4.9</span> Correlación monótona</a>
+  <li><a href="#formulación-1" id="toc-formulación-1" class="nav-link" data-scroll-target="#formulación-1"><span class="header-section-number">16.3</span> Formulación</a>
   <ul class="collapse">
-  <li><a href="#spearman" id="toc-spearman" class="nav-link" data-scroll-target="#spearman"><span class="header-section-number">4.9.1</span> Spearman</a></li>
+  <li><a href="#terminología" id="toc-terminología" class="nav-link" data-scroll-target="#terminología"><span class="header-section-number">16.3.1</span> Terminología</a></li>
   </ul></li>
-  <li><a href="#correlación-monótona-1" id="toc-correlación-monótona-1" class="nav-link" data-scroll-target="#correlación-monótona-1"><span class="header-section-number">4.10</span> Correlación monótona</a>
+  <li><a href="#parámetros-del-modelo" id="toc-parámetros-del-modelo" class="nav-link" data-scroll-target="#parámetros-del-modelo"><span class="header-section-number">16.4</span> Parámetros del modelo</a>
   <ul class="collapse">
-  <li><a href="#kendall" id="toc-kendall" class="nav-link" data-scroll-target="#kendall"><span class="header-section-number">4.10.1</span> Kendall</a></li>
+  <li><a href="#parámetros" id="toc-parámetros" class="nav-link" data-scroll-target="#parámetros"><span class="header-section-number">16.4.1</span> Parámetros</a></li>
+  <li><a href="#supuestos-teóricos" id="toc-supuestos-teóricos" class="nav-link" data-scroll-target="#supuestos-teóricos"><span class="header-section-number">16.4.2</span> Supuestos teóricos</a></li>
   </ul></li>
-  <li><a href="#asociación-numérica---categórica" id="toc-asociación-numérica---categórica" class="nav-link" data-scroll-target="#asociación-numérica---categórica"><span class="header-section-number">4.11</span> Asociación numérica - categórica</a></li>
-  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos"><span class="header-section-number">4.12</span> Elementos gráficos</a></li>
-  <li><a href="#asociación-numérica---categórica-1" id="toc-asociación-numérica---categórica-1" class="nav-link" data-scroll-target="#asociación-numérica---categórica-1"><span class="header-section-number">4.13</span> Asociación numérica - categórica</a></li>
-  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova"><span class="header-section-number">4.14</span> ANOVA</a>
+  <li><a href="#covariables" id="toc-covariables" class="nav-link" data-scroll-target="#covariables"><span class="header-section-number">16.5</span> Covariables</a>
   <ul class="collapse">
-  <li><a href="#tipos" id="toc-tipos" class="nav-link" data-scroll-target="#tipos"><span class="header-section-number">4.14.1</span> Tipos</a></li>
+  <li><a href="#covariables-numéricas" id="toc-covariables-numéricas" class="nav-link" data-scroll-target="#covariables-numéricas"><span class="header-section-number">16.5.1</span> Covariables numéricas</a></li>
+  <li><a href="#covariables-categóricas" id="toc-covariables-categóricas" class="nav-link" data-scroll-target="#covariables-categóricas"><span class="header-section-number">16.5.2</span> Covariables categóricas</a></li>
   </ul></li>
-  <li><a href="#anova-1" id="toc-anova-1" class="nav-link" data-scroll-target="#anova-1"><span class="header-section-number">4.15</span> ANOVA</a></li>
-  <li><a href="#test-kruskal-wallis" id="toc-test-kruskal-wallis" class="nav-link" data-scroll-target="#test-kruskal-wallis"><span class="header-section-number">4.16</span> Test Kruskal-Wallis</a>
+  <li><a href="#respuesta" id="toc-respuesta" class="nav-link" data-scroll-target="#respuesta"><span class="header-section-number">16.6</span> Respuesta</a>
   <ul class="collapse">
-  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso"><span class="header-section-number">4.16.1</span> Uso</a></li>
+  <li><a href="#respuesta-categórica" id="toc-respuesta-categórica" class="nav-link" data-scroll-target="#respuesta-categórica"><span class="header-section-number">16.6.1</span> Respuesta categórica</a></li>
   </ul></li>
-  <li><a href="#asociación-categórica---categórica" id="toc-asociación-categórica---categórica" class="nav-link" data-scroll-target="#asociación-categórica---categórica"><span class="header-section-number">4.17</span> Asociación categórica - categórica</a></li>
-  <li><a href="#tablas-de-contingencia" id="toc-tablas-de-contingencia" class="nav-link" data-scroll-target="#tablas-de-contingencia"><span class="header-section-number">4.18</span> Tablas de contingencia</a>
+  <li><a href="#comprobación-de-hipótesis" id="toc-comprobación-de-hipótesis" class="nav-link" data-scroll-target="#comprobación-de-hipótesis"><span class="header-section-number">16.7</span> Comprobación de hipótesis</a>
   <ul class="collapse">
-  <li><a href="#uso-1" id="toc-uso-1" class="nav-link" data-scroll-target="#uso-1"><span class="header-section-number">4.18.1</span> Uso</a></li>
+  <li><a href="#planteamiento-de-hipótesis" id="toc-planteamiento-de-hipótesis" class="nav-link" data-scroll-target="#planteamiento-de-hipótesis"><span class="header-section-number">16.7.1</span> Planteamiento de hipótesis</a></li>
   </ul></li>
-  <li><a href="#tablas-de-contingencia-1" id="toc-tablas-de-contingencia-1" class="nav-link" data-scroll-target="#tablas-de-contingencia-1"><span class="header-section-number">4.19</span> Tablas de contingencia</a></li>
-  <li><a href="#prueba-de-chi-cuadrado" id="toc-prueba-de-chi-cuadrado" class="nav-link" data-scroll-target="#prueba-de-chi-cuadrado"><span class="header-section-number">4.20</span> Prueba de chi cuadrado</a>
+  <li><a href="#proceso-de-estimación" id="toc-proceso-de-estimación" class="nav-link" data-scroll-target="#proceso-de-estimación"><span class="header-section-number">16.8</span> Proceso de estimación</a>
   <ul class="collapse">
-  <li><a href="#uso-2" id="toc-uso-2" class="nav-link" data-scroll-target="#uso-2"><span class="header-section-number">4.20.1</span> Uso</a></li>
+  <li><a href="#intervalos-de-confianza-analíticos-para-los-parámetros" id="toc-intervalos-de-confianza-analíticos-para-los-parámetros" class="nav-link" data-scroll-target="#intervalos-de-confianza-analíticos-para-los-parámetros"><span class="header-section-number">16.8.1</span> Intervalos de confianza analíticos para los parámetros</a></li>
+  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap"><span class="header-section-number">16.8.2</span> Bootstrap</a></li>
   </ul></li>
-  <li><a href="#prueba-exacta-de-fisher" id="toc-prueba-exacta-de-fisher" class="nav-link" data-scroll-target="#prueba-exacta-de-fisher"><span class="header-section-number">4.21</span> Prueba exacta de Fisher</a>
+  <li><a href="#inferencia-del-modelo" id="toc-inferencia-del-modelo" class="nav-link" data-scroll-target="#inferencia-del-modelo"><span class="header-section-number">16.9</span> Inferencia del modelo</a>
   <ul class="collapse">
-  <li><a href="#uso-3" id="toc-uso-3" class="nav-link" data-scroll-target="#uso-3"><span class="header-section-number">4.21.1</span> Uso</a></li>
+  <li><a href="#significancia-global" id="toc-significancia-global" class="nav-link" data-scroll-target="#significancia-global"><span class="header-section-number">16.9.1</span> Significancia global</a></li>
+  <li><a href="#significancia-particular" id="toc-significancia-particular" class="nav-link" data-scroll-target="#significancia-particular"><span class="header-section-number">16.9.2</span> Significancia particular</a></li>
+  </ul></li>
+  <li><a href="#proceso-de-estimación-1" id="toc-proceso-de-estimación-1" class="nav-link" data-scroll-target="#proceso-de-estimación-1"><span class="header-section-number">16.10</span> Proceso de estimación</a>
+  <ul class="collapse">
+  <li><a href="#probabilidades-predichas" id="toc-probabilidades-predichas" class="nav-link" data-scroll-target="#probabilidades-predichas"><span class="header-section-number">16.10.1</span> Probabilidades predichas</a></li>
+  <li><a href="#valores-predichos" id="toc-valores-predichos" class="nav-link" data-scroll-target="#valores-predichos"><span class="header-section-number">16.10.2</span> Valores predichos</a></li>
+  <li><a href="#residuales" id="toc-residuales" class="nav-link" data-scroll-target="#residuales"><span class="header-section-number">16.10.3</span> Residuales</a></li>
+  </ul></li>
+  <li><a href="#validación-de-supuestos" id="toc-validación-de-supuestos" class="nav-link" data-scroll-target="#validación-de-supuestos"><span class="header-section-number">16.11</span> Validación de supuestos</a>
+  <ul class="collapse">
+  <li><a href="#linealidad-en-el-logit" id="toc-linealidad-en-el-logit" class="nav-link" data-scroll-target="#linealidad-en-el-logit"><span class="header-section-number">16.11.1</span> Linealidad en el logit</a></li>
+  <li><a href="#independencia-de-los-errores" id="toc-independencia-de-los-errores" class="nav-link" data-scroll-target="#independencia-de-los-errores"><span class="header-section-number">16.11.2</span> Independencia de los errores</a></li>
+  <li><a href="#ausencia-de-multicolinealidad" id="toc-ausencia-de-multicolinealidad" class="nav-link" data-scroll-target="#ausencia-de-multicolinealidad"><span class="header-section-number">16.11.3</span> Ausencia de multicolinealidad</a></li>
+  </ul></li>
+  <li><a href="#métricas-de-evaluación" id="toc-métricas-de-evaluación" class="nav-link" data-scroll-target="#métricas-de-evaluación"><span class="header-section-number">16.12</span> Métricas de evaluación</a>
+  <ul class="collapse">
+  <li><a href="#curva-roc" id="toc-curva-roc" class="nav-link" data-scroll-target="#curva-roc"><span class="header-section-number">16.12.1</span> Curva ROC</a></li>
+  <li><a href="#auc" id="toc-auc" class="nav-link" data-scroll-target="#auc"><span class="header-section-number">16.12.2</span> AUC</a></li>
+  </ul></li>
+  <li><a href="#métricas-de-evaluación-1" id="toc-métricas-de-evaluación-1" class="nav-link" data-scroll-target="#métricas-de-evaluación-1"><span class="header-section-number">16.13</span> Métricas de evaluación</a></li>
+  <li><a href="#métricas-de-evaluación-2" id="toc-métricas-de-evaluación-2" class="nav-link" data-scroll-target="#métricas-de-evaluación-2"><span class="header-section-number">16.14</span> Métricas de evaluación</a>
+  <ul class="collapse">
+  <li><a href="#exactitud" id="toc-exactitud" class="nav-link" data-scroll-target="#exactitud"><span class="header-section-number">16.14.1</span> Exactitud</a></li>
+  <li><a href="#sensibilidad" id="toc-sensibilidad" class="nav-link" data-scroll-target="#sensibilidad"><span class="header-section-number">16.14.2</span> Sensibilidad</a></li>
+  <li><a href="#especificidad" id="toc-especificidad" class="nav-link" data-scroll-target="#especificidad"><span class="header-section-number">16.14.3</span> Especificidad</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -344,9 +360,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">C03_cover.html</a></li><li class="breadcrumb-item"><a href="./C03_reg-logit.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dos variables</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></h1>
 </div>
 
 
@@ -363,206 +379,206 @@ window.Quarto = {
 </header>
 
 
-<p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
+<section id="modelo-de-regresión-logit" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="modelo-de-regresión-logit"><span class="header-section-number">16.1</span> Modelo de regresión logit</h2>
+<p>El modelo de regresión logit es utilizado para modelar una variable dependiente categórica, generalmente binaria, como una función de variables independientes. Es una forma de regresión no lineal que se usa ampliamente en análisis de datos donde el resultado es dicotómico.</p>
+</section>
+<section id="formulación" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="formulación"><span class="header-section-number">16.2</span> Formulación</h2>
+<section id="especificación-matemática" class="level3" data-number="16.2.1">
+<h3 data-number="16.2.1" class="anchored" data-anchor-id="especificación-matemática"><span class="header-section-number">16.2.1</span> Especificación matemática</h3>
+<p>La especificación matemática del modelo logit se basa en la función logística. La función de probabilidad para una variable dependiente binaria <span class="math inline">\(y\)</span> puede expresarse como:</p>
+<p><span class="math display">\[
+P(y = 1 \mid X) = \frac{1}{1 + e^{-(\beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k)}}
+\]</span></p>
+<p>Donde:</p>
 <ul>
-<li>Dos cualitativas</li>
-<li>Dos cuantitativas</li>
-<li>Una cuantitativa y una cualitativa</li>
-</ul>
-<section id="dos-variables-cualitativas" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dos-variables-cualitativas"><span class="header-section-number">4.1</span> Dos variables cualitativas</h2>
-<p>Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.</p>
-</section>
-<section id="dos-variables-cuantitativas" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="dos-variables-cuantitativas"><span class="header-section-number">4.2</span> Dos variables cuantitativas</h2>
-<p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
-<ul>
-<li>Covarianza</li>
-<li>Correlación de Pearson</li>
-<li>Correlación de Spearman</li>
-</ul>
-</section>
-<section id="covarianza" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="covarianza"><span class="header-section-number">4.3</span> Covarianza</h2>
-<p>Covarianza entre dos variables</p>
-<p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
-</section>
-<section id="correlación-de-pearson" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="correlación-de-pearson"><span class="header-section-number">4.4</span> Correlación de Pearson</h2>
-<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
-</section>
-<section id="correlación-de-spearman" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="correlación-de-spearman"><span class="header-section-number">4.5</span> Correlación de Spearman</h2>
-<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
-<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
-</section>
-<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">4.6</span> Una variable cualitativa y otra cuantitativa</h2>
-<p>Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.</p>
-</section>
-<section id="correlación" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="correlación"><span class="header-section-number">4.7</span> Correlación</h2>
-<p>¿Qué es la causalidad?</p>
-</section>
-<section id="correlación-lineal" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="correlación-lineal"><span class="header-section-number">4.8</span> Correlación lineal</h2>
-<section id="pearson" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="pearson"><span class="header-section-number">4.8.1</span> Pearson</h3>
-<ul>
-<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.</li>
-<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.</li>
-<li><strong>Cálculo</strong>: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.</li>
+<li><span class="math inline">\(P(y = 1 \mid X)\)</span> es la probabilidad de que la variable dependiente sea igual a 1 dado el conjunto de variables independientes <span class="math inline">\(X\)</span>.</li>
+<li><span class="math inline">\(\beta_0\)</span> es el término constante o intercepto.</li>
+<li><span class="math inline">\(X_1, X_2, \dots, X_k\)</span> son las variables independientes.</li>
+<li><span class="math inline">\(\beta_1, \beta_2, \dots, \beta_k\)</span> son los coeficientes asociados con cada variable independiente.</li>
 </ul>
 </section>
 </section>
-<section id="correlación-monótona" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="correlación-monótona"><span class="header-section-number">4.9</span> Correlación monótona</h2>
-<section id="spearman" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="spearman"><span class="header-section-number">4.9.1</span> Spearman</h3>
+<section id="formulación-1" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="formulación-1"><span class="header-section-number">16.3</span> Formulación</h2>
+<section id="terminología" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="terminología"><span class="header-section-number">16.3.1</span> Terminología</h3>
 <ul>
-<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.</li>
-<li><strong>Ventaja</strong>: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.</li>
-<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.</li>
+<li><strong><span class="math inline">\(X\)</span></strong>: variables independientes/explicativas.</li>
+<li><strong><span class="math inline">\(y\)</span></strong>: variable dependiente, categórica, que toma valores 0 o 1.</li>
+<li><strong><span class="math inline">\(\beta_0\)</span></strong>: intersección o término constante.</li>
+<li><strong><span class="math inline">\(\beta_1, \beta_2, \dots, \beta_n\)</span></strong>: coeficientes de regresión que indican la relación entre las variables independientes y la probabilidad de que <span class="math inline">\(y = 1\)</span>.</li>
+<li><strong><span class="math inline">\(\varepsilon\)</span></strong>: errores o perturbaciones aleatorias (aunque en el modelo logit, la relación es probabilística y no se modelan errores de la misma forma que en la regresión lineal).</li>
 </ul>
 </section>
 </section>
-<section id="correlación-monótona-1" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="correlación-monótona-1"><span class="header-section-number">4.10</span> Correlación monótona</h2>
-<section id="kendall" class="level3" data-number="4.10.1">
-<h3 data-number="4.10.1" class="anchored" data-anchor-id="kendall"><span class="header-section-number">4.10.1</span> Kendall</h3>
+<section id="parámetros-del-modelo" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="parámetros-del-modelo"><span class="header-section-number">16.4</span> Parámetros del modelo</h2>
+<section id="parámetros" class="level3" data-number="16.4.1">
+<h3 data-number="16.4.1" class="anchored" data-anchor-id="parámetros"><span class="header-section-number">16.4.1</span> Parámetros</h3>
+<p>En el modelo logit, los parámetros <span class="math inline">\(\beta\)</span> se estiman mediante el método de máxima verosimilitud. Cada parámetro <span class="math inline">\(\beta_j\)</span> representa el cambio en el logaritmo de las probabilidades (<span class="math inline">\(\log \frac{P(y=1)}{P(y=0)}\)</span>) asociado con una unidad de cambio en la variable independiente <span class="math inline">\(X_j\)</span>, manteniendo constantes las otras variables.</p>
+</section>
+<section id="supuestos-teóricos" class="level3" data-number="16.4.2">
+<h3 data-number="16.4.2" class="anchored" data-anchor-id="supuestos-teóricos"><span class="header-section-number">16.4.2</span> Supuestos teóricos</h3>
 <ul>
-<li><strong>Definición</strong>: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.</li>
-<li><strong>Cálculo</strong>:
-<ul>
-<li><strong>Concordancia</strong>: Dos pares de observaciones están en concordancia si el orden de las observaciones en ambos pares es el mismo.</li>
-<li><strong>Discordancia</strong>: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.</li>
-</ul></li>
-<li><strong>Aplicación</strong>: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.</li>
+<li><strong>Independencia de las observaciones</strong>: Las observaciones deben ser independientes entre sí.</li>
+<li><strong>Linealidad en el logit</strong>: La relación entre las variables independientes y el logit de la probabilidad es lineal.</li>
+<li><strong>Ausencia de multicolinealidad</strong>: Las variables independientes no deben estar fuertemente correlacionadas entre sí.</li>
 </ul>
 </section>
 </section>
-<section id="asociación-numérica---categórica" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="asociación-numérica---categórica"><span class="header-section-number">4.11</span> Asociación numérica - categórica</h2>
-<p>En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.</p>
+<section id="covariables" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="covariables"><span class="header-section-number">16.5</span> Covariables</h2>
+<section id="covariables-numéricas" class="level3" data-number="16.5.1">
+<h3 data-number="16.5.1" class="anchored" data-anchor-id="covariables-numéricas"><span class="header-section-number">16.5.1</span> Covariables numéricas</h3>
+<p>Las covariables numéricas son aquellas que se pueden medir cuantitativamente y se introducen directamente en el modelo como <span class="math inline">\(X_j\)</span>.</p>
 </section>
-<section id="elementos-gráficos" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="elementos-gráficos"><span class="header-section-number">4.12</span> Elementos gráficos</h2>
-<p>Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:</p>
+<section id="covariables-categóricas" class="level3" data-number="16.5.2">
+<h3 data-number="16.5.2" class="anchored" data-anchor-id="covariables-categóricas"><span class="header-section-number">16.5.2</span> Covariables categóricas</h3>
+<p>Las covariables categóricas, al ser cualitativas, se deben convertir en variables dummies (0 o 1) antes de incluirlas en el modelo.</p>
+</section>
+</section>
+<section id="respuesta" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="respuesta"><span class="header-section-number">16.6</span> Respuesta</h2>
+<section id="respuesta-categórica" class="level3" data-number="16.6.1">
+<h3 data-number="16.6.1" class="anchored" data-anchor-id="respuesta-categórica"><span class="header-section-number">16.6.1</span> Respuesta categórica</h3>
+<p>La variable respuesta en un modelo logit es categórica, usualmente binaria, y toma valores como 0 y 1.</p>
+</section>
+</section>
+<section id="comprobación-de-hipótesis" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="comprobación-de-hipótesis"><span class="header-section-number">16.7</span> Comprobación de hipótesis</h2>
+<p>Se formulan las hipótesis coherentes con la teoría. Se busca comprobar si las hipótesis son ciertas en la población.</p>
+<section id="planteamiento-de-hipótesis" class="level3" data-number="16.7.1">
+<h3 data-number="16.7.1" class="anchored" data-anchor-id="planteamiento-de-hipótesis"><span class="header-section-number">16.7.1</span> Planteamiento de hipótesis</h3>
+<p>En un modelo logit, se pueden formular hipótesis sobre los coeficientes <span class="math inline">\(\beta_j\)</span> (la covariable <span class="math inline">\(j\)</span> tiene un impacto positivo o negativo en la variable respuesta):</p>
 <ul>
-<li><strong>Diagramas de caja (boxplots)</strong>: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.</li>
-<li><strong>Gráficos de barras</strong>: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.</li>
-</ul>
-</section>
-<section id="asociación-numérica---categórica-1" class="level2" data-number="4.13">
-<h2 data-number="4.13" class="anchored" data-anchor-id="asociación-numérica---categórica-1"><span class="header-section-number">4.13</span> Asociación numérica - categórica</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_corr_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="anova" class="level2" data-number="4.14">
-<h2 data-number="4.14" class="anchored" data-anchor-id="anova"><span class="header-section-number">4.14</span> ANOVA</h2>
-<p>El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.</p>
-<section id="tipos" class="level3" data-number="4.14.1">
-<h3 data-number="4.14.1" class="anchored" data-anchor-id="tipos"><span class="header-section-number">4.14.1</span> Tipos</h3>
-<ul>
-<li><strong>ANOVA de una vía</strong>: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.</li>
-<li><strong>ANOVA de más vías</strong>: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.</li>
+<li><strong>Hipótesis nula (<span class="math inline">\(H_0\)</span>)</strong>: <span class="math inline">\(\beta_j = 0\)</span>, es decir, la variable independiente <span class="math inline">\(X_j\)</span> no tiene efecto sobre la probabilidad de que <span class="math inline">\(y = 1\)</span>.</li>
+<li><strong>Hipótesis alternativa (<span class="math inline">\(H_1\)</span>)</strong>: <span class="math inline">\(\beta_j \neq 0\)</span>, es decir, la variable independiente <span class="math inline">\(X_j\)</span> tiene un efecto significativo.</li>
 </ul>
 </section>
 </section>
-<section id="anova-1" class="level2" data-number="4.15">
-<h2 data-number="4.15" class="anchored" data-anchor-id="anova-1"><span class="header-section-number">4.15</span> ANOVA</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-ESTRATO        5  48462    9692   128.5 &lt;2e-16 ***
-Residuals   2494 188080      75                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
+<section id="proceso-de-estimación" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="proceso-de-estimación"><span class="header-section-number">16.8</span> Proceso de estimación</h2>
+<section id="intervalos-de-confianza-analíticos-para-los-parámetros" class="level3" data-number="16.8.1">
+<h3 data-number="16.8.1" class="anchored" data-anchor-id="intervalos-de-confianza-analíticos-para-los-parámetros"><span class="header-section-number">16.8.1</span> Intervalos de confianza analíticos para los parámetros</h3>
+<p>Los intervalos de confianza para los coeficientes <span class="math inline">\(\beta_j\)</span> se calculan bajo el supuesto de normalidad asintótica de las estimaciones de máxima verosimilitud. Estos intervalos permiten evaluar la precisión de las estimaciones.</p>
 </section>
-<section id="test-kruskal-wallis" class="level2" data-number="4.16">
-<h2 data-number="4.16" class="anchored" data-anchor-id="test-kruskal-wallis"><span class="header-section-number">4.16</span> Test Kruskal-Wallis</h2>
-<p>El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.</p>
-<section id="uso" class="level3" data-number="4.16.1">
-<h3 data-number="4.16.1" class="anchored" data-anchor-id="uso"><span class="header-section-number">4.16.1</span> Uso</h3>
-<p>Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Kruskal-Wallis rank sum test
-
-data:  INGLES_PUNT by ESTRATO
-Kruskal-Wallis chi-squared = 380.55, df = 5, p-value &lt; 2.2e-16</code></pre>
-</div>
-</div>
+<section id="bootstrap" class="level3" data-number="16.8.2">
+<h3 data-number="16.8.2" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">16.8.2</span> Bootstrap</h3>
+<p>El bootstrap es un método no paramétrico que se utiliza para estimar la distribución de los coeficientes <span class="math inline">\(\beta_j\)</span> y sus intervalos de confianza, generando múltiples muestras de la base de datos original.</p>
 </section>
 </section>
-<section id="asociación-categórica---categórica" class="level2" data-number="4.17">
-<h2 data-number="4.17" class="anchored" data-anchor-id="asociación-categórica---categórica"><span class="header-section-number">4.17</span> Asociación categórica - categórica</h2>
-<p>En ocasiones es necesario encontrar relaciones entre variables categóricas.</p>
+<section id="inferencia-del-modelo" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="inferencia-del-modelo"><span class="header-section-number">16.9</span> Inferencia del modelo</h2>
+<section id="significancia-global" class="level3" data-number="16.9.1">
+<h3 data-number="16.9.1" class="anchored" data-anchor-id="significancia-global"><span class="header-section-number">16.9.1</span> Significancia global</h3>
+<p>La significancia global del modelo se evalúa utilizando pruebas como la prueba de razón de verosimilitud (Likelihood Ratio Test), que compara la bondad de ajuste del modelo completo con un modelo reducido.</p>
 </section>
-<section id="tablas-de-contingencia" class="level2" data-number="4.18">
-<h2 data-number="4.18" class="anchored" data-anchor-id="tablas-de-contingencia"><span class="header-section-number">4.18</span> Tablas de contingencia</h2>
-<p>Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.</p>
-<section id="uso-1" class="level3" data-number="4.18.1">
-<h3 data-number="4.18.1" class="anchored" data-anchor-id="uso-1"><span class="header-section-number">4.18.1</span> Uso</h3>
-<p>Ayudan a visualizar y analizar la dependencia entre variables categóricas.</p>
-</section>
-</section>
-<section id="tablas-de-contingencia-1" class="level2" data-number="4.19">
-<h2 data-number="4.19" class="anchored" data-anchor-id="tablas-de-contingencia-1"><span class="header-section-number">4.19</span> Tablas de contingencia</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_corr_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="prueba-de-chi-cuadrado" class="level2" data-number="4.20">
-<h2 data-number="4.20" class="anchored" data-anchor-id="prueba-de-chi-cuadrado"><span class="header-section-number">4.20</span> Prueba de chi cuadrado</h2>
-<p>Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.</p>
-<section id="uso-2" class="level3" data-number="4.20.1">
-<h3 data-number="4.20.1" class="anchored" data-anchor-id="uso-2"><span class="header-section-number">4.20.1</span> Uso</h3>
-<p>Determina si hay una relación significativa entre las variables categóricas.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-X-squared = 184.9, df = 20, p-value &lt; 2.2e-16</code></pre>
-</div>
-</div>
+<section id="significancia-particular" class="level3" data-number="16.9.2">
+<h3 data-number="16.9.2" class="anchored" data-anchor-id="significancia-particular"><span class="header-section-number">16.9.2</span> Significancia particular</h3>
+<p>Se evalúa la significancia individual de cada coeficiente <span class="math inline">\(\beta_j\)</span> mediante pruebas <span class="math inline">\(t\)</span>. Un valor <span class="math inline">\(p\)</span> bajo indica que la variable correspondiente tiene un efecto significativo sobre la probabilidad de que <span class="math inline">\(y = 1\)</span>.</p>
 </section>
 </section>
-<section id="prueba-exacta-de-fisher" class="level2" data-number="4.21">
-<h2 data-number="4.21" class="anchored" data-anchor-id="prueba-exacta-de-fisher"><span class="header-section-number">4.21</span> Prueba exacta de Fisher</h2>
-<p>Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.</p>
-<section id="uso-3" class="level3" data-number="4.21.1">
-<h3 data-number="4.21.1" class="anchored" data-anchor-id="uso-3"><span class="header-section-number">4.21.1</span> Uso</h3>
-<p>Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Fisher's Exact Test for Count Data with simulated p-value (based on
-    2000 replicates)
-
-data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-p-value = 0.0004998
-alternative hypothesis: two.sided</code></pre>
-</div>
-</div>
+<section id="proceso-de-estimación-1" class="level2" data-number="16.10">
+<h2 data-number="16.10" class="anchored" data-anchor-id="proceso-de-estimación-1"><span class="header-section-number">16.10</span> Proceso de estimación</h2>
+<section id="probabilidades-predichas" class="level3" data-number="16.10.1">
+<h3 data-number="16.10.1" class="anchored" data-anchor-id="probabilidades-predichas"><span class="header-section-number">16.10.1</span> Probabilidades predichas</h3>
+<p>Los valores ajustados <span class="math inline">\(\hat{p}\)</span> son las probabilidades predichas de que <span class="math inline">\(y = 1\)</span>:</p>
+<p><span class="math display">\[
+\hat{p} = \frac{1}{1 + e^{-(\hat{\beta_0} + X_1\hat{\beta_1} + X_2\hat{\beta_2} + \dots + X_k\hat{\beta_k})}}
+\]</span></p>
+</section>
+<section id="valores-predichos" class="level3" data-number="16.10.2">
+<h3 data-number="16.10.2" class="anchored" data-anchor-id="valores-predichos"><span class="header-section-number">16.10.2</span> Valores predichos</h3>
+<p>Los valores ajustados <span class="math inline">\(\hat{y}\)</span> se obtienen mediante un umbral <span class="math inline">\(U\)</span> que se encuentra entre 0 y 1:</p>
+<p><span class="math display">\[
+\hat{y} = I(\hat{p} &lt; U)
+\]</span></p>
+</section>
+<section id="residuales" class="level3" data-number="16.10.3">
+<h3 data-number="16.10.3" class="anchored" data-anchor-id="residuales"><span class="header-section-number">16.10.3</span> Residuales</h3>
+<p>Los residuales en un modelo logit no se calculan de la misma manera que en un modelo de regresión lineal, pero se pueden evaluar las diferencias entre los valores observados y las probabilidades predichas.</p>
+<p><span class="math display">\[
+\left[y \cdot log(\hat{p}) + (1 - y) \cdot log(1 - \hat{p}) \right]
+\]</span></p>
+</section>
+</section>
+<section id="validación-de-supuestos" class="level2" data-number="16.11">
+<h2 data-number="16.11" class="anchored" data-anchor-id="validación-de-supuestos"><span class="header-section-number">16.11</span> Validación de supuestos</h2>
+<section id="linealidad-en-el-logit" class="level3" data-number="16.11.1">
+<h3 data-number="16.11.1" class="anchored" data-anchor-id="linealidad-en-el-logit"><span class="header-section-number">16.11.1</span> Linealidad en el logit</h3>
+<p>Se puede evaluar gráficamente o mediante pruebas específicas que verifican si la relación entre las variables independientes y el logit es lineal.</p>
+</section>
+<section id="independencia-de-los-errores" class="level3" data-number="16.11.2">
+<h3 data-number="16.11.2" class="anchored" data-anchor-id="independencia-de-los-errores"><span class="header-section-number">16.11.2</span> Independencia de los errores</h3>
+<p>Se verifica si las observaciones son independientes, usualmente mediante análisis de autocorrelación.</p>
+</section>
+<section id="ausencia-de-multicolinealidad" class="level3" data-number="16.11.3">
+<h3 data-number="16.11.3" class="anchored" data-anchor-id="ausencia-de-multicolinealidad"><span class="header-section-number">16.11.3</span> Ausencia de multicolinealidad</h3>
+<p>La multicolinealidad se evalúa mediante el cálculo de los factores de inflación de la varianza (VIF).</p>
+</section>
+</section>
+<section id="métricas-de-evaluación" class="level2" data-number="16.12">
+<h2 data-number="16.12" class="anchored" data-anchor-id="métricas-de-evaluación"><span class="header-section-number">16.12</span> Métricas de evaluación</h2>
+<section id="curva-roc" class="level3" data-number="16.12.1">
+<h3 data-number="16.12.1" class="anchored" data-anchor-id="curva-roc"><span class="header-section-number">16.12.1</span> Curva ROC</h3>
+<p>La curva ROC es una herramienta gráfica que evalúa la capacidad del modelo para discriminar entre las clases.</p>
+</section>
+<section id="auc" class="level3" data-number="16.12.2">
+<h3 data-number="16.12.2" class="anchored" data-anchor-id="auc"><span class="header-section-number">16.12.2</span> AUC</h3>
+<p>El área bajo la curva (AUC) cuantifica la capacidad del modelo para distinguir entre las clases. Un AUC de 0.5 indica un modelo sin capacidad predictiva, mientras que un AUC cercano a 1 indica un excelente modelo.</p>
+</section>
+</section>
+<section id="métricas-de-evaluación-1" class="level2" data-number="16.13">
+<h2 data-number="16.13" class="anchored" data-anchor-id="métricas-de-evaluación-1"><span class="header-section-number">16.13</span> Métricas de evaluación</h2>
+<p>La matriz de confusión es una herramienta que permite evaluar el rendimiento de un modelo de clasificación al resumir las predicciones realizadas frente a los resultados reales. Está compuesta por cuatro elementos:</p>
+<ul>
+<li><strong>Verdaderos Positivos (TP)</strong>: El modelo predice la clase positiva correctamente.</li>
+<li><strong>Falsos Positivos (FP)</strong>: El modelo predice la clase positiva incorrectamente.</li>
+<li><strong>Verdaderos Negativos (TN)</strong>: El modelo predice la clase negativa correctamente.</li>
+<li><strong>Falsos Negativos (FN)</strong>: El modelo predice la clase negativa incorrectamente.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Predicción Positiva</th>
+<th>Predicción Negativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Clase Positiva</strong></td>
+<td>Verdaderos Positivos (TP)</td>
+<td>Falsos Negativos (FN)</td>
+</tr>
+<tr class="even">
+<td><strong>Clase Negativa</strong></td>
+<td>Falsos Positivos (FP)</td>
+<td>Verdaderos Negativos (TN)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="métricas-de-evaluación-2" class="level2" data-number="16.14">
+<h2 data-number="16.14" class="anchored" data-anchor-id="métricas-de-evaluación-2"><span class="header-section-number">16.14</span> Métricas de evaluación</h2>
+<section id="exactitud" class="level3" data-number="16.14.1">
+<h3 data-number="16.14.1" class="anchored" data-anchor-id="exactitud"><span class="header-section-number">16.14.1</span> Exactitud</h3>
+<p>La exactitud es la proporción de predicciones correctas sobre el total de predicciones realizadas por el modelo <span class="math inline">\(\frac{\text{TP} + \text{TN}}{TOTAL}\)</span>.</p>
+</section>
+<section id="sensibilidad" class="level3" data-number="16.14.2">
+<h3 data-number="16.14.2" class="anchored" data-anchor-id="sensibilidad"><span class="header-section-number">16.14.2</span> Sensibilidad</h3>
+<p>La sensibilidad mide la proporción de verdaderos positivos correctamente identificados por el modelo: <span class="math inline">\(\frac{\text{TP}}{\text{TP} + \text{FN}}\)</span>. Indica la capacidad del modelo para identificar correctamente los casos positivos, es decir, cuántos de los casos positivos reales fueron detectados por el modelo.</p>
+</section>
+<section id="especificidad" class="level3" data-number="16.14.3">
+<h3 data-number="16.14.3" class="anchored" data-anchor-id="especificidad"><span class="header-section-number">16.14.3</span> Especificidad</h3>
+<p>La especificidad mide la proporción de verdaderos negativos correctamente identificados por el modelo: <span class="math inline">\(\text{Especificidad} = \frac{\text{TN}}{\text{TN} + \text{FP}}\)</span>. Refleja la capacidad del modelo para identificar correctamente los casos negativos, es decir, cuántos de los casos negativos reales fueron detectados por el modelo.</p>
 
 
 </section>
@@ -991,13 +1007,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./C01_univar.html" class="pagination-link" aria-label="Estadística descriptiva para una variable">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span>
+      <a href="./C03_reg-lineal.html" class="pagination-link" aria-label="antecedentes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">antecedentes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./C01_dist.html" class="pagination-link" aria-label="Distribuciones">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04_est-multi.html" class="pagination-link" aria-label="Estadística IV">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Estadística IV</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
