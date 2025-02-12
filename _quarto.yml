@@ -42,7 +42,12 @@ book:
         - C02_tamano.qmd
         - C02_hipotesis.qmd
         - C02_pruebas.qmd
-    - 03_est-reg.qmd
+    - part: C03_cover.qmd
+      chapters:
+        - C03_abordaje.qmd
+        - C03_modelamiento.qmd
+        - C03_reg-lineal.qmd
+        - C03_reg-logit.qmd
     - 04_est-multi.qmd
 
 format:
