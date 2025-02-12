@@ -14,7 +14,7 @@ Cada uno de estos modelos tiene sus hipótesis, que han sido comprobadas mediant
 
 En consecuencia, las hipótesis no solo son elementos centrales en la construcción y validación de teorías científicas, sino que también sirven como herramientas para estructurar la investigación empírica. La subjetividad del conocimiento se minimiza cuando las hipótesis son verificables independientemente del investigador. Esta propiedad en el ámbito científico se denomina reproducibilidad. 
 
-## Qué es la reproducibilidad y por qué es importante
+### Reproducibilidad
 
 La **reproducibilidad** es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto no solo fortalece la validez de los hallazgos, sino que también asegura que el conocimiento científico se basa en evidencias sólidas y verificables.
 
@@ -22,13 +22,13 @@ La reproducibilidad es esencial para la credibilidad de la ciencia y se conviert
 
 La **crisis actual de la reproducibilidad** en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos. Por ejemplo, [un artículo de la revista Nature](https://www.science.org/doi/10.1126/science.aac4716) encontro que tan solo para una treintena de 100 experimentos de psicología publicados en las mejores revistas científicas del campo se habían podido reproducir sus resultados. También es posible encontrar esta controversia en ciencias [de la salud](https://pmc.ncbi.nlm.nih.gov/articles/PMC1182327/), [económicas](https://www.aeaweb.org/articles?id=10.1257/aer.p20171031) y [otras disciplinas](https://www.nature.com/articles/533452a)
 
-# Pruebas de hipótesis
+## Pruebas de hipótesis
 
-## Objetivo
+### Objetivo
 
 El objetivo de una prueba de hipótesis es stablecer si existe **suficiente evidencia** en una muestra aleatoria para **rechazar** o **no rechazar** la **hipótesis nula** a nivel poblacional. Esto busca determinar cuál hipótesis explica mejor los datos observados en la población.
 
-## Arquitectura de las pruebas de hipótesis
+### Arquitectura de las pruebas de hipótesis
 
 En el ámbito de la estadística y la investigación científica, la comprensión y aplicación de las pruebas de hipótesis es fundamental para validar teorías y conclusiones basadas en datos. Estas pruebas se estructuran de manera que permiten a los investigadores tomar decisiones informadas acerca de la relación entre variables y la existencia de efectos en estudios empíricos. Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la *tetera de Russell*, la cual ejemplifica la importancia de la carga de la prueba y su relación con la validación de afirmaciones complejas.
 

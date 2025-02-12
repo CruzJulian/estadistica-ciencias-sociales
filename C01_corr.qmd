@@ -1,10 +1,46 @@
----
-title: "Correlación"
-subtitle: "Estadística descriptiva"
-author: "Julián Cruz"
-lang: "es-co"
 
----
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+## antecedentes
+
+library("ggplot2")
+library("dplyr")
+library("knitr")
+library("saber")
+library("ggplot2")
+
+data("SB11_20082")
+
+opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.show = "asis", fig.height = 3, fig.width = 8)
+
+```
+
+
+```{r}
+
+# library("googlesheets4")
+# 
+# SB11_20082 %>%
+#   filter(
+#     ESTU_ESTRATO != 8,
+#     !is.na(ESTU_NACIMIENTO_ANNO),
+#     !is.na(INFA_HERMANOS),
+#     !is.na(ECON_PERSONAS_HOGAR),
+#     !is.na(ESTU_ESTRATO),
+#     !is.na(ECON_SN_COMPUTADOR),
+#     !is.na(CIENCIAS_SOCIALES_PUNT)
+#   ) %>% 
+#   slice_sample(n = 5000) %>%
+#   write_sheet(ss = "1lCJlJmAoI8_M6RuI9vlvw0LYWgkWGH1CnKDLkIYfRdg", sheet = "sample")
+# 
+# SB11_20082 %>%
+#   slice_sample(n = 5000) -> tb_data_slice
+# 
+# lm(CIENCIAS_SOCIALES_PUNT ~ ESTU_NACIMIENTO_ANNO + INFA_HERMANOS + ECON_PERSONAS_HOGAR + as.character(ESTU_ESTRATO), data = tb_data_slice) %>% summary
+
+```
+
+
 
 ```{r}
 
@@ -58,5 +94,174 @@ Para medir asociación entre una variable cuantitativa y otra cualitativa se peu
 ## Correlación
 
 ¿Qué es la causalidad?
+
+
+
+
+
+## Correlación lineal
+
+### Pearson
+
+- **Definición**: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.
+- **Rango**: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.
+- **Cálculo**: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.
+
+## Correlación monótona
+
+### Spearman
+
+- **Definición**: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.
+- **Ventaja**: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.
+- **Rango**: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.
+
+## Correlación monótona
+
+### Kendall
+
+- **Definición**: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.
+- **Cálculo**:
+  - **Concordancia**: Dos pares de observaciones están en concordancia si el orden de las observaciones en ambos pares es el mismo.
+  - **Discordancia**: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.
+- **Aplicación**: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.
+
+## Asociación numérica - categórica
+
+En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.
+
+## Elementos gráficos
+
+Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:
+
+- **Diagramas de caja (boxplots)**: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.
+- **Gráficos de barras**: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.
+
+## Asociación numérica - categórica
+
+```{r}
+library("stringr")
+
+SB11_20082 %>% 
+  filter(ESTU_ESTRATO != 8) %>% 
+  slice_sample(n = 2500) %>% 
+  mutate(
+    ESTRATO = as.ordered(ESTU_ESTRATO)
+    ) -> tb_example
+
+```
+
+
+```{r, fig.show='asis'}
+tb_example  %>% 
+  group_by(ESTRATO) %>% 
+  summarise(INGLES_PUNT = round(mean(INGLES_PUNT, na.rm = TRUE), 2)) %>% 
+  na.omit() %>% 
+  ggplot +
+  aes(x = INGLES_PUNT, label = INGLES_PUNT, y = ESTRATO) +
+  geom_col(fill = "#000000") +
+  geom_text(hjust = 2, color = "#cccccc") +
+  labs(x = "Puntaje en inglés", y = "Estrato") +
+  theme_minimal()
+
+
+```
+
+## ANOVA
+
+El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.
+
+### Tipos
+
+  - **ANOVA de una vía**: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.
+  - **ANOVA de más vías**: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.
+
+
+## ANOVA
+
+```{r, results='markup'}
+aov(INGLES_PUNT ~ ESTRATO, data = tb_example) %>% summary()
+
+```
+
+## Test Kruskal-Wallis
+
+El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.
+
+### Uso
+
+Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.
+
+```{r, results='markup'}
+kruskal.test(INGLES_PUNT ~ ESTRATO, data = tb_example)
+
+
+```
+
+## Asociación categórica - categórica
+
+En ocasiones es necesario encontrar relaciones entre variables categóricas.
+
+
+
+## Tablas de contingencia
+
+Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.
+
+### Uso
+
+Ayudan a visualizar y analizar la dependencia entre variables categóricas.
+
+## Tablas de contingencia
+
+```{r, results='markup'}
+library("scales")
+
+tb_example %>% 
+  count(COLE_INST_JORNADA, ESTRATO) %>%
+  mutate(
+  p = prop.table(n) %>% percent()
+  ) %>% 
+  ggplot +
+  aes(y = COLE_INST_JORNADA, x = ESTRATO, fill = n, label = p) +
+  geom_raster() +
+  scale_fill_gradient(low = "#ffccaa", high = "#f00", guide = "none") +
+  geom_text() +
+  labs(x = "Estrato", y = "Jornada") +
+  theme_minimal()
+
+  
+
+```
+
+## Prueba de chi cuadrado
+
+Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.
+
+
+### Uso
+
+Determina si hay una relación significativa entre las variables categóricas.
+
+```{r, results='markup'}
+chisq.test(tb_example$COLE_INST_JORNADA, tb_example$ESTRATO)
+
+```
+
+
+
+## Prueba exacta de Fisher
+
+Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.
+
+
+### Uso
+
+Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.
+
+
+```{r, results='markup'}
+fisher.test(tb_example$COLE_INST_JORNADA, tb_example$ESTRATO, simulate.p.value = TRUE)
+
+```
 
 

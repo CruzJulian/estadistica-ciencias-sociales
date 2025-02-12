@@ -25,11 +25,6 @@ Iniciamos el tema de visualización de datos con una lectura refrescante: [Gráf
  - [Beter Life Index OECD](https://www.oecdbetterlifeindex.org/es/){target="_blank"}
  - [Top 10 Countries by Inflation Rate (1980-2018)](https://www.youtube.com/watch?v=dwZ6B5kalbQ){target="_blank"}
 
-## El ejemplo de Napoleón
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Minard.png/1200px-Minard.png)
-
-Fuente: [Data visualization education using the storytelling with Minard's figurative map](https://www.researchgate.net/publication/327579298_Data_visualization_education_using_the_storytelling_with_Minard's_figurative_map){target="_blank"}
 
 
 ## Gráficos tradicionales
