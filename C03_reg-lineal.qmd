@@ -1,0 +1,259 @@
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+## antecedentes
+
+library("ggplot2")
+library("dplyr")
+library("knitr")
+library("saber")
+library("ggplot2")
+
+data("SB11_20082")
+
+opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.show = "asis", fig.height = 3, fig.width = 8)
+
+```
+
+
+```{r}
+
+# library("googlesheets4")
+# 
+# SB11_20082 %>%
+#   filter(
+#     ESTU_ESTRATO != 8,
+#     !is.na(ESTU_NACIMIENTO_ANNO),
+#     !is.na(INFA_HERMANOS),
+#     !is.na(ECON_PERSONAS_HOGAR),
+#     !is.na(ESTU_ESTRATO),
+#     !is.na(ECON_SN_COMPUTADOR),
+#     !is.na(CIENCIAS_SOCIALES_PUNT)
+#   ) %>% 
+#   slice_sample(n = 5000) %>%
+#   write_sheet(ss = "1lCJlJmAoI8_M6RuI9vlvw0LYWgkWGH1CnKDLkIYfRdg", sheet = "sample")
+# 
+# SB11_20082 %>%
+#   slice_sample(n = 5000) -> tb_data_slice
+# 
+# lm(CIENCIAS_SOCIALES_PUNT ~ ESTU_NACIMIENTO_ANNO + INFA_HERMANOS + ECON_PERSONAS_HOGAR + as.character(ESTU_ESTRATO), data = tb_data_slice) %>% summary
+
+```
+
+
+
+# Modelo de regresón lineal
+
+
+
+## Modelo de regresón lineal
+
+
+La regresión lineal múltiple es un método estadístico que permite modelar la relación entre una variable dependiente continua y dos o más variables independientes (predictoras). Se utiliza para explicar el valor de la variable dependiente basado en los valores conocidos de las variables independientes.
+
+
+
+## Formulación
+
+:::: {.columns}
+
+::: {.column}
+
+### Especificación matemática
+
+
+$$
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k + \varepsilon
+$$
+
+:::
+  
+::: {.column}
+
+### Terminología
+
+ - $X$ : variables independientes/explicativas.
+ - $y$ : variable dependiente - explicada - respuesta.
+ - $\beta_0$ es la intersección o término constante.
+ - $\beta_1, \beta_2, \dots, \beta_n$ : coeficientes de regresión.
+ - $\varepsilon$ : errores/perturbaciones aleatorias.
+:::
+  
+::::
+
+## Formulación
+
+
+### Parámetros
+
+- **Coeficientes de regresión $\beta$**: Indican el cambio esperado en la variable dependiente $Y$ por cada unidad de cambio en una variable independiente $X$, manteniendo las demás constantes.
+- **Error estándar**: Medida de la precisión de los coeficientes estimados.
+- **Término de error $\varepsilon$**: Captura la variabilidad en $Y$ que no es explicada por las variables independientes.
+- **Estadísticos \(t\) y \(p\)-valor**: Utilizados para probar la significancia de cada coeficiente.
+
+### Supuestos teóricos
+
+- **Linealidad**: La relación entre las variables dependientes e independientes es lineal.
+- **Independencia de los errores**: Los errores $\varepsilon$ son independientes entre sí.
+- **Homoscedasticidad**: La varianza de los errores es constante en todos los niveles de las variables independientes.
+- **Normalidad de los errores**: Los errores $\varepsilon$ se distribuyen normalmente.
+- **No multicolinealidad**: Las variables independientes no están altamente correlacionadas entre sí.
+
+## Covariables
+
+### Covariables numéricas
+
+- **Definición**: Variables independientes que son numéricas y se utilizan en modelos de regresión para explicar la variación en la variable dependiente.
+- **Ejemplo**: Edad, ingresos, puntuación en una prueba.
+
+### Covariables categóricas
+
+- Requieren un procesamiento previo. Se convierten en variables dummy.
+- **Definición**: Variables independientes que son categóricas y se utilizan en modelos de regresión para explorar diferencias entre grupos o categorías.
+- **Ejemplo**: Género, tipo de tratamiento, región geográfica.
+
+## Respuesta
+
+### Respuesta numérica
+
+- **Definición**: Variable dependiente en modelos de regresión que es numérica.
+- **Ejemplo**: Precio de una vivienda, número de ventas.
+
+### Respuesta categórica
+
+- El trabajo con respuestas categóricas se sitúa por fuera del modelo de regresión lineal.
+- **Definición**: Variable dependiente en modelos de regresión que es categórica.
+- **Ejemplo**: Aprobado/No aprobado, compra/no compra.
+
+## Comprobación de hipótesis 
+
+La evaluación de hipótesis mediante modelos de regresión implica determinar si los efectos de las variables independientes sobre la variable dependiente son significativos y en qué dirección se manifiestan. Este proceso se basa en la prueba de hipótesis para los coeficientes del modelo.
+
+### Planteamiento de hipótesis
+
+- **Hipótesis nula (\(H_0\))**: Establece que no hay efecto o relación significativa entre la variable independiente y la variable dependiente. En términos de regresión, esto significa que el coeficiente de la variable independiente es igual a cero (\(\beta_i = 0\)).
+- **Hipótesis alternativa (\(H_A\))**: Sugiere que hay un efecto significativo. En regresión, esto implica que el coeficiente no es cero (\(\beta_i \ne 0\)).
+
+## Proceso de estimación
+
+### Intervalos de confianza analíticos
+
+- **Cálculo**:
+  - Se basa en los supuestos de normalidad de los errores y en la distribución de $t$.
+  - Los límites del intervalo de confianza se calculan como: $\hat{\beta} \pm t_{\alpha/2} \cdot \text{SE}(\hat{\beta})$, donde $\hat{\beta}$ es el coeficiente estimado y $\text{SE}(\hat{\beta})$ es su error estándar.
+- **Importancia**:
+  - Proporciona una medida de la precisión de los estimadores.
+  - Ayuda a evaluar la significancia de los coeficientes: si el intervalo no incluye cero, el coeficiente es significativo.
+
+## Proceso de estimación
+
+### Bootstrap
+
+- **Proceso**:
+  - Generar un gran número de muestras bootstrap (por ejemplo, 1,000).
+  - Calcular los coeficientes de regresión para cada muestra.
+  - Obtener la distribución empírica de los coeficientes y derivar intervalos de confianza a partir de ella.
+- **Ventajas**:
+  - No depende de los supuestos de normalidad de los errores.
+  - Es útil en situaciones donde los supuestos teóricos pueden no cumplirse o en modelos complejos.
+- **Limitaciones**:
+  - Requiere un número elevado de simulaciones, lo que puede ser computacionalmente intensivo.
+  - La precisión de los intervalos bootstrap depende del tamaño de la muestra original.
+
+## Inferencia del modelo
+
+Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.
+
+### Significancia global
+
+¿Existe una relación estadísticamente significativa entre la variable respuesta y las variables explicativas en general?
+
+$$H_0:\beta_1 = \beta_2 = \ldots = \beta_p = 0
+\quad\text{frente a}\quad
+H_1:\beta_j\neq 0 \text{ para algún } j$$
+
+## Inferencia del modelo
+
+Es necesario estudiar si las relaciones mostradas en el modelo son o no estadísticamente significativas.
+
+### Significancia particular
+
+¿Existe una relación estadísticamente significativa entre la variable respuesta y una variable explicativa en particular?
+
+$$
+H_0:\beta_i = 0
+\quad\text{frente a}\quad
+H_1:\beta_i\neq 0
+$$
+
+## Proceso de estimación
+
+### Valores ajustados/predichos
+
+$$
+\hat{y} = X\hat{\beta} + \hat\beta_0
+$$
+
+### Residuales
+
+
+$$
+r = y - \hat{y}
+$$
+
+## Validación de supuestos
+
+Para que los resultados de la regresión lineal múltiple sean válidos, deben cumplirse ciertos supuestos. A continuación se presentan los métodos de evaluación para cada uno:
+
+- **Linealidad**: 
+  - **Método de evaluación**: Se evalúa mediante la observación de posibles patrones en los residuos. Puedes utilizar gráficos de residuos frente a valores ajustados para verificar si los residuos están distribuidos aleatoriamente sin patrones evidentes.
+  - **Gráfico recomendado**: Gráfico de dispersión de residuos versus valores ajustados.
+
+- **Independencia de los errores**:
+  - **Método de evaluación**: Se verifica mediante pruebas estadísticas como la prueba de Durbin-Watson para detectar autocorrelación en los residuos. Un valor cercano a 2 sugiere que no hay autocorrelación.
+  - **Prueba recomendada**: Prueba de Durbin-Watson.
+
+## Validación de supuestos
+
+- **Homoscedasticidad**:
+  - **Método de evaluación**: Se evalúa observando si la varianza de los residuos es constante a lo largo de todos los valores de las variables independientes. Se puede usar el gráfico de residuos estandarizados frente a valores ajustados.
+  - **Gráfico recomendado**: Gráfico de residuos estandarizados versus valores ajustados.
+
+- **Normalidad de los errores**:
+  - **Método de evaluación**: Se verifica utilizando gráficos y pruebas estadísticas. Un gráfico de Q-Q (cuantil-cuantil) puede mostrar si los residuos siguen una distribución normal. Además, se pueden realizar pruebas de normalidad como la prueba de Shapiro-Wilk.
+  - **Gráficos y pruebas recomendadas**: Gráfico Q-Q y prueba de Shapiro-Wilk.
+
+## Validación de supuestos
+
+- **No multicolinealidad**:
+  - **Método de evaluación**: Se evalúa mediante el cálculo del Factor de Inflación de la Varianza (VIF) para cada variable independiente. Un VIF superior a 10 indica una alta multicolinealidad.
+  - **Métrica recomendada**: Factor de Inflación de la Varianza (VIF).
+
+## Métricas de evaluación
+
+- **R-cuadrado $R^2$**: Mide la proporción de la varianza en la variable dependiente que es explicada por las variables independientes. Un $R^2$ alto indica un buen ajuste del modelo.
+- **R-cuadrado ajustado**: Similar al $R^2$, pero ajustado por el número de variables en el modelo, lo que lo hace más adecuado para comparaciones entre modelos con diferentes números de predictores.
+- **Error estándar de la estimación**: Mide la precisión de las predicciones del modelo.
+- **Estadístico F**: Evalúa la significancia global del modelo; es decir, si al menos una de las variables independientes tiene un efecto sobre la variable dependiente. A partir de este se obtiene un p-valor global.
+- **p-valor**: Para cada coeficiente, indica si la variable independiente asociada tiene un efecto significativo en la variable dependiente.
+
+
+## Coeficiente de determinación
+
+Permite establecer el porcentaje de información explicada por el modelo. Un valor cercano a 1 (100%) hace referencia a un modelo de ajuste alto.
+
+### Coeficiente de determinación
+
+$$
+R^2 = \frac{SCR}{SCT} = 1- \frac{SCE}{SCT}
+$$
+
+### Coeficiente de determinación ajustado
+
+$$
+R_a^{2} = 1 - \frac{n - 1}{n - p - 1}(1-R^{2}) 
+$$
+
+## Práctica
+
+[Análisis de regresión](https://seeing-theory.brown.edu/regression-analysis/)
+

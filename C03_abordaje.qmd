@@ -1,0 +1,102 @@
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+## antecedentes
+
+library("ggplot2")
+library("dplyr")
+library("knitr")
+library("saber")
+library("ggplot2")
+
+data("SB11_20082")
+
+opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.show = "asis", fig.height = 3, fig.width = 8)
+
+```
+
+
+```{r}
+
+# library("googlesheets4")
+# 
+# SB11_20082 %>%
+#   filter(
+#     ESTU_ESTRATO != 8,
+#     !is.na(ESTU_NACIMIENTO_ANNO),
+#     !is.na(INFA_HERMANOS),
+#     !is.na(ECON_PERSONAS_HOGAR),
+#     !is.na(ESTU_ESTRATO),
+#     !is.na(ECON_SN_COMPUTADOR),
+#     !is.na(CIENCIAS_SOCIALES_PUNT)
+#   ) %>% 
+#   slice_sample(n = 5000) %>%
+#   write_sheet(ss = "1lCJlJmAoI8_M6RuI9vlvw0LYWgkWGH1CnKDLkIYfRdg", sheet = "sample")
+# 
+# SB11_20082 %>%
+#   slice_sample(n = 5000) -> tb_data_slice
+# 
+# lm(CIENCIAS_SOCIALES_PUNT ~ ESTU_NACIMIENTO_ANNO + INFA_HERMANOS + ECON_PERSONAS_HOGAR + as.character(ESTU_ESTRATO), data = tb_data_slice) %>% summary
+
+```
+
+
+
+# Modelamiento
+
+## Qué es un modelo estadístico
+
+Un modelo estadístico es un conjunto de supuestos matemáticos que se realizan sobre la distribución asociada a un conjunto de datos.
+
+### Se ve así
+
+$$
+y = \beta_0 +  X_1 \beta_1 + X_2 \beta_2 + ... + X_k\beta_k + \varepsilon
+$$
+
+Pero...
+
+Cada número $\beta_i$ tiene unas propiedades. Por eso, el reporte de un modelo se vuelve un poco complejo de interpretar.
+
+## Actividad en clase
+
+$$
+[realrinc] = \beta_0 +  [hrs1] \cdot \beta_1 + \varepsilon
+$$
+[Revisemos las partes de un modelo](https://www.stathelp.se/en/regoutput_en.html)
+
+A continuación se presentan los resultados de un análisis realizado a partir de una encuesta estadounidense realizada en 2018. La variable dependiente es cuánto gana el encuestado en un año, en dólares estadounidenses. La variable independiente es cuántas horas trabajó el encuestado la semana pasada. En la encuesta real hay miles de respuestas, pero aquí se seleccionaron 46 de ellas al azar para facilitar la presentación de los resultados.
+
+## Justificación
+
+¿Por qué hacemos modelos?
+
+[To explain or to predict](https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf)
+
+## Modelamiento
+
+El modelamiento es una técnica esencial en la investigación científica, que permite representar y analizar fenómenos complejos del mundo real. Los modelos son simplificaciones que ayudan a entender, predecir y, en algunos casos, controlar estos fenómenos.
+
+### De la realidad a la teoría
+
+El proceso de modelamiento inicia con la observación de la realidad. A partir de estas observaciones, se desarrollan teorías que intentan explicar el comportamiento observado. Los modelos son representaciones de estas teorías, diseñadas para ser más manejables y comprensibles.
+
+### Modelamiento estadístico
+
+El modelamiento estadístico utiliza datos para construir modelos que describen y analizan relaciones entre variables. Estos modelos son fundamentales en diversas disciplinas científicas, como la economía, la psicología, la biología y la ingeniería, entre otras.
+
+## Tipos de modelos
+
+Existen diferentes tipos de modelos que se utilizan dependiendo de los objetivos de la investigación. Los principales son:
+
+### Descripción
+
+Modelos descriptivos que buscan representar las características básicas de los datos sin hacer suposiciones sobre la estructura subyacente.
+
+### Explicación
+
+Modelos explicativos que buscan identificar y entender las relaciones causales entre variables.
+
+### Pronóstico
+
+Modelos predictivos que se utilizan para hacer predicciones sobre futuros eventos o comportamientos basados en datos actuales o pasados.
+

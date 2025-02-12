@@ -1,0 +1,176 @@
+# Modelo de regresión logit
+
+## Modelo de regresión logit
+
+El modelo de regresión logit es utilizado para modelar una variable dependiente categórica, generalmente binaria, como una función de variables independientes. Es una forma de regresión no lineal que se usa ampliamente en análisis de datos donde el resultado es dicotómico.
+
+
+## Formulación
+
+### Especificación matemática
+
+La especificación matemática del modelo logit se basa en la función logística. La función de probabilidad para una variable dependiente binaria $y$ puede expresarse como:
+
+$$
+P(y = 1 \mid X) = \frac{1}{1 + e^{-(\beta_0 +  X_1 \beta_1 + X_2 \beta_2 + \dots + X_k\beta_k)}}
+$$
+
+Donde:
+
+- $P(y = 1 \mid X)$ es la probabilidad de que la variable dependiente sea igual a 1 dado el conjunto de variables independientes $X$.
+- $\beta_0$ es el término constante o intercepto.
+- $X_1, X_2, \dots, X_k$ son las variables independientes.
+- $\beta_1, \beta_2, \dots, \beta_k$ son los coeficientes asociados con cada variable independiente.
+
+## Formulación
+
+### Terminología
+
+- **$X$**: variables independientes/explicativas.
+- **$y$**: variable dependiente, categórica, que toma valores 0 o 1.
+- **$\beta_0$**: intersección o término constante.
+- **$\beta_1, \beta_2, \dots, \beta_n$**: coeficientes de regresión que indican la relación entre las variables independientes y la probabilidad de que $y = 1$.
+- **$\varepsilon$**: errores o perturbaciones aleatorias (aunque en el modelo logit, la relación es probabilística y no se modelan errores de la misma forma que en la regresión lineal).
+
+## Parámetros del modelo
+
+### Parámetros
+
+En el modelo logit, los parámetros $\beta$ se estiman mediante el método de máxima verosimilitud. Cada parámetro $\beta_j$ representa el cambio en el logaritmo de las probabilidades ($\log \frac{P(y=1)}{P(y=0)}$) asociado con una unidad de cambio en la variable independiente $X_j$, manteniendo constantes las otras variables.
+
+### Supuestos teóricos
+
+- **Independencia de las observaciones**: Las observaciones deben ser independientes entre sí.
+- **Linealidad en el logit**: La relación entre las variables independientes y el logit de la probabilidad es lineal.
+- **Ausencia de multicolinealidad**: Las variables independientes no deben estar fuertemente correlacionadas entre sí.
+
+## Covariables
+
+### Covariables numéricas
+
+Las covariables numéricas son aquellas que se pueden medir cuantitativamente y se introducen directamente en el modelo como $X_j$.
+
+### Covariables categóricas
+
+Las covariables categóricas, al ser cualitativas, se deben convertir en variables dummies (0 o 1) antes de incluirlas en el modelo.
+
+## Respuesta
+
+### Respuesta categórica
+
+La variable respuesta en un modelo logit es categórica, usualmente binaria, y toma valores como 0 y 1.
+
+## Comprobación de hipótesis
+
+Se formulan las hipótesis coherentes con la teoría. Se busca comprobar si las hipótesis son ciertas en la población.
+
+### Planteamiento de hipótesis
+
+En un modelo logit, se pueden formular hipótesis sobre los coeficientes $\beta_j$ (la covariable $j$ tiene un impacto positivo o negativo en la variable respuesta):
+
+- **Hipótesis nula ($H_0$)**: $\beta_j = 0$, es decir, la variable independiente $X_j$ no tiene efecto sobre la probabilidad de que $y = 1$.
+- **Hipótesis alternativa ($H_1$)**: $\beta_j \neq 0$, es decir, la variable independiente $X_j$ tiene un efecto significativo.
+
+## Proceso de estimación
+
+### Intervalos de confianza analíticos para los parámetros
+
+Los intervalos de confianza para los coeficientes $\beta_j$ se calculan bajo el supuesto de normalidad asintótica de las estimaciones de máxima verosimilitud. Estos intervalos permiten evaluar la precisión de las estimaciones.
+
+### Bootstrap
+
+El bootstrap es un método no paramétrico que se utiliza para estimar la distribución de los coeficientes $\beta_j$ y sus intervalos de confianza, generando múltiples muestras de la base de datos original.
+
+## Inferencia del modelo
+
+### Significancia global
+
+La significancia global del modelo se evalúa utilizando pruebas como la prueba de razón de verosimilitud (Likelihood Ratio Test), que compara la bondad de ajuste del modelo completo con un modelo reducido.
+
+### Significancia particular
+
+Se evalúa la significancia individual de cada coeficiente $\beta_j$ mediante pruebas $t$. Un valor $p$ bajo indica que la variable correspondiente tiene un efecto significativo sobre la probabilidad de que $y = 1$.
+
+## Proceso de estimación
+
+### Probabilidades predichas
+
+Los valores ajustados $\hat{p}$ son las probabilidades predichas de que $y = 1$:
+
+$$
+\hat{p} = \frac{1}{1 + e^{-(\hat{\beta_0} + X_1\hat{\beta_1} + X_2\hat{\beta_2} + \dots + X_k\hat{\beta_k})}}
+$$
+
+### Valores predichos
+
+Los valores ajustados $\hat{y}$ se obtienen mediante un umbral $U$ que se encuentra entre 0 y 1:
+
+$$
+\hat{y} = I(\hat{p} < U)
+$$
+
+
+### Residuales
+
+Los residuales en un modelo logit no se calculan de la misma manera que en un modelo de regresión lineal, pero se pueden evaluar las diferencias entre los valores observados y las probabilidades predichas.
+
+$$
+ \left[y \cdot log(\hat{p}) + (1 - y) \cdot log(1 - \hat{p}) \right]
+$$
+
+## Validación de supuestos
+
+### Linealidad en el logit
+
+Se puede evaluar gráficamente o mediante pruebas específicas que verifican si la relación entre las variables independientes y el logit es lineal.
+
+### Independencia de los errores
+
+Se verifica si las observaciones son independientes, usualmente mediante análisis de autocorrelación.
+
+### Ausencia de multicolinealidad
+
+La multicolinealidad se evalúa mediante el cálculo de los factores de inflación de la varianza (VIF).
+
+## Métricas de evaluación
+
+### Curva ROC
+
+La curva ROC es una herramienta gráfica que evalúa la capacidad del modelo para discriminar entre las clases. 
+
+### AUC
+
+El área bajo la curva (AUC) cuantifica la capacidad del modelo para distinguir entre las clases. Un AUC de 0.5 indica un modelo sin capacidad predictiva, mientras que un AUC cercano a 1 indica un excelente modelo.
+
+
+## Métricas de evaluación
+
+La matriz de confusión es una herramienta que permite evaluar el rendimiento de un modelo de clasificación al resumir las predicciones realizadas frente a los resultados reales. Está compuesta por cuatro elementos:
+
+- **Verdaderos Positivos (TP)**: El modelo predice la clase positiva correctamente.
+- **Falsos Positivos (FP)**: El modelo predice la clase positiva incorrectamente.
+- **Verdaderos Negativos (TN)**: El modelo predice la clase negativa correctamente.
+- **Falsos Negativos (FN)**: El modelo predice la clase negativa incorrectamente.
+
+|                    | Predicción Positiva | Predicción Negativa |
+|--------------------|---------------------|---------------------|
+| **Clase Positiva** | Verdaderos Positivos (TP)  | Falsos Negativos (FN)  |
+| **Clase Negativa** | Falsos Positivos (FP)  | Verdaderos Negativos (TN)  |
+
+
+
+## Métricas de evaluación
+
+
+### Exactitud
+
+La exactitud es la proporción de predicciones correctas sobre el total de predicciones realizadas por el modelo $\frac{\text{TP} + \text{TN}}{TOTAL}$.
+
+### Sensibilidad 
+
+La sensibilidad mide la proporción de verdaderos positivos correctamente identificados por el modelo: $\frac{\text{TP}}{\text{TP} + \text{FN}}$. Indica la capacidad del modelo para identificar correctamente los casos positivos, es decir, cuántos de los casos positivos reales fueron detectados por el modelo.
+
+### Especificidad
+
+La especificidad mide la proporción de verdaderos negativos correctamente identificados por el modelo: $\text{Especificidad} = \frac{\text{TN}}{\text{TN} + \text{FP}}$. Refleja la capacidad del modelo para identificar correctamente los casos negativos, es decir, cuántos de los casos negativos reales fueron detectados por el modelo.
+
