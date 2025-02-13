@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Dos variables – Estadística para Ciencias Sociales</title>
+<title>4&nbsp; Análisis correlacional – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -178,7 +178,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C01_corr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -245,7 +245,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./C03_cover.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">C03_cover.html</span></a>
+ <span class="menu-text">Modelamiento estadístico</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -254,19 +254,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C03_abordaje.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Modelamiento</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C03_modelamiento.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Modelamiento</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C03_reg-lineal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">antecedentes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Modelo de regresón lineal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,50 +293,25 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dos-variables-cualitativas" id="toc-dos-variables-cualitativas" class="nav-link active" data-scroll-target="#dos-variables-cualitativas"><span class="header-section-number">4.1</span> Dos variables cualitativas</a></li>
-  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#dos-variables-cuantitativas"><span class="header-section-number">4.2</span> Dos variables cuantitativas</a></li>
-  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza"><span class="header-section-number">4.3</span> Covarianza</a></li>
-  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson"><span class="header-section-number">4.4</span> Correlación de Pearson</a></li>
-  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman"><span class="header-section-number">4.5</span> Correlación de Spearman</a></li>
-  <li><a href="#una-variable-cualitativa-y-otra-cuantitativa" id="toc-una-variable-cualitativa-y-otra-cuantitativa" class="nav-link" data-scroll-target="#una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">4.6</span> Una variable cualitativa y otra cuantitativa</a></li>
-  <li><a href="#correlación" id="toc-correlación" class="nav-link" data-scroll-target="#correlación"><span class="header-section-number">4.7</span> Correlación</a></li>
-  <li><a href="#correlación-lineal" id="toc-correlación-lineal" class="nav-link" data-scroll-target="#correlación-lineal"><span class="header-section-number">4.8</span> Correlación lineal</a>
+  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link active" data-scroll-target="#dos-variables-cuantitativas"><span class="header-section-number">4.1</span> Dos variables cuantitativas</a>
   <ul class="collapse">
-  <li><a href="#pearson" id="toc-pearson" class="nav-link" data-scroll-target="#pearson"><span class="header-section-number">4.8.1</span> Pearson</a></li>
+  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza"><span class="header-section-number">4.1.1</span> Covarianza</a></li>
+  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson"><span class="header-section-number">4.1.2</span> Correlación de Pearson</a></li>
+  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman"><span class="header-section-number">4.1.3</span> Correlación de Spearman</a></li>
+  <li><a href="#kendall" id="toc-kendall" class="nav-link" data-scroll-target="#kendall"><span class="header-section-number">4.1.4</span> Kendall</a></li>
   </ul></li>
-  <li><a href="#correlación-monótona" id="toc-correlación-monótona" class="nav-link" data-scroll-target="#correlación-monótona"><span class="header-section-number">4.9</span> Correlación monótona</a>
+  <li><a href="#asociación-numérica---categórica" id="toc-asociación-numérica---categórica" class="nav-link" data-scroll-target="#asociación-numérica---categórica"><span class="header-section-number">4.2</span> Asociación numérica - categórica</a>
   <ul class="collapse">
-  <li><a href="#spearman" id="toc-spearman" class="nav-link" data-scroll-target="#spearman"><span class="header-section-number">4.9.1</span> Spearman</a></li>
+  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos"><span class="header-section-number">4.2.1</span> Elementos gráficos</a></li>
+  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova"><span class="header-section-number">4.2.2</span> ANOVA</a></li>
+  <li><a href="#tipos" id="toc-tipos" class="nav-link" data-scroll-target="#tipos"><span class="header-section-number">4.2.3</span> Tipos</a></li>
+  <li><a href="#test-kruskal-wallis" id="toc-test-kruskal-wallis" class="nav-link" data-scroll-target="#test-kruskal-wallis"><span class="header-section-number">4.2.4</span> Test Kruskal-Wallis</a></li>
   </ul></li>
-  <li><a href="#correlación-monótona-1" id="toc-correlación-monótona-1" class="nav-link" data-scroll-target="#correlación-monótona-1"><span class="header-section-number">4.10</span> Correlación monótona</a>
+  <li><a href="#asociación-categórica---categórica" id="toc-asociación-categórica---categórica" class="nav-link" data-scroll-target="#asociación-categórica---categórica"><span class="header-section-number">4.3</span> Asociación categórica - categórica</a>
   <ul class="collapse">
-  <li><a href="#kendall" id="toc-kendall" class="nav-link" data-scroll-target="#kendall"><span class="header-section-number">4.10.1</span> Kendall</a></li>
-  </ul></li>
-  <li><a href="#asociación-numérica---categórica" id="toc-asociación-numérica---categórica" class="nav-link" data-scroll-target="#asociación-numérica---categórica"><span class="header-section-number">4.11</span> Asociación numérica - categórica</a></li>
-  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos"><span class="header-section-number">4.12</span> Elementos gráficos</a></li>
-  <li><a href="#asociación-numérica---categórica-1" id="toc-asociación-numérica---categórica-1" class="nav-link" data-scroll-target="#asociación-numérica---categórica-1"><span class="header-section-number">4.13</span> Asociación numérica - categórica</a></li>
-  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova"><span class="header-section-number">4.14</span> ANOVA</a>
-  <ul class="collapse">
-  <li><a href="#tipos" id="toc-tipos" class="nav-link" data-scroll-target="#tipos"><span class="header-section-number">4.14.1</span> Tipos</a></li>
-  </ul></li>
-  <li><a href="#anova-1" id="toc-anova-1" class="nav-link" data-scroll-target="#anova-1"><span class="header-section-number">4.15</span> ANOVA</a></li>
-  <li><a href="#test-kruskal-wallis" id="toc-test-kruskal-wallis" class="nav-link" data-scroll-target="#test-kruskal-wallis"><span class="header-section-number">4.16</span> Test Kruskal-Wallis</a>
-  <ul class="collapse">
-  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso"><span class="header-section-number">4.16.1</span> Uso</a></li>
-  </ul></li>
-  <li><a href="#asociación-categórica---categórica" id="toc-asociación-categórica---categórica" class="nav-link" data-scroll-target="#asociación-categórica---categórica"><span class="header-section-number">4.17</span> Asociación categórica - categórica</a></li>
-  <li><a href="#tablas-de-contingencia" id="toc-tablas-de-contingencia" class="nav-link" data-scroll-target="#tablas-de-contingencia"><span class="header-section-number">4.18</span> Tablas de contingencia</a>
-  <ul class="collapse">
-  <li><a href="#uso-1" id="toc-uso-1" class="nav-link" data-scroll-target="#uso-1"><span class="header-section-number">4.18.1</span> Uso</a></li>
-  </ul></li>
-  <li><a href="#tablas-de-contingencia-1" id="toc-tablas-de-contingencia-1" class="nav-link" data-scroll-target="#tablas-de-contingencia-1"><span class="header-section-number">4.19</span> Tablas de contingencia</a></li>
-  <li><a href="#prueba-de-chi-cuadrado" id="toc-prueba-de-chi-cuadrado" class="nav-link" data-scroll-target="#prueba-de-chi-cuadrado"><span class="header-section-number">4.20</span> Prueba de chi cuadrado</a>
-  <ul class="collapse">
-  <li><a href="#uso-2" id="toc-uso-2" class="nav-link" data-scroll-target="#uso-2"><span class="header-section-number">4.20.1</span> Uso</a></li>
-  </ul></li>
-  <li><a href="#prueba-exacta-de-fisher" id="toc-prueba-exacta-de-fisher" class="nav-link" data-scroll-target="#prueba-exacta-de-fisher"><span class="header-section-number">4.21</span> Prueba exacta de Fisher</a>
-  <ul class="collapse">
-  <li><a href="#uso-3" id="toc-uso-3" class="nav-link" data-scroll-target="#uso-3"><span class="header-section-number">4.21.1</span> Uso</a></li>
+  <li><a href="#tablas-de-contingencia" id="toc-tablas-de-contingencia" class="nav-link" data-scroll-target="#tablas-de-contingencia"><span class="header-section-number">4.3.1</span> Tablas de contingencia</a></li>
+  <li><a href="#prueba-de-chi-cuadrado" id="toc-prueba-de-chi-cuadrado" class="nav-link" data-scroll-target="#prueba-de-chi-cuadrado"><span class="header-section-number">4.3.2</span> Prueba de chi cuadrado</a></li>
+  <li><a href="#prueba-exacta-de-fisher" id="toc-prueba-exacta-de-fisher" class="nav-link" data-scroll-target="#prueba-exacta-de-fisher"><span class="header-section-number">4.3.3</span> Prueba exacta de Fisher</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -344,9 +319,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">antecedentes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dos variables</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></h1>
 </div>
 
 
@@ -365,71 +340,44 @@ window.Quarto = {
 
 <p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
 <ul>
-<li>Dos cualitativas</li>
 <li>Dos cuantitativas</li>
 <li>Una cuantitativa y una cualitativa</li>
+<li>Dos cualitativas</li>
 </ul>
-<section id="dos-variables-cualitativas" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dos-variables-cualitativas"><span class="header-section-number">4.1</span> Dos variables cualitativas</h2>
-<p>Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.</p>
-</section>
-<section id="dos-variables-cuantitativas" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="dos-variables-cuantitativas"><span class="header-section-number">4.2</span> Dos variables cuantitativas</h2>
+<section id="dos-variables-cuantitativas" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="dos-variables-cuantitativas"><span class="header-section-number">4.1</span> Dos variables cuantitativas</h2>
 <p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
 <ul>
 <li>Covarianza</li>
 <li>Correlación de Pearson</li>
 <li>Correlación de Spearman</li>
 </ul>
-</section>
-<section id="covarianza" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="covarianza"><span class="header-section-number">4.3</span> Covarianza</h2>
+<section id="covarianza" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="covarianza"><span class="header-section-number">4.1.1</span> Covarianza</h3>
 <p>Covarianza entre dos variables</p>
 <p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
 </section>
-<section id="correlación-de-pearson" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="correlación-de-pearson"><span class="header-section-number">4.4</span> Correlación de Pearson</h2>
-<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
-</section>
-<section id="correlación-de-spearman" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="correlación-de-spearman"><span class="header-section-number">4.5</span> Correlación de Spearman</h2>
-<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
-<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
-</section>
-<section id="una-variable-cualitativa-y-otra-cuantitativa" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="una-variable-cualitativa-y-otra-cuantitativa"><span class="header-section-number">4.6</span> Una variable cualitativa y otra cuantitativa</h2>
-<p>Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.</p>
-</section>
-<section id="correlación" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="correlación"><span class="header-section-number">4.7</span> Correlación</h2>
-<p>¿Qué es la causalidad?</p>
-</section>
-<section id="correlación-lineal" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="correlación-lineal"><span class="header-section-number">4.8</span> Correlación lineal</h2>
-<section id="pearson" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="pearson"><span class="header-section-number">4.8.1</span> Pearson</h3>
+<section id="correlación-de-pearson" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="correlación-de-pearson"><span class="header-section-number">4.1.2</span> Correlación de Pearson</h3>
 <ul>
 <li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.</li>
 <li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.</li>
 <li><strong>Cálculo</strong>: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.</li>
 </ul>
+<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
 </section>
-</section>
-<section id="correlación-monótona" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="correlación-monótona"><span class="header-section-number">4.9</span> Correlación monótona</h2>
-<section id="spearman" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="spearman"><span class="header-section-number">4.9.1</span> Spearman</h3>
+<section id="correlación-de-spearman" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="correlación-de-spearman"><span class="header-section-number">4.1.3</span> Correlación de Spearman</h3>
 <ul>
 <li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.</li>
 <li><strong>Ventaja</strong>: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.</li>
 <li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.</li>
 </ul>
+<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
+<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
 </section>
-</section>
-<section id="correlación-monótona-1" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="correlación-monótona-1"><span class="header-section-number">4.10</span> Correlación monótona</h2>
-<section id="kendall" class="level3" data-number="4.10.1">
-<h3 data-number="4.10.1" class="anchored" data-anchor-id="kendall"><span class="header-section-number">4.10.1</span> Kendall</h3>
+<section id="kendall" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="kendall"><span class="header-section-number">4.1.4</span> Kendall</h3>
 <ul>
 <li><strong>Definición</strong>: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.</li>
 <li><strong>Cálculo</strong>:
@@ -441,20 +389,16 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="asociación-numérica---categórica" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="asociación-numérica---categórica"><span class="header-section-number">4.11</span> Asociación numérica - categórica</h2>
+<section id="asociación-numérica---categórica" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="asociación-numérica---categórica"><span class="header-section-number">4.2</span> Asociación numérica - categórica</h2>
 <p>En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.</p>
-</section>
-<section id="elementos-gráficos" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="elementos-gráficos"><span class="header-section-number">4.12</span> Elementos gráficos</h2>
+<section id="elementos-gráficos" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="elementos-gráficos"><span class="header-section-number">4.2.1</span> Elementos gráficos</h3>
 <p>Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:</p>
 <ul>
 <li><strong>Diagramas de caja (boxplots)</strong>: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.</li>
 <li><strong>Gráficos de barras</strong>: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.</li>
 </ul>
-</section>
-<section id="asociación-numérica---categórica-1" class="level2" data-number="4.13">
-<h2 data-number="4.13" class="anchored" data-anchor-id="asociación-numérica---categórica-1"><span class="header-section-number">4.13</span> Asociación numérica - categórica</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -465,34 +409,29 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="anova" class="level2" data-number="4.14">
-<h2 data-number="4.14" class="anchored" data-anchor-id="anova"><span class="header-section-number">4.14</span> ANOVA</h2>
+<section id="anova" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="anova"><span class="header-section-number">4.2.2</span> ANOVA</h3>
 <p>El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.</p>
-<section id="tipos" class="level3" data-number="4.14.1">
-<h3 data-number="4.14.1" class="anchored" data-anchor-id="tipos"><span class="header-section-number">4.14.1</span> Tipos</h3>
+</section>
+<section id="tipos" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="tipos"><span class="header-section-number">4.2.3</span> Tipos</h3>
 <ul>
 <li><strong>ANOVA de una vía</strong>: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.</li>
 <li><strong>ANOVA de más vías</strong>: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.</li>
 </ul>
-</section>
-</section>
-<section id="anova-1" class="level2" data-number="4.15">
-<h2 data-number="4.15" class="anchored" data-anchor-id="anova-1"><span class="header-section-number">4.15</span> ANOVA</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-ESTRATO        5  48462    9692   128.5 &lt;2e-16 ***
-Residuals   2494 188080      75                   
+ESTRATO        5  55928   11186   134.7 &lt;2e-16 ***
+Residuals   2494 207109      83                   
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="test-kruskal-wallis" class="level2" data-number="4.16">
-<h2 data-number="4.16" class="anchored" data-anchor-id="test-kruskal-wallis"><span class="header-section-number">4.16</span> Test Kruskal-Wallis</h2>
+<section id="test-kruskal-wallis" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="test-kruskal-wallis"><span class="header-section-number">4.2.4</span> Test Kruskal-Wallis</h3>
 <p>El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.</p>
-<section id="uso" class="level3" data-number="4.16.1">
-<h3 data-number="4.16.1" class="anchored" data-anchor-id="uso"><span class="header-section-number">4.16.1</span> Uso</h3>
 <p>Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -500,25 +439,18 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
     Kruskal-Wallis rank sum test
 
 data:  INGLES_PUNT by ESTRATO
-Kruskal-Wallis chi-squared = 380.55, df = 5, p-value &lt; 2.2e-16</code></pre>
+Kruskal-Wallis chi-squared = 292.63, df = 5, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
 </section>
-<section id="asociación-categórica---categórica" class="level2" data-number="4.17">
-<h2 data-number="4.17" class="anchored" data-anchor-id="asociación-categórica---categórica"><span class="header-section-number">4.17</span> Asociación categórica - categórica</h2>
+<section id="asociación-categórica---categórica" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="asociación-categórica---categórica"><span class="header-section-number">4.3</span> Asociación categórica - categórica</h2>
 <p>En ocasiones es necesario encontrar relaciones entre variables categóricas.</p>
-</section>
-<section id="tablas-de-contingencia" class="level2" data-number="4.18">
-<h2 data-number="4.18" class="anchored" data-anchor-id="tablas-de-contingencia"><span class="header-section-number">4.18</span> Tablas de contingencia</h2>
+<section id="tablas-de-contingencia" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="tablas-de-contingencia"><span class="header-section-number">4.3.1</span> Tablas de contingencia</h3>
 <p>Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.</p>
-<section id="uso-1" class="level3" data-number="4.18.1">
-<h3 data-number="4.18.1" class="anchored" data-anchor-id="uso-1"><span class="header-section-number">4.18.1</span> Uso</h3>
 <p>Ayudan a visualizar y analizar la dependencia entre variables categóricas.</p>
-</section>
-</section>
-<section id="tablas-de-contingencia-1" class="level2" data-number="4.19">
-<h2 data-number="4.19" class="anchored" data-anchor-id="tablas-de-contingencia-1"><span class="header-section-number">4.19</span> Tablas de contingencia</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -529,11 +461,9 @@ Kruskal-Wallis chi-squared = 380.55, df = 5, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="prueba-de-chi-cuadrado" class="level2" data-number="4.20">
-<h2 data-number="4.20" class="anchored" data-anchor-id="prueba-de-chi-cuadrado"><span class="header-section-number">4.20</span> Prueba de chi cuadrado</h2>
+<section id="prueba-de-chi-cuadrado" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="prueba-de-chi-cuadrado"><span class="header-section-number">4.3.2</span> Prueba de chi cuadrado</h3>
 <p>Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.</p>
-<section id="uso-2" class="level3" data-number="4.20.1">
-<h3 data-number="4.20.1" class="anchored" data-anchor-id="uso-2"><span class="header-section-number">4.20.1</span> Uso</h3>
 <p>Determina si hay una relación significativa entre las variables categóricas.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -541,16 +471,13 @@ Kruskal-Wallis chi-squared = 380.55, df = 5, p-value &lt; 2.2e-16</code></pre>
     Pearson's Chi-squared test
 
 data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-X-squared = 184.9, df = 20, p-value &lt; 2.2e-16</code></pre>
+X-squared = 236.95, df = 20, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-</section>
-<section id="prueba-exacta-de-fisher" class="level2" data-number="4.21">
-<h2 data-number="4.21" class="anchored" data-anchor-id="prueba-exacta-de-fisher"><span class="header-section-number">4.21</span> Prueba exacta de Fisher</h2>
+<section id="prueba-exacta-de-fisher" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="prueba-exacta-de-fisher"><span class="header-section-number">4.3.3</span> Prueba exacta de Fisher</h3>
 <p>Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.</p>
-<section id="uso-3" class="level3" data-number="4.21.1">
-<h3 data-number="4.21.1" class="anchored" data-anchor-id="uso-3"><span class="header-section-number">4.21.1</span> Uso</h3>
 <p>Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
