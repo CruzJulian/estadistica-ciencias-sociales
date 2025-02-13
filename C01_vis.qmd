@@ -1,11 +1,3 @@
----
-title: "Visualización"
-subtitle: "Estadística descriptiva"
-author: "Julián Cruz"
-lang: "es-co"
-
----
-
 
 # Visualización
 

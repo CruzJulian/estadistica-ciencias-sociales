@@ -122,7 +122,6 @@ En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
 -   **error tipo 1**: Rechazar la hipótesis nula cuando esta es verdadera. La probabilidad de cometer este error es el nivel de significancia $\alpha$.
 -   **error tipo 2**: No rechazar la hipótesis nula cuando esta es falsa. La probabilidad de cometer este error se denota como $\beta$.
 
-## Tipos de error
 
 En una prueba de hipótesis, pueden ocurrir dos tipos de errores.
 

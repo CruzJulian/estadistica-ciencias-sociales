@@ -1,0 +1,14 @@
+
+# Modelamiento estadístico {.unnumbered}
+
+
+## Introducción {.unnumbered}
+
+
+## Modelamiento {.unnumbered}
+
+
+## Regresión lineal {.unnumbered}
+
+## Regresión logística {.unnumbered}
+

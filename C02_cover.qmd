@@ -1,19 +1,29 @@
----
-title: "Estadística inferencial"
-lang: "es-co"
+# Estadística inferencial
 
----
-
-# Contenido
+## Contenido
 
 En esta primera sección se examina la estadística descriptiva. El contenido ha sido seleccionado cuidadosamente con el fin de agregar valor a los análisis cuantitativos que se proponen al interior de las investigaciones en ciencias sociales.
 
-## Introducción
+### Preliminares
 
 Este primer tema introduce a los estudiantes en los conceptos básicos de la estadística inferencial..
 
-## Intervalos de confianza
+### Muestreo
 
-## Pruebas de hipótesis paramétricas
 
-## Pruebas de hipótesis no paramétricas
+### Estimación
+
+Puntual y por intervalo
+
+### Tamaño muestral
+
+
+### Pruebas de hipótesis
+
+### Paramétricas analíticas
+
+### No paramétricas analíticas
+
+### Paramétricas computacionales
+
+### No paramétricas computacionales

@@ -1,3 +1,5 @@
+# Modelo de regresón lineal
+
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ## antecedentes
@@ -41,7 +43,6 @@ opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.s
 
 
 
-# Modelo de regresón lineal
 
 
 

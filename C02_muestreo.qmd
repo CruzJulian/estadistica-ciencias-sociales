@@ -1,49 +1,39 @@
----
-title: "Muestreo"
-subtitle: "Introducción al mundo cuantitativo"
-author: "CruzJulián"
+# Muestreo
 
-lang: "es-co"
+¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.
 
----
+Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.
 
-# Contexto del muestreo
+## Contexto del muestreo
 
-## Tendencias
+### Tendencias
 
 El análisis de datos no genera afirmaciones individuales. Se identifican comportamientos globales en torno a un fenómeno, que no corresponden al comportamiento de los individuos de manera puntual. Las tendencias son comportamientos globales, que los individuos acatan probablemente.
 
-## Individuos
+### Individuos
 
 Son unidades de análisis sobre las cuales vamos a generar un modelo. Son el sujeto de nuestra teoría. 
 
 :::::::::::::: {.columns}
 ::: {.column}
 
-## Población
+### Población
 
 Para cualquier pregunta que interese responder, primero es necesario dirigir la atención a un grupo particular de individuos: personas, ciudades, animales, televisores, discos rígidos, tornillos o lamparitas.
 
 :::
 ::: {.column}
 
-## Muestra
+### Muestra
 
 Es un subconjunto de la población.
 
-## Representatividad
+### Representatividad
 
 Una muestra es representativa de la población cuando todas las características importantes de la población tienen que estar en la muestra en la misma proporción que en la población.
 
 :::
 ::::::::::::::
-
-
-# Muestreo
-
-¿Qué hacemos para probar la sopa? Revolvemos la olla con una cuchara, sacamos una porción -una muestra- la saboreamos y sacamos una conclusión sobre toda la sopa de la olla sin haber en realidad probado toda. Si la muestra ha sido tomada adecuadamente - sin elegir tramposamente la parte buena - tendremos una buena idea del sabor de la totalidad de la sopa. Esto se hace en estadística, más específicamente en inferencia estadística.
-
-Los investigadores quieren averiguar algo sobre una población, pero no tienen tiempo o dinero para estudiar a todos los individuos que la conforman. Por lo tanto, ¿qué hacen? Seleccionan una cantidad pequeña de unidades muestrales de la población (esto se llama una muestra), estudian esas unidades, generalmente individuos, y utilizan esa información para sacar conclusiones sobre toda de la población.
 
 ## Conceptos de muestreo
 
@@ -55,14 +45,14 @@ Los investigadores quieren averiguar algo sobre una población, pero no tienen t
  
  - Tamaño
  
-## Marco muestral
+### Marco muestral
 
 El marco muestral es el conjunto de todos los elementos o unidades de la población que son accesibles para ser seleccionados en la muestra.
 
 Este marco debe ser representativo de (preferiblemente contener toda) la población objetivo para garantizar la validez de los resultados. Un marco muestral bien definido es crucial para evitar sesgos en la selección de la muestra.
 
 
-## Diseño muestral
+### Diseño muestral
 
 El diseño muestral es el plan que describe cómo se selecciona la muestra a partir del marco muestral. Puede incluir diferentes técnicas de muestreo, como el muestreo aleatorio simple, el muestreo estratificado, el muestreo por conglomerados, entre otros.
 
@@ -70,13 +60,13 @@ La elección del diseño depende de los objetivos del estudio, las característi
 
 Es el diseño muestral lo que le da representatividad a la muestra.
 
-## Error muestral
+### Error muestral
 
 El error muestral es la diferencia entre el valor estimado a partir de la muestra y el valor real en la población. Este error surge debido a que la muestra es solo una parte de la población y no refleja completamente su variabilidad.
 
 El tamaño de la muestra, el diseño muestral y el método de estimación influyen en la magnitud del error muestral.
 
-## Tamaño muestral
+### Tamaño muestral
 
 El tamaño muestral es la cantidad de unidades que se seleccionarán del marco muestral para ser incluidas en el estudio. Un tamaño muestral adecuado es fundamental para asegurar la precisión y confiabilidad de los resultados.
 
@@ -99,7 +89,7 @@ No todos los elementos tienen probabilidad de ser seleccionados
 Todos los individuos en la población tienen una probabilidad específica de ser seleccionados para la muestra.
 
 
-# Muestreo no probabilístico
+## Muestreo no probabilístico
 
  - Por cuotas
  - Bola de nieve
@@ -108,7 +98,7 @@ Todos los individuos en la población tienen una probabilidad específica de ser
  - Accidental
 
 
-## Muestreo por cuotas
+### Muestreo por cuotas
 
 Consiste en dividir la población en segmentos y obtener una cuota de cada segmento.
 
@@ -122,7 +112,7 @@ En un estudio sobre preferencias de compra de automóviles, se decide utilizar e
 El investigador luego selecciona participantes hasta que se cumplan las cuotas establecidas, por ejemplo, 100 hombres y 100 mujeres, distribuidos equitativamente entre los diferentes grupos de edad. Este método asegura que todas las categorías importantes estén adecuadamente representadas en la muestra.
 
 
-## Bola de nieve
+### Bola de nieve
 
 Cada individuo refiere nuevos individuos.
 
@@ -132,7 +122,7 @@ En un estudio sobre los hábitos de ahorro entre migrantes de un país específi
 
 A medida que más personas son entrevistadas, se continúa pidiendo referencias, lo que permite que la muestra "crezca como una bola de nieve". Este método es especialmente útil para poblaciones difíciles de alcanzar o cuando no existe un marco muestral claro.
 
-## Muestreo discrecional
+### Muestreo discrecional
 
 Consiste en tomar de la población los individuos que resulten representativos bajo el jucio de un experto.
 
@@ -141,7 +131,7 @@ Se utiliza cuando hay un experto que ha realizado estudios previos.
 En un estudio exploratorio sobre las opiniones de expertos en inteligencia artificial, se decide utilizar el muestreo discrecional. El investigador selecciona intencionadamente a un grupo de 10 expertos reconocidos en el campo, basándose en su conocimiento y reputación en la industria. 
 La selección no es aleatoria, sino que se realiza según el criterio del investigador, quien elige a estos expertos por considerarlos los más apropiados para proporcionar información valiosa y relevante para el estudio.
 
-## Muestreo por conveniencia
+### Muestreo por conveniencia
 
 Consiste en estudiar los individuos más cercanos o voluntarios, ya que estos son más accesibles.
 
@@ -152,7 +142,7 @@ En un estudio piloto sobre las preferencias de snacks saludables entre estudiant
 El investigador selecciona a los estudiantes del curso de muestreo para que respondan a una breve encuesta. Este método se elige porque los participantes son fácilmente accesibles, aunque no necesariamente representan a toda la población estudiantil.
 
 
-## Muestreo accidental
+### Muestreo accidental
 
 Se selecciona un mecanismo de selección o acceso a los individuos encontrándolos por casualidad en un espacio definido sin ningún juicio previo.
 
@@ -163,7 +153,7 @@ En un estudio sobre las tendencias de la moda un investigador utiliza el muestre
 Este método es accidental porque se seleccionan a los participantes en el lugar y momento de recolección.
 
 
-# Muestreo probabilístico
+## Muestreo probabilístico
 
  - Aleatorio simple
  
@@ -174,7 +164,7 @@ Este método es accidental porque se seleccionan a los participantes en el lugar
  - Por estratos
 
 
-## Muestreo aleatorio simple
+### Muestreo aleatorio simple
 
  - Definir la población
  - Obtener el marco muestral
@@ -186,7 +176,7 @@ En un estudio sobre los hábitos de lectura de la población adulta en una ciuda
 
 Cada individuo tiene la misma probabilidad de ser seleccionado, lo que asegura que la muestra sea representativa de toda la población, minimizando sesgos en la selección.
 
-## Muestreo por etapas
+### Muestreo por etapas
 
  - Bietápico (2 etapas)
  - Polietápico (3 etapas o más)
@@ -203,7 +193,7 @@ En un estudio nacional sobre el nivel educativo en zonas rurales, se utiliza el 
 Este método permite una selección eficiente y representativa en poblaciones grandes y dispersas, utilizando un enfoque jerárquico y secuencial.
 
 
-## Muestreo por conglomerados
+### Muestreo por conglomerados
 
  - Son heterogéneos en su interior.
  - Son homogéneos entre sí
@@ -220,7 +210,7 @@ En un estudio sobre el impacto de programas educativos en escuelas primarias, se
 Este método es útil cuando la población está agrupada en unidades naturales, como escuelas o barrios, y facilita la logística y los costos al reducir el número de unidades primarias que se deben tratar.
 
 
-## Muestreo estratificado
+### Muestreo estratificado
 
  - Son homogéneos en su interior
  - Son heterogéneos entre sí
@@ -236,17 +226,17 @@ En un estudio sobre la satisfacción laboral en una empresa multinacional, se ut
 Este método garantiza que cada subgrupo relevante dentro de la población esté representado en la muestra, permitiendo comparaciones más precisas entre diferentes departamentos y niveles jerárquicos.
 
 
-## Técnicas de muestreo
+### Técnicas de muestreo
 
-[Técnicas de muestreo](https://youtu.be/gyGQ_qieVKM)
+[Técnicas de muestreo](https://youtu.be/gyGQ_qieVKM){}
 
-## Factores de expansión
+### Factores de expansión
 
 Cuando tenemos un diseño muestral, es posible saber cuántos individuos de la población son representados por un individuo de la muestra. Esta cantidad se denomina _Factores de expansión_.
 
 Los factores de expansión son particularmente útiles para calcular totales. 
 
-## Actividad
+### Actividad
 
 En esta actividad vamos a analizar una encuesta.
 

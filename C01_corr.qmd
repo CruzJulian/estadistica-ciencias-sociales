@@ -1,3 +1,4 @@
+# Análisis correlacional
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -50,17 +51,13 @@ opts_chunk$set(echo=FALSE, message=FALSE, results='markup', warning=FALSE, fig.s
 
 
 
-# Dos variables
 
 Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.
 
- - Dos cualitativas
  - Dos cuantitativas
  - Una cuantitativa y una cualitativa
+ - Dos cualitativas
  
-## Dos variables cualitativas
-
-Para poder medir la relación entre dos variables de tipo cualitativo usamos tablas de contingencia.
 
 ## Dos variables cuantitativas
 
@@ -71,51 +68,33 @@ La relación entre dos variables cuantitativas puede ser medida con los siguient
  - Correlación de Spearman
 
 
-## Covarianza
+### Covarianza
 
 Covarianza entre dos variables
 
 $$ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})$$
 
-## Correlación de Pearson
+### Correlación de Pearson
 
-$$\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}$$
-
-## Correlación de Spearman
-
-$$\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}$$
-
-donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.
-
-## Una variable cualitativa y otra cuantitativa
-
-Para medir asociación entre una variable cuantitativa y otra cualitativa se peude desagregar la media.
-
-## Correlación
-
-¿Qué es la causalidad?
-
-
-
-
-
-## Correlación lineal
-
-### Pearson
 
 - **Definición**: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.
 - **Rango**: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.
 - **Cálculo**: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.
 
-## Correlación monótona
 
-### Spearman
+$$\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}$$
+
+### Correlación de Spearman
+
 
 - **Definición**: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.
 - **Ventaja**: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.
 - **Rango**: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.
 
-## Correlación monótona
+$$\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}$$
+
+donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.
+
 
 ### Kendall
 
@@ -125,18 +104,18 @@ Para medir asociación entre una variable cuantitativa y otra cualitativa se peu
   - **Discordancia**: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.
 - **Aplicación**: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.
 
+
 ## Asociación numérica - categórica
 
 En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.
 
-## Elementos gráficos
+### Elementos gráficos
 
 Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:
 
 - **Diagramas de caja (boxplots)**: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.
 - **Gráficos de barras**: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.
 
-## Asociación numérica - categórica
 
 ```{r}
 library("stringr")
@@ -166,7 +145,7 @@ tb_example  %>%
 
 ```
 
-## ANOVA
+### ANOVA
 
 El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.
 
@@ -176,18 +155,14 @@ El análisis de la varianza es una técnica estadística utilizada para comparar
   - **ANOVA de más vías**: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.
 
 
-## ANOVA
-
 ```{r, results='markup'}
 aov(INGLES_PUNT ~ ESTRATO, data = tb_example) %>% summary()
 
 ```
 
-## Test Kruskal-Wallis
+### Test Kruskal-Wallis
 
 El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.
-
-### Uso
 
 Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.
 
@@ -203,15 +178,12 @@ En ocasiones es necesario encontrar relaciones entre variables categóricas.
 
 
 
-## Tablas de contingencia
+### Tablas de contingencia
 
 Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.
 
-### Uso
-
 Ayudan a visualizar y analizar la dependencia entre variables categóricas.
 
-## Tablas de contingencia
 
 ```{r, results='markup'}
 library("scales")
@@ -233,12 +205,9 @@ tb_example %>%
 
 ```
 
-## Prueba de chi cuadrado
+### Prueba de chi cuadrado
 
 Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.
-
-
-### Uso
 
 Determina si hay una relación significativa entre las variables categóricas.
 
@@ -248,13 +217,10 @@ chisq.test(tb_example$COLE_INST_JORNADA, tb_example$ESTRATO)
 ```
 
 
-
-## Prueba exacta de Fisher
+### Prueba exacta de Fisher
 
 Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.
 
-
-### Uso
 
 Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.
 

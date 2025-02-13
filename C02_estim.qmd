@@ -1,34 +1,26 @@
----
-title: "Estimación"
-subtitle: "Estadística inferencial"
-author: "CruzJulián"
+# Estimación
 
-lang: "es-co"
-
----
-
-
-# Conceptos iniciales
+## Conceptos iniciales
 
 Iniciamos por los conceptos que son fundamentales para entender la estimación en inferencia estadística. Estos conceptos ayudan a diferenciar entre la población y la muestra, así como a identificar las características numéricas que se desea estimar.
 
-## Parámetro
+### Parámetro
 
 Un **parámetro** es un valor numérico que describe una característica específica de una población completa. Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²) o la proporción poblacional (P). Dado que los parámetros se refieren a poblaciones enteras, son constantes, pero, en la práctica, generalmente son desconocidos. Por lo tanto, se necesita recurrir a métodos estadísticos para estimarlos a partir de muestras.
 
-## Estimador
+### Estimador
 
 Un **estimador** es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales. Un estimador es una variable aleatoria y, por lo tanto, puede variar de una muestra a otra. Los estimadores se utilizan para hacer inferencias sobre la población, y algunos ejemplos comunes incluyen la media muestral $\bar{x}$ y la proporción muestral $\hat{p}$. La calidad de un estimador se evalúa en función de sus propiedades, como la consistencia y la unbiasedness (inexistencia de sesgo).
 
-## Muestra
+### Muestra
 
 Una **muestra** es un subconjunto de elementos extraídos de una población. La muestra se utiliza para realizar estimaciones sobre la población completa sin necesidad de medir a todos sus miembros. El tamaño y la calidad de la muestra son fundamentales para asegurar que las inferencias realizadas sean precisas y representativas. Una muestra puede ser aleatoria, estratificada o por conveniencia, dependiendo del método utilizado para su selección.
 
-## Población
+### Población
 
 La **población** se refiere al conjunto completo de individuos, elementos o unidades que comparten una característica particular que se está estudiando. Por ejemplo, si estamos interesados en el ingreso anual de todos los empleados de una empresa, la población sería todos los empleados. En la inferencia estadística, es crucial definir claramente la población para poder aplicar métodos de muestreo adecuados y realizar estimaciones precisas.
 
-# Estimación puntual
+## Estimación puntual
 
 La **estimación puntual** se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población. Este enfoque proporciona una respuesta única a la pregunta de interés, pero no informa sobre la precisión de la estimación. Por ejemplo, la media muestral $\bar{x}$ es una estimación puntual de la media poblacional (μ).
 
@@ -38,7 +30,7 @@ La **estimación puntual** se refiere al uso de un solo valor, calculado a parti
 
 -   **Varianza muestral:** Una muestra de 50 estudiantes tiene una varianza de puntajes en un examen de 16 puntos cuadrados. Este valor se utiliza como una **estimación puntual** de la varianza de los puntajes en la población completa de estudiantes.
 
-## Estimadores y parámetros
+### Estimadores y parámetros
 
 Los estimadores son utilizados para estimar parámetros poblacionales. Algunos ejemplos incluyen:
 
@@ -47,13 +39,13 @@ Los estimadores son utilizados para estimar parámetros poblacionales. Algunos e
 -   **Proporción muestral** $\hat{p}$ para estimar la proporción poblacional (P).
 -   **Correlación de Pearson** $\hat{\rho}$ para estimar la correlacción poblacional $\rho$.
 
-## Aplicación interactiva
+### Aplicación interactiva
 
 Para ilustrar la idea de estimación puntual, podemos estimar el número π utilizando simulaciones. Aquí tienes un recurso que permite interactuar con este concepto:
 
 [Estimación puntual](https://seeing-theory.brown.edu/frequentist-inference/){target="_blank"}
 
-## Ley de los Grandes Números
+### Ley de los Grandes Números
 
 La **Ley de los Grandes Números** es un principio fundamental en la teoría de la probabilidad que establece que, a medida que aumenta el tamaño de una muestra, la media muestral $\bar{x}$ se acercará a la media poblacional (μ) de la población de la que se extrajo la muestra. Esta ley se basa en la idea de que las fluctuaciones aleatorias tienden a cancelarse entre sí en muestras más grandes, lo que resulta en una estimación más precisa del parámetro poblacional.
 
@@ -65,31 +57,47 @@ Existen dos versiones de la Ley de los Grandes Números:
 
 La Ley de los Grandes Números es fundamental en estadística y asegura que los resultados obtenidos de las muestras se volverán más representativos de la población a medida que se aumente el tamaño de la muestra, lo que permite realizar inferencias más confiables sobre la población completa.
 
-## Consistencia
+### Consistencia
 
 Un **estimador puntual** es **consistente** si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. En otras palabras, un estimador consistente converge en probabilidad al parámetro que se está estimando. Esta propiedad es crucial porque asegura que con muestras más grandes, nuestras estimaciones se vuelven más precisas y confiables, reduciendo la variabilidad y el error de estimación.
 
-# Estimación por intervalo
+## Estimación por intervalo
 
 La **estimación por intervalo** proporciona un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional con un cierto nivel de confianza. A diferencia de una estimación puntual, que ofrece un único valor, el intervalo de confianza incluye una medida de la incertidumbre asociada con la estimación. Esto permite a los investigadores entender no solo qué valor se estima, sino también la precisión y confiabilidad de dicha estimación.
 
-## Precisión y Exactitud
+### Precisión y Exactitud
 
 
 **Precisión** y **exactitud** son dos conceptos fundamentales en la estadística y la investigación que se utilizan para evaluar la calidad de las estimaciones y mediciones. Aunque a menudo se utilizan de manera intercambiable en el lenguaje cotidiano, tienen significados distintos en el contexto estadístico.
+
+
+## Ejemplo: animales de granja
+
+
+::: {layout-ncol=2}
+
+
+
+![Animales de granja, representación imprecisa.](05_img/animales-dibujo.jpg)
+
+![Animales de granja, representación inexacta.](05_img/frutas-foto.jpg)
+
+
+:::
+
 
 
 ### Precisión
 
 La **precisión** se refiere a la consistencia y reproducibilidad de las mediciones. Un conjunto de datos es preciso si las mediciones son cercanas entre sí, independientemente de si son correctas o no. En otras palabras, la precisión indica cuán dispersos están los valores en relación con la media. Un alto grado de precisión significa que las mediciones tienden a agruparse en torno a un valor central.
 
-- **Ejemplo de Precisión:** Supongamos que un grupo de científicos mide la temperatura de un líquido en tres ocasiones y obtiene los siguientes valores: 22.1°C, 22.0°C y 22.2°C. Aunque la medición puede no ser la temperatura real del líquido, los valores son consistentes entre sí, lo que indica alta precisión.
+- **Ejemplo de Precisión:** Los diseñadores de máquinas dan las medidas en milímetros. Esto da una mayor precisión a los componentes.
 
 ### Exactitud
 
 La **exactitud**, por otro lado, se refiere a cuán cerca está una medición del valor verdadero o del objetivo. Una medición es exacta si se aproxima al valor real. En este caso, la exactitud evalúa la validez de los datos en relación con la realidad.
 
-- **Ejemplo de Exactitud:** Siguiendo el mismo ejemplo anterior, si la temperatura real del líquido es de 23.0°C y las mediciones obtenidas fueron 22.1°C, 22.0°C y 22.2°C, podemos decir que las mediciones son imprecisas a pesar de ser consistentes, ya que están lejos del valor verdadero.
+- **Ejemplo de Exactitud:** Los abogados necesitan establecer los hechos verídicos en sus procesos. Incluso si no se tienen detalles, deben ser verificables.
 
 ### Diferencias entre Precisión y Exactitud
 
@@ -111,7 +119,44 @@ La precisión y exactitud son cruciales en la estadística y en el diseño de in
 
 Los conceptos de precisión y exactitud están intrínsecamente relacionados con los intervalos de confianza, ya que estos intervalos son una herramienta estadística diseñada para expresar la incertidumbre en torno a una estimación puntual. Un intervalo de confianza proporciona un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional verdadero, lo que refleja la **exactitud** de la estimación. Si el intervalo es estrecho, indica una alta precisión en las mediciones, lo que sugiere que repetidas mediciones generarían resultados consistentes. Sin embargo, si el intervalo de confianza incluye valores muy alejados del verdadero parámetro, sugiere que la estimación puede no ser precisa. Por lo tanto, un intervalo de confianza bien construido no solo comunica la variabilidad de los datos, sino que también integra las nociones de precisión y exactitud en la evaluación de la validez de los resultados estadísticos.
 
-## Ejemplo introductorio
+### Construcción de los intervalos de confianza
+
+La construcción de intervalos de confianza puede realizarse de dos maneras:
+
+  1.  **Método analítico**: Utiliza fórmulas y propiedades matemáticas para calcular los intervalos de confianza. Este método es eficiente cuando se cumplen las condiciones necesarias, como la normalidad de los datos.
+
+  2.  **Método computacional**: Utiliza técnicas de remuestreo, como el bootstrapping, para estimar la distribución del estimador y generar intervalos de confianza sin necesidad de asumir una distribución específica.
+
+#### Ventajas y desventajas de la construcción analítica
+
+La construcción analítica de los intervalos de confianza presenta pros y contras
+
+  -   **Ventajas**:
+    -   Menor costo computacional, ya que implica cálculos directos a partir de los datos.
+    -   Resultados más rápidos si se cumplen los supuestos de normalidad.
+
+  -   **Desventajas**:
+    -   Dependencia de supuestos que pueden no cumplirse en datos reales.
+    -   Puede no ser adecuado para distribuciones no estándar o en situaciones de muestras pequeñas.
+
+#### Ventajas y desventajas de la construcción computacional
+
+La construcción computacional de los intervalos de confianza presenta pros y contras
+
+
+  -   **Ventajas**:
+    -   Flexible, ya que no depende de supuestos sobre la distribución de los datos.
+    -   Adecuado para cualquier tipo de muestra y variabilidad en los datos.
+
+  -   **Desventajas**:
+    -   Puede ser intensivo en recursos computacionales, especialmente para grandes volúmenes de datos.
+    -   Mayor tiempo de procesamiento y necesidad de software especializado.
+
+
+
+## Intervalos de confianza analíticos
+
+A continuación se examinan algunas fórmulas de ...
 
 ### Intervalo de confianza para la media
 
@@ -163,82 +208,37 @@ $$ IC \approx \left(\frac{14 \times 16}{27.688}, \frac{14 \times 16}{5.629}\righ
 
 Esto significa que el investigador puede estar 95% seguro de que la varianza del tiempo de espera en la población está entre 8.520 y 39.658 minutos².
 
-## Aplicación interactiva
+### Aplicación interactiva
 
 Para ilustrar la idea de estimación por intervalo, puedes utilizar simulaciones interactivas que permiten explorar estos conceptos. Aquí tienes un recurso que permite interactuar con este concepto:
 
 [Estimación por intervalo](https://seeing-theory.brown.edu/frequentist-inference/){target="_blank"}
 
-## Consistencia
+### Consistencia
 
 Un **intervalo de confianza** es considerado **consistente** si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse. Esto indica que la estimación se vuelve más precisa y refleja mejor el parámetro poblacional.
 
-## Construcción de los intervalos de confianza
+## Intervalos de confianza computacionales
 
-La construcción de intervalos de confianza puede realizarse de dos maneras:
+Los métodos de simulación de bootstrapping y...
 
-  1.  **Método analítico**: Utiliza fórmulas y propiedades matemáticas para calcular los intervalos de confianza. Este método es eficiente cuando se cumplen las condiciones necesarias, como la normalidad de los datos.
-
-  2.  **Método computacional**: Utiliza técnicas de remuestreo, como el bootstrapping, para estimar la distribución del estimador y generar intervalos de confianza sin necesidad de asumir una distribución específica.
-
-## Ventajas y desventajas de la construcción analítica
-
-La construcción analítica de los intervalos de confianza presenta pros y contras
-
-  -   **Ventajas**:
-    -   Menor costo computacional, ya que implica cálculos directos a partir de los datos.
-    -   Resultados más rápidos si se cumplen los supuestos de normalidad.
-
-  -   **Desventajas**:
-    -   Dependencia de supuestos que pueden no cumplirse en datos reales.
-    -   Puede no ser adecuado para distribuciones no estándar o en situaciones de muestras pequeñas.
-
-## Ventajas y desventajas de la construcción computacional
-
-La construcción computacional de los intervalos de confianza presenta pros y contras
-
-
-  -   **Ventajas**:
-    -   Flexible, ya que no depende de supuestos sobre la distribución de los datos.
-    -   Adecuado para cualquier tipo de muestra y variabilidad en los datos.
-
-  -   **Desventajas**:
-    -   Puede ser intensivo en recursos computacionales, especialmente para grandes volúmenes de datos.
-    -   Mayor tiempo de procesamiento y necesidad de software especializado.
-
-## Fórmulas para algunos intervalos
-
-  -   **Intervalo de confianza para la media**:
-
-$$IC = \bar{x} \pm z\_{\alpha/2} \left(\frac{\sigma}{\sqrt{n}}\right) \quad \text{(si } \sigma \text{ es conocido)}$$
-
-$$IC = \bar{x} \pm t\_{\alpha/2} \left(\frac{s}{\sqrt{n}}\right) \quad \text{(si } \sigma \text{ es desconocido)}$$
-
-  -   **Intervalo de confianza para la proporción**:
-
-$$IC = \hat{p} \pm z\_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}$$
-
-  -   **Intervalo de confianza para la varianza**:
-
-$$ IC = \left(\frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}\right) $$
-
-# Bootstrapping
+### Bootstrapping
 
 El **bootstrapping** es un método no paramétrico que se utiliza para estimar la distribución de un estimador y, por ende, sus intervalos de confianza. Este método genera múltiples muestras simuladas (con reemplazo) de la muestra original, permitiendo construir un intervalo de confianza sin depender de la distribución subyacente de los datos.
 
-## Ejemplo: Diferencia de medias
+### Ejemplo: Diferencia de medias
 
 Para evaluar la **diferencia de medias** entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el uso de la distribución t de Student o el método de bootstrapping.
 
   - **Ejemplo**: Supongamos que queremos comparar las alturas promedio de hombres y mujeres en una población. Recogemos datos de 50 hombres y 50 mujeres y encontramos que la media de los hombres es 1.80 metros y la media de las mujeres es 1.65 metros. La diferencia de medias es 0.15 metros. Aplicando el bootstrapping, podemos crear múltiples muestras de nuestras muestras originales para estimar la distribución de la diferencia de medias y, así, construir un intervalo de confianza.
 
-## Ejemplo: Diferencia de proporciones
+### Ejemplo: Diferencia de proporciones
 
 El **intervalo de confianza para la diferencia de proporciones** entre dos poblaciones se construye de manera similar al de una proporción, pero utilizando la diferencia entre las proporciones muestrales. Dependiendo de si se asume o no la homogeneidad de varianzas entre las dos proporciones, se pueden aplicar diferentes métodos.
 
   - **Ejemplo**: Si en una encuesta a 300 hombres, el 70% responde que prefiere el trabajo remoto, y en una encuesta a 250 mujeres, el 60% responde lo mismo, la diferencia de proporciones es 0.10. Para construir un intervalo de confianza, podemos aplicar el bootstrapping para simular la diferencia de proporciones y calcular el intervalo.
 
-## Bootstrapping ejemplo
+### Bootstrapping ejemplo
 
 Para explorar el método de bootstrapping, puedes interactuar con simulaciones que permiten visualizar cómo funciona este proceso en la práctica. Aquí tienes un recurso que permite interactuar con este concepto:
 
