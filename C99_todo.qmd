@@ -2,7 +2,6 @@
 
 
 ```{r}
-# justificar los textos vía css
 # Pruebas de hipótesis: analíticas paramétricas, analíticas no paramétricas, computacionales paramétricas, computacionales no paramétricas.
 # Poner todas las fórmulas en cajas
 # Variables cualitativas, cómo se ven en un gráfico, cuáles son sus elementos visuales, cómo se trabajan en modelamiento, datos cíclicos, datos textuales

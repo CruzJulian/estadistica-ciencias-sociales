@@ -240,7 +240,7 @@ Los factores de expansión son particularmente útiles para calcular totales.
 
 En esta actividad vamos a analizar una encuesta.
 
-1. Elija una encuesta de la lista-
+1. Elija una encuesta de la lista.
 
 2. Escudriñe la documentación. Busque el muestreo.
 

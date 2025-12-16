@@ -2,23 +2,25 @@ project:
   type: book
   output-dir: docs
   # render:
-  #   - index.qmd
-  #   - intro.qmd
-  #   - C01_intro.qmd
-  #   - C01_univar.qmd
-  #   - C01_corr.qmd
-  #   - C01_dist.qmd
-  #   - C02_episteme.qmd
-  #   - C02_muestreo.qmd
-  #   - C02_estim.qmd
-  #   - C02_tamano.qmd
-  #   - C02_hipotesis.qmd
-  #   - 03_est-reg.qmd
-  #   - 04_est-multi.qmd
+    # - index.qmd
+    # - intro.qmd
+    # - C01_intro.qmd
+    # - C01_univar.qmd
+    # - C01_corr.qmd
+    # - C01_dist.qmd
+    # - C02_episteme.qmd
+    # - C02_muestreo.qmd
+    # - C02_estim.qmd
+    # - C02_tamano.qmd
+    # - C02_hipotesis.qmd
 
 book:
   title: "Estadística para Ciencias Sociales"
-  author: "Julián Cruz"
+  author: 
+   - "Nestor Rojas"
+   - "Raquel Ortega"
+   - "Miguel Mendez"
+   - "Julián Cruz"
   cover-image: 05_img/cover.png
   sidebar:
     style: docked
@@ -26,6 +28,7 @@ book:
   chapters:
     - index.qmd
     - C99_todo.qmd
+    - autores.qmd
     - part: C01_cover.qmd
       chapters:
         - C01_prelim.qmd
@@ -48,7 +51,12 @@ book:
         - C03_modelamiento.qmd
         - C03_reg-lineal.qmd
         - C03_reg-logit.qmd
-    - 04_est-multi.qmd
+        - C03_medicion.qmd
+        - C03_acp.qmd
+    - part: C04_cover.qmd
+      chapters:
+        - C04_enfoque.qmd
+        - 04_est-multi.qmd
 
 format:
   html:

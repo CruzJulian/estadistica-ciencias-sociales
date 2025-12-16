@@ -1,0 +1,49 @@
+# Análisis de Componentes Principales
+
+## Reducción de dimensiones
+
+Necesitamos reducir las dimensiones de un conjunto de datos por varias razones:
+
+ - Visualización: poder observar los datos en 2 o 3 dimensiones.
+ 
+ - Resumen: poder resumir indicadores (mediciones directas) en índices (mediciones indirectas).
+ 
+ - Modelaje: poder disminuir la cantidad de variables que entran en un modelo.
+
+## ACP
+
+El análisis de componentes principales es un método de reducción de dimensiones basado en proyecciones de espacios vectoriales.
+
+### Definición matemática
+
+Dado un conjunto de variables $X$ el procedimiento encuentra coeficientes $\alpha$ que maximizan la información explicada en su combinación lineal $Z$, así:
+
+$$Z = X\alpha = \sum_{i=1}^k \alpha_i X_i$$
+
+### Significado matemático
+
+Esto significa una rotación en el espacio, cambiando los ejes previos por ejes nuevos.
+
+## ACP
+
+### Características
+
+ - Es lineal: las transformaciones que contempla son lineales.
+ - Es interpretable: es posible establecer cuál variable es más o menos importante.
+ - Los ejes son interpretables a posteriori.
+
+### Ejemplo
+
+ - [setosa.io](http://setosa.io/ev/principal-component-analysis/)
+ 
+## ACP
+
+### Evaluación
+
+El procedimiento produce:
+
+ - Un círculo de correlaciones: Deben estar las flechas apuntando todas en la misma dirección.
+ 
+ - Un gráfico de sedimentación: El primer componente debe tener un valor alto y los demás deben ser bajos.
+
+

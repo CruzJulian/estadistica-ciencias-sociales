@@ -1,5 +1,5 @@
 
-# Modelamiento estadístico {.unnumbered}
+# Modelamiento lineal {.unnumbered}
 
 
 ## Introducción {.unnumbered}
@@ -7,8 +7,16 @@
 
 ## Modelamiento {.unnumbered}
 
+### Correlaciones
 
-## Regresión lineal {.unnumbered}
+## Relación {.unnumbered}
 
-## Regresión logística {.unnumbered}
+### Regresión lineal {.unnumbered}
 
+### Regresión logística {.unnumbered}
+
+## Medición {.unnumbered}
+
+### Componentes principales {.unnumbered}
+
+## Modelos de ecuaciones estructurales {.unnumbered}

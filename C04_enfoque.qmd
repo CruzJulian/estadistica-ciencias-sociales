@@ -1,0 +1,19 @@
+# Enfoque
+
+### Linealidad
+
+ - PCA
+ 
+ - Análisis factorial
+
+ - SEM
+
+### Complejidad
+
+ - Distancias
+ 
+ - t-Sne
+ 
+ - Clustering
+
+> La medición clásica se sitúa en el paradigma lineal.

@@ -1,0 +1,43 @@
+# Autores {.unnumbered}
+
+
+## Laboratorio Interdisciplinar de Medición de Dinámicas Sociales {.unnumbered}
+
+El Laboratorio Interdisciplinar de Medición de Dinámicas Sociales surge como respuesta a la necesidad de un espacio dedicado a organizar y gestionar la información producida en el Centro de Investigación sobre Dinámica Social – CIDS y en la Facultad de Ciencias Sociales y Humanas. Articula capacidades, impulsa proyectos que exploran las dinámicas sociales desde perspectivas estadísticas, matemáticas, comunicativas y tecnológicas, y produce conocimiento relevante y verificable. También unifica y estandariza la información institucional, orienta a la Facultad y a su comunidad en temas clave, fomenta la creación de repositorios y administra datos propios y externos para fortalecer el trabajo investigativo.
+
+[Ver más](https://labmedisocial.uexternado.edu.co/){target="_blank"}
+
+## Nestor Orlando Rojas Castillo {.unnumbered}
+
+![](https://labmedisocial.uexternado.edu.co/wp-content/uploads/sites/68/2022/09/nestor-rojas-600-600.png){width=300}
+
+[Docente investigador]{.badge .bg-primary} [nestor.rojas@uexternado.edu.co]{.badge .bg-primary}
+
+Contador Público de la Universidad Nacional de Colombia, Especialización en Métodos de Análisis Demográficos, Maestría en Estudios de Población de la Universidad Externado de Colombia.
+
+## Raquel Soraya Ortega Bolaños {.unnumbered}
+
+![](https://labmedisocial.uexternado.edu.co/wp-content/uploads/sites/68/2022/09/raquel-ortega-600-600.png){width=300}
+
+[Docente]{.badge .bg-primary} [raquel.ortega@uexternado.edu.co]{.badge .bg-primary}
+
+
+Ingeniera de sistemas de la Universidad Autónoma de Colombia,  Maestría en Nuevas Tecnologías Enfocada a la Educación (TIC) de la Universidad Carlos III de Madrid, Universidad de Alicante, Universidad Autónoma de Barcelona. Maestría en Educación […]
+
+
+## Miguel Ángel Méndez Marín {.unnumbered}
+
+![](https://labmedisocial.uexternado.edu.co/wp-content/uploads/sites/68/2022/09/miguel-mendez-600-600.png){width=300}
+
+
+[Docente investigador]{.badge .bg-primary} [miguelm.mendez@uexternado.edu.co]{.badge .bg-primary}
+
+Licenciado en Matemáticas de la Universidad Pedagógica de Colombia, Maestría en Educación modalidad en investigación de la Universidad Externado de Colombia.
+
+## Julián Mauricio Cruz Pulido {.unnumbered}
+
+![](https://labmedisocial.uexternado.edu.co/wp-content/uploads/sites/68/2024/07/Julian-Mauricio-Cruz.png){width=300}
+
+[Docente investigador]{.badge .bg-primary} [julian.cruz@uexternado.edu.co]{.badge .bg-primary}
+
+Científico de datos, profesional en estadística y magíster en ciencias de la Universidad Nacional de Colombia. Cuenta con más de 15 años de experiencia demostrada en analítica y ciencia de datos.

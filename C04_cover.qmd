@@ -1,0 +1,25 @@
+
+# Modelamiento de sistemas complejos {.unnumbered}
+
+## Introducción {.unnumbered}
+
+
+## Modelamiento {.unnumbered}
+
+Redes, asociaciones y distancias
+
+### Redes {.unnumbered}
+
+### Asociaciones {.unnumbered}
+
+### Distancias {.unnumbered}
+
+## Algoritmos {.unnumbered}
+
+## Apriori {.unnumbered}
+
+### t-SNE {.unnumbered}
+
+### Cluster jerárquico {.unnumbered}
+
+### k-means {.unnumbered}
