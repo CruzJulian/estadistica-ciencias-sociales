@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Análisis correlacional – Estadística para Ciencias Sociales</title>
+<title>17&nbsp; Medición – Estadística para Ciencias Sociales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./C01_dist.html" rel="next">
-<link href="./C01_univar.html" rel="prev">
+<link href="./C03_acp.html" rel="next">
+<link href="./C03_reg-logit.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -113,7 +133,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">Modelamiento lineal</a></li><li class="breadcrumb-item"><a href="./C03_medicion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Medición</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -185,7 +205,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link active">
+  <a href="./C01_corr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span></a>
   </div>
 </li>
@@ -285,7 +305,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C03_medicion.html" class="sidebar-item-text sidebar-link">
+  <a href="./C03_medicion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Medición</span></span></a>
   </div>
 </li>
@@ -330,35 +350,68 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dos-variables-cuantitativas" id="toc-dos-variables-cuantitativas" class="nav-link active" data-scroll-target="#dos-variables-cuantitativas"><span class="header-section-number">4.1</span> Dos variables cuantitativas</a>
+  <li><a href="#indicadores-y-métricas" id="toc-indicadores-y-métricas" class="nav-link active" data-scroll-target="#indicadores-y-métricas"><span class="header-section-number">17.1</span> Indicadores y métricas</a></li>
+  <li><a href="#puedes-medir-usando-un-indicador-pero-quieres" id="toc-puedes-medir-usando-un-indicador-pero-quieres" class="nav-link" data-scroll-target="#puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">17.2</span> Puedes medir usando un indicador: ¿pero quieres?</a>
   <ul class="collapse">
-  <li><a href="#covarianza" id="toc-covarianza" class="nav-link" data-scroll-target="#covarianza"><span class="header-section-number">4.1.1</span> Covarianza</a></li>
-  <li><a href="#correlación-de-pearson" id="toc-correlación-de-pearson" class="nav-link" data-scroll-target="#correlación-de-pearson"><span class="header-section-number">4.1.2</span> Correlación de Pearson</a></li>
-  <li><a href="#correlación-de-spearman" id="toc-correlación-de-spearman" class="nav-link" data-scroll-target="#correlación-de-spearman"><span class="header-section-number">4.1.3</span> Correlación de Spearman</a></li>
-  <li><a href="#kendall" id="toc-kendall" class="nav-link" data-scroll-target="#kendall"><span class="header-section-number">4.1.4</span> Kendall</a></li>
+  <li><a href="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" id="toc-por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="nav-link" data-scroll-target="#por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">17.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</a></li>
+  <li><a href="#aquí-las-ambulancias-no-llegan" id="toc-aquí-las-ambulancias-no-llegan" class="nav-link" data-scroll-target="#aquí-las-ambulancias-no-llegan"><span class="header-section-number">17.2.2</span> Aquí las ambulancias no llegan</a></li>
   </ul></li>
-  <li><a href="#asociación-numérica---categórica" id="toc-asociación-numérica---categórica" class="nav-link" data-scroll-target="#asociación-numérica---categórica"><span class="header-section-number">4.2</span> Asociación numérica - categórica</a>
+  <li><a href="#constructos" id="toc-constructos" class="nav-link" data-scroll-target="#constructos"><span class="header-section-number">17.3</span> Constructos</a>
   <ul class="collapse">
-  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos"><span class="header-section-number">4.2.1</span> Elementos gráficos</a></li>
-  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova"><span class="header-section-number">4.2.2</span> ANOVA</a></li>
-  <li><a href="#tipos" id="toc-tipos" class="nav-link" data-scroll-target="#tipos"><span class="header-section-number">4.2.3</span> Tipos</a></li>
-  <li><a href="#test-kruskal-wallis" id="toc-test-kruskal-wallis" class="nav-link" data-scroll-target="#test-kruskal-wallis"><span class="header-section-number">4.2.4</span> Test Kruskal-Wallis</a></li>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición"><span class="header-section-number">17.3.1</span> Definición</a></li>
   </ul></li>
-  <li><a href="#asociación-categórica---categórica" id="toc-asociación-categórica---categórica" class="nav-link" data-scroll-target="#asociación-categórica---categórica"><span class="header-section-number">4.3</span> Asociación categórica - categórica</a>
+  <li><a href="#tipos-de-constructos" id="toc-tipos-de-constructos" class="nav-link" data-scroll-target="#tipos-de-constructos"><span class="header-section-number">17.4</span> Tipos de constructos</a>
   <ul class="collapse">
-  <li><a href="#tablas-de-contingencia" id="toc-tablas-de-contingencia" class="nav-link" data-scroll-target="#tablas-de-contingencia"><span class="header-section-number">4.3.1</span> Tablas de contingencia</a></li>
-  <li><a href="#prueba-de-chi-cuadrado" id="toc-prueba-de-chi-cuadrado" class="nav-link" data-scroll-target="#prueba-de-chi-cuadrado"><span class="header-section-number">4.3.2</span> Prueba de chi cuadrado</a></li>
-  <li><a href="#prueba-exacta-de-fisher" id="toc-prueba-exacta-de-fisher" class="nav-link" data-scroll-target="#prueba-exacta-de-fisher"><span class="header-section-number">4.3.3</span> Prueba exacta de Fisher</a></li>
+  <li><a href="#constructos-formativos" id="toc-constructos-formativos" class="nav-link" data-scroll-target="#constructos-formativos"><span class="header-section-number">17.4.1</span> Constructos formativos</a></li>
+  <li><a href="#constructos-reflexivos" id="toc-constructos-reflexivos" class="nav-link" data-scroll-target="#constructos-reflexivos"><span class="header-section-number">17.4.2</span> Constructos reflexivos</a></li>
   </ul></li>
+  <li><a href="#medición-de-constructos" id="toc-medición-de-constructos" class="nav-link" data-scroll-target="#medición-de-constructos"><span class="header-section-number">17.5</span> Medición de constructos</a></li>
+  <li><a href="#validación" id="toc-validación" class="nav-link" data-scroll-target="#validación"><span class="header-section-number">17.6</span> Validación</a>
+  <ul class="collapse">
+  <li><a href="#validez" id="toc-validez" class="nav-link" data-scroll-target="#validez"><span class="header-section-number">17.6.1</span> Validez</a></li>
+  <li><a href="#confiabilidad" id="toc-confiabilidad" class="nav-link" data-scroll-target="#confiabilidad"><span class="header-section-number">17.6.2</span> Confiabilidad</a></li>
+  </ul></li>
+  <li><a href="#validez-de-contenido" id="toc-validez-de-contenido" class="nav-link" data-scroll-target="#validez-de-contenido"><span class="header-section-number">17.7</span> Validez de contenido</a></li>
+  <li><a href="#validez-convergente-y-discriminante" id="toc-validez-convergente-y-discriminante" class="nav-link" data-scroll-target="#validez-convergente-y-discriminante"><span class="header-section-number">17.8</span> Validez convergente y discriminante</a>
+  <ul class="collapse">
+  <li><a href="#convergente" id="toc-convergente" class="nav-link" data-scroll-target="#convergente"><span class="header-section-number">17.8.1</span> Convergente</a></li>
+  <li><a href="#discriminante" id="toc-discriminante" class="nav-link" data-scroll-target="#discriminante"><span class="header-section-number">17.8.2</span> Discriminante</a></li>
+  </ul></li>
+  <li><a href="#consistencia-interna" id="toc-consistencia-interna" class="nav-link" data-scroll-target="#consistencia-interna"><span class="header-section-number">17.9</span> Consistencia interna</a>
+  <ul class="collapse">
+  <li><a href="#medidas" id="toc-medidas" class="nav-link" data-scroll-target="#medidas"><span class="header-section-number">17.9.1</span> Medidas</a></li>
+  </ul></li>
+  <li><a href="#consistencia-externa" id="toc-consistencia-externa" class="nav-link" data-scroll-target="#consistencia-externa"><span class="header-section-number">17.10</span> Consistencia externa</a></li>
+  <li><a href="#alpha-de-cronbach" id="toc-alpha-de-cronbach" class="nav-link" data-scroll-target="#alpha-de-cronbach"><span class="header-section-number">17.11</span> Alpha de Cronbach</a>
+  <ul class="collapse">
+  <li><a href="#consistencia-interna-1" id="toc-consistencia-interna-1" class="nav-link" data-scroll-target="#consistencia-interna-1"><span class="header-section-number">17.11.1</span> Consistencia interna</a></li>
+  </ul></li>
+  <li><a href="#alpha-de-cronbach-1" id="toc-alpha-de-cronbach-1" class="nav-link" data-scroll-target="#alpha-de-cronbach-1"><span class="header-section-number">17.12</span> Alpha de Cronbach</a></li>
+  <li><a href="#alfa-de-cronbach" id="toc-alfa-de-cronbach" class="nav-link" data-scroll-target="#alfa-de-cronbach"><span class="header-section-number">17.13</span> Alfa de Cronbach</a></li>
+  <li><a href="#instrumentos" id="toc-instrumentos" class="nav-link" data-scroll-target="#instrumentos"><span class="header-section-number">17.14</span> Instrumentos</a></li>
+  <li><a href="#cuestionarios" id="toc-cuestionarios" class="nav-link" data-scroll-target="#cuestionarios"><span class="header-section-number">17.15</span> Cuestionarios</a></li>
+  <li><a href="#construcción" id="toc-construcción" class="nav-link" data-scroll-target="#construcción"><span class="header-section-number">17.16</span> Construcción</a></li>
+  <li><a href="#la-pregunta" id="toc-la-pregunta" class="nav-link" data-scroll-target="#la-pregunta"><span class="header-section-number">17.17</span> La pregunta</a></li>
+  <li><a href="#tipos-de-preguntas" id="toc-tipos-de-preguntas" class="nav-link" data-scroll-target="#tipos-de-preguntas"><span class="header-section-number">17.18</span> Tipos de preguntas</a>
+  <ul class="collapse">
+  <li><a href="#abiertas" id="toc-abiertas" class="nav-link" data-scroll-target="#abiertas"><span class="header-section-number">17.18.1</span> Abiertas</a></li>
+  <li><a href="#cerradas" id="toc-cerradas" class="nav-link" data-scroll-target="#cerradas"><span class="header-section-number">17.18.2</span> Cerradas</a></li>
+  </ul></li>
+  <li><a href="#estructuras-de-preguntas" id="toc-estructuras-de-preguntas" class="nav-link" data-scroll-target="#estructuras-de-preguntas"><span class="header-section-number">17.19</span> Estructuras de preguntas</a></li>
+  <li><a href="#votos-múltiples" id="toc-votos-múltiples" class="nav-link" data-scroll-target="#votos-múltiples"><span class="header-section-number">17.20</span> Votos múltiples</a></li>
+  <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking"><span class="header-section-number">17.21</span> Ranking</a></li>
+  <li><a href="#likert" id="toc-likert" class="nav-link" data-scroll-target="#likert"><span class="header-section-number">17.22</span> Likert</a></li>
+  <li><a href="#buenas-prácticas" id="toc-buenas-prácticas" class="nav-link" data-scroll-target="#buenas-prácticas"><span class="header-section-number">17.23</span> Buenas prácticas</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">18</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C01_cover.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./C01_corr.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./C03_cover.html">Modelamiento lineal</a></li><li class="breadcrumb-item"><a href="./C03_medicion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Medición</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Medición</span></h1>
 </div>
 
 
@@ -375,161 +428,233 @@ window.Quarto = {
 </header>
 
 
-<p>Es posible medir la relación entre dos variables, pero esto depende de qué tipo de variables son.</p>
-<ul>
-<li>Dos cuantitativas</li>
-<li>Una cuantitativa y una cualitativa</li>
-<li>Dos cualitativas</li>
-</ul>
-<section id="dos-variables-cuantitativas" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dos-variables-cuantitativas"><span class="header-section-number">4.1</span> Dos variables cuantitativas</h2>
-<p>La relación entre dos variables cuantitativas puede ser medida con los siguientes estadísticos.</p>
-<ul>
-<li>Covarianza</li>
-<li>Correlación de Pearson</li>
-<li>Correlación de Spearman</li>
-</ul>
-<section id="covarianza" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="covarianza"><span class="header-section-number">4.1.1</span> Covarianza</h3>
-<p>Covarianza entre dos variables</p>
-<p><span class="math display">\[ S_{xy} = \frac{1}{n}\sum\limits_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})\]</span></p>
+<section id="indicadores-y-métricas" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="indicadores-y-métricas"><span class="header-section-number">17.1</span> Indicadores y métricas</h2>
+<p>Los indicadores son herramientas cuantitativas utilizadas para medir, monitorear y evaluar un fenómeno o proceso específico. Un indicador generalmente se compone de un numerador y un denominador, lo que permite contextualizar la medición y compararla en diferentes situaciones. Por ejemplo, un indicador común en economía es la tasa de desempleo, que se calcula dividiendo el número de personas desempleadas (numerador) por la población activa total (denominador), y se expresa como un porcentaje.</p>
+<p>Las métricas, aunque también son números que sirven para evaluar aspectos de un fenómeno, suelen referirse a medidas directas que no necesariamente requieren un numerador y un denominador. Son herramientas clave en la evaluación del rendimiento y pueden incluir una amplia gama de datos, desde cifras de ventas hasta tiempos de respuesta en un sistema. Por ejemplo, en un sitio web, una métrica común es el tiempo promedio que un usuario pasa en una página.</p>
 </section>
-<section id="correlación-de-pearson" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="correlación-de-pearson"><span class="header-section-number">4.1.2</span> Correlación de Pearson</h3>
-<ul>
-<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación lineal entre dos variables continuas.</li>
-<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación lineal positiva perfecta, -1 una relación lineal negativa perfecta y 0 ninguna relación lineal.</li>
-<li><strong>Cálculo</strong>: Se basa en la covarianza de las dos variables dividida por el producto de sus desviaciones estándar.</li>
-</ul>
-<p><span class="math display">\[\rho_{xy} = \frac{\sum x_iy_i - n\overline{x}\overline{y}}{(n-1)S_xS_y}\]</span></p>
+<section id="puedes-medir-usando-un-indicador-pero-quieres" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="puedes-medir-usando-un-indicador-pero-quieres"><span class="header-section-number">17.2</span> Puedes medir usando un indicador: ¿pero quieres?</h2>
+<section id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="por-qué-no-puedo-ver-a-mi-médico-la-otra-semana"><span class="header-section-number">17.2.1</span> ¿Por qué no puedo ver a mi médico la otra semana?</h3>
+<p>En gran Bretaña, se propuso medir la calidad de la salud con un indicador: que cuando un paciente llamara a su médico, le dieran cita en menos de cuarenta y ocho horas. Spoiler: <a href="https://www.standard.co.uk/news/mother-catches-out-blair-over-gps-7272924.html">(no funcionó, sólo se atendían llamadas para atención inmediata y se prohibieron las citas por adelantado)</a>.</p>
 </section>
-<section id="correlación-de-spearman" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="correlación-de-spearman"><span class="header-section-number">4.1.3</span> Correlación de Spearman</h3>
-<ul>
-<li><strong>Definición</strong>: Mide la fuerza y la dirección de la relación monótona (no necesariamente lineal) entre dos variables.</li>
-<li><strong>Ventaja</strong>: Es más flexible que la correlación de Pearson y puede ser utilizada en casos donde la relación no es lineal pero aún sigue una tendencia consistente.</li>
-<li><strong>Rango</strong>: -1 a 1, donde 1 indica una relación monótona positiva perfecta, -1 una relación monótona negativa perfecta y 0 ninguna relación monótona.</li>
-</ul>
-<p><span class="math display">\[\rho = 1 - \frac{6\sum D^2}{n(n^2 - 1)}\]</span></p>
-<p>donde D es la diferencia entre los correspondientes estadísticos de orden de x - y. N es el número de parejas de datos.</p>
+<section id="aquí-las-ambulancias-no-llegan" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="aquí-las-ambulancias-no-llegan"><span class="header-section-number">17.2.2</span> Aquí las ambulancias no llegan</h3>
+<p>En gran Bretaña, se propuso medir la calidad de la salud con un indicador: que cuando había una llamada de emergencia desde una zona urbana, y se consideraba que el caso <em>ponía en peligro una vida humana de forma inmediata</em> el servicio de ambulancias tenía ocho minutos para llegar al lugar. Spoiler: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2667302/pdf/rssa0172-0161.pdf">no funcionó, las ambulancias sólo iban a lugares cercanos. Cancelaban servicios y reiniciaban rutas.</a>.</p>
 </section>
-<section id="kendall" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="kendall"><span class="header-section-number">4.1.4</span> Kendall</h3>
+</section>
+<section id="constructos" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="constructos"><span class="header-section-number">17.3</span> Constructos</h2>
+<section id="definición" class="level3" data-number="17.3.1">
+<h3 data-number="17.3.1" class="anchored" data-anchor-id="definición"><span class="header-section-number">17.3.1</span> Definición</h3>
+<p>Un constructo es un aspecto medible relacionado con el fenómeno o sistema que se investiga. Un constructo puede ser unidimensional (linealidad) o multidimensional (complejidad). Generalmente, la medición de un constructo no se puede realizar de manera directa. Este concepto es usado en economía, psicometría, marketing, etc.</p>
+<p>Según Gras (1980) un constructo es la representación sobre algún aspecto sobre el objeto que será observado, medido y relacionado con otros constructos.</p>
+</section>
+</section>
+<section id="tipos-de-constructos" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="tipos-de-constructos"><span class="header-section-number">17.4</span> Tipos de constructos</h2>
+<section id="constructos-formativos" class="level3" data-number="17.4.1">
+<h3 data-number="17.4.1" class="anchored" data-anchor-id="constructos-formativos"><span class="header-section-number">17.4.1</span> Constructos formativos</h3>
+<p>Se miden a partir de sus causas.</p>
 <ul>
-<li><strong>Definición</strong>: La correlación de Kendall, o tau de Kendall, es una medida de la asociación entre dos variables ordinales que evalúa la relación monótona. A diferencia de Spearman, que utiliza rangos para calcular la correlación, Kendall se basa en la concordancia y discordancia de pares de observaciones.</li>
-<li><strong>Cálculo</strong>:
+<li>Calidad.</li>
+<li>Estrato.</li>
+<li>Score de crédito.</li>
+</ul>
+</section>
+<section id="constructos-reflexivos" class="level3" data-number="17.4.2">
+<h3 data-number="17.4.2" class="anchored" data-anchor-id="constructos-reflexivos"><span class="header-section-number">17.4.2</span> Constructos reflexivos</h3>
+<p>Se miden a partir de sus consecuencias.</p>
 <ul>
-<li><strong>Concordancia</strong>: Dos pares de observaciones están en concordancia si el orden de las observaciones en ambos pares es el mismo.</li>
-<li><strong>Discordancia</strong>: Dos pares de observaciones están en discordancia si el orden de las observaciones en un par difiere del orden en el otro par.</li>
-</ul></li>
-<li><strong>Aplicación</strong>: Útil en análisis de datos ordinales y cuando se desea evaluar la relación entre variables con distribución no normal.</li>
+<li>Logro académico.</li>
+<li>Riesgo psicosocial.</li>
+<li>Desempeño laboral.</li>
 </ul>
 </section>
 </section>
-<section id="asociación-numérica---categórica" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="asociación-numérica---categórica"><span class="header-section-number">4.2</span> Asociación numérica - categórica</h2>
-<p>En ocasiones queremos encontra la correlación entre una variable numérica y una categórica.</p>
-<section id="elementos-gráficos" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="elementos-gráficos"><span class="header-section-number">4.2.1</span> Elementos gráficos</h3>
-<p>Para visualizar la correlación entre una variable numérica y una categórica, se pueden utilizar diversos elementos gráficos:</p>
+<section id="medición-de-constructos" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="medición-de-constructos"><span class="header-section-number">17.5</span> Medición de constructos</h2>
+<p>La medición de un constructo es una variable latente. Las variables latentes requieren una medición indirecta, que se realiza a partir de variables observables.</p>
+<p>Briones (1998) establece que los constructos son medibles a través de sus manifestaciones externas, es decir, sus indicadores. Los constructos pueden ser definidos como propiedad subyacentes medidos solamente en forma indirecta, son definiciones mentales de los eventos de objetos los cuales pueden variar.</p>
+<p>Los constructos se miden mediante instrumentos. Los instrumentos pasan por un proceso de validación.</p>
+</section>
+<section id="validación" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="validación"><span class="header-section-number">17.6</span> Validación</h2>
+<p>Validar un instrumento requiere la realización de un proceso de recolección de datos.</p>
+<section id="validez" class="level3" data-number="17.6.1">
+<h3 data-number="17.6.1" class="anchored" data-anchor-id="validez"><span class="header-section-number">17.6.1</span> Validez</h3>
+<p>Que el instrumento concuerde con el constructo que dice medir.</p>
 <ul>
-<li><strong>Diagramas de caja (boxplots)</strong>: Muestran la distribución de la variable numérica para cada categoría de la variable categórica.</li>
-<li><strong>Gráficos de barras</strong>: Representan la media o mediana de la variable numérica para cada categoría de la variable categórica.</li>
+<li>Según algunos, la sección de matemáticas en la prueba Saber 11 depende demasiado de la comprensión de lectura.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_corr_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
-<section id="anova" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="anova"><span class="header-section-number">4.2.2</span> ANOVA</h3>
-<p>El análisis de la varianza es una técnica estadística utilizada para comparar las medias de tres o más grupos y determinar si al menos uno de los grupos es significativamente diferente.</p>
-</section>
-<section id="tipos" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="tipos"><span class="header-section-number">4.2.3</span> Tipos</h3>
+<section id="confiabilidad" class="level3" data-number="17.6.2">
+<h3 data-number="17.6.2" class="anchored" data-anchor-id="confiabilidad"><span class="header-section-number">17.6.2</span> Confiabilidad</h3>
+<p>Al repetir la medición, los resultados se mantienen.</p>
 <ul>
-<li><strong>ANOVA de una vía</strong>: Examina el efecto de una sola variable independiente (factores) sobre la variable dependiente.</li>
-<li><strong>ANOVA de más vías</strong>: Examina el efecto de dos variables independientes sobre la variable dependiente, y sus interacciones.</li>
+<li>Según algunos, los resultados de metemáticas de años distintos de la prueba Saber 11, no son comparables entre sí.</li>
 </ul>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-ESTRATO        5  66675   13335   148.1 &lt;2e-16 ***
-Residuals   2494 224558      90                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
 </section>
-<section id="test-kruskal-wallis" class="level3" data-number="4.2.4">
-<h3 data-number="4.2.4" class="anchored" data-anchor-id="test-kruskal-wallis"><span class="header-section-number">4.2.4</span> Test Kruskal-Wallis</h3>
-<p>El test de Kruskal-Wallis es una prueba no paramétrica utilizada para comparar las medianas de tres o más grupos independientes. Es una alternativa al ANOVA cuando los supuestos de normalidad no se cumplen.</p>
-<p>Ideal para datos ordinales o cuando la variable numérica no sigue una distribución normal.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Kruskal-Wallis rank sum test
+</section>
+<section id="validez-de-contenido" class="level2" data-number="17.7">
+<h2 data-number="17.7" class="anchored" data-anchor-id="validez-de-contenido"><span class="header-section-number">17.7</span> Validez de contenido</h2>
+<p>Los ítems agotan el constructo.</p>
+<p>Un cuestionario se evalúa solicitando a un grupo de expertos que puntúen los ítems en varios aspectos. Generalmente, los aspectos a evaluar son:</p>
+<ul>
+<li>Duración: cuánto toma responder el cuestionario.</li>
+<li>Claridad: que la persona logre comprender las preguntas.</li>
+<li>Completitud: que las respuestas agoten las posibles opciones a las preguntas.</li>
+<li>Pertinencia: que las respuestas sean pertinentes.</li>
+</ul>
+<p>La concordancia entre expertos se mide utilizando un procedimiento, como el Kappa de Cohen o el Kappa de Fleiss.</p>
+</section>
+<section id="validez-convergente-y-discriminante" class="level2" data-number="17.8">
+<h2 data-number="17.8" class="anchored" data-anchor-id="validez-convergente-y-discriminante"><span class="header-section-number">17.8</span> Validez convergente y discriminante</h2>
+<p>Son dos tipos de validez complementarios.</p>
+<section id="convergente" class="level3" data-number="17.8.1">
+<h3 data-number="17.8.1" class="anchored" data-anchor-id="convergente"><span class="header-section-number">17.8.1</span> Convergente</h3>
+<p>Que los ítems que están relacionados con el constructo en la teoría lo estén en la realidad.</p>
+</section>
+<section id="discriminante" class="level3" data-number="17.8.2">
+<h3 data-number="17.8.2" class="anchored" data-anchor-id="discriminante"><span class="header-section-number">17.8.2</span> Discriminante</h3>
+<p>Que los ítems que no están relacionados con el constructo en la teoría no lo estén en la realidad.</p>
+</section>
+</section>
+<section id="consistencia-interna" class="level2" data-number="17.9">
+<h2 data-number="17.9" class="anchored" data-anchor-id="consistencia-interna"><span class="header-section-number">17.9</span> Consistencia interna</h2>
+<p>La consistencia interna es la propiedad de los ítems de estár altamente correlacionadas entre sí, lo que indica que están asociadas a un trazo latente. Dado que esta consistencia interna se encuentra reflejada en la estructura de correlación de las variables es posible medirla y analizarla.</p>
+<section id="medidas" class="level3" data-number="17.9.1">
+<h3 data-number="17.9.1" class="anchored" data-anchor-id="medidas"><span class="header-section-number">17.9.1</span> Medidas</h3>
+<p>Algunas de las medidas más usadas para analizar la consistencia entre variables.</p>
+<ul>
+<li><p><a href="https://doi.org/10.1007/BF02310555">Alfa de Cronbach</a></p></li>
+<li><p>Lambda de Guttman.</p></li>
+<li><p>Inter Item Correlation (Cohen &amp; Swerdlik, 2005).</p></li>
+</ul>
+</section>
+</section>
+<section id="consistencia-externa" class="level2" data-number="17.10">
+<h2 data-number="17.10" class="anchored" data-anchor-id="consistencia-externa"><span class="header-section-number">17.10</span> Consistencia externa</h2>
+<p>La medición que hacemos es consistente con la obtenida mediante otros instrumentos.</p>
+</section>
+<section id="alpha-de-cronbach" class="level2" data-number="17.11">
+<h2 data-number="17.11" class="anchored" data-anchor-id="alpha-de-cronbach"><span class="header-section-number">17.11</span> Alpha de Cronbach</h2>
+<section id="consistencia-interna-1" class="level3" data-number="17.11.1">
+<h3 data-number="17.11.1" class="anchored" data-anchor-id="consistencia-interna-1"><span class="header-section-number">17.11.1</span> Consistencia interna</h3>
+<p>En los casos donde todas las variables son mediciones indirectas distintas de un mismo aspecto no medible, se hace referencia a la propiedad denominada consistencia interna. La consistencia interna consiste en la propiedad de las variables en estar altamente correlacionadas entre sí, lo que indica que están asociadas a un trazo latente. Dado que esta consistencia interna se encuentra reflejada en a estructura de correlación de las variables es posible medirla y analizarla.</p>
+</section>
+</section>
+<section id="alpha-de-cronbach-1" class="level2" data-number="17.12">
+<h2 data-number="17.12" class="anchored" data-anchor-id="alpha-de-cronbach-1"><span class="header-section-number">17.12</span> Alpha de Cronbach</h2>
+<p>El Alfa de Cronbach <span class="citation" data-cites="Cronbach1951">(<a href="#ref-Cronbach1951" role="doc-biblioref">Cronbach, 1951</a>)</span> es una de las medidas más usadas para analizar la consistencia entre variables.</p>
+<p>Dados <span class="math inline">\(K\)</span> variables <span class="math inline">\(Y_1, Y_2, ..., Y_K\)</span> y su suma <span class="math inline">\(X = Y_1 + Y_2 + ... + Y_K\)</span>, el Alfa de Chronbach está dado por la expresión</p>
+<p><span class="math display">\[\alpha = \frac{K}{K-1} \left(1-\frac{\sum_{i = 1}^K \sigma^2_{Y_i}}{\sigma^2_X}\right)\]</span></p>
+</section>
+<section id="alfa-de-cronbach" class="level2" data-number="17.13">
+<h2 data-number="17.13" class="anchored" data-anchor-id="alfa-de-cronbach"><span class="header-section-number">17.13</span> Alfa de Cronbach</h2>
+<blockquote class="blockquote">
+<p>El valor mínimo aceptable para el coeficiente alfa de Cronbach es 0,70; por debajo de ese valor la consistencia interna de la escala utilizada es baja. Por su parte, el valor máximo esperado es 0,90; por encima de este valor se considera que hay redundancia o duplicación.</p>
+</blockquote>
+<p><a href="http://scielo.org.co/pdf/rcp/v34n4/v34n4a09.pdf">Aproximación al uso del coeficiente alfa de Cronbach</a></p>
+</section>
+<section id="instrumentos" class="level2" data-number="17.14">
+<h2 data-number="17.14" class="anchored" data-anchor-id="instrumentos"><span class="header-section-number">17.14</span> Instrumentos</h2>
+<p>Un instrumento de medida es una técnica o conjunto de técnicas que permitirán una asignación numérica que cuantifique las manifestaciones de un constructo que es medible solo de manera indirecta. (Herrera, 1998)</p>
+</section>
+<section id="cuestionarios" class="level2" data-number="17.15">
+<h2 data-number="17.15" class="anchored" data-anchor-id="cuestionarios"><span class="header-section-number">17.15</span> Cuestionarios</h2>
+<p>Un cuestionario es un conjunto de preguntas que indagan por aspectos concernientes al constructo.</p>
+<p>Las preguntas o ítems tienen un valor particular en la construcción de un cuestionario.</p>
+</section>
+<section id="construcción" class="level2" data-number="17.16">
+<h2 data-number="17.16" class="anchored" data-anchor-id="construcción"><span class="header-section-number">17.16</span> Construcción</h2>
+<p>La construcción de un cuestionario, es decir, de definición de las preguntas que lleva, no ocurre de manera subjetiva.</p>
+<p>Es preferible tomar como base cuestionarios previos o estudios detallados anteriores o partir de una investigación cualitativa anterior.</p>
+</section>
+<section id="la-pregunta" class="level2" data-number="17.17">
+<h2 data-number="17.17" class="anchored" data-anchor-id="la-pregunta"><span class="header-section-number">17.17</span> La pregunta</h2>
+<ul>
+<li>Qué se pregunta. Debe estar relacionado con lo que se quiere medir.</li>
+<li>Cada pregunta es atómica. No indaga por diferentes aspectos al mismo tiempo.</li>
+</ul>
+</section>
+<section id="tipos-de-preguntas" class="level2" data-number="17.18">
+<h2 data-number="17.18" class="anchored" data-anchor-id="tipos-de-preguntas"><span class="header-section-number">17.18</span> Tipos de preguntas</h2>
+<p>Las preguntas que se realizan pueden ser:</p>
+<section id="abiertas" class="level3" data-number="17.18.1">
+<h3 data-number="17.18.1" class="anchored" data-anchor-id="abiertas"><span class="header-section-number">17.18.1</span> Abiertas</h3>
+<ul>
+<li>El usuario responde un párrafo con sus apreciaciones.</li>
+<li>En general no se incluyen por no tener un abordaje desde la estadística clásica.</li>
+<li>Pueden ser analizadas con minería de texto y procesamiento del lenguaje natural.</li>
+</ul>
+</section>
+<section id="cerradas" class="level3" data-number="17.18.2">
+<h3 data-number="17.18.2" class="anchored" data-anchor-id="cerradas"><span class="header-section-number">17.18.2</span> Cerradas</h3>
+<ul>
+<li>Numéricas</li>
+<li>Opción múltiple con única respuesta.</li>
+<li>Opción múltiple con múltiple respuesta (el análisis no es tan fácil).</li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-preguntas" class="level2" data-number="17.19">
+<h2 data-number="17.19" class="anchored" data-anchor-id="estructuras-de-preguntas"><span class="header-section-number">17.19</span> Estructuras de preguntas</h2>
+<p>Algunos mecanismos de indagación más compleja.</p>
+<ul>
+<li>Votos múltiples.</li>
+<li>Ranking.</li>
+<li>Likert.</li>
+</ul>
+</section>
+<section id="votos-múltiples" class="level2" data-number="17.20">
+<h2 data-number="17.20" class="anchored" data-anchor-id="votos-múltiples"><span class="header-section-number">17.20</span> Votos múltiples</h2>
+<p>Es una estructura de votación, cada integrante del grupo tiene un número de votos con respecto a un conjunto de alternativas. A diferencia de una votación única, donde se selecciona solo una opción, la votación múltiple permite elegir varias opciones, ofreciendo una visión más completa de las preferencias del grupo.</p>
+<p>Ejemplo: Imagina que tienes una lista de marcas de automóviles: Tesla, BMW, Mercedes, Audi, Toyota, Ford, Honda, Volvo. Se te pide que votes por las tres marcas que más te gusten.</p>
+<p>¿Cómo crees que se analiza?</p>
+</section>
+<section id="ranking" class="level2" data-number="17.21">
+<h2 data-number="17.21" class="anchored" data-anchor-id="ranking"><span class="header-section-number">17.21</span> Ranking</h2>
+<p>Se solicita a los participantes que organicen de mayor a menor una lista según un criterio definido. Este proceso permite capturar las preferencias relativas entre las diferentes opciones.</p>
+<p>Ejemplo: Imagina que tienes una lista de postres: tiramisú, helado de vainilla, cheesecake, brownie, mousse de chocolate, flan, macarrones, crème brûlée. Se te pide que los organices de mayor a menor según lo deliciosos que te parezcan.</p>
+<p>¿Cómo crees que se analiza?</p>
+</section>
+<section id="likert" class="level2" data-number="17.22">
+<h2 data-number="17.22" class="anchored" data-anchor-id="likert"><span class="header-section-number">17.22</span> Likert</h2>
+<p>Se solicita a los participantes que puntúen una lista de afirmaciones según una escala definida.</p>
+<p>Ejemplo: Imagina que se les pide a los participantes que expresen su nivel de acuerdo con las siguientes afirmaciones sobre ética en el lugar de trabajo:</p>
+<p>“Es aceptable que los empleados reporten irregularidades de manera anónima.”</p>
+<p>“Las empresas deben ser transparentes sobre sus prácticas ambientales.”</p>
+<p>“Es importante que las decisiones corporativas se basen en principios éticos, incluso si afecta la rentabilidad.”</p>
+<p>Los participantes deben calificar cada afirmación en una escala que va desde “totalmente en desacuerdo”, “en desacuerdo”, “neutral”, “de acuerdo” hasta “totalmente de acuerdo”.</p>
+<p>¿Cómo crees que se analiza?</p>
+</section>
+<section id="buenas-prácticas" class="level2" data-number="17.23">
+<h2 data-number="17.23" class="anchored" data-anchor-id="buenas-prácticas"><span class="header-section-number">17.23</span> Buenas prácticas</h2>
+<p>En los procesos de diseño de instrumentos hay una serie de buenas prácticas:</p>
+<ul>
+<li>No usar filtros en las encuestas.</li>
+<li>Nunca ponerle número a las categorías ni a la no respuesta.</li>
+<li>No hacer preguntas tendenciosas.</li>
+<li>Usar palabras claras.</li>
+<li>No dar alternativas implícitas.</li>
+<li>No hacer suposiciones tácitas.</li>
+<li>No usar dobles negaciones.</li>
+<li>Mejor preguntar la fecha de nacimiento que la edad.</li>
+<li>Preguntar como numéricos los datos numéricos siempre que sea posible.</li>
+</ul>
+</section>
+<section id="referencias" class="level1" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> Referencias</h1>
+<p>Cohen, R. J., Swerdlik, M. E., &amp; Phillips, S. M. (1996). Psychological testing and assessment: An introduction to tests and measurement. Mayfield Publishing Co.</p>
 
-data:  INGLES_PUNT by ESTRATO
-Kruskal-Wallis chi-squared = 317.83, df = 5, p-value &lt; 2.2e-16</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="asociación-categórica---categórica" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="asociación-categórica---categórica"><span class="header-section-number">4.3</span> Asociación categórica - categórica</h2>
-<p>En ocasiones es necesario encontrar relaciones entre variables categóricas.</p>
-<section id="tablas-de-contingencia" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="tablas-de-contingencia"><span class="header-section-number">4.3.1</span> Tablas de contingencia</h3>
-<p>Tablas que muestran la frecuencia de las combinaciones de dos variables categóricas. Permiten observar la relación entre las variables categóricas.</p>
-<p>Ayudan a visualizar y analizar la dependencia entre variables categóricas.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="C01_corr_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="prueba-de-chi-cuadrado" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="prueba-de-chi-cuadrado"><span class="header-section-number">4.3.2</span> Prueba de chi cuadrado</h3>
-<p>Prueba estadística que evalúa si existe una asociación significativa entre dos variables categóricas. Compara las frecuencias observadas en la tabla de contingencia con las frecuencias esperadas bajo la hipótesis nula de independencia.</p>
-<p>Determina si hay una relación significativa entre las variables categóricas.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
 
-data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-X-squared = 195.38, df = 20, p-value &lt; 2.2e-16</code></pre>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Cronbach1951" class="csl-entry" role="listitem">
+Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. <em>Psychometrika</em>, <em>16</em>(3), 297–334. http://doi.org/<a href="https://doi.org/10.1007/BF02310555">10.1007/BF02310555</a>
 </div>
 </div>
-</section>
-<section id="prueba-exacta-de-fisher" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="prueba-exacta-de-fisher"><span class="header-section-number">4.3.3</span> Prueba exacta de Fisher</h3>
-<p>Prueba estadística utilizada para determinar la asociación entre dos variables categóricas en tablas de contingencia de 2x2, especialmente cuando las frecuencias esperadas son pequeñas.</p>
-<p>Proporciona una alternativa más precisa a la prueba de chi cuadrado cuando los tamaños de muestra son pequeños.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Fisher's Exact Test for Count Data with simulated p-value (based on
-    2000 replicates)
-
-data:  tb_example$COLE_INST_JORNADA and tb_example$ESTRATO
-p-value = 0.0004998
-alternative hypothesis: two.sided</code></pre>
-</div>
-</div>
-
-
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -935,13 +1060,13 @@ alternative hypothesis: two.sided</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./C01_univar.html" class="pagination-link" aria-label="Estadística descriptiva para una variable">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística descriptiva para una variable</span></span>
+      <a href="./C03_reg-logit.html" class="pagination-link" aria-label="Modelo de regresión logit">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Modelo de regresión logit</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./C01_dist.html" class="pagination-link" aria-label="Distribuciones">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./C03_acp.html" class="pagination-link" aria-label="Análisis de Componentes Principales">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Análisis de Componentes Principales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
