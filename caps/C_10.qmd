@@ -1,0 +1,142 @@
+---
+title: "Descriptivos univariados"
+lang: "es-co"
+---
+
+
+
+
+
+NA
+
+
+
+
+## Medidas de frecuencia
+
+
+
+
+NA
+
+
+
+### Frecuencia
+
+
+NA
+
+
+
+### Proporción
+
+
+NA
+
+
+
+### Moda
+
+
+NA
+
+
+
+### Nota sobre variables continuas
+
+
+NA
+
+
+
+
+## Medidas de tendencia central
+
+
+### Media aritmética
+
+
+NA
+
+
+
+### Mediana
+
+
+NA
+
+
+Media armónica
+
+
+Media geométrica
+
+
+Comparación de las medidas
+
+
+
+
+## Medidas de localización
+
+
+### Mínimo y máximo
+
+
+NA
+
+
+
+### Cuantiles
+
+
+NA
+
+
+
+### Percentiles
+
+
+NA
+
+
+
+### Cuartiles
+
+
+NA
+
+
+
+
+## Medidas de dispersión
+
+
+### Varianza
+
+
+NA
+
+
+
+### Desviación estandar
+
+
+NA
+
+
+
+### Rango intercuartílico (IQR)
+
+
+NA
+
+
+
+### Rango
+
+
+NA
+
+
+

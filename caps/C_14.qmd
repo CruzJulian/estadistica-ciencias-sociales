@@ -1,0 +1,73 @@
+---
+title: "Visualización"
+lang: "es-co"
+---
+
+
+
+
+
+NA
+
+
+
+
+## ¿Por qué visualización?
+
+
+
+
+NA
+
+
+
+
+## Veamos ejemplos
+
+
+
+
+NA
+
+
+
+
+## Gráficos tradicionales
+
+
+
+
+NA
+
+
+
+
+## Escala de Cleveland y McGill
+
+
+
+
+NA
+
+
+
+
+## Buenas prácticas de visualización
+
+
+
+
+NA
+
+
+
+
+## Gráficos
+
+
+
+
+NA
+
+
+

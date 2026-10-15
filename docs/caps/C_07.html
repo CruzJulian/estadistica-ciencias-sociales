@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Estimación – Estadística para Ciencias Sociales</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../caps/C_08.html" rel="next">
+<link href="../caps/C_06.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-951e7035b01ac1c0f62f691d0de8087f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_07.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Estadistica para Ciencias sociales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">preliminares</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intención y propósito</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Los datos y su preparación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uso de inteligencia artificial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un breve ensayo sobre distribuciones</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Epistemología de la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_07.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptivos univariados</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#conceptos-iniciales" id="toc-conceptos-iniciales" class="nav-link active" data-scroll-target="#conceptos-iniciales"><span class="header-section-number">8.1</span> Conceptos iniciales</a>
+  <ul class="collapse">
+  <li><a href="#población" id="toc-población" class="nav-link" data-scroll-target="#población"><span class="header-section-number">8.1.1</span> Población</a></li>
+  <li><a href="#muestra" id="toc-muestra" class="nav-link" data-scroll-target="#muestra"><span class="header-section-number">8.1.2</span> Muestra</a></li>
+  <li><a href="#parámetro" id="toc-parámetro" class="nav-link" data-scroll-target="#parámetro"><span class="header-section-number">8.1.3</span> Parámetro</a></li>
+  <li><a href="#estimador" id="toc-estimador" class="nav-link" data-scroll-target="#estimador"><span class="header-section-number">8.1.4</span> Estimador</a></li>
+  </ul></li>
+  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual"><span class="header-section-number">8.2</span> Estimación puntual</a>
+  <ul class="collapse">
+  <li><a href="#estimación-puntual-1" id="toc-estimación-puntual-1" class="nav-link" data-scroll-target="#estimación-puntual-1"><span class="header-section-number">8.2.1</span> Estimación puntual</a></li>
+  <li><a href="#estimadores-y-parámetros" id="toc-estimadores-y-parámetros" class="nav-link" data-scroll-target="#estimadores-y-parámetros"><span class="header-section-number">8.2.2</span> Estimadores y parámetros</a></li>
+  <li><a href="#ley-de-los-grandes-números" id="toc-ley-de-los-grandes-números" class="nav-link" data-scroll-target="#ley-de-los-grandes-números"><span class="header-section-number">8.2.3</span> Ley de los grandes números</a></li>
+  <li><a href="#consistencia" id="toc-consistencia" class="nav-link" data-scroll-target="#consistencia"><span class="header-section-number">8.2.4</span> Consistencia</a></li>
+  </ul></li>
+  <li><a href="#estimación-por-intervalo" id="toc-estimación-por-intervalo" class="nav-link" data-scroll-target="#estimación-por-intervalo"><span class="header-section-number">8.3</span> Estimación por intervalo</a>
+  <ul class="collapse">
+  <li><a href="#precisión-y-exactitud" id="toc-precisión-y-exactitud" class="nav-link" data-scroll-target="#precisión-y-exactitud"><span class="header-section-number">8.3.1</span> Precisión y exactitud</a></li>
+  <li><a href="#construccion-de-los-intervalos-de-confianza" id="toc-construccion-de-los-intervalos-de-confianza" class="nav-link" data-scroll-target="#construccion-de-los-intervalos-de-confianza"><span class="header-section-number">8.3.2</span> Construccion de los intervalos de confianza</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_07.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="conceptos-iniciales" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="conceptos-iniciales"><span class="header-section-number">8.1</span> Conceptos iniciales</h2>
+<p>Iniciamos por los conceptos que son fundamentales para entender la estimación en inferencia estadística. Estos conceptos ayudan a diferenciar entre la población y la muestra, así como a identificar las características numéricas que se desea estimar.</p>
+<section id="población" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="población"><span class="header-section-number">8.1.1</span> Población</h3>
+<p>La <strong>población</strong> se refiere al conjunto completo de individuos, elementos o unidades que comparten una característica particular que se está estudiando. Es el conjunto completo sobre el que quermos conversar.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Por ejemplo, si estamos interesados en el ingreso anual de todos los empleados de una empresa, la población sería todos los empleados.</p>
+</div>
+</div>
+<p>En la inferencia estadística, es crucial definir claramente la población para poder aplicar métodos de muestreo adecuados y realizar estimaciones precisas. Delimitar la población es el primer paso que se realiza al diseñar un estudio.</p>
+<p>Para definir claramente la población, muchas veces vamos a utilizar los criterios de inclusión. Se trata de una serie de condiciones que deben cumplir los individuos para pertenecer a la población.</p>
+<p>También existen los criterios de eexclusión, son condiciones que identifican a los individuos que no deben pertenecer a la población.</p>
+<p>Es importante tener en cuenta que los criterios de inclusioń y exclusión se aplican a la población, no a la muestra.</p>
+</section>
+<section id="muestra" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="muestra"><span class="header-section-number">8.1.2</span> Muestra</h3>
+<p>Una <strong>muestra</strong> es un subconjunto de elementos extraídos de una población. La muestra se utiliza para realizar estimaciones sobre la población completa sin necesidad de medir a todos sus miembros</p>
+<p>la calidad de la muestra son fundamentales para asegurar que las inferencias realizadas sean precisas y representativas.</p>
+<p>como ya se vio Una muestra puede ser aleatoria, estratificada o por conveniencia, dependiendo del método utilizado para su selección. El diseño muestral es la herramienta para garantizar una muestra representativa.</p>
+<p>Y esto no aplica solamente para métodos cuantitativos. En general, la información recolectada será representativa solamente con un buen diseño muestral. Incluso en un estudio cualitativo.</p>
+</section>
+<section id="parámetro" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="parámetro"><span class="header-section-number">8.1.3</span> Parámetro</h3>
+<p>Un <strong>parámetro</strong> es un valor numérico que describe una característica específica de una población completa. Debe ser numérico, para que se pueda modelar mediante las herramientas matemáticas y debe corresponder a toda la población, sin excepción. El problema fundamental de la estadística es que no se conocen los parámetros. Dado que los parámetros se refieren a poblaciones enteras, son constantes, pero, en la práctica, generalmente son desconocidos. Por lo tanto, se necesita recurrir a métodos estadísticos para estimarlos a partir de muestras.</p>
+<p>Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²) o la proporción poblacional (P). Cuando entramos en el terreno bivariado tenemos que el parámetro es la covarianza y la correlación. O en caso de un modelo, los coeficientes del mismo y los pesos de dlas variables son parámetros.</p>
+<p>Cuando las variables son categóricas admiten parámetros como proporcion y porcentaje, cuando son numéricas admiten como parámetros el total, el promedio, la varianza la desviación estándar.</p>
+<p>Los proceoss estadísticos en general tienen como norte la estimación de unos parámetros. Sea a nivel univariado, bivariado o multivariado o de modelamiento, siempre estamos esperando estimar parámetros.</p>
+</section>
+<section id="estimador" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="estimador"><span class="header-section-number">8.1.4</span> Estimador</h3>
+<p>Un <strong>estimador</strong> es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales.</p>
+<p>Un estimador es una variable aleatoria y, por lo tanto, puede variar de una muestra a otra. Los estimadores se utilizan para hacer inferencias sobre la población. Es decir, la generalización del valor del estimador desde la meustra hacia la población es la infereencia estadística. La pregunta es, qué tanto se diferencia el estimador del parámetro.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ejemplos comunes incluyen la media muestral <span class="math inline">\(\bar{x}\)</span> y la proporción muestral <span class="math inline">\(\hat{p}\)</span>.</p>
+</div>
+</div>
+<p>Entonces, en nuestra lógica de inferencia, podemos decir que el esstimador es lo que se ve, lo tangible, lo accesible y el parámetro, aunque sabemos que existe, no lo podemos ver ni calcular; a menos que tengamos acceso a toda la poblacioń.</p>
+<p>La calidad de un estimador se evalúa en función de sus propiedades, como la consistencia y la unbiasedness (inexistencia de sesgo).</p>
+</section>
+</section>
+<section id="estimación-puntual" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="estimación-puntual"><span class="header-section-number">8.2</span> Estimación puntual</h2>
+<section id="estimación-puntual-1" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="estimación-puntual-1"><span class="header-section-number">8.2.1</span> Estimación puntual</h3>
+<p>La <strong>estimación puntual</strong> se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población.</p>
+<p>Este enfoque proporciona una respuesta única a la pregunta de interés, pero no informa sobre la precisión de la estimación.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Por ejemplo, la media muestral <span class="math inline">\(\bar{x}\)</span> es una estimación puntual de la media poblacional (μ).</p>
+</div>
+</div>
+<p>El concepto de precisión hace referencia a qué tan diferentes pueden ser los valores del estimador cuando son obtenidos de diferentes muestras.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>*Media muestral:<strong> Se toma una muestra de los ingresos anuales de 100 hogares de una comunidad. La media de estos ingresos en la muestra es de $50,000. Este valor se utiliza como una </strong>estimación puntual** de la media de los ingresos por hogar de toda la comunidad.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Proporción muestral:</strong> En una encuesta realizada a 500 jóvenes de una universidad, 320 afirman que prefieren informarse a través de redes sociales. La proporción muestral es <span class="math inline">\(\hat{p} = \frac{320}{500} = 0.64\)</span>, lo cual es una <strong>estimación puntual</strong> de la proporción real de personas que prefieren el trabajo remoto en la población de jóvenes de esta universidad.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Desviación estándar:</strong> Una muestra de 50 estudiantes tiene una varianza de puntajes en un examen de 8 puntos. Este valor se utiliza como una <strong>estimación puntual</strong> de la varianza de los puntajes en la población completa de estudiantes.</p>
+</div>
+</div>
+</section>
+<section id="estimadores-y-parámetros" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="estimadores-y-parámetros"><span class="header-section-number">8.2.2</span> Estimadores y parámetros</h3>
+<p>Entonces, podemos observar la relación entre la población y la muestra. La población es el total del universo que queremos investigar, pero no podemos acceder a ella, mientras que la muestra son los datos que recoelectamos, que tenemos a nuestro cuidado.</p>
+<p>Así mismo, el parámetro es una cantidad que nos da información sobre los fenómenos que estudiamos, pero no podemos calcularlo. Mientras que el estimador es una aproximación al parámetro. Esta aproximacion mejora según varias condiciones que veremos a continuación.</p>
+<p>El estimador persigue al parámetro, esa es la metáfora que tenemos en nuestar mente. Siempre debemos observar si el estimador es suficienremente cercano al parámetro.</p>
+<p>Como no conocemos el parámetro, nunca podemos saber si el estimador es igual o diferente al parámetro, pero varias herramientas estadísticas nos ayudan a intuir la diferencia entre el parámetro y el estimador, aún sin conocer el primero. Esta diferencia entre el parámetro y el estimador la vamos a denominar error de estimación, y sobre este vamos a hablar más adelante, porque es uno de los temas más estudiadoes en la estadística.</p>
+<p>Una forma de hacer inferencia es generalizar los estimadores y decir que son cercanos a los parámetros.</p>
+</section>
+<section id="ley-de-los-grandes-números" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="ley-de-los-grandes-números"><span class="header-section-number">8.2.3</span> Ley de los grandes números</h3>
+<p>La <strong>Ley de los Grandes Números</strong> es un principio fundamental en la teoría de la probabilidad que establece que, a medida que aumenta el tamaño de una muestra, la media muestral <span class="math inline">\(\bar{x}\)</span> se acercará a la media poblacional (μ) de la población de la que se extrajo la muestra.</p>
+<p>Esta ley se basa en la idea de que las fluctuaciones aleatorias tienden un equilibrio, dejando al descubierto las tendencias a medida que los tamaños poblacionales aumentan, lo que resulta en una estimación más precisa del parámetro poblacional.</p>
+<p><strong>Ley débil de los grandes números</strong>: Establece que, para cualquier valor ε positivo, la probabilidad de que la media muestral se desvíe de la media poblacional en más de ε tiende a cero a medida que el tamaño de la muestra (n) aumenta. Es decir, la media muestral se convierte en un estimador consistente de la media poblacional.</p>
+<p><strong>Ley fuerte de los grandes números</strong>: Afirmación más fuerte que la versión débil, establece que la media muestral converge casi seguramente a la media poblacional a medida que n tiende al infinito. Esto significa que, con una probabilidad de 1, la media muestral se aproximará a la media poblacional a medida que se tomen más y más muestras.</p>
+<p>Salvo detalles muy técnicos, en ambos casos la conclusión es la misma. El estimador de la media persigue a su parámetro. Esto, de manera intuitiva, nos permite ver el trabajo de los matemáticos y los estadísticos: establecer cuáles son las condiciones para que un estimador persiga a su parámetro. También preguntarnos. Será que hay estimadores o parámetros que están desacoplados?</p>
+<p>La Ley de los Grandes Números es fundamental en estadística y asegura que los resultados obtenidos de las muestras se volverán más representativos de la población a medida que se aumente el tamaño de la muestra, lo que permite realizar inferencias más confiables sobre la población completa.</p>
+</section>
+<section id="consistencia" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="consistencia"><span class="header-section-number">8.2.4</span> Consistencia</h3>
+<p>Que la media muestral converge a la media poblacional está garantizado por la ley de los grandes números en sus versiones débil y fuerte. Pero qué pasa con otros estimadores? Sí tienen las mismas propiedades?</p>
+<p>Resulta que no todos, pero sí algunos. Se llaman consistentes. Un <strong>estimador puntual</strong> es <strong>consistente</strong> si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. Es decir, hay una clase especial de estimadores que sí persiguen a los parámetros. Esto los estadísticos lo han estudiado por años y representa una de las dificultades más fuertes al momento de crear nuevos modelos y algoritmos.</p>
+<p>Todos los estimadores presentados en este libro son consistentes, entonces no vamos a tener problemas de consistencia. Vamos a poder trabajar tranquilos sobre nuestras conclusiones, ya que los estimadores presentados han sido estudiados por estadísticos y matemáticos.</p>
+<p>Esta propiedad es crucial porque asegura que con muestras más grandes, nuestras estimaciones se vuelven más precisas y confiables, reduciendo la variabilidad y el error de estimación.</p>
+</section>
+</section>
+<section id="estimación-por-intervalo" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="estimación-por-intervalo"><span class="header-section-number">8.3</span> Estimación por intervalo</h2>
+<section id="precisión-y-exactitud" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="precisión-y-exactitud"><span class="header-section-number">8.3.1</span> Precisión y exactitud</h3>
+<p>En todo este viaje, hemos visto como una de las tareass mas importantes de la estadística es modelar lo que no observamos a partir de lo que observamos.</p>
+<p>Dentro de esto, tenemos que pensar en el problema del muestreo.</p>
+<p>Como vimos antes, el problema del muestreo es que al trabajar muestras distintas de la misma población, probablemente se obtengan resultados distintos. El estudio de este fenómeno nos va a llevar a dos conceptos adicionales, que nos ayudan a entender la inferencia.</p>
+<p>La precisión, se pregunta por la diferencia que hay entre las muestras posibles. Si yo tomo miles de muestras de mi población, qué tan diferentes son los estadísticos que puedo obtener de ellas. Esta diferencia se puede medir.</p>
+<p>La exactitud, por otro lado, hace referencia a que, entre todas las muesras que yo tomo, los resultados sí sean parecidos al parámetro, o sea al resultado de la poblacioń.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los dos conceptos suelen sucitar confusión entre los estudiantes. Pero muchas veces s epueden resolver fácil con un ejemplo. Una vez me encontré a Shakira en un avión, y le pedí una selfie. Ella, cansada de que le pidan estas cosas, me puso una condición; que tenía que adivinar la edad de su perro, si la edad que yo decía no correspondía con la realidad, no habría foto ni nada. Yo le dije que estaba bien, pero que en vez de darle un número le daba un rango. Ella no se opuso, acto seguido le dije que su perro tenía entre 0 y 25 años. Una señora que era testigo de la conversación, irrumpió, diciendo que yo era un tramposo. Pero le dije que ella pidió exactitud, no precisión. Al final me desperté, todo fue un suelño.</p>
+</div>
+</div>
+<p>La <strong>precisión</strong> se refiere a la consistencia y reproducibilidad de las mediciones. Una medición es precisa si el rsultado con distintas muestras son cercanas entre sí, independientemente de si son correctas o no.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los diseñadores de máquinas dan las medidas en milímetros. Esto da una mayor precisión a los componentes. Los errores, cuando los hay son de milímetros. Si los componentes tuvieran las medidas en centímetros, habría menos precisión.</p>
+</div>
+</div>
+<p>La <strong>exactitud</strong>, por otro lado, se refiere a cuán cerca está una medición del valor verdadero o del objetivo. Una medición es exacta si se aproxima al valor real. Lo que se evalúa es si está diciendo la verdad o no.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los abogados necesitan establecer los hechos verídicos en sus procesos. Incluso si no se tienen detalles, los hechos relatados deben ser verificables.</p>
+</div>
+</div>
+<p>La precisión y exactitud son cruciales en la estadística y en el diseño de investigaciones. Una alta precisión en los resultados es deseable, pero no es suficiente por sí sola. Si los datos son precisos pero no exactos, las conclusiones extraídas pueden ser engañosas y llevar a decisiones erróneas.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imagina dos dos imágenes. En la primera imagen se muestra el dibujo de un niño sobre los animales de la granja. La segunda imagen se muestra una foto de unas plantas de la granja. Cada una de estas imágenes tiene un subtítulo que dice “Animales de la granja”. Ahora dime, hay una imagen inexacta y otra imprecisa. Sabrías distingir cuál es cual?</p>
+</div>
+</div>
+</section>
+<section id="construccion-de-los-intervalos-de-confianza" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="construccion-de-los-intervalos-de-confianza"><span class="header-section-number">8.3.2</span> Construccion de los intervalos de confianza</h3>
+<p>los intervalos de confianza son una herramienta estadística diseñada para expresar la incertidumbre en torno a una estimación puntual. Un intervalo de confianza proporciona un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional verdadero,</p>
+<p>De esta manera, un intervalo de confianza tiene mayor o menor amplitud dependiendo de el error de estimacioń, que tiene que ver directamente con el tamaño muestral e indirectamente con el diseño muestral. Recordemos que estamos partiendo de diseños muestrales probabilísticos.</p>
+<p>Los conceptos de precisión y exactitud están intrínsecamente relacionados con los intervalos de confianza,</p>
+<p>Un intervalo de confianza nos trae un nuevo problema. A veces el investigador necesita que el intervalo de confianza no contenga valores específicos como el cero o el uno para demostrar su teoría. Es decir, que puede suceder que un intervalo de confianza desmonte una teoría. Esto va a quedar más explícito cuando veamos pruebas de hipótesis.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imaginemos que estoy hablando de discrimionación en procesos penales, tengo un grupo discriminado A que generalmente le ponen más años por el mismo delito frente ao tro grupo no discriminado B. Y tengo la estadística de diferencia de los promedios, o sea, la resta, promedio de B menos promedio de A. Esta estadística la obtuve de una muestra probabilística. Entonces, para demostrar mi teoría de que hay discriminación penal, tengo que demostrar que el parámetro (no el estimador) es positivo. Es decier, que la diferencia de los promedios es positiva para la poblacióni. Si calculamos un intervalo de confianza y todo el intervalo es mayor a cero, teniendo en cuenta que el parámetro se encuentra en el intervalo, puedo pensar que mi teoría se sostiene. Pero si el intervalo contiene al cero, significa que el parámetro puede ser positivo o negativo o cero. Entonces mi estudio no puede concluir que haya discriminación penal en la población. Es no concluyente.</p>
+</div>
+</div>
+<p>Este razonamiento que nos permite enfrentar una hipótesis a un cálculo con los datos y establecer conexiones que me permiten demostrarlas es el principio actual del conocimiento científico. En ciencias de la salud, ciencias económicas, sociales, humanas, el razonamiento de conectar hipótesis con parámetros y estimadores es el estandar metodológico de investigacioń.</p>
+<p>Pero hay malas noticias. El caracter matemático de los intervalos de confianza tiene un detalle que es neceario estudiar antes de continuar. Debido a sus características matemáticas, los parámetros no son fáciles de localizar. Pueden estar en cuanquier parte de la recra numérica, sí, literalmente en cualquier parte. Aunque no parezca, la probabilidad de que el parámetro se encuentre muy lejos del estimador puede ser muy baja, pero nunca es cero. esto significa que si yo quiero estar 100% seguro de que mi intervalo cubre mi estaimador, debo tener un intervalo gigante, que puede llegar a infinito. Esto no resulta útil.</p>
+<p>Por esta razón, los intervalos de confianza no se calculan con una certeza del 100%. Las fórmulas matemáticas desarrolladas por los expertos y también las herramientas computacionales, han permitido construir intervalos de confianza que, con un un porcentaje de certeza menor al 100%, cubren el parámetro. Estos intervalos pueden tener 90%, 95% incluso 99% de confianza. El estándar en ciancias sociales es 95%.</p>
+<p>Y entonces aquí ocurre algo que sucita controversia: existe la posibilidad de que yo piense que mi intervalo de confianza contiene el parámetro, pero en ralidad no lo hace. Esto sucede el 5% de las veces. Es decir, para un parámetro particular, si tomamos muchas muestras y de cada una de ellas generamos todos intervalos de confianza para este parámetro, el 5% de estos intervalos no contiene el parámetro.</p>
+<p>Aquí estamos siendo muy claros en que el parámetro es fijo y los intervalos de confianza dependen de la meustra. Si realizamos muchas veces muchas muestras, podemos ver muchos intervalos de confianza para el mismo parámetro.</p>
+<p>La construcción de intervalos de confianza puede realizarse de dos maneras. Construcción analítica y construcción computacional. La construcción analítica Utiliza fórmulas y propiedades matemáticas para calcular los intervalos de confianza. Este método es eficiente cuando se cumplen las condiciones necesarias, como la normalidad de los datos. Utiliza técnicas de remuestreo, como el bootstrapping, para estimar la distribución del estimador y generar intervalos de confianza sin necesidad de asumir una distribución específica. En este caso, un computador puede generar muchas muestras a partir de un conjunto de datos y calcular muchas veces el mismo estimador.</p>
+<p>La construcción analítica de los intervalos de confianza presenta pros y contras. <strong>Ventajas</strong>: Menor costo computacional, ya que implica cálculos directos a partir de los datos. Resultados más rápidos si se cumplen los supuestos de normalidad.</p>
+<p>Las Desventajas del uso de intervalos de confianza analiticos se encuentran, entre otras: Dependencia de supuestos que pueden no cumplirse en datos reales. Puede no ser adecuado para distribuciones no estándar o en situaciones de muestras pequeñas.</p>
+<p>La construcción computacional de los intervalos de confianza presenta pros y contras <strong>Ventajas</strong>: Flexible, ya que no depende de supuestos sobre la distribución de los datos. Adecuado para cualquier tipo de muestra y variabilidad en los datos.</p>
+<p>La construcción computacional de los intervalos de confianza presenta *<strong>Desventajas</strong>: Puede ser intensivo en recursos computacionales, especialmente para grandes volúmenes de datos. Mayor tiempo de procesamiento y necesidad de software especializado.</p>
+<p>El <strong>bootstrapping</strong> es un método no paramétrico que se utiliza para estimar la distribución de un estimador y, por ende, sus intervalos de confianza. Este método genera múltiples muestras simuladas (con reemplazo) de la muestra original, permitiendo construir un intervalo de confianza sin depender de la distribución subyacente de los datos.</p>
+<p>Un <strong>intervalo de confianza</strong> es considerado <strong>consistente</strong> si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse. Esto indica que la estimación se vuelve más precisa y refleja mejor el parámetro poblacional. En general, tanto los intervalos de confianza analíticos como los computacionales suelen ser consistentes.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../caps/C_06.html" class="pagination-link" aria-label="Muestreo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Muestreo</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../caps/C_08.html" class="pagination-link" aria-label="Tamaño muestral">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

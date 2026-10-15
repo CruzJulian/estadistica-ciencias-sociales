@@ -1,0 +1,54 @@
+---
+title: "Intención y propósito"
+lang: "es-co"
+---
+
+## Presentación
+
+
+
+
+El Laboratorio Interdisciplinar de Medición Social (LABMEDISOCIAL) de la Facultad de Ciencias Sociales y Humanas de la Universidad Externado de Colombia se complace en presentar estas notas de clase sobre estadística en ciencias sociales. 
+
+
+La estadística, en su esencia, constituye un puente entre la observación empírica y la construcción de conocimiento científico.. Este libro se concibe como una contribución a ese esfuerzo, ofreciendo una integración rigurosa con las ciencias sociales 
+
+
+En investigación social, el uso adecuado de métodos estadísticos , constituye una ventaja del investigador en un entorno competitio de alto desempaño. 
+
+
+dado el crecimiento exponencial de las fuentes de información y el desarrollo acelerado de las herramientas tecnológicas, es apropiado disponer de una sólida fundamentación conceptual y práctica que le permita transformar y comprender grandes cantidades de información. 
+
+
+
+
+## Orientación
+
+
+
+
+Las ciencias sociales requieren muchas veces de los métodos cuantitativos para poder resolver sus preguntas. La cuantificación plana, saber cuánto es el promedio y la varianza es un alcance corto. Hoy se estudia la relación entre diferentes variables, sean estas concretas o abstractas. 
+
+
+La estadística generalmente tiene cuatro componentes. Se trata de un componente matemático que nos habla de funciones, sumas e integrales. El componente teórico propio de la estadística, que nos dice qué es una hipótesis, una muestra aleatoria etc; el componente computacional que generalmente se trabaja con software abierto como R o Python y el componente contextual, que se trata de los pormenores disciplinares, del contexto en el que ocurren los datos. 
+
+
+Este manuscrito está orientado a resolver las dudas de un científico social con respecto a los temas estadísticos. Mucha de su presentacińo en prosa es más parecida a un libro de filosofía que un texto matemático. Con el fin de facilitar el acercamiento del científico social se proponen tres características. 
+
+
+Una persona que utiliz a un horno microondas no necesita saber qué son las miicroondas para poderlo utilizar. El diseño de los objetos que tenemos a nuestro alcance toma como punto de partida la noción de usuario. Un usurio no es un experto, sino alguien que resuelve una necesidad inmediata por medio de una herramienta. Para el científico social, la experiencia de hacer uso de métodos estadísticos puede ser más parecida a usar un horno microondas, resolviendo sus requerimientos sin saber como funciona realmente. El objetivo de estas notas no es formar estadísticos sino usuarios de la estadística. Por consiguiente, muchas veces no necesitamos saber a profundidad cómo funciona una máquina para poderla usar. Este es el mismo caso y el manuscrito se orienta en este sentido en la formación de usuarios. 
+
+
+El componente matemático de la estadística es retirado tanto como se pueda. El lenguaje matemático no es necesariamente universal. Muchos lo aprendimos pero otros muchos no. En general, pra el científico social, las demostraciones llenas de sómbolos abstractos pueden en ocasiones resultar inaccesibles. Este es un muro invisible que se ha levantado mucho tiempo entre lo social y los métodos cuantitativos. En estas notas vamos a retirarlo y generar un lenguaje común. Claro que habrá fórmulas y argumentos técnicos, pero no son el centro de la discusión. 
+
+
+El componente tecnológico se resuelve con herramientas de inteligencia artificial. Desde la concepción del libro y su escritura, como los cálculos requeridos en los ejercicios son resueltos con modelos de lenguaje y arquitecturas de este estilo. La programación en R y en python no ha sido el camino favorito de los científicos sociales. El uso de otro tipo de software, tampoco se facilita, sobre todo si es privativo y require licencias. El uso de modelos de inteligenci artificial solo requiere la comprensión de los textos de instrucciones. Esto constituye una ventaja importante en el momento de la implementaciń. 
+
+
+Estas directrices generales reconfiguran el diseño del texto. Por una parte, concediéndole un caracter menos matemático y por otra dándole un orden diferente. Ya que estamos concentrados en la comprensińo de la teoría estadística. 
+
+
+La nueva estructura nos lleva de primera mano por el problema central de la estadística, que es la inferencia. El estudio de los pormenores epistemológicos y metodológicos de la inferencia estadística le da un sentido completo al cálculo de cantidades. 
+
+
+

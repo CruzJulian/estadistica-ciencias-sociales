@@ -1,0 +1,232 @@
+---
+title: "Inferencia univariada"
+lang: "es-co"
+---
+
+## Intervalos de confianza
+
+
+### Intervalo de confianza para la media
+
+
+Como se mencionó anteriormente, es posible encontrar intervalos de confianza para la mayoría de los parámetros. Para la media poblacional se genera un intervalo de confianza analítico. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Supongamos que un investigador quiere estimar la media de la altura de los estudiantes de una universidad. Toma una muestra aleatoria de 30 estudiantes y calcula que la media muestral es de 1.70 metros con una desviación estándar de 0.10 metros. Dado que el tamaño de la muestra es pequeño, se utiliza la distribución t de Student. Se quiere un nivel de confianza del 95%.
+
+:::
+
+
+Para calcular un intervalo de confianza para la media de una población, se puede utilizar la distribución t de Student o la distribución normal, dependiendo del tamaño de la muestra y de si se conoce la varianza poblacional. 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$IC = \bar{x} \pm t_{\alpha/2} \left(\frac{s}{\sqrt{n}}\right)$$
+
+:::
+
+
+Donde $t_{\alpha/2}$ es el valor crítico de t correspondiente al nivel de confianza del 95% y 29 grados de libertad (n-1), (s) es la desviación estándar muestral y (n) es el tamaño de la muestra. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Siguiendo nuestro ejemplo, supongamos que $t_{0.025} \approx 2.045$ para este caso: $IC = 1.70 \pm 2.045 \left(\frac{0.10}{\sqrt{30}}\right) \approx 1.70 \pm 0.374$,  El intervalo de confianza sería aproximadamente (1.63, 1.77). Esto significa que el investigador puede estar 95% seguro de que la media de altura de todos los estudiantes está entre 1.63 y 1.77 metros.
+
+:::
+
+
+sacar el intervalo de confianza para la media con la IA
+
+
+Para evaluar la **diferencia de medias** entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el método de bootstrapping. 
+
+
+Supongamos que queremos comparar las alturas promedio de hombres y mujeres en una población. Recogemos datos de 50 hombres y 50 mujeres y encontramos que la media de los hombres es 1.80 metros y la media de las mujeres es 1.65 metros. La diferencia de medias es 0.15 metros. Aplicando el bootstrapping, podemos crear múltiples muestras de nuestras muestras originales para estimar la distribución de la diferencia de medias y, así, construir un intervalo de confianza. 
+
+
+sacar el intervalo de confianza bootstrapping para la media con la IA 
+
+
+
+### Intervalo de confianza para una proporción
+
+
+para una proporción también es posible encontrar intervalos de confianza. Se genera un intervalo de confianza analítico 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Imaginemos que en una encuesta a 500 personas, 320 afirman que prefieren consumir licor a otras drogas. La proporción muestral es: $\hat{p} = \frac{320}{500} = 0.64$
+
+:::
+
+
+El **intervalo de confianza para una proporción** se calcula utilizando la proporción muestral $\hat{p}$ y el error estándar de la proporción. Se utiliza la distribución normal, ya que se asume que la proporción muestral sigue una distribución normal cuando el tamaño de muestra es suficientemente grande. El intervalo de confianza se puede calcular de la siguiente manera: 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$IC = \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}$$
+
+:::
+
+
+siendo $z_{\alpha/2}$ el cuantil $\alpha/2$ de la distribución normal. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Si elegimos un nivel de confianza del 95%, $z_{0.025} \approx 1.96$ tenemos $IC = 0.64 \pm 1.96 \sqrt{\frac{0.64 \times (1 - 0.64)}{500}} \approx 0.64 \pm 0.045$. Esto resulta en un intervalo de confianza de (0.595, 0.685). Por lo tanto, el investigador puede estar 95% seguro de que la proporción real de personas que prefieren trabajar desde casa en la población general está entre el 59.5% y el 68.5%.
+
+:::
+
+
+sacar el intervalo de confianza para la proporción con la IA
+
+
+
+### Intervalo de confianza para la varianza
+
+
+la varianza también tiene su intervalo de confianza. Tengamos en cuenta que este intervalo siempre es positivo porque la varianza es positiva. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Supongamos que un investigador mide los tiempos de espera en una fila y obtiene una varianza muestral de (s\^2 = 16) minutos² con una muestra de 15 observaciones. Para calcular un intervalo de confianza del 95% para la varianza poblacional
+
+:::
+
+
+El **intervalo de confianza para la varianza** se calcula utilizando la distribución chi-cuadrado. La varianza muestral (s²) es el estimador puntual, y el intervalo se ajusta de acuerdo con la distribución de esta varianza bajo el supuesto de normalidad. 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$IC = \left(\frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}\right)$$
+
+:::
+
+
+Donde (n) es el tamaño de la muestra y (\chi\^2) son los cuantiles de la distribución chi-cuadrado. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Si (n=15) y con un nivel de confianza del 95%, se pueden encontrar el intervalo: $IC = \left(\frac{(15-1) \times 16}{\chi^2_{0.025, 14}}, \frac{(15-1) \times 16}{\chi^2_{0.975, 14}}\right)$ . Si $\chi^2_{0.025, 14} \approx 27.688$ y $\chi^2_{0.975, 14} \approx 5.629$: por lo tanto $IC \approx \left(\frac{14 \times 16}{27.688}, \frac{14 \times 16}{5.629}\right) \approx (8.520, 39.658)$ Esto significa que el investigador puede estar 95% seguro de que la varianza del tiempo de espera en la población está entre 8.520 y 39.658 minutos².
+
+:::
+
+
+sacar el intervalo de confianza para la varianza con la IA
+
+
+
+
+## Pruebas de hipótesis
+
+
+### Test t de Student para una muestra
+
+
+NA
+
+
+
+### Test de signos para una muestra
+
+
+NA
+
+
+
+### Test t de Student para dos muestras independientes
+
+
+NA
+
+
+NA
+
+
+
+### Test Wilcoxon - Mann - Whitney
+
+
+NA
+
+
+
+### Test t de Student para dos muestras pareadas
+
+
+NA
+
+
+
+### Prueba de una sola proporción
+
+
+NA
+
+
+
+### Prueba de dos proporciones
+
+
+NA
+
+
+
+### Pruebas de permutaciones para la media
+
+
+NA
+
+
+
+### Pruebas de permutaciones para la proporción
+
+
+NA
+
+
+
+### Pruebas de permutaciones otra
+
+
+NA
+
+
+
+
+## Ejercicios y actividades
+
+
+### Hablemos bien
+
+
+NA
+
+
+
+### Actividad
+
+
+NA
+
+
+

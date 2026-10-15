@@ -1,0 +1,124 @@
+---
+title: "Uso de inteligencia artificial"
+lang: "es-co"
+---
+
+## Consideraciones
+
+
+### el proceso creativo en investigacion
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+### problemas éticos
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+### consentimientos informados, protocolos
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+### trazabilidad y reproducibilidad
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+
+## Uso y apropiación
+
+
+### prompt engineering
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+### procesos de datos con inteligencia artificial (código python)
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+
+### subir datos, qué datos subir
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+NA
+
+
+

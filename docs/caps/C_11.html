@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Inferencia univariada – Estadística para Ciencias Sociales</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../caps/C_12.html" rel="next">
+<link href="../caps/C_10.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-951e7035b01ac1c0f62f691d0de8087f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_11.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Estadistica para Ciencias sociales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">preliminares</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intención y propósito</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Los datos y su preparación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uso de inteligencia artificial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un breve ensayo sobre distribuciones</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Epistemología de la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptivos univariados</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_11.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#intervalos-de-confianza" id="toc-intervalos-de-confianza" class="nav-link active" data-scroll-target="#intervalos-de-confianza"><span class="header-section-number">12.1</span> Intervalos de confianza</a>
+  <ul class="collapse">
+  <li><a href="#intervalo-de-confianza-para-la-media" id="toc-intervalo-de-confianza-para-la-media" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-la-media"><span class="header-section-number">12.1.1</span> Intervalo de confianza para la media</a></li>
+  <li><a href="#intervalo-de-confianza-para-una-proporción" id="toc-intervalo-de-confianza-para-una-proporción" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-una-proporción"><span class="header-section-number">12.1.2</span> Intervalo de confianza para una proporción</a></li>
+  <li><a href="#intervalo-de-confianza-para-la-varianza" id="toc-intervalo-de-confianza-para-la-varianza" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-la-varianza"><span class="header-section-number">12.1.3</span> Intervalo de confianza para la varianza</a></li>
+  </ul></li>
+  <li><a href="#pruebas-de-hipótesis" id="toc-pruebas-de-hipótesis" class="nav-link" data-scroll-target="#pruebas-de-hipótesis"><span class="header-section-number">12.2</span> Pruebas de hipótesis</a>
+  <ul class="collapse">
+  <li><a href="#test-t-de-student-para-una-muestra" id="toc-test-t-de-student-para-una-muestra" class="nav-link" data-scroll-target="#test-t-de-student-para-una-muestra"><span class="header-section-number">12.2.1</span> Test t de Student para una muestra</a></li>
+  <li><a href="#test-de-signos-para-una-muestra" id="toc-test-de-signos-para-una-muestra" class="nav-link" data-scroll-target="#test-de-signos-para-una-muestra"><span class="header-section-number">12.2.2</span> Test de signos para una muestra</a></li>
+  <li><a href="#test-t-de-student-para-dos-muestras-independientes" id="toc-test-t-de-student-para-dos-muestras-independientes" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-independientes"><span class="header-section-number">12.2.3</span> Test t de Student para dos muestras independientes</a></li>
+  <li><a href="#test-wilcoxon---mann---whitney" id="toc-test-wilcoxon---mann---whitney" class="nav-link" data-scroll-target="#test-wilcoxon---mann---whitney"><span class="header-section-number">12.2.4</span> Test Wilcoxon - Mann - Whitney</a></li>
+  <li><a href="#test-t-de-student-para-dos-muestras-pareadas" id="toc-test-t-de-student-para-dos-muestras-pareadas" class="nav-link" data-scroll-target="#test-t-de-student-para-dos-muestras-pareadas"><span class="header-section-number">12.2.5</span> Test t de Student para dos muestras pareadas</a></li>
+  <li><a href="#prueba-de-una-sola-proporción" id="toc-prueba-de-una-sola-proporción" class="nav-link" data-scroll-target="#prueba-de-una-sola-proporción"><span class="header-section-number">12.2.6</span> Prueba de una sola proporción</a></li>
+  <li><a href="#prueba-de-dos-proporciones" id="toc-prueba-de-dos-proporciones" class="nav-link" data-scroll-target="#prueba-de-dos-proporciones"><span class="header-section-number">12.2.7</span> Prueba de dos proporciones</a></li>
+  <li><a href="#pruebas-de-permutaciones-para-la-media" id="toc-pruebas-de-permutaciones-para-la-media" class="nav-link" data-scroll-target="#pruebas-de-permutaciones-para-la-media"><span class="header-section-number">12.2.8</span> Pruebas de permutaciones para la media</a></li>
+  <li><a href="#pruebas-de-permutaciones-para-la-proporción" id="toc-pruebas-de-permutaciones-para-la-proporción" class="nav-link" data-scroll-target="#pruebas-de-permutaciones-para-la-proporción"><span class="header-section-number">12.2.9</span> Pruebas de permutaciones para la proporción</a></li>
+  <li><a href="#pruebas-de-permutaciones-otra" id="toc-pruebas-de-permutaciones-otra" class="nav-link" data-scroll-target="#pruebas-de-permutaciones-otra"><span class="header-section-number">12.2.10</span> Pruebas de permutaciones otra</a></li>
+  </ul></li>
+  <li><a href="#ejercicios-y-actividades" id="toc-ejercicios-y-actividades" class="nav-link" data-scroll-target="#ejercicios-y-actividades"><span class="header-section-number">12.3</span> Ejercicios y actividades</a>
+  <ul class="collapse">
+  <li><a href="#hablemos-bien" id="toc-hablemos-bien" class="nav-link" data-scroll-target="#hablemos-bien"><span class="header-section-number">12.3.1</span> Hablemos bien</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad"><span class="header-section-number">12.3.2</span> Actividad</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_11.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="intervalos-de-confianza" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="intervalos-de-confianza"><span class="header-section-number">12.1</span> Intervalos de confianza</h2>
+<section id="intervalo-de-confianza-para-la-media" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="intervalo-de-confianza-para-la-media"><span class="header-section-number">12.1.1</span> Intervalo de confianza para la media</h3>
+<p>Como se mencionó anteriormente, es posible encontrar intervalos de confianza para la mayoría de los parámetros. Para la media poblacional se genera un intervalo de confianza analítico.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Supongamos que un investigador quiere estimar la media de la altura de los estudiantes de una universidad. Toma una muestra aleatoria de 30 estudiantes y calcula que la media muestral es de 1.70 metros con una desviación estándar de 0.10 metros. Dado que el tamaño de la muestra es pequeño, se utiliza la distribución t de Student. Se quiere un nivel de confianza del 95%.</p>
+</div>
+</div>
+<p>Para calcular un intervalo de confianza para la media de una población, se puede utilizar la distribución t de Student o la distribución normal, dependiendo del tamaño de la muestra y de si se conoce la varianza poblacional.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Fórmula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[IC = \bar{x} \pm t_{\alpha/2} \left(\frac{s}{\sqrt{n}}\right)\]</span></p>
+</div>
+</div>
+<p>Donde <span class="math inline">\(t_{\alpha/2}\)</span> es el valor crítico de t correspondiente al nivel de confianza del 95% y 29 grados de libertad (n-1), (s) es la desviación estándar muestral y (n) es el tamaño de la muestra.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Siguiendo nuestro ejemplo, supongamos que <span class="math inline">\(t_{0.025} \approx 2.045\)</span> para este caso: <span class="math inline">\(IC = 1.70 \pm 2.045 \left(\frac{0.10}{\sqrt{30}}\right) \approx 1.70 \pm 0.374\)</span>, El intervalo de confianza sería aproximadamente (1.63, 1.77). Esto significa que el investigador puede estar 95% seguro de que la media de altura de todos los estudiantes está entre 1.63 y 1.77 metros.</p>
+</div>
+</div>
+<p>sacar el intervalo de confianza para la media con la IA</p>
+<p>Para evaluar la <strong>diferencia de medias</strong> entre dos poblaciones, se construye un intervalo de confianza alrededor de la diferencia de medias muestrales. Dependiendo de si se asumen varianzas iguales o diferentes, se pueden aplicar diferentes métodos, como el método de bootstrapping.</p>
+<p>Supongamos que queremos comparar las alturas promedio de hombres y mujeres en una población. Recogemos datos de 50 hombres y 50 mujeres y encontramos que la media de los hombres es 1.80 metros y la media de las mujeres es 1.65 metros. La diferencia de medias es 0.15 metros. Aplicando el bootstrapping, podemos crear múltiples muestras de nuestras muestras originales para estimar la distribución de la diferencia de medias y, así, construir un intervalo de confianza.</p>
+<p>sacar el intervalo de confianza bootstrapping para la media con la IA</p>
+</section>
+<section id="intervalo-de-confianza-para-una-proporción" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="intervalo-de-confianza-para-una-proporción"><span class="header-section-number">12.1.2</span> Intervalo de confianza para una proporción</h3>
+<p>para una proporción también es posible encontrar intervalos de confianza. Se genera un intervalo de confianza analítico</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imaginemos que en una encuesta a 500 personas, 320 afirman que prefieren consumir licor a otras drogas. La proporción muestral es: <span class="math inline">\(\hat{p} = \frac{320}{500} = 0.64\)</span></p>
+</div>
+</div>
+<p>El <strong>intervalo de confianza para una proporción</strong> se calcula utilizando la proporción muestral <span class="math inline">\(\hat{p}\)</span> y el error estándar de la proporción. Se utiliza la distribución normal, ya que se asume que la proporción muestral sigue una distribución normal cuando el tamaño de muestra es suficientemente grande. El intervalo de confianza se puede calcular de la siguiente manera:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Fórmula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[IC = \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}\]</span></p>
+</div>
+</div>
+<p>siendo <span class="math inline">\(z_{\alpha/2}\)</span> el cuantil <span class="math inline">\(\alpha/2\)</span> de la distribución normal.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si elegimos un nivel de confianza del 95%, <span class="math inline">\(z_{0.025} \approx 1.96\)</span> tenemos <span class="math inline">\(IC = 0.64 \pm 1.96 \sqrt{\frac{0.64 \times (1 - 0.64)}{500}} \approx 0.64 \pm 0.045\)</span>. Esto resulta en un intervalo de confianza de (0.595, 0.685). Por lo tanto, el investigador puede estar 95% seguro de que la proporción real de personas que prefieren trabajar desde casa en la población general está entre el 59.5% y el 68.5%.</p>
+</div>
+</div>
+<p>sacar el intervalo de confianza para la proporción con la IA</p>
+</section>
+<section id="intervalo-de-confianza-para-la-varianza" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="intervalo-de-confianza-para-la-varianza"><span class="header-section-number">12.1.3</span> Intervalo de confianza para la varianza</h3>
+<p>la varianza también tiene su intervalo de confianza. Tengamos en cuenta que este intervalo siempre es positivo porque la varianza es positiva.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Supongamos que un investigador mide los tiempos de espera en una fila y obtiene una varianza muestral de (s^2 = 16) minutos² con una muestra de 15 observaciones. Para calcular un intervalo de confianza del 95% para la varianza poblacional</p>
+</div>
+</div>
+<p>El <strong>intervalo de confianza para la varianza</strong> se calcula utilizando la distribución chi-cuadrado. La varianza muestral (s²) es el estimador puntual, y el intervalo se ajusta de acuerdo con la distribución de esta varianza bajo el supuesto de normalidad.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Fórmula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[IC = \left(\frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}\right)\]</span></p>
+</div>
+</div>
+<p>Donde (n) es el tamaño de la muestra y (^2) son los cuantiles de la distribución chi-cuadrado.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si (n=15) y con un nivel de confianza del 95%, se pueden encontrar el intervalo: <span class="math inline">\(IC = \left(\frac{(15-1) \times 16}{\chi^2_{0.025, 14}}, \frac{(15-1) \times 16}{\chi^2_{0.975, 14}}\right)\)</span> . Si <span class="math inline">\(\chi^2_{0.025, 14} \approx 27.688\)</span> y <span class="math inline">\(\chi^2_{0.975, 14} \approx 5.629\)</span>: por lo tanto <span class="math inline">\(IC \approx \left(\frac{14 \times 16}{27.688}, \frac{14 \times 16}{5.629}\right) \approx (8.520, 39.658)\)</span> Esto significa que el investigador puede estar 95% seguro de que la varianza del tiempo de espera en la población está entre 8.520 y 39.658 minutos².</p>
+</div>
+</div>
+<p>sacar el intervalo de confianza para la varianza con la IA</p>
+</section>
+</section>
+<section id="pruebas-de-hipótesis" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="pruebas-de-hipótesis"><span class="header-section-number">12.2</span> Pruebas de hipótesis</h2>
+<section id="test-t-de-student-para-una-muestra" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="test-t-de-student-para-una-muestra"><span class="header-section-number">12.2.1</span> Test t de Student para una muestra</h3>
+<p>NA</p>
+</section>
+<section id="test-de-signos-para-una-muestra" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="test-de-signos-para-una-muestra"><span class="header-section-number">12.2.2</span> Test de signos para una muestra</h3>
+<p>NA</p>
+</section>
+<section id="test-t-de-student-para-dos-muestras-independientes" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-independientes"><span class="header-section-number">12.2.3</span> Test t de Student para dos muestras independientes</h3>
+<p>NA</p>
+<p>NA</p>
+</section>
+<section id="test-wilcoxon---mann---whitney" class="level3" data-number="12.2.4">
+<h3 data-number="12.2.4" class="anchored" data-anchor-id="test-wilcoxon---mann---whitney"><span class="header-section-number">12.2.4</span> Test Wilcoxon - Mann - Whitney</h3>
+<p>NA</p>
+</section>
+<section id="test-t-de-student-para-dos-muestras-pareadas" class="level3" data-number="12.2.5">
+<h3 data-number="12.2.5" class="anchored" data-anchor-id="test-t-de-student-para-dos-muestras-pareadas"><span class="header-section-number">12.2.5</span> Test t de Student para dos muestras pareadas</h3>
+<p>NA</p>
+</section>
+<section id="prueba-de-una-sola-proporción" class="level3" data-number="12.2.6">
+<h3 data-number="12.2.6" class="anchored" data-anchor-id="prueba-de-una-sola-proporción"><span class="header-section-number">12.2.6</span> Prueba de una sola proporción</h3>
+<p>NA</p>
+</section>
+<section id="prueba-de-dos-proporciones" class="level3" data-number="12.2.7">
+<h3 data-number="12.2.7" class="anchored" data-anchor-id="prueba-de-dos-proporciones"><span class="header-section-number">12.2.7</span> Prueba de dos proporciones</h3>
+<p>NA</p>
+</section>
+<section id="pruebas-de-permutaciones-para-la-media" class="level3" data-number="12.2.8">
+<h3 data-number="12.2.8" class="anchored" data-anchor-id="pruebas-de-permutaciones-para-la-media"><span class="header-section-number">12.2.8</span> Pruebas de permutaciones para la media</h3>
+<p>NA</p>
+</section>
+<section id="pruebas-de-permutaciones-para-la-proporción" class="level3" data-number="12.2.9">
+<h3 data-number="12.2.9" class="anchored" data-anchor-id="pruebas-de-permutaciones-para-la-proporción"><span class="header-section-number">12.2.9</span> Pruebas de permutaciones para la proporción</h3>
+<p>NA</p>
+</section>
+<section id="pruebas-de-permutaciones-otra" class="level3" data-number="12.2.10">
+<h3 data-number="12.2.10" class="anchored" data-anchor-id="pruebas-de-permutaciones-otra"><span class="header-section-number">12.2.10</span> Pruebas de permutaciones otra</h3>
+<p>NA</p>
+</section>
+</section>
+<section id="ejercicios-y-actividades" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="ejercicios-y-actividades"><span class="header-section-number">12.3</span> Ejercicios y actividades</h2>
+<section id="hablemos-bien" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="hablemos-bien"><span class="header-section-number">12.3.1</span> Hablemos bien</h3>
+<p>NA</p>
+</section>
+<section id="actividad" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="actividad"><span class="header-section-number">12.3.2</span> Actividad</h3>
+<p>NA</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../caps/C_10.html" class="pagination-link" aria-label="Descriptivos univariados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptivos univariados</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../caps/C_12.html" class="pagination-link" aria-label="Análisis correlacional">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

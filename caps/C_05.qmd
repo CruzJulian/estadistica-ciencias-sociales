@@ -1,0 +1,197 @@
+---
+title: "Epistemología de la inferencia estadística"
+lang: "es-co"
+---
+
+
+
+
+
+El objetivo de la ciencia es el descubrimiento de verdades generales. Los hechos particulares, por supuesto, son fundamentales, pero una simple recopilación de hechos no constituye una ciencia. Al terminar esta sección, podremos reconocer que gran parte de la estadística está orientada a reconciliar dos mundos. Lo que se ve y lo que no se ve. Los casos individuales como parte de un sistema. Las apreciaciones basadas en evidencia que se reconocen como reglas del entonro. Es importante plantearlo así, porque este es el centro de la estadística. 
+
+
+Uno de los métodos de razonamiento empleados hoy en día en estadística y en las ciencias en general es la inferencia, y sus raíces se hallan profundamente en la filosofía clásica y en el desarrollo del método científico moderno. Por ello, para comprender cómo surgió la inferencia estadística y en qué se fundamenta, es necesario entender primero sus bases epistemológicas. 
+
+
+
+
+## Los antiguos griegos y la deducción
+
+
+### Sócrates y la mayeutica
+
+
+Sócrates fue de los primeros en cuenstionar los métodos implementados para la búsqueda de la verdad. El método mayéutico  consistía en formular preguntas para ayudar a su interlocutor a descubrir conocimientos por sí mismo, partiendo de sus propias creencias y explorando las inconsistencias en sus respuestas. 
+
+
+El ejercicio de definir  el tema, indagar al respecto, construir lo esencial y lo accidental, y llegar a la contradicción partiendo de la ignorancia, es un método preliminar al que hopy tenemios y sienta las bases para el trabajo posterior. 
+
+
+
+### Platón y la dialéctica
+
+
+Alumno de Sócrates, Platón crea el método dialéctico. 
+
+
+Con este método construye la república y muchos otros de los grandes tomos en los que se fundamenta la filosofía actual. 
+
+
+
+### Aristóteles y la lógica
+
+
+La sistematización del conocimiento en forma de premisas y conclusiones genera el método deductivo que Aristóteles deniminó Lógica. 
+
+
+Pasamos de indagar al rededor de un concepto a generar nuevo conocimiento sobre el mismo a partir de sus propiedades más básicas. Las reglas que permiten deducir las conclusiones a partir de las premisas esas reglas son la lógica. El objeto de estudio de la lógica es la validez del pensamiento, 
+
+
+
+### El silogismo
+
+
+Uno de los aportes más significativos de aristóteles es el silogismo. Se trata de una estructura de premisas que llevan a una conclusión. Esta estructura es el fundamento del pensamieno deductivo. 
+
+
+La deducción es, entonces, la generacioń de conclusiones a partir de premisas utilizando reglas lógicas. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+El ejemplo clásico, empleado por el mismo Aristóteles, está compuesto por las siguientes premisas: (a) Todos los hombres son mortales. (b) Sócrates es un hombre.  Y supone, como conclusión, que: (c) Sócrates es mortal.
+
+:::
+
+
+
+### Pensamiento deductivo
+
+
+De estas reglas generales del silogismo es posible extraer unas características propias de la deducción, a saber, que en este tipo de razonamiento la conclusión se deriva de las premisas y su conclusión no puede exceder la extensión o cantidad de ninguna de sus premisas. Este aspecto supone una enorme restricción en su uso dentro de la argumentación científica, a menos que se haga referencia a verdades formales, como en el caso de la matemática. 
+
+
+Un ejemplo del uso del método deductivo es el segundo libro más editado de la historia, *Los Elementos* de Euclides, que organiza el conocimiento geométrico mediante un sistema axiomático. En este texto, Euclides parte de unos pocos postulados y axiomas fundamentales, a partir de los cuales deduce rigurosamente una serie de teoremas y proposiciones. 
+
+
+Otros ejemplos son *Ética demostrada según el orden geométrico* de Spinoza y *Philosophiæ Naturalis Principia Mathematica* de Isaac Newton. En la *Ética*, Spinoza estructura su filosofía siguiendo el estilo geométrico de Euclides, utilizando definiciones, axiomas y proposiciones para desarrollar sus ideas sobre la naturaleza de Dios, la mente y la moralidad. Por su parte, en los *Principia Mathematica*, Newton aplica un razonamiento deductivo para establecer las leyes del movimiento y la gravitación universal, partiendo de principios fundamentales y llegando a conclusiones que explican fenómenos físicos observables. 
+
+
+
+
+## El Novum Organum de Bacon
+
+
+
+
+En el siglo XVII, Francis Bacon introdujo un enfoque revolucionario en su obra *Novum Organum*, defiende la inducción como el método verdadero frente a la deducción. Los científicos deben construir reglas generales a partir de casos observados. 
+
+
+
+### La deducción contra la inducción
+
+
+Bacon se aleja de Aristóteles y del pensamiento deductivo porque lo encuentra estéril. 
+
+
+La verdad está ligada a los sentidos y de allí se extraen los principios que dan paso a la construcción científica. De las caracterísiticas comunes de muchos casos se generan unos principios generales que construyen poco a poco el cuerpo de una disciplina científica. 
+
+
+En su momento este pensamiento es una innovación radical en las formas que occidente desarrollaba para conocer el mundo.  El contexo histórico nos muestra esto. 
+
+
+una revaloración del procedimiento inductivo y por un cuestionamiento radical del modelo deductivo propio del silogismo. No obstante, la observación de los casos particulares también debe ser depurada de los prejuicios que constantemente acechan al conocimiento y que Bacon describe minuciosamente en su doctrina de los ídolos. 
+
+
+
+### El cisne negro
+
+
+Los desarrollos de Bacon fueron integrados en un mundo que daba por cierto el conocimiento científico, de manera permanente e inamovible. La crítica al pensamiento inductivo era clara, es posible que las reglas concebidas a partir de casos sean falsas en el futuro si se descubren otros casos que no las sigan. 
+
+
+El descubrimiento de un cisne negro representa este riesgo. En el momento en que hay cisnes negros en australia, la afirmación todos los cisnes son blancos" pasa a ser falsa. ESto deja obsoletos los lobros de ciencia y genera discusión frente al método científico. 
+
+
+
+
+## Fisher, Neyman, Pearson
+
+
+
+
+El método inductivo genera riesgos que no son fáciles de contener. cConfomre pasa el tiempo, se hace más difícil abordar problemas que pueden tener variabilidad  en sus casos. 
+
+
+
+### Las reglas para hacer inducción
+
+
+La inferencia estadística nace de un conjunto de buenas prácticas orientadas a garantizar que el conocimiento de muchos casos se pudiera resumir en unas cuantas reglas. 
+
+
+En la estadística moderna, Ronald A. Fisher, Jerzy Neyman y Egon Pearson fueron fundamentales para estructurar las **reglas para hacer inducción**. Su trabajo permitió la formalización de métodos inferenciales que ayudan a generalizar conclusiones a partir de muestras. Estas reglas establecen la estructura de las pruebas de hipótesis y la generación de intervalos de confianza, permitiendo a los científicos tomar decisiones con base en evidencia empírica. 
+
+
+Fisher, Neyman y Pearson desarrollaron metodologías para derivar conocimiento a partir de datos de manera rigurosa, incorporando conceptos como la probabilidad y el error estadístico. A través de la estadística inferencial, lograron definir un proceso sistemático para probar hipótesis, medir la incertidumbre y proporcionar intervalos de confianza, contribuyendo significativamente a las ciencias experimentales y sociales. 
+
+
+
+### Inferencia estadística
+
+
+Fisher introdujo conceptos fundamentales como el "p-valor" y la prueba de hipótesis, mientras que Neyman y Pearson formalizaron la teoría de pruebas con su trabajo sobre errores tipo I y II y la formulación de intervalos de confianza. 
+
+
+La inferencia estadística se basa en la comparación de dos hipótesis. Las hipótesis pertenecen al mundo teórico, son los ladrillos que construyen los modelos científicos. Se comparan doos hipótesis una hipótesis nula, que es imposible de probar, versus una hipótesis alterna, cuya demostracion recae en la evidencia. En general la tarea se trata de decidir si se rechaza o no la hipótesis nula. 
+
+
+Error tipo I (\(\alpha\)): falso positivo. Rechazas la hipótesis nula cuando es verdadera. Concluyes que existe un efecto o una diferencia que realmente no existe. 
+
+
+Error tipo II (\(\beta\)): falso negativo. No rechazas la hipótesis nula cuando es falsa. No detectas un efecto o una diferencia que realmente existe. 
+
+
+La inferencia estadística se consolidó rápidamente en diversas áreas científicas, desde la biología y la medicina hasta las ciencias sociales y económicas, transformando la manera en que los investigadores validan teorías y estiman parámetros poblacionales. La inferencia estadística constituye la manera en la que hacemos inducción. Pasando de lo particular a lo general, o een otras palabras, de la muestra a la población. 
+
+
+
+
+## El concepto de medición
+
+
+### Medición
+
+
+En todo esto, la definición más difícil es la de medición. Medir constituye en esencia, relacionar lo teórico, los conceptos, las categorías, las características… con la realidad tangible, por medio de valores. Es necesario, para comprender esto, revisar las definiciones previas. 
+
+
+Norman R. Campbell, 1920 Campbell plantea una definición extraordinariamente temprana y fundamental: “Measurement is the process of assigning numbers to represent qualities.” [@Campbell], [@N.R.(1920).Physics:TheElements.CambridgeUniversityPress.]
+
+
+1938 Campbell “Measurement is the assignment of numerals to represent properties of material systems other than number, in virtue of the laws governing these properties.” [@Campbell], [@N.R.(1938).AnAccountofthePrinciplesofMeasurementandCalculation.Longmans], [@GreenandCo.]
+
+
+El cambio entre números y numerales es lo que le da sentido a una nueva forma de medir. Los números corresponden a variables numéricas, los numerales permiten incluir categorías y otras formas. Esto está más explícito en la definicio´n de stevens 
+
+
+S. S. Stevens, 1946 “Measurement, in the broadest sense, is defined as the assignment of numerals to objects or events according to rules.” [@Stevens], [@S.S.(1946).Onthetheoryofscalesofmeasurement.Science], [@103(2684)], [@677–680.https://doi.org/10.1126/science.103.2684.677]
+
+
+En el lenguaje actual, denominamos valores a lo que en estas definiciones denominan numerales. Una variable puede adquirir diferentes valores en diferentes individuos. De acuerdo a eso, los datos nos muestran los valores que toma una colección de variables en un grupo de individuos. 
+
+
+Entonces, para el presente manuscrito podemos tomar prestada la definición anterior y modificarla un poco, así: "Medir es asignar valores a carácter+isticas de sujetos, objetos o eventos en concordancia con un marco de referencia." 
+
+
+En otro lado tenemos el problema de observar. En general estas definiciones de medición se entienden como producto de la observación directa. Es decir, que los valores de las variables se observan directamente sobre los individuos. Sin embargo, las definiciones presentadas no presentan esta restricción, permitiendo definir medición directa e indirecta. 
+
+
+Medición direfta, entonces, es la que se produce por medio de la observación directa de las características en los individuos. 
+
+
+Medición indirecta, es aquella que se produce por medio de laconstrucción de instrumentos que componen distintas medicinoes directas para producir valores que reflejan una característica que difícilmente se puede medir de manera directa. 
+
+
+

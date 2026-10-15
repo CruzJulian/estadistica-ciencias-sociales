@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-co" xml:lang="es-co"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; Pruebas de hipótesis – Estadística para Ciencias Sociales</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../caps/C_10.html" rel="next">
+<link href="../caps/C_08.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-951e7035b01ac1c0f62f691d0de8087f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_09.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Estadística para Ciencias Sociales</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Estadistica para Ciencias sociales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">preliminares</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Intención y propósito</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Los datos y su preparación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uso de inteligencia artificial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Un breve ensayo sobre distribuciones</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estadística inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Epistemología de la inferencia estadística</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Muestreo</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estimación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_09.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptivos univariados</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inferencia univariada</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../caps/C_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Análisis correlacional</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#la-hipótesis-en-el-contexto-del-desarrollo-científico" id="toc-la-hipótesis-en-el-contexto-del-desarrollo-científico" class="nav-link active" data-scroll-target="#la-hipótesis-en-el-contexto-del-desarrollo-científico"><span class="header-section-number">10.1</span> La hipótesis en el contexto del desarrollo científico</a>
+  <ul class="collapse">
+  <li><a href="#reproducibilidad" id="toc-reproducibilidad" class="nav-link" data-scroll-target="#reproducibilidad"><span class="header-section-number">10.1.1</span> Reproducibilidad</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">10.1.2</span> Objetivo</a></li>
+  </ul></li>
+  <li><a href="#marco-conceptual" id="toc-marco-conceptual" class="nav-link" data-scroll-target="#marco-conceptual"><span class="header-section-number">10.2</span> Marco conceptual</a>
+  <ul class="collapse">
+  <li><a href="#el-sistema-de-hipótesis" id="toc-el-sistema-de-hipótesis" class="nav-link" data-scroll-target="#el-sistema-de-hipótesis"><span class="header-section-number">10.2.1</span> El sistema de hipótesis</a></li>
+  <li><a href="#tipos-de-error" id="toc-tipos-de-error" class="nav-link" data-scroll-target="#tipos-de-error"><span class="header-section-number">10.2.2</span> Tipos de error</a></li>
+  <li><a href="#nivel-de-significancia" id="toc-nivel-de-significancia" class="nav-link" data-scroll-target="#nivel-de-significancia"><span class="header-section-number">10.2.3</span> Nivel de significancia</a></li>
+  </ul></li>
+  <li><a href="#evaluación-de-la-evidencia" id="toc-evaluación-de-la-evidencia" class="nav-link" data-scroll-target="#evaluación-de-la-evidencia"><span class="header-section-number">10.3</span> Evaluación de la evidencia</a>
+  <ul class="collapse">
+  <li><a href="#estadístico-de-la-prueba" id="toc-estadístico-de-la-prueba" class="nav-link" data-scroll-target="#estadístico-de-la-prueba"><span class="header-section-number">10.3.1</span> Estadístico de la prueba</a></li>
+  <li><a href="#valor-p" id="toc-valor-p" class="nav-link" data-scroll-target="#valor-p"><span class="header-section-number">10.3.2</span> Valor p</a></li>
+  <li><a href="#rechazar-la-hipótesis-nula" id="toc-rechazar-la-hipótesis-nula" class="nav-link" data-scroll-target="#rechazar-la-hipótesis-nula"><span class="header-section-number">10.3.3</span> Rechazar la hipótesis nula</a></li>
+  <li><a href="#el-procedimiento-completo" id="toc-el-procedimiento-completo" class="nav-link" data-scroll-target="#el-procedimiento-completo"><span class="header-section-number">10.3.4</span> El procedimiento completo</a></li>
+  </ul></li>
+  <li><a href="#pruebas-y-tipos-de-pruebas" id="toc-pruebas-y-tipos-de-pruebas" class="nav-link" data-scroll-target="#pruebas-y-tipos-de-pruebas"><span class="header-section-number">10.4</span> Pruebas y tipos de pruebas</a>
+  <ul class="collapse">
+  <li><a href="#pruebas-paramétricas-y-no-paramétricas" id="toc-pruebas-paramétricas-y-no-paramétricas" class="nav-link" data-scroll-target="#pruebas-paramétricas-y-no-paramétricas"><span class="header-section-number">10.4.1</span> Pruebas paramétricas y no paramétricas</a></li>
+  <li><a href="#pruebas-analíticas-y-computacionales" id="toc-pruebas-analíticas-y-computacionales" class="nav-link" data-scroll-target="#pruebas-analíticas-y-computacionales"><span class="header-section-number">10.4.2</span> Pruebas analíticas y computacionales</a></li>
+  <li><a href="#cuando-usar-cada-tipo-de-prueba" id="toc-cuando-usar-cada-tipo-de-prueba" class="nav-link" data-scroll-target="#cuando-usar-cada-tipo-de-prueba"><span class="header-section-number">10.4.3</span> Cuando usar cada tipo de prueba</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../caps/C_05.html">Estadística inferencial</a></li><li class="breadcrumb-item"><a href="../caps/C_09.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pruebas de hipótesis</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>NA</p>
+<section id="la-hipótesis-en-el-contexto-del-desarrollo-científico" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="la-hipótesis-en-el-contexto-del-desarrollo-científico"><span class="header-section-number">10.1</span> La hipótesis en el contexto del desarrollo científico</h2>
+<p>Epistemológicamente, una <strong>hipótesis</strong> es una proposición que establece una propiedad verificable del proceso observado. La verificacio´n de la hipótesis es la actividad central en el desarrollo científico, ya que proporciona un puente entre la teoría y los datos. La capacidad de someter hipótesis a pruebas es lo que distingue el conocimiento científico de otras formas de conocimiento.</p>
+<p>Las pruebas de hipótesis son fundamentales en este proceso, ya que permiten evaluar la validez de las afirmaciones mediante un enfoque sistemático y basado en evidencias. La capacidad de una hipótesis para ser refutada o confirmada es lo que la hace esencial para el avance del conocimiento científico</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En este sentido, es posible ver los modelos científicos como conjuntos lógicos y coherentes de hipótesis. Por ejemplo, el modelo del universo de Ptolomeo, desarrollado en la antigüedad, proponía que los cuerpos celestes giraban en esferas perfectas alrededor de la Tierra. Este modelo contenía implícitamente numerosas hipótesis sobre el movimiento y la disposición de los astros que, con el tiempo, fueron refutadas por observaciones empíricas y reemplazadas por el modelo heliocéntrico de Copérnico.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Otros modelos más cercanos a las ciencias sociales incluyen el modelo histórico-materialista de Karl Marx, que se basa en la hipótesis de que los cambios sociales y económicos son impulsados por las contradicciones inherentes a los modos de producción.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>De manera similar, el modelo de Max Weber sobre la acción social postula que las acciones humanas están motivadas por un conjunto de significados subjetivos que pueden ser interpretados en función de diferentes tipos de racionalidad, como la racionalidad instrumental o valorativa.</p>
+</div>
+</div>
+<p>Cada uno de estos modelos tiene sus hipótesis, que han sido comprobadas mediante estudios con información empírica, recopilada a través de métodos cuantitativos, cualitativos o mixtos.</p>
+<p>. Ahora, la formulación de la hipótesis consiste en transformar la afirmación que se quiere examinar en un sistema estadístico. Se formula una hipótesis nula y una hipótesis alternativa, siendo cada una de ellas una proposición matemática comprobable.</p>
+<p>El puente entre la aseveración teórica y la proposicio´n matemática es lo que permite a las pruebas de hipótesis ser herramientas estandarizadas para el desarrollo cient´fico.</p>
+<section id="reproducibilidad" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="reproducibilidad"><span class="header-section-number">10.1.1</span> Reproducibilidad</h3>
+<p>La <strong>reproducibilidad</strong> es un principio fundamental en la ciencia, que implica que los resultados de un experimento deben poder ser replicados por otros investigadores utilizando los mismos métodos. Esto permite que las personas puedan hacer parte de la comunidad científica sin importar sus condiciones de base.</p>
+<p>La reproducibilidad es esencial para la credibilidad de la ciencia y se convierte en una medida del rigor y la fiabilidad de los estudios realizados. Sin reproducibilidad los hallaztos son anecdóticos.</p>
+<p>La <strong>crisis actual de la reproducibilidad</strong> en la ciencia se refiere a la creciente preocupación sobre la capacidad de replicar resultados científicos. Estudios han demostrado que un número significativo de resultados en diversas disciplinas no puede ser replicado, lo que plantea interrogantes sobre la validez de esos hallazgos.</p>
+<p>un artículo de la revista Nature encontro que tan solo para una treintena de 100 experimentos de psicología publicados en las mejores revistas científicas del campo se habían podido reproducir sus resultados. <span class="citation" data-cites="https://www.science.org/doi/10.1126/science.aac4716">[@https://www.science.org/doi/10.1126/science.aac4716]</span></p>
+<p>También es posible encontrar esta controversia en ciencias de la salud, económicas y otras disciplinas <span class="citation" data-cites="https://pmc.ncbi.nlm.nih.gov/articles/PMC1182327">[@https://pmc.ncbi.nlm.nih.gov/articles/PMC1182327/]</span>, <span class="citation" data-cites="https://www.aeaweb.org/articles?id">[@https://www.aeaweb.org/articles?id=10.1257/aer.p20171031]</span>, <span class="citation" data-cites="https://www.nature.com/articles/533452a">[@https://www.nature.com/articles/533452a]</span></p>
+</section>
+<section id="objetivo" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">10.1.2</span> Objetivo</h3>
+<p>La formulacio´n del sistema de hipótesis consiste en la generación de una hipótesis nula y una hipótesis alterna. Estas hipótesis son fórmulas matemáticas que pueden ser verdaderas o falsas y son contrarias entre sí. Al ser fórmulas matemáticas es posible obtener un veredicto evaluándolas con los datos de la muestra.</p>
+<p>Por consiguiente, el objetivo de una prueba de hipótesis es stablecer si existe <strong>suficiente evidencia</strong> en una muestra aleatoria para <strong>rechazar</strong> o <strong>no rechazar</strong> la <strong>hipótesis nula</strong> a nivel poblacional</p>
+</section>
+</section>
+<section id="marco-conceptual" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="marco-conceptual"><span class="header-section-number">10.2</span> Marco conceptual</h2>
+<p>En estadística, realizar una prueba de hipótesis significa realizar un procedimiento estandarizado del que se obtiene un resultado interpretable.</p>
+<section id="el-sistema-de-hipótesis" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="el-sistema-de-hipótesis"><span class="header-section-number">10.2.1</span> El sistema de hipótesis</h3>
+<p>Un buen punto de partida para ilustrar la lógica subyacente en las pruebas de hipótesis es la famosa analogía de la <em>tetera de Russell</em>, que es un ejemplo del razonamiento lógico subyacente a las pruebas de hipótesis.</p>
+<p>Bertrand Russell, filósofo y matemático británico, introdujo la analogía de una pequeña tetera de porcelana que orbita el Sol entre la Tierra y Marte, tan diminuta que ningún telescopio podría detectarla. ¿Cómo podríamos comprobar que esto es cierto? Para demostrar que es cierto basta con encontrar la tetera usando un telescopio y mostrársela a todos. Pero si quisiéramos demostrar que no es cierto, deberíamos buscar en nuestra nave espacial por todo el universo y establecer que no hay una tetera. Es decir, en un caso la demostración se logra con evidencia, en el otro caso, con un examen exhaustivo del universo.</p>
+<p>Este ejemplo se introdujo originalmente para hablar de la existenci de dios. Pero nos viene muy bien para hablar del desarrollo científico actual, basado en pruebas de hipótesis. La idea subyacente es que cada conjetura que queremos demostrar tiene dos caras. Una demostracio´n por evidencia y la contraria mediante un examen exhaustivo del universo.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imaginemos que acusamos a un estudiante de hacer trampa en un examen. Para demostrar que el estudiante hizo trampa, basta con tener evidencia suficiente. Pero si pidiéramos al estudiante que de muestre que no hizo trampa, para él sería imposible. ¿Cómo podría? ¿Un registro de todas sus acciones sería suficiente?</p>
+</div>
+</div>
+<p>Como vemos, una afirmacio´n genera dos casos, uno que se puede demostrar con evidencia y otro que únicamente con el examen del universo. Esto nos permite plantear el procedimiento de pruebas de hipótesis de manera formal.</p>
+<p>En estadística, un sistema de hipótesis propone la conformación en cada caso de dos hipótesis principales: la <strong>hipótesis nula (H₀)</strong> y la <strong>hipótesis alterna (H₁)</strong>.</p>
+<ul>
+<li><p><strong>Hipótesis nula (H₀):</strong> Es la suposición inicial que niega la existencia de un efecto, relación, asociación, etc, en la población de estudio. La hipótesis nula se formula de manera que, para rechazarla, se debe contar con evidencia suficiente que contradiga su planteamiento. No obstante, debido a su enunciado, su verificación requiere un esfuerzo muy alto.</p></li>
+<li><p><strong>Hipótesis alternativa (H₁):</strong> Esta hipótesis propone la existencia de un efecto o relación y es la contraparte de la hipótesis nula. Si los datos recolectados ofrecen pruebas suficientes, se puede rechazar la hipótesis nula en favor de la hipótesis alternativa.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un ejemplo de esto es la fidelidad. Imagina que hay una pareja discutiendo y hay una acusación de infidelidad. Esta acusación puede ser cierta o falsa, pero tiene dos caminos. Si intentamos probar que una persona es infiel es suficiente encontrar la evidencia suficiente, que puede estar representada en distintos elementos. Pero si intentamos probar que la persona es fiel, qué podemos hacer? Deberíamos tener una vigilancia integral de sus acciones. En este caso la hipótesis nula es la fidelidad, es aquello que no podemos demostrar, y la hipótesis alterna es la infidelidad, es aquello que se puede conprobar mediante eviencia.</p>
+</div>
+</div>
+<p>Este enfoque dual asegura que los investigadores se acerquen al análisis de manera objetiva, comenzando con la suposición de que no hay un efecto, una relación y buscando evidencia que justifique el rechazo de esta suposición. Determinar la cantidad cuándo la evidencia es suficiente es una tarea que requier unos pasos específicos, que se muestran en este capítulo.</p>
+<p>El propósito de un sistema de hipótesis es analizar los datos recolectados en estudios experimentales u observacionales para determinar si hay suficiente evidencia empírica para rechazar la hipótesis nula y aceptar la hipótesis alternativa. Aquí, la prueba recae en la demostración de H₁: si hay suficiente evidencia de la hipótesis alterna se rechaza la hipótesis nula.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una discusión frecuente es que los videojuevos violentos causan violencia. Para materializarlo examinamos las familias y tenemos la afirmación “los casos de violencia en las familias que tienen videojuegos son la misma cantidad que los casos de violencia de las familias que no tienen videojuegos” Esta afirmación genera dos casos. Consultamos los hogares, con videojuegos y sin videojuegos. Si conseguimos evidencia de que los casos de violencia son mucho mayores en alguno de los dos grupos la afirmación sea falsa. Pero para demostrar que es cierta, que la cantidad de casos es exactamente la misma, deberíamos tener la la cunenta de todos los casos de todos los hogares.</p>
+</div>
+</div>
+<p>La analogía de la tetera de Russell es particularmente relevante al considerar la <strong>evidencia necesaria para sostener o rechazar una hipótesis</strong>. Así como Russell enfatizaba que es quien afirma la existencia de la tetera quien debe probar su existencia, en las pruebas de hipótesis, los investigadores deben demostrar que los datos apoyan la hipótesis alternativa y no asumir la verdad de H₁ sin evidencia adecuada.</p>
+<p>Este enfoque protege a la ciencias sociales de afirmaciones infundadas y promueve una práctica investigativa basada en pruebas y datos sólidos. Al entender la arquitectura de las pruebas de hipótesis, los investigadores pueden abordar preguntas complejas con un marco metodológico que garantiza que sus conclusiones estén respaldadas por evidencia empírica y análisis crítico.</p>
+</section>
+<section id="tipos-de-error" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="tipos-de-error"><span class="header-section-number">10.2.2</span> Tipos de error</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Entonces tenemos nuestro estudiante acusado de hacer trampa en el examen. Viene la pregunta filosófica: entre pasar un estudiante tramposo o castigar un estudiante aplicado ¿Qué es más grave? Pensemos qué es peor, un falso negativo versus un falso positivo.</p>
+</div>
+</div>
+<p>El tema de trabajar con muestras tiene un problema, es que de las diferentes muestras hay distntas cantidades de evidencia en contra de la hipótesis nula. Puede pasar que por casualidad una muestra tenga mucha evidencia en contra de una hipótesis nula cierta o que por casualidad una muestra tenga muy poca evidencia en contra de una hipótesis nula falsa. Por esa razón, en el proceso de tomar decisiones basadas en pruebas de hipótesis, es posible cometer errores. Estos errores se clasifican en dos tipos principales:</p>
+<p><strong>Error tipo I</strong>: Ocurre cuando se rechaza la hipótesis nula siendo esta verdadera. Es decir, se concluye incorrectamente que hay un efecto o diferencia cuando en realidad no lo hay. La probabilidad de cometer un error tipo I se denota por <span class="math inline">\(\alpha\)</span>, que también se conoce como el <strong>nivel de significancia</strong> de la prueba. Este es un parámetro que se establece de antemano y refleja el nivel de tolerancia al riesgo de rechazar una hipótesis verdadera.</p>
+<p><strong>Error tipo II</strong>: Se produce cuando no se rechaza la hipótesis nula cuando esta es falsa. En otras palabras, se falla en detectar un efecto o diferencia que realmente existe. La probabilidad de cometer un error tipo II se denota por <span class="math inline">\(\beta\)</span>. El complemento de <span class="math inline">\(\beta\)</span> se llama <strong>potencia de la prueba</strong> y representa la probabilidad de rechazar correctamente una hipótesis nula falsa.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En el caso de la infidelidad, error tipo I consiste en calificar de infiel a un fiel. El error tipo II es el contrario, calificar de fiel a un infiel.</p>
+</div>
+</div>
+</section>
+<section id="nivel-de-significancia" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="nivel-de-significancia"><span class="header-section-number">10.2.3</span> Nivel de significancia</h3>
+<p>El <strong>nivel de significancia</strong> (<span class="math inline">\(\alpha\)</span>) es un umbral predefinido que establece la probabilidad máxima aceptable de cometer un error tipo I. Comúnmente, los niveles de significancia utilizados son 0.05, 0.01, o 0.10. Este valor define el criterio para decidir si los resultados de una prueba son estadísticamente significativos.</p>
+<p>El hecho de que en el procedimiento de pruebas de hipótesis se controle el error tipo I, nos muestra el lado más conservador de las ciencias. Están minimizando la probabilidad de un falso positivo, es decir, prefieren perder un descubrimiento, por falta de evidencia, que admitir un descubrimiento falso cuando la evidencia existe.</p>
+<p>Si el valor p obtenido de la prueba es menor o igual a <span class="math inline">\(\alpha\)</span>, se rechaza la hipótesis nula en favor de la hipótesis alternativa, indicando que los resultados observados son lo suficientemente raros como para no atribuirse al azar.</p>
+<p>La elección del nivel de significancia depende del contexto y las consecuencias de cometer un error tipo I. En estudios donde el costo de un error tipo I es alto, se elige un <span class="math inline">\(\alpha\)</span> más bajo (e.g., 0.01). En otros casos, donde la tolerancia al riesgo es mayor, se podría optar por un <span class="math inline">\(\alpha\)</span> más alto (e.g., 0.10).</p>
+</section>
+</section>
+<section id="evaluación-de-la-evidencia" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="evaluación-de-la-evidencia"><span class="header-section-number">10.3</span> Evaluación de la evidencia</h2>
+<p>Luego de plantear el sistema de hipótesis, tener claro los tipos de error y el nivel de significancia, procedemos a revisar los datos para obtener la evidencia y establecer si es suficiente para descartar la hipótesis nula.</p>
+<section id="estadístico-de-la-prueba" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="estadístico-de-la-prueba"><span class="header-section-number">10.3.1</span> Estadístico de la prueba</h3>
+<p>Las pruebas de hipótesis evalúan diferentes propiedades de los datos, normalidad, correlación, diferencias entre dos poblaciones, etc. Y lo hacen con una “medida de la evidencia”, esta medida se llama el estadístico de la prueba. Este estadístico es único de cada prueba de hipótesis y establece qué tan lejos se encuentran los datos observados de la hipótesis nula.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nuestro estudiante sufriendo acusado de hacer trampa en el examen. Cuando indagamos qué evidencia hay, el profesor nos dice que lo vio susurrando cosas a una compañera en el examen. ¿Esta evidencia es suficiente? Y si no, ¿Cuál evidencia sería suficiente? Tenemos que crear un estándar que nos muestre los comportamientos que inequívocamente indican trampa. En otras palabras, tenemos que medir la evidencia. Podemos decir que hay comportamientos que no son normales, que son inusuales en un entorno sin trampa.</p>
+</div>
+</div>
+<p>Entonces, podemos establecer la probabilidad de qué tran extremo es el estadístico de la prueba, sea por medios analíticos o computacionales. Con esto podemos ver si está muy lejos de donde debería estar si la hipótesis nula fuera cierta. Es decir, si la hipótesis nula fuera cierta, la probabilidad de que encontremos tantísima evidencia en su contra es mínima.</p>
+</section>
+<section id="valor-p" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="valor-p"><span class="header-section-number">10.3.2</span> Valor p</h3>
+<p>El <strong>valor</strong> <span class="math inline">\(p\)</span> es la probabilidad de observar un estadístico de prueba tan extremo o más extremo que el observado, bajo la suposición de que la hipótesis nula es cierta y teniendo en cuenta la muestra que tenemos.</p>
+<p>El valor p depende de la muestra, significa que no es un valor fijo, es una variable aleatoria, pero no depende de cada individuo, sino de cuál es la muestra que se tomó. Muestras distintas producen valores p diferentes.</p>
+<p>El valor p se calcula a partir del estadístico de la prueba, usando las técnicas analíticas o computacionales que tenemos para este fin. Generalmente, la prueba de hipótesis se rechaza si el p-valor es menor que la significancia. Esto significa que existe la posibilidad de haber seleccionado una muestra tan extrema que por casualidad rechacemos una hipótesis nula cierta. Para tomar esta decisión se compara el valor <span class="math inline">\(p\)</span> con el nivel de significancia <span class="math inline">\(\alpha\)</span>.</p>
+<p><strong>Si</strong> <span class="math inline">\(p &lt; \alpha\)</span>, se <strong>rechaza</strong> <span class="math inline">\(H_0\)</span>. En cambio <strong>Si</strong> <span class="math inline">\(p \geq \alpha\)</span>, <strong>no se rechaza</strong> <span class="math inline">\(H_0\)</span>. Esta decisión refleja si la evidencia contra <span class="math inline">\(H_0\)</span> es lo suficientemente fuerte para considerarla improbable bajo su supuesta veracidad.</p>
+</section>
+<section id="rechazar-la-hipótesis-nula" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="rechazar-la-hipótesis-nula"><span class="header-section-number">10.3.3</span> Rechazar la hipótesis nula</h3>
+<p>Rechazar <span class="math inline">\(H_0\)</span> implica que se ha encontrado algo en la muestra tan improbable bajo la hipótesis nula, que lleva al investigador a favorecer la hipótesis alternativa <span class="math inline">\(H_1\)</span>. Sin embargo, siempre existe la posibilidad de cometer un error tipo I al optar por este camino.</p>
+<p>En estadística, se prefiere no rechazar <span class="math inline">\(H_0\)</span> erróneamente a rechazarla sin suficiente evidencia. Por esto, <span class="math inline">\(H_0\)</span> se mantiene a menos que haya <strong>evidencia contundente</strong> que obligue a revocarla.</p>
+<p>Sin embargo, como la hipótesis nula no se puede demostrar, nunca podemos decir que la aceptamos como verdadera. Esto significa que nuestra investigación tiene dos opciones, o se comprueba la hipótesis alterna, o el estudio tiene resultados de carácter indeterminado. Sobre esto hay una gran discusión, porque las revistas científicas siempre van a preferir la publicacion de estudios que tengan resultados definidos a resultados indefinidos. No obstante, cuando la muestra es probabilísitica, y es muy grande y no se encuentra la evidencia, es un argumento fuerte a favor de <span class="math inline">\(H_0\)</span>.</p>
+</section>
+<section id="el-procedimiento-completo" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="el-procedimiento-completo"><span class="header-section-number">10.3.4</span> El procedimiento completo</h3>
+<p>El proceso para realizar una prueba de hipótesis incluye los siguientes pasos:</p>
+<p><strong>Establecer las hipótesis</strong>: Definir <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_a\)</span> basándose en el problema de investigación.</p>
+<p><strong>Formular el sistema de hipótesis</strong> y seleccionar el nivel de significancia <span class="math inline">\(\alpha\)</span>.</p>
+<p><strong>Calcular el estadístico de la prueba y el valor</strong> <span class="math inline">\(p\)</span>: Utilizar los datos muestrales para calcular el estadístico de prueba y el correspondiente valor <span class="math inline">\(p\)</span>.</p>
+<p><strong>Tomar la decisión</strong>: Rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p &lt; \alpha\)</span> o no rechazar <span class="math inline">\(H_0\)</span> si <span class="math inline">\(p \geq \alpha\)</span>.</p>
+<p><strong>Interpretar los resultados</strong>: Explicar el resultado en el contexto del problema de investigación, indicando si hay evidencia suficiente para apoyar <span class="math inline">\(H_1\)</span>.</p>
+</section>
+</section>
+<section id="pruebas-y-tipos-de-pruebas" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="pruebas-y-tipos-de-pruebas"><span class="header-section-number">10.4</span> Pruebas y tipos de pruebas</h2>
+<p>Como se verá más adelante, existe una infinidad de pruebas de pruebas de hipótesis, pero es posible dividirlas en grandes grupos. Ya conociendo la estructura de las pruebas de hipótesis, podemos profundizar. Vamos a destinar unos renglones en dos temas: el cálculo del estadístico de la prueba, que es el que mide la cantidad de evidencia y el cálculo del p-valor, que nos muestra qué tan probable es obtener esta cantidad de evidencia o mayor según estos datos en el escenario en que <span class="math inline">\(H_0\)</span> es verdadera.</p>
+<section id="pruebas-paramétricas-y-no-paramétricas" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="pruebas-paramétricas-y-no-paramétricas"><span class="header-section-number">10.4.1</span> Pruebas paramétricas y no paramétricas</h3>
+<p>En el cálculo del estadístico de la prueba puede que se requiera la intervención de las propiedades distribucionales de los datos. Si las variables son normales o exponenciales, binomiales o Poisson, es algo que puede influir. Cuando esto sucede, se denominan pruebas de hipótesis paramétricas y solamente sirven para los casos en que se cumplen los supuestos distribucionales.</p>
+<p>En el caso contrario, cuando la prueba de hipótesis tiene supuestos más amplios, que sean continuas, discretas, simétricas, se denominan pruebas no paramétricas y es posible usarlas en unamayor cantidad de casos.</p>
+</section>
+<section id="pruebas-analíticas-y-computacionales" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="pruebas-analíticas-y-computacionales"><span class="header-section-number">10.4.2</span> Pruebas analíticas y computacionales</h3>
+<p>En el caso de las pruebas de hipótesis analíticas, el estadístico de la prueba tiene unas propiedades matemáticas conocidas. Las investigaciones han planteado con precisión cuál es su distribución y es posible conocer sus probabilidades.</p>
+<p>En el caso de las pruebas de hipótesis computacionales, la distribución del estadístico de la prueba no es relevante, se puede obtener mediante remuestreo, permutaciones y otros métodos computacionales.</p>
+</section>
+<section id="cuando-usar-cada-tipo-de-prueba" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="cuando-usar-cada-tipo-de-prueba"><span class="header-section-number">10.4.3</span> Cuando usar cada tipo de prueba</h3>
+<p>Las pruebas paramétricas requieren que se realice previamente la comprobación de los supuestos distribucionales. Si las variables cumplen los supuestos que la prueba exige, se puede proseguir con su cálculo. Por el contrario, si no se tiene el cumplimiento de los supuestos, o no se realiza la comprobación, es posible utilizar pruebas no paramétricas.</p>
+<p>Por otro lado, si la muestra es grande, es recomendable utilizar pruebas analíticas. Pero cuando es más pequeña, es posible hacer el ajuste por pruebas de hipótesis computacionales. El tamaño sugerido a partir del cual fincionan mejor las últimas, depende decad prueba.</p>
+<p>En general, cada problema en estadística posee su batería de pruebas de hipótesis, el estudio de estas pruebas es el primer paso para el dominio de la estadística. A continuación, nos adentraremos en los distintos problemas que nos ofrecen los datos, para poder entender mejor cada caso y cómo se usa.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../caps/C_08.html" class="pagination-link" aria-label="Tamaño muestral">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tamaño muestral</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../caps/C_10.html" class="pagination-link" aria-label="Descriptivos univariados">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptivos univariados</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

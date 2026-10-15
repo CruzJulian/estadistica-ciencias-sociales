@@ -1,0 +1,327 @@
+---
+title: "Estimación"
+lang: "es-co"
+---
+
+## Conceptos iniciales
+
+
+
+
+Iniciamos por los conceptos que son fundamentales para entender la estimación en inferencia estadística. Estos conceptos ayudan a diferenciar entre la población y la muestra, así como a identificar las características numéricas que se desea estimar. 
+
+
+
+### Población
+
+
+La **población** se refiere al conjunto completo de individuos, elementos o unidades que comparten una característica particular que se está estudiando. Es el conjunto completo sobre el que quermos conversar. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Por ejemplo, si estamos interesados en el ingreso anual de todos los empleados de una empresa, la población sería todos los empleados.
+
+:::
+
+
+En la inferencia estadística, es crucial definir claramente la población para poder aplicar métodos de muestreo adecuados y realizar estimaciones precisas. Delimitar la población es el primer paso que se realiza al diseñar un estudio. 
+
+
+Para definir claramente la población, muchas veces vamos a utilizar los criterios de inclusión. Se trata de una serie de condiciones que deben cumplir los individuos para pertenecer a la población. 
+
+
+También existen los criterios de eexclusión, son condiciones que identifican a los individuos que no deben pertenecer a la población. 
+
+
+Es importante tener en cuenta que los criterios de inclusioń y exclusión se aplican a la población, no a la muestra. 
+
+
+
+### Muestra
+
+
+Una **muestra** es un subconjunto de elementos extraídos de una población. La muestra se utiliza para realizar estimaciones sobre la población completa sin necesidad de medir a todos sus miembros 
+
+
+la calidad de la muestra son fundamentales para asegurar que las inferencias realizadas sean precisas y representativas. 
+
+
+como ya se vio  Una muestra puede ser aleatoria, estratificada o por conveniencia, dependiendo del método utilizado para su selección. El diseño muestral es la herramienta para garantizar una muestra representativa. 
+
+
+Y esto no aplica solamente para métodos cuantitativos. En general, la información recolectada será representativa solamente con un buen diseño muestral. Incluso en un estudio cualitativo. 
+
+
+
+### Parámetro
+
+
+Un **parámetro** es un valor numérico que describe una característica específica de una población completa.  Debe ser numérico, para que se pueda modelar mediante las herramientas matemáticas y debe corresponder a toda la población, sin excepción. El problema fundamental de la estadística es que no se conocen los parámetros. Dado que los parámetros se refieren a poblaciones enteras, son constantes, pero, en la práctica, generalmente son desconocidos. Por lo tanto, se necesita recurrir a métodos estadísticos para estimarlos a partir de muestras. 
+
+
+Ejemplos incluyen la media poblacional (μ), la varianza poblacional (σ²) o la proporción poblacional (P). Cuando entramos en el terreno bivariado tenemos que el parámetro es la covarianza y la correlación. O en caso de un modelo, los coeficientes del mismo y los pesos de dlas variables son parámetros. 
+
+
+Cuando las variables son categóricas admiten parámetros como proporcion y porcentaje, cuando son numéricas admiten como parámetros el total, el promedio, la varianza la desviación estándar. 
+
+
+Los proceoss estadísticos en general tienen como norte la estimación de unos parámetros. Sea a nivel univariado, bivariado o multivariado o de modelamiento, siempre estamos esperando estimar parámetros. 
+
+
+
+### Estimador
+
+
+Un **estimador** es una regla o fórmula utilizada para aproximar un parámetro poblacional a partir de los datos muestrales. 
+
+
+Un estimador es una variable aleatoria y, por lo tanto, puede variar de una muestra a otra. Los estimadores se utilizan para hacer inferencias sobre la población. Es decir, la generalización del valor del estimador desde la meustra hacia la población es la infereencia estadística. La pregunta es, qué tanto se diferencia el estimador del parámetro. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+ejemplos comunes incluyen la media muestral $\bar{x}$ y la proporción muestral $\hat{p}$.
+
+:::
+
+
+Entonces, en nuestra lógica de inferencia, podemos decir que el esstimador es lo que se ve, lo tangible, lo accesible y el parámetro, aunque sabemos que existe, no lo podemos ver ni calcular; a menos que tengamos acceso a toda la poblacioń. 
+
+
+La calidad de un estimador se evalúa en función de sus propiedades, como la consistencia y la unbiasedness (inexistencia de sesgo). 
+
+
+
+
+## Estimación puntual
+
+
+### Estimación puntual
+
+
+La **estimación puntual** se refiere al uso de un solo valor, calculado a partir de la muestra, para estimar un parámetro desconocido de la población. 
+
+
+Este enfoque proporciona una respuesta única a la pregunta de interés, pero no informa sobre la precisión de la estimación. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Por ejemplo, la media muestral $\bar{x}$ es una estimación puntual de la media poblacional (μ).
+
+:::
+
+
+El concepto de precisión hace referencia a qué tan diferentes pueden ser los valores del estimador cuando son obtenidos de diferentes muestras. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+*Media muestral:** Se toma una muestra de los ingresos anuales de 100 hogares de una comunidad. La media de estos ingresos en la muestra es de \$50,000. Este valor se utiliza como una **estimación puntual** de la media de los ingresos por hogar de toda la comunidad.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+**Proporción muestral:** En una encuesta realizada a 500 jóvenes de una universidad, 320 afirman que prefieren informarse a través de redes sociales. La proporción muestral es $\hat{p} = \frac{320}{500} = 0.64$, lo cual es una **estimación puntual** de la proporción real de personas que prefieren el trabajo remoto en la población de jóvenes de esta universidad.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+**Desviación estándar:** Una muestra de 50 estudiantes tiene una varianza de puntajes en un examen de 8 puntos. Este valor se utiliza como una **estimación puntual** de la varianza de los puntajes en la población completa de estudiantes.
+
+:::
+
+
+
+### Estimadores y parámetros
+
+
+Entonces, podemos observar la relación entre la población y la muestra. La población es el total del universo que queremos investigar, pero no podemos acceder a ella, mientras que la muestra son los datos que recoelectamos, que tenemos a nuestro cuidado. 
+
+
+Así mismo, el parámetro es una cantidad que nos da información sobre los fenómenos que estudiamos, pero no podemos calcularlo. Mientras que el estimador es una aproximación al parámetro. Esta aproximacion mejora según varias condiciones que veremos a continuación. 
+
+
+El estimador persigue al parámetro, esa es la metáfora que tenemos en nuestar mente. Siempre debemos observar si el estimador es suficienremente cercano al parámetro. 
+
+
+Como no conocemos el parámetro, nunca podemos saber si el estimador es igual o diferente al parámetro, pero varias herramientas estadísticas nos ayudan a intuir la diferencia entre el parámetro y el estimador, aún sin conocer el primero. Esta diferencia entre el parámetro y el estimador la vamos a denominar error de estimación, y sobre este vamos a hablar más adelante, porque es uno de los temas más estudiadoes en la estadística. 
+
+
+Una forma de hacer inferencia es  generalizar los estimadores y decir que son cercanos a los parámetros. 
+
+
+
+### Ley de los grandes números
+
+
+La **Ley de los Grandes Números** es un principio fundamental en la teoría de la probabilidad que establece que, a medida que aumenta el tamaño de una muestra, la media muestral $\bar{x}$ se acercará a la media poblacional (μ) de la población de la que se extrajo la muestra. 
+
+
+Esta ley se basa en la idea de que las fluctuaciones aleatorias tienden un equilibrio, dejando al descubierto las tendencias a medida que los tamaños poblacionales aumentan, lo que resulta en una estimación más precisa del parámetro poblacional. 
+
+
+**Ley débil de los grandes números**: Establece que, para cualquier valor ε positivo, la probabilidad de que la media muestral se desvíe de la media poblacional en más de ε tiende a cero a medida que el tamaño de la muestra (n) aumenta. Es decir, la media muestral se convierte en un estimador consistente de la media poblacional. 
+
+
+**Ley fuerte de los grandes números**: Afirmación más fuerte que la versión débil, establece que la media muestral converge casi seguramente a la media poblacional a medida que n tiende al infinito. Esto significa que, con una probabilidad de 1, la media muestral se aproximará a la media poblacional a medida que se tomen más y más muestras. 
+
+
+Salvo detalles muy técnicos, en ambos casos la conclusión es la misma. El estimador de la media persigue a su parámetro. Esto, de manera intuitiva, nos permite ver el trabajo de los matemáticos y los estadísticos: establecer cuáles son las condiciones para que un estimador persiga a su parámetro. También preguntarnos. Será que hay estimadores o parámetros que están desacoplados? 
+
+
+La Ley de los Grandes Números es fundamental en estadística y asegura que los resultados obtenidos de las muestras se volverán más representativos de la población a medida que se aumente el tamaño de la muestra, lo que permite realizar inferencias más confiables sobre la población completa. 
+
+
+
+### Consistencia
+
+
+Que la media muestral converge a la media poblacional está garantizado por la ley de los grandes números en sus versiones débil y fuerte. Pero qué pasa con otros estimadores? Sí tienen las mismas propiedades? 
+
+
+Resulta que no todos, pero sí algunos. Se llaman consistentes. Un **estimador puntual** es **consistente** si, a medida que el tamaño de la muestra aumenta, la estimación se aproxima cada vez más al verdadero parámetro poblacional. Es decir, hay una clase especial de estimadores que sí persiguen a los parámetros. Esto los estadísticos lo han estudiado por años y representa una de las dificultades más fuertes al momento de crear nuevos modelos y algoritmos. 
+
+
+Todos los estimadores presentados en este libro son consistentes, entonces no vamos a tener problemas de consistencia. Vamos a poder trabajar tranquilos sobre nuestras conclusiones, ya que los estimadores presentados han sido estudiados por estadísticos y matemáticos. 
+
+
+Esta propiedad es crucial porque asegura que con muestras más grandes, nuestras estimaciones se vuelven más precisas y confiables, reduciendo la variabilidad y el error de estimación. 
+
+
+
+
+## Estimación por intervalo
+
+
+### Precisión y exactitud
+
+
+En todo este viaje, hemos visto como una de las tareass mas importantes de la estadística es modelar lo que no observamos a partir de lo que observamos. 
+
+
+Dentro de esto, tenemos que pensar en el problema del muestreo. 
+
+
+Como vimos antes, el problema del muestreo es que al trabajar muestras distintas de la misma población, probablemente se obtengan resultados distintos. El estudio de este fenómeno nos va a llevar a dos conceptos adicionales, que nos ayudan a entender la inferencia. 
+
+
+La precisión, se pregunta por la diferencia que hay entre las muestras posibles. Si yo tomo miles de muestras de mi población, qué tan diferentes son los estadísticos que puedo obtener de ellas. Esta diferencia se puede medir. 
+
+
+La exactitud, por otro lado, hace referencia a que, entre todas las muesras que yo tomo, los resultados sí sean parecidos al parámetro, o sea al resultado de la poblacioń. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Los dos conceptos suelen sucitar confusión entre los estudiantes. Pero muchas veces s epueden resolver fácil con un ejemplo. Una vez me encontré a Shakira en un avión, y le pedí una selfie. Ella, cansada de que le pidan estas cosas, me puso una condición; que tenía que adivinar la edad de su perro, si la edad que yo decía no correspondía con la realidad, no habría foto ni nada. Yo le dije que estaba bien, pero que en vez de darle un número le daba un rango. Ella no se opuso, acto seguido le dije que su perro tenía entre 0 y 25 años. Una señora que era testigo de la conversación, irrumpió, diciendo que yo era un tramposo. Pero le dije que ella pidió exactitud, no precisión. Al final me desperté, todo fue un suelño.
+
+:::
+
+
+La **precisión** se refiere a la consistencia y reproducibilidad de las mediciones. Una medición es precisa si el rsultado con distintas muestras son cercanas entre sí, independientemente de si son correctas o no. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Los diseñadores de máquinas dan las medidas en milímetros. Esto da una mayor precisión a los componentes. Los errores, cuando los hay son de milímetros. Si los componentes tuvieran las medidas en centímetros, habría menos precisión.
+
+:::
+
+
+La **exactitud**, por otro lado, se refiere a cuán cerca está una medición del valor verdadero o del objetivo. Una medición es exacta si se aproxima al valor real. Lo que se evalúa es si está diciendo la verdad o no. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Los abogados necesitan establecer los hechos verídicos en sus procesos. Incluso si no se tienen detalles, los hechos relatados deben ser verificables.
+
+:::
+
+
+La precisión y exactitud son cruciales en la estadística y en el diseño de investigaciones. Una alta precisión en los resultados es deseable, pero no es suficiente por sí sola. Si los datos son precisos pero no exactos, las conclusiones extraídas pueden ser engañosas y llevar a decisiones erróneas. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Imagina dos dos imágenes. En la primera imagen se muestra el dibujo de un niño sobre los animales de la granja. La segunda imagen se muestra una foto de unas plantas de la granja. Cada una de estas imágenes tiene un subtítulo que dice "Animales de la granja". Ahora dime, hay una imagen inexacta y otra imprecisa. Sabrías distingir cuál es cual?
+
+:::
+
+
+
+### Construccion de los intervalos de confianza
+
+
+los intervalos de confianza son una herramienta estadística diseñada para expresar la incertidumbre en torno a una estimación puntual. Un intervalo de confianza proporciona un rango de valores dentro del cual se espera que se encuentre el parámetro poblacional verdadero, 
+
+
+De esta manera, un intervalo de confianza tiene mayor o menor amplitud dependiendo de el error de estimacioń, que tiene que ver directamente con el tamaño muestral e indirectamente con el diseño muestral. Recordemos que estamos partiendo de diseños muestrales probabilísticos. 
+
+
+Los conceptos de precisión y exactitud están intrínsecamente relacionados con los intervalos de confianza, 
+
+
+Un intervalo de confianza nos trae un nuevo problema. A veces el investigador necesita que el intervalo de confianza no contenga valores específicos como el cero o el uno para demostrar su teoría. Es decir, que puede suceder que un intervalo de confianza desmonte una teoría. Esto va a quedar más explícito cuando veamos pruebas de hipótesis. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Imaginemos que estoy hablando de discrimionación en procesos penales, tengo un grupo discriminado A que generalmente le ponen más años por el mismo delito frente ao tro grupo no discriminado B. Y tengo la estadística de diferencia de los promedios, o sea, la resta, promedio de B menos promedio de A. Esta estadística la obtuve de una muestra probabilística. Entonces, para demostrar mi teoría de que hay discriminación penal, tengo que demostrar que el parámetro (no el estimador) es positivo. Es decier, que la diferencia de los promedios es positiva para la poblacióni. Si calculamos un intervalo de confianza y todo el intervalo es mayor a cero, teniendo en cuenta que el parámetro se encuentra en el intervalo, puedo pensar que mi teoría se sostiene. Pero si el intervalo contiene al cero, significa que el parámetro puede ser positivo o negativo o cero. Entonces mi estudio no puede concluir que haya discriminación penal en la población. Es no concluyente.
+
+:::
+
+
+Este razonamiento que nos permite enfrentar una hipótesis a un cálculo con los datos y establecer conexiones que me permiten demostrarlas es el principio actual del conocimiento científico. En ciencias de la salud, ciencias económicas, sociales, humanas, el razonamiento de conectar hipótesis con parámetros y estimadores es el estandar metodológico de investigacioń. 
+
+
+Pero hay malas noticias. El caracter matemático de los intervalos de confianza tiene un detalle que es neceario estudiar antes de continuar. Debido a sus características matemáticas, los parámetros no son fáciles de localizar. Pueden estar en cuanquier parte de la recra numérica, sí, literalmente en cualquier parte. Aunque no parezca, la probabilidad de que el parámetro se encuentre muy lejos del estimador puede ser muy baja, pero nunca es cero. esto significa que si yo quiero estar 100% seguro de que mi intervalo cubre mi estaimador, debo tener un intervalo gigante, que puede llegar a infinito. Esto no resulta útil. 
+
+
+Por esta razón, los intervalos de confianza no se calculan con una certeza del 100%. Las fórmulas matemáticas desarrolladas por los expertos y también las herramientas computacionales, han permitido construir intervalos de confianza que, con un un porcentaje de certeza menor al 100%, cubren el parámetro. Estos intervalos pueden tener 90%, 95% incluso 99% de confianza. El estándar en ciancias sociales es 95%. 
+
+
+Y entonces aquí ocurre algo que sucita controversia: existe la posibilidad de que yo piense que mi intervalo de confianza contiene el parámetro, pero en ralidad no lo hace. Esto sucede el 5% de las veces. Es decir, para un parámetro particular, si tomamos muchas muestras y de cada una de ellas generamos todos intervalos de confianza para este parámetro, el 5% de estos intervalos no contiene el parámetro. 
+
+
+Aquí estamos siendo muy claros en que el parámetro es fijo y los intervalos de confianza dependen de la meustra. Si realizamos muchas veces muchas muestras, podemos ver muchos intervalos de confianza para el mismo parámetro. 
+
+
+La construcción de intervalos de confianza puede realizarse de dos maneras. Construcción analítica y construcción computacional. La construcción analítica  Utiliza fórmulas y propiedades matemáticas para calcular los intervalos de confianza. Este método es eficiente cuando se cumplen las condiciones necesarias, como la normalidad de los datos. Utiliza técnicas de remuestreo, como el bootstrapping, para estimar la distribución del estimador y generar intervalos de confianza sin necesidad de asumir una distribución específica. En este caso, un computador puede generar muchas muestras a partir de un conjunto de datos y calcular muchas veces el mismo estimador. 
+
+
+La construcción analítica de los intervalos de confianza presenta pros y contras.   **Ventajas**:   Menor costo computacional, ya que implica cálculos directos a partir de los datos.   Resultados más rápidos si se cumplen los supuestos de normalidad. 
+
+
+Las Desventajas del uso de intervalos de confianza analiticos se encuentran, entre otras:   Dependencia de supuestos que pueden no cumplirse en datos reales.   Puede no ser adecuado para distribuciones no estándar o en situaciones de muestras pequeñas. 
+
+
+La construcción computacional de los intervalos de confianza presenta pros y contras  **Ventajas**:  Flexible, ya que no depende de supuestos sobre la distribución de los datos.   Adecuado para cualquier tipo de muestra y variabilidad en los datos. 
+
+
+La construcción computacional de los intervalos de confianza presenta   ***Desventajas**:  Puede ser intensivo en recursos computacionales, especialmente para grandes volúmenes de datos.  Mayor tiempo de procesamiento y necesidad de software especializado. 
+
+
+El **bootstrapping** es un método no paramétrico que se utiliza para estimar la distribución de un estimador y, por ende, sus intervalos de confianza. Este método genera múltiples muestras simuladas (con reemplazo) de la muestra original, permitiendo construir un intervalo de confianza sin depender de la distribución subyacente de los datos. 
+
+
+Un **intervalo de confianza** es considerado **consistente** si, al aumentar el tamaño de la muestra, la longitud del intervalo tiende a reducirse. Esto indica que la estimación se vuelve más precisa y refleja mejor el parámetro poblacional. En general, tanto los intervalos de confianza analíticos como los computacionales suelen ser consistentes. 
+
+
+

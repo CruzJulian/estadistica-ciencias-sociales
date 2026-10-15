@@ -1,0 +1,96 @@
+---
+title: "Tamaño muestral"
+lang: "es-co"
+---
+
+
+
+
+
+NA
+
+
+
+
+## Error muestral
+
+
+
+
+NA
+
+
+
+
+## Empate técnico
+
+
+
+
+NA
+
+
+
+
+## Tamaño del efecto
+
+
+
+
+NA
+
+
+
+
+## Tamaño de muestra
+
+
+### Tamaño de muestra óptimo
+
+
+NA
+
+
+
+
+## Formulas para estimación
+
+
+### Estimación de una proporción con tamaño poblacional conocido
+
+
+NA
+
+
+
+### Estimación de una proporción con tamaño poblacional desconocido
+
+
+NA
+
+
+
+### Estimación de una media con tamaño poblacional conocido
+
+
+NA
+
+
+
+### Estimación de una media con tamaño poblacional desconocido
+
+
+NA
+
+
+
+
+## Aplicación interactiva
+
+
+
+
+NA
+
+
+

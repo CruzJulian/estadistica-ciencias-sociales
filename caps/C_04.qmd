@@ -1,0 +1,84 @@
+---
+title: "Un breve ensayo sobre distribuciones"
+lang: "es-co"
+---
+
+## qUÉ SON
+
+
+
+
+NA
+
+
+
+
+## Distribuciones discretas
+
+
+
+
+NA
+
+
+
+
+## Distribuciones continuas SIMÉTRICAS
+
+
+
+
+NA
+
+
+
+
+## Distribuciones continuas ASIMÉTRICAS Y SESGADAS
+
+
+
+
+NA
+
+
+
+
+## supuestos distribucionales
+
+
+
+
+NA
+
+
+
+
+## estadística paramétrica
+
+
+
+
+NA
+
+
+
+
+## estadística no paramétrica
+
+
+
+
+NA
+
+
+
+
+## métodos computacionales
+
+
+
+
+NA
+
+
+

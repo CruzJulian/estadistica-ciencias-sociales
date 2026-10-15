@@ -1,21 +1,56 @@
 project:
-  type: website
+  type: book
   output-dir: docs
+  render:
+    - index.qmd
+    - intro.qmd
+    - caps/C_01.qmd
+    - caps/C_02.qmd
+    - caps/C_03.qmd
+    - caps/C_04.qmd
+    - caps/C_05.qmd
+    - caps/C_06.qmd
+    - caps/C_07.qmd
+    - caps/C_08.qmd
+    - caps/C_09.qmd
+    - caps/C_10.qmd
+    - caps/C_11.qmd
+    - caps/C_12.qmd
 
-website:
-  title: "Estadística"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Inicio
-      - href: intro.qmd
-        text: Introducción
-
+book:
+  title: "Estadística para Ciencias Sociales"
+  author: "Julián Cruz"
+  # cover-image: 05_img/cover.png
+  sidebar:
+    style: docked
+    background: light
+  chapters:
+    - index.qmd
+    # - C99_todo.qmd
+    - part: "preliminares"
+    # - part: C01_cover.qmd
+      chapters:
+        - caps/C_01.qmd
+        - caps/C_02.qmd
+        - caps/C_03.qmd
+        - caps/C_04.qmd
+    # - part: C02_cover.qmd
+    - part: "Estadística inferencial"
+      chapters:
+        - caps/C_05.qmd
+        - caps/C_06.qmd
+        - caps/C_07.qmd
+        - caps/C_08.qmd
+        - caps/C_09.qmd
+        - caps/C_10.qmd
+        - caps/C_11.qmd
+        - caps/C_12.qmd
 format:
   html:
-    theme: cosmo
+    theme: litera
     css: styles.css
-    toc: true
+  pdf: default
 
-
+# bibliography: biblio.bibtex
+# csl: apa.csl
 

@@ -1,0 +1,553 @@
+---
+title: "Los datos y su preparación"
+lang: "es-co"
+---
+
+
+
+
+
+La preparación de los datos es importante. Abrimos este ejemplar con unas consideración respecto a la prepareación de los datos. 
+
+
+
+
+## Definiciones
+
+
+### ¿Qué son los datos?
+
+
+En 1948 apareció la teoría de la información de Shanon. Cualquier tipo de mensaje, sin importar su formato se puede convertir en bits. Esto permite unificar la información y computarla. En el mismo disco duro conviven canciones, videos, fotos, textos y cifras. 
+
+
+La información que se encuentra con una estructura tabular o anidada estándar se denomina información estructurada. Se trata de tablas de datos, o estructuras anidadas como JSON. 
+
+
+Por el contrario la información no estructurada está constituida por videos, fotos, audios y textos que no presentan una estructura tabular o anidada. 
+
+
+En este sentido, cuando hablamos de datos, nos referimos a "Características o información, generalmente numérica, que se recopilan mediante la observación." [@OECD(2008)], [@OECDGlossaryofStatisticalTerms], [@OECDPublishing], [@Paris], [@https://doi.org/10.1787/9789264055087-en.]
+
+
+Es una definición amplia, que nos permite abordar la información estructurada y no estructurada. Esto se debe, en parte, a que es posible darle estructura a la información. Estos procedimientos corresponden a la ciencia de datos. Para el alcance de este manuscrito, vamos a tomar en consideración únicamente la información estructurada, dejando de lado los procesos mediante los cuales esta información adquirió su estructura. 
+
+
+Principios de la información estructurada. Atomicidad. Encontrabilidad y coherencia. 
+
+
+
+### ¿Qué son las variables?
+
+
+En ciencias sociales las variables pueden verse de distintas maneras. Pero siempre se tratan de características asociadas a comunidades o individuos. Estas características muchas veces tienen implicaciones políticas importantes. 
+
+
+En todos los discursos políticos actuales se mencionan variables que se relacionan unas con otras. Cuando un político dice "la riqueza viene de la inversión extranjera" o "solo la inclusión y la disminución de la desigualdad nos pueden llevar a una mayor competitividad" están hablando de variables. 
+
+
+Podría decisrse, de manera un poco intuitiva, que las variables constituyen la materialización de conceptos correspondientes al discurso. Sin embargo, para el quehacer estadístico, es necsario examinarlas con mayor profundidad. 
+
+
+Siguiendo con el tema, la información estructurada presenta un formato tabular o jerárquico. Cuando tenemos tablas, es posible identificar las variables (columnas) al interior de las tablas. Estas variables corresponden a aspectos que pueden variar entre individuos. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Sea una población de personas, una variable puede ser el nombre, que varía de persona a persona. Pero la variable "ser mortal" que se responde con Sí/No, no es una variable sino una constante.
+
+:::
+
+
+las variables adquieren distintos valores. Una variable que solamente recorre un mismo valor se denomina constante. Las constantes generalmente son de menor utilidad en el análisis de datos. 
+
+
+Las variables se clasifican de diversas maneras. La principal forma de clasificarlas es de acuerdo a los valores que la componen. 
+
+
+- VarIables categóricas
+
+
+- variables nominales
+
+
+- variables ordinales
+
+
+- variables numéricas
+
+
+- de intervalo
+
+
+- de razón
+
+
+otros tipos de variables también han sido estudiados. Como las variables circulares o cíclicas. Las variables temporales. Etc 
+
+
+Un tipo de variable muy utilizado en ciencias sociales son las escalas tipo likert. Se trata de variables categóricas ordinales, cuyos niveles permiten la adjudicación de valores numéricos a priori para su operación. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable categórica es el estado civil de una persona o el nivel educativo
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable nominal es el estado civil de una persona
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable categórica es el nivel educativo de una persona
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable numérica es la edad de una persona o su estatura o su índice de masa corporal
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable numérica de intervalo es el índice de masa corporal de una persona
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable numérica de razón es la edad de una persona o su estatura
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo de una variable en escala tipo likert es "me siento seguro en el transporte público, siempre/casi siempre/ casi nunca/nunca" que puede tener valores numéricos a priori del 1 al 4 para su operación.
+
+:::
+
+
+Es importante conocer los tipos de variable porque de ello se derivan los procedimientos estadísticos, de visualización y reporte que se generan. 
+
+
+Entre los métodos para variables categóricas podemos encontrar la recategorización, reagrupación y la conformación de variables binarias tipo dummie. Con esto se pueden aplicar distancias de jaccard y de manhattan, tablas de contingencia y análisis de correspondencias simple y múltiple. 
+
+
+Con variables tipo likert es posible construir escalas de medición para trazos latentes. Son importantes en validación de instrumentos y creación de índices unidimensionales y multidimensionales. 
+
+
+Las variables numéricas por otro lado, son los elementos de mayor estudio en la estadística, sus propiedades se pueden establecer en distintos estadísticos como el promedio, varianza, correlación y demás. Con ellas se calculan distintos modelos estadísticos explicativos y predictivos. 
+
+
+Las variables son un detalle importante de la información estructurada. Todos los modelos y proecedimientos en adelante se apoyan en las variables y en su tipología. Otro elemento esencial para el desarrollo estadístico son los individuos. 
+
+
+
+### ¿Qué son los individuos?
+
+
+Cuando investigamos un proceso social o humano, nos damos a la tarea de encontrar cuáles son los hechos y comportamientos que conforman este fenómeno. Sin embargo, esto no ocurre en el vacio sino al interior de una comunidad o de un entrono determinado. Para recolectar la información del proceso que estudiamos, debemos acercarnos a los individuos que conforman este entorno. 
+
+
+Entonces, los individuos son las unidades básicas de observación o análisis dentro de una población. Pueden ser personas, objetos, organismos, eventos o entidades, dependiendo del contexto del estudio. 
+
+
+La elección de los individuos y su caracterización es clave, ya que determina la validez y generalizabilidad de los resultados.  Este concepto está íntimamente ligado al diseño del muestreo que veremos más adelante. 
+
+
+en el análisis de una población no se estudian los individuos por separado y al máximo detalle, sino que se pretende identificar tendencias que representen comportamientos agregados que emergen de las características individuales de una población. A diferencia de una afirmación puntual o específica sobre un individuo, las tendencias buscan capturar patrones generalizables que describen cómo un grupo, en promedio, se comporta respecto a una variable o conjunto de variables. 
+
+
+En este sentido, las variables que antes explicamos, adquieren sus valores en los individuos. Es decir, cada variable con cada individuo genera un valor. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Si estamos analizando el rol de la mujer en la cultura por medio de sus apariciones en películas de super héroes, la población puede ser Películas de super heroes en cine holiwoodense entre los años 2000 y 2025. Los individuos en este caso son películas.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+si estamos analizando temas de migración en Medellín, es posible que nuestra población sea algo parecido a Personas mayores de edad residentes en Medellín llegados entre 2000 y 2025. Los individuos son personas, en este caso.
+
+:::
+
+
+Los individuos que se consultan durante la recolección de información se denominan la muestra. Esta muestra tiene unas propiedades matemáticas que analizaremos más adelante. La conformación correcta de una muestra requiere u diseño muestral, un tamaño muestra, en ocasiones un marco muestral y en este proceso se genera un error muestral. 
+
+
+
+
+## Limpieza
+
+
+
+
+Los datos presentan muchas veces problemas de calidad. El proceso de recolección puede generar errores que se reflejan en la información recolectada. 
+
+
+
+### Corrección de errores
+
+
+Los datos atípicos que son imposibles o indválidos deben ser corregidos en la base de datos. Generalmente, buscanos que las herramientas tecnológicas de recolección de datos tengan algo de validación para no tener que realizar estas correcciones. Revisemos los errores más frecuentes y cómo se solucionan. 
+
+
+En una ocasión, en un trabjo de grado, la encuesta tenía una batería de varios ítems en escala likert. Eran frases con las que una persona podía estar desde totalmente de acuerdo hst totalmente en desacuerdo. Esta escala tenía 5 niveles lo que en el momento de procesar los datos nos traía una escala de puntajes de 1 a 5. Pero en la prueba piloto nos percatmos de que las preguntas eran de informacioń sensible, esto generaba que las personas no quisieran estar muy de acuerdo ni muy en desacuerdo con los ítems y la mayoría respondía "ini de acuerdo ni en desacuerdo". Esto nos llevó a replantear la escal likert en solo cuatro opciones, que no hubiera una opción intermedia. Pero eso significaba que los datos recolectados en la prueba piloto se perderían. 
+
+
+Toda esa historia es para ilustrar algunas ocasiones en las que hay datos que no se ajustan a la naturaleza de la variable. En nuestro ejemplo, la nueva variable likert de 4 valores no admitía el valor central indiferente. Cuando esto sucede, lo que hacemos es borrar estos valores que no hacen sentido con la naturalesza de las variables y luego los imputamos con alguna técnica de imputación. Cuando tenemos edades imposibles, ingresos negativos o cualquier variable mal diligenciada, podemos suprimir ese valor para que sea imputado en el paso de imputación. En nuestr ejemplo, nosotros borramos la categoría intermedia, dejando nuestros datos del piloto con 4 categorías, y luego, todos esos datos los imputamos. Y quedó bien. 
+
+
+En un estudio que estábamos con personas de varios países simultáneamente, en el momento de preguntar la ciudad, no podíamos poner la lista de todas las ciudades posibles de los 4 países que participaban. cada país tiene más de mil lugares donde pueden vivir las personas. Entonces lo dejamos como una pregunta abierta que se respondía con un texto corto. El resultado, una base de datos con muy buena informacioń, pero con una columna de ciudad que tenía varias versiones de cada ciudad, Santiago, Santiago de Chile, Bogotá, Bogotá D.C., bta, Ciudad de México, DF, etcétera. Una cantidad de formas distintas para decir lo mismo. 
+
+
+Para solucionar esto debemos seguir los siguiente pasos. 1. Generar un diccionario. en una nueva hoj de mi archivo excel puedo tomar los valores únicos de la variable en cuestión, en nuestro caso, ciudad.
+
+
+Arreglar datos es complicado, porque muchas veces vienen con errores. Otra tarea abrumadora para los investigadores es codificar o decodificar bases de datos. 
+
+
+
+### Codificación y decodificación
+
+
+Qué hacer cuando el sexo es 1 - hombre y 2- mujer, o el nivel educativo es 1 -primaria incompleta, 2 - primaria completa... como en spss, Muchas veces las bases de datos tienen este tipo de codificación que fue estándar en un momento del mundo, para ahorrar espacio en el disco. Pero el almacenamiento se ha abaratado y ahora no es neceario hacer eso. 
+
+
+Para estos casos se necesita un diccionario especial, parecido al anterior, que nos permita entender qué toca reemplazar en donde. Los pasos son los siguientes
+
+
+
+
+## Estandarización
+
+
+### Identificación de atípicos
+
+
+Cuando tenemos un marco de referencia definido, podemos hablar de datos atípicos. O sea, la mención de lo atípico exige de manera obligatoria la concepción de lo típico. Vamos a estructurar los datos atípicos en dos tipos: valores imposibles o inválidos y valores infrecuentes o sospechosos. 
+
+
+Los datos imposibles o inválidos son aquellos que se encuentran en rangos que no corresponden con la naturaleza de la variable. El dominio de la variable proviene de su naturaleza, pero también del marco de referencia. 
+
+
+Los datos sospechosos o poco frecuentes se encuentran en el recorrido de la variable, pero, se encuentran fuera del comportamiento usual según el marco de referencia. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Cuando tenemos una base de datos y encontramos una edad negativa estamos en presencia de un dato imposible o inválido. Lo mismo pasa si en la columna de país se presenta una ciudad, o si en la etapa del proceso alguien escribió "comenzó pero luego fue cancelado". Estos problemas se resuelven con procedimientos de validación en el momento de la recolección. La mayoría de herramientas virtuales de recolección de datos tienen mecanismos de validación.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En una base de datos nacional, de estudiantes de grado 11, que es el último de la educación media, podemos ver personas de 12 años y de 60 años. Estos son casos muy poco frecuentes y son sospechosos. Identificar este tipo de datos puede ser importante para revisar si realmente son datos verídicos o si hubo algún tipo de error en el momento de la recolección de información.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Un ejemplo más difícil de identificar es a nivel multivatiado. Cuando el dato atípico es un dato infrecuente por combinación de variables es más difícil de identificarl. Por ejemplo, en un banco hay un formulario para pedir préstamos. Una persona conociendo las políticas de inclusión del banco, pero teniendo en cuenta la solvencia requerida, puso que vive en el estrato 1 y sus ingresos son de 10 salarios mínimos. ¿Cómo identificaríamos estos casos?
+
+:::
+
+
+Ya contando con definiciones formales de los datos atípicos, es neresario revisar cuáles son las herramientas con las que contamos para su identificación. Vamos a centrarnos en identificar los poco frecuentes, porque los imposibles su identificación es inmediata. Vamos a presentar las herramientas estadísticas desarrolladas para la identificación de atípicos en variables numéricas, trabajando una variable (caja y bigotes) y varias variables (Mahalanobis). Los datos atípicos categóricos son mucho más fáciles de identificar, toda vez que es posible conocer sus frecuencias relativas y absolutas. 
+
+
+Como una primera herramienta para identificar datos atípicos inusuales, podemos utilizar el gráfico de caja y bigotes inventada por Pearson en 1985. 
+
+
+Este gráfico muestra los cuartiles y la mediana, formando con ellos una caja, luego extiende unos bigotes en ambas direcciónes que subtienden 0,85 del rango total, lo que les da una extensión específica. Los datos que salen de los bigotes son datos poco frecuentes, candidatos a revisón. 
+
+
+grafico de caja y bigotes
+
+
+El gráfico de caja y bigotes funciona menos en presencia de variables sesgadas o de colas pesadas. 
+
+
+Para la identificación de atípicos a nivel multivariado es posible utilizar la distancia de mahalanobis al vecino más cercano. Imaginemos los datos como una nube de puntos en el plano o en el espacio. Estos puntos se distribuyen demaneras particulares, pero en todo caso, es posible ver patrones y tendencias. si a cada punto le medimos su distancia al vecino más cercano podremos identificar los puntos que se encuentran aislados. 
+
+
+El concepto de distancia lo trabajaremos más adelante. En este momento podemos hacer un examen sucinto. Se trata de un concepto matemático bien definido, pero bastante intuitivo. Dos datos son más lejanos cuando son menos parecidos, su distancia es mayor. De la misma manera cuando son parecidos su distancia es menor. 
+
+
+La distancia usual, que utilizamos todos los días, se llama la distancia euclidiana. La distancia de Mahalanobis es una modificación de esta euclidiana para incorporar la correlación de los datos. Con esto, podemos identificar de manera más rigurosa los datos que se alejan de los demás. 
+
+
+Con estos dos métodos es posible encontrar los datos atípicos numéricos de manera univariada y multivariada, para someterlos a revisio´n. 
+
+
+
+### Imputación de datos
+
+
+En ocasiones en una base de datos hay faltantes. Datos que no fue posible ser recolectados, esto sucede por muchas razones. Los datos senibles generalmente las personas no los responden, o porque se cansan de responder  la encuesta y se van, o por muchas otras razones. Tengamos en cuenta que no vale la pena hacer imputación de datos para sacar el promedio o la varianza, sino para generar modelos estadísticos. Vamos a examinar qué hacer con estos datos, qué tipo de datos faltantes hay y como proceder con ellos. 
+
+
+Los datos sensibles son aquellos que 
+
+
+La forma en la que los datos se pierden es importante también 
+
+
+Datos faltantes MNAR 
+
+
+Datos faltantes MAR 
+
+
+Datos faltantes MCAR 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+Por ejemplo, cuando hicimos una encuesta con jóvenes y en una pregunta indagamos por el consumo de sustancias psicotrópicas, la pregunta no era obligatoria, entonces muchos no la respondieron. Esto es un dato perdido MNAR.
+
+:::
+
+
+Una noticia buena y una mala, primero la mala. En el caso de los datos MNAR, no es posible generarlos de manera rigurosa. Por consiguiente, es necesario revisar, si son pocos, retirar los individuos que faltan de esta información en los procedimientos que esta información se requiera. Si son muchos, ya toca es retirar la variable como tal. Pero la buena es que los datos MAR y MCAR sí se pueden imputar. Como su pérdida no responde a un proceso propio del contexto, podemos hacer pronósticos utilizando algún modelo. 
+
+
+El método recomendado para imputación de datos se llama MICE. Una de las propuestas mejor comportadas en este tema es la imputación multivariada por ecuaciones concatenadas (MICE, por su sigla en inglés) [@AZUR_MICE] que plantea la posibilidad de realizar modelos de pronóstico de manera iterativa para reemplazar los vacíos por su pronóstico. 
+
+
+En detalle, MICE toma cada una de las variables dentro de la base de datos como variable respuesta y mediante una regresión pronostica los valores faltantes a partir de las demás variables. Esto realizado de manera iterativa produce valores que si bien no corresponden de manera precisa a los no observados, sí resultan ser cercanos en términos de pronóstico. 
+
+
+como hacer imputacion de datos con inteligencia artificial.
+
+
+La imputación de datos es importante realizarla de manera responsable. 
+
+
+
+### Escalamiento univariado
+
+
+En algunos de los algoritmos que vamos a usar tenemos problemas si las variables no se encuentran en la misma escala. Para poner un ejemplo, si sumamos 1 a variables ditintas el cambio es muy diferente. Para una persona pasar de 50 kilos de peso a 51 kilos es algo normal, pero pasar de 1.6 metros de estatura a 2.6 metros es un cambio un poco drástico. Muchos algorimos requieren que las variables se encuentren en la misma escala. Con el fin de que todas las variables se encuentren en la misma escala, es posible realizar algunos procedimientos que nos ayudan a esta tarea. estos procedimientos tienen sentido en variables numéricas. 
+
+
+Normalizar es restar la media y dividir por la desgiación estándar 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$z = \frac{x - \bar{x}}{S_x}$$
+
+:::
+
+
+Estandarizar es llevar la variable al intervalo [0,1] o a un intervalo conocido. 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$z = \frac{x - x_{min}}{x_{max} - x_{min}}$$
+
+:::
+
+
+El trabajo con rangos tiene varias utilidades importantes. Uniformizar es cambiar la variable por su cuantil. 
+
+
+::: {.callout-warning}
+## Fórmula
+
+$$u = \frac{n(x_i < x)}{n()}$$
+
+:::
+
+
+Cada uno de estos procedimientos tiene sus partícularidades, pero funcionan correctamente a la hora de mostrar las variables en una sola escala. 
+
+
+
+
+## Estructura
+
+
+
+
+Intervenir la estructura de los datos es un proceso normal en la conformacio´n de modelos estadísticos. Muchas veces la información no de encuentra en el formato que el modelo recibe. A contonuación vamos a tocar brevemente las modificaciones más frecuentes a la estructura de la información. Por ser herramientas un poco más avanzadas, algunas no tienen una implementación usando inteligencia artificial. 
+
+
+
+### Cambio de tipo de variable
+
+
+Si un modelo o algoritmo solo recibe variables numéricas y la información es mayoritariamente categórica se presenta un pronblema. Es necesario encontrar la manera de codificar numéricamente las categorías conservando su identidad y significado de una forma matemáticamente válida. 
+
+
+Las variables tipo likert tienen valores categóricos como siempre, casi siempre, casi nunca y nunca. Estos, generalmente admiten otorgarles unos puntajes a priori, que van de acuerdo al sentido de la pregunta. En este caso, de variables likert, su transformación en variables numéricas es natural y no genera ruido. 
+
+
+Para las variables categóricas que no tienen unos valores numéricos estandarizados, se suele utilizar el método de variables dummies o método hotkey. Este consiste en transformar una columna categórica en varias columnas numéricas, dependiendo de la cantidad de categorías. Cada columna nueva marca 1 o 0 dependiendo si la variable adquiere esa categoría o no. Esto amplía de forma notoria la cantidad de variables, pero permite capturar la información completa de nuestra variable categórica. Claramente, los límites computacionales nos pueden indicar hasta cuántas categorías diferentes podemos procesar. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En una base de datos teníamos la variable de nivel educativo. Se había preguntado a las personas cuál es el último nivel educativo que ud finalizó exitosamente. Ninguno, primaria, secundaria técnico, universitario y postgrado. Estas son las opcioones. En el estudio, un científico social propuso que les diéramos valores: Ninguno = 0, primaria = 1, secundaria = 2, técnico = 3, universitario = 4 y postgrado = 5. Le explicamos que estos valores no se pueden colocar así y que la manera correcta es hacer una tabla con 5 columnas: Ninguno, primaria, secundaria técnico, universitario y postgrado, cada columna es binaria y marca 1 solamente para las personas que se encuentren en esa categoría.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En una base de datos una vez teníamos la columna de los municipios. Cuando hicimos el hot encoding, nos dimos cuenta de que el resultado era una tabla de 1120 columnas. Tuvimos que analizar si eso era realmente lo que queríamos. Por fortuna, los datos se concentraban mayoritariamente en 10 municipios, y pudimos recategorizar todos los otros municipios en una categoría nueva llamada "Otros". Funcionó muy bien.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+A veces tenemos columnas que denominamos de opción múltiple con múltiple respuesta. Por ejemplo, una plataforma de streaming como netflix o youtube ppuede tener la información de los videos que hemos visto. Se trata de una columna categórica donde cada individuo presenta muchos datos. Esto incumple el principio de atomicidad de la informacióin. En estos casos es muy útil separar la información en columnas. Entonces tendríamos una columna por cada película y una fila por cada persona. Mostrando inicialmente si vio la plícula o no la vio. So además tuviéramos en cada caso el puntaje que le dio la persona a la película, con esto podríamos construir un modelo de recomendación! Todas las plataformas tienen distintos modelos de recomendación. El modelo de recomendación de netflix cuesta un millón de dólares.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+El análisis de estas bases de datos que tienen muchas columnas de unos y ceros es una rama importante de la ciencia de datos, podemos imaginar un caso muy parecido con productos y compradores, una base de datos de facturas tendría una columna para cada producto y una fila para cada factura, indicando si el producto pertenece a la factura o no.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En análisis cualitativo tenemos este mismo caso. Si tenemos piezas de informacion que pueden ser imágenes, texto y otras piezas; y por otro lado tenemos categorías inductivas y deductivas y emergentes que surgen de un ejercicio de codificacion abierta, Podemos generar una tabla donde cada categoría es una columna, codificando 1 o 0 dependiendo si la categoría se encuentra presente en la pieza de información. Esto lo retomaremos más adelante.
+
+:::
+
+
+El caso contrario es menos frecuente. Sucede casi siempre en procesos de medición que contienen índices e indicadores y se maneja usualmente a nivel univariado y bivariado. 
+
+
+A nivel univariado, puedo tener una culumna que me indique una propiedad de mi muestra. Esto puede ser un índice, una métrica, una escala o un indicador. Y en ese caso yo puedo dar unos umbrales y generar unos niveles para mi indicador. Usualmente se distribuyen en alto, medio y bajo; pero también puede ser Alto, medio alto, medio bajo y bajo. El cálculod e los umbrales se puede realizar de varias formas, de acuerdo a la distribución de los datos, buscando que todos los niveles queden con la misma cantidad de registros, o según el diseño mismo del indicador. ESto difiere en cada caso que se administra. 
+
+
+Cuando quiero conformar una variable categórica a partir de dos o más variabels numéricas, podemos hablar de un cuadrante. La confomración de cuadrantes es una herramienta muy poderosa para la interpretación de resultados. Un cuadrante se conforma cuando pongo uno o varios umbrales a cada uno de mis indicadores y esto me genera nuevas categorías. Cada categoría debo ponerle un nombre. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En una encuesta de niñez obtuvimos métricas para la vulnerabilidad de los niños y la proteccio´n de los padres. Luego generamos un umbral para cada métrica y lo codificamos como alto y bajo. Teníamos entonces nuestras variables categóricas que decían alta y baja protección y alta y baja vulnerabilidad. Este es un ejemplo de discretización de la variable a nivel univariado.
+
+:::
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En la misma encuestra generamos un cuadrante con nuestros valores y los combinamos así: alta vulnerabilibad y alta protección =  hogar comprometido, baja vulnerabilidad y baja protección = hogar autónomo, alta vulnerabilidad y baja protección = hogar abandonado y baja vulnerabilidad y alta proteccio´n = hogar sobreprotegido. Esto es un ejemplo de como funcionan los cuadrantes para combinar dos variables numéricas en una sola variable categórica.
+
+:::
+
+
+
+### Muestras de entrenamieto y de prueba
+
+
+Cuando queremos generar modelos estadísticos y de ciencia de datos, normalmente nos preocupa que estos modelos y algoritmos sigan funcionando con datos más allá de la muestra. Esto se llama inferencia y es de lo que trata el siguiente capítulo. Todos nuestros métodos y modelos son calculados con datos presentes en algún archivo. No puede ser de otra manera, no podemos incluir en el cálculo datos que no tenemos. Pero entonces cómo podemos asegurarnos de que nuestro desarrollo estadístico sea robusto frente a datos que nos están en la muestra? Esta pregunta se resuelve de dos maneras. 
+
+
+La solución matemática nos indica que podemos confiar en nuestras estimaciones si siguen unas reglas predefinidas, algunas veces es normalidad, heterocedasticidad y muchas otras reglas. La solución práctica no requiere estas reglas, se llama validación cruzada. Consiste en ajustar los modelos utilizando solamente una parte de nuestros datos, esta se llama muestra de entrenamiento, y luego, poniéndolos a prueba con otra parte de la información, esto se denimina muestra de prueba. 
+
+
+Si nuestros métodos son confiables, podemos establecer que los errores muestrales que son reportados por el modelo usando la muestra de entrenamiento, coinciden con los errores muestrales reportados sobre la muestra de prueba. 
+
+
+La validacio´n cruzadas no se detiene allí, existe toda una teoría de cómo generar validaciones cruzadas de manera efectiva. Una de ellas es el bootstrapping o remuestreo. En bootstrapping generamos muchas submuestras aleatoriascon reemplazo del mismo tamaño que la muestra original y para cada una de estas muestras calculamos el modelo. Normalmente esto se realiza muchas veces, es usual encontrar que un bootstrapping se cacula sobre mil muestras. 
+
+
+Imagínate, calcular el mismo modelo miles de veces. Obviamente resulta computacionalmente pesado. En cuanto tenemos todos esos modelos podemos revisar cómo se comportan sus parámetros, cuál es el error muestral de cada uno, cómo es su estructura general y de allí tomar decisiones. 
+
+
+La validacio´n cruzada también se complica un poco cuando queremos ir más allá. Podemos hacer particiones. Partir nuestra meustra en cinco subconjuntos iguales, de manera aleatorio y calcular cinco modelos retirando cada parte. Esto es, retiramos la primera muestra y calculamos el modelo, retiramos la segunda y calculamos el modelo, retiramos la tercera y así sucesivamente. Al final tenemos cinco modelos que podemos compribar contra los datos de prueba de cada uno. Esto nos tiene que dar luces sobre la precisio´n y certeza correspondiente a los métodos aplicados. 
+
+
+Entonces, una manera importante de preparar los datos es tomar en consideración la validacion cruzada y agregar la columna correspondiente para que sepamos cuáles observaciones perteneceen a la muestra de entrenamiento y a la de prueba. 
+
+
+
+### Anonimización
+
+
+El tratamiento de los datos recolectados muchas veces tiene un componente ético que debemos revisar. Los datos sensibles, de salud, de ingresos, el género y las preferencias sexuales, las opiniones sobre temas controversiales y las aciones que conllevan escarnio social, son datos que las personas nos confían bajo un estandar ético de investigación. 
+
+
+Los datos de identificación deben ser retirados de las bases de datos en la etapa de limpieza, de manera que no sea posible saber de qué persona son cuales datos. 
+
+
+Sin embargo esto no es suficiente, al retirar la identificación subsiste muchas veces la identificabilidad. Datos que son únicos y reconocibles de un individuo específico. Estos deben ser recategorizados. Es un problema crítico, porque suele evidenciar a las minorías. 
+
+
+::: {.callout-tip}
+## Ejemplo
+
+En una ocasión, una científica social quería hacer un estudio para su tesis para su maestría en el extranjero. Eligió el tema de la poesía y como pervive en las comunidades. Fue al territorio y entrevistó varias personas. Ellos, en la entrevista, además de hablar sobre la poesía, en medio de su relato mencionaban algunos actores al margen de la ley. Esto es muy grave, porque estas personas no podían hablar de esto, en el territorio se sabía que hablar sobre estos temas tenía consecuencias graves. La investigadora recolectó la información y construyó su tesis, que fue laureada. Ella inclyó como anexo en su tesis las entrevistas, pero olvidó anonimizarlas. Este documento, con estos anexos, llegó al repositorio institucional. De manera que, cuando ella se percató, ya todo el documento estaba público. Hoy en día, si cualquier actor armado busca en ese repositorio puede encontrar con nombre propio el relato de las personas. Esto es muy grave.
+
+:::
+
+
+Es muy importante este punto, sobretodo si trabajamos con inteligencia artificial y queremos cargar una tabla de datos en una interfaz conversacional interactiva. 
+
+
+
+### Estructurar data no estructurada
+
+
+Estructurar data no estructurada requiere un poco más de trabajo. Al respecto vamos a hablar brevemente de dos maneras distintas que producen resultados parecidos. 
+
+
+Dentro de la teoría fundamentada existe este paso que se llama codificacion axial, que consiste en relacionar unas categorías inductivas y deductivas con un conjunto de peizas de información. Esta tarea arroja una data estructurada, que me permite entender cuáles categorías están presentes en cada peiza de informacio´n. Como se dijo anteriormente, es posible obtener una tabla que nos indica si dentro de este audio, imagen, o texto se encuentra una categoría. En esta tabla cada categoría es una variable binaria. 
+
+
+Otrra manera de lograr lo mismo, pero solamente para texto, es la técnica de bag of words. Que consiste en generar una columna por ccada término o palabras presentes en el discruso. Para ello es necesario realizar acciones de limpieza de texto y tokenización. Ahora, con esto se obtienen tablas muy grandes, de miles de columnas porque las palabras distintas en un corpus textual pueden ser mucahs. 
+
+
+Cuando tenemos datos de otros formatos, como audio, video o imagen, es posible también generar una tabla de datos binarios con categorías, etiquetas u objetos utilizando inteligencia artificial. Estas matrices binarias terminan siendo el insumo para un análisis cualitativo riguroso. 
+
+
+
