@@ -28,7 +28,7 @@ fn_row_to_qmd <- function(tb_cap){
       cont_text = case_when(
         tipo == "párrafo" ~ str_glue("{texto} {citas}\n\n"),
         tipo == "ítem" ~ str_glue(" - {texto}\n\n"),
-        tipo == "fórmula" ~ str_glue("::: {{.callout-warning}}\n## Fórmula\n\n$${texto}$$\n\n:::\n\n"),
+        tipo == "fórmula" ~ str_glue("::: {{.callout-warning}}\n## Fórmula\n\n{texto}\n\n:::\n\n"),
         tipo == "ejemplo" ~ str_glue("::: {{.callout-tip}}\n## Ejemplo\n\n{texto}\n\n:::\n\n"),
         # tipo == "Gráfico" & str_detect(texto, "\\s") != 0 ~ str_glue("\n\n```{{r, results='asis'}}\n\n {texto}\n\n```\n\n"),
         # tipo == "Gráfico" & str_detect(texto, "\\s") == 0 ~ str_glue("\n\n```{{r, results='asis', fig.cap = {texto}_caption}}\n\n {texto}\n\n```\n\n"),
